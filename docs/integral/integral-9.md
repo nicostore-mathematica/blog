@@ -155,7 +155,6 @@ Riemann 对于积分的贡献之一就是证明了 $f$ 可积当且仅当 $S - s
 下面的引理给出了上和与下和的重要性质，这种单调性质与数列的情形类似.
 
 **引理2.** 设分割 $\pi'$ 是从 $\pi$ 添加 $k$ 个分点得到的，则有
-
 $$
 S(\pi) \ge S(\pi') \ge S(\pi) - (M - m)k\|\pi\|, \\
 s(\pi) \le s(\pi') \le s(\pi) + (M - m)k\|\pi\|.
@@ -166,15 +165,15 @@ $$
 > 为了简单起见，我们证明 $k=1$ 的情形.此时，设新添加的分点为 $\bar{x}$，则 $\bar{x}$ 必落在某个区间 $(x_{j-1}, x_j)$ 内.由上和的定义，
 >
 > $$
-> S(\pi) = \sum_{i=1}^n M_i \cdot \Delta x_i = M_j \cdot \Delta x_j + \sum_{i \ne j} M_i \cdot \Delta x_i, \\
+> S(\pi) = \sum_{i=1}^n M_i \cdot \Delta x_i = M_j \cdot \Delta x_j + \sum_{i \ne j} M_i \cdot \Delta x_i, \\\\
 > S(\pi') = M'_j \cdot (\bar{x} - x_{j-1}) + M''_j (x_j - \bar{x}) + \sum_{i \ne j} M_i \cdot \Delta x_i,
 > $$
 >
 > 这里 $M'_j$ 及 $M''_j$ 分别是 $f$ 在区间 $[x_{j-1}, \bar{x}]$ 及 $[\bar{x}, x_j]$ 中的上确界.因为 $M'_j \le M_j$，$M''_j \le M_j$，从而有
 >
 > $$
-> 0 \le S(\pi) - S(\pi') = (M_j - M'_j)(\bar{x} - x_{j-1}) + (M_j - M''_j)(x_j - \bar{x}) \\
-> \le (M - m)(\bar{x} - x_{j-1}) + (M - m)(x_j - \bar{x}) \\
+> 0 \le S(\pi) - S(\pi') = (M_j - M'_j)(\bar{x} - x_{j-1}) + (M_j - M''_j)(x_j - \bar{x}) \\\\
+> \le (M - m)(\bar{x} - x_{j-1}) + (M - m)(x_j - \bar{x}) \\\\
 > = (M - m)\Delta x_j \le (M - m)\|\pi\|.
 > $$
 >
@@ -226,7 +225,7 @@ $$
 > 于是，当 $\|\pi\| < \delta = \dfrac{\varepsilon}{2(M - m + 1)k}$ 时，
 >
 > $$
-> \inf_\pi S(\pi) \le S(\pi) \le (M - m)k \cdot \frac{\varepsilon}{2(M - m + 1)k} + \inf_\pi S(\pi) + \frac{\varepsilon}{2} \\
+> \inf_\pi S(\pi) \le S(\pi) \le (M - m)k \cdot \frac{\varepsilon}{2(M - m + 1)k} + \inf_\pi S(\pi) + \frac{\varepsilon}{2} \\\\
 > < \inf_\pi S(\pi) + \varepsilon,
 > $$
 >
@@ -263,8 +262,8 @@ $$
 > 特别地，我们得到
 >
 > $$
-> I - \varepsilon \le \sum_{i=1}^n \inf_{x \in [x_{i-1}, x_i]} f(x) \cdot \Delta x_i = s(\pi) \\
-> \le \sum_{i=1}^n \sup_{x \in [x_{i-1}, x_i]} f(x) \cdot \Delta x_i = S(\pi) \\
+> I - \varepsilon \le \sum_{i=1}^n \inf_{x \in [x_{i-1}, x_i]} f(x) \cdot \Delta x_i = s(\pi) \\\\
+> \le \sum_{i=1}^n \sup_{x \in [x_{i-1}, x_i]} f(x) \cdot \Delta x_i = S(\pi) \\\\
 > \le I + \varepsilon,
 > $$
 >
@@ -332,9 +331,9 @@ $$
 >
 > $$
 > \begin{aligned}
-> \omega_i(fg) &= \sup_{x',x'' \in [x_{i-1}, x_i]} |f(x')g(x') - f(x'')g(x'')| \\
-> &= \sup_{x',x'' \in [x_{i-1}, x_i]} |f(x')g(x') - f(x')g(x'') + f(x')g(x'') - f(x'')g(x'')| \\
-> &\le \sup_{x',x'' \in [x_{i-1}, x_i]} \left[ |f(x')||g(x') - g(x'')| + |g(x'')||f(x') - f(x'')| \right] \\
+> \omega_i(fg) &= \sup_{x',x'' \in [x_{i-1}, x_i]} |f(x')g(x') - f(x'')g(x'')| \\\\
+> &= \sup_{x',x'' \in [x_{i-1}, x_i]} |f(x')g(x') - f(x')g(x'') + f(x')g(x'') - f(x'')g(x'')| \\\\
+> &\le \sup_{x',x'' \in [x_{i-1}, x_i]} \left[ |f(x')||g(x') - g(x'')| + |g(x'')||f(x') - f(x'')| \right] \\\\
 > &\le K(\omega_i(g) + \omega_i(f)),
 > \end{aligned}
 > $$
@@ -343,8 +342,8 @@ $$
 >
 > $$
 > \begin{aligned}
-> \sum_\pi \omega_i(fg) \cdot \Delta x_i &\le K \sum_\pi (\omega_i(f) + \omega_i(g)) \cdot \Delta x_i \\
-> &= K \sum_\pi \omega_i(f) \cdot \Delta x_i + K \sum_\pi \omega_i(g) \cdot \Delta x_i \\
+> \sum_\pi \omega_i(fg) \cdot \Delta x_i &\le K \sum_\pi (\omega_i(f) + \omega_i(g)) \cdot \Delta x_i \\\\
+> &= K \sum_\pi \omega_i(f) \cdot \Delta x_i + K \sum_\pi \omega_i(g) \cdot \Delta x_i \\\\
 > &< K \cdot \frac{\varepsilon}{2K+1} + K \cdot \frac{\varepsilon}{2K+1} < \varepsilon.
 > \end{aligned}
 > $$
@@ -405,8 +404,8 @@ $$
 >
 > $$
 > \begin{aligned}
-> \sum_{i=1}^n \omega_i \cdot \Delta x_i &= \sum_{\omega_i < \frac{\varepsilon}{2(b-a)}} \omega_i \cdot \Delta x_i + \sum_{\omega_i \ge \frac{\varepsilon}{2(b-a)}} \omega_i \cdot \Delta x_i \\
-> &\le \frac{\varepsilon}{2(b-a)} \sum_{\omega_i < \frac{\varepsilon}{2(b-a)}} \Delta x_i + (M - m) \sum_{\omega_i \ge \frac{\varepsilon}{2(b-a)}} \Delta x_i \\
+> \sum_{i=1}^n \omega_i \cdot \Delta x_i &= \sum_{\omega_i < \frac{\varepsilon}{2(b-a)}} \omega_i \cdot \Delta x_i + \sum_{\omega_i \ge \frac{\varepsilon}{2(b-a)}} \omega_i \cdot \Delta x_i \\\\
+> &\le \frac{\varepsilon}{2(b-a)} \sum_{\omega_i < \frac{\varepsilon}{2(b-a)}} \Delta x_i + (M - m) \sum_{\omega_i \ge \frac{\varepsilon}{2(b-a)}} \Delta x_i \\\\
 > &\le \frac{\varepsilon}{2(b-a)} (b-a) + (M - m)\frac{\varepsilon}{2(M - m + 1)} < \varepsilon.
 > \end{aligned}
 > $$
@@ -458,9 +457,9 @@ $$
 > 使得每一个小区间 $[x_{i-1},x_i]$ 必含于某个 $(\alpha_j,\beta_j)$ 或 $I_x$ 中. 此时
 > $$
 > \begin{aligned}
-> \sum_{i=1}^{n} \omega_i \cdot \Delta x_i &\leq \sum_{[x_{i-1},x_i] \subset (\alpha_j,\beta_j)} \omega_i \cdot \Delta x_i + \sum_{[x_{i-1},x_i] \subset I_x} \omega_i \cdot \Delta x_i \\
-> &\leq 2K \sum_{[x_{i-1},x_i] \subset (\alpha_j,\beta_j)} \Delta x_i + \frac{\varepsilon}{2(b-a)} \sum_{[x_{i-1},x_i] \subset I_x} \Delta x_i \\
-> &\leq 2K \sum_j (\beta_j - \alpha_j) + \frac{\varepsilon}{2(b-a)} (b-a) \\
+> \sum_{i=1}^{n} \omega_i \cdot \Delta x_i &\leq \sum_{[x_{i-1},x_i] \subset (\alpha_j,\beta_j)} \omega_i \cdot \Delta x_i + \sum_{[x_{i-1},x_i] \subset I_x} \omega_i \cdot \Delta x_i \\\\
+> &\leq 2K \sum_{[x_{i-1},x_i] \subset (\alpha_j,\beta_j)} \Delta x_i + \frac{\varepsilon}{2(b-a)} \sum_{[x_{i-1},x_i] \subset I_x} \Delta x_i \\\\
+> &\leq 2K \sum_j (\beta_j - \alpha_j) + \frac{\varepsilon}{2(b-a)} (b-a) \\\\
 > &\leq 2K \frac{\varepsilon}{4K+1} + \frac{\varepsilon}{2} < \varepsilon.
 > \end{aligned}
 > $$
@@ -507,8 +506,8 @@ $$
 >
 > $$
 > \begin{aligned}
-> &\left|\sum_{i=1}^{n} [\lambda f(\xi_i) + \mu g(\xi_i)] \cdot \Delta x_i - \left(\lambda \cdot \int_a^b f(x)dx + \mu \cdot \int_a^b g(x)dx\right)\right| \\
-> &\leq |\lambda| \cdot \left|\sum_{i=1}^{n} f(\xi_i) \cdot \Delta x_i - \int_a^b f(x)dx\right| + |\mu| \cdot \left|\sum_{i=1}^{n} g(\xi_i) \cdot \Delta x_i - \int_a^b g(x)dx\right| \\
+> &\left|\sum_{i=1}^{n} [\lambda f(\xi_i) + \mu g(\xi_i)] \cdot \Delta x_i - \left(\lambda \cdot \int_a^b f(x)dx + \mu \cdot \int_a^b g(x)dx\right)\right| \\\\
+> &\leq |\lambda| \cdot \left|\sum_{i=1}^{n} f(\xi_i) \cdot \Delta x_i - \int_a^b f(x)dx\right| + |\mu| \cdot \left|\sum_{i=1}^{n} g(\xi_i) \cdot \Delta x_i - \int_a^b g(x)dx\right| \\\\
 > &\leq |\lambda| \cdot \varepsilon + |\mu| \cdot \varepsilon = (|\lambda| + |\mu|) \cdot \varepsilon,
 > \end{aligned}
 > $$
@@ -523,7 +522,7 @@ $$
 >
 > $$
 > \begin{aligned}
-> \int_a^b f(x)dx &= \lim_{\substack{\|\pi_1\| \to 0 \\ \|\pi_2\| \to 0}} \sum_{\pi_1 \cup \pi_2} f(\xi_i) \cdot \Delta x_i = \lim_{\|\pi_1\| \to 0} \sum_{\pi_1} f(\xi_i)\Delta x_i + \lim_{\|\pi_2\| \to 0} \sum_{\pi_2} f(\xi_i)\Delta x_i \\
+> \int_a^b f(x)dx &= \lim_{\substack{\|\pi_1\| \to 0 \\ \|\pi_2\| \to 0}} \sum_{\pi_1 \cup \pi_2} f(\xi_i) \cdot \Delta x_i = \lim_{\|\pi_1\| \to 0} \sum_{\pi_1} f(\xi_i)\Delta x_i + \lim_{\|\pi_2\| \to 0} \sum_{\pi_2} f(\xi_i)\Delta x_i \\\\
 > &= \int_a^c f(x)dx + \int_c^b f(x)dx.
 > \end{aligned}
 > $$
@@ -658,11 +657,11 @@ $$
 >
 > $$
 > \begin{aligned}
-> \int_a^b f(x)g(x)dx &= \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} f(x)g(x)dx \\
-> &= \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} [g(x) - g(x_{i-1})] \cdot f(x)dx + \sum_{i=1}^{n} g(x_{i-1}) \cdot \int_{x_{i-1}}^{x_i} f(x)dx \\
-> &\leq \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} |g(x) - g(x_{i-1})| \cdot |f(x)|dx + \sum_{i=1}^{n} g(x_{i-1}) \cdot [F(x_i) - F(x_{i-1})] \\
-> &\leq K \cdot \sum_{i=1}^{n} \omega_i(g) \cdot \Delta x_i + \sum_{i=1}^{n-1} F(x_i) \cdot [g(x_{i-1}) - g(x_i)] + F(b) \cdot g(x_{n-1}) \\
-> &\leq K \cdot \varepsilon + M \cdot \sum_{i=1}^{n-1} [g(x_{i-1}) - g(x_i)] + M \cdot g(x_{n-1}) \\
+> \int_a^b f(x)g(x)dx &= \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} f(x)g(x)dx \\\\
+> &= \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} [g(x) - g(x_{i-1})] \cdot f(x)dx + \sum_{i=1}^{n} g(x_{i-1}) \cdot \int_{x_{i-1}}^{x_i} f(x)dx \\\\
+> &\leq \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} |g(x) - g(x_{i-1})| \cdot |f(x)|dx + \sum_{i=1}^{n} g(x_{i-1}) \cdot [F(x_i) - F(x_{i-1})] \\\\
+> &\leq K \cdot \sum_{i=1}^{n} \omega_i(g) \cdot \Delta x_i + \sum_{i=1}^{n-1} F(x_i) \cdot [g(x_{i-1}) - g(x_i)] + F(b) \cdot g(x_{n-1}) \\\\
+> &\leq K \cdot \varepsilon + M \cdot \sum_{i=1}^{n-1} [g(x_{i-1}) - g(x_i)] + M \cdot g(x_{n-1}) \\\\
 > &= K \cdot \varepsilon + M \cdot g(a).
 > \end{aligned}
 > $$
@@ -701,11 +700,11 @@ $$
 >
 > $$
 > \begin{aligned}
-> \int_a^b f(x)g(x)dx &= \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} f(x)g(x)dx \\
-> &= \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} [g(x) - g(x_i)]f(x)dx + \sum_{i=1}^{n} g(x_i) \cdot \int_{x_{i-1}}^{x_i} f(x)dx \\
-> &\leq K \cdot \sum_{i=1}^{n} \omega_i(g) \cdot \Delta x_i + \sum_{i=1}^{n} g(x_i)[\tilde{F}(x_{i-1}) - \tilde{F}(x_i)] \\
-> &\leq K \cdot \varepsilon + g(x_1) \cdot \tilde{F}(x_0) + \sum_{i=1}^{n-1} \tilde{F}(x_i)[g(x_{i+1}) - g(x_i)] \\
-> &\leq K \cdot \varepsilon + \tilde{M} \cdot g(x_1) + \tilde{M} \cdot \sum_{i=1}^{n-1} [g(x_{i+1}) - g(x_i)] \\
+> \int_a^b f(x)g(x)dx &= \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} f(x)g(x)dx \\\\
+> &= \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} [g(x) - g(x_i)]f(x)dx + \sum_{i=1}^{n} g(x_i) \cdot \int_{x_{i-1}}^{x_i} f(x)dx \\\\
+> &\leq K \cdot \sum_{i=1}^{n} \omega_i(g) \cdot \Delta x_i + \sum_{i=1}^{n} g(x_i)[\tilde{F}(x_{i-1}) - \tilde{F}(x_i)] \\\\
+> &\leq K \cdot \varepsilon + g(x_1) \cdot \tilde{F}(x_0) + \sum_{i=1}^{n-1} \tilde{F}(x_i)[g(x_{i+1}) - g(x_i)] \\\\
+> &\leq K \cdot \varepsilon + \tilde{M} \cdot g(x_1) + \tilde{M} \cdot \sum_{i=1}^{n-1} [g(x_{i+1}) - g(x_i)] \\\\
 > &= K \cdot \varepsilon + \tilde{M} \cdot g(b).
 > \end{aligned}
 > $$
@@ -745,9 +744,9 @@ $$
 >
 > $$
 > \begin{aligned}
-> \int_a^b |f(x) - g(x)|dx &= \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} |f(x) - g(x)|dx \\
-> &= \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} |f(x) - f(x_{i-1})|dx \\
-> &\leq \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} \omega_i(f)dx \\
+> \int_a^b |f(x) - g(x)|dx &= \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} |f(x) - g(x)|dx \\\\
+> &= \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} |f(x) - f(x_{i-1})|dx \\\\
+> &\leq \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} \omega_i(f)dx \\\\
 > &= \sum_{i=1}^{n} \omega_i(f)(x_i - x_{i-1}) < \varepsilon.
 > \end{aligned}
 > $$
@@ -784,10 +783,10 @@ $$
 >
 > $$
 > \begin{aligned}
-> \left|\int_a^b f(x)\sin \lambda x dx\right| &= \left|\sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} f(x)\sin \lambda x dx\right| \\
-> &= \left|\sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} [f(x) - f(x_{i-1})]\sin \lambda x dx + \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} f(x_{i-1})\sin \lambda x dx\right| \\
-> &\leq \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} |f(x) - f(x_{i-1})|dx + \sum_{i=1}^{n} |f(x_{i-1})|\left|\int_{x_{i-1}}^{x_i} \sin \lambda x dx\right| \\
-> &\leq \sum_{i=1}^{n} \omega_i(f)\Delta x_i + \sum_{i=1}^{n} K \frac{1}{\lambda}|\cos \lambda x_{i-1} - \cos \lambda x_i| \\
+> \left|\int_a^b f(x)\sin \lambda x dx\right| &= \left|\sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} f(x)\sin \lambda x dx\right| \\\\
+> &= \left|\sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} [f(x) - f(x_{i-1})]\sin \lambda x dx + \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} f(x_{i-1})\sin \lambda x dx\right| \\\\
+> &\leq \sum_{i=1}^{n} \int_{x_{i-1}}^{x_i} |f(x) - f(x_{i-1})|dx + \sum_{i=1}^{n} |f(x_{i-1})|\left|\int_{x_{i-1}}^{x_i} \sin \lambda x dx\right| \\\\
+> &\leq \sum_{i=1}^{n} \omega_i(f)\Delta x_i + \sum_{i=1}^{n} K \frac{1}{\lambda}|\cos \lambda x_{i-1} - \cos \lambda x_i| \\\\
 > &< \frac{1}{2}\varepsilon + \frac{2nK}{\lambda} < \varepsilon.
 > \end{aligned}
 > $$
@@ -810,8 +809,8 @@ $$
 > 应用复合函数求导的链规则, 有
 > $$
 > \begin{aligned}
-> \left(\int_{v(x)}^{u(x)} f(t)dt\right)' &= \left(\int_a^{u(x)} f(t)dt - \int_a^{v(x)} f(t)dt\right)' \\
-> &= \left(\int_a^u f(t)dt\right)'_{u=u(x)} u'(x) - \left(\int_a^{v(x)} f(t)dt\right)'_{v=v(x)} v'(x) \\
+> \left(\int_{v(x)}^{u(x)} f(t)dt\right)' &= \left(\int_a^{u(x)} f(t)dt - \int_a^{v(x)} f(t)dt\right)' \\\\
+> &= \left(\int_a^u f(t)dt\right)'_{u=u(x)} u'(x) - \left(\int_a^{v(x)} f(t)dt\right)'_{v=v(x)} v'(x) \\\\
 > &= f(u(x))u'(x) - f(v(x))v'(x).
 > \end{aligned}
 > $$
@@ -852,7 +851,7 @@ $$
 > > $$
 > > F'(x) =
 > > \begin{cases}
-> > 2x \sin \frac{1}{x^2} - \frac{2}{x} \cos \frac{1}{x^2}, & x \neq 0, \\
+> > 2x \sin \frac{1}{x^2} - \frac{2}{x} \cos \frac{1}{x^2}, & x \neq 0, \\\\
 > > 0, & x = 0,
 > > \end{cases}
 > > $$
@@ -872,8 +871,8 @@ $$
 > 再由 Newton-Leibniz 公式,
 > $$
 > \begin{aligned}
-> \int_\alpha^\beta f(\varphi(t)) \cdot \varphi'(t)dt &= \int_\alpha^\beta [F(\varphi(t))]'dt \\
-> &= F(\varphi(t))\big|_\alpha^\beta = F(\varphi(\beta)) - F(\varphi(\alpha)) \\
+> \int_\alpha^\beta f(\varphi(t)) \cdot \varphi'(t)dt &= \int_\alpha^\beta [F(\varphi(t))]'dt \\\\
+> &= F(\varphi(t))\big|_\alpha^\beta = F(\varphi(\beta)) - F(\varphi(\alpha)) \\\\
 > &= F(b) - F(a) = \int_a^b f(x)dx.
 > \end{aligned}
 > $$
@@ -902,8 +901,8 @@ $$
 > 在题设条件下, 函数 $u(x)v'(x)$ 和 $u'(x)v(x)$ 都是可积的.
 > $$
 > \begin{aligned}
-> &\int_a^b u(x)v'(x)dx + \int_a^b u'(x)v(x)dx \\
-> &= \int_a^b \left(u(x)v'(x) + u'(x)v(x)\right)dx \\
+> &\int_a^b u(x)v'(x)dx + \int_a^b u'(x)v(x)dx \\\\
+> &= \int_a^b \left(u(x)v'(x) + u'(x)v(x)\right)dx \\\\
 > &= \int_a^b (uv)'(x)dx = u(x)v(x)\big|_a^b.
 > \end{aligned}
 > $$
@@ -916,8 +915,8 @@ $$
 > \int_{0}^{\frac{\pi}{2}} \cos^n x \, dx = \int_{0}^{\frac{\pi}{2}} \sin^n x \, dx=
 > \left\{
 > \begin{matrix}
-> \frac{(n-1)!!}{(n)!} \cdot \frac{\pi}{2}, & \text{n=2k} \\
-> \frac{(n-1)!!}{(n)!}, & \text{n=2k+1}
+> \frac{(n-1)!!}{(n)!} \cdot \frac{\pi}{2}, & {n=2k} \\\\
+> \frac{(n-1)!!}{(n)!}, & {n=2k+1}
 > \end{matrix}
 > \right.
 > $$

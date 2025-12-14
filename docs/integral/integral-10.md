@@ -374,7 +374,7 @@ $$
 
 $$
 \begin{aligned}
-0 < C - C_n &< \frac{1}{12} \sum_{k=n}^\infty \frac{1}{k^2} \\
+0 < C - C_n &< \frac{1}{12} \sum_{k=n}^\infty \frac{1}{k^2} \\\\
 &< \frac{1}{12} \left[\frac{1}{n^2} + \frac{1}{n(n+1)} + \frac{1}{(n+1)(n+2)} + \cdots \right] = \frac{1}{12} \left(\frac{1}{n^2} + \frac{1}{n}\right).
 \end{aligned}
 $$
@@ -495,8 +495,8 @@ $$
 >
 > $$
 > \begin{aligned}
-> \int_{-\infty}^{+\infty} \frac{1}{1 + x^2} dx &= \int_0^{+\infty} \frac{1}{1 + x^2} dx + \int_{-\infty}^0 \frac{1}{1 + x^2} dx \\
-> &= \arctan x \Big|_{-\infty}^0 + \arctan x \Big|_0^{+\infty} \\
+> \int_{-\infty}^{+\infty} \frac{1}{1 + x^2} dx &= \int_0^{+\infty} \frac{1}{1 + x^2} dx + \int_{-\infty}^0 \frac{1}{1 + x^2} dx \\\\
+> &= \arctan x \Big|_{-\infty}^0 + \arctan x \Big|_0^{+\infty} \\\\
 > &= \frac{\pi}{2} + \frac{\pi}{2} = \pi.
 > \end{aligned}
 > $$
@@ -550,7 +550,7 @@ $$
 >
 > $$
 > \begin{aligned}
-> \left| \int_A^B \frac{\cos t}{\sqrt{t}} dt \right| &= \left| \frac{\sin t}{\sqrt{t}} \Big|_A^B + \frac{1}{2} \int_A^B \frac{\sin t}{t^{3/2}} dt \right| \\
+> \left| \int_A^B \frac{\cos t}{\sqrt{t}} dt \right| &= \left| \frac{\sin t}{\sqrt{t}} \Big|_A^B + \frac{1}{2} \int_A^B \frac{\sin t}{t^{3/2}} dt \right| \\\\
 > &\leq \frac{1}{\sqrt{A}} + \frac{1}{\sqrt{B}} + \frac{1}{2} \int_A^B t^{-3/2} dt = \frac{2}{\sqrt{A}} \to 0 \quad (B > A \to +\infty).
 > \end{aligned}
 > $$
@@ -641,8 +641,8 @@ $$
 > 由积分第二中值定理，当 $A, B > M$ 时
 > $$
 > \begin{aligned}
-> \left| \int_A^B f(x) g(x) dx \right| &= \left| g(A) \int_A^\xi f(x) dx + g(B) \int_\xi^B f(x) dx \right| \\
-> &\leq C \left| \int_A^\xi f(x) dx \right| + C \left| \int_\xi^B f(x) dx \right| \\
+> \left| \int_A^B f(x) g(x) dx \right| &= \left| g(A) \int_A^\xi f(x) dx + g(B) \int_\xi^B f(x) dx \right| \\\\
+> &\leq C \left| \int_A^\xi f(x) dx \right| + C \left| \int_\xi^B f(x) dx \right| \\\\
 > &\leq C \cdot \frac{\varepsilon}{2C} + C \cdot \frac{\varepsilon}{2C} = \varepsilon.
 > \end{aligned}
 > $$

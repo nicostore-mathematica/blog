@@ -11,8 +11,8 @@ permalink: /notes/
 [基础微积分](/integral/)
 
 [代数学基础](/algebra/)
- 
-[应用数学](/applied-math/) （包含数理统计，数值分析，矢量分析等）
+
+[应用数学](/applied-math/) （包含数理统计，数值分析等，我是鸽子）
 
 [数学物理方法](/complex/)
 
@@ -28,12 +28,12 @@ permalink: /notes/
 
 ### · Technology
 
-[编程](/CS/)
+[编程](/CS/) (这部分是一个半废弃的模块，我在想怎么抢救回来)
 
 [电路系统](/circuit/)
 
 [工程力学](/applied-mechanics/)
 
-[RoboMaster](/RoboMaster/)
+[RoboMaster ](/RoboMaster/) (这部分也是一个半废弃的模块，我在想怎么抢救回来)
 
 [控制理论](/cybernetics/)

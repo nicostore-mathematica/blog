@@ -49,7 +49,7 @@ $$
 \lim_{\alpha \to \infty} \frac{\sin \alpha x}{\pi x} = \delta(x).
 $$
 
-为了证明这一表达式，我们注意到，当 $\alpha \to \infty$ 时，这一极限形式地满足 $\delta$-函数的定义.但是，为了证明它的积分等于 1，我们需要做一些准备工作.
+为了证明这一表达式，我们注意到，当 $\alpha \to \infty$ 时，这一极限形式地满足 $\delta$-函数的定义. 但是，为了证明它的积分等于 1，我们需要做一些准备工作.
 
 首先，我们注意到积分公式
 
@@ -71,39 +71,38 @@ $$
 
 $$
 \left(1 + \frac{\gamma^2}{\beta^2}\right) I = \frac{\gamma}{\beta^2}.
-\tag{24}
 $$
 
-将此式的两边同除以 $\left(1 + \frac{\gamma^2}{\beta^2}\right)$ 后，我们即可得到公式 (22).
+将此式的两边同除以 $\left(1 + \dfrac{\gamma^2}{\beta^2}\right)$ 后，我们即可得到公式.
 
-现在，我们将公式
-
-$$
-I = \int_0^{\infty} e^{-\gamma x} \cos \beta x\, dx = \frac{\gamma}{\beta^2 + \gamma^2}, \quad \gamma > 0
-$$
-
-两边的变量 $\beta$ 从 0 积分到 $\alpha$.我们得到
-
-$$
-\begin{aligned}
-&\int_0^{\alpha} d\beta \left(\int_0^{\infty} e^{-\gamma x} \cos \beta x\, dx\right) = \int_0^{\infty} dx\, e^{-\gamma x} \left(\int_0^{\alpha} d\beta \cos \beta x\right) \\
-&= \int_0^{\infty} dx\, e^{-\gamma x} \frac{\sin \alpha x}{x} = \int_0^{\alpha} d\beta \frac{\gamma}{\beta^2 + \gamma^2} = \arctan \frac{\alpha}{\gamma}.
-\end{aligned}
-$$
-
-因此，我们有
-
-$$
-\lim_{\gamma \to 0} \int_0^{\infty} dx\, e^{-\gamma x} \frac{\sin \alpha x}{x} = \int_0^{\infty} dx\, \frac{\sin \alpha x}{x} = \lim_{\gamma \to 0} \arctan \frac{\alpha}{\gamma} = \arctan \infty = \frac{\pi}{2}.
-$$
-
-现在，我们可以完成我们的证明了.我们有
-
-$$
-\int_{-\infty}^{\infty} \frac{\sin \alpha x}{\pi x}\, dx = 2 \int_0^{\infty} \frac{\sin \alpha x}{\pi x}\, dx = \frac{2}{\pi} \cdot \frac{\pi}{2} = 1.
-$$
-
-因此，命题得证.
+> 现在，我们将公式
+>
+> $$
+> I = \int_0^{\infty} e^{-\gamma x} \cos \beta x\, dx = \frac{\gamma}{\beta^2 + \gamma^2}, \quad \gamma > 0
+> $$
+>
+> 两边的变量 $\beta$ 从 0 积分到 $\alpha$.我们得到
+>
+> $$
+> \begin{aligned}
+> &\int_0^{\alpha} d\beta \left(\int_0^{\infty} e^{-\gamma x} \cos \beta x\, dx\right) = \int_0^{\infty} dx\, e^{-\gamma x} \left(\int_0^{\alpha} d\beta \cos \beta x\right) \\
+> &= \int_0^{\infty} dx\, e^{-\gamma x} \frac{\sin \alpha x}{x} = \int_0^{\alpha} d\beta \frac{\gamma}{\beta^2 + \gamma^2} = \arctan \frac{\alpha}{\gamma}.
+> \end{aligned}
+> $$
+>
+> 因此，我们有
+>
+> $$
+> \lim_{\gamma \to 0} \int_0^{\infty} dx\, e^{-\gamma x} \frac{\sin \alpha x}{x} = \int_0^{\infty} dx\, \frac{\sin \alpha x}{x} = \lim_{\gamma \to 0} \arctan \frac{\alpha}{\gamma} = \arctan \infty = \frac{\pi}{2}.
+> $$
+>
+> 现在，我们可以完成我们的证明了.我们有
+>
+> $$
+> \int_{-\infty}^{\infty} \frac{\sin \alpha x}{\pi x}\, dx = 2 \int_0^{\infty} \frac{\sin \alpha x}{\pi x}\, dx = \frac{2}{\pi} \cdot \frac{\pi}{2} = 1.
+> $$
+>
+> 因此，命题得证.
 
 (3) 接下来，我们有
 
@@ -115,7 +114,7 @@ $$
 
 $$
 \begin{aligned}
-&\frac{1}{2\pi} \int_{-\infty}^{\infty} e^{ikx}\, dk = \lim_{\alpha \to \infty} \frac{1}{2\pi} \int_{-\alpha}^{\alpha} e^{ikx}\, dk = \lim_{\alpha \to \infty} \frac{1}{2\pi} \frac{e^{ikx}}{ix} \Big|_{-\alpha}^{\alpha} \\
+\frac{1}{2\pi} \int_{-\infty}^{\infty} e^{ikx}\, dk &= \lim_{\alpha \to \infty} \frac{1}{2\pi} \int_{-\alpha}^{\alpha} e^{ikx}\, dk = \lim_{\alpha \to \infty} \frac{1}{2\pi} \frac{e^{ikx}}{ix} \Big|_{-\alpha}^{\alpha} \\
 &= \lim_{\alpha \to \infty} \frac{1}{\pi} \frac{e^{i\alpha x} - e^{-i\alpha x}}{2ix} = \lim_{\alpha \to \infty} \frac{1}{\pi} \frac{\sin \alpha x}{x} = \delta(x).
 \end{aligned}
 $$
@@ -505,7 +504,7 @@ $$
 > \end{aligned}
 > $$
 >
-> 这里 $\frac{dB}{dt}$ 代表全导数项，积分后得到的 $B\big|_{t_1}^{t_2}$ 被称作边界项（boundary term），其在积分的端点（边界）处取值.
+> 这里 $\dfrac{dB}{dt}$ 代表全导数项，积分后得到的 $B\big|_{t_1}^{t_2}$ 被称作边界项（boundary term），其在积分的端点（边界）处取值.
 >
 > 由上面的推导知，若泛函的被积函数 $L$ 包含 $f(t)$ 的最高 $n$ 阶导数，则边界项 $B$ 包含 $\delta f(t)$ 的最高 $(n-1)$ 阶导数.因此变分法中的一个基本假设是，如果泛函的被积函数包含最高 $n$ 阶导数，则在积分端点（边界）处，函数及其直至 $(n-1)$ 阶导数的变分为零，即
 > $$
@@ -744,7 +743,7 @@ $$
 S[f] = \iint dt dx L\left(t, x, f, \frac{\partial f}{\partial t}, \frac{\partial f}{\partial x}\right).
 $$
 
-同样按照第1.3.3节中的步骤，泛函的一阶变分为
+同样按照之前的步骤，泛函的一阶变分为
 
 $$
 \begin{aligned}
