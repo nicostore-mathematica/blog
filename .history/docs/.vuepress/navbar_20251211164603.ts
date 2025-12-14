@@ -31,12 +31,11 @@ export const navbar = defineNavbarConfig([
 			{ text: "基础物理", link: "/physics/README.md" },
 			{ text: "光学", link: "/optics/README.md" },
 			{ text: "数学物理方法", link: "/complex/README.md" },
-			{ text: "分析力学", link: "/analytical-mechanics/README.md" },
-			{ text: "电动力学", link: "/electrodynamics/README.md" },
       		{ text: "电路理论", link: "/circuit/" },
 			{ text: "工程力学", link: "/applied-mechanics/README.md" },
 			{ text: "控制理论", link: "/cybernetics/README.md" },
-			
+			{ text: "分析力学", link: "/analytical-mechanics/README.md" },
+			{ text: "电动力学", link: "/electrodynamics/README.md" },
 
 		],
 	},

@@ -206,6 +206,18 @@ export default defineUserConfig({
     /**
      * Feed/RSS 配置
      */
+    // plugins: [
+    //   feedPlugin({
+    //     hostname: 'https://soda-official.top/',
+    //     rss: {
+    //       output: {
+    //         atom: true,
+    //         json: true,
+    //         rss: true,
+    //       },
+    //     },
+    //   }),
+    // ],
 
   }),
 })

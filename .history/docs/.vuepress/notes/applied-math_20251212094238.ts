@@ -8,18 +8,8 @@ export default defineCollection({
 			link: "/applied-math/",
 			items: [
 				{
-					text: "概率统计基础",
-					collapsed: false,
-					link: "/applied-math/probstathsy/",
-					items: [
-						"/applied-math/probstathsy/probstathsy-1",
-						"/applied-math/probstathsy/probstathsy-2",
-					],
-				},
-				{
 					text: "向量分析",
 					collapsed: false,
-					link: "/applied-math/vector/",
 					items: [
 						"/applied-math/vector-1",
 					],
@@ -33,7 +23,15 @@ export default defineCollection({
 						"/applied-math/numerical/numerical-2",
 					],
 				},
-
+				{
+					text: "概率统计",
+					collapsed: false,
+					link: "/applied-math/probstathsy/",
+					items: [
+						"/applied-math/probstathsy/probstathsy-1",
+						"/applied-math/probstathsy/probstathsy-2",
+					],
+				},
 			]
 		}
 	],

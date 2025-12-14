@@ -2,7 +2,7 @@
   "timeline": 184,
   "README": 246,
   "random": 71,
-  "notes": 86,
+  "notes": 91,
   "links": 418,
   "about": 205,
   "RoboMaster": {
@@ -33,15 +33,15 @@
     "index": 117,
     "integral-9": 6065,
     "integral-8": 6916,
-    "integral-7": 6664,
-    "integral-6": 6756,
-    "integral-5": 4709,
-    "integral-4": 4302,
+    "integral-7": 6666,
+    "integral-6": 6758,
+    "integral-5": 4712,
+    "integral-4": 4317,
     "integral-3": 4218,
-    "integral-2": 5493,
+    "integral-2": 5516,
     "integral-12": 11,
-    "integral-11": 10,
-    "integral-10": 3204,
+    "integral-11": 4767,
+    "integral-10": 3230,
     "integral-1": 5013,
     "integral-0": 8
   },
@@ -101,7 +101,7 @@
     "pyvvujxp": 17,
     "resources": 485,
     "anniversary-1": 1541,
-    "article-5": 11,
+    "article-5": 1299,
     "article-4": 3551,
     "article-3": 4312,
     "article-2": 3947,
@@ -130,6 +130,11 @@
     "numerical-2": 6,
     "numerical-1": 6
   },
+  "analytical-mechanics": {
+    "index": 148,
+    "chapter-2": 6,
+    "chapter-1": 6796
+  },
   "algebra": {
     "index": 110,
     "matrix": 9,
@@ -145,7 +150,7 @@
     "algebra-1": 5125,
     "algebra-0": 9451
   },
-  "total": 245745,
-  "lastUpdated": "2025-12-10T05:51:42.549Z",
-  "fileCount": 116
+  "total": 258816,
+  "lastUpdated": "2025-12-14T10:01:26.929Z",
+  "fileCount": 119
 }
