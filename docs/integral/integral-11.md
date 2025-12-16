@@ -35,18 +35,6 @@ a_{n+1} + a_{n+2} + \cdots + a_{n+p} = S_{n+p} - S_n,
 $$
 对数列 $\{S_n\}$ 用 Cauchy 收敛准则即可.
 
-/example/ 判断级数 $\displaystyle\sum_{n=1}^{\infty} \sin n$ 的敛散性.
-
-> 如果级数收敛，则 $\sin n \to 0$ ($n \to \infty$).利用等式
-> $$
-> \sin(n+1) = \sin n \cdot \cos 1 + \cos n \cdot \sin 1
-> $$
-> 知，此时也有 $\cos n \to 0$ ($n \to \infty$).但
-> $$
-> \sin^2 n + \cos^2 n \equiv 1,
-> $$
-> 这就导出了矛盾，从而说明原级数发散.
-
 **几何级数**： $q > 0$，则当 $q < 1$ 时，$\displaystyle\sum_{n=1}^{\infty} q^n$ 收敛；$q \geq 1$ 时，$\displaystyle\sum_{n=1}^{\infty} q^n$ 发散.
 
 > 当 $0 < q < 1$ 时，
@@ -74,22 +62,6 @@ $$
 
 这个判别法对于 $a_n \geq 0$ 的级数当然也成立.
 
-/example/ 判断 $\displaystyle\sum_{n=1}^{\infty} \dfrac{1}{\sqrt{n} \cdot (n+1)}$ 的敛散性.
-
-> 我们有如下估计
-> $$
-> \begin{aligned}
-> \frac{1}{\sqrt{n} \cdot (n+1)} &< \frac{2}{\sqrt{n}(\sqrt{n+1} + \sqrt{n}) \cdot \sqrt{n+1}} \\
-> &= 2 \cdot \frac{\sqrt{n+1} - \sqrt{n}}{\sqrt{n} \cdot \sqrt{n+1}} \\
-> &= 2\left( \frac{1}{\sqrt{n}} - \frac{1}{\sqrt{n+1}} \right),
-> \end{aligned}
-> $$
-> 从而
-> $$
-> S_n = \sum_{k=1}^{n} \frac{1}{\sqrt{k} \cdot (k+1)} < 2 \sum_{k=1}^{n} \left( \frac{1}{\sqrt{k}} - \frac{1}{\sqrt{k+1}} \right) = 2\left(1 - \frac{1}{\sqrt{n+1}}\right) < 2.
-> $$
-> 故原级数收敛.
-
 /example/ 设 $q > 1$ 为正整数，$0 \leq a_n \leq q - 1$ ($\forall n \geq 1$)，则级数
 $$
 \sum_{n=1}^{\infty} \frac{a_n}{q^n}
@@ -104,17 +76,7 @@ $$
 > &= 1 - q^{-n} < 1.
 > \end{aligned}
 > $$
-> 因此级数收敛且和介于 0 与 1 之间.如果 $a_n$ 都是整数，则这个级数的和 $S$ 可记为
-> $$
-> S_{(q)} = 0.a_1a_2a_3\cdots a_n\cdots,
-> $$
-> 这也就是 $S \in [0,1]$ 的 $q$ 进制小数表示.$q = 10$ 时就是常用的 10 进制小数表示.$[0,1]$ 区间中的数都可以用 $q$ 进制小数来表示，但这种表示不是唯一的，例如在十进制中
-> $$
-> 0.999\cdots = \sum_{n=1}^{\infty} \frac{9}{10^n} = \lim_{n \to \infty} \frac{9}{10} \cdot \frac{1 - 10^{-n}}{1 - 10^{-1}} = 1.
-> $$
-> 当 $q = 2$ 时，$a_n$ 只取 0 或 1.在实际的应用中，我们可以用某些物质的特定状态来表示 0 或 1，因而这些状态的不同组合就可以表示实数（由于实际上的限制，一般只能表示有理数）.
->
-> 由于这个原因，二进制被广泛地应用于计算机和信息科学.
+> 因此级数收敛且和介于 0 与 1 之间.
 
 ### · 比较判别法
 
@@ -127,18 +89,6 @@ $$
 (1) $\displaystyle\sum_{n=1}^{\infty} b_n$ 收敛时 $\displaystyle\sum_{n=1}^{\infty} a_n$ 也收敛；
 
 (2) $\displaystyle\sum_{n=1}^{\infty} a_n$ 发散时 $\displaystyle\sum_{n=1}^{\infty} b_n$ 也发散.
-
-> **比较定理极限形式**：
->
-> > /Theorem/
-> >
-> > 设 $\displaystyle\sum_{n=1}^{\infty} m_n$，$\displaystyle\sum_{n=1}^{\infty} v_n$ 均为正项级数，且 $\displaystyle\lim_{n \to \infty} \frac{u_n}{v_n} = \ell$
-> >
-> > (1) $0 < \ell < +\infty$，即 $u_n \sim \ell \cdot v_n (n \to \infty)$ ，则 $\displaystyle\sum_{n=1}^{\infty} u_n$ 与 $\displaystyle\sum_{n=1}^{\infty} v_n$ 同收同发
-> >
-> > (2) $\ell = 0$，若 $\displaystyle\sum_{n=1}^{\infty} v_n$ 收敛，则 $\displaystyle\sum_{n=1}^{\infty} u_n$ 收敛
-> >
-> > (3) $\ell = +\infty$，若 $\displaystyle\sum_{n=1}^{\infty} v_n$ 发散，则 $\displaystyle\sum_{n=1}^{\infty} u_n$ 发散
 
 > [!important]
 >
@@ -158,7 +108,7 @@ $$
 > >
 > > (ii) $\lambda = 0$，则 $\displaystyle\sum_{n=1}^{\infty} b_n$ 收敛时 $\displaystyle\sum_{n=1}^{\infty} a_n$ 也收敛；$\lambda = \infty$，则 $\displaystyle\sum_{n=1}^{\infty} b_n$ 发散时 $\displaystyle\sum_{n=1}^{\infty} a_n$ 也发散.
 >
-> **(3**). 另一个求 $\frac{a_n}{b_n}$ 上界的方法是利用单调性，即如果
+> **(3**). 另一个求 $\dfrac{a_n}{b_n}$ 上界的方法是利用单调性，即如果
 > $$
 > \frac{a_{n+1}}{a_n} \leq \frac{b_{n+1}}{b_n} \quad \left(\Longleftrightarrow \frac{a_n}{b_n} \text{ monotonic decreasing}\right)
 > $$
@@ -178,9 +128,9 @@ $$
 >
 > **(5)** (d'Alembert 判别法或比值判别法) 在 (3) 中取 $b_n = q^n$，得如下结果：
 >
-> 如果 $n$ 充分大时，$\frac{a_{n+1}}{a_n} \leq q < 1$，则 $\displaystyle\sum_{n=1}^{\infty} a_n$ 收敛；  
+> 如果 $n$ 充分大时，$\dfrac{a_{n+1}}{a_n} \leq q < 1$，则 $\displaystyle\sum_{n=1}^{\infty} a_n$ 收敛；  
 >
-> 如果 $\frac{a_{n+1}}{a_n} \geq 1$（对充分大的 $n$ 成立），则 $\displaystyle\sum_{n=1}^{\infty} a_n$ 发散.
+> 如果 $\dfrac{a_{n+1}}{a_n} \geq 1$（对充分大的 $n$ 成立），则 $\displaystyle\sum_{n=1}^{\infty} a_n$ 发散.
 >
 > > 当然，还是求极限来寻找 $q$ 比较容易.如果
 > > $$
@@ -188,7 +138,7 @@ $$
 > > $$
 > > 则 $\lambda < 1$ 时级数收敛，$\lambda > 1$ 时发散（$\lambda = 1$ 时无法判别）.
 
-/example/ 判别 $\displaystyle\sum_{n=1}^{\infty} \left[\frac{1}{n} - \ln\left(1 + \frac{1}{n}\right)\right]$ 的敛散性.
+/example/ 判别 $\displaystyle\sum_{n=1}^{\infty} \left[\dfrac{1}{n} - \ln\left(1 + \dfrac{1}{n}\right)\right]$ 的敛散性.
 
 > 根据 Taylor 展开，
 > $$
@@ -198,15 +148,7 @@ $$
 > $$
 > \lim_{n \to \infty} \left[\frac{1}{n} - \ln\left(1 + \frac{1}{n}\right)\right] / \frac{1}{n^2} = \frac{1}{2},
 > $$
-> 而 $\displaystyle\sum_{n=1}^{\infty} \frac{1}{n^2}$ 收敛，故原级数收敛.
-
-/example/ 设 $p \in \mathbb{R}$，判别级数 $\displaystyle\sum_{n=1}^{\infty} \left(1 - \frac{p}{n}\right)^{n^2}$ 的敛散性.
-
-> 因为
-> $$
-> \sqrt[n]{a_n} = \left(1 - \frac{p}{n}\right)^n \to e^{-p},
-> $$
-> 故 $p > 0$ 时原级数收敛；$p < 0$ 时级数发散.显然，$p = 0$ 时级数也发散.
+> 而 $\displaystyle\sum_{n=1}^{\infty} \dfrac{1}{n^2}$ 收敛，故原级数收敛.
 
 ### · 积分判别法
 
@@ -232,7 +174,7 @@ $$
 > $$
 > 其中 $S_n = \displaystyle\sum_{k=1}^{n} a_k$ 为级数的部分和.因为 $S_n$ 及 $F(n)$ 关于 $n$ 都是单调递增的，二者同时有界或无界，即 $\displaystyle\sum_{n=1}^{\infty} a_n$ 与 $\int_1^{+\infty} f(x)dx$ 同敛散.
 
-/example/ 设 $s \in \mathbb{R}$，判断级数 $\displaystyle\sum_{n=1}^{\infty} \frac{1}{n^s}$ 的敛散性.
+/example/ 设 $s \in \mathbb{R}$，判断级数 $\displaystyle\sum_{n=1}^{\infty} \dfrac{1}{n^s}$ 的敛散性.
 
 > $s \leq 0$ 时，一般项 $\to 0$，故级数发散.$s > 0$ 时，考虑 $f(x) = x^{-s}$，$f$ 为非负单调递减函数，且
 > $$
@@ -242,13 +184,13 @@ $$
 > \frac{1}{1-s}(x^{1-s} - 1), & s \ne 1.
 > \end{cases}
 > $$
-> 当 $0 < s \leq 1$ 时，$F(x) \to +\infty$ ($x \to +\infty$)；$s > 1$ 时，$F(x) \to \frac{1}{s-1}$ ($x \to +\infty$).这说明 $s \leq 1$ 时，$\displaystyle\sum_{n=1}^{\infty} \frac{1}{n^s}$ 发散；$s > 1$ 时 $\displaystyle\sum_{n=1}^{\infty} \frac{1}{n^s}$ 收敛.
+> 当 $0 < s \leq 1$ 时，$F(x) \to +\infty$ ($x \to +\infty$)；$s > 1$ 时，$F(x) \to \dfrac{1}{s-1}$ ($x \to +\infty$).这说明 $s \leq 1$ 时，$\displaystyle\sum_{n=1}^{\infty} \dfrac{1}{n^s}$ 发散；$s > 1$ 时 $\displaystyle\sum_{n=1}^{\infty} \dfrac{1}{n^s}$ 收敛.
 >
-> **注意**．$\zeta(s) = \displaystyle\sum_{n=1}^{\infty} \frac{1}{n^s}$ 称为 Riemann-Zeta 函数，这是一个非常重要的函数，它和现代数论的关系特别紧密.
+> **注意**．$\zeta(s) = \displaystyle\sum_{n=1}^{\infty} \dfrac{1}{n^s}$ 称为 Riemann-Zeta 函数，这是一个非常重要的函数，它和现代数论的关系特别紧密.
 
-/example/ 判断 $\displaystyle\sum_{n=1}^{\infty} \frac{1}{(n+1)(\ln(n+1))^s}$ 的敛散性，其中 $s \in \mathbb{R}$.
+/example/ 判断 $\displaystyle\sum_{n=1}^{\infty} \dfrac{1}{(n+1)(\ln(n+1))^s}$ 的敛散性，其中 $s \in \mathbb{R}$.
 
-> 当 $s \leq 0$ 时，级数的一般项大于或等于 $\frac{1}{n+1}$，而 $\displaystyle\sum_{n=1}^{\infty} \frac{1}{n}$ 发散，故原级数发散.下设 $s > 0$.令
+> 当 $s \leq 0$ 时，级数的一般项大于或等于 $\dfrac{1}{n+1}$，而 $\displaystyle\sum_{n=1}^{\infty} \dfrac{1}{n}$ 发散，故原级数发散.下设 $s > 0$.令
 > $$
 > f(t) = \frac{1}{(1+t)(\ln(1+t))^s},
 > $$
@@ -262,15 +204,15 @@ $$
 > $$
 > 因此 $s \leq 1$ 时原级数发散；$s > 1$ 时原级数收敛.
 
-现在，如果在比较判别法中令 $b_n = \frac{1}{n^s}$ 或 $\frac{1}{n \ln n}$ 等，就可以由此进一步得到新的判别法.不过，我们来介绍一个相当一般的判别法，由此出发再得到两个新的判别法.以下仍假设 $\lambda$ 是常数.
+现在，如果在比较判别法中令 $b_n = \dfrac{1}{n^s}$ 或 $\dfrac{1}{n \ln n}$ 等，就可以由此进一步得到新的判别法.不过，我们来介绍一个相当一般的判别法，由此出发再得到两个新的判别法.以下仍假设 $\lambda$ 是常数.
 
 ### · Kummer 定理
 
 **定理3**（Kummer）．设 $\displaystyle\sum_{n=1}^{\infty} a_n$, $\displaystyle\sum_{n=1}^{\infty} b_n$ 为正项级数，如果 $n$ 充分大时
 
-(1) $\frac{1}{b_n} \cdot \frac{a_n}{a_{n+1}} - \frac{1}{b_{n+1}} \geq \lambda > 0$，则 $\displaystyle\sum_{n=1}^{\infty} a_n$ 收敛；
+(1) $\dfrac{1}{b_n} \cdot \dfrac{a_n}{a_{n+1}} - \dfrac{1}{b_{n+1}} \geq \lambda > 0$，则 $\displaystyle\sum_{n=1}^{\infty} a_n$ 收敛；
 
-(2) $\frac{1}{b_n} \cdot \frac{a_n}{a_{n+1}} - \frac{1}{b_{n+1}} \leq 0$ 且 $\displaystyle\sum_{n=1}^{\infty} b_n$ 发散，则 $\displaystyle\sum_{n=1}^{\infty} a_n$ 发散.
+(2) $\dfrac{1}{b_n} \cdot \dfrac{a_n}{a_{n+1}} - \dfrac{1}{b_{n+1}} \leq 0$ 且 $\displaystyle\sum_{n=1}^{\infty} b_n$ 发散，则 $\displaystyle\sum_{n=1}^{\infty} a_n$ 发散.
 
 > /proof/
 >
@@ -296,7 +238,7 @@ $$
 > $$
 > \frac{a_n}{b_n} \leq \frac{a_{n+1}}{b_{n+1}},
 > $$
-> 即 $\left\{\frac{a_n}{b_n}\right\}$ 关于 $n$ 单调递增，从而 $a_n \geq \frac{a_1}{b_1} b_n$，因此由 $\displaystyle\sum_{n=1}^{\infty} b_n$ 发散知 $\displaystyle\sum_{n=1}^{\infty} a_n$ 也发散.
+> 即 $\left\{\dfrac{a_n}{b_n}\right\}$ 关于 $n$ 单调递增，从而 $a_n \geq \dfrac{a_1}{b_1} b_n$，因此由 $\displaystyle\sum_{n=1}^{\infty} b_n$ 发散知 $\displaystyle\sum_{n=1}^{\infty} a_n$ 也发散.
 
 > [!important]
 >
@@ -312,15 +254,15 @@ $$
 >
 > (2) 取 $b_n = 1$，由 Kummer 判别法就得到了 d'Alembert 判别法.
 >
-> (3) (Raabe) 取 $b_n = \frac{1}{n}$，则得（$\mu$ 为常数）  
+> (3) (Raabe) 取 $b_n = \dfrac{1}{n}$，则得（$\mu$ 为常数）  
 >
-> > (i) $n \cdot \left( \frac{a_n}{a_{n+1}} - 1 \right) \geq \mu > 1$ 时 $\displaystyle\sum_{n=1}^{\infty} a_n$ 收敛；  
+> > (i) $n \cdot \left( \dfrac{a_n}{a_{n+1}} - 1 \right) \geq \mu > 1$ 时 $\displaystyle\sum_{n=1}^{\infty} a_n$ 收敛；  
 > >
-> > (ii) $n \cdot \left( \frac{a_n}{a_{n+1}} - 1 \right) \leq 1$ 时 $\displaystyle\sum_{n=1}^{\infty} a_n$ 发散.
+> > (ii) $n \cdot \left( \dfrac{a_n}{a_{n+1}} - 1 \right) \leq 1$ 时 $\displaystyle\sum_{n=1}^{\infty} a_n$ 发散.
 > >
 > > Raabe 判别法当然也有极限形式.
 >
-> (4) (Gauss) 取 $b_n = \frac{1}{n \ln n}$，则得如下判别法：假设（$\theta$ 为常数）
+> (4) (Gauss) 取 $b_n = \dfrac{1}{n \ln n}$，则得如下判别法：假设（$\theta$ 为常数）
 > $$
 > (*) \quad \frac{a_n}{a_{n+1}} = 1 + \frac{\theta}{n} + o\left(\frac{1}{n \ln n}\right),
 > $$
@@ -347,18 +289,18 @@ $$
 \sum_{n=1}^{\infty} \left(\frac{(2n-1)!!}{(2n)!!}\right)^s \cdot \frac{1}{2n+1}
 $$
 
-> 因为
+> (1). 因为
 > $$
 > \lim_{n \to \infty} n \cdot \left( \frac{a_n}{a_{n+1}} - 1 \right) = \lim_{n \to \infty} n \cdot \left( \frac{\alpha + n + 1}{n + 1} - 1 \right) = \alpha,
 > $$
-> 根据 Raabe 判别法，$\alpha > 1$ 时原级数收敛，$\alpha < 1$ 时发散.$\alpha = 1$ 时，$a_n = \frac{1}{n+1}$，此时原级数也发散.
+> 根据 Raabe 判别法，$\alpha > 1$ 时原级数收敛，$\alpha < 1$ 时发散.$\alpha = 1$ 时，$a_n = \dfrac{1}{n+1}$，此时原级数也发散.
 >
 > (2) 因为
 > $$
 > \begin{aligned}
-> \frac{a_n}{a_{n+1}} &= \left(\frac{2n+2}{2n+1}\right)^s \frac{2n+3}{2n+1} = \left(1 + \frac{1}{2n+1}\right)^s \left(1 + \frac{2}{2n+1}\right) \\
-> &= \left(1 + \frac{s}{2n+1} + O\left(\frac{1}{n^2}\right)\right)\left(1 + \frac{2}{2n+1}\right) \\
-> &= 1 + \frac{s+2}{2n+1} + O\left(\frac{1}{n^2}\right) \\
+> \frac{a_n}{a_{n+1}} &= \left(\frac{2n+2}{2n+1}\right)^s \frac{2n+3}{2n+1} = \left(1 + \frac{1}{2n+1}\right)^s \left(1 + \frac{2}{2n+1}\right) \\\\
+> &= \left(1 + \frac{s}{2n+1} + O\left(\frac{1}{n^2}\right)\right)\left(1 + \frac{2}{2n+1}\right) \\\\
+> &= 1 + \frac{s+2}{2n+1} + O\left(\frac{1}{n^2}\right) \\\\
 > &= 1 + \frac{(s+2)/2}{n} + O\left(\frac{1}{n^2}\right),
 > \end{aligned}
 > $$
@@ -394,7 +336,7 @@ $$
 \sum_{n=1}^{\infty} \frac{1}{n^p}, \quad \sum_{n=2}^{\infty} \frac{1}{n(\ln n)^p}.
 $$
 
-> 显然，当 $p \leq 0$ 时级数都是发散的.下设 $p > 0$.因为 $a_n = \frac{1}{n^p}$ 单调递减趋于零，由 Cauchy 凝聚判别法，只要考察下面的级数的敛散性：
+> 显然，当 $p \leq 0$ 时级数都是发散的.下设 $p > 0$.因为 $a_n = \dfrac{1}{n^p}$ 单调递减趋于零，由 Cauchy 凝聚判别法，只要考察下面的级数的敛散性：
 > $$
 > \sum_{k=0}^{\infty} 2^k \frac{1}{2^{kp}} = \sum_{k=0}^{\infty} 2^{k(1-p)},
 > $$
@@ -604,7 +546,7 @@ $$
 >
 > > **注意.** 
 > >
-> > 如果在 $[1,+\infty)$ 上分段地定义函数 $f(x), g(x)$ 如下：当 $x \in [k,k+1)$ 时，令 $f(x) = a_k, g(x) = b_k, k = 1,2,\cdots$.则 $f(x)$ 和 $g(x)$ 满足第七章第三节关于广义积分的 Dirichlet 定理的条件，
+> > 如果在 $[1,+\infty)$ 上分段地定义函数 $f(x), g(x)$ 如下：当 $x \in [k,k+1)$ 时，令 $f(x) = a_k,\ g(x) = b_k,\ k = 1,2,\cdots$.则 $f(x)$ 和 $g(x)$ 满足第七章第三节关于广义积分的 Dirichlet 定理的条件，
 > >
 > > 因而 $f(x)g(x)$ 在 $[1,+\infty)$ 上的广义积分收敛，即级数 $\displaystyle\sum_{n=1}^{\infty} a_n b_n$ 收敛.
 > >
@@ -621,9 +563,9 @@ $$
 >
 > 也收敛.
 
-/example/ 判断级数 $\displaystyle\sum_{n=1}^{\infty} \frac{1}{n} \sin nx$ 的敛散性.
+/example/ 判断级数 $\displaystyle\sum_{n=1}^{\infty} \dfrac{1}{n} \sin nx$ 的敛散性.
 
-> $a_n = \frac{1}{n}$ 单调递减趋于 $0$，$b_n = \sin nx$.利用公式
+> $a_n = \dfrac{1}{n}$ 单调递减趋于 $0$，$b_n = \sin nx$.利用公式
 >
 > $$
 > 2 \sin \frac{x}{2} \cdot \sin kx = \cos(k - \frac{1}{2})x - \cos(k + \frac{1}{2})x
@@ -634,7 +576,7 @@ $$
 > $$
 > \sum_{k=1}^{n} b_n =
 > \begin{cases}
-> 0, & x = 2k\pi, \\
+> 0, & x = 2k\pi, \\\\
 > (\cos \frac{x}{2} - \cos(n + \frac{1}{2})x)/2 \sin \frac{x}{2}, & x \ne 2k\pi.
 > \end{cases}
 > $$
@@ -643,7 +585,7 @@ $$
 
 /example/ 设级数 $\displaystyle\sum_{n=1}^{\infty} n a_n$ 收敛，证明 $\displaystyle\sum_{n=1}^{\infty} a_n$ 也收敛.
 
->  记 $a_n = \frac{1}{n} \cdot (n a_n)$，而 $\frac{1}{n}$ 单调趋于 $0$，$\displaystyle\sum_{n=1}^{\infty} n a_n$ 收敛，故由 Abel 判别法，级数 $\displaystyle\sum_{n=1}^{\infty} a_n$ 收敛.$\square$
+>  记 $a_n = \dfrac{1}{n} \cdot (n a_n)$，而 $\dfrac{1}{n}$ 单调趋于 $0$，$\displaystyle\sum_{n=1}^{\infty} n a_n$ 收敛，故由 Abel 判别法，级数 $\displaystyle\sum_{n=1}^{\infty} a_n$ 收敛.$\square$
 >
 > 对于更一般的级数，没有普适的判别法，但有时可以转化为正项级数予以处理.
 
@@ -658,11 +600,418 @@ $$
 
 如果 $\displaystyle\sum_{n=1}^{\infty} a_n$ 收敛而 $\displaystyle\sum_{n=1}^{\infty} |a_n|$ 发散，则称 $\displaystyle\sum_{n=1}^{\infty} a_n$ 条件收敛.
 
-/example/ 判断级数 $\displaystyle\sum_{n=1}^{\infty} (-1)^{n-1} \frac{x^n}{n}\ (x \in \mathbb{R})$ 的敛散性.
+/example/ 判断级数 $\displaystyle\sum_{n=1}^{\infty} (-1)^{n-1} \dfrac{x^n}{n}\ (x \in \mathbb{R})$ 的敛散性.
 
-> 令 $a_n = \frac{|x|^n}{n}$，则 $\sqrt[n]{a_n} \to |x|$.故 $|x| < 1$ 时原级数绝对收敛；
+> 令 $a_n = \dfrac{|x|^n}{n}$，则 $\sqrt[n]{a_n} \to |x|$.故 $|x| < 1$ 时原级数绝对收敛；
 >
 > 而 $|x| > 1$ 时显然发散.$x = 1$ 时级数条件收敛；$x = -1$ 时级数发散.
+
+## Part 4 分析学性质
+
+### · 可交换性
+
+我们可以把级数的和看成是其部分和的极限，也就是一个数列极限. 
+
+现在考虑这样的问题：如果有一列数项级数，它们的和就是一列数，这一列数的极限有何性质？为此，我们考虑依赖于指标 $i,j$（$i,j = 1,2,\cdots,\infty$）的实数 $a_{ij}$. 
+
+**定义1**（级数的一致收敛）. 一列收敛级数 $\displaystyle\sum_{j=1}^\infty a_{ij} = A_i$ 关于 $i$ 一致收敛是指，任给 $\varepsilon > 0$，存在 $N$，当 $n > N$ 时，
+
+$$
+\left| \sum_{j=1}^n a_{ij} - A_i \right| < \varepsilon, \quad \forall\ i \geq 1.
+$$
+
+**定理1**. 设一列级数 $\displaystyle\sum_{j=1}^\infty a_{ij} = A_i$ 关于 $i$ 一致收敛，如果 $\displaystyle\lim_{i \to \infty} a_{ij} = a_j$（$j \geq 1$），则极限 $\displaystyle\lim_{i \to \infty} A_i$ 存在，级数 $\displaystyle\sum_{j=1}^\infty a_j$ 收敛，且
+$$
+\lim_{i \to \infty} A_i = \sum_{j=1}^\infty a_j,
+$$
+
+或改写为
+
+$$
+\lim_{i \to \infty} \sum_{j=1}^\infty a_{ij} = \sum_{j=1}^\infty \lim_{i \to \infty} a_{ij}.
+$$
+
+> 由一致收敛的定义，任给 $\varepsilon > 0$，存在 $N_0$，当 $n \geq N_0$ 时，
+>
+> $$
+> \left| \sum_{j=1}^n a_{ij} - A_i \right| < \frac{1}{4}\varepsilon, \quad \forall\ i \geq 1.
+> $$
+>
+> 因此，当 $m > n \geq N_0$ 时，
+>
+> $$
+> \left| \sum_{j=n+1}^m a_{ij} \right| \leq \left| \sum_{j=1}^m a_{ij} - A_i \right| + \left| \sum_{j=1}^n a_{ij} - A_i \right| < \frac{1}{2}\varepsilon, \quad \forall\ i \geq 1.
+> $$
+>
+> 在上式中令 $i \to \infty$，得
+>
+> $$
+> \left| \sum_{j=n+1}^m a_j \right| \leq \frac{1}{2}\varepsilon,
+> $$
+>
+> 由 Cauchy 准则即知级数 $\displaystyle\sum_{j=1}^\infty a_j$ 收敛，且在上式中令 $m \to \infty$ 可得
+>
+> $$
+> \left| \sum_{j=n+1}^\infty a_j \right| \leq \frac{1}{2}\varepsilon, \quad \forall\ n \geq N_0.
+> $$
+>
+> 对于 $j = 1,2,\cdots,N_0$，因为 $a_{ij} \to a_j$，故存在 $N$，当 $i > N$ 时，
+>
+> $$
+> |a_{ij} - a_j| < \frac{\varepsilon}{4N_0}, \quad j = 1,2,\cdots,N_0.
+> $$
+>
+> 因此，当 $i > N$ 时，有
+>
+> $$
+> \left| A_i - \sum_{i=1}^\infty a_j \right| \leq \left| A_i - \sum_{j=1}^{N_0} a_{ij} \right| + \left| \sum_{j=1}^{N_0} a_{ij} - \sum_{j=1}^{N_0} a_j \right| + \left| \sum_{j=N_0+1}^\infty a_j \right| \\
+> < \frac{1}{4}\varepsilon + N_0 \cdot \frac{\varepsilon}{4N_0} + \frac{1}{2}\varepsilon = \varepsilon.
+> $$
+>
+> 这说明 $\{A_i\}$ 的极限存在且极限为 $\displaystyle\sum_{j=1}^\infty a_j$. 
+>
+> **注意**. 这个结果给出了求极限与求和这两个运算可交换次序的一个充分条件. 
+
+**推论2**. 设 $\displaystyle\lim_{i \to \infty} a_{ij} = a_j$（$j \geq 1$），$|a_{ij}| \leq b_j$（$i \geq 1$），且 $\displaystyle\sum_{j=1}^\infty b_j$ 收敛，则级数 $\displaystyle\sum_{j=1}^\infty a_j$ 收敛，且
+
+$$
+\sum_{j=1}^\infty a_j = \sum_{j=1}^\infty \lim_{i \to \infty} a_{ij} = \lim_{i \to \infty} \sum_{j=1}^\infty a_{ij}.
+$$
+
+> 由 $a_{ij} \to a_j$，且 $|a_{ij}| \leq b_j$ 知 $|a_j| \leq b_j$，$j = 1,2,\cdots$. 因为级数 $\displaystyle\sum_{j=1}^\infty b_j$ 收敛，故级数 $\displaystyle\sum_{j=1}^\infty a_j$ 绝对收敛. 任给 $\varepsilon > 0$，存在 $N$，当 $n > N$ 时，
+>
+> $$
+> 0 \leq \sum_{j=n+1}^\infty b_j < \varepsilon.
+> $$
+>
+> 此时，对任意 $i \geq 1$，有
+>
+> $$
+> \left| \sum_{j=1}^n a_{ij} - \sum_{j=1}^\infty a_{ij} \right| = \left| \sum_{j=n+1}^\infty a_{ij} \right| \leq \sum_{j=n+1}^\infty b_j < \varepsilon,
+> $$
+>
+> 从而级数 $\displaystyle\sum_{j=1}^\infty a_{ij}$ 关于 $i$ 是一致收敛的. 由上一定理知本推论结论成立.
+>
+> **注意**. 这个结果可以称为级数和的控制收敛定理，$\displaystyle\sum_{j=1}^\infty b_j$ 称为控制级数. 
+
+**推论3**. 设 $\displaystyle\sum_{i=1}^\infty |a_{ij}| \leq A_j$（$j \geq 1$），且 $\displaystyle\sum_{j=1}^\infty A_j$ 收敛，则对任意 $i \geq 1$，级数 $\displaystyle\sum_{j=1}^\infty a_{ij}$ 收敛，且
+$$
+\sum_{i=1}^\infty \sum_{j=1}^\infty a_{ij} = \sum_{j=1}^\infty \sum_{i=1}^\infty a_{ij}.
+$$
+
+> 首先，由题设知 $|a_{ij}| \leq A_j$，$j = 1,2,\cdots$. 这说明，对任意 $i \geq 1$，级数 $\displaystyle\sum_{j=1}^\infty a_{ij}$ 是绝对收敛的. 因为
+>
+> $$
+> \left| \sum_{i=1}^k a_{ij} \right| \leq \sum_{i=1}^k |a_{ij}| \leq A_j, \quad j \geq 1.
+> $$
+>
+> 故由上一推论，有
+>
+> $$
+> \begin{align*}
+> \sum_{i=1}^\infty \sum_{j=1}^\infty a_{ij} &= \lim_{k \to \infty} \sum_{i=1}^k \sum_{j=1}^\infty a_{ij} \\\\
+> &= \lim_{k \to \infty} \sum_{j=1}^\infty \sum_{i=1}^k a_{ij} \\\\
+> &= \sum_{j=1}^\infty \lim_{k \to \infty} \sum_{i=1}^k a_{ij} \\\\
+> &= \sum_{j=1}^\infty \sum_{i=1}^\infty a_{ij}.
+> \end{align*}
+> $$
+>
+> 这就证明了本推论. 
+>
+> **注意**. 这个推论给出了两个无穷求和运算可交换次序的一个充分条件. 
+
+### · 级数的乘积
+
+现在我们考虑级数的乘法运算性质，对于有限个数的和的乘积，显然有
+
+$$
+(a_0 + a_1 + \cdots + a_m)(b_0 + b_1 + \cdots + b_n) = \sum_{k=0}^{m+n} \sum_{i+j=k} a_i b_j.
+$$
+
+对于无穷级数，我们作如下推广：设 $\displaystyle\sum_{n=0}^\infty a_n$ 和 $\displaystyle\sum_{n=0}^\infty b_n$ 为两个级数，定义它们的乘积为级数 $\displaystyle\sum_{n=0}^\infty c_n$，其中
+
+$$
+c_n = \sum_{i+j=n} a_i b_j, \quad n \geq 0.
+$$
+
+这种乘积也称为级数的 Cauchy 乘积. 
+
+**定理4**（Cauchy）. 如果 $\displaystyle\sum_{n=0}^\infty a_n$ 和 $\displaystyle\sum_{n=0}^\infty b_n$ 绝对收敛，则它们的乘积级数也绝对收敛，且
+
+$$
+\sum_{n=0}^\infty c_n = \left( \sum_{n=0}^\infty a_n \right) \left( \sum_{n=0}^\infty b_n \right).
+$$
+
+> [!important]
+>
+> **注意**. 在定理的条件下不难看出，将 $\{a_i b_j\}$ 任意排列次序，得到的级数仍（绝对）收敛，且其和不变. 
+>
+> 我们现在将 Cauchy 定理的条件减弱，这时下面的结果仍然成立. 
+
+**定理5**（Mertens）. 如果 $\displaystyle\sum_{n=0}^\infty a_n$ 和 $\displaystyle\sum_{n=0}^\infty b_n$ 收敛，且至少其中一个级数绝对收敛，则它们的乘积级数也收敛，且
+
+$$
+\sum_{n=0}^\infty c_n = \left( \sum_{n=0}^\infty a_n \right) \left( \sum_{n=0}^\infty b_n \right).
+$$
+
+> 不妨设 $\displaystyle\sum_{n=0}^\infty a_n$ 绝对收敛. 分别记
+>
+> $$
+> A_n = \sum_{k=0}^n a_k, \quad B_n = \sum_{k=0}^n b_k, \quad C_n = \sum_{k=0}^n c_k.
+> $$
+>
+> 则 $A_n \to A$，$B_n \to B$，而
+>
+> $$
+> C_n = \sum_{i+j \leq n} a_i b_j = a_0 B_n + a_1 B_{n-1} + \cdots + a_n B_0 = A_n B + \delta_n,
+> $$
+>
+> 其中
+>
+> $$
+> \delta_n = a_0 (B_n - B) + a_1 (B_{n-1} - B) + \cdots + a_n (B_0 - B).
+> $$
+>
+> 我们只要证明 $\delta_n \to 0$ 即可. 因为 $B_n \to B$，故 $\{B_n\}$ 关于 $n$ 有界，从而存在 $K$，使得
+>
+> $$
+> |B_n - B| \leq K, \quad \forall\ n \geq 0.
+> $$
+>
+> 由于 $\displaystyle\sum_{n=0}^\infty a_n$ 绝对收敛，故任给 $\varepsilon > 0$，存在 $N_0$，当 $n > N_0$ 时
+>
+> $$
+> |a_{N_0+1}| + \cdots + |a_n| < \frac{\varepsilon}{2K+1}.
+> $$
+>
+> 记 $L = |a_0| + |a_1| + \cdots + |a_{N_0}|$. 由于 $B_n - B \to 0$，故存在 $N_1$，当 $n > N_1$ 时
+>
+> $$
+> |B_n - B| < \frac{\varepsilon}{2L+1}.
+> $$
+>
+> 从而当 $n > N_0 + N_1$ 时，有
+>
+> $$
+> |\delta_n| \leq \sum_{k=0}^{N_0} |a_k| |B_{n-k} - B| + (|a_{N_0+1}| + \cdots + |a_n|) K \\
+> \leq \frac{\varepsilon}{2L+1} (|a_0| + |a_1| + \cdots + |a_{N_0}|) + \frac{\varepsilon}{2K+1} K \\
+> = \frac{\varepsilon}{2L+1} L + \frac{\varepsilon}{2K+1} K \\
+> < \varepsilon.
+> $$
+>
+> 这说明 $\delta_n \to 0$，因而 $C_n = A_n B + \delta_n \to AB$. 
+
+**注意**. 定理中的绝对收敛的条件不能去掉，反例就是将 $a_n$ 和 $b_n$ 均取为交错级数 $(-1)^{n-1} \dfrac{1}{\sqrt{n}}$，此时所得乘积级数是发散的. 但是，如果乘积级数仍然收敛，则其和等于两个级数和的乘积. 
+
+为了说明这一点，需要下面的引理. 
+
+**引理6**（Abel）. 设级数 $\displaystyle\sum_{n=0}^\infty c_n = C$ 收敛，令
+$$
+f(x) = \sum_{n=0}^\infty c_n x^n, \quad x \in [0,1),
+$$
+
+则 $\displaystyle\lim_{x \to 1^-} f(x) = C$. 
+
+> 级数收敛表明 $\{c_n\}$ 有界，因此当 $x \in [0,1)$ 时，$\displaystyle\sum_{n=0}^\infty c_n x^n$ 绝对收敛. 记
+>
+> $$
+> C_{-1} = 0, \quad C_n = \sum_{k=0}^n c_k, \quad n \geq 0.
+> $$
+>
+> 则有
+>
+> $$
+> \sum_{k=0}^n c_k x^k = \sum_{k=0}^n (C_k - C_{k-1}) x^k \\
+> = \sum_{k=0}^n C_k x^k - x \sum_{k=0}^{n-1} C_k x^k \\
+> = C_n x^n + (1 - x) \sum_{k=0}^{n-1} C_k x^k \\
+> = C_n x^n + C(1 - x^n) + (1 - x) \sum_{k=0}^{n-1} (C_k - C) x^k.
+> $$
+>
+> 在上式中令 $n \to \infty$ 就得到
+>
+> $$
+> f(x) = C + (1 - x) \sum_{k=0}^\infty (C_k - C) x^k.
+> $$
+>
+> 因为 $C_k - C \to 0$，故任给 $\varepsilon > 0$，存在 $N$，当 $k > N$ 时
+>
+> $$
+> |C_k - C| < \frac{1}{2}\varepsilon.
+> $$
+>
+> 令 $M = \displaystyle\sum_{k=0}^N |C_k - C|$，则有估计
+>
+> $$
+> |f(x) - C| \leq M(1 - x) + (1 - x) \sum_{k=N+1}^\infty \frac{1}{2}\varepsilon x^k \leq M(1 - x) + \frac{1}{2}\varepsilon.
+> $$
+>
+> 因此，当 $0 < 1 - x < \dfrac{\varepsilon}{2M+1}$ 时，
+>
+> $$
+> |f(x) - C| \leq M \frac{\varepsilon}{2M+1} + \frac{1}{2}\varepsilon < \varepsilon.
+> $$
+>
+> 这说明 $\displaystyle\lim_{x \to 1^-} f(x) = C$. 
+
+**定理7**（Abel）. 设级数 $\displaystyle\sum_{n=0}^\infty a_n$，$\displaystyle\sum_{n=0}^\infty b_n$ 以及它们的乘积 $\displaystyle\sum_{n=0}^\infty c_n$ 均收敛，则
+
+$$
+\sum_{n=0}^\infty c_n = \left( \sum_{n=0}^\infty a_n \right) \left( \sum_{n=0}^\infty b_n \right).
+$$
+
+> 当 $x \in [0,1)$ 时，级数 $\displaystyle\sum_{n=0}^\infty a_n x^n$ 和 $\displaystyle\sum_{n=0}^\infty b_n x^n$ 绝对收敛，它们的乘积级数为 $\displaystyle\sum_{n=0}^\infty c_n x^n$. 根据 Cauchy 定理，有
+>
+> $$
+> \sum_{n=0}^\infty c_n x^n = \left( \sum_{n=0}^\infty a_n x^n \right) \left( \sum_{n=0}^\infty b_n x^n \right).
+> $$
+>
+> 令 $x \to 1^-$，由上述 Abel 引理即得欲证结论. 
+
+### ·  乘积级数
+
+我们将级数定义中的加法运算改为乘积运算，就可以得到一种新的级数，它们的性质与加法级数的性质十分类似. 为此，设
+
+$$
+p_1, p_2, \cdots, p_n, \cdots
+$$
+
+是一列实数，我们将形式积
+
+$$
+\prod_{n=1}^\infty p_n = p_1 \cdot p_2 \cdots p_n \cdots
+$$
+
+称为无穷乘积. 记
+
+$$
+P_n = \prod_{k=1}^n p_k, \quad n \geq 1
+$$
+
+称为部分乘积. 如果数列 $\{P_n\}$ 的极限存在，且极限为有限或为正无穷，或为负无穷，则此极限称为无穷乘积的值，记为
+
+$$
+\prod_{n=1}^\infty p_n = \lim_{n \to \infty} P_n.
+$$
+
+当极限为有限且非零时，称无穷乘积是收敛的，否则就称它是发散的. 
+
+如果某个 $p_n$ 为零，则显然无穷乘积为零. 下面我们假设 $p_n$ 均为非零实数. 设无穷乘积 $\prod_{n=1}^\infty p_n$ 收敛，则
+
+$$
+\lim_{n \to \infty} p_n = \lim_{n \to \infty} \frac{P_n}{P_{n-1}} = P/P = 1,
+$$
+
+特别地，当 $n$ 充分大时，必有 $p_n > 0$. 因为去掉有限项后不影响敛散性，因此下面进一步假设 $p_n > 0$，$\forall\ n \geq 1$. 
+
+由于
+
+$$
+P_n = \prod_{k=1}^n p_k = e^{\sum_{k=1}^n \ln p_k},
+$$
+
+因此，我们可以将无穷乘积化为无穷级数加以讨论，我们有
+
+**命题8**. 设 $p_n > 0$，$\forall\ n \geq 1$. 则
+
+(1) 无穷乘积 $\prod_{n=1}^\infty p_n$ 收敛当且仅当级数 $\displaystyle\sum_{n=1}^\infty \ln p_n$ 收敛，且
+$$
+\prod_{n=1}^\infty p_n = e^{\sum_{n=1}^\infty \ln p_n};
+$$
+
+(2) 记 $p_n = 1 + a_n$. 如果 $n$ 充分大时 $a_n > 0$（或 $a_n < 0$），则无穷乘积 $\prod_{n=1}^\infty p_n$ 收敛当且仅当级数 $\displaystyle\sum_{n=1}^\infty a_n$ 收敛；
+
+(3) 如果级数 $\displaystyle\sum_{n=1}^\infty a_n$ 和 $\displaystyle\sum_{n=1}^\infty a_n^2$ 均收敛，则无穷乘积 $\prod_{n=1}^\infty (1 + a_n)$ 也收敛. 
+
+> (1) 是显然的. (2) 只要利用
+>
+> $$
+> \lim_{n \to \infty} \frac{\ln(1 + a_n)}{a_n} = 1
+> $$
+>
+> 以及数项级数的比较判别法即可. (3) 则是利用（$a_n$ 不为零时）
+>
+> $$
+> \lim_{n \to \infty} \frac{[a_n - \ln(1 + a_n)]}{a_n^2} = \frac{1}{2}
+> $$
+>
+> 以及 (1). 
+
+### · 级数的重排
+
+现在我们讨论将级数的各项重新排列次序后得到的新级数的收敛和发散性质. 首先，如果 $\displaystyle\sum_{n=1}^\infty a_n$ 为正项级数，则由基本判别法不难看出，将它的各项重新排列后不会影响其敛散性. 如果收敛的话，重排也不改变级数的和. 
+
+对于一般的级数，如果 $\displaystyle\sum_{n=1}^\infty a_n$ 绝对收敛，则重排后的级数也绝对收敛，且其和不变. 这可以从等式
+
+$$
+a_n = \frac{a_n + |a_n|}{2} - \frac{|a_n| - a_n}{2} = a_n^+ - a_n^-
+$$
+
+以及正项级数 $\displaystyle\sum_{n=1}^\infty a_n^+$, $\displaystyle\sum_{n=1}^\infty a_n^-$ 的收敛性推出. 
+
+如果 $\displaystyle\sum_{n=1}^\infty a_n$ 条件收敛，则级数重排后即使收敛，它的和也可能变化. 
+
+实际上，对于条件收敛的级数，可以将它重排使得其和为任意实数. 
+
+**定理9**（Riemann）. 如果 $\displaystyle\sum_{n=1}^\infty a_n$ 为条件收敛的级数，则可以将它重排为一个收敛级数，使得重排后的级数和为任意指定的实数. 
+
+> 设 $\xi \in \mathbb{R}$，我们将找到 $\displaystyle\sum_{n=1}^\infty a_n$ 的一个重排，使得它的和为 $\xi$. 首先我们注意到，如果 $\displaystyle\sum_{n=1}^\infty a_n$ 条件收敛，则 $\displaystyle\sum_{n=1}^\infty |a_n|$ 发散. 由 $|a_n| = a_n^+ + a_n^-$, $a_n = a_n^+ - a_n^-$ 即知，级数 $\displaystyle\sum_{n=1}^\infty a_n^+$ 和 $\displaystyle\sum_{n=1}^\infty a_n^-$ 均发散到 $+\infty$. 这两个级数的部分和分别记为 $S_n^+$ 和 $S_n^-$. 因为当 $n$ 充分大时 $S_n^+ > \xi$，故可取最小的正整数 $m_1$，使得
+>
+> $$
+> S_{m_1}^+ > \xi,
+> $$
+>
+> 此时成立
+>
+> $$
+> \xi \geq S_{m_1}^+ - a_{m_1}^+.
+> $$
+>
+> 因为 $n$ 充分大时，$S_{m_1}^+ - S_n^- < \xi$，故可取最小的正整数 $n_1$，使得
+>
+> $$
+> S_{m_1}^+ - S_{n_1}^- < \xi,
+> $$
+>
+> 同理有
+>
+> $$
+> \xi \leq S_{m_1}^+ - S_{n_1}^- + a_{n_1}^-.
+> $$
+>
+> 下面再取最小的正整数 $m_2$，使得
+>
+> $$
+> S_{m_2}^+ - S_{n_1}^- > \xi \geq S_{m_2}^+ - S_{n_1}^- - a_{m_2}^+,
+> $$
+>
+> 以及最小的正整数 $n_2$，使得
+>
+> $$
+> S_{m_2}^+ - S_{n_2}^- < \xi \leq S_{m_2}^+ - S_{n_2}^- + a_{n_2}^-.
+> $$
+>
+> 如此继续下去，我们得到递增数列 $m_1 < m_2 < \cdots$ 和 $n_1 < n_2 < \cdots$，使得
+>
+> $$
+> S_{m_k}^+ - S_{n_{k-1}}^- > \xi \geq S_{m_k}^+ - S_{n_{k-1}}^- - a_{m_k}^+
+> $$
+>
+> 和
+>
+> $$
+> S_{m_k}^+ - S_{n_k}^- < \xi \leq S_{m_k}^+ - S_{n_k}^- + a_{n_k}^+
+> $$
+>
+> 对任意 $k$ 均成立. 由 $a_n \to 0$ 即知，下面的级数
+>
+> $$
+> a_1^+ + \cdots + a_{m_1}^+ - a_1^- - \cdots - a_{n_1}^- + a_{m_1+1}^+ + \cdots + a_{m_2}^+ \\\\
+> - a_{n_1+1}^- - \cdots - a_{n_2}^- + a_{m_2+1}^+ + \cdots + a_{m_3}^+ - a_{n_2+1}^- - \cdots
+> $$
+>
+> 收敛到 $\xi$. 注意 $a_n^+$ 和 $a_n^-$ 在这个级数中都依次出现了，因此它可以看成是原级数 $\displaystyle\sum_{n=1}^\infty a_n$ 的一个重排. 
+
+**注意**. 如果 $\displaystyle\sum_{n=1}^\infty a_n$ 条件收敛，则可以将它重排为发散到 $+\infty$ 或 $-\infty$ 的级数
 
 结束.
 
