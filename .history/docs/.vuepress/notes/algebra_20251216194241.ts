@@ -19,7 +19,7 @@ export default defineCollection({
 				{
 					text: "高等代数",
 					link: "/algebra/advanced/",
-					collapsed: false,
+					collapsed: true,
 					items: [
 						"/algebra/advanced-algebra/algebra-0",
 						"/algebra/advanced-algebra/algebra-1",
@@ -32,7 +32,7 @@ export default defineCollection({
 				{
 					text: "矩阵分析",
 					link: "/algebra/matrix/",
-					collapsed: true,
+					collapsed: false,
 					items: [
 						"/algebra/matrix/matrix-1",
 					],
