@@ -56,15 +56,13 @@ permalink: /article/anniversary-1/
         author="猫条"
         date="2025/12/01"
     />
-
-<ImageCard
-    image="https://pic1.imgdb.cn/item/692cc07e1486afd2e4d2371d.jpg"
-    title=""
-    description="冬日"
-    author="猫条"
-    date="2025/12/01"
+    <ImageCard
+        image="https://pic1.imgdb.cn/item/692cc07e1486afd2e4d2371d.jpg"
+        title=""
+        description="冬日"
+        author="猫条"
+        date="2025/12/01"
 />
-
 </CardMasonry>
 
 接着就是2025的故事了。七月前往上海，七天旅行：

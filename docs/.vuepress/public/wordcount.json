@@ -101,7 +101,7 @@
     "pyvvujxp": 17,
     "resources": 485,
     "anniversary-1": 1541,
-    "article-5": 1299,
+    "article-5": 2603,
     "article-4": 3551,
     "article-3": 4312,
     "article-2": 3947,
@@ -132,7 +132,7 @@
   },
   "analytical-mechanics": {
     "index": 148,
-    "chapter-3": 11,
+    "chapter-3": 12,
     "chapter-2": 6787,
     "chapter-1": 6794
   },
@@ -151,7 +151,7 @@
     "algebra-1": 5125,
     "algebra-0": 9451
   },
-  "total": 265946,
-  "lastUpdated": "2025-12-14T13:33:21.987Z",
+  "total": 267251,
+  "lastUpdated": "2025-12-16T06:59:25.118Z",
   "fileCount": 120
 }

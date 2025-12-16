@@ -51,3 +51,186 @@ changelog: false
 
 ### · 花束般的生命
 
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=420397887&auto=0&height=66"></iframe>
+
+我不知道自己是什么时候陷入那样的一种状态——低迷，麻木，也不记得上次如此糟糕是什么时候。
+
+似乎是2025.11.25之前，也可能会更早，当时感觉对一切失去了兴趣，包括之前喜欢的音乐，以及去创院调云台。那个时候概率论和电路的成绩出来没多久，惨淡和不理想的GPA，无趣的生活，于是我决定放弃了追求推免和所谓的奖学金。
+
+但是学院的强度导致我不可能完全躺下去，那个时候我意外得知了一件事，我们学院的一个同学因为触发了学业警告濒临强制退学，昨天我在书院游走的时候眼看着他离开这里，我很难说我的感受如何。
+
+我知道，人生规划没有那么高的容错，互相之间在什么样的年龄段该进行什么样的活动，早就已经被残酷的生活捏出了一条心照不宣的路线。但是我们是不是不必活得那么固定而刻板？
+
+我羡慕别人出去旅行，谈恋爱，购物，或者别的"正常的"生活方式，但是到我自己的时候我甚至不知道自己想要什么想做什么——可能是想去天津或者出国去福冈旅行，但是那太遥远了，我没有时间没有精力甚至没有钱，都说大学四年应该读万卷书行万里路，但是现实并不支持我前往那“比宇宙更远的地方”。
+
+我开始思考一个哲学命题：
+
+“如何形容生命？”
+
+人自出生开始就不可避免的遇见寿命的衰减，但我们又总是习惯于将希望寄托于虚无缥缈的那个遥远的未来，小学时遇见烦恼会说“长大就好了”，初中的烦恼会随着自己升入高中而逐渐消退；高中的时候，老师和家长又会告诉你，当你升入大学便会轻松许多；到了大学，大家会鼓励你去保研，会告诉你读上研究生就会前途光明......
+
+可是各位，未来真的一定会更好吗？
+
+我有时候就在想，把自己的人生交给一个虚无缥缈的存在真的是可靠的选择吗？我曾无数次幻想过自己的生活会是什么样子，但是站在现在回望过去的时候，会发现一切似乎也并没有好到哪里去，这可远比想象中的糟糕。
+
+我在从教学楼往生活区走的时候，不只一次听见他们在谈论那些现实主义的问题：如何拿到推免？如何拿到那样的一个奖学金或者说是荣誉称号？其中夹杂着一些小道消息和各类秘辛的窃窃私语......
+
+不由得想起知乎的一段话——
+
+> 我该如何过好这一生，是一个在每个年龄段，都需要好好思考的严肃问题，但人总是有战略上的惰性，表现在这个问题上，就是：
+>
+> 你有没有好好思考过，你是不是真的一定要按照学校对你的要求，去过完这大学几年？
+>
+> 你是否一定要去追逐GPA，追逐论文？追逐社工，追逐各种奖项？
+>
+> 你是否一定要志存高远？我家里穷，就想赚点钱缓解一下行不行？我接外包、打零工，能买个二手车带着爸妈、兄弟出去玩行不行？
+>
+> 你是否一定要全面发展？我就喜欢踢球，成绩一般行不行？我每科60分飘过，但特别喜欢画漫画，以后就想画画为生行不行？
+>
+> **都行。**
+>
+> ......
+>
+> 能开心的度过这几年，结识几个随时能喊出来的朋友，这大学，就上的挺值了。
+>
+> 如果能在自己所喜爱的领域，取得一些成果，那就更好了。
+>
+> 一次次的彻夜难眠、上下求索得来的独属于自己的价值观，要比这些外在的奖项，更有意义。
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2705018667&auto=0&height=66"></iframe>
+
+> [!important]
+>
+> 這個機會不可特意去求！  
+>
+> ——發自我的手機
+
+刚才翻到了自己去溜达的照片：
+
+<CardMasonry>
+    <ImageCard
+        image="https://pic1.imgdb.cn/item/6940d6ed4a4e4213d00c7467.jpg"
+        title=""
+        description=""
+        author="猫条"
+        date="2025/12/16"
+    />
+    <ImageCard
+        image="https://pic1.imgdb.cn/item/6940d6ed4a4e4213d00c7469.jpg"
+        title=""
+        description=" "
+        author="猫条"
+        date="2025/12/16"
+    />
+    <ImageCard
+        image="https://pic1.imgdb.cn/item/6940d6ec4a4e4213d00c745f.jpg"
+        title=""
+        description=" "
+        author="猫条"
+        date="2025/12/01"
+    />
+    <ImageCard
+        image="https://pic1.imgdb.cn/item/6940d6ed4a4e4213d00c7464.jpg"
+        title=""
+        description=" "
+        author="猫条"
+        date="2025/12/16"
+    />
+    <ImageCard
+        image="https://pic1.imgdb.cn/item/6940d6ed4a4e4213d00c7465.jpg"
+        title=""
+        description=" "
+        author="猫条"
+        date="2025/12/16"
+    />
+    <ImageCard
+        image="https://pic1.imgdb.cn/item/6940d6ec4a4e4213d00c745e.jpg"
+        title=""
+        description=" "
+        author="猫条"
+        date="2025/12/16"
+    />
+        <ImageCard
+        image="https://pic1.imgdb.cn/item/6940d71e4a4e4213d00c775b.jpg"
+        title=""
+        description=" "
+        author="猫条"
+        date="2025/12/16"
+    />
+</CardMasonry>
+
+近日的生活：
+
+<CardMasonry>
+<ImageCard
+    image="https://pic1.imgdb.cn/item/6940d8f44a4e4213d00c9223.jpg"
+    title=""
+    description=""
+    author="猫条"
+    date="2025/12/16"
+/>
+
+<ImageCard
+    image="https://pic1.imgdb.cn/item/6940d8f44a4e4213d00c922c.jpg"
+    title=""
+    description=""
+    author="猫条"
+    date="2025/12/16"
+/>
+
+<ImageCard
+    image="https://pic1.imgdb.cn/item/6940d8f44a4e4213d00c9227.jpg"
+    title=""
+    description=""
+    author="猫条"
+    date="2025/12/16"
+/>
+
+<ImageCard
+    image="https://pic1.imgdb.cn/item/6940d8f44a4e4213d00c922e.jpg"
+    title=""
+    description=""
+    author="猫条"
+    date="2025/12/16"
+/>
+
+<ImageCard
+    image="https://pic1.imgdb.cn/item/6940d8f44a4e4213d00c9222.jpg"
+    title=""
+    description=""
+    author="猫条"
+    date="2025/12/16"
+/>
+
+<ImageCard
+    image="https://pic1.imgdb.cn/item/6940d8f44a4e4213d00c9224.jpg"
+    title=""
+    description=""
+    author="猫条"
+    date="2025/12/16"
+/>
+
+<ImageCard
+    image="https://pic1.imgdb.cn/item/6940d9114a4e4213d00c93e1.jpg"
+    title=""
+    description=""
+    author="猫条"
+    date="2025/12/16"
+/>
+
+<ImageCard
+    image="https://pic1.imgdb.cn/item/6940d9114a4e4213d00c93de.jpg"
+    title=""
+    description=""
+    author="猫条"
+    date="2025/12/16"
+/>
+</CardMasonry>
+
+最近在尝试捡起来看番的喜好，《水星领航员》是好作品。
+
+那天（其实是两个月前了）和学长在湖边聊天的时候学长在那里唉声叹气，说要是大一努力一点的话现在保研边缘线上就不会那么矛盾和犹豫，说自己远没有那么优秀，也不知道一年后能不能拿到推免资格。
+
+我只是回复了那样一段残酷的话：“我现在不想说‘学长已经很优秀’那样冠冕堂皇的屁话，我说这些你自己都不会相信。你连两个小时之后的事情都无法决定何谈以后呢。”
+
+接受自我真是个困难的事情呢（笑）
