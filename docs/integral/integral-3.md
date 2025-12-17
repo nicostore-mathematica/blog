@@ -154,28 +154,34 @@ $$
 > >
 > > - **(结合律)** $(\alpha + \beta) + \gamma = \alpha + (\beta + \gamma)$。这可从 $\mathbb{Q}$ 中加法具有结合律推出。
 > >
-> > - **(零元)** $\alpha + 0^* = \alpha$。如果 $r \in \alpha$, $s \in 0^*$，则 $s < 0$, $r + s < r$，因此 $r + s \in \alpha$，这说明 $\alpha + 0^* \subset \alpha$。反之，设 $r \in \alpha$，取 $r' \in \alpha$，使得 $r < r'$，此时 $r - r' \in 0^*$，从而 $r = r' + (r - r') \in \alpha + 0^*$，这又说明 $\alpha \subset \alpha + 0^*$，因此 $\alpha + 0^* = \alpha$。$0^*$ 称为零元。
+> > - **(零元)** $\alpha + 0^* = \alpha$。如果 $r \in \alpha$, $s \in 0^*$，则 $s < 0$, $r + s < r$，因此 $r + s \in \alpha$，这说明 $\alpha + 0^* \subset \alpha$。
+> >
+> >   反之，设 $r \in \alpha$，取 $r' \in \alpha$，使得 $r < r'$，此时 $r - r' \in 0^*$，从而 $r = r' + (r - r') \in \alpha + 0^*$，这又说明 $\alpha \subset \alpha + 0^*$，因此 $\alpha + 0^* = \alpha$。$0^*$ 称为零元。
 > >
 > > - **(负元)** 设 $\alpha \in \mathbb{R}$，令
 > >   $$
 > >   \beta = \{ r \in \mathbb{Q} \mid \text{存在 } s > 0,\ \text{使得 } -r - s \in \alpha^c \}.
 > >   $$
 > >
-> >   我们先来说明 $\beta$ 为一个分割。取 $q \in \alpha^c$, $r = -q - 1$，则 $-r - 1 = q \in \alpha^c$，因此 $r \in \beta$，这说明 $\beta$ 是非空子集。如果 $p \in \alpha$, $r \in \beta$，则存在 $s > 0$，使得 $-r - s \in \alpha^c$，因此 $p < -r - s$, $r < -p - s < -p$，特别地，$-p \in \beta^c$，即 $\beta \neq \mathbb{Q}$。分割定义的其它两条可类似验证。
+> >   我们先来说明 $\beta$ 为一个分割。取 $q \in \alpha^c$, $r = -q - 1$，则 $-r - 1 = q \in \alpha^c$，因此 $r \in \beta$，这说明 $\beta$ 是非空子集。
 > >
-> >   我们来说明 $\alpha + \beta = 0^*$。如果 $p \in \alpha$, $r \in \beta$，则同上所述，存在 $s > 0$，使得 $-r - s \in \alpha^c$，因此 $p < -r - s$, $p + r < -s < 0$，于是 $p + r \in 0^*$，$\alpha + \beta \subset 0^*$。反之，取 $t \in 0^*$，则 $-t/2 > 0$，取整数 $n$，使得 $-nt/2 \in \alpha$, $-(n+1)t/2 \in \alpha^c$。令 $r = (n+2)t/2$，则 $-r - (-t/2) \in \alpha^c$，因此 $r \in \beta$，且
+> >   如果 $p \in \alpha$, $r \in \beta$，则存在 $s > 0$，使得 $-r - s \in \alpha^c$，因此 $p < -r - s$, $r < -p - s < -p$，特别地，$-p \in \beta^c$，即 $\beta \neq \mathbb{Q}$。分割定义的其它两条可类似验证。
+> >   
+> >   我们来说明 $\alpha + \beta = 0^*$。如果 $p \in \alpha$, $r \in \beta$，则同上所述，存在 $s > 0$，使得 $-r - s \in \alpha^c$，因此 $p < -r - s$, $p + r < -s < 0$，于是 $p + r \in 0^*$，$\alpha + \beta \subset 0^*$。
+> >   
+> >   反之，取 $t \in 0^*$，则 $-t/2 > 0$，取整数 $n$，使得 $-nt/2 \in \alpha$, $-(n+1)t/2 \in \alpha^c$。令 $r = (n+2)t/2$，则 $-r - (-t/2) \in \alpha^c$，因此 $r \in \beta$，且
 > >   $$
 > >   t - nt/2 + r \in \alpha + \beta,
 > >   $$
 > >   这说明 $0^* \subset \alpha + \beta$。
-> >
+> >   
 > >   我们称 $\beta$ 为 $\alpha$ 的负元，记为 $\beta = -\alpha$。
 
 **乘法运算**：
 
 > 令 $\mathbb{R}^+ = \{ \alpha \in \mathbb{R} \mid 0^* < \alpha \}$，如果 $\alpha, \beta \in \mathbb{R}^+$，令
 > $$
-> \alpha\beta = \{ p \in \mathbb{Q} \mid \text{存在 } 0 < r \in \alpha,\ 0 < s \in \beta,\ \text{使得 } p < rs \},
+> \alpha\beta = \{ p \in \mathbb{Q} \mid \text{exist } 0 < r \in \alpha,\ 0 < s \in \beta,\ \text{s.t. } p < rs \},
 > $$
 > 可以验证这是一个分割，且 $\alpha\beta \in \mathbb{R}^+$。
 >
@@ -184,7 +190,7 @@ $$
 > > - 如果 $r, s \in \mathbb{Q}$，则 $(rs)^* = r^*s^*$。以 $r, s > 0$ 为例：根据定义可以看出，
 > >   $$
 > >   \begin{aligned}
-> >   r^*s^* &= \{ p \in \mathbb{Q} \mid \text{存在 } r', s' \in \mathbb{Q},\ 0 < r' < r,\ 0 < s' < s,\ \text{使得 } p < r's' \} \\
+> >   r^*s^* &= \{ p \in \mathbb{Q} \mid \text{exist } r', s' \in \mathbb{Q},\ 0 < r' < r,\ 0 < s' < s,\ \text{s.t. } p < r's' \} \\\\
 > >   &= \{ p \in \mathbb{Q} \mid p < rs \} = (rs)^*.
 > >   \end{aligned}
 > >   $$
@@ -196,14 +202,14 @@ $$
 > > - **(单位元)** $\alpha 1^* = \alpha$。以 $0^* < \alpha$ 为例：根据定义可以看出，
 > >   $$
 > >   \begin{aligned}
-> >   \alpha 1^* &= \{ p \in \mathbb{Q} \mid p < rs,\ \text{存在 } 0 < r \in \alpha,\ 0 < s < 1 \} \\
-> >   &= \{ p \in \mathbb{Q} \mid \text{存在 } 0 < r \in \alpha,\ \text{使得 } p < r \} = \alpha.
+> >   \alpha 1^* &= \{ p \in \mathbb{Q} \mid p < rs,\ \text{exist } 0 < r \in \alpha,\ 0 < s < 1 \} \\\\
+> >   &= \{ p \in \mathbb{Q} \mid \text{exist } 0 < r \in \alpha,\ \text{s.t. } p < r \} = \alpha.
 > >   \end{aligned}
 > >   $$
 > >
 > > - **(逆元)** 如果 $\alpha \neq 0^*$，则存在 $\beta \in \mathbb{R}$，使得 $\alpha\beta = 1^*$。事实上，不妨设 $0^* < \alpha$，定义 $\beta$ 为
 > >   $$
-> >   \beta = \{ s \in \mathbb{Q} \mid \text{存在 } r \in \alpha^c,\ \text{使得 } s < r^{-1} \}.
+> >   \beta = \{ s \in \mathbb{Q} \mid \text{exist } r \in \alpha^c,\ \text{s.t. } s < r^{-1} \}.
 > >   $$
 > >
 > >   不难验证这是一个分割，且 $\alpha\beta = 1^*$。我们称 $\beta$ 为 $\alpha$ 的逆元，记为 $\beta = \alpha^{-1}$。如果 $r$ 为非零有理数，则 $(r^*)^{-1} = (r^{-1})^*$。
@@ -409,7 +415,9 @@ Heine-Borel 定理可以用来重新证明 Bolzano 定理。证明如下：
 >
 > ---
 >
-> **(2)** 不妨设集合 $A$ 有上界 $M$。如果 $M \in A$，则 $M$ 就是 $A$ 的上确界。下设 $M \notin A$。取 $m \in A$，则闭区间 $[m, M]$ 含有 $A$ 中的数。将 $[m, M]$ 二等分：如果 $\left[\dfrac{m + M}{2}, M\right]$ 中含有 $A$ 中的数，则记
+> **(2)** 不妨设集合 $A$ 有上界 $M$。如果 $M \in A$，则 $M$ 就是 $A$ 的上确界。下设 $M \notin A$。取 $m \in A$，则闭区间 $[m, M]$ 含有 $A$ 中的数。将 $[m, M]$ 二等分：
+>
+> 如果 $\left[\dfrac{m + M}{2}, M\right]$ 中含有 $A$ 中的数，则记
 > $$
 > a_1 = \frac{m + M}{2},\quad b_1 = M;
 > $$

@@ -62,8 +62,8 @@ $$
 
 $$
 \begin{aligned}
-L(\sigma) &= \lim_{\|\pi\| \to 0} \sum_{i=1}^{n} \sqrt{(x(t_i) - x(t_{i-1}))^2 + (y(t_i) - y(t_{i-1}))^2} \\
-&= \lim_{\|\pi\| \to 0} \sum_{i=1}^{n} \sqrt{(x'(\xi_i))^2 + (y'(\xi_i))^2} \Delta t_i \\
+L(\sigma) &= \lim_{\|\pi\| \to 0} \sum_{i=1}^{n} \sqrt{(x(t_i) - x(t_{i-1}))^2 + (y(t_i) - y(t_{i-1}))^2} \\\\
+&= \lim_{\|\pi\| \to 0} \sum_{i=1}^{n} \sqrt{(x'(\xi_i))^2 + (y'(\xi_i))^2} \Delta t_i \\\\
 &= \int_\alpha^\beta \left[(x'(t))^2 + (y'(t))^2\right]^{\frac{1}{2}} dt.
 \end{aligned}
 $$
@@ -136,7 +136,7 @@ $$
 
 $$
 \begin{aligned}
-\int_\alpha^\beta y(t)x'(t) dt &= y(t)x(t)\Big|_\alpha^\beta - \int_\alpha^\beta y'(t)x(t) dt \\
+\int_\alpha^\beta y(t)x'(t) dt &= y(t)x(t)\Big|_\alpha^\beta - \int_\alpha^\beta y'(t)x(t) dt \\\\
 &= - \int_\alpha^\beta y'(t)x(t) dt,
 \end{aligned}
 $$
@@ -189,7 +189,7 @@ $$
 >
 > $$
 > \begin{aligned}
-> S &= \lim_{\|\pi\| \to 0} \sum_{i=1}^{n} 2\pi y(\xi_i)\left[(x'(\xi_i))^2 + (y'(\xi_i))^2\right]^{\frac{1}{2}} \Delta t_i \\
+> S &= \lim_{\|\pi\| \to 0} \sum_{i=1}^{n} 2\pi y(\xi_i)\left[(x'(\xi_i))^2 + (y'(\xi_i))^2\right]^{\frac{1}{2}} \Delta t_i \\\\
 > &= \int_\alpha^\beta 2\pi y(t)\left[(x'(t))^2 + (y'(t))^2\right]^{\frac{1}{2}} dt.
 > \end{aligned}
 > $$
@@ -306,8 +306,8 @@ $$
 
 $$
 \begin{cases}
-\Delta N = (F + \Delta F) \sin \frac{\Delta\theta}{2} + F \sin \frac{\Delta\theta}{2}, \\
-(F + \Delta F) \cos \frac{\Delta\theta}{2} = F \cos \frac{\Delta\theta}{2} + k \Delta N.
+\Delta N = (F + \Delta F) \sin \dfrac{\Delta\theta}{2} + F \sin \dfrac{\Delta\theta}{2}, \\\\
+(F + \Delta F) \cos \dfrac{\Delta\theta}{2} = F \cos \dfrac{\Delta\theta}{2} + k \Delta N.
 \end{cases}
 $$
 
@@ -470,8 +470,8 @@ $$
 > $$
 > \int_1^A \frac{1}{x^p} dx =
 > \begin{cases}
-> \ln A, & p = 1, \\
-> \frac{1}{1 - p}(A^{1 - p} - 1), & p \ne 1.
+> \ln A, & p = 1, \\\\
+> \dfrac{1}{1 - p}(A^{1 - p} - 1), & p \ne 1.
 > \end{cases}
 > $$
 >
@@ -584,7 +584,9 @@ $$
 
 > [!important]
 >
-> (1) 常数 $M$ 的存在性通常利用极限去找.即如果极限 $l = \displaystyle\lim_{x \to +\infty} \dfrac{f(x)}{g(x)}$ 存在，则当 $0 < l < \infty$ 时，积分 $\displaystyle\int_a^{+\infty} f(x) dx$ 和 $\displaystyle\int_a^{+\infty} g(x) dx$ 同时收敛或发散；当 $l = 0$ 时，如果 $\displaystyle\int_a^{+\infty} g(x) dx$ 收敛，则 $\displaystyle\int_a^{+\infty} f(x) dx$ 也收敛；当 $l = +\infty$ 时，如果 $\displaystyle\int_a^{+\infty} g(x) dx$ 发散，则 $\displaystyle\int_a^{+\infty} f(x) dx$ 也发散.
+> (1) 常数 $M$ 的存在性通常利用极限去找.即如果极限 $l = \displaystyle\lim_{x \to +\infty} \dfrac{f(x)}{g(x)}$ 存在，则当 $0 < l < \infty$ 时，积分 $\displaystyle\int_a^{+\infty} f(x) dx$ 和 $\displaystyle\int_a^{+\infty} g(x) dx$ 同时收敛或发散；
+>
+> 当 $l = 0$ 时，如果 $\displaystyle\int_a^{+\infty} g(x) dx$ 收敛，则 $\displaystyle\int_a^{+\infty} f(x) dx$ 也收敛；当 $l = +\infty$ 时，如果 $\displaystyle\int_a^{+\infty} g(x) dx$ 发散，则 $\displaystyle\int_a^{+\infty} f(x) dx$ 也发散.
 >
 > (2) 我们可以拿函数 $f$ 与 $x^{-p}$ 比较，则得到如下的 Cauchy 判别法：
 >

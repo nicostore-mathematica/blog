@@ -156,7 +156,7 @@ Riemann 对于积分的贡献之一就是证明了 $f$ 可积当且仅当 $S - s
 
 **引理2.** 设分割 $\pi'$ 是从 $\pi$ 添加 $k$ 个分点得到的，则有
 $$
-S(\pi) \ge S(\pi') \ge S(\pi) - (M - m)k\|\pi\|, \\
+S(\pi) \ge S(\pi') \ge S(\pi) - (M - m)k\|\pi\|, \\\\
 s(\pi) \le s(\pi') \le s(\pi) + (M - m)k\|\pi\|.
 $$
 
@@ -601,7 +601,7 @@ $$
 > 上式说明, 如果 $\int_a^b g(x)dx = 0$, 则 $\int_a^b f(x)g(x)dx = 0$, 此时定理当然成立. 不然, 令
 >
 > $$
-> \mu = \frac{\int_a^b f(x)g(x)dx}{\int_a^b g(x)dx},
+> \mu = \frac{\displaystyle\int_a^b f(x)g(x)dx}{\displaystyle\int_a^b g(x)dx},
 > $$
 >
 > 则
@@ -687,10 +687,10 @@ $$
 > 如果 $g(a) = 0$, 则 $\int_a^b f(x)g(x)dx = 0$. 如果 $g(a) > 0$, 则有
 >
 > $$
-> m \leq \frac{\int_a^b f(x)g(x)dx}{g(a)} \leq M,
+> m \leq \frac{\displaystyle\int_a^b f(x)g(x)dx}{g(a)} \leq M,
 > $$
 >
-> 由连续函数的介值定理, 存在 $\xi \in [a,b]$ 使得 $F(\xi) = \dfrac{\int_a^b f(x)g(x)dx}{g(a)}$. 即
+> 由连续函数的介值定理, 存在 $\xi \in [a,b]$ 使得 $F(\xi) = \dfrac{\displaystyle\int_a^b f(x)g(x)dx}{g(a)}$. 即
 >
 > $$
 > \int_a^b f(x)g(x)dx = g(a) \cdot F(\xi) = g(a) \cdot \int_a^\xi f(x)dx.
@@ -915,8 +915,8 @@ $$
 > \int_{0}^{\frac{\pi}{2}} \cos^n x \, dx = \int_{0}^{\frac{\pi}{2}} \sin^n x \, dx=
 > \left\{
 > \begin{matrix}
-> \frac{(n-1)!!}{(n)!} \cdot \frac{\pi}{2}, & {n=2k} \\\\
-> \frac{(n-1)!!}{(n)!}, & {n=2k+1}
+> \dfrac{(n-1)!!}{(n)!} \cdot \dfrac{\pi}{2}, & {n=2k} \\\\
+> \dfrac{(n-1)!!}{(n)!}, & {n=2k+1}
 > \end{matrix}
 > \right.
 > $$

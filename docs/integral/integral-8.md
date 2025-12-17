@@ -281,17 +281,17 @@ $$
 > $$
 > 如果 $\int_a^b g(x)\,dx = 0$，则任取 $\xi \in [a, b]$ 即可。如果 $\int_a^b g(x)\,dx > 0$，则
 > $$
-> m \le \frac{\int_a^b f(x)g(x)\,dx}{\int_a^b g(x)\,dx} \le M,
+> m \le \frac{\displaystyle\int_a^b f(x)g(x)\,dx}{\displaystyle\int_a^b g(x)\,dx} \le M,
 > $$
 > 由连续函数的介值定理知存在 $\xi \in [a, b]$，使得
 > $$
-> f(\xi) = \frac{\int_a^b f(x)g(x)\,dx}{\int_a^b g(x)\,dx},
+> f(\xi) = \frac{\displaystyle\int_a^b f(x)g(x)\,dx}{\displaystyle\int_a^b g(x)\,dx},
 > $$
 > 此 $\xi$ 即为所求的点
 
 在此命题中取 $g = 1$，则得到简单推论：存在 $\xi \in [a, b]$，使得
 $$
-f(\xi) = \frac{\int_a^b f(x)\,dx}{b - a},\quad \text{or}\quad \int_a^b f(x)\,dx = f(\xi)(b - a).
+f(\xi) = \frac{\displaystyle\int_a^b f(x)\,dx}{b - a},\quad \text{or}\quad \int_a^b f(x)\,dx = f(\xi)(b - a).
 $$
 这里 $f(\xi)$ 也就是 $f(x)$ 在 $[a, b]$ 上的平均值
 
@@ -313,9 +313,9 @@ $$
 > $$
 > 因为 $a \in A$，因此 $A$ 不是空集. 设 $y_0$ 为 $A$ 的上确界. 由 $f$ 的连续性知 $y_0 \in A$. 我们断言 $y_0 = b$. 事实上，如果 $y_0 < b$，则因为 $f'(y_0) = 0$，由导数的定义知存在 $\delta > 0$，使得 $y_0 + \delta \le b$，且  
 > $$
-> \left|\frac{f(x) - f(y_0)}{x - y_0}\right| = \left|\frac{f(x) - f(y_0)}{x - y_0} - f'(y_0)\right| \le \varepsilon,\quad \forall\ x \in (y_0, y_0 + \delta].
+> \left|\frac{f(x) - f(y_0)}{x - y_0}\right| = \left|\frac{f(x) - f(y_0)}{x - y_0} - f'(y_0)\right| \le \varepsilon,\quad \forall\ x \in (y_0, y_0 + \delta\ ].
 > $$
-> 因此，当 $x \in [y_0, y_0 + \delta]$ 时  
+> 因此，当 $x \in [y_0, y_0 + \delta]$ 时
 > $$
 > \begin{aligned}
 > |f(x) - f(a)| &\le |f(x) - f(y_0)| + |f(y_0) - f(a)| \\
@@ -448,9 +448,9 @@ $$
 > 此时
 > $$
 > \begin{aligned}
-> \left|\frac{F(x) - F(x_0)}{x - x_0} - f(x_0)\right|& = \left|\frac{\int_{x_0}^x f(t)\,dt}{x - x_0} - f(x_0)\right|\\
-> &= \left|\frac{\int_{x_0}^x (f(t) - f(x_0))\,dt}{x - x_0}\right|\\
-> &\le \frac{\int_{x_0}^x |f(t) - f(x_0)|\,dt}{|x - x_0|} \le \varepsilon,
+> \left|\frac{F(x) - F(x_0)}{x - x_0} - f(x_0)\right|& = \left|\frac{\displaystyle\int_{x_0}^x f(t)\,dt}{x - x_0} - f(x_0)\right|\\\\
+> &= \left|\frac{\displaystyle\int_{x_0}^x (f(t) - f(x_0))\,dt}{x - x_0}\right|\\\\
+> &\le \frac{\displaystyle\int_{x_0}^x |f(t) - f(x_0)|\,dt}{|x - x_0|} \le \varepsilon,
 > \end{aligned}
 > $$
 > 这就推出 $F$ 在 $x_0$ 处可导，且  
@@ -499,8 +499,8 @@ $$
 > 记 $G(x) = xg(x) - F(g(x))$，由 $f(g(x)) = x$ 以及复合求导，有  
 > $$
 > \begin{aligned}
-> G'(x) &= g(x) + xg'(x) - F'(g(x))g'(x)\\
-> &= g(x) + xg'(x) - f(g(x))g'(x)\\
+> G'(x) &= g(x) + xg'(x) - F'(g(x))g'(x)\\\\
+> &= g(x) + xg'(x) - f(g(x))g'(x)\\\\
 > &= g(x) + xg'(x) - xg'(x) = g(x).
 > \end{aligned}
 > $$
@@ -511,8 +511,8 @@ $$
 > 由不定积分的线性性质，有  
 > $$
 > \begin{aligned}
-> \int \frac{1}{\sin^2 x \cos^2 x}\,dx &= \int \frac{\sin^2 x + \cos^2 x}{\sin^2 x \cos^2 x}\,dx\\
-> &= \int \frac{1}{\sin^2 x}\,dx + \int \frac{1}{\cos^2 x}\,dx\\
+> \int \frac{1}{\sin^2 x \cos^2 x}\,dx &= \int \frac{\sin^2 x + \cos^2 x}{\sin^2 x \cos^2 x}\,dx\\\\
+> &= \int \frac{1}{\sin^2 x}\,dx + \int \frac{1}{\cos^2 x}\,dx\\\\
 > &= \tan x - \cot x + C.
 > \end{aligned}
 > $$
@@ -522,8 +522,8 @@ $$
 > 由不定积分的线性性质，有  
 > $$
 > \begin{aligned}
-> \int \frac{1}{x^2 - a^2}\,dx &= \frac{1}{2a}\left[\int \frac{1}{x - a}\,dx - \int \frac{1}{x + a}\,dx\right]\\
-> &= \frac{1}{2a}\left[\ln|x - a| - \ln|x + a|\right] + C\\
+> \int \frac{1}{x^2 - a^2}\,dx &= \frac{1}{2a}\left[\int \frac{1}{x - a}\,dx - \int \frac{1}{x + a}\,dx\right]\\\\
+> &= \frac{1}{2a}\left[\ln|x - a| - \ln|x + a|\right] + C\\\\
 > &= \frac{1}{2a} \ln\left|\frac{x - a}{x + a}\right| + C.
 > \end{aligned}
 > $$
@@ -584,7 +584,7 @@ $$
 > $$
 > 第二换元法
 > $$
-> \int f(x)\text{d}x\overset{\text{find }\beta(\alpha(x))=x}{\underset{t=\alpha(x),x=\beta(t)}{\iff}}\int f(\beta(t))\beta'(t)\text{d}t
+> \int f(x)\text{d}x \overset{\text{find }\beta(\alpha(x))=x}{\underset{t=\alpha(x),x=\beta(t)}{\iff}}\int f(\beta(t))\beta'(t)\text{d}t
 > $$
 > 第一换元法事~~注意到~~，基于强大的注意力（Attention is all you need！）
 >
@@ -632,9 +632,9 @@ $$
 >  取 $u(x) = \ln x$, $v(x) = \frac{1}{3}x^3$，则
 > $$
 > \begin{aligned}
-> \int x^2\ln x\,dx &= \int \ln x\,d\left(\frac{1}{3}x^3\right)\\
-> &= \frac{1}{3}x^3\ln x - \int \frac{1}{3}x^3\,d(\ln x)\\
-> &= \frac{1}{3}x^3\ln x - \int \frac{1}{3}x^3\cdot\frac{1}{x}\,dx\\
+> \int x^2\ln x\,dx &= \int \ln x\,d\left(\frac{1}{3}x^3\right)\\\\
+> &= \frac{1}{3}x^3\ln x - \int \frac{1}{3}x^3\,d(\ln x)\\\\
+> &= \frac{1}{3}x^3\ln x - \int \frac{1}{3}x^3\cdot\frac{1}{x}\,dx\\\\
 > &= \frac{1}{3}x^3\ln x - \frac{1}{9}x^3 + C.
 > \end{aligned}
 > $$
@@ -644,22 +644,22 @@ $$
 > 利用分部积分，有
 > $$
 > \begin{aligned}
-> I &= \int e^{ax}\cos bx\,dx = \frac{1}{a}\int \cos bx\,d(e^{ax})\\
-> &= \frac{1}{a}\left[e^{ax}\cos bx + b\int e^{ax}\sin bx\,dx\right]\\
+> I &= \int e^{ax}\cos bx\,dx = \frac{1}{a}\int \cos bx\,d(e^{ax})\\\\
+> &= \frac{1}{a}\left[e^{ax}\cos bx + b\int e^{ax}\sin bx\,dx\right]\\\\
 > &= \frac{1}{a}e^{ax}\cos bx + \frac{b}{a}J.
 > \end{aligned}
 > $$
 > 同理，有
 > $$
 > \begin{aligned}
-> J &= \int e^{ax}\sin bx\,dx = \frac{1}{a}\int \sin bx\,d(e^{ax})\\
-> &= \frac{1}{a}\left[e^{ax}\sin bx - b\int e^{ax}\cos bx\,dx\right]\\
+> J &= \int e^{ax}\sin bx\,dx = \frac{1}{a}\int \sin bx\,d(e^{ax})\\\\
+> &= \frac{1}{a}\left[e^{ax}\sin bx - b\int e^{ax}\cos bx\,dx\right]\\\\
 > &= \frac{1}{a}e^{ax}\sin bx - \frac{b}{a}I.
 > \end{aligned}
 > $$
 > 因此解出 $I, J$ 为
 > $$
-> I = \frac{b\sin bx + a\cos bx}{a^2 + b^2}e^{ax} + C_1,\quad\\
+> I = \frac{b\sin bx + a\cos bx}{a^2 + b^2}e^{ax} + C_1,\\\\
 > J = \frac{a\sin bx - b\cos bx}{a^2 + b^2}e^{ax} + C_2.
 > $$
 
@@ -668,9 +668,9 @@ $$
 > 记 $I_n = \int_0^{\frac{\pi}{4}} \tan^n x\,dx$，则 $I_0 = \frac{\pi}{4}$. 一般地，有
 > $$
 > \begin{aligned}
-> I_n &= \int_0^{\frac{\pi}{4}} \tan^n x\,dx = \int_0^{\frac{\pi}{4}} \tan^{n-2} x(\sec^2 x - 1)\,dx\\
-> &= \int_0^{\frac{\pi}{4}} \tan^{n-2} x\,d(\tan x) - I_{n-2}\\
-> &= \frac{\tan^{n-1} x}{n-1}\Big|_0^{\frac{\pi}{4}} - I_{n-2}\\
+> I_n &= \int_0^{\frac{\pi}{4}} \tan^n x\,dx = \int_0^{\frac{\pi}{4}} \tan^{n-2} x(\sec^2 x - 1)\,dx\\\\
+> &= \int_0^{\frac{\pi}{4}} \tan^{n-2} x\,d(\tan x) - I_{n-2}\\\\
+> &= \frac{\tan^{n-1} x}{n-1}\Big|_0^{\frac{\pi}{4}} - I_{n-2}\\\\
 > &= \frac{1}{n-1} - I_{n-2}.
 > \end{aligned}
 > $$
@@ -685,9 +685,9 @@ $$
 > 显然 $I_0 = x + C$，$I_1 = \frac{1}{a}\arctan\frac{x}{a} + C$. 当 $n \ge 1$ 时，
 > $$
 > \begin{aligned}
-> I_n &= \int \frac{dx}{(x^2 + a^2)^n}\\
-> &= \frac{x}{(x^2 + a^2)^n} + 2n\int \frac{x^2}{(x^2 + a^2)^{n+1}}\,dx\\
-> &= \frac{x}{(x^2 + a^2)^n} + 2n\left[\int \frac{x^2 + a^2}{(x^2 + a^2)^{n+1}}\,dx - a^2\int \frac{1}{(x^2 + a^2)^{n+1}}\,dx\right]\\
+> I_n &= \int \frac{dx}{(x^2 + a^2)^n}\\\\
+> &= \frac{x}{(x^2 + a^2)^n} + 2n\int \frac{x^2}{(x^2 + a^2)^{n+1}}\,dx\\\\
+> &= \frac{x}{(x^2 + a^2)^n} + 2n\left[\int \frac{x^2 + a^2}{(x^2 + a^2)^{n+1}}\,dx - a^2\int \frac{1}{(x^2 + a^2)^{n+1}}\,dx\right]\\\\
 > &= \frac{x}{(x^2 + a^2)^n} + 2nI_n - 2na^2I_{n+1}.
 > \end{aligned}
 > $$
@@ -726,9 +726,9 @@ $$
 $$
 \begin{aligned}
 \int \frac{Ax + B}{x^2 + px + q}\,dx
-&= \int \frac{\frac{A}{2}(2x + p) + (B - \frac{Ap}{2})}{x^2 + px + q}\,dx\\
-&= \frac{A}{2}\int \frac{2x + p}{x^2 + px + q}\,dx + (B - \frac{Ap}{2})\int \frac{dx}{x^2 + px + q}\\
-&= \frac{A}{2}\int \frac{d(x^2 + px + q)}{x^2 + px + q} + (B - \frac{Ap}{2})\int \frac{dx}{(x + \frac{p}{2})^2 + (q - \frac{p^2}{4})}\\
+&= \int \frac{\frac{A}{2}(2x + p) + (B - \frac{Ap}{2})}{x^2 + px + q}\,dx\\\\
+&= \frac{A}{2}\int \frac{2x + p}{x^2 + px + q}\,dx + (B - \frac{Ap}{2})\int \frac{dx}{x^2 + px + q}\\\\
+&= \frac{A}{2}\int \frac{d(x^2 + px + q)}{x^2 + px + q} + (B - \frac{Ap}{2})\int \frac{dx}{(x + \frac{p}{2})^2 + (q - \frac{p^2}{4})}\\\\
 &= \frac{A}{2}\ln|x^2 + px + q| + \frac{2B - Ap}{\sqrt{4q - p^2}}\arctan\frac{2x + p}{\sqrt{4q - p^2}} + C;
 \end{aligned}
 $$
@@ -756,15 +756,15 @@ x = 2\arctan t,\quad dx = \frac{2}{1 + t^2}dt,
 $$
 且有
 $$
-\sin x = \frac{2\sin\frac{x}{2}\cos\frac{x}{2}}{\sin^2\frac{x}{2} + \cos^2\frac{x}{2}}
-= \frac{2\tan\frac{x}{2}}{\tan^2\frac{x}{2} + 1}
+\sin x = \frac{2\sin\dfrac{x}{2}\cos\dfrac{x}{2}}{\sin^2\dfrac{x}{2} + \cos^2\dfrac{x}{2}}
+= \frac{2\tan\dfrac{x}{2}}{\tan^2\dfrac{x}{2} + 1}
 = \frac{2t}{1 + t^2},
 $$
 以及
 $$
-\cos x = \frac{\cos^2\frac{x}{2} - \sin^2\frac{x}{2}}{\cos^2\frac{x}{2} + \sin^2\frac{x}{2}}
-= \frac{1 - \tan^2\frac{x}{2}}{1 + \tan^2\frac{x}{2}}
-= \frac{1 - t^2}{1 + t^2},
+\cos x = \frac{\cos^2\dfrac{x}{2} - \sin^2\dfrac{x}{2}}{\cos^2\dfrac{x}{2} + \sin^2\dfrac{x}{2}}
+= \dfrac{1 - \tan^2\dfrac{x}{2}}{1 + \tan^2\dfrac{x}{2}}
+= \dfrac{1 - t^2}{1 + t^2},
 $$
 这说明有理三角函数的积分可以通过万能变换成有理函数的积分，因此是可以计算出来的. 在实际计算过程中，有时也可以视情形采用变换 $t = \sin x$, $t = \cos x$ 或 $t = \tan x$ 等.
 
@@ -806,7 +806,7 @@ u = x + \frac{b}{2a},\quad k = \sqrt{\frac{b^2 - 4ac}{4a^2}},
 $$
 则原积分化为如下形式积分：
 $$
-\int R(u, \sqrt{u^2 - k^2}),\quad \text{或}\quad \int R(u, \sqrt{k^2 - u^2}),
+\int R(u, \sqrt{u^2 - k^2}),\quad \text{or}\quad \int R(u, \sqrt{k^2 - u^2}),
 $$
 分别进一步令 $u = k\sec t$, $u = k\sin t$ 就把不定积分变成了有理三角函数的积分，从而可以计算出来. 
 
@@ -822,7 +822,7 @@ $$
 > $$
 > 从而可以把原积分化为关于 $t$ 的有理积分；如果 $c > 0$，令
 > $$
-> \sqrt{ax^2 + bx + c} = tx + \sqrt{c}\quad (\text{或 } tx - \sqrt{c}),
+> \sqrt{ax^2 + bx + c} = tx + \sqrt{c}\quad (\text{or}\ \ tx - \sqrt{c}),
 > $$
 > 则 $x$ 为 $t$ 的有理函数：
 > $$

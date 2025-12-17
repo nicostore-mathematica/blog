@@ -335,7 +335,7 @@ $$
 > 特征函数 $\chi_A$ ：设 $A$ 为集合 $X$ 的子集，定义函数 $\chi_A: X \rightarrow \mathbb{R}$ 为
 > $$
 > \chi_A(x) = \begin{cases} 
-> 1, & x \in A, \\
+> 1, & x \in A, \\\\
 > 0, & x \in X - A.
 > \end{cases}
 > $$
@@ -349,8 +349,8 @@ $$
 >
 > $$
 > \text{sgn}(x) = \begin{cases} 
-> -1, & x < 0, \\
-> 0, & x = 0, \\
+> -1, & x < 0, \\\\
+> 0, & x = 0, \\\\
 > 1, & x > 0.
 > \end{cases}
 > $$

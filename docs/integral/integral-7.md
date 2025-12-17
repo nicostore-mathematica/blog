@@ -24,7 +24,7 @@ createTime: 2025/09/16 20:57:28
 > $$
 > f'(x_0) = \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0},
 > $$
-> 因为 $f$ 是单调递增的，故 $\frac{f(x) - f(x_0)}{x - x_0}$ 总是非负的，从而 $f'(x_0) \ge 0$. 
+> 因为 $f$ 是单调递增的，故 $\dfrac{f(x) - f(x_0)}{x - x_0}$ 总是非负的，从而 $f'(x_0) \ge 0$. 
 >
 > 反之，不妨设 $f'(x) \ge 0$, $x \in (a,b)$. 任取 $x_1 < x_2 \in [a,b]$，由 Lagrange 中值定理，存在 $\xi \in (x_1,x_2)$，使得  
 > $$
@@ -112,7 +112,7 @@ $$
 $$
 \frac{f(x) - f(a)}{x - a} \le \frac{f(b) - f(x)}{b - x},\quad \forall\ x \in (a,b).\tag{1-4}
 $$
-这只要对 两端利用如下初等结论即可：即，如果 $k,l > 0$, $\frac{m}{k} \le \frac{n}{l}$，则  
+这只要对 两端利用如下初等结论即可：即，如果 $k,l > 0$, $\dfrac{m}{k} \le \dfrac{n}{l}$，则  
 $$
 \frac{m}{k} \le \frac{m + n}{k + l} \le \frac{n}{l}.
 $$
@@ -138,7 +138,7 @@ $$
 > $$
 > 这也就是 Young 不等式.
 
-**定理1**（Jensen 不等式）：设 $f$ 是定义在区间 $I$ 中的函数. 则 $f$ 为凸函数当且仅当对任意的 $x_i \in I$, $\lambda_i \ge 0$ ($i = 1,\cdots,n$), $\sum_{i=1}^{n} \lambda_i = 1$，有  
+**定理1**（Jensen 不等式）：设 $f$ 是定义在区间 $I$ 中的函数. 则 $f$ 为凸函数当且仅当对任意的 $x_i \in I$, $\lambda_i \ge 0$ ($i = 1,\cdots,n$), $\displaystyle\sum_{i=1}^{n} \lambda_i = 1$，有  
 $$
 f\left(\sum_{i=1}^{n} \lambda_i x_i\right) \le \sum_{i=1}^{n} \lambda_i f(x_i).
 $$
@@ -214,7 +214,7 @@ $$
 > $$
 > \frac{f(x) - f(x_1)}{x - x_1} \le \frac{f(x_2) - f(x)}{x_2 - x},
 > $$
-> $f$ 为凸函数也意味着 $\frac{f(x) - f(x_1)}{x - x_1}$ 是关于 $x_1$ 的单调递增函数，上式则表明这个单调递增函数有上界，从而极限  
+> $f$ 为凸函数也意味着 $\dfrac{f(x) - f(x_1)}{x - x_1}$ 是关于 $x_1$ 的单调递增函数，上式则表明这个单调递增函数有上界，从而极限  
 > $$
 > \lim_{x_1 \to x^-} \frac{f(x) - f(x_1)}{x - x_1} = f'_-(x)
 > $$
@@ -222,7 +222,7 @@ $$
 > $$
 > f'_-(x) \le \frac{f(x_2) - f(x)}{x_2 - x}.
 > $$
-> 同理，当 $x_2 \to x_+$ 时，$\frac{f(x_2) - f(x)}{x_2 - x}$ 单调递减且有下界，从而极限存在且满足  
+> 同理，当 $x_2 \to x_+$ 时，$\dfrac{f(x_2) - f(x)}{x_2 - x}$ 单调递减且有下界，从而极限存在且满足  
 > $$
 > f'_-(x) \le \lim_{x_2 \to x^+} \frac{f(x_2) - f(x)}{x_2 - x} = f'_+(x),
 > $$
@@ -270,9 +270,9 @@ $$
 $$
 下列两种情况比较常见：  
 
-(1) $\left(\frac{0}{0}\right)$ 型：$x \to x_0$ 时，$f(x) \to 0$, $g(x) \to 0$；  
+(1) $\left(\dfrac{0}{0}\right)$ 型：$x \to x_0$ 时，$f(x) \to 0$, $g(x) \to 0$；  
 
-(2) $\left(\frac{\infty}{\infty}\right)$ 型：$x \to x_0$ 时，$f(x) \to \infty$, $g(x) \to \infty$.   
+(2) $\left(\dfrac{\infty}{\infty}\right)$ 型：$x \to x_0$ 时，$f(x) \to \infty$, $g(x) \to \infty$.   
 
 还有一些情形也可以转化为这两种情形之一. 利用求导我们往往可以方便地计算这样的极限，这是微分学对于求极限的一个应用. 
 
@@ -312,9 +312,9 @@ $$
 > > $$
 > > \lim_{x \to -\infty} \frac{f(x)}{g(x)} = \lim_{x \to -\infty} \frac{f'(x)}{g'(x)},\quad \lim_{x \to +\infty} \frac{f(x)}{g(x)} = \lim_{x \to +\infty} \frac{f'(x)}{g'(x)}.
 > > $$
-> > 这可由变量代换 $x = \frac{1}{t}$ 得出.   
+> > 这可由变量代换 $x = \dfrac{1}{t}$ 得出.   
 > >
-> > (3) 需要注意的是，等式成立需要其右端极限存在（或为无穷），如果极限不存在，就未必成立了，读者可在 $x = 0$ 处验证 $f(x) = x^2 \sin \frac{1}{x}$, $g(x) = x$ 就是不成立的例子. 
+> > (3) 需要注意的是，等式成立需要其右端极限存在（或为无穷），如果极限不存在，就未必成立了，读者可在 $x = 0$ 处验证 $f(x) = x^2 \sin \dfrac{1}{x}$, $g(x) = x$ 就是不成立的例子. 
 
 **定理2**（L'Hôpital 法则）:设 $f$, $g$ 在 $(a,b)$ 中可导，且 $g'(x) \ne 0$, $\forall\ x \in (a,b)$. 又设  
 $$
@@ -552,20 +552,20 @@ $$
 
 **命题5**：
 
-设 $f(x)$ 在 $x_0 = 0$ 处的 Taylor 展开为 $\sum_{n=0}^\infty a_n x^n$，则  
+设 $f(x)$ 在 $x_0 = 0$ 处的 Taylor 展开为 $\displaystyle\sum_{n=0}^\infty a_n x^n$，则  
 
-(1) $f(-x)$ 的 Taylor 展开为 $\sum_{n=0}^\infty (-1)^n a_n x^n$；  
+(1) $f(-x)$ 的 Taylor 展开为 $\displaystyle\sum_{n=0}^\infty (-1)^n a_n x^n$；  
 
-(2) $f(x^k)$ 的 Taylor 展开为 $\sum_{n=0}^\infty a_n x^{kn}$，其中 $k$ 为正整数；  
+(2) $f(x^k)$ 的 Taylor 展开为 $\displaystyle\sum_{n=0}^\infty a_n x^{kn}$，其中 $k$ 为正整数；  
 
-(3) $x^k f(x)$ 的 Taylor 展开为 $\sum_{n=0}^\infty a_n x^{k+n}$，其中 $k$ 为正整数； 
+(3) $x^k f(x)$ 的 Taylor 展开为 $\displaystyle\sum_{n=0}^\infty a_n x^{k+n}$，其中 $k$ 为正整数； 
 
 
-(4) $f'(x)$ 的 Taylor 展开为 $\sum_{n=1}^\infty n a_n x^{n-1} = \sum_{n=0}^\infty (n+1)a_{n+1} x^n$；  
+(4) $f'(x)$ 的 Taylor 展开为 $\displaystyle\sum_{n=1}^\infty n a_n x^{n-1} = \displaystyle\sum_{n=0}^\infty (n+1)a_{n+1} x^n$；  
 
-(5) $\int_0^x f(t)\,dt$ 的 Taylor 展开为 $\sum_{n=0}^\infty \frac{a_n}{n+1} x^{n+1}$；  
+(5) $\displaystyle\int_0^x f(t)\,dt$ 的 Taylor 展开为 $\displaystyle\sum_{n=0}^\infty \dfrac{a_n}{n+1} x^{n+1}$；  
 
-(6) 如果 $g(x)$ 在 $x_0 = 0$ 处的 Taylor 展开为 $\sum_{n=0}^\infty b_n x^n$，则 $\lambda f(x) + \mu g(x)$ 的 Taylor 展开为 $\sum_{n=0}^\infty (\lambda a_n + \mu b_n)x^n$，其中 $\lambda,\mu \in \mathbb{R}$. 
+(6) 如果 $g(x)$ 在 $x_0 = 0$ 处的 Taylor 展开为 $\displaystyle\sum_{n=0}^\infty b_n x^n$，则 $\lambda f(x) + \mu g(x)$ 的 Taylor 展开为 $\displaystyle\sum_{n=0}^\infty (\lambda a_n + \mu b_n)x^n$，其中 $\lambda,\mu \in \mathbb{R}$. 
 
 > 利用上述命题，再结合前面的例子，我们有  
 > $$
@@ -612,7 +612,7 @@ $$
 > $$
 > \arctan x = \int_0^x \frac{dt}{1 + t^2} = x - \frac{x^3}{3} + \frac{x^5}{5} + \cdots + (-1)^{n-1} \frac{x^{2n-1}}{2n - 1} + R_n(x),
 > $$
-> 其中余项 $R_n(x) = (-1)^n \int_0^x \frac{t^{2n}}{1 + t^2}\,dt$. 当 $x \in [-1,1]$ 时  
+> 其中余项 $R_n(x) = (-1)^n \displaystyle\int_0^x \dfrac{t^{2n}}{1 + t^2}\,dt$. 当 $x \in [-1,1]$ 时  
 > $$
 > |R_n(x)| \le \int_0^{|x|} t^{2n}\,dt = \frac{|x|^{2n+1}}{2n + 1} \to 0\ (n \to \infty),
 > $$

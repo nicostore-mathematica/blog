@@ -233,7 +233,7 @@ $$
 > $$
 > \{(x_i - \delta_{x_i}, x_i + \delta_{x_i})\},\ i = 1,2,\ldots,k.
 > $$
-> 令 $M = \max\displaystyle\limits_{1 \leq i \leq k} \{|f(x_i)| + 1\}$. 任取 $x \in [a,b]$, 设 $x \in (x_i - \delta_{x_i}, x_i + \delta_{x_i})$, 则
+> 令 $M = \max\limits_{1 \leq i \leq k} \{|f(x_i)| + 1\}$. 任取 $x \in [a,b]$, 设 $x \in (x_i - \delta_{x_i}, x_i + \delta_{x_i})$, 则
 > $$
 > |f(x)| \leq |f(x) - f(x_i)| + |f(x_i)| \leq 1 + |f(x_i)| \leq M,
 > $$

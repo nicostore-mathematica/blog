@@ -63,8 +63,8 @@ $$
 > >
 > > $$
 > > \begin{align*}
-> > |a_{n}-a|<\varepsilon&\Leftrightarrow -\varepsilon < a_{n}-a < \varepsilon\\
-> > &\Leftrightarrow a - \varepsilon < a_{n}< a + \varepsilon\\
+> > |a_{n}-a|<\varepsilon&\Leftrightarrow -\varepsilon < a_{n}-a < \varepsilon\\\\
+> > &\Leftrightarrow a - \varepsilon < a_{n}< a + \varepsilon\\\\
 > > &\Leftrightarrow a_{n}\in(a - \varepsilon,a + \varepsilon)\triangleq U(a,\varepsilon)
 > > \end{align*}
 > > $$
@@ -559,19 +559,19 @@ $$
 > 我们来说明 $\{a_n\}$ 是严格单调递增的，$\{b_n\}$ 是严格单调递减的。事实上，
 > $$
 > \begin{aligned}
-> a_n &= \left(1 + \frac{1}{n}\right)^n = \sum_{k=0}^{n} \binom{n}{k} \frac{1}{n^k} \\
-> &= 1 + \sum_{k=1}^{n} \frac{n(n-1)\cdots(n-k+1)}{k!} \cdot \frac{1}{n^k} \\
-> &= 1 + 1 + \frac{1}{2!}\left(1 - \frac{1}{n}\right) + \cdots + \frac{1}{n!}\left(1 - \frac{1}{n}\right)\cdots\left(1 - \frac{n-1}{n}\right) \\
-> &< 1 + 1 + \frac{1}{2!}\left(1 - \frac{1}{n+1}\right) + \cdots + \frac{1}{n!}\left(1 - \frac{1}{n+1}\right)\cdots\left(1 - \frac{n-1}{n+1}\right) \\
-> &\quad + \frac{1}{(n+1)!}\left(1 - \frac{1}{n+1}\right)\cdots\left(1 - \frac{n}{n+1}\right) \\
+> a_n &= \left(1 + \frac{1}{n}\right)^n = \sum_{k=0}^{n} \binom{n}{k} \frac{1}{n^k} \\\\
+> &= 1 + \sum_{k=1}^{n} \frac{n(n-1)\cdots(n-k+1)}{k!} \cdot \frac{1}{n^k} \\\\
+> &= 1 + 1 + \frac{1}{2!}\left(1 - \frac{1}{n}\right) + \cdots + \frac{1}{n!}\left(1 - \frac{1}{n}\right)\cdots\left(1 - \frac{n-1}{n}\right) \\\\
+> &< 1 + 1 + \frac{1}{2!}\left(1 - \frac{1}{n+1}\right) + \cdots + \frac{1}{n!}\left(1 - \frac{1}{n+1}\right)\cdots\left(1 - \frac{n-1}{n+1}\right) \\\\
+> &\quad + \frac{1}{(n+1)!}\left(1 - \frac{1}{n+1}\right)\cdots\left(1 - \frac{n}{n+1}\right) \\\\
 > &= a_{n+1}.
 > \end{aligned}
 > $$
 > 这说明 $\{a_n\}$ 严格递增。另一方面，当 $n > 1$ 时，有
 > $$
 > \begin{aligned}
-> 0 < a_n &< 1 + 1 + \sum_{k=2}^{n} \frac{1}{k!} \\
-> &\leq 2 + \sum_{k=2}^{n} \frac{1}{(k-1)k} \\
+> 0 < a_n &< 1 + 1 + \sum_{k=2}^{n} \frac{1}{k!} \\\\
+> &\leq 2 + \sum_{k=2}^{n} \frac{1}{(k-1)k} \\\\
 > &= 2 + \sum_{k=2}^{n} \left(\frac{1}{k-1} - \frac{1}{k}\right) = 3 - \frac{1}{n} < 3.
 > \end{aligned}
 > $$
@@ -670,8 +670,8 @@ $$
 > 因此，当 $m > n$ 时，
 > $$
 > \begin{aligned}
-> a_m - a_n &= \frac{1}{(n+1)\sqrt{n+1}} + \cdots + \frac{1}{m\sqrt{m}} \\
-> &< 2\left(\frac{1}{\sqrt{n}} - \frac{1}{\sqrt{n+1}}\right) + 2\left(\frac{1}{\sqrt{n+1}} - \frac{1}{\sqrt{n+2}}\right) + \cdots \\
+> a_m - a_n &= \frac{1}{(n+1)\sqrt{n+1}} + \cdots + \frac{1}{m\sqrt{m}} \\\\
+> &< 2\left(\frac{1}{\sqrt{n}} - \frac{1}{\sqrt{n+1}}\right) + 2\left(\frac{1}{\sqrt{n+1}} - \frac{1}{\sqrt{n+2}}\right) + \cdots \\\\
 > &= \frac{2}{\sqrt{n}} - \frac{2}{\sqrt{m}} < \frac{2}{\sqrt{n}}.
 > \end{aligned}
 > $$
@@ -827,7 +827,7 @@ $$
 > 特别地，$n > N$ 时 $\{x_n\}$ 也是严格单调递增的，且  
 > $$
 > \begin{aligned}
-> x_n - x_N &= (x_n - x_{n-1}) + \cdots + (x_{N+1} - x_N) \\
+> x_n - x_N &= (x_n - x_{n-1}) + \cdots + (x_{N+1} - x_N) \\\\
 > &> (y_n - y_{n-1}) + \cdots + (y_{N+1} - y_N) = y_n - y_N,
 > \end{aligned}
 > $$

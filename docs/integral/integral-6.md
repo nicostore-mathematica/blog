@@ -28,12 +28,12 @@ createTime: 2025/09/16 20:57:28
 > $$
 > 则 $f$ 在 $x_0$ 处可导, 导数为 $A$.
 >
-> 如果 $f$ 在 $x_0$ 的左边邻域 $(x_0 - \delta, x_0]$ 中有定义, 且当 $x \to x_0^-$ 时, $\frac{f(x) - f(x_0)}{x - x_0}$ 的极限存在且有限, 则称 $f$ 在 $x_0$ 处左可导, 此极限称为 $f$ 在 $x_0$ 处的左导数, 记为 $f'_-(x_0)$, 即
+> 如果 $f$ 在 $x_0$ 的左边邻域 $(x_0 - \delta, x_0]$ 中有定义, 且当 $x \to x_0^-$ 时, $\dfrac{f(x) - f(x_0)}{x - x_0}$ 的极限存在且有限, 则称 $f$ 在 $x_0$ 处左可导, 此极限称为 $f$ 在 $x_0$ 处的左导数, 记为 $f'_-(x_0)$, 即
 > $$
 > f'_-(x_0) = \lim_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0}.
 > $$
 >
-> 类似地, 如果 $f$ 在 $x_0$ 的右边邻域 $[x_0, x_0 + \delta)$ 中有定义, 且当 $x \to x_0^+$ 时, $\frac{f(x) - f(x_0)}{x - x_0}$ 的极限存在且有限, 则称 $f$ 在 $x_0$ 处右可导, 此极限称为 $f$ 在 $x_0$ 处的右导数, 记为 $f'_+(x_0)$, 即
+> 类似地, 如果 $f$ 在 $x_0$ 的右边邻域 $[x_0, x_0 + \delta)$ 中有定义, 且当 $x \to x_0^+$ 时, $\dfrac{f(x) - f(x_0)}{x - x_0}$ 的极限存在且有限, 则称 $f$ 在 $x_0$ 处右可导, 此极限称为 $f$ 在 $x_0$ 处的右导数, 记为 $f'_+(x_0)$, 即
 > $$
 > f'_+(x_0) = \lim_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0}.
 > $$
@@ -131,7 +131,7 @@ createTime: 2025/09/16 20:57:28
 $$
 df(x_0) = f'(x_0)dx(x_0),
 $$
-其中 $dx(x_0)$ 是函数 $x$ 在 $x_0$ 的微分 (即恒同线性映射). 我们又将导数 $f'(x_0)$ 记为 $\frac{df}{dx}(x_0)$ 或 $\left.\frac{df}{dx}\right|_{x_0}$, 称为 $f$ 在 $x_0$ 处的微商. 
+其中 $dx(x_0)$ 是函数 $x$ 在 $x_0$ 的微分 (即恒同线性映射). 我们又将导数 $f'(x_0)$ 记为 $\dfrac{df}{dx}(x_0)$ 或 $\left.\dfrac{df}{dx}\right|_{x_0}$, 称为 $f$ 在 $x_0$ 处的微商. 
 
 微商是一个历史遗留记号, 它并不是两个微分的商, 而仅仅表示函数 $f$ 关于变量 $x$ 在 $x_0$ 处的导数. 我们将在那些需要区分关于不同变量求导的时候使用微商的记号, 其余的时候一般用 $f'$ 表示导数.
 
@@ -170,25 +170,27 @@ $$
 > $$
 > 于是
 > $$
-> \lim_{x' \to x} \frac{f(x')g(x') - f(x)g(x)}{x - x'} = \lim_{x' \to x} \frac{f(x') - f(x)}{x' - x}g(x') + \lim_{x' \to x'} \frac{g(x') - g(x)}{x' - x}f(x)
-> = f'(x)g(x) + g'(x)f(x).
+> \begin{aligned}
+> \lim_{x' \to x} \frac{f(x')g(x') - f(x)g(x)}{x - x'} &= \lim_{x' \to x} \frac{f(x') - f(x)}{x' - x}g(x') + \lim_{x' \to x'} \frac{g(x') - g(x)}{x' - x}f(x)\\\\
+> &= f'(x)g(x) + g'(x)f(x).
+> \end{aligned}
 > $$
 > 这说明 $fg$ 在 $x$ 处可导, 且 $(fg)' = f'g + fg'$.
 
 导数运算的线性性可以推广为对任意有限多个函数的线性组合成立. 从导性还得到
 
-**推论4**. 设 $f,g$ 在 $x$ 处可导, $g(x) \ne 0$. 则 $\frac{f}{g}$ 在 $x$ 处可导, 且
+**推论4**. 设 $f,g$ 在 $x$ 处可导, $g(x) \ne 0$. 则 $\dfrac{f}{g}$ 在 $x$ 处可导, 且
 $$
 \left(\frac{f}{g}\right)' = \frac{f'g - fg'}{g^2}.
 $$
 
 > /proof/
 >
-> 先说明 $g^{-1} = \frac{1}{g}$ 在 $x$ 处可导:
+> 先说明 $g^{-1} = \dfrac{1}{g}$ 在 $x$ 处可导:
 > $$
 > \lim_{x' \to x} \frac{g^{-1}(x') - g^{-1}(x)}{x' - x} = \lim_{x' \to x} \frac{-1}{g(x)g(x')} \cdot \frac{g(x') - g(x)}{x' - x} = -\frac{g'(x)}{g^2(x)}.
 > $$
-> 因此 $\frac{f}{g} = f \cdot \frac{1}{g}$ 可导, 利用导数的导性, 有
+> 因此 $\dfrac{f}{g} = f \cdot \dfrac{1}{g}$ 可导, 利用导数的导性, 有
 > $$
 > \left(\frac{f}{g}\right)' = f' \cdot \left(\frac{1}{g}\right) + f \cdot \left(\frac{1}{g}\right)' = \frac{f'g - fg'}{g^2},
 > $$
@@ -208,8 +210,8 @@ $$
 > 这说明 $x' \to x$ 时, 存在常数 $C$, 使得 $|g(x') - g(x)| \le C|x' - x|$. 因此
 > $$
 > \begin{aligned}
-> f(g(x')) &= f(g(x)) + f'(g(x))(g(x') - g(x)) + o(g(x') - g(x))\\
-> &= f(g(x)) + f'(g(x))g'(x)(x' - x) + f'(g(x))o(x' - x') + o(x' - x)\\
+> f(g(x')) &= f(g(x)) + f'(g(x))(g(x') - g(x)) + o(g(x') - g(x))\\\\
+> &= f(g(x)) + f'(g(x))g'(x)(x' - x) + f'(g(x))o(x' - x') + o(x' - x)\\\\
 > &= f(g(x)) + f'(g(x))g'(x)(x' - x) + o(x' - x).
 > \end{aligned}
 > $$
@@ -228,7 +230,7 @@ $$
 >
 > 因为 $f$ 在 $x_0$ 处可导, 故
 > $$
-> f(x) = f(x_0) + f'(x_0)(x - x_0) + o(x - x_0)\quad (x \to x_0), \tag{4.1}
+> f(x) = f(x_0) + f'(x_0)(x - x_0) + o(x - x_0)\quad (x \to x_0),
 > $$
 > 当 $x \to x_0$ 时上式可改写为
 > $$
@@ -238,7 +240,7 @@ $$
 > $$
 > |f(x) - f(x_0)| \ge C|x - x_0|,\quad \text{or}\quad |y - y_0| \ge C|g(y) - g(y_0)|.
 > $$
-> 特别地, 当 $y \to y_0$ 时, $x = g(y) \to g(y_0) = x_0$. 在 (4.1) 中代入 $x = g(y)$, $x_0 = g(y_0)$ 得
+> 特别地, 当 $y \to y_0$ 时, $x = g(y) \to g(y_0) = x_0$. 代入 $x = g(y)$, $x_0 = g(y_0)$ 得
 > $$
 > \begin{aligned}
 > y &= y_0 + f'(x_0)(g(y) - g(y_0)) + o(g(y) - g(y_0))\quad (y \to y_0)\\
@@ -249,7 +251,7 @@ $$
 > $$
 > g(y) = g(y_0) + \frac{1}{f'(x_0)}(y - y_0) + o(y - y_0)\quad (y \to y_0).
 > $$
-> 这说明 $g$ 在 $y_0 = f(x_0)$ 处可导, 且导数为 $\frac{1}{f'(x_0)}$.
+> 这说明 $g$ 在 $y_0 = f(x_0)$ 处可导, 且导数为 $\dfrac{1}{f'(x_0)}$.
 
 有了上面这些求导运算法则, 我们就可以计算常见函数的导数了. 先看最基本的例子.
 
@@ -274,9 +276,9 @@ $$
 
 **命题8**. 设 $a > 0$ ($a \ne 1$) 和 $\alpha \ne 0$ 为常数. 在函数的定义域内, 我们有  
 
-(1) $(a^x)' = a^x \ln a$, $(\log_a x)' = \frac{1}{x \ln a}$;  
+(1) $(a^x)' = a^x \ln a$, $(\log_a x)' = \dfrac{1}{x \ln a}$;  
 
-(2) $(\ln |x|)' = \frac{1}{x}$, $(x^\alpha)' = \alpha x^{\alpha - 1}$.
+(2) $(\ln |x|)' = \dfrac{1}{x}$, $(x^\alpha)' = \alpha x^{\alpha - 1}$.
 
 > /proof/
 >
@@ -289,7 +291,7 @@ $$
 > (\log_a x)' = \frac{1}{(a^y)'|_{y = \log_a x}} = \frac{1}{a^{\log_a x} \ln a} = \frac{1}{x \ln a}.
 > $$
 >
-> (2) 当 $x > 0$ 时, 由 (1) 知 $(\ln |x|)' = (\ln x)' = \frac{1}{x}$; 当 $x < 0$ 时,
+> (2) 当 $x > 0$ 时, 由 (1) 知 $(\ln |x|)' = (\ln x)' = \dfrac{1}{x}$; 当 $x < 0$ 时,
 > $$
 > (\ln |x|)' = [\ln(-x)]' = \frac{1}{-x}(-x)' = \frac{1}{x}.
 > $$
@@ -302,7 +304,7 @@ $$
 > $$
 > (x^\alpha)'(0) = \lim_{x \to 0} \frac{x^\alpha}{x} = \lim_{x \to 0} x^{\alpha - 1} = 0;
 > $$
-> 我们现在考虑 $x < 0$ 的情形. 此时, 要求 $\alpha = \frac{p}{q}$ 为有理数, $p,q$ 为互素的整数, 且 $q$ 为奇数. 我们有
+> 我们现在考虑 $x < 0$ 的情形. 此时, 要求 $\alpha = \dfrac{p}{q}$ 为有理数, $p,q$ 为互素的整数, 且 $q$ 为奇数. 我们有
 > $$
 > (x^\alpha)' = ((-1)^{\frac{p}{q}} e^{\alpha \ln |x|})' = (-1)^{\frac{p}{q}} e^{\alpha \ln |x|} (\alpha \ln |x|)'
 > = x^\alpha \alpha \frac{1}{x} = \alpha x^{\alpha - 1}.
@@ -311,13 +313,13 @@ $$
 
 **命题9**. 在函数的定义域内, 有  
 
-(1) $(\sin x)' = \cos x$, $(\csc x)' = -\csc x \cot x$, $(\arcsin x)' = \frac{1}{\sqrt{1 - x^2}}$;  
+(1) $(\sin x)' = \cos x$, $(\csc x)' = -\csc x \cot x$, $(\arcsin x)' = \dfrac{1}{\sqrt{1 - x^2}}$;  
 
-(2) $(\cos x)' = -\sin x$, $(\sec x)' = \sec x \tan x$, $(\arccos x)' = -\frac{1}{\sqrt{1 - x^2}}$;  
+(2) $(\cos x)' = -\sin x$, $(\sec x)' = \sec x \tan x$, $(\arccos x)' = -\dfrac{1}{\sqrt{1 - x^2}}$;  
 
-(3) $(\tan x)' = \sec^2 x$, $(\arctan x)' = \frac{1}{1 + x^2}$;  
+(3) $(\tan x)' = \sec^2 x$, $(\arctan x)' = \dfrac{1}{1 + x^2}$;  
 
-(4) $(\cot x)' = -\csc^2 x$, $(\operatorname{arccot} x)' = -\frac{1}{1 + x^2}$;
+(4) $(\cot x)' = -\csc^2 x$, $(\operatorname{arccot} x)' = -\dfrac{1}{1 + x^2}$;
 
 > /proof/
 >
@@ -344,7 +346,7 @@ $$
 > $$
 > (\csc x)' = -\frac{1}{\cos^2 x}(-\sin x) = \sec x \tan x,
 > $$
-> 又因为 $\arcsin x + \arccos x = \frac{\pi}{2}$, 故
+> 又因为 $\arcsin x + \arccos x = \dfrac{\pi}{2}$, 故
 > $$
 > (\arccos x)' = \left(\frac{\pi}{2} - \arcsin x\right)' = -\frac{1}{\sqrt{1 - x^2}}.
 > $$
@@ -453,7 +455,7 @@ $$
 > > f'(x) = \frac{3}{2}x^{\frac{1}{2}} \sin \frac{1}{x} - x^{\frac{3}{2}} \frac{1}{x^2} \cos \frac{1}{x}
 > > = \frac{3}{2}x^{\frac{1}{2}} \sin \frac{1}{x} - x^{-\frac{1}{2}} \cos \frac{1}{x}.
 > > $$
-> > 考察 $f'$ 在 $x_n = \frac{1}{2n\pi}$ ($n = 1,2,\cdots$) 处的取值知 $f'(x_n) \to -\infty$, 因此 $f'$ 不连续.
+> > 考察 $f'$ 在 $x_n = \dfrac{1}{2n\pi}$ ($n = 1,2,\cdots$) 处的取值知 $f'(x_n) \to -\infty$, 因此 $f'$ 不连续.
 >
 > 设 $k = 1,2,\cdots$, 则函数
 > $$
@@ -469,7 +471,7 @@ $$
 > > $$
 > > f'(x) =
 > > \begin{cases}
-> > (2k+1)x^{2k} \sin \frac{1}{x} - x^{2k-1} \cos \frac{1}{x}, & x \ne 0, \\
+> > (2k+1)x^{2k} \sin \dfrac{1}{x} - x^{2k-1} \cos \dfrac{1}{x}, & x \ne 0, \\\\
 > > 0, & x = 0.
 > > \end{cases}
 > > $$
@@ -477,13 +479,13 @@ $$
 > > $$
 > > f''(x) =
 > > \begin{cases}
-> > 2k(2k+1)x^{2k-1} \sin \frac{1}{x} - 4k x^{2k-2} \cos \frac{1}{x} - x^{2k-3} \sin \frac{1}{x}, & x \ne 0, \\
+> > 2k(2k+1)x^{2k-1} \sin \dfrac{1}{x} - 4k x^{2k-2} \cos \dfrac{1}{x} - x^{2k-3} \sin \dfrac{1}{x}, & x \ne 0, \\\\
 > > 0, & x = 0.
 > > \end{cases}
 > > $$
 > > 继续求导可得 $f^{(k)}(0) = 0$, 且当 $x \ne 0$ 时,
 > > $$
-> > f^{(k)}(x) = x^2 \phi(x) \pm x \sin \frac{1}{x} \quad \text{或} \quad x^2 \phi(x) \pm x \cos \frac{1}{x},
+> > f^{(k)}(x) = x^2 \phi(x) \pm x \sin \frac{1}{x} \quad \text{or} \quad x^2 \phi(x) \pm x \cos \frac{1}{x},
 > > $$
 > > 其中 $\phi(x)$ 在 $x = 0$ 附近有界. 因此 $f^{(k)}$ 连续但在 $x = 0$ 处不可导.
 
@@ -499,7 +501,7 @@ $$
 > $$
 > (fg)^{(n)} = \sum_{k=0}^{n} C_n^k f^{(n-k)}g^{(k)}
 > $$
-> 其中 $C_n^k = \frac{n!}{k!(n-k)!}$ 为组合数.
+> 其中 $C_n^k = \dfrac{n!}{k!(n-k)!}$ 为组合数.
 
 /proof/
 
@@ -508,9 +510,9 @@ $$
 > (2) 对 $n$ 用数学归纳法. $n = 1$ 的情形就是求导运算的导性. 设公式对 $n = k$ 成立, 则 $n = k+1$ 时
 > $$
 > \begin{aligned}
-> (fg)^{(k+1)} &= [(fg)^{(k)}]' = \sum_{l=0}^{k} C_k^l [f^{(k-l+1)}g^{(l)} + f^{(k-l)}g^{(l+1)}]\\
-> &= \sum_{l=0}^{k} C_k^l f^{(k-l+1)}g^{(l)} + \sum_{l=0}^{k-1} C_k^l f^{(k-l)}g^{(l+1)} + C_k^k f g^{(k+1)}\\
-> &= f^{(k+1)}g + \sum_{l=1}^{k} [C_k^l + C_k^{l-1}]f^{(k-l+1)}g^{(l)} + f g^{(k+1)}\\
+> (fg)^{(k+1)} &= [(fg)^{(k)}]' = \sum_{l=0}^{k} C_k^l [f^{(k-l+1)}g^{(l)} + f^{(k-l)}g^{(l+1)}]\\\\
+> &= \sum_{l=0}^{k} C_k^l f^{(k-l+1)}g^{(l)} + \sum_{l=0}^{k-1} C_k^l f^{(k-l)}g^{(l+1)} + C_k^k f g^{(k+1)}\\\\
+> &= f^{(k+1)}g + \sum_{l=1}^{k} [C_k^l + C_k^{l-1}]f^{(k-l+1)}g^{(l)} + f g^{(k+1)}\\\\
 > &= \sum_{l=0}^{k+1} C_{k+1}^l f^{(k+1-l)}g^{(l)},
 > \end{aligned}
 > $$
@@ -524,7 +526,7 @@ $$
 >
 > (1) $p_n^{(n)}(x) = n! a_n$, 从而 $p_n^{(k)} = 0$, $\forall\ k > n$;  
 >
-> (2) $a_k = \frac{1}{k!} p_n^{(k)}(0)$, $k = 0,1,\cdots,n$.
+> (2) $a_k = \dfrac{1}{k!} p_n^{(k)}(0)$, $k = 0,1,\cdots,n$.
 >
 > > 直接逐项求导, 利用归纳法可得
 > > $$
@@ -726,7 +728,7 @@ $$
 >
 > 这个例子可以推广到一般情形. 例如, 设 $f$ 是 $n$ 阶可导函数, 且 $f(x) = 0$ 有 $n$ 个不同的解 $\{x_i\}_{i=1}^{n}$, 则对任意 $c \in [a,b]$, 存在 $\xi \in (a,b)$, 使得
 > $$
-> f(c) = \frac{1}{n!}f^{(n)}(\xi)\prod_{i=1}^{n}(c - x_i).\tag{5.1}
+> f(c) = \frac{1}{n!}f^{(n)}(\xi)\prod_{i=1}^{n}(c - x_i).\tag{1}
 > $$
 > 证明的方法仍是构造适当的辅助函数并利用微分中值定理. 例如, 无妨设 $c \ne x_i$ ($1 \le i \le n$), 令
 > $$
@@ -738,17 +740,21 @@ $$
 > $$
 > p_{n-1}(x) = \sum_{i=1}^{n}\left[\prod_{j \ne i}\frac{(x - x_j)}{(x_i - x_j)}\right]f(x_i),
 > $$
-> 则 $p_{n-1}$ 为次数不超过 $n-1$ 的多项式, 它与函数 $f$ 在 $\{x_i\}_{i=1}^{n}$ 处取相同的值, 称为 $f$ 的 Lagrange 插值多项式. 由于 $f - p_{n-1}$ 有 $n$ 个不同的零点, 由 (5.1) 可得 (注意 $p_{n-1}$ 的 $n$ 阶导数为零)
+> 则 $p_{n-1}$ 为次数不超过 $n-1$ 的多项式, 它与函数 $f$ 在 $\{x_i\}_{i=1}^{n}$ 处取相同的值, 称为 $f$ 的 Lagrange 插值多项式. 由于 $f - p_{n-1}$ 有 $n$ 个不同的零点, 由 (1) 可得 (注意 $p_{n-1}$ 的 $n$ 阶导数为零)
 > $$
-> f(x) - p_{n-1}(x) = \frac{1}{n!}f^{(n)}(\xi)\prod_{i=1}^{n}(x - x_i),\quad \xi \in (a,b).\tag{5.2}
+> f(x) - p_{n-1}(x) = \frac{1}{n!}f^{(n)}(\xi)\prod_{i=1}^{n}(x - x_i),\quad \xi \in (a,b).\tag{2}
 > $$
-> 这个等式称为插值多项式的余项公式, 在第六章中, 我们将利用它来估计近似积分的误差.
+> 这个等式称为插值多项式的余项公式, 我们将利用它来估计近似积分的误差.
 
-证明勒让德 (Legendre) 多项式 $\frac{d^n}{dx^n}(x^2 - 1)^n$ 在 $(-1,1)$ 中有 $n$ 个不同的实根, 其中 $n \ge 1$.
+证明勒让德 (Legendre) 多项式 $\dfrac{d^n}{dx^n}(x^2 - 1)^n$ 在 $(-1,1)$ 中有 $n$ 个不同的实根, 其中 $n \ge 1$.
 
-> 首先, 多项式 $(x^2 - 1)^n$ 有实根 $-1$ 和 $1$, 根据 Rolle 定理, $\frac{d}{dx}(x^2 - 1)^n$ 在 $(-1,1)$ 内有实根, 记为 $\xi_{11}$. 当 $n > 1$ 时, $-1$ 和 $1$ 仍为 $\frac{d}{dx}(x^2 - 1)^n$ 的实根, 再次由 Rolle 定理即知 $\frac{d^2}{dx^2}(x^2 - 1)^n$ 在 $(-1,\xi_{11})$ 和 $(\xi_{11},1)$ 中分别有实根 $\xi_{21}$ 和 $\xi_{22}$. 
+> 首先, 多项式 $(x^2 - 1)^n$ 有实根 $-1$ 和 $1$, 根据 Rolle 定理, $\dfrac{d}{dx}(x^2 - 1)^n$ 在 $(-1,1)$ 内有实根, 记为 $\xi_{11}$. 
 >
-> 如果 $n > 2$, 则 $-1$ 和 $1$ 仍为 $\frac{d^2}{dx^2}(x^2 - 1)^n$ 的实根, 即它有四个实根 $-1,\xi_{21},\xi_{22}$ 和 $1$. 继续使用 Rolle 定理, $\frac{d^3}{dx^3}(x^2 - 1)^n$ 在 $(-1,1)$ 中就有三个不同的实根. 如此重复证明就知道欲证结论对任意正整数 $n$ 都成立. 
+> 当 $n > 1$ 时, $-1$ 和 $1$ 仍为 $\dfrac{d}{dx}(x^2 - 1)^n$ 的实根, 再次由 Rolle 定理即知 $\dfrac{d^2}{dx^2}(x^2 - 1)^n$ 在 $(-1,\xi_{11})$ 和 $(\xi_{11},1)$ 中分别有实根 $\xi_{21}$ 和 $\xi_{22}$. 
+>
+> 如果 $n > 2$, 则 $-1$ 和 $1$ 仍为 $\dfrac{d^2}{dx^2}(x^2 - 1)^n$ 的实根, 即它有四个实根 $-1,\xi_{21},\xi_{22}$ 和 $1$. 
+>
+> 继续使用 Rolle 定理, $\dfrac{d^3}{dx^3}(x^2 - 1)^n$ 在 $(-1,1)$ 中就有三个不同的实根. 如此重复证明就知道欲证结论对任意正整数 $n$ 都成立. 
 
 非常重要的一点就是微分中值定理中的 $\xi$ 可以取在区间内部.
 
