@@ -6,8 +6,6 @@ createTime: 2025/09/16 20:57:28
 
 ## Part 1 级数敛散
 
-在研究 Taylor 展开时，我们遇到过级数的收敛问题.和积分一样，对于一列数（不一定有限）的求和可以看成一种新的运算，这种运算不属于初等的四则运算，但具有类似的性质.
-
 设 $a_1, a_2, \cdots, a_n, \cdots$ 为一列实数，形式和
 $$
 \sum_{n=1}^{\infty} a_n = a_1 + a_2 + \cdots + a_n + \cdots
@@ -491,19 +489,15 @@ $$
 >
 > 这可由分部求和公式得到，也可直接计算如下
 > $$
-> \sum_{i=m+1}^{n} a_i b_i = \sum_{i=m+1}^{n} a_i (B_i - B_{i-1}) = \sum_{i=m+1}^{n} a_i B_i - \sum_{i=m+1}^{n} a_i B_{i-1}
+> \begin{aligned}
+> \sum_{i=m+1}^{n} a_i b_i &= \sum_{i=m+1}^{n} a_i (B_i - B_{i-1}) = \sum_{i=m+1}^{n} a_i B_i - \sum_{i=m+1}^{n} a_i B_{i-1}\\\\
+>&= \sum_{i=m+1}^{n} a_i B_i - \sum_{i=m}^{n-1} a_{i+1} B_i\\\\
+> &= \sum_{i=m+1}^{n-1} (a_i - a_{i+1}) B_i + a_n B_n - a_{m+1} B_m.
+> \end{aligned}
 > $$
 >
-> $$
-> = \sum_{i=m+1}^{n} a_i B_i - \sum_{i=m}^{n-1} a_{i+1} B_i
-> $$
->
-> $$
-> = \sum_{i=m+1}^{n-1} (a_i - a_{i+1}) B_i + a_n B_n - a_{m+1} B_m.
-> $$
 
 **推论4 (Abel 引理).** 设 $a_1, a_2, \cdots, a_n$ 为单调数列，且 $|B_i| \leq M\ (i \geq 1)$，则
-
 $$
 \Big|\sum_{i=m+1}^{n} a_i b_i\Big| \leq 2M(|a_n| + |a_{m+1}|),\quad \forall\ m \geq 0.
 $$
@@ -903,7 +897,7 @@ $$
 
 当极限为有限且非零时，称无穷乘积是收敛的，否则就称它是发散的. 
 
-如果某个 $p_n$ 为零，则显然无穷乘积为零. 下面我们假设 $p_n$ 均为非零实数. 设无穷乘积 $\prod_{n=1}^\infty p_n$ 收敛，则
+如果某个 $p_n$ 为零，则显然无穷乘积为零. 下面我们假设 $p_n$ 均为非零实数. 设无穷乘积 $\displaystyle\prod_{n=1}^\infty p_n$ 收敛，则
 
 $$
 \lim_{n \to \infty} p_n = \lim_{n \to \infty} \frac{P_n}{P_{n-1}} = P/P = 1,
@@ -921,14 +915,14 @@ $$
 
 **命题8**. 设 $p_n > 0$，$\forall\ n \geq 1$. 则
 
-(1) 无穷乘积 $\prod_{n=1}^\infty p_n$ 收敛当且仅当级数 $\displaystyle\sum_{n=1}^\infty \ln p_n$ 收敛，且
+(1) 无穷乘积 $\displaystyle\prod_{n=1}^\infty p_n$ 收敛当且仅当级数 $\displaystyle\sum_{n=1}^\infty \ln p_n$ 收敛，且
 $$
 \prod_{n=1}^\infty p_n = e^{\sum_{n=1}^\infty \ln p_n};
 $$
 
-(2) 记 $p_n = 1 + a_n$. 如果 $n$ 充分大时 $a_n > 0$（或 $a_n < 0$），则无穷乘积 $\prod_{n=1}^\infty p_n$ 收敛当且仅当级数 $\displaystyle\sum_{n=1}^\infty a_n$ 收敛；
+(2) 记 $p_n = 1 + a_n$. 如果 $n$ 充分大时 $a_n > 0$（或 $a_n < 0$），则无穷乘积 $\displaystyle\prod_{n=1}^\infty p_n$ 收敛当且仅当级数 $\displaystyle\sum_{n=1}^\infty a_n$ 收敛；
 
-(3) 如果级数 $\displaystyle\sum_{n=1}^\infty a_n$ 和 $\displaystyle\sum_{n=1}^\infty a_n^2$ 均收敛，则无穷乘积 $\prod_{n=1}^\infty (1 + a_n)$ 也收敛. 
+(3) 如果级数 $\displaystyle\sum_{n=1}^\infty a_n$ 和 $\displaystyle\sum_{n=1}^\infty a_n^2$ 均收敛，则无穷乘积 $\displaystyle\prod_{n=1}^\infty (1 + a_n)$ 也收敛. 
 
 > (1) 是显然的. (2) 只要利用
 >
@@ -946,7 +940,11 @@ $$
 
 ### · 级数的重排
 
-现在我们讨论将级数的各项重新排列次序后得到的新级数的收敛和发散性质. 首先，如果 $\displaystyle\sum_{n=1}^\infty a_n$ 为正项级数，则由基本判别法不难看出，将它的各项重新排列后不会影响其敛散性. 如果收敛的话，重排也不改变级数的和. 
+现在我们讨论将级数的各项重新排列次序后得到的新级数的收敛和发散性质. 
+
+首先，如果 $\displaystyle\sum_{n=1}^\infty a_n$ 为正项级数，则由基本判别法不难看出，将它的各项重新排列后不会影响其敛散性. 
+
+如果收敛的话，重排也不改变级数的和. 
 
 对于一般的级数，如果 $\displaystyle\sum_{n=1}^\infty a_n$ 绝对收敛，则重排后的级数也绝对收敛，且其和不变. 这可以从等式
 
@@ -962,8 +960,11 @@ $$
 
 **定理9**（Riemann）. 如果 $\displaystyle\sum_{n=1}^\infty a_n$ 为条件收敛的级数，则可以将它重排为一个收敛级数，使得重排后的级数和为任意指定的实数. 
 
-> 设 $\xi \in \mathbb{R}$，我们将找到 $\displaystyle\sum_{n=1}^\infty a_n$ 的一个重排，使得它的和为 $\xi$. 首先我们注意到，如果 $\displaystyle\sum_{n=1}^\infty a_n$ 条件收敛，则 $\displaystyle\sum_{n=1}^\infty |a_n|$ 发散. 由 $|a_n| = a_n^+ + a_n^-$, $a_n = a_n^+ - a_n^-$ 即知，级数 $\displaystyle\sum_{n=1}^\infty a_n^+$ 和 $\displaystyle\sum_{n=1}^\infty a_n^-$ 均发散到 $+\infty$. 这两个级数的部分和分别记为 $S_n^+$ 和 $S_n^-$. 因为当 $n$ 充分大时 $S_n^+ > \xi$，故可取最小的正整数 $m_1$，使得
+> 设 $\xi \in \mathbb{R}$，我们将找到 $\displaystyle\sum_{n=1}^\infty a_n$ 的一个重排，使得它的和为 $\xi$. 
 >
+> 首先我们注意到，如果 $\displaystyle\sum_{n=1}^\infty a_n$ 条件收敛，则 $\displaystyle\sum_{n=1}^\infty |a_n|$ 发散. 
+>
+> 由 $|a_n| = a_n^+ + a_n^-$, $a_n = a_n^+ - a_n^-$ 即知，级数 $\displaystyle\sum_{n=1}^\infty a_n^+$ 和 $\displaystyle\sum_{n=1}^\infty a_n^-$ 均发散到 $+\infty$. 这两个级数的部分和分别记为 $S_n^+$ 和 $S_n^-$. 因为当 $n$ 充分大时 $S_n^+ > \xi$，故可取最小的正整数 $m_1$，使得
 > $$
 > S_{m_1}^+ > \xi,
 > $$

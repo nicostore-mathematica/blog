@@ -31,7 +31,7 @@
   },
   "integral": {
     "index": 117,
-    "integral-9": 6067,
+    "integral-9": 6088,
     "integral-8": 6958,
     "integral-7": 6696,
     "integral-6": 6754,
@@ -39,12 +39,13 @@
     "integral-4": 4321,
     "integral-3": 4234,
     "integral-2": 5520,
-    "integral-15": 10,
-    "integral-14": 5855,
+    "integral-16": 6619,
+    "integral-15": 2725,
+    "integral-14": 5859,
     "integral-13": 9,
-    "integral-12": 5829,
-    "integral-11": 7351,
-    "integral-10": 3281,
+    "integral-12": 5856,
+    "integral-11": 7305,
+    "integral-10": 3293,
     "integral-1": 5013,
     "integral-0": 316
   },
@@ -153,7 +154,7 @@
     "algebra-1": 5125,
     "algebra-0": 9451
   },
-  "total": 279076,
-  "lastUpdated": "2025-12-17T03:34:28.627Z",
-  "fileCount": 122
+  "total": 288428,
+  "lastUpdated": "2025-12-17T14:49:03.608Z",
+  "fileCount": 123
 }

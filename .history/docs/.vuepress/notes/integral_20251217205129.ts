@@ -25,10 +25,6 @@ export default defineCollection({
 				"integral-14",
 				"integral-15",
 				"integral-16",
-				"integral-17",
-				"integral-18",
-				"integral-19",
-
 			],
 		},
 	],
