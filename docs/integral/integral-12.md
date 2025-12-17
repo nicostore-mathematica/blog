@@ -67,11 +67,13 @@ $$
 > 因此
 >
 > $$
-> |g(x) - g(x_0)| \leq |g(x) - g_{n_0}(x)| + |g_{n_0}(x) - g_{n_0}(x_0)| + |g_{n_0}(x_0) - g(x_0)| \\
-> < \frac{\varepsilon}{3} + \frac{\varepsilon}{3} + \frac{\varepsilon}{3} = \varepsilon, \quad \forall\ x \in (x_0 - \delta, x_0 + \delta) \cap I.
+> \begin{aligned}
+> |g(x) - g(x_0)| &\leq |g(x) - g_{n_0}(x)| + |g_{n_0}(x) - g_{n_0}(x_0)| + |g_{n_0}(x_0) - g(x_0)| \\\\
+> &< \frac{\varepsilon}{3} + \frac{\varepsilon}{3} + \frac{\varepsilon}{3} = \varepsilon, \quad \forall\ x \in (x_0 - \delta, x_0 + \delta) \cap I.
+> \end{aligned}
 > $$
 >
-> 这说明 $g$ 在 $x_0$ 处是连续的. $\square$
+> 这说明 $g$ 在 $x_0$ 处是连续的. 
 >
 
 > [!important]
@@ -133,7 +135,10 @@ $$
 > 因此，当 $0 < |x - x_0| < \delta$ 时
 >
 > $$
-> |g(x) - A| \leq |g(x) - g_N(x)| + |g_N(x) - a_N| + |a_N - A| < \frac{\varepsilon}{3} + \frac{\varepsilon}{3} + \frac{\varepsilon}{3} = \varepsilon,
+> \begin{aligned}
+> |g(x) - A| &\leq |g(x) - g_N(x)| + |g_N(x) - a_N| + |a_N - A| \\\\
+> &< \frac{\varepsilon}{3} + \frac{\varepsilon}{3} + \frac{\varepsilon}{3} = \varepsilon,
+> \end{aligned}
 > $$
 >
 > 即 $\displaystyle\lim_{x \to x_0} g(x) = A$
@@ -193,7 +198,10 @@ $$
 > (3) (Abel) 设级数 $\displaystyle\sum_{n=1}^\infty b_n(x)$ 在 $I$ 中一致收敛，且对每个 $x \in I$，$\{a_n(x)\}$ 关于 $n$ 单调，且在 $I$ 中一致有界，则级数 $\displaystyle\sum_{n=1}^\infty a_n(x)b_n(x)$ 在 $I$ 中一致收敛. 其证明仍然是 Abel 变换的运用，然后再利用 Cauchy 准则：
 >
 > $$
-> |a_{n+1}(x)b_{n+1}(x) + \cdots + a_{n+p}(x)b_{n+p}(x)| \leq 3\sup |a_n| \cdot \sup_{1 \leq k \leq p} |b_{n+1}(x) + \cdots + b_{n+k}(x)|.
+> \begin{aligned}
+> &|a_{n+1}(x)b_{n+1}(x) + \cdots + a_{n+p}(x)b_{n+p}(x)| \leq\\\\
+> &3\sup |a_n| \cdot \sup_{1 \leq k \leq p} |b_{n+1}(x) + \cdots + b_{n+k}(x)|.
+> \end{aligned}
 > $$
 
 **命题5.** 设 $\displaystyle\sum_{n=1}^\infty f_n(x)$ 和 $\displaystyle\sum_{n=1}^\infty g_n(x)$ 一致收敛，$\lambda,\mu \in \mathbb{R}$. 则函数项级数 $\displaystyle\sum_{n=1}^\infty (\lambda f_n(x) + \mu g_n(x))$ 也一致收敛，且
@@ -278,7 +286,10 @@ $$
 > 因此
 >
 > $$
-> \sum_\pi \omega_i(g) \Delta x_i \leq \sum_\pi \omega_i(g_N) \Delta x_i + \frac{\varepsilon}{2(b-a)}(b-a) \leq \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon,
+> \begin{aligned}
+> \sum_\pi \omega_i(g) \Delta x_i &\leq \sum_\pi \omega_i(g_N) \Delta x_i + \frac{\varepsilon}{2(b-a)}(b-a) \\\\
+> &\leq \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon,
+> \end{aligned}
 > $$
 >
 > 由可积函数的充要条件即知 $g$ 是 $[a,b]$ 上的可积函数. 
@@ -286,9 +297,11 @@ $$
 > 现在，当 $n \geq N$ 时，我们有估计
 >
 > $$
-> \left| \int_a^b g_n(x) dx - \int_a^b g(x) dx \right| = \left| \int_a^b (g_n(x) - g(x)) dx \right| \\
-> \leq \int_a^b |g_n(x) - g(x)| dx \\
-> \leq \frac{\varepsilon}{4}
+> \begin{aligned}
+> \left| \int_a^b g_n(x) dx - \int_a^b g(x) dx \right| &= \left| \int_a^b (g_n(x) - g(x)) dx \right| \\\\
+> &\leq \int_a^b |g_n(x) - g(x)| dx \\\\
+> &\leq \frac{\varepsilon}{4}
+> \end{aligned}
 > $$
 >
 > 这说明
@@ -359,8 +372,10 @@ $$
 > 首先，由微分中值定理，我们有
 >
 > $$
-> |[f_n(x) - f_n(c)] - [f_m(x) - f_m(c)]| = |[f_n(x) - f_m(x)] - [f_n(c) - f_m(c)]| \\
-> = |f_n'(\xi) - f_m'(\xi)||x - c| \to 0,
+> \begin{aligned}
+> |[f_n(x) - f_n(c)] - [f_m(x) - f_m(c)]| &= |[f_n(x) - f_m(x)] - [f_n(c) - f_m(c)]| \\\\
+> &= |f_n'(\xi) - f_m'(\xi)||x - c| \to 0,
+> \end{aligned}
 > $$
 >
 > 这说明 $\{f_n(x) - f_n(c)\}$ 一致收敛，从而 $f_n(x)$ 一致收敛到一个函数 $f(x)$. 
@@ -370,7 +385,7 @@ $$
 > $$
 > g_n(x) =
 > \begin{cases}
-> \dfrac{f_n(x) - f_n(x_0)}{x - x_0}, & x \ne x_0, \\
+> \dfrac{f_n(x) - f_n(x_0)}{x - x_0}, & x \ne x_0, \\\\
 > f_n'(x_0), & x = x_0.
 > \end{cases}
 > $$
@@ -386,7 +401,7 @@ $$
 > $$
 > \bar{g}(x) =
 > \begin{cases}
-> \dfrac{f(x) - f(x_0)}{x - x_0}, & x \ne x_0, \\
+> \dfrac{f(x) - f(x_0)}{x - x_0}, & x \ne x_0, \\\\
 > g(x_0), & x = x_0.
 > \end{cases}
 > $$
@@ -402,10 +417,12 @@ $$
 可得
 
 $$
-\frac{1}{\sin^2 x} = \frac{1}{4} \left[ \frac{1}{\sin^2 \frac{x}{2}} + \frac{1}{\sin^2 \frac{\pi + x}{2}} \right] \\\\
-= \frac{1}{4^2} \left[ \frac{1}{\sin^2 \frac{x}{4}} + \frac{1}{\sin^2 \frac{2\pi + x}{4}} + \frac{1}{\sin^2 \frac{\pi + x}{4}} + \frac{1}{\sin^2 \frac{3\pi + x}{4}} \right] \\\\
-= \cdots \\\\
-= \frac{1}{2^{2n}} \sum_{k=0}^{2^n - 1} \frac{1}{\sin^2 \frac{k\pi + x}{2^n}}.
+\begin{aligned}
+\frac{1}{\sin^2 x} &= \dfrac{1}{4} \left[ \dfrac{1}{\sin^2 \dfrac{x}{2}} + \dfrac{1}{\sin^2 \dfrac{\pi + x}{2}} \right] \\\\
+&= \frac{1}{4^2} \left[ \dfrac{1}{\sin^2 \dfrac{x}{4}} + \dfrac{1}{\sin^2 \dfrac{2\pi + x}{4}} + \dfrac{1}{\sin^2 \dfrac{\pi + x}{4}} + \dfrac{1}{\sin^2 \dfrac{3\pi + x}{4}} \right] \\\\
+&= \cdots \\\\
+&= \dfrac{1}{2^{2n}} \sum_{k=0}^{2^n - 1} \dfrac{1}{\sin^2 \dfrac{k\pi + x}{2^n}}.
+\end{aligned}
 $$
 
 再利用

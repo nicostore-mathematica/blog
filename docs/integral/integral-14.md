@@ -4,8 +4,6 @@ permalink: /integral/integral-14/
 createTime: 2025/12/16 19:24:12
 ---
 
-1
-
 从这一章开始我们要研究多个变量的函数. 实数集的基本性质对于一元实函数的各种性质都有决定性的影响. 因此，为了研究多个变量的函数，我们要首先研究它们的定义域的基本性质. 
 
 ## Part 1 基本概念
@@ -14,10 +12,12 @@ createTime: 2025/12/16 19:24:12
 
 **定义1** (内积)：
 
-> 设 $X$ 是实数域 $\mathbb{R}$ 上的向量空间，如果映射  
+> 设 $X$ 是实数域 $\mathbb{R}$ 上的向量空间，如果映射
 > $$
-> g = \langle,\rangle\colon X \times X \to \mathbb{R} \\\\
-> (x,y) \mapsto g(x,y) = \langle x,y\rangle
+> \begin{aligned}
+> &g = \langle,\rangle\colon X \times X \to \mathbb{R} \\\\
+> &(x,y) \mapsto g(x,y) = \langle x,y\rangle
+> \end{aligned}
 > $$
 > 满足以下条件：
 >
@@ -93,9 +93,11 @@ $$
 
 > 根据 Schwarz 不等式，有  
 > $$
-> \|x + y\|^2 = \langle x + y,x + y\rangle = \langle x,x\rangle + 2\langle x,y\rangle + \langle y,y\rangle \\
-> \leqslant \|x\|^2 + 2\|x\|\cdot\|y\| + \|y\|^2 \\
-> = (\|x\| + \|y\|)^2,
+> \begin{aligned}
+> \|x + y\|^2 &= \langle x + y,x + y\rangle = \langle x,x\rangle + 2\langle x,y\rangle + \langle y,y\rangle \\\\
+> &\leqslant \|x\|^2 + 2\|x\|\cdot\|y\| + \|y\|^2 \\\\
+> &= (\|x\| + \|y\|)^2,
+> \end{aligned}
 > $$
 > 因此欲证不等式成立. 
 
@@ -115,33 +117,35 @@ $$
 
 >  $\mathbb{R}$ 上的度量
 >
-> > 任给 $x,y \in \mathbb{R}$，令 $\rho(x,y) = |x - y|$，则 $\rho$ 为 $\mathbb{R}$ 上的度量. 
+>  > 任给 $x,y \in \mathbb{R}$，令 $\rho(x,y) = |x - y|$，则 $\rho$ 为 $\mathbb{R}$ 上的度量. 
 >
-> 内积诱导距离
+>  内积诱导距离
 >
-> > 设 $(X,\langle,\rangle)$ 为内积空间，则令  
-> > $$
-> > \rho(x,y) = \|x - y\|,\quad \forall\,x,y \in X.
-> > $$
-> > 显然 $\rho$ 满足度量定义中的 (1)，(2)，而三角不等式也成立：  
-> > $$
-> > \rho(x,z) = \|x - z\| = \|(x - y) + (y - z)\| \\
-> > \leqslant \|x - y\| + \|y - z\| \\
-> > = \rho(x,y) + \rho(y,z).
-> > $$
-> > 因此 $\rho$ 为 $X$ 上的度量，称为由内积诱导的度量. 
+>  > 设 $(X,\langle,\rangle)$ 为内积空间，则令  
+>  > $$
+>  > \rho(x,y) = \|x - y\|,\quad \forall\,x,y \in X.
+>  > $$
+>  > 显然 $\rho$ 满足度量定义中的 (1)，(2)，而三角不等式也成立：  
+>  > $$
+>  > \begin{aligned}
+>  > \rho(x,z) &= \|x - z\| = \|(x - y) + (y - z)\| \\\\
+>  > &\leqslant \|x - y\| + \|y - z\| \\\\
+>  > &= \rho(x,y) + \rho(y,z).\\
+>  > \end{aligned}
+>  > $$
+>  > 因此 $\rho$ 为 $X$ 上的度量，称为由内积诱导的度量. 
 >
-> 离散度量空间
+>  离散度量空间
 >
-> > 度量空间比内积空间要广泛得多，它们不一定为向量空间. 例如，设 $X$ 为任意非空集合，定义映射 $d\colon X \times X \to \mathbb{R}$ 如下：  
-> > $$
-> > d(x,y) = 
-> > \begin{cases}
-> > 1,& x \ne y,\\
-> > 0,& x = y.
-> > \end{cases}
-> > $$
-> > 不难验证 $d$ 为 $X$ 上的一个度量，称为离散度量. 
+>  > 度量空间比内积空间要广泛得多，它们不一定为向量空间. 例如，设 $X$ 为任意非空集合，定义映射 $d\colon X \times X \to \mathbb{R}$ 如下：  
+>  > $$
+>  > d(x,y) = 
+>  > \begin{cases}
+>  > 1,& x \ne y,\\
+>  > 0,& x = y.
+>  > \end{cases}
+>  > $$
+>  > 不难验证 $d$ 为 $X$ 上的一个度量，称为离散度量. 
 
 ### · 度量空间的拓扑
 
@@ -214,8 +218,10 @@ $$
 >
 > (2) 利用集合的运算  
 > $$
-> (A_1 \cup \cdots \cup A_k)^c = A_1^c \cap \cdots \cap A_k^c \\\\
-> (\bigcap_\alpha A_\alpha)^c = \bigcup_\alpha A_\alpha^c
+> \begin{aligned}
+> (A_1 \cup \cdots \cup A_k)^c &= A_1^c \cap \cdots \cap A_k^c \\\\
+> (\bigcap_\alpha A_\alpha)^c &= \bigcup_\alpha A_\alpha^c
+> \end{aligned}
 > $$
 > 及 (1) 即可. 
 
@@ -380,8 +386,10 @@ $$
 > $$
 > 考虑 $X$ 中的闭球 $F_k = \bar{B}_{2^{-k}}(a_{n_k})$，$k = 1,2,\cdots$. 当 $x \in F_{k+1}$ 时，  
 > $$
-> \rho(x,a_{n_k}) \leqslant \rho(x,a_{n_{k+1}}) + \rho(a_{n_{k+1}},a_{n_k}) \\\\
-> \leqslant \frac{1}{2^{k+1}} + \frac{1}{2^{k+1}} = \frac{1}{2^k},
+> \begin{aligned}
+> \rho(x,a_{n_k}) &\leqslant \rho(x,a_{n_{k+1}}) + \rho(a_{n_{k+1}},a_{n_k}) \\\\
+> &\leqslant \frac{1}{2^{k+1}} + \frac{1}{2^{k+1}} = \frac{1}{2^k},
+> \end{aligned}
 > $$
 > 这说明 $x \in F_k$，即 $F_1 \supset F_2 \supset \cdots \supset F_k \supset F_{k+1} \supset \cdots$. 另一方面，  
 > $$
@@ -414,14 +422,18 @@ $$
 > \rho(a_{n+1},a_n) \leqslant q \cdot \rho(a_n,a_{n-1}) \leqslant q^2 \cdot \rho(a_{n-1},a_{n-2}) \leqslant \cdots \leqslant q^n \cdot \rho(a_1,a_0),
 > $$
 > $$
-> \rho(a_m,a_n) \leqslant \rho(a_m,a_{m-1}) + \rho(a_{m-1},a_{m-2}) + \cdots + \rho(a_{n+1},a_n) \\\\
-> \leqslant (q^{m-1} + q^{m-2} + \cdots + q^n) \cdot \rho(a_1,a_0) \\\\
-> \leqslant \frac{q^n}{1 - q} \cdot \rho(a_1,a_0) \to 0,\quad(m > n,\,n \to \infty).
+> \begin{aligned}
+> \rho(a_m,a_n) &\leqslant \rho(a_m,a_{m-1}) + \rho(a_{m-1},a_{m-2}) + \cdots + \rho(a_{n+1},a_n) \\\\
+> &\leqslant (q^{m-1} + q^{m-2} + \cdots + q^n) \cdot \rho(a_1,a_0) \\\\
+> &\leqslant \frac{q^n}{1 - q} \cdot \rho(a_1,a_0) \to 0,\quad(m > n,\,n \to \infty).
+> \end{aligned}
 > $$
 > 这说明 $\{a_n\}$ 为 Cauchy 列. 设其极限为 $a$，则 $a \in A$. 由三角不等式得  
 > $$
-> \rho(f(a),a) \leqslant \rho(f(a),f(a_n)) + \rho(f(a_n),f(a_{n-1})) + \rho(a_n,a) \\\\
-> \leqslant q \cdot \rho(a,a_n) + q^{n-1} \cdot \rho(a_1,a_0) + \rho(a_n,a) \to 0\quad(n \to \infty),
+> \begin{aligned}
+> \rho(f(a),a) &\leqslant \rho(f(a),f(a_n)) + \rho(f(a_n),f(a_{n-1})) + \rho(a_n,a) \\\\
+> &\leqslant q \cdot \rho(a,a_n) + q^{n-1} \cdot \rho(a_1,a_0) + \rho(a_n,a) \to 0\quad(n \to \infty),
+> \end{aligned}
 > $$
 > 这说明 $f(a) = a$. 
 >

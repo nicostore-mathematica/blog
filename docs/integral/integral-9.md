@@ -108,8 +108,10 @@ $$
 > 则有如下估计：
 >
 > $$
-> |f(\xi_j)| \le \left| \sum_{i \ne j} f\left(a + \frac{i}{n}(b-a)\right) \right| + \frac{n}{b-a}(1 + |I|)
-> \le (n-1)M + \frac{n}{b-a}(1 + |I|),
+> \begin{aligned}
+> |f(\xi_j)| &\le \left| \sum_{i \ne j} f\left(a + \frac{i}{n}(b-a)\right) \right| + \frac{n}{b-a}(1 + |I|)\\\\
+> &\le (n-1)M + \frac{n}{b-a}(1 + |I|),
+> \end{aligned}
 > $$
 >
 > 这个估计对任意 $\xi_j \in \left[a + \dfrac{j-1}{n}(b-a),\, a + \dfrac{j}{n}(b-a)\right]$ 均成立，因此有
@@ -156,8 +158,10 @@ Riemann 对于积分的贡献之一就是证明了 $f$ 可积当且仅当 $S - s
 
 **引理2.** 设分割 $\pi'$ 是从 $\pi$ 添加 $k$ 个分点得到的，则有
 $$
-S(\pi) \ge S(\pi') \ge S(\pi) - (M - m)k\|\pi\|, \\\\
-s(\pi) \le s(\pi') \le s(\pi) + (M - m)k\|\pi\|.
+\begin{aligned}
+S(\pi) &\ge S(\pi') \ge S(\pi) - (M - m)k\|\pi\|, \\\\
+s(\pi) &\le s(\pi') \le s(\pi) + (M - m)k\|\pi\|.
+\end{aligned}
 $$
 
 特别地，对于给定的分割增加新的分点时，下和不减，上和不增.
@@ -165,16 +169,20 @@ $$
 > 为了简单起见，我们证明 $k=1$ 的情形.此时，设新添加的分点为 $\bar{x}$，则 $\bar{x}$ 必落在某个区间 $(x_{j-1}, x_j)$ 内.由上和的定义，
 >
 > $$
-> S(\pi) = \sum_{i=1}^n M_i \cdot \Delta x_i = M_j \cdot \Delta x_j + \sum_{i \ne j} M_i \cdot \Delta x_i, \\\\
-> S(\pi') = M'_j \cdot (\bar{x} - x_{j-1}) + M''_j (x_j - \bar{x}) + \sum_{i \ne j} M_i \cdot \Delta x_i,
+> \begin{aligned}
+> S(\pi) &= \sum_{i=1}^n M_i \cdot \Delta x_i = M_j \cdot \Delta x_j + \sum_{i \ne j} M_i \cdot \Delta x_i, \\\\
+> S(\pi') &= M'_j \cdot (\bar{x} - x_{j-1}) + M''_j (x_j - \bar{x}) + \sum_{i \ne j} M_i \cdot \Delta x_i,
+> \end{aligned}
 > $$
 >
 > 这里 $M'_j$ 及 $M''_j$ 分别是 $f$ 在区间 $[x_{j-1}, \bar{x}]$ 及 $[\bar{x}, x_j]$ 中的上确界.因为 $M'_j \le M_j$，$M''_j \le M_j$，从而有
 >
 > $$
-> 0 \le S(\pi) - S(\pi') = (M_j - M'_j)(\bar{x} - x_{j-1}) + (M_j - M''_j)(x_j - \bar{x}) \\\\
-> \le (M - m)(\bar{x} - x_{j-1}) + (M - m)(x_j - \bar{x}) \\\\
-> = (M - m)\Delta x_j \le (M - m)\|\pi\|.
+> \begin{aligned}
+> 0 \le S(\pi) - S(\pi') &= (M_j - M'_j)(\bar{x} - x_{j-1}) + (M_j - M''_j)(x_j - \bar{x}) \\\\
+> &\le (M - m)(\bar{x} - x_{j-1}) + (M - m)(x_j - \bar{x}) \\\\
+> &= (M - m)\Delta x_j \le (M - m)\|\pi\|.
+> \end{aligned}
 > $$
 >
 > 即 $S(\pi) \ge S(\pi') \ge S(\pi) - (M - m)\|\pi\|$.下和的情形同理可证.
@@ -225,8 +233,10 @@ $$
 > 于是，当 $\|\pi\| < \delta = \dfrac{\varepsilon}{2(M - m + 1)k}$ 时，
 >
 > $$
-> \inf_\pi S(\pi) \le S(\pi) \le (M - m)k \cdot \frac{\varepsilon}{2(M - m + 1)k} + \inf_\pi S(\pi) + \frac{\varepsilon}{2} \\\\
-> < \inf_\pi S(\pi) + \varepsilon,
+> \begin{aligned}
+> \inf_\pi S(\pi) &\le S(\pi) \le (M - m)k \cdot \frac{\varepsilon}{2(M - m + 1)k} + \inf_\pi S(\pi) + \frac{\varepsilon}{2} \\\\
+> &< \inf_\pi S(\pi) + \varepsilon,
+> \end{aligned}
 > $$
 >
 > 这就证明了
@@ -262,9 +272,11 @@ $$
 > 特别地，我们得到
 >
 > $$
-> I - \varepsilon \le \sum_{i=1}^n \inf_{x \in [x_{i-1}, x_i]} f(x) \cdot \Delta x_i = s(\pi) \\\\
-> \le \sum_{i=1}^n \sup_{x \in [x_{i-1}, x_i]} f(x) \cdot \Delta x_i = S(\pi) \\\\
-> \le I + \varepsilon,
+> \begin{aligned}
+> I - \varepsilon &\le \sum_{i=1}^n \inf_{x \in [x_{i-1}, x_i]} f(x) \cdot \Delta x_i = s(\pi) \\\\
+> &\le \sum_{i=1}^n \sup_{x \in [x_{i-1}, x_i]} f(x) \cdot \Delta x_i = S(\pi) \\\\
+> &\le I + \varepsilon,
+> \end{aligned}
 > $$
 >
 > 这说明 $\displaystyle \lim_{\|\pi\| \to 0} s(\pi) = \lim_{\|\pi\| \to 0} S(\pi) = I$.由 Darboux 定理即知 $f$ 的上下积分相等.
@@ -821,7 +833,7 @@ $$
 $$
 \int_a^b f(x)dx = F(b) - F(a).
 $$
-(此式又写为 $\int_a^b F'(x)dx = F(b) - F(a) = F(x)\big|_a^b$).
+(此式又写为 $\displaystyle\int_a^b F'(x)dx = F(b) - F(a) = F(x)\big|_a^b$).
 
 > 任取 $[a,b]$ 的一个分割 $\pi: a = x_0 < x_1 < \cdots x_n = b$, 由微分中值定理, 存在 $\xi_i \in (x_{i-1},x_i)$, 使得
 > $$

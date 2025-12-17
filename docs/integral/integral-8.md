@@ -10,7 +10,7 @@ createTime: 2025/09/16 20:57:28
 
 许多实际的应用问题都涉及到积分, 积分的内容占据了本课程的半壁江山.
 
-设 $f$ 为闭区间 $[a, b]$ 上的连续函数，我们考虑由 $f$ 的图像、直线 $x = a$、$x = b$ 以及 $y = 0$（$x$ 轴）在平面上所围成的曲边梯形的面积，我们用记号 $\int_a^b f(x)\,dx$ 表示这个面积的值，称为 $f$ 在 $[a, b]$ 上的积分. 
+设 $f$ 为闭区间 $[a, b]$ 上的连续函数，我们考虑由 $f$ 的图像、直线 $x = a$、$x = b$ 以及 $y = 0$（$x$ 轴）在平面上所围成的曲边梯形的面积，我们用记号 $\displaystyle\int_a^b f(x)\,dx$ 表示这个面积的值，称为 $f$ 在 $[a, b]$ 上的积分. 
 
 > (1) 设 $f(x) \equiv c$ 为常值函数，则所求面积是矩形的面积，因此自然地定义
 > $$
@@ -39,7 +39,10 @@ createTime: 2025/09/16 20:57:28
 > $$
 > 事实上，由定义，有
 > $$
-> \left|\int_a^b f(x)\,dx\right| = \left|\frac{1}{2}[f(a) + f(b)](b - a)\right| \le \frac{1}{2}[|f(a)| + |f(b)|](b - a) \le M(b - a).
+> \begin{aligned}
+> \left|\int_a^b f(x)\,dx\right| &= \left|\frac{1}{2}[f(a) + f(b)](b - a)\right| \\\\
+> &\le \frac{1}{2}[|f(a)| + |f(b)|](b - a) \le M(b - a).
+> \end{aligned}
 > $$
 >
 > - 如果 $f$ 为线性函数，$c \in (a, b)$，则
@@ -84,7 +87,7 @@ createTime: 2025/09/16 20:57:28
 >
 > (4) 现在假设 $f$ 是 $[a, b]$ 上的连续函数，不一定是分段线性的，我们要定义 $f$ 在 $[a, b]$ 上的积分. 一个自然的想法是用分段线性的函数去逼近 $f$. 
 >
-> 事实上，任给正整数 $n$，将 $[a, b]$ 作 $n$ 等分，分点为 $x_i = a + \frac{i}{n}(b - a)$，$i = 0, 1, \cdots, n$. 在每一个小区间 $[x_{i-1}, x_i]$ 上定义 $l_i(x)$ 为满足条件 $l_i(x_{i-1}) = f(x_{i-1})$，$l_i(x_i) = f(x_i)$ 的线性函数，$l_i(x)$ 的表达式为
+> 事实上，任给正整数 $n$，将 $[a, b]$ 作 $n$ 等分，分点为 $x_i = a + \dfrac{i}{n}(b - a)$，$i = 0, 1, \cdots, n$. 在每一个小区间 $[x_{i-1}, x_i]$ 上定义 $l_i(x)$ 为满足条件 $l_i(x_{i-1}) = f(x_{i-1})$，$l_i(x_i) = f(x_i)$ 的线性函数，$l_i(x)$ 的表达式为
 > $$
 > l_i(x) = f(x_{i-1}) + \frac{f(x_i) - f(x_{i-1})}{x_i - x_{i-1}}(x - x_{i-1}).
 > $$
@@ -102,15 +105,15 @@ $$
 > $$
 > |f(x') - f(x'')| \le \varepsilon,\quad \forall |x' - x''| < \delta.
 > $$
-> 取正整数 $N > (b - a)/\delta$，则当 $n > N$ 时 $\frac{1}{n}(b - a) < \delta$. 此时，设 $x \in [x_{i-1}, x_i]$ ($1 \le i \le n$)，则有
+> 取正整数 $N > (b - a)/\delta$，则当 $n > N$ 时 $\dfrac{1}{n}(b - a) < \delta$. 此时，设 $x \in [x_{i-1}, x_i]$ ($1 \le i \le n$)，则有
 > $$
-> |f(x) - f_n(x)| = |f(x) - l_i(x)|
-> = \left|f(x) - f(x_{i-1}) - \frac{f(x_i) - f(x_{i-1})}{x_i - x_{i-1}}(x - x_{i-1})\right|
-> $$
-> $$
-> = \left|(f(x) - f(x_{i-1}))\frac{x_i - x}{x_i - x_{i-1}} + (f(x) - f(x_i))\frac{x - x_{i-1}}{x_i - x_{i-1}}\right|
-> \le \varepsilon \frac{x_i - x}{x_i - x_{i-1}} + \varepsilon \frac{x - x_{i-1}}{x_i - x_{i-1}}
+> \begin{aligned}
+> |f(x) - f_n(x)| &= |f(x) - l_i(x)|\\\\
+> &= \left|f(x) - f(x_{i-1}) - \frac{f(x_i) - f(x_{i-1})}{x_i - x_{i-1}}(x - x_{i-1})\right|\\\\
+> &= \left|(f(x) - f(x_{i-1}))\frac{x_i - x}{x_i - x_{i-1}} + (f(x) - f(x_i))\frac{x - x_{i-1}}{x_i - x_{i-1}}\right|\\\\
+> &\le \varepsilon \frac{x_i - x}{x_i - x_{i-1}} + \varepsilon \frac{x - x_{i-1}}{x_i - x_{i-1}}
 > = \varepsilon.
+> \end{aligned}
 > $$
 > 这就证明了命题
 
@@ -122,7 +125,7 @@ $$
 $$
 \left|\int_a^b f_m(x)\,dx - \int_a^b f_n(x)\,dx\right| = \left|\int_a^b (f_m(x) - f_n(x))\,dx\right| \le 2\varepsilon(b - a),
 $$
-这说明，数列 $\left\{\int_a^b f_n(x)\,dx\right\}$ 是 Cauchy 列，因此其极限存在，我们现在就定义
+这说明，数列 $\left\{\displaystyle\int_a^b f_n(x)\,dx\right\}$ 是 Cauchy 列，因此其极限存在，我们现在就定义
 $$
 \int_a^b f(x)\,dx = \lim_{n \to \infty} \int_a^b f_n(x)\,dx.
 $$
@@ -135,7 +138,7 @@ $$
 = \lim_{n \to \infty} \frac{1}{n} \sum_{i=1}^n f(a + \frac{i}{n}(b - a))(b - a),
 $$
 
-**注意.** 和式 $\frac{1}{n}\sum_{i=1}^n f(a + \frac{i}{n}(b - a))$ 是一个平均数，其极限可以认为是 $f(x)$ 在区间 $[a, b]$ 上的平均值. 在这个意义上，$f(x)$ 在 $[a, b]$ 上的积分就等于 $f(x)$ 的平均值乘以区间长度，这是连续函数积分的几何含义.
+**注意.** 和式 $\dfrac{1}{n}\displaystyle\sum_{i=1}^n f(a + \dfrac{i}{n}(b - a))$ 是一个平均数，其极限可以认为是 $f(x)$ 在区间 $[a, b]$ 上的平均值. 在这个意义上，$f(x)$ 在 $[a, b]$ 上的积分就等于 $f(x)$ 的平均值乘以区间长度，这是连续函数积分的几何含义.
 
 下面我们按照积分的定义计算. 
 
@@ -143,10 +146,12 @@ $$
 
 > 将 $[0, 1]$ 作 $n$ 等分，利用定义得
 > $$
-> \int_0^1 a^x\,dx = \lim_{n \to \infty} \frac{1}{n} \sum_{i=1}^n a^{\frac{i}{n}}
-> = \lim_{n \to \infty} \frac{1}{n} \cdot \frac{a - 1}{a^{\frac{1}{n}} - 1}
-> = \lim_{t \to 0^+} (a - 1) \frac{t a^t}{a^t - 1}
-> = \frac{a - 1}{\ln a}.
+> \begin{aligned}
+> \int_0^1 a^x\,dx &= \lim_{n \to \infty} \frac{1}{n} \sum_{i=1}^n a^{\frac{i}{n}}\\\\
+> &= \lim_{n \to \infty} \frac{1}{n} \cdot \frac{a - 1}{a^{\frac{1}{n}} - 1}\\\\
+> &= \lim_{t \to 0^+} (a - 1) \frac{t a^t}{a^t - 1}\\\\
+> &= \frac{a - 1}{\ln a}.
+> \end{aligned}
 > $$
 
 利用连续函数的一致连续性，我们可以改写定义式. 事实上，沿用前面的记号如 $\varepsilon$, $N$ 等，当 $n > N$ 时，在等分小区间 $[x_{i-1}, x_i]$ 中任取一点 $\xi_i$，则有
@@ -214,13 +219,12 @@ $$
 > $$
 > 根据积分的保序性以及分段线性函数的积分关于区间的可加性，得
 > $$
-> \left|\int_a^c f(x)\,dx - \int_a^b f(x)\,dx - \int_b^c f(x)\,dx\right|
-> \le \left|\int_a^c g(x)\,dx - \int_a^b f(x)\,dx - \int_b^c f(x)\,dx\right| + \varepsilon(c - a)
-> $$
->
-> $$
-> = \left|\int_a^b [g(x) - f(x)]\,dx + \int_b^c [g(x) - f(x)]\,dx\right| + \varepsilon(c - a)
-> \le \varepsilon(b - a) + \varepsilon(c - b) + \varepsilon(c - a) = 2\varepsilon(c - a),
+> \begin{aligned}
+> &\left|\int_a^c f(x)\,dx - \int_a^b f(x)\,dx - \int_b^c f(x)\,dx\right|\\\\
+> &\le \left|\int_a^c g(x)\,dx - \int_a^b f(x)\,dx - \int_b^c f(x)\,dx\right| + \varepsilon(c - a)\\\\
+> &= \left|\int_a^b [g(x) - f(x)]\,dx + \int_b^c [g(x) - f(x)]\,dx\right| + \varepsilon(c - a)\\\\
+> &\le \varepsilon(b - a) + \varepsilon(c - b) + \varepsilon(c - a) = 2\varepsilon(c - a),
+> \end{aligned}
 > $$
 >
 > 由于 $\varepsilon$ 是任取的，故积分关于区间的可加性成立
@@ -235,8 +239,10 @@ f(x) \ge \frac{1}{2}f(x_0),\quad \forall x \in [c, d].
 $$
 此时由积分关于区间的可加性以及保序性可得
 $$
-\int_a^b f(x)\,dx = \int_a^c f(x)\,dx + \int_c^d f(x)\,dx + \int_d^b f(x)\,dx
-\ge \int_c^d f(x)\,dx \ge \frac{f(x_0)}{2}(d - c) > 0,
+\begin{aligned}
+\int_a^b f(x)\,dx &= \int_a^c f(x)\,dx + \int_c^d f(x)\,dx + \int_d^b f(x)\,dx\\\\
+&\ge \int_c^d f(x)\,dx \ge \frac{f(x_0)}{2}(d - c) > 0,
+\end{aligned}
 $$
 即此时 $f(x)$ 在 $[a, b]$ 上的积分为正
 
@@ -250,8 +256,10 @@ $$
 $$
 由
 $$
-\int_a^b f(x)\,dx = \sum_{i=1}^n \int_{x_{i-1}}^{x_i} f(x)\,dx
-= \sum_{i=1}^n f(x_{i-1})(x_i - x_{i-1}) + \sum_{i=1}^n \int_{x_{i-1}}^{x_i} (f(x) - f(x_{i-1}))\,dx
+\begin{aligned}
+\int_a^b f(x)\,dx &= \sum_{i=1}^n \int_{x_{i-1}}^{x_i} f(x)\,dx\\\\
+&= \sum_{i=1}^n f(x_{i-1})(x_i - x_{i-1}) + \sum_{i=1}^n \int_{x_{i-1}}^{x_i} (f(x) - f(x_{i-1}))\,dx
+\end{aligned}
 $$
 得
 $$
@@ -279,7 +287,7 @@ $$
 > $$
 > m \int_a^b g(x)\,dx \le \int_a^b f(x)g(x)\,dx \le M \int_a^b g(x)\,dx.
 > $$
-> 如果 $\int_a^b g(x)\,dx = 0$，则任取 $\xi \in [a, b]$ 即可。如果 $\int_a^b g(x)\,dx > 0$，则
+> 如果 $\displaystyle\int_a^b g(x)\,dx = 0$，则任取 $\xi \in [a, b]$ 即可。如果 $\displaystyle\int_a^b g(x)\,dx > 0$，则
 > $$
 > m \le \frac{\displaystyle\int_a^b f(x)g(x)\,dx}{\displaystyle\int_a^b g(x)\,dx} \le M,
 > $$
@@ -318,7 +326,7 @@ $$
 > 因此，当 $x \in [y_0, y_0 + \delta]$ 时
 > $$
 > \begin{aligned}
-> |f(x) - f(a)| &\le |f(x) - f(y_0)| + |f(y_0) - f(a)| \\
+> |f(x) - f(a)| &\le |f(x) - f(y_0)| + |f(y_0) - f(a)| \\\\
 > &\le \varepsilon|x - y_0| + \varepsilon|y_0 - a| = \varepsilon|x - a|.
 > \end{aligned}
 > $$
@@ -506,7 +514,7 @@ $$
 > $$
 > 因此 $G(x)$ 为 $g$ 的原函数.
 
-/example/ 求不定积分 $\displaystyle \int \frac{1}{\sin^2 x \cos^2 x}\,dx$.
+/example/ 求不定积分 $\displaystyle\int \dfrac{1}{\sin^2 x \cos^2 x}\,dx$.
 
 > 由不定积分的线性性质，有  
 > $$
@@ -517,7 +525,7 @@ $$
 > \end{aligned}
 > $$
 
-/example/ 设 $a \ne 0$，求不定积分 $\displaystyle \int \frac{1}{x^2 - a^2}\,dx$.
+/example/ 设 $a \ne 0$，求不定积分 $\displaystyle\int \dfrac{1}{x^2 - a^2}\,dx$.
 
 > 由不定积分的线性性质，有  
 > $$
@@ -616,7 +624,7 @@ $$
 > $$
 > \left[u(x)v(x) - \int u'(x)v(x)dx\right]' = u(x)v'(x).
 > $$
-> 这说明 $u(x)v(x) - \int u'(x)v(x)dx$ 是 $u(x)v'(x)$ 的原函数.
+> 这说明 $u(x)v(x) - \displaystyle\int u'(x)v(x)dx$ 是 $u(x)v'(x)$ 的原函数.
 
 (1) 分部积分法也可改写为
 $$
@@ -627,9 +635,9 @@ $$
 $$
 \int_a^b u(x)v'(x)dx = u(x)v(x)\Big|_a^b - \int_a^b u'(x)v(x)dx.
 $$
-/example/ 求不定积分 $\int x^2\ln x\,dx$. 
+/example/ 求不定积分 $\displaystyle\int x^2\ln x\,dx$. 
 
->  取 $u(x) = \ln x$, $v(x) = \frac{1}{3}x^3$，则
+>  取 $u(x) = \ln x$, $v(x) = \dfrac{1}{3}x^3$，则
 > $$
 > \begin{aligned}
 > \int x^2\ln x\,dx &= \int \ln x\,d\left(\frac{1}{3}x^3\right)\\\\
@@ -639,7 +647,7 @@ $$
 > \end{aligned}
 > $$
 
- /example/ 设 $a \ne 0$，求不定积分 $I = \int e^{ax}\cos bx\,dx$ 和 $J = \int e^{ax}\sin bx\,dx$. 
+ /example/ 设 $a \ne 0$，求不定积分 $I = \displaystyle\int e^{ax}\cos bx\,dx$ 和 $J = \displaystyle\int e^{ax}\sin bx\,dx$. 
 
 > 利用分部积分，有
 > $$
@@ -659,13 +667,15 @@ $$
 > $$
 > 因此解出 $I, J$ 为
 > $$
-> I = \frac{b\sin bx + a\cos bx}{a^2 + b^2}e^{ax} + C_1,\\\\
-> J = \frac{a\sin bx - b\cos bx}{a^2 + b^2}e^{ax} + C_2.
+> \begin{aligned}
+> I &= \frac{b\sin bx + a\cos bx}{a^2 + b^2}e^{ax} + C_1,\\\\
+> J &= \frac{a\sin bx - b\cos bx}{a^2 + b^2}e^{ax} + C_2.
+> \end{aligned}
 > $$
 
-/example/ 求积分 $\int_0^{\frac{\pi}{4}} \tan^4 x\,dx$. 
+/example/ 求积分 $\displaystyle\int_0^{\dfrac{\pi}{4}} \tan^4 x\,dx$. 
 
-> 记 $I_n = \int_0^{\frac{\pi}{4}} \tan^n x\,dx$，则 $I_0 = \frac{\pi}{4}$. 一般地，有
+> 记 $I_n = \displaystyle\int_0^{\dfrac{\pi}{4}} \tan^n x\,dx$，则 $I_0 = \dfrac{\pi}{4}$. 一般地，有
 > $$
 > \begin{aligned}
 > I_n &= \int_0^{\frac{\pi}{4}} \tan^n x\,dx = \int_0^{\frac{\pi}{4}} \tan^{n-2} x(\sec^2 x - 1)\,dx\\\\
@@ -674,7 +684,7 @@ $$
 > &= \frac{1}{n-1} - I_{n-2}.
 > \end{aligned}
 > $$
-> 特别地，$I_2 = 1 - I_0 = 1 - \frac{\pi}{4}$，$I_4 = \frac{1}{3} - I_2 = \frac{\pi}{4} - \frac{2}{3}$.
+> 特别地，$I_2 = 1 - I_0 = 1 - \dfrac{\pi}{4}$，$I_4 = \dfrac{1}{3} - I_2 = \dfrac{\pi}{4} - \dfrac{2}{3}$.
 
 /example/ 求不定积分
 $$
@@ -682,7 +692,7 @@ I_n = \int \frac{dx}{(x^2 + a^2)^n}
 $$
 其中 $a > 0$，$n$ 为非负整数.
 
-> 显然 $I_0 = x + C$，$I_1 = \frac{1}{a}\arctan\frac{x}{a} + C$. 当 $n \ge 1$ 时，
+> 显然 $I_0 = x + C$，$I_1 = \dfrac{1}{a}\arctan\dfrac{x}{a} + C$. 当 $n \ge 1$ 时，
 > $$
 > \begin{aligned}
 > I_n &= \int \frac{dx}{(x^2 + a^2)^n}\\\\
@@ -738,7 +748,7 @@ $$
 \int \frac{Ax + B}{(x^2 + px + q)^k}\,dx
 = \frac{A}{2}\frac{(x^2 + px + q)^{1-k}}{1 - k} + (B - \frac{Ap}{2})\int \frac{dt}{(t^2 + a^2)^k},
 $$
-其中 $t = x + \frac{p}{2}$，$a = \frac{1}{2}\sqrt{4q - p^2}$. 上式右端的不定积分我们在前一小节中已经用递推的办法算过. 
+其中 $t = x + \dfrac{p}{2}$，$a = \dfrac{1}{2}\sqrt{4q - p^2}$. 上式右端的不定积分我们在前一小节中已经用递推的办法算过. 
 
 总之，有理函数的不定积分可以用初等函数表示. 在具体的分解计算过程中我们通常可以用待定系数法. 
 

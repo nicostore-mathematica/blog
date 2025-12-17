@@ -71,8 +71,8 @@ $$
 > 当 $0 \leq a_n \leq q - 1$ 时，
 > $$
 > \begin{aligned}
-> 0 \leq S_n &= \sum_{k=1}^{n} \frac{a_k}{q^k} \\
-> &\leq (q - 1) \sum_{k=1}^{n} \frac{1}{q^k} \\
+> 0 \leq S_n &= \sum_{k=1}^{n} \frac{a_k}{q^k} \\\\
+> &\leq (q - 1) \sum_{k=1}^{n} \frac{1}{q^k} \\\\
 > &= 1 - q^{-n} < 1.
 > \end{aligned}
 > $$
@@ -180,11 +180,13 @@ $$
 > $$
 > F(x) = \int_1^x f(t)dt = \int_1^x t^{-s}dt =
 > \begin{cases}
-> \ln x, & s = 1, \\
-> \frac{1}{1-s}(x^{1-s} - 1), & s \ne 1.
+> \ln x, & s = 1, \\\\
+> \dfrac{1}{1-s}(x^{1-s} - 1), & s \ne 1.
 > \end{cases}
 > $$
-> 当 $0 < s \leq 1$ 时，$F(x) \to +\infty$ ($x \to +\infty$)；$s > 1$ 时，$F(x) \to \dfrac{1}{s-1}$ ($x \to +\infty$).这说明 $s \leq 1$ 时，$\displaystyle\sum_{n=1}^{\infty} \dfrac{1}{n^s}$ 发散；$s > 1$ 时 $\displaystyle\sum_{n=1}^{\infty} \dfrac{1}{n^s}$ 收敛.
+> 当 $0 < s \leq 1$ 时，$F(x) \to +\infty$ ($x \to +\infty$)；
+>
+> $s > 1$ 时，$F(x) \to \dfrac{1}{s-1}$ ($x \to +\infty$).这说明 $s \leq 1$ 时，$\displaystyle\sum_{n=1}^{\infty} \dfrac{1}{n^s}$ 发散；$s > 1$ 时 $\displaystyle\sum_{n=1}^{\infty} \dfrac{1}{n^s}$ 收敛.
 >
 > **注意**．$\zeta(s) = \displaystyle\sum_{n=1}^{\infty} \dfrac{1}{n^s}$ 称为 Riemann-Zeta 函数，这是一个非常重要的函数，它和现代数论的关系特别紧密.
 
@@ -198,8 +200,8 @@ $$
 > $$
 > F(x) = \int_1^x f(t)dt = \int_1^x \frac{dt}{(1+t)(\ln(1+t))^s} =
 > \begin{cases}
-> \ln \ln(1+x) - \ln \ln 2, & s = 1, \\
-> \frac{1}{1-s}\left[(\ln(1+x))^{1-s} - (\ln 2)^{1-s}\right], & s \ne 1.
+> \ln \ln(1+x) - \ln \ln 2, & s = 1, \\\\
+> \dfrac{1}{1-s}\left[(\ln(1+x))^{1-s} - (\ln 2)^{1-s}\right], & s \ne 1.
 > \end{cases}
 > $$
 > 因此 $s \leq 1$ 时原级数发散；$s > 1$ 时原级数收敛.
@@ -223,8 +225,8 @@ $$
 > 这说明当 $n \geq N$ 时
 > $$
 > \begin{aligned}
-> S_{n+1} &\leq S_N + \frac{1}{\lambda} \sum_{k=N}^{n} \left( \frac{a_k}{b_k} - \frac{a_{k+1}}{b_{k+1}} \right) \\
-> &= S_N + \frac{1}{\lambda} \left( \frac{a_N}{b_N} - \frac{a_{n+1}}{b_{n+1}} \right) \\
+> S_{n+1} &\leq S_N + \frac{1}{\lambda} \sum_{k=N}^{n} \left( \frac{a_k}{b_k} - \frac{a_{k+1}}{b_{k+1}} \right) \\\\
+> &= S_N + \frac{1}{\lambda} \left( \frac{a_N}{b_N} - \frac{a_{n+1}}{b_{n+1}} \right) \\\\
 > &\leq S_N + \frac{1}{\lambda} \frac{a_N}{b_N},
 > \end{aligned}
 > $$
@@ -271,8 +273,8 @@ $$
 > > 事实上，由 Raabe 判别法，只要考虑 $\theta = 1$ 的情形就可以了，此时有
 > > $$
 > > \begin{aligned}
-> > &\lim_{n \to \infty} \left( \frac{1}{b_n} \cdot \frac{a_n}{a_{n+1}} - \frac{1}{b_{n+1}} \right) \\
-> > &= \lim_{n \to \infty} \left\{ n \ln n \left[1 + \frac{1}{n} + o\left(\frac{1}{n \ln n}\right)\right] - (n+1) \ln(n+1) \right\} \\
+> > &\lim_{n \to \infty} \left( \frac{1}{b_n} \cdot \frac{a_n}{a_{n+1}} - \frac{1}{b_{n+1}} \right) \\\\
+> > &= \lim_{n \to \infty} \left\{ n \ln n \left[1 + \frac{1}{n} + o\left(\frac{1}{n \ln n}\right)\right] - (n+1) \ln(n+1) \right\} \\\\
 > > &= \lim_{n \to \infty} (n+1) \ln \frac{n}{n+1} = -1 < 0.
 > > \end{aligned}
 > > $$
@@ -315,17 +317,17 @@ $$
 > 记 $S_n = \displaystyle\sum_{k=1}^{n} a_n$, $T_n = \displaystyle\sum_{k=0}^{n} 2^k a_{2^k}$.当 $2^k \leq n < 2^{k+1}$ 时，有
 > $$
 > \begin{aligned}
-> S_n &\geq a_1 + a_2 + (a_3 + a_4) + \cdots + (a_{2^{k-1}+1} + \cdots + a_{2^k}) \\
-> &\geq a_1 + a_2 + 2a_4 + \cdots + 2^{k-1} a_{2^k} \\
-> &\geq \frac{1}{2}(a_1 + 2a_2 + \cdots + 2^k a_{2^k}) \\
+> S_n &\geq a_1 + a_2 + (a_3 + a_4) + \cdots + (a_{2^{k-1}+1} + \cdots + a_{2^k}) \\\\
+> &\geq a_1 + a_2 + 2a_4 + \cdots + 2^{k-1} a_{2^k} \\\\
+> &\geq \frac{1}{2}(a_1 + 2a_2 + \cdots + 2^k a_{2^k}) \\\\
 > &= T_k / 2.
 > \end{aligned}
 > $$
 > 这说明当 $S_n$ 有界时，$T_n$ 也有界，即 $\displaystyle\sum_{n=1}^{\infty} a_n$ 收敛时 $\displaystyle\sum_{k=0}^{\infty} 2^k a_{2^k}$ 也收敛.类似地，有
 > $$
 > \begin{aligned}
-> S_n &\leq a_1 + (a_2 + a_3) + \cdots + (a_{2^k} + \cdots + a_{2^{k+1}-1}) \\
-> &\leq a_1 + 2a_2 + \cdots + 2^k a_{2^k} \\
+> S_n &\leq a_1 + (a_2 + a_3) + \cdots + (a_{2^k} + \cdots + a_{2^{k+1}-1}) \\\\
+> &\leq a_1 + 2a_2 + \cdots + 2^k a_{2^k} \\\\
 > &= T_k.
 > \end{aligned}
 > $$
@@ -664,8 +666,10 @@ $$
 > 因此，当 $i > N$ 时，有
 >
 > $$
-> \left| A_i - \sum_{i=1}^\infty a_j \right| \leq \left| A_i - \sum_{j=1}^{N_0} a_{ij} \right| + \left| \sum_{j=1}^{N_0} a_{ij} - \sum_{j=1}^{N_0} a_j \right| + \left| \sum_{j=N_0+1}^\infty a_j \right| \\
-> < \frac{1}{4}\varepsilon + N_0 \cdot \frac{\varepsilon}{4N_0} + \frac{1}{2}\varepsilon = \varepsilon.
+> \begin{aligned}
+> \left| A_i - \sum_{i=1}^\infty a_j \right| &\leq \left| A_i - \sum_{j=1}^{N_0} a_{ij} \right| + \left| \sum_{j=1}^{N_0} a_{ij} - \sum_{j=1}^{N_0} a_j \right| + \left| \sum_{j=N_0+1}^\infty a_j \right| \\\\
+> &< \frac{1}{4}\varepsilon + N_0 \cdot \frac{\varepsilon}{4N_0} + \frac{1}{2}\varepsilon = \varepsilon.
+> \end{aligned}
 > $$
 >
 > 这说明 $\{A_i\}$ 的极限存在且极限为 $\displaystyle\sum_{j=1}^\infty a_j$. 
@@ -793,10 +797,12 @@ $$
 > 从而当 $n > N_0 + N_1$ 时，有
 >
 > $$
-> |\delta_n| \leq \sum_{k=0}^{N_0} |a_k| |B_{n-k} - B| + (|a_{N_0+1}| + \cdots + |a_n|) K \\
-> \leq \frac{\varepsilon}{2L+1} (|a_0| + |a_1| + \cdots + |a_{N_0}|) + \frac{\varepsilon}{2K+1} K \\
-> = \frac{\varepsilon}{2L+1} L + \frac{\varepsilon}{2K+1} K \\
-> < \varepsilon.
+> \begin{aligned}
+> |\delta_n| &\leq \sum_{k=0}^{N_0} |a_k| |B_{n-k} - B| + (|a_{N_0+1}| + \cdots + |a_n|) K \\\\
+> &\leq \frac{\varepsilon}{2L+1} (|a_0| + |a_1| + \cdots + |a_{N_0}|) + \frac{\varepsilon}{2K+1} K \\\\
+> &= \frac{\varepsilon}{2L+1} L + \frac{\varepsilon}{2K+1} K \\\\
+> &< \varepsilon.
+> \end{aligned}
 > $$
 >
 > 这说明 $\delta_n \to 0$，因而 $C_n = A_n B + \delta_n \to AB$. 
@@ -821,10 +827,12 @@ $$
 > 则有
 >
 > $$
-> \sum_{k=0}^n c_k x^k = \sum_{k=0}^n (C_k - C_{k-1}) x^k \\
-> = \sum_{k=0}^n C_k x^k - x \sum_{k=0}^{n-1} C_k x^k \\
-> = C_n x^n + (1 - x) \sum_{k=0}^{n-1} C_k x^k \\
-> = C_n x^n + C(1 - x^n) + (1 - x) \sum_{k=0}^{n-1} (C_k - C) x^k.
+> \begin{aligned}
+> \sum_{k=0}^n c_k x^k &= \sum_{k=0}^n (C_k - C_{k-1}) x^k \\\\
+> &= \sum_{k=0}^n C_k x^k - x \sum_{k=0}^{n-1} C_k x^k \\\\
+> &= C_n x^n + (1 - x) \sum_{k=0}^{n-1} C_k x^k \\\\
+> &= C_n x^n + C(1 - x^n) + (1 - x) \sum_{k=0}^{n-1} (C_k - C) x^k.
+> \end{aligned}
 > $$
 >
 > 在上式中令 $n \to \infty$ 就得到
@@ -1005,8 +1013,10 @@ $$
 > 对任意 $k$ 均成立. 由 $a_n \to 0$ 即知，下面的级数
 >
 > $$
-> a_1^+ + \cdots + a_{m_1}^+ - a_1^- - \cdots - a_{n_1}^- + a_{m_1+1}^+ + \cdots + a_{m_2}^+ \\\\
-> - a_{n_1+1}^- - \cdots - a_{n_2}^- + a_{m_2+1}^+ + \cdots + a_{m_3}^+ - a_{n_2+1}^- - \cdots
+> \begin{aligned}
+> &a_1^+ + \cdots + a_{m_1}^+ - a_1^- - \cdots - a_{n_1}^- + a_{m_1+1}^+ + \cdots + a_{m_2}^+ \\\\
+> &- a_{n_1+1}^- - \cdots - a_{n_2}^- + a_{m_2+1}^+ + \cdots + a_{m_3}^+ - a_{n_2+1}^- - \cdots
+> \end{aligned}
 > $$
 >
 > 收敛到 $\xi$. 注意 $a_n^+$ 和 $a_n^-$ 在这个级数中都依次出现了，因此它可以看成是原级数 $\displaystyle\sum_{n=1}^\infty a_n$ 的一个重排. 

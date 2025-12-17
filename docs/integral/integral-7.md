@@ -88,7 +88,10 @@ f(x) - l(x) = \frac{1}{2}f''(\xi)(x - a)(x - b),\quad \xi \in (a,b),
 $$
 其中 $l(x)$ 是满足条件 $l(a) = f(a)$, $l(b) = f(b)$ 的线性函数，它可以写成  
 $$
-l(x) = \frac{f(b) - f(a)}{b - a}(x - a) + f(a),\quad \text{or}\quad l(x) = f(b) - \frac{f(b) - f(a)}{b - a}(b - x).\tag{1-1}
+\begin{aligned}
+l(x) &= \frac{f(b) - f(a)}{b - a}(x - a) + f(a),\text{ or}\\\\
+l(x) &= f(b) - \frac{f(b) - f(a)}{b - a}(b - x).
+\end{aligned}\tag{1-1}
 $$
 于是，当 $f'' \ge 0$ 时，有  
 $$
@@ -389,9 +392,11 @@ $$
 > $$
 > 从而由 L'Hôpital 法则得
 > $$
-> \lim_{x \to x_0} \frac{f(x) - [f(x_0) + f'(x_0)(x - x_0) + \cdots + \frac{f^{(k+1)}(x_0)}{(k+1)!}(x - x_0)^{k+1}]}{(x - x_0)^{k+1}}\\
-> = \lim_{x \to x_0} \frac{f'(x) - [f'(x_0) + f''(x_0)(x - x_0) + \cdots + \frac{f^{(k+1)}(x_0)}{k!}(x - x_0)^k]}{(k+1)(x - x_0)^k}
+> \begin{aligned}
+> &\lim_{x \to x_0} \frac{f(x) - [f(x_0) + f'(x_0)(x - x_0) + \cdots + \dfrac{f^{(k+1)}(x_0)}{(k+1)!}(x - x_0)^{k+1}]}{(x - x_0)^{k+1}}\\\\
+> &= \lim_{x \to x_0} \frac{f'(x) - [f'(x_0) + f''(x_0)(x - x_0) + \cdots + \dfrac{f^{(k+1)}(x_0)}{k!}(x - x_0)^k]}{(k+1)(x - x_0)^k}
 > = 0.
+> \end{aligned}
 > $$
 > 即  
 > $$
@@ -428,8 +433,10 @@ $$
 > $$
 > 对 $t$ 求导，得  
 > $$
-> F'(t) = f'(t) + \sum_{k=1}^n \left[\frac{f^{(k+1)}(t)}{k!}(x - t)^k - \frac{f^{(k)}(t)}{(k-1)!}(x - t)^{k-1}\right]
-> = \frac{1}{n!}f^{(n+1)}(t)(x - t)^n.
+> \begin{aligned}
+> F'(t) &= f'(t) + \sum_{k=1}^n \left[\frac{f^{(k+1)}(t)}{k!}(x - t)^k - \frac{f^{(k)}(t)}{(k-1)!}(x - t)^{k-1}\right]\\\\
+> &= \frac{1}{n!}f^{(n+1)}(t)(x - t)^n.
+> \end{aligned}
 > $$
 > 根据 $F$ 的构造，有  
 > $$
@@ -507,9 +514,11 @@ R_n(x) = \frac{1}{n!} \int_0^x \frac{(2n+1)!}{n!}(1+t)^n (x - t)^n\,dt,
 $$
 特别地，取 $x = 1$ 就得  
 $$
-\int_0^1 (1 - t^2)^n\,dt = \frac{(n!)^2}{(2n+1)!} R_n(1)
-= \frac{(n!)^2}{(2n+1)!} \left(2^{2n+1} - \sum_{k=0}^n C_{2n+1}^k\right)
-= \frac{(n!)^2}{(2n+1)!} (2^{2n+1} - 2^{2n}) = \frac{(2n)!!}{(2n+1)!!},
+\begin{aligned}
+\int_0^1 (1 - t^2)^n\,dt &= \frac{(n!)^2}{(2n+1)!} R_n(1)\\\\
+&= \frac{(n!)^2}{(2n+1)!} \left(2^{2n+1} - \sum_{k=0}^n C_{2n+1}^k\right)\\\\
+&= \frac{(n!)^2}{(2n+1)!} (2^{2n+1} - 2^{2n}) = \frac{(2n)!!}{(2n+1)!!},
+\end{aligned}
 $$
 其中  
 $$
@@ -659,8 +668,10 @@ $$
 
 > 根据已知条件，$f$ 在 $x_0$ 处有 Taylor 展开：  
 > $$
-> f(x) = f(x_0) + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n + o((x - x_0)^n)
+> \begin{aligned}
+> f(x) = f(x_0) + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n + o((x - x_0)^n)\\\\
 > = f(x_0) + (x - x_0)^n\left[\frac{1}{n!}f^{(n)}(x_0) + o(1)\right].
+> \end{aligned}
 > $$
 > 因此结论的证明都是显然的.
 

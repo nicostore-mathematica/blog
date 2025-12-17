@@ -105,7 +105,10 @@ $$
 >
 > > 当 $f, g$ 连续时，$f + g$, $f - g$ 均连续。并且可以直接验证
 > > $$
-> > \max\{f,g\} = \frac{1}{2}\{(f + g) + |f - g|\},\quad \min\{f,g\} = \frac{1}{2}\{(f + g) - |f - g|\}.
+> > \begin{aligned}
+> > \max\{f,g\} &= \frac{1}{2}\{(f + g) + |f - g|\},\\\\
+> > \min\{f,g\} &= \frac{1}{2}\{(f + g) - |f - g|\}.
+> > \end{aligned}
 > > $$
 > > 于是 $\max\{f,g\}$ 和 $\min\{f,g\}$ 均为连续函数
 >
@@ -353,9 +356,11 @@ $$
 
 > 任给 $\varepsilon > 0$, 取 $\delta = \varepsilon$. 当 $x_1,x_2 \in \mathbb{R}$, 且 $|x_1 - x_2| < \delta$ 时, 有
 > $$
-> |\sin x_1 - \sin x_2| = \left|2\sin\frac{x_1 - x_2}{2}\cos\frac{x_1 + x_2}{2}\right| \\
-> \leq 2\left|\sin\frac{x_1 - x_2}{2}\right| \\
-> \leq |x_1 - x_2| < \varepsilon.
+> \begin{aligned}
+> |\sin x_1 - \sin x_2| &= \left|2\sin\frac{x_1 - x_2}{2}\cos\frac{x_1 + x_2}{2}\right| \\\\
+> &\leq 2\left|\sin\frac{x_1 - x_2}{2}\right| \\\\
+> &\leq |x_1 - x_2| < \varepsilon.
+> \end{aligned}
 > $$
 > 这说明 $\sin x$ 在 $(-\infty,+\infty)$ 中是一致连续的.
 >

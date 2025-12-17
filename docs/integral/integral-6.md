@@ -243,7 +243,7 @@ $$
 > 特别地, 当 $y \to y_0$ 时, $x = g(y) \to g(y_0) = x_0$. 代入 $x = g(y)$, $x_0 = g(y_0)$ 得
 > $$
 > \begin{aligned}
-> y &= y_0 + f'(x_0)(g(y) - g(y_0)) + o(g(y) - g(y_0))\quad (y \to y_0)\\
+> y &= y_0 + f'(x_0)(g(y) - g(y_0)) + o(g(y) - g(y_0))\quad (y \to y_0)\\\\
 > &= y_0 + f'(x_0)(g(y) - g(y_0)) + o(y - y_0)\quad (y \to y_0),
 > \end{aligned}
 > $$

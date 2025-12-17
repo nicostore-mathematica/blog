@@ -342,7 +342,10 @@ $$
 因此有如下的积分估计
 
 $$
-\left| \int_a^b f(x) dx - \int_a^b l(x) dx \right| \leq \frac{1}{2} M \int_a^b (x - a)(b - x) dx = \frac{1}{12} M (b - a)^3.
+\begin{aligned}
+\left| \int_a^b f(x) dx - \int_a^b l(x) dx \right|&\leq \frac{1}{2} M \int_a^b (x - a)(b - x) dx \\\\
+&= \frac{1}{12} M (b - a)^3.
+\end{aligned}
 $$
 
 这也就是 $f$ 在 $[a,b]$ 上的积分用梯形面积逼近的误差公式.
@@ -350,12 +353,17 @@ $$
 我们考虑函数 $f = \ln x$ 在 $[1,n]$ 上的积分.令
 
 $$
-A_n = \int_1^n \ln x \, dx = x \ln x \Big|_1^n - \int_1^n (\ln x)' x dx = n \ln n - n + 1,
+\begin{aligned}
+A_n = \int_1^n \ln x \, dx &= x \ln x \Big|_1^n - \int_1^n (\ln x)' x dx \\\\
+&= n \ln n - n + 1,
+\end{aligned}
 $$
 
 $$
-B_n = \frac{1}{2}(\ln 1 + \ln 2) + \frac{1}{2}(\ln 2 + \ln 3) + \cdots + \frac{1}{2}(\ln(n-1) + \ln n)
-= \ln n! - \frac{1}{2} \ln n,
+\begin{aligned}
+B_n &= \frac{1}{2}(\ln 1 + \ln 2) + \frac{1}{2}(\ln 2 + \ln 3) + \cdots + \frac{1}{2}(\ln(n-1) + \ln n)\\\\
+&= \ln n! - \frac{1}{2} \ln n,
+\end{aligned}
 $$
 
 根据上面的误差估计，并注意 $\ln x$ 为凹函数，则有
@@ -375,7 +383,8 @@ $$
 $$
 \begin{aligned}
 0 < C - C_n &< \frac{1}{12} \sum_{k=n}^\infty \frac{1}{k^2} \\\\
-&< \frac{1}{12} \left[\frac{1}{n^2} + \frac{1}{n(n+1)} + \frac{1}{(n+1)(n+2)} + \cdots \right] = \frac{1}{12} \left(\frac{1}{n^2} + \frac{1}{n}\right).
+&< \frac{1}{12} \left[\frac{1}{n^2} + \frac{1}{n(n+1)} + \frac{1}{(n+1)(n+2)} + \cdots \right] \\\\
+&= \frac{1}{12} \left(\frac{1}{n^2} + \frac{1}{n}\right).
 \end{aligned}
 $$
 
