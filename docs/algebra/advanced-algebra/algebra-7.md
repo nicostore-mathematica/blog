@@ -1,10 +1,371 @@
 ---
-title: Chapter 7 线性变换基本结构
+title: Chapter 7 线性映射结构
 permalink: /algebra/algebra-7/
 createTime: 2025/12/18 21:48:10
 ---
 
-## Part 1 线性映射的像与核
+## Part 1 线性映射与矩阵
+
+线性映射是一个比较抽象的“几何”概念，不便于计算和研究. 我们要将这个抽象的概念“代数化”. 
+
+通过引进线性空间的基，将抽象的线性空间和行向量空间或列向量空间联系了起来. 我们也注意到，可以用矩阵来定义列向量空间的线性映射. 因此自然地，我们希望将线性映射和矩阵联系起来. 
+
+首先注意到如果取定线性空间 $V$ 的一组基，则从 $V$ 到另一个线性空间 $U$ 的线性映射 $\varphi$ 完全被它在基上的作用所决定，即我们有下面的引理. 
+
+**引理1** 设有 $\mathbb{K}$ 上线性空间 $V$ 和 $U$，$\{e_1, e_2, \cdots, e_n\}$ 是 $V$ 的一组基，则
+
+(1) 如有 $V$ 到 $U$ 的线性映射 $\varphi$ 和 $\psi$，对任意的 $i$，都有 $\psi(e_i) = \varphi(e_i)$，则 $\psi = \varphi$；
+
+(2) 给定 $U$ 中 $n$ 个向量 $\beta_1, \beta_2, \cdots, \beta_n$，有且只有一个从 $V$ 到 $U$ 的线性映射 $\varphi$，满足 $\varphi(e_i) = \beta_i\ (i=1,2,\cdots,n)$. 
+
+> (1) 对任意的 $\alpha \in V$，设 $\alpha = \lambda_1 e_1 + \lambda_2 e_2 + \cdots + \lambda_n e_n$，则
+> $$
+> \begin{aligned}
+> \psi(\alpha) &= \psi(\lambda_1 e_1 + \lambda_2 e_2 + \cdots + \lambda_n e_n) \\\\
+> &= \lambda_1 \psi(e_1) + \lambda_2 \psi(e_2) + \cdots + \lambda_n \psi(e_n) \\\\
+> &= \lambda_1 \varphi(e_1) + \lambda_2 \varphi(e_2) + \cdots + \lambda_n \varphi(e_n) \\\\
+> &= \varphi(\lambda_1 e_1 + \lambda_2 e_2 + \cdots + \lambda_n e_n) \\\\
+> &= \varphi(\alpha),
+> \end{aligned}
+> $$
+> 因此 $\psi = \varphi$. 
+>
+> (2) 定义 $V \to U$ 的映射 $\varphi$ 如下：对 $V$ 中任意的 $\alpha = \lambda_1 e_1 + \lambda_2 e_2 + \cdots + \lambda_n e_n$，
+> $$
+> \varphi(\alpha) = \lambda_1 \beta_1 + \lambda_2 \beta_2 + \cdots + \lambda_n \beta_n.
+> $$
+> 容易验证这是 $V$ 到 $U$ 的线性映射，且 $\varphi(e_i) = \beta_i\ (i=1,2,\cdots,n)$. 唯一性由 (1) 即得. 
+
+### · 坐标向量
+
+考虑这样一个问题：设 $V$ 与 $U$ 分别是数域 $\mathbb{K}$ 上 $n$ 维及 $m$ 维线性空间，$\{e_1, e_2, \cdots, e_n\}$ 是 $V$ 的基；$\{f_1, f_2, \cdots, f_m\}$ 是 $U$ 的基；
+
+又设 $\varphi$ 是 $V \to U$ 的线性映射且 $V$ 的基向量在 $\varphi$ 下的像已知. 
+
+若 $V$ 中向量 $\alpha$ 在给定基下的坐标向量是 $(\lambda_1, \lambda_2, \cdots, \lambda_n)'$，问：如何来求 $\varphi(\alpha)$ 在 $U$ 的基 $\{f_1, f_2, \cdots, f_m\}$ 下的坐标向量？
+
+> 设
+> $$
+> \left\{
+> \begin{aligned}
+> \varphi(e_1) &= a_{11}f_1 + a_{12}f_2 + \cdots + a_{1m}f_m, \\\\
+> \varphi(e_2) &= a_{21}f_1 + a_{22}f_2 + \cdots + a_{2m}f_m, \\\\
+> &\cdots\cdots\cdots\cdots \\\\
+> \varphi(e_n) &= a_{n1}f_1 + a_{n2}f_2 + \cdots + a_{nm}f_m.
+> \end{aligned}
+> \right.
+> \tag{1}
+> $$
+> 因为 $\alpha = \lambda_1 e_1 + \lambda_2 e_2 + \cdots + \lambda_n e_n$，故
+> $$
+> \begin{aligned}
+> \varphi(\alpha) &= \lambda_1 \varphi(e_1) + \lambda_2 \varphi(e_2) + \cdots + \lambda_n \varphi(e_n) \\\\
+> &= \lambda_1 \left( \sum_{j=1}^m a_{1j} f_j \right) + \lambda_2 \left( \sum_{j=1}^m a_{2j} f_j \right) + \cdots + \lambda_n \left( \sum_{j=1}^m a_{nj} f_j \right) \\\\
+> &= \left( \sum_{i=1}^n \lambda_i a_{i1} \right) f_1 + \left( \sum_{i=1}^n \lambda_i a_{i2} \right) f_2 + \cdots + \left( \sum_{i=1}^n \lambda_i a_{im} \right) f_m.
+> \end{aligned}
+> $$
+> 这表明 $\varphi(\alpha)$ 在 $\{f_1, f_2, \cdots, f_m\}$ 下的坐标向量 $(\mu_1, \mu_2, \cdots, \mu_m)'$ 为
+> $$
+> \begin{pmatrix}
+> \mu_1 \\ \mu_2 \\ \vdots \\ \mu_m
+> \end{pmatrix}
+> =
+> \begin{pmatrix}
+> a_{11} & a_{21} & \cdots & a_{n1} \\
+> a_{12} & a_{22} & \cdots & a_{n2} \\
+> \vdots & \vdots & & \vdots \\
+> a_{1m} & a_{2m} & \cdots & a_{nm}
+> \end{pmatrix}
+> \begin{pmatrix}
+> \lambda_1 \\ \lambda_2 \\ \vdots \\ \lambda_n
+> \end{pmatrix}.
+> \tag{2}
+> $$
+> 上式中的矩阵 $A = (a_{ji})_{m\times n}$ 是 (1) 式中系数矩阵的转置. 我们称这个矩阵为 $\varphi$ 在已给定基 $\{e_1, e_2, \cdots, e_n\}$ 与 $\{f_1, f_2, \cdots, f_m\}$ 下的表示矩阵，或简称为 $\varphi$ 在给定基下的矩阵. 
+>
+> 注意 (1) 式和 (2) 式是等价的. 我们在上面从 (1) 式推出了 (2) 式. 
+>
+> 反过来，如果 (2) 式成立，即 $V$ 中向量 $\alpha$ 在线性映射 $\varphi$ 的作用下其坐标向量可以用 (2) 式来表示，则由于 $e_1$ 的坐标向量是 $(1,0,\cdots,0)'$，根据 (2) 式得到 $\varphi(e_1)$ 的坐标向量是 $(a_{11}, a_{12}, \cdots, a_{1m})'$（即表示矩阵的第一个列向量）. 
+>
+> 因此
+> $$
+> \varphi(e_1) = a_{11}f_1 + a_{12}f_2 + \cdots + a_{1m}f_m.
+> $$
+> 同理，
+> $$
+> \varphi(e_i) = a_{i1}f_1 + a_{i2}f_2 + \cdots + a_{im}f_m.
+> $$
+> 于是我们得到了 (1) 式. 
+
+### · 线性映射代数化
+
+> 我们在给定基后，由从 $V$ 到 $U$ 的一个线性映射得到了一个 $m \times n$ 矩阵. 反过来，给定一个 $\mathbb{K}$ 上的 $m \times n$ 矩阵 $A = (a_{ji})$，由引理1，我们可以得到 $V \to U$ 的唯一一个线性映射 $\varphi$，使 $\varphi(e_i)$ 适合 (1) 式. 
+>
+> 若记 $\mathcal{L}(V,U)$ 为所有从 $V$ 到 $U$ 的线性映射组成的集合，$M_{m\times n}(\mathbb{K})$ 是 $\mathbb{K}$ 上全体 $m \times n$ 矩阵组成的集合，则我们得到了一个从 $\mathcal{L}(V,U)$ 到 $M_{m\times n}(\mathbb{K})$ 的映射 $T$，对任意的 $\varphi \in \mathcal{L}(V,U)$，$T(\varphi) = A$，其中 $A$ 是 $\varphi$ 在给定基下的表示矩阵. 
+>
+> 前面的分析告诉我们：$T$ 是一个一一对应. 
+>
+> 我们已经知道，$M_{m\times n}(\mathbb{K})$ 在矩阵的加法与数乘下是 $\mathbb{K}$ 上的线性空间，$\mathcal{L}(V,U)$ 也是 $\mathbb{K}$ 上的线性空间. 
+>
+> 这两个线性空间同构吗？即一一对应 $T$ 保持加法运算和数乘运算吗？
+>
+> 先做一些符号上的说明. 假设 $V$ 的基为 $\{e_1, e_2, \cdots, e_n\}$，$U$ 的基为 $\{f_1, f_2, \cdots, f_m\}$. 记 $\eta_1$ 是 $V$ 到 $\mathbb{K}_n$ 的线性同构：若 $\alpha = a_1 e_1 + a_2 e_2 + \cdots + a_n e_n$，则
+> $$
+> \eta_1(\alpha) = (a_1, a_2, \cdots, a_n)'.
+> $$
+> 同样，若 $\beta = b_1 f_1 + b_2 f_2 + \cdots + b_m f_m$，则令
+> $$
+> \eta_2(\beta) = (b_1, b_2, \cdots, b_m)'.
+> $$
+> 设 $\varphi \in \mathcal{L}(V,U)$，$T(\varphi) = A$ 是 $\varphi$ 在给定基下的表示矩阵. 我们约定用 $\varphi_A$ 表示在从 $\mathbb{K}_n \to \mathbb{K}_m$ 的线性映射，即若 $x \in \mathbb{K}_n$，则 $\varphi_A(x) = Ax$. 
+
+**定理1** 设 $T$ 是由上面定义的从 $\mathcal{L}(V,U)$ 到 $M_{m\times n}(\mathbb{K})$ 的映射，则 $T$ 是一个线性同构. 不仅如此，$\eta_2 \varphi = \varphi_A \eta_1$. 
+$$
+\begin{array}{ccc}
+V & \overset{\varphi}\rightarrow & U \\
+\downarrow{\eta_1} & & \downarrow{\eta_2} \\
+\mathbb{K}_n & \overset{\varphi_A}\rightarrow & \mathbb{K}_m
+\end{array}
+$$
+
+> 我们先验证 $T$ 是一个线性映射. 设 $\varphi, \psi$ 是 $V \to U$ 的线性映射且 $T(\varphi) = A = (a_{ji})$，$T(\psi) = B = (b_{ji})$. 对任意的 $e_i\ (i=1,2,\cdots,n)$，有
+> $$
+> \begin{aligned}
+> (\varphi + \psi)(e_i) &= \varphi(e_i) + \psi(e_i) \\
+> &= \sum_{j=1}^m a_{ij} f_j + \sum_{j=1}^m b_{ij} f_j \\
+> &= \sum_{j=1}^m (a_{ij} + b_{ij}) f_j,
+> \end{aligned}
+> $$
+> 因此
+> $$
+> T(\varphi + \psi) = A + B = T(\varphi) + T(\psi).
+> $$
+> 同理，可证明对任意的 $k \in \mathbb{K}$ 及 $\varphi \in \mathcal{L}(V,U)$，有
+> $$
+> T(k\varphi) = kA = kT(\varphi).
+> $$
+> 这表明 $T$ 是线性映射. 因为 $T$ 是一一对应，故 $T$ 是同构. 
+>
+> 要证明图示的交换性，只要对 $V$ 的任一基向量 $e_i$，验证 $\eta_2 \varphi(e_i) = \varphi_A \eta_1(e_i)$ 即可. 设
+> $$
+> A =
+> \begin{pmatrix}
+> a_{11} & a_{21} & \cdots & a_{n1} \\
+> a_{12} & a_{22} & \cdots & a_{n2} \\
+> \vdots & \vdots & & \vdots \\
+> a_{1m} & a_{2m} & \cdots & a_{nm}
+> \end{pmatrix},
+> $$
+> 则 $\varphi(e_i) = a_{i1}f_1 + a_{i2}f_2 + \cdots + a_{im}f_m$，故
+> $$
+> \eta_2 \varphi(e_i) =
+> \begin{pmatrix}
+> a_{i1} \\ a_{i2} \\ \vdots \\ a_{im}
+> \end{pmatrix}.
+> $$
+> 注意到 $\eta_1(e_i)$ 是第 $i$ 个标准单位列向量，因此 $\varphi_A \eta_1(e_i)$ 就等于 $A$ 的第 $i$ 个列向量，即 $\varphi_A \eta_1(e_i) = \eta_2 \varphi(e_i)$. 图的交换性成立. 
+
+### · 矩阵乘法
+
+下面的定理告诉我们，矩阵乘法的几何意义是线性映射的复合. 
+
+**定理2** 同定理1的假设，再设 $W$ 是 $\mathbb{K}$ 上的线性空间，$\{g_1, g_2, \cdots, g_p\}$ 是 $W$ 的一组基，$\psi \in \mathcal{L}(U,W)$，则 $T(\psi \varphi) = T(\psi)T(\varphi)$. 
+
+> 设 $T(\varphi) = A = (a_{ji})_{m\times n}$，$T(\psi) = B = (b_{kj})_{p\times m}$ 分别是 $\varphi, \psi$ 在给定基下的表示矩阵，又 $\alpha = \lambda_1 e_1 + \lambda_2 e_2 + \cdots + \lambda_n e_n$ 是 $V$ 中任一向量，则 $\varphi(\alpha)$ 的坐标向量为
+> $$
+> \begin{pmatrix}
+> \mu_1 \\ \mu_2 \\ \vdots \\ \mu_m
+> \end{pmatrix}
+> = A
+> \begin{pmatrix}
+> \lambda_1 \\ \lambda_2 \\ \vdots \\ \lambda_n
+> \end{pmatrix}.
+> $$
+> $\psi(\varphi(\alpha))$ 的坐标向量为
+> $$
+> \begin{pmatrix}
+> \xi_1 \\ \xi_2 \\ \vdots \\ \xi_p
+> \end{pmatrix}
+> = B
+> \begin{pmatrix}
+> \mu_1 \\ \mu_2 \\ \vdots \\ \mu_m
+> \end{pmatrix},
+> $$
+> 因此
+> $$
+> \begin{pmatrix}
+> \xi_1 \\ \xi_2 \\ \vdots \\ \xi_p
+> \end{pmatrix}
+> = BA
+> \begin{pmatrix}
+> \lambda_1 \\ \lambda_2 \\ \vdots \\ \lambda_n
+> \end{pmatrix}.
+> $$
+> 这表明，
+> $$
+> T(\psi \varphi) = BA = T(\psi)T(\varphi)
+> $$
+
+现在我们考察 $V$ 上全体线性变换 $\mathcal{L}(V)$. 取定 $V$ 的一组基 $\{e_1, e_2, \cdots, e_n\}$. 对任一 $\varphi \in \mathcal{L}(V)$，设
+$$
+\left\{
+\begin{aligned}
+\varphi(e_1) &= a_{11}e_1 + a_{12}e_2 + \cdots + a_{1n}e_n, \\\\
+\varphi(e_2) &= a_{21}e_1 + a_{22}e_2 + \cdots + a_{2n}e_n, \\\\
+&\cdots\cdots\cdots\cdots \\\\
+\varphi(e_n) &= a_{n1}e_1 + a_{n2}e_2 + \cdots + a_{nn}e_n,
+\end{aligned}
+\right.
+\tag{*}
+$$
+则 $\varphi$ 在基 $\{e_1, e_2, \cdots, e_n\}$ 下的表示矩阵定义为 $n$ 阶方阵 $A = (a_{ji})$，即 (*) 式中系数矩阵的转置，记为 $T(\varphi) = A$. 
+
+**定理3**
+
+ $T: \mathcal{L}(V) \to M_n(\mathbb{K})$ 是线性同构，并对任意的 $\varphi, \psi \in \mathcal{L}(V)$，有
+$$
+T(\psi \varphi) = T(\psi)T(\varphi),
+$$
+即 $T$ 保持了乘法. 
+
+> 由定理1和定理2 类似的证明可得结论
+
+**推论1** 上述同构 $T$ 有下列性质：
+
+(1) $T(I_V) = I_n$；
+
+(2) $\varphi$ 是 $V$ 上自同构的充分必要条件是 $T(\varphi)$ 为可逆阵且这时有
+$$
+T(\varphi^{-1}) = T(\varphi)^{-1}.
+$$
+
+> (1) 当 $\varphi = I_V$ 时，(*) 式中的系数矩阵为 $I_n$，其转置也为 $I_n$，因此结论成立. 
+>
+> (2) 由 $\varphi \varphi^{-1} = I_V$，得
+> $$
+> T(\varphi)T(\varphi^{-1}) = T(\varphi \varphi^{-1}) = T(I_V) = I_n.
+> $$
+> 此即 $T(\varphi^{-1}) = T(\varphi)^{-1}$. 充分性也不难验证. 
+
+上面的这些结论在线性映射与矩阵之间建立起了桥梁，它可以使我们能用代数的工具（矩阵）来研究几何的对象（线性映射）. 另一方面，我们也可以用几何的方法来研究代数的对象（矩阵）. 
+
+### · 相似矩阵
+
+我们继续讨论线性变换的问题. 我们知道线性变换的表示矩阵是与线性空间中的基联系在一起的. 一般说来，当基发生变化时，同一个线性变换在不同基下的表示矩阵是不相同的. 
+
+如果我们已经知道了两组基及其过渡矩阵，同一个线性变换在这两组基下的表示矩阵有什么关系呢？
+
+**定理4** 设 $V$ 是数域 $\mathbb{K}$ 上的线性空间，$\varphi \in \mathcal{L}(V)$，又设 $\{e_1, e_2, \cdots, e_n\}$ 及 $\{f_1, f_2, \cdots, f_n\}$ 是 $V$ 的两组基且从 $\{e_1, e_2, \cdots, e_n\}$ 到 $\{f_1, f_2, \cdots, f_n\}$ 的过渡矩阵为 $P$，若 $\varphi$ 在基 $\{e_1, e_2, \cdots, e_n\}$ 下的表示矩阵为 $A$，在基 $\{f_1, f_2, \cdots, f_n\}$ 下的表示矩阵为 $B$，则
+$$
+B = P^{-1}AP.
+$$
+
+> 设 $\alpha$ 是 $V$ 中任一向量且
+> $$
+> \alpha = \lambda_1 e_1 + \lambda_2 e_2 + \cdots + \lambda_n e_n = \mu_1 f_1 + \mu_2 f_2 + \cdots + \mu_n f_n,
+> $$
+> 我们易知
+> $$
+> \begin{pmatrix}
+> \lambda_1 \\ \lambda_2 \\ \vdots \\ \lambda_n
+> \end{pmatrix}
+> = P
+> \begin{pmatrix}
+> \mu_1 \\ \mu_2 \\ \vdots \\ \mu_n
+> \end{pmatrix}.
+> \tag{1}
+> $$
+> 设
+> $$
+> \varphi(\alpha) = \xi_1 e_1 + \xi_2 e_2 + \cdots + \xi_n e_n = \eta_1 f_1 + \eta_2 f_2 + \cdots + \eta_n f_n,
+> \tag{2}
+> $$
+> 则有
+> $$
+> \begin{pmatrix}
+> \xi_1 \\ \xi_2 \\ \vdots \\ \xi_n
+> \end{pmatrix}
+> = A
+> \begin{pmatrix}
+> \lambda_1 \\ \lambda_2 \\ \vdots \\ \lambda_n
+> \end{pmatrix},
+> \quad
+> \begin{pmatrix}
+> \eta_1 \\ \eta_2 \\ \vdots \\ \eta_n
+> \end{pmatrix}
+> = B
+> \begin{pmatrix}
+> \mu_1 \\ \mu_2 \\ \vdots \\ \mu_n
+> \end{pmatrix}.
+> \tag{3}
+> $$
+> 另一方面由 (2) 式有
+> $$
+> \begin{pmatrix}
+> \xi_1 \\ \xi_2 \\ \vdots \\ \xi_n
+> \end{pmatrix}
+> = P
+> \begin{pmatrix}
+> \eta_1 \\ \eta_2 \\ \vdots \\ \eta_n
+> \end{pmatrix}.
+> \tag{4}
+> $$
+> 由 (1) 式、(3) 式、(4) 式得：
+> $$
+> P B
+> \begin{pmatrix}
+> \mu_1 \\ \mu_2 \\ \vdots \\ \mu_n
+> \end{pmatrix}
+> = A P
+> \begin{pmatrix}
+> \mu_1 \\ \mu_2 \\ \vdots \\ \mu_n
+> \end{pmatrix}.
+> \tag{5}
+> $$
+> 但 $\alpha$ 是任意的，即 (5) 式中的 $\mu_i$ 是任意的，因此
+> $$
+> PB = AP,
+> $$
+> 即
+> $$
+> B = P^{-1}AP.\
+> $$
+
+**定义1**
+
+>  若 $A, B$ 为 $n$ 阶方阵且存在 $n$ 阶非异阵 $P$，使
+>  $$
+>  B = P^{-1}AP,
+>  $$
+>  则称 $A$ 与 $B$ 相似，记为 $A \approx B$. 
+
+> [!important]
+>
+> **定理4** 表明：$V$ 上的线性变换 $\varphi$ 在不同基下的表示矩阵是相似的. 
+
+**命题1** 相似关系是一种等价关系，即
+
+(1) $A \approx A$；
+
+(2) 若 $A \approx B$，则 $B \approx A$；
+
+(3) 若 $A \approx B$，$B \approx C$，则 $A \approx C$. 
+
+> (1) $A = I_n^{-1}AI_n$，故 $A \approx A$. 
+>
+> (2) 若 $B = P^{-1}AP$，则 $A = PBP^{-1}$，因此 $B \approx A$. 
+>
+> (3) 若 $B = P^{-1}AP$，$C = Q^{-1}BQ$，则 $C = (PQ)^{-1}A(PQ)$，故 $A \approx C$. 
+
+**定理4** 揭示了同一线性变换在不同基下表示矩阵之间的关系. 
+
+一个十分重要的问题是：对一个线性变换 $\varphi$ 能否找到一组适当的基，使 $\varphi$ 在这组基下的表示矩阵具有简单的形状？
+
+这个问题的代数提法是：给定一个 $n$ 阶矩阵 $A$，能否找到一种方法，使得 $A$ 相似于一个比较简单的矩阵. 
+
+后面会讨论这个问题.
+
+## Part 2 线性映射的像与核
 
 ### · 定义
 
@@ -212,7 +573,7 @@ $$
 > $$
 > 其中 $k_i$ 可取 $\mathbb{K}$ 中的任意数. 
 
-## Part 2 不变子空间
+## Part 3 不变子空间
 
 设 $V$ 是数域 $\mathbb{K}$ 上的线性空间，$\varphi$ 是 $V$ 上的线性变换. 
 

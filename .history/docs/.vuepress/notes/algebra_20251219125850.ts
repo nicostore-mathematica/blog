@@ -6,6 +6,7 @@ export default defineCollection({
 			{
 				text: "代数引论",
 				collapsed: true,
+				link: "/algebra/introduction/",
 				items: [
 					"/algebra/introduction/introduction-1",
 					"/algebra/introduction/introduction-2",
@@ -13,6 +14,7 @@ export default defineCollection({
 			},
 			{
 				text: "高等代数",
+				link: "/algebra/advanced/",
 				collapsed: false,
 				items: [
 					"/algebra/advanced-algebra/algebra-0",
