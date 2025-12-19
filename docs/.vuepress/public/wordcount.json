@@ -150,6 +150,8 @@
     "introduction-2": 6,
     "introduction-1": 1036,
     "advanced": 9,
+    "algebra-7": 3255,
+    "algebra-6": 6229,
     "algebra-5": 4663,
     "algebra-4": 4685,
     "algebra-3": 4346,
@@ -157,7 +159,7 @@
     "algebra-1": 5125,
     "algebra-0": 9451
   },
-  "total": 294933,
-  "lastUpdated": "2025-12-18T07:12:29.041Z",
-  "fileCount": 126
+  "total": 304417,
+  "lastUpdated": "2025-12-19T04:31:56.612Z",
+  "fileCount": 128
 }
