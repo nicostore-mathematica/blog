@@ -15,23 +15,31 @@ createTime: 2025/12/17 23:08:15
 >
 > 则称 $x^0$ 为 $f$ 的极大（小）值点，$f(x^0)$ 为 $f$ 的极大（小）值. 当上式中 “$\ge$”（“$\le$”）换成 “$>$”（“$<$”）时，相应地把 $x^0$ 称为严格极值点，$f(x^0)$ 为严格极值. 
 
-**命题1 (达到极值的必要条件)**. 设 $x^0$ 为 $f$ 的极值点，如果 $x^0$ 为 $A$ 的内点，且 $f$ 在 $x^0$ 处存在一阶偏导数，则
+**命题1 (达到极值的必要条件)**. 
 
-$$
-f'_{x_1}(x^0) = f'_{x_2}(x^0) = \cdots = f'_{x_n}(x^0) = 0.
-$$
+> 设 $x^0$ 为 $f$ 的极值点，如果 $x^0$ 为 $A$ 的内点，且 $f$ 在 $x^0$ 处存在一阶偏导数，则
+> $$
+> f'_{x_1}(x^0) = f'_{x_2}(x^0) = \cdots = f'_{x_n}(x^0) = 0.
+> $$
+>
+
+/proof/
 
 > 以 $f'_{x_1}$ 为例，考虑一元函数 $\varphi(x) = f(x, x_2^0, \cdots, x_n^0)$，则 $\varphi$ 可导，且以 $x_1^0$ 为极值点. 
 >
 > 由 Fermat 定理知 $\varphi'(x_1^0) = 0$，即 $f'_{x_1}(x^0) = 0$. 
 
-**定理2**. 设 $U$ 为 $\mathbb{R}^n$ 中开集，$f: U \to \mathbb{R}$ 具有二阶连续偏导数，$x^0$ 为 $f$ 的驻点. 则
+**定理2**. 
 
-(1) 如果 $x^0$ 为 $f$ 的极小（大）值点，则 $\operatorname{Hess}(f)(x^0)$ 为半正（负）定方阵；
+> 设 $U$ 为 $\mathbb{R}^n$ 中开集，$f: U \to \mathbb{R}$ 具有二阶连续偏导数，$x^0$ 为 $f$ 的驻点. 则
+>
+> (1) 如果 $x^0$ 为 $f$ 的极小（大）值点，则 $\operatorname{Hess}(f)(x^0)$ 为半正（负）定方阵；
+>
+> (2) 如果 $\operatorname{Hess}(f)(x^0)$ 为正（负）定方阵，则 $x^0$ 为 $f$ 的严格极小（大）值点；
+>
+> (3) 如果 $\operatorname{Hess}(f)(x^0)$ 为不定方阵，则 $x^0$ 不是 $f$ 的极值点. 
 
-(2) 如果 $\operatorname{Hess}(f)(x^0)$ 为正（负）定方阵，则 $x^0$ 为 $f$ 的严格极小（大）值点；
-
-(3) 如果 $\operatorname{Hess}(f)(x^0)$ 为不定方阵，则 $x^0$ 不是 $f$ 的极值点. 
+/proof/
 
 > 证明的思想是在 $x^0$ 附近利用 $f$ 的 Taylor 展开：
 >
@@ -118,13 +126,17 @@ $$
 >
 > 令 $y = -x$，则 $f(x, y) = 2x^4 > 0$，这说明 $m_0$ 不是极值点. 
 
-**最小二乘法**：设 $(x_1, y_1), \cdots, (x_n, y_n)$ 为平面 $\mathbb{R}^2$ 上 $n$ 个点，求一条直线 $y = ax + b$，使得
+**最小二乘法**：
 
-$$
-F(a, b) = \sum_{i=1}^n (ax_i + b - y_i)^2
-$$
+> 设 $(x_1, y_1), \cdots, (x_n, y_n)$ 为平面 $\mathbb{R}^2$ 上 $n$ 个点，求一条直线 $y = ax + b$，使得
+>
+> $$
+> F(a, b) = \sum_{i=1}^n (ax_i + b - y_i)^2
+> $$
+>
+> 最小. 
 
-最小. 
+/proof/
 
 > 函数 $F(a, b)$ 是关于 $(a, b)$ 的光滑函数. 先求驻点：
 >
@@ -176,14 +188,17 @@ $$
 >
 > 这也就是所求直线方程. 
 
-**引理3**. 设 $f: \mathbb{R}^n \to \mathbb{R}$ 为连续函数，则
+**引理3**.
 
-(1) 如果 $\displaystyle\lim_{\|x\| \to \infty} f(x) = -\infty$，则 $f$ 在 $\mathbb{R}^n$ 上达到最大值；
+>  设 $f: \mathbb{R}^n \to \mathbb{R}$ 为连续函数，则
+>
+> (1) 如果 $\displaystyle\lim_{\|x\| \to \infty} f(x) = -\infty$，则 $f$ 在 $\mathbb{R}^n$ 上达到最大值；
+>
+> (2) 如果 $\displaystyle\lim_{\|x\| \to \infty} f(x) = +\infty$，则 $f$ 在 $\mathbb{R}^n$ 上达到最小值. 
 
-(2) 如果 $\displaystyle\lim_{\|x\| \to \infty} f(x) = +\infty$，则 $f$ 在 $\mathbb{R}^n$ 上达到最小值. 
+/proof/
 
 > 以 (1) 为例，取 $x^0 \in \mathbb{R}^n$，由已知条件，存在 $R > 0$ 使得 $\|x\| \ge R$ 时，
->
 > $$
 > f(x) < f(x^0).
 > $$
@@ -212,15 +227,18 @@ $f$ 在 $A$ 上的极值称为条件极值，方程 $\Phi(x) = 0$ 称为约束�
 >
 > 利用隐（函数）映射定理，我们可以更准确地将上述想法总结为下面的结果. 
 
-**定理1 (Lagrange 乘数法)**. 设 $f \in C^1(U)$，$x^0 \in A$ 为 $f$ 的条件极值点. 如果 $J\Phi(x^0)$ 的秩为 $m$，则存在 $\lambda \in \mathbb{R}^m$，使得
+**定理1 (Lagrange 乘数法)**. 
 
-$$
-Jf(x^0) - \lambda \cdot J\Phi(x^0) = 0. \tag{*}
-$$
+> 设 $f \in C^1(U)$，$x^0 \in A$ 为 $f$ 的条件极值点. 如果 $J\Phi(x^0)$ 的秩为 $m$，则存在 $\lambda \in \mathbb{R}^m$，使得
+> $$
+> Jf(x^0) - \lambda \cdot J\Phi(x^0) = 0. \tag{*}
+> $$
+>
+
+/proof/
 
 > 不妨设 $\Phi = (\varphi_1, \cdots, \varphi_m)$，且
->
-> $$
+>$$
 > \det
 > \begin{pmatrix}
 > \dfrac{\partial \varphi_1}{\partial x_1} & \cdots & \dfrac{\partial \varphi_1}{\partial x_m} \\\\
@@ -229,50 +247,50 @@ $$
 > \end{pmatrix}
 > (x^0) \ne 0.
 > $$
->
-> 由隐映射定理，存在点 $z^0 = (x_{m+1}^0, \cdots, x_n^0)$ 的开邻域 $V$ 以及 $C^1$ 映射 $g: V \to \mathbb{R}^m$ 使得
->
-> $$
+> 
+>由隐映射定理，存在点 $z^0 = (x_{m+1}^0, \cdots, x_n^0)$ 的开邻域 $V$ 以及 $C^1$ 映射 $g: V \to \mathbb{R}^m$ 使得
+> 
+>$$
 > y^0 = g(z^0), \quad \Phi(g(z), z) = 0, \quad \forall\ z \in V,
 > $$
->
-> 其中 $y^0 = (x_1^0, \cdots, x_n^0)$，$y = (x_1, \cdots, x_m)$，$z = (x_{m+1}, \cdots, x_n)$，$x = (y, z) \in U$. 在 $x^0 = (y^0, z^0)$ 处求导，有
->
-> $$
+> 
+>其中 $y^0 = (x_1^0, \cdots, x_n^0)$，$y = (x_1, \cdots, x_m)$，$z = (x_{m+1}, \cdots, x_n)$，$x = (y, z) \in U$. 在 $x^0 = (y^0, z^0)$ 处求导，有
+> 
+>$$
 > Jg(z^0) = -(J_y\Phi)^{-1}(x^0) \cdot J_z\Phi(x^0). \tag{1}
 > $$
->
-> 由于 $x^0$ 为 $f$ 的条件极值点，故 $z^0$ 为 $f(g(z), z)$ 的极值点（驻点），在 $z_0$ 处求导，得
->
-> $$
+> 
+>由于 $x^0$ 为 $f$ 的条件极值点，故 $z^0$ 为 $f(g(z), z)$ 的极值点（驻点），在 $z_0$ 处求导，得
+> 
+>$$
 > J_yf(x^0) \cdot Jg(z^0) + J_zf(x^0) = 0. \tag{2}
 > $$
->
-> 将 (1) 式代入 (2)，得
->
-> $$
+> 
+>将 (1) 式代入 (2)，得
+> 
+>$$
 > J_zf(x^0) = J_yf(x^0) \cdot (J_y\Phi)^{-1}(x^0) \cdot J_z\Phi(x^0). \tag{3}
 > $$
->
-> 记 $\lambda = J_yf(x^0) \cdot (J_y\Phi)^{-1}(x^0)$，即
->
-> $$
+> 
+>记 $\lambda = J_yf(x^0) \cdot (J_y\Phi)^{-1}(x^0)$，即
+> 
+>$$
 > J_yf(x^0) = \lambda \cdot J_y\Phi(x^0). \tag{4}
 > $$
->
-> (3) 式可用 $\lambda$ 改写为
->
-> $$
+> 
+>(3) 式可用 $\lambda$ 改写为
+> 
+>$$
 > J_zf(x^0) = \lambda \cdot J_z\Phi(x^0).
 > $$
->
-> (4) 和 (5) 式结合起来就得到
->
-> $$
+> 
+>(4) 和 (5) 式结合起来就得到
+> 
+>$$
 > Jf(x^0) - \lambda \cdot J\Phi(x^0) = 0.
 > $$
->
-> 这就证明了定理. 
+> 
+>这就证明了定理. 
 
 > [!important]
 >
@@ -386,45 +404,48 @@ $$
 >
 > 为有界闭集，故 $Q$ 在 $S^{n-1}$ 可以取到最小值和最大值. 
 
-**引理1**. $Q(x)$ 在 $S^{n-1}$ 上的最小值必为线性映射 $A$ 的特征值. 
+**引理1**.
+
+> $Q(x)$ 在 $S^{n-1}$ 上的最小值必为线性映射 $A$ 的特征值. 
+
+/proof/
 
 > 记 $\lambda_0 = \min_{S^{n-1}} \{Q(x)\}$，则存在 $x^0 \in S^{n-1}$，使得
->
-> $$
+>$$
 > \lambda_0 = Q(x^0).
 > $$
->
-> 因此有
->
-> $$
+> 
+>因此有
+> 
+>$$
 > Q(x) \ge \lambda_0 \cdot \|x\|^2, \quad \forall\ x \in \mathbb{R}^n.
 > $$
->
-> 特别地，对任意 $y \in \mathbb{R}^n$, $t \in \mathbb{R}$，有
->
-> $$
+> 
+>特别地，对任意 $y \in \mathbb{R}^n$, $t \in \mathbb{R}$，有
+> 
+>$$
 > \varphi(t) = Q(x^0 + ty) - \lambda_0 \|x^0 + ty\|^2 \ge 0.
 > $$
->
-> $\varphi(t)$ 关于 $t$ 为光滑函数，$t = 0$ 时取到最小值 $0$，故 $\varphi'(0) = 0$，简单的计算表明
->
-> $$
+> 
+>$\varphi(t)$ 关于 $t$ 为光滑函数，$t = 0$ 时取到最小值 $0$，故 $\varphi'(0) = 0$，简单的计算表明
+> 
+>$$
 > \langle y, Ax^0 \rangle + \langle x^0, Ay \rangle - \lambda_0 (\langle x^0, y \rangle + \langle y, x^0 \rangle) = 0.
 > $$
->
-> 由 $A$ 为对称方阵得
->
-> $$
+> 
+>由 $A$ 为对称方阵得
+> 
+>$$
 > \langle y, Ax^0 - \lambda_0 x^0 \rangle = 0.
 > $$
->
-> 取 $y = Ax^0 - \lambda_0 x^0$，由内积的正定性，有
->
-> $$
+> 
+>取 $y = Ax^0 - \lambda_0 x^0$，由内积的正定性，有
+> 
+>$$
 > Ax^0 - \lambda_0 x^0 = 0.
 > $$
->
-> 即 $\lambda_0$ 为特征值. 
+> 
+>即 $\lambda_0$ 为特征值. 
 
 这个引理的证明可以推广如下：设 $V \subset \mathbb{R}^n$ 为子向量空间，如果 $AV \subset V$，则称 $V$ 为 $A$ 的一个不变子空间. 令
 
@@ -460,15 +481,19 @@ $$
 
 从而有
 
-**引理2**. 设 $A$ 为 $n$ 阶实对称方阵，则
+**引理2**. 
 
-(1) $A$ 的特征值全为实数；
-
-(2) $A$ 为正定矩阵 $\iff$ 其特征值都是正实数. 
-
-> (1) 以及 (2) 的 “$\Rightarrow$” 部分已证.   
-> (2) 的 “$\Leftarrow$”：如果 $A$ 的特征值 $\lambda_0, \cdots, \lambda_r$ 均为正数，则 $\mathbb{R}^n$ 有正交分解
+> 设 $A$ 为 $n$ 阶实对称方阵，则
 >
+> (1) $A$ 的特征值全为实数；
+>
+> (2) $A$ 为正定矩阵 $\iff$ 其特征值都是正实数. 
+
+/proof/
+
+> (1) 以及 (2) 的 “$\Rightarrow$” 部分已证. 
+> 
+>(2) 的 “$\Leftarrow$”：如果 $A$ 的特征值 $\lambda_0, \cdots, \lambda_r$ 均为正数，则 $\mathbb{R}^n$ 有正交分解
 > $$
 > \mathbb{R}^n = V(\lambda_0) \oplus V(\lambda_1) \oplus \cdots \oplus V(\lambda_r).
 > $$
@@ -487,22 +512,30 @@ $$
 >
 > 即 $A$ 是正定方阵. 或者这样证：由于特征值都大于零，因而最小特征值也大于零，由引理1的证明即知 $A$ 是正定的. 
 
-**引理3**. 设 $A$ 为 $n$ 阶实对称方阵，其正特征值个数（含重数）为 $k$，如果 $V$ 为 $\mathbb{R}^n$ 的子向量空间，且对任意 $x \in V$ ($x \ne 0$)，均有 $Q(x) > 0$，则 $\dim V \le k$. 
+**引理3**. 
+
+> 设 $A$ 为 $n$ 阶实对称方阵，其正特征值个数（含重数）为 $k$，如果 $V$ 为 $\mathbb{R}^n$ 的子向量空间，且对任意 $x \in V$ ($x \ne 0$)，均有 $Q(x) > 0$，则 $\dim V \le k$. 
+
+/proof/
 
 > （反证法）设 $\dim V > k$，记 $A$ 的正特征值对应的特征子空间的直和为 $V_0$，则 $\dim V_0 = k$. 考虑正交投影
->
-> $$
+>$$
 > P: V \to V_0,
 > $$
->
-> 因为 $\dim V > \dim V_0$，故 $\ker P \ne \{0\}$. 从而存在 $x \in V$ ($x \ne 0$) 使得 $x \perp V_0$. 由引理2 的证明易见，此时必有 $Q(x) \le 0$，这就导出了矛盾. 
+> 
+>因为 $\dim V > \dim V_0$，故 $\ker P \ne \{0\}$. 从而存在 $x \in V$ ($x \ne 0$) 使得 $x \perp V_0$. 由引理2 的证明易见，此时必有 $Q(x) \le 0$，这就导出了矛盾. 
 
 现在我们就得到了矩阵正定性的如下判别法：
 
-**定理4**. $A = (a_{ij})_{n\times n}$ 为正定方阵
-$$
-\iff \det(a_{ij})_{\substack{1 \le i \le k \\ 1 \le j \le k}} > 0,\ \forall\ 1 \le k \le n
-$$
+**定理4**.
+
+>  $A = (a_{ij})_{n\times n}$ 为正定方阵
+> $$
+> \iff \det(a_{ij})_{\substack{1 \le i \le k \\ 1 \le j \le k}} > 0,\ \forall\ 1 \le k \le n
+> $$
+>
+
+/proof/
 
 > “$\Rightarrow$” 如果 $A$ 正定，则显然 $(a_{ij})_{\substack{1 \le i \le k \\ 1 \le j \le k}}$ 正定，其特征值全为正实数，故行列式为正（行列式为特征值之积）. 
 >
@@ -547,7 +580,11 @@ $$
 
 特别地，我们就得到如下函数独立性的一个判别方法. 
 
-**定理5**. 设 $m \le n$, $\{f_i\}$ 如上. 如果 $\operatorname{Rank} JF(x) = m$, $\forall\ x \in U$，则 $\{f_i\}$ 彼此独立；特别地，当 $m = n$ 且 $\det JF(x) \ne 0$ $\forall\ x \in U$ 时，$\{f_i\}$ 彼此独立. 
+**定理5**. 
+
+> 设 $m \le n$, $\{f_i\}$ 如上. 如果 $\operatorname{Rank} JF(x) = m$, $\forall\ x \in U$，则 $\{f_i\}$ 彼此独立；
+>
+> 特别地，当 $m = n$ 且 $\det JF(x) \ne 0$ $\forall\ x \in U$ 时，$\{f_i\}$ 彼此独立. 
 
 > [!important]
 >
@@ -605,7 +642,9 @@ $$
 >
 > 利用上述讨论，我们立即得到如下推论. 
 
-**推论6**. 设 $\{f_i\}$ 以及 $F$ 如上. 如果 $JF$ 在 $x^0 \in U$ 达到最大秩 $l$，则它的 $l$ 个分量在 $x^0$ 附近是彼此独立的，而其余的分量均和这 $l$ 个分量函数相关. 
+**推论6**. 
+
+> 设 $\{f_i\}$ 以及 $F$ 如上. 如果 $JF$ 在 $x^0 \in U$ 达到最大秩 $l$，则它的 $l$ 个分量在 $x^0$ 附近是彼此独立的，而其余的分量均和这 $l$ 个分量函数相关. 
 
 
 
