@@ -41,7 +41,7 @@ export default defineThemeConfig({
     description: 'This is soda\'s personal <br/> diary \& notebook.',
     // circle: true,
     location: 'Antarctica',
-    organization: '七域-烤柿加油',
+    organization: '七域-考柿加油',
   },
 
   social: [
