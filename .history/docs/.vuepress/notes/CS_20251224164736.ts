@@ -15,7 +15,7 @@ export default defineCollection({
 			text: "Python",
 			collapsed: false,
 			items: [
-				"/CS/Python/python-1",
+				"/CS/Python/python-0",
 			],
 		},
 		// {

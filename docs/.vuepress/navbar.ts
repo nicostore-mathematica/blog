@@ -26,8 +26,9 @@ export const navbar = defineNavbarConfig([
 		text: "笔记",
 		items: [
 			{ text: "数学分析", link: "/integral/README.md" },
-			{ text: "代数基础", link: "/algebra/" },
+			{ text: "代数学基础", link: "/algebra/" },
 			{ text: "应用数学", link: "/applied-math/README.md" },
+			{ text: "计算机科学", link: "/CS/README.md" },
 			{ text: "基础物理", link: "/physics/README.md" },
 			{ text: "光学", link: "/optics/README.md" },
 			{ text: "数学物理方法", link: "/complex/README.md" },

@@ -1,6 +1,7 @@
 ---
 title: 云台
 permalink: /mark/mark-2/
+createTime: 2025/12/23 22:16:40
 ---
 
 这是对双轴云台控制任务代码的复盘。

@@ -8,14 +8,14 @@ export default defineCollection({
 			text: "C++",
 			collapsed: false,
 			items: [
-				"/CS/C-primer-plus/lesson-1",
+				"cpp-1",
 			],
 		},
 		{
 			text: "Python",
 			collapsed: false,
 			items: [
-				"/CS/Python/python-1",
+				"python-0",
 			],
 		},
 		// {
@@ -36,7 +36,7 @@ export default defineCollection({
 			text: "数据结构",
 			collapsed: false,
 			items: [
-				"/CS/Data-Structures/lesson-1",
+				"structure-1",
 			],
 		},
 	],

@@ -8,35 +8,28 @@ export default defineCollection({
 			text: "C++",
 			collapsed: false,
 			items: [
-				"/CS/C-primer-plus/lesson-1",
+				"cpp-1",
 			],
 		},
 		{
-			text: "Python",
+			text: "算法",
 			collapsed: false,
 			items: [
-				"/CS/Python/python-1",
+				"algorithm-1",
 			],
 		},
-		// {
-		// 	text: "算法",
-		// 	collapsed: false,
-		// 	items: [
-		// 		"algorithm-1",
-		// 	],
-		// },
-		// {
-		// 	text: "计算机网络",
-		// 	collapsed: false,
-		// 	items: [
-		// 		"network-1",
-		// 	],
-		// },
+		{
+			text: "计算机网络",
+			collapsed: false,
+			items: [
+				"network-1",
+			],
+		},
 		{
 			text: "数据结构",
 			collapsed: false,
 			items: [
-				"/CS/Data-Structures/lesson-1",
+				"structure-1",
 			],
 		},
 	],
