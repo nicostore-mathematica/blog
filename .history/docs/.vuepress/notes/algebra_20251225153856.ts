@@ -30,5 +30,5 @@ export default defineCollection({
 			},
 			],
 	type: "doc",
-	title: "代数学基础"
+	title: "代数基础"
 });

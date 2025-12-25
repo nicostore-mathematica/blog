@@ -1,13 +1,11 @@
 {
   "timeline": 184,
-  "README": 237,
+  "README": 230,
   "random": 71,
   "notes": 115,
   "links": 418,
-  "about": 205,
+  "about": 212,
   "RoboMaster": {
-    "RoboMaster-2": 1902,
-    "RoboMaster-1": 2327,
     "index": 791
   },
   "physics": {
@@ -38,8 +36,9 @@
     "integral-5": 4718,
     "integral-4": 4321,
     "integral-3": 4234,
+    "integral-20": 1699,
     "integral-2": 5520,
-    "integral-19": 1546,
+    "integral-19": 7314,
     "integral-18": 4662,
     "integral-17": 4174,
     "integral-16": 6847,
@@ -145,7 +144,7 @@
     "chapter-1": 6794
   },
   "algebra": {
-    "index": 110,
+    "index": 112,
     "matrix": 9,
     "matrix-1": 6,
     "introduction-2": 6,
@@ -162,7 +161,7 @@
     "algebra-1": 5125,
     "algebra-0": 9451
   },
-  "total": 299020,
-  "lastUpdated": "2025-12-24T08:50:24.419Z",
-  "fileCount": 131
+  "total": 302260,
+  "lastUpdated": "2025-12-25T08:49:24.908Z",
+  "fileCount": 130
 }

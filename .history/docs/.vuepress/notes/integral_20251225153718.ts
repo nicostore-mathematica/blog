@@ -4,9 +4,11 @@ export default defineCollection({
 	dir: "integral",
 	sidebar: [
 		{
-			text: "微积分",
+			text: "数学分析",
 			collapsed: false,
+			link: "/integral/",	
 			items: [
+				"integral-0",
 				"integral-1",
 				"integral-2",
 				"integral-3",
@@ -17,9 +19,20 @@ export default defineCollection({
 				"integral-8",
 				"integral-9",
 				"integral-10",
+				"integral-11",
+				"integral-12",
+				"integral-13",
+				"integral-14",
+				"integral-15",
+				"integral-16",
+				"integral-17",
+				"integral-18",
+				"integral-19",
+				"integral-20",
+
 			],
 		},
 	],
 	type: "doc",
-	title: "微积分"
+	title: "数学分析"
 });
