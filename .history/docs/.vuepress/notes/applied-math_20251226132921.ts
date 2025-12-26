@@ -19,16 +19,16 @@ export default defineCollection({
 			items: [
 				"/applied-math/vector-1",
 			],
-		},
-		{
-			text: "数值分析",
-			collapsed: false,
-			link: "/applied-math/numerical/",
-			items: [
-				"/applied-math/numerical/numerical-1",
-				"/applied-math/numerical/numerical-2",
-			],
-		},
+				},
+				{
+					text: "数值分析",
+					collapsed: false,
+					link: "/applied-math/numerical/",
+					items: [
+						"/applied-math/numerical/numerical-1",
+						"/applied-math/numerical/numerical-2",
+					],
+				},
 	],
 	type: "doc",
 	title: "应用数学"

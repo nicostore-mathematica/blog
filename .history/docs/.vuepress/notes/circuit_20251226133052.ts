@@ -30,7 +30,7 @@ export default defineCollection({
 				],
 			},
 			{
-				text: "数字电路",
+				text: "电路设计",
 				collapsed: false,
 				link: "/circuit/Digital/",
 				items: [
