@@ -16,7 +16,7 @@ export default defineCollection({
 			},
 			{
 				text: "模拟电路",
-				collapsed: true,
+				collapsed: false,
 				link: "/circuit/electronic/",
 				items: [
 					"/circuit/electronic/electronic-1",
