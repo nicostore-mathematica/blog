@@ -55,7 +55,7 @@ export default defineCollection({
 					"/circuit/Digital/Digital-8",
 					"/circuit/Digital/Digital-9",
 				]
-			},
+			}
 	],
 	type: "doc",
 	title: "电路"

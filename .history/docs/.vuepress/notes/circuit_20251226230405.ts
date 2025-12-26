@@ -6,12 +6,12 @@ export default defineCollection({
 			{
 				text: "电路理论",
 				collapsed: true,
-				link: "/circuit/Theory/",
+				link: "/circuit/theory/",
 				items: [
-					"/circuit/Theory/circuit-1",
-					"/circuit/Theory/circuit-2",
-					"/circuit/Theory/circuit-3",
-					"/circuit/Theory/circuit-4",
+					"/circuit/theory/circuit-1",
+					"/circuit/theory/circuit-2",
+					"/circuit/theory/circuit-3",
+					"/circuit/theory/circuit-4",
 				],
 			},
 			{
@@ -54,8 +54,10 @@ export default defineCollection({
 					"/circuit/Digital/Digital-7",
 					"/circuit/Digital/Digital-8",
 					"/circuit/Digital/Digital-9",
+					"/circuit/Digital/Digital-10",
+					"/circuit/Digital/Digital-11",
 				]
-			},
+			}
 	],
 	type: "doc",
 	title: "电路"
