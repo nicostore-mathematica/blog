@@ -84,7 +84,7 @@
     "circuit-3": 2461,
     "circuit-2": 4103,
     "circuit-1": 6092,
-    "power-2": 5,
+    "power-2": 6,
     "electronic": 9,
     "electronic-9": 1241,
     "electronic-8": 5381,
@@ -184,7 +184,7 @@
     "algebra-1": 5125,
     "algebra-0": 9451
   },
-  "total": 305860,
-  "lastUpdated": "2025-12-27T02:44:36.999Z",
+  "total": 305861,
+  "lastUpdated": "2025-12-27T02:51:49.150Z",
   "fileCount": 153
 }

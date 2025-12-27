@@ -61,7 +61,7 @@ export default defineCollection({
 				collapsed: true,
 				link: "/circuit/power/",
 				items: [
-					"/circuit/Power-Electronics/power-1",
+					"/circuit/power/power-1",
 				]
 			}
 	],
