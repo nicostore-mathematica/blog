@@ -147,6 +147,22 @@ blockquote::before {
     --vp-sidebar-width: 245px;
 }
 
+/* 针对移动设备的字体配置 */
+@media (max-width: 768px) {
+    :root {
+        --vp-font-family-base: "LXGW WenKai", "LXGW Bright", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+    
+    :root:where(:lang(zh)),
+    :root:where(:lang(zh-CN)) {
+        --vp-font-family-base: "LXGW WenKai", "LXGW Bright", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+    
+    html {
+        font-family: "LXGW WenKai", "LXGW Bright", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+}
+
 @media (min-width: 1280px) {
     .content[data-v-d64b92aa] {
         padding: 0 28px 128px;
