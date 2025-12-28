@@ -108,9 +108,11 @@ BTJ 的内部原理如下：
 >
 > 三个电流的比例分配关系：
 > $$
-> i_E=i_B+i_C\\
-> i_C=\beta i_B\\
-> i_B:i_C:i_E=1:\beta :(1+\beta)
+> \begin{aligned}
+> &i_E=i_B+i_C\\\\
+> &i_C=\beta i_B\\\\
+> &i_B:i_C:i_E=1:\beta :(1+\beta)
+> \end{aligned}
 > $$
 > $\beta$ 称为（共射）电流放大系数
 
@@ -126,7 +128,7 @@ BTJ 的内部原理如下：
 > i_C = \beta i_B
 > \quad
 > \begin{cases}
-> I_C = \bar{\beta} I_B \\
+> I_C = \bar{\beta} I_B \\\\
 > i_c = \beta i_b \quad (\Delta i_c = \beta \Delta i_b)
 > \end{cases}
 > $$

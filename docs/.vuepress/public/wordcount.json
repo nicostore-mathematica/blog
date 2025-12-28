@@ -37,7 +37,7 @@
     "integral-4": 4321,
     "integral-3": 4234,
     "integral-22": 10,
-    "integral-21": 12,
+    "integral-21": 6748,
     "integral-20": 5059,
     "integral-2": 5520,
     "integral-19": 7314,
@@ -81,11 +81,12 @@
     "index": 208,
     "theory": 9,
     "circuit-4": 10,
-    "circuit-3": 2461,
+    "circuit-3": 2457,
     "circuit-2": 4103,
     "circuit-1": 6092,
-    "power-2": 6,
-    "electronic": 9,
+    "power": 11,
+    "power-1": 6,
+    "electronic": 81,
     "electronic-9": 1241,
     "electronic-8": 5381,
     "electronic-7": 13,
@@ -93,7 +94,7 @@
     "electronic-5": 2177,
     "electronic-4": 604,
     "electronic-3": 2078,
-    "electronic-2": 2678,
+    "electronic-2": 2682,
     "electronic-19": 12,
     "electronic-18": 11,
     "electronic-17": 12,
@@ -104,7 +105,7 @@
     "electronic-12": 10,
     "electronic-11": 741,
     "electronic-10": 442,
-    "electronic-1": 2949,
+    "electronic-1": 2871,
     "Digital": 9,
     "Digital-9": 12,
     "Digital-8": 10,
@@ -114,7 +115,7 @@
     "Digital-4": 12,
     "Digital-3": 9,
     "Digital-2": 12,
-    "Digital-1": 11
+    "Digital-1": 17
   },
   "weekly": {
     "weekly-8": 377,
@@ -133,7 +134,7 @@
     "anniversary-1": 1541,
     "article-4": 3551,
     "article-3": 4312,
-    "article-2": 3947,
+    "article-2": 3869,
     "article-1": 1439
   },
   "mark": {
@@ -184,7 +185,7 @@
     "algebra-1": 5125,
     "algebra-0": 9451
   },
-  "total": 305861,
-  "lastUpdated": "2025-12-27T02:51:49.150Z",
-  "fileCount": 153
+  "total": 312530,
+  "lastUpdated": "2025-12-28T03:36:36.291Z",
+  "fileCount": 154
 }

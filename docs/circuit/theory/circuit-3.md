@@ -4,7 +4,7 @@ createTime: 2025/09/17 19:34:31
 permalink: /circuit/circuit-3/
 ---
 
-## Part 1 一阶电路时域分析
+## Part 1 一阶电路
 
 ### · 动态电路
 

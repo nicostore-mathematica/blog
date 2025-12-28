@@ -29,7 +29,7 @@ export default defineCollection({
 				"integral-18",
 				"integral-19",
 				"integral-20",
-
+				"integral-21",
 			],
 		},
 	],
