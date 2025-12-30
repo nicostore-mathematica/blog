@@ -36,8 +36,10 @@
     "integral-5": 4718,
     "integral-4": 4321,
     "integral-3": 4234,
-    "integral-22": 10,
-    "integral-21": 6748,
+    "integral-24": 5,
+    "integral-23": 9,
+    "integral-22": 9,
+    "integral-21": 6756,
     "integral-20": 5059,
     "integral-2": 5520,
     "integral-19": 7314,
@@ -46,7 +48,7 @@
     "integral-16": 6847,
     "integral-15": 4910,
     "integral-14": 5859,
-    "integral-13": 9,
+    "integral-13": 5306,
     "integral-12": 5856,
     "integral-11": 7305,
     "integral-10": 3293,
@@ -185,7 +187,7 @@
     "algebra-1": 5125,
     "algebra-0": 9451
   },
-  "total": 312530,
-  "lastUpdated": "2025-12-28T03:36:36.291Z",
-  "fileCount": 154
+  "total": 317848,
+  "lastUpdated": "2025-12-30T16:11:00.666Z",
+  "fileCount": 156
 }

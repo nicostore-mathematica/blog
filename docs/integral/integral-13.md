@@ -360,8 +360,10 @@ $$
 >
 > 此时 Fourier 系数为  
 > $$
-> b_k = 0,\quad a_0 = \frac{2}{\pi} \int_0^\pi x\, dx = \pi,
-> \quad a_k = \frac{2}{\pi} \int_0^\pi x \cos kx\, dx = \frac{2}{k^2 \pi} [(-1)^k - 1].
+> \begin{aligned}
+> &b_k = 0,\quad a_0 = \frac{2}{\pi} \int_0^\pi x\, dx = \pi,\\\\
+> &a_k = \frac{2}{\pi} \int_0^\pi x \cos kx\, dx = \frac{2}{k^2 \pi} [(-1)^k - 1].
+> \end{aligned}
 > $$
 >
 > 因此  
@@ -449,7 +451,8 @@ $$
 > 其次就有  
 > $$
 > \begin{aligned}
-> \frac{1}{\pi} \int_{-\pi}^\pi [f - S_n(f)]^2 dx &= \frac{1}{\pi} \int_{-\pi}^\pi f^2 dx - \frac{2}{\pi} \int_{-\pi}^\pi f \cdot S_n(f) dx + \frac{1}{\pi} \int_{-\pi}^\pi S_n^2(f) dx\\\\
+> \frac{1}{\pi} \int_{-\pi}^\pi [f - S_n(f)]^2 dx 
+> &= \frac{1}{\pi} \int_{-\pi}^\pi f^2 dx - \frac{2}{\pi} \int_{-\pi}^\pi f \cdot S_n(f) dx + \frac{1}{\pi} \int_{-\pi}^\pi S_n^2(f) dx\\\\
 > &= \frac{1}{\pi} \int_{-\pi}^\pi f^2 dx+ \frac{1}{\pi} \int_{-\pi}^\pi S_n^2(f) dx \\\\
 > &- \frac{2}{\pi} \left[ \frac{a_0}{2} \int_{-\pi}^\pi f dx + \sum_{k=1}^n \left( a_k \int_{-\pi}^\pi f(x) \cos kx dx + b_k \int_{-\pi}^\pi f(x) \sin kx dx \right) \right] \\\\
 > &= \frac{1}{\pi} \int_{-\pi}^\pi f^2 dx - 2 \left[ \frac{a_0^2}{2} + \sum_{k=1}^n (a_k^2 + b_k^2) \right] + \frac{1}{\pi} \int_{-\pi}^\pi S_n^2(f) dx\\\\
