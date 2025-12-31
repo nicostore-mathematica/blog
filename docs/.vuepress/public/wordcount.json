@@ -2,7 +2,7 @@
   "timeline": 184,
   "README": 230,
   "random": 71,
-  "notes": 198,
+  "notes": 115,
   "links": 418,
   "about": 210,
   "RoboMaster": {
@@ -36,8 +36,8 @@
     "integral-5": 4718,
     "integral-4": 4321,
     "integral-3": 4234,
-    "integral-24": 7,
-    "integral-23": 10,
+    "integral-24": 6442,
+    "integral-23": 6126,
     "integral-22": 5288,
     "integral-21": 6756,
     "integral-20": 5059,
@@ -187,7 +187,7 @@
     "algebra-1": 5125,
     "algebra-0": 9451
   },
-  "total": 323213,
-  "lastUpdated": "2025-12-30T16:45:14.705Z",
+  "total": 335681,
+  "lastUpdated": "2025-12-31T05:27:56.482Z",
   "fileCount": 156
 }
