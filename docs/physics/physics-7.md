@@ -79,10 +79,10 @@ $$
 
 $$
 \begin{align*}
-x'^2 + y'^2 + z'^2 - (ict')^2 &= x^2 + y^2 + z^2 - (ict)^2 \\
-&= [x \cos \theta + (ict) \sin \theta]^2 + y^2 + z^2 + [-x \sin \theta + (ict) \cos \theta]^2 \\
-&= x^2 \cos^2 \theta + 2x(ict) \cos \theta \sin \theta + (ict)^2 \sin^2 \theta + y^2 + z^2 \\
-&+ x^2 \sin^2 \theta - 2x(ict) \cos \theta \sin \theta + (ict)^2 \cos^2 \theta \\
+x'^2 + y'^2 + z'^2 - (ict')^2 &= x^2 + y^2 + z^2 - (ict)^2 \\\\
+&= [x \cos \theta + (ict) \sin \theta]^2 + y^2 + z^2 + [-x \sin \theta + (ict) \cos \theta]^2 \\\\
+&= x^2 \cos^2 \theta + 2x(ict) \cos \theta \sin \theta + (ict)^2 \sin^2 \theta + y^2 + z^2 \\\\
+&+ x^2 \sin^2 \theta - 2x(ict) \cos \theta \sin \theta + (ict)^2 \cos^2 \theta \\\\
 &= x^2 + y^2 + z^2 + (ict)^2 = x^2 + y^2 + z^2 - c^2 t^2. 
 \end{align*}
 $$
