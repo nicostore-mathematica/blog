@@ -19,7 +19,7 @@ export default defineUserConfig({
   base: '/',
   lang: 'zh-CN',
   title: 'soda-official',
-  description: '',
+  description: 'This is soda\'s personal blog & notebook.',
 
   head: [
     // 配置站点图标
@@ -30,6 +30,7 @@ export default defineUserConfig({
   shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
 
   theme: plumeTheme({
+    copyright: 'CC-BY-NC-SA-4.0',
     /* 添加您的部署域名, 有助于 SEO, 生成 sitemap */
      hostname: 'https://soda-official.top/',
 

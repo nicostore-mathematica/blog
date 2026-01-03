@@ -29,19 +29,19 @@ export default defineThemeConfig({
   /* 站点页脚 */
   footer: {
     message: 'Powered by <a target="_blank" href="https://v2.vuepress.vuejs.org/">VuePress</a> & <a target="_blank" href="https://theme-plume.vuejs.press">vuepress-theme-plume</a>',
-    copyright: 'Copyright © 2024 - present by soda-official',
+    copyright: 'Copyright © 2024-11-24 - present by soda-official',
   },
 
   /**
    * @see https://theme-plume.vuejs.press/config/basic/#profile
    */
   profile: {
-    avatar: 'https://nicostore-mathematica.github.io/picx-images-hosting/1_compressed.3nrq13hx7x.webp',
+    avatar: 'images/soda.jpg',
     name: '猫条',
     description: 'This is soda\'s personal <br/> diary \& notebook.',
-    circle: true,
+    // circle: true,
     location: 'Antarctica',
-    organization: '七域-假期快乐',
+    organization: '七域-烤柿加油',
   },
 
   social: [
