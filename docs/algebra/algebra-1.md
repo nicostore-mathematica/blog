@@ -528,8 +528,8 @@ $$
 > $$
 > \begin{align*}
 > \sum_{j=1}^n a_{kj} x_j 
-> &= \sum_{j=1}^n \left( a_{kj} \frac{1}{|A|} \sum_{i=1}^n b_i A_{ij} \right) = \frac{1}{|A|} \sum_{j=1}^n \sum_{i=1}^n a_{kj} b_i A_{ij}\\
-> &=  \frac{1}{|A|} \sum_{i=1}^n b_i \left( \sum_{j=1}^n a_{kj} A_{ij} \right)\\
+> &= \sum_{j=1}^n \left( a_{kj} \frac{1}{|A|} \sum_{i=1}^n b_i A_{ij} \right) = \frac{1}{|A|} \sum_{j=1}^n \sum_{i=1}^n a_{kj} b_i A_{ij}\\\\
+> &=  \frac{1}{|A|} \sum_{i=1}^n b_i \left( \sum_{j=1}^n a_{kj} A_{ij} \right)\\\\
 > &= \frac{1}{|A|} \sum_{i=1}^n b_i \delta_{ki} |A| = b_k \quad (i=k, 1; i \neq k, 0)
 > \end{align*}
 > $$

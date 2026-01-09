@@ -61,8 +61,8 @@ $$
 
 $$
 \begin{aligned}
-I &= \int_0^{\infty} e^{-\gamma x} \cos \beta x\, dx = e^{-\gamma x} \frac{\sin \beta x}{\beta} \Big|_0^{\infty} + \frac{\gamma}{\beta} \int_0^{\infty} e^{-\gamma x} \sin \beta x\, dx \\
-&= \frac{\gamma}{\beta} \int_0^{\infty} e^{-\gamma x} \sin \beta x\, dx = -\frac{\gamma}{\beta^2} e^{-\gamma x} \cos \beta x \Big|_0^{\infty} - \frac{\gamma^2}{\beta^2} \int_0^{\infty} e^{-\gamma x} \cos \beta x\, dx \\
+I &= \int_0^{\infty} e^{-\gamma x} \cos \beta x\, dx = e^{-\gamma x} \frac{\sin \beta x}{\beta} \Big|_0^{\infty} + \frac{\gamma}{\beta} \int_0^{\infty} e^{-\gamma x} \sin \beta x\, dx \\\\
+&= \frac{\gamma}{\beta} \int_0^{\infty} e^{-\gamma x} \sin \beta x\, dx = -\frac{\gamma}{\beta^2} e^{-\gamma x} \cos \beta x \Big|_0^{\infty} - \frac{\gamma^2}{\beta^2} \int_0^{\infty} e^{-\gamma x} \cos \beta x\, dx \\\\
 &= \frac{\gamma}{\beta^2} - \frac{\gamma^2}{\beta^2} I.
 \end{aligned}
 $$
@@ -85,8 +85,10 @@ $$
 >
 > $$
 > \begin{aligned}
-> &\int_0^{\alpha} d\beta \left(\int_0^{\infty} e^{-\gamma x} \cos \beta x\, dx\right) = \int_0^{\infty} dx\, e^{-\gamma x} \left(\int_0^{\alpha} d\beta \cos \beta x\right) \\
-> &= \int_0^{\infty} dx\, e^{-\gamma x} \frac{\sin \alpha x}{x} = \int_0^{\alpha} d\beta \frac{\gamma}{\beta^2 + \gamma^2} = \arctan \frac{\alpha}{\gamma}.
+> \int_0^{\alpha} d\beta \left(\int_0^{\infty} e^{-\gamma x} \cos \beta x\, dx\right) &= \int_0^{\infty} dx\, e^{-\gamma x} \left(\int_0^{\alpha} d\beta \cos \beta x\right) \\\\
+> &= \int_0^{\infty} dx\, e^{-\gamma x} \frac{\sin \alpha x}{x} \\\\
+> &= \int_0^{\alpha} d\beta \frac{\gamma}{\beta^2 + \gamma^2} \\\\
+> &= \arctan \frac{\alpha}{\gamma}.
 > \end{aligned}
 > $$
 >
@@ -114,7 +116,7 @@ $$
 
 $$
 \begin{aligned}
-\frac{1}{2\pi} \int_{-\infty}^{\infty} e^{ikx}\, dk &= \lim_{\alpha \to \infty} \frac{1}{2\pi} \int_{-\alpha}^{\alpha} e^{ikx}\, dk = \lim_{\alpha \to \infty} \frac{1}{2\pi} \frac{e^{ikx}}{ix} \Big|_{-\alpha}^{\alpha} \\
+\frac{1}{2\pi} \int_{-\infty}^{\infty} e^{ikx}\, dk &= \lim_{\alpha \to \infty} \frac{1}{2\pi} \int_{-\alpha}^{\alpha} e^{ikx}\, dk = \lim_{\alpha \to \infty} \frac{1}{2\pi} \frac{e^{ikx}}{ix} \Big|_{-\alpha}^{\alpha} \\\\
 &= \lim_{\alpha \to \infty} \frac{1}{\pi} \frac{e^{i\alpha x} - e^{-i\alpha x}}{2ix} = \lim_{\alpha \to \infty} \frac{1}{\pi} \frac{\sin \alpha x}{x} = \delta(x).
 \end{aligned}
 $$

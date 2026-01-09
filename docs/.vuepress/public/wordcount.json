@@ -172,10 +172,6 @@
   },
   "algebra": {
     "index": 112,
-    "matrix": 9,
-    "matrix-1": 6,
-    "introduction-2": 6,
-    "introduction-1": 1036,
     "algebra-9": 4333,
     "algebra-8": 6306,
     "algebra-7": 6213,
@@ -186,10 +182,9 @@
     "algebra-2": 5544,
     "algebra-11": 6849,
     "algebra-10": 6084,
-    "algebra-1": 5125,
-    "algebra-0": 9451
+    "algebra-1": 5125
   },
-  "total": 359239,
-  "lastUpdated": "2026-01-03T05:10:08.703Z",
-  "fileCount": 158
+  "total": 348731,
+  "lastUpdated": "2026-01-09T12:00:36.398Z",
+  "fileCount": 153
 }

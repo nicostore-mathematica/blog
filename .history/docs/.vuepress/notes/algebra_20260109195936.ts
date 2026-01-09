@@ -7,7 +7,7 @@ export default defineCollection({
 				text: "代数基础",
 				collapsed: false,
 				items: [
-					//"algebra-0",
+					"algebra-0",
 					"algebra-1",
 					"algebra-2",
 					"algebra-3",
