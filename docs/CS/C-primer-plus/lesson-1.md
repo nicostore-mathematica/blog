@@ -3,3 +3,207 @@ title: Lesson 1
 permalink: /CS/cpp-1/
 createTime: 2025/12/24 10:14:40
 ---
+
+1
+
+## Part 1 基本语法
+
+一切代码的开始都是Hello World：
+
+```c++
+#include <iostream>
+using namespace std;
+ 
+// main() 是程序开始执行的地方
+ 
+int main()
+{
+   cout << "Hello World"; // 输出 Hello World
+   return 0;
+}
+```
+
+C++ 语言定义了一些头文件，这些头文件包含了程序中必需的或有用的信息. 上面这段程序中，包含了头文件 **<iostream>**. 
+
+ **using namespace std;** 告诉编译器使用 std 命名空间. 命名空间是 C++ 中一个相对新的概念. 
+
+> **命名空间**（Namespace）是编程语言中用于组织代码的一种机制，主要目的是避免命名冲突. 通过将变量、函数、类等代码片段归类到不同的命名空间中，可以有效解决多个代码片段中标识符重名的问题. 
+>
+> 在C++中，命名空间通过关键字 namespace 定义. 它为标识符提供了一个作用域，使得同名的标识符可以在不同的命名空间中共存，而不会互相干扰. 
+>
+> 当你包含C++标准库的头文件，如 `<iostream>` 或 `<vector>` 时，库中的所有名称都被定义在**std命名空间**中. 这样做的目的是为了防止名称冲突，因为不同的库可能会有相同名称的函数或类型. 
+>
+> 使用**std命名空间**可以确保你使用的是标准库中的定义，而不是其他库中的定义. 
+
+ **// main() 是程序开始执行的地方** 是一个单行注释. 单行注释以 // 开头，在行末结束. 
+
+ **int main()** 是主函数，程序从这里开始执行. 
+
+ **cout << "Hello World";** 会在屏幕上显示消息 "Hello World". 
+
+ **return 0;** 终止 main( )函数，并向调用进程返回值 0. 
+
+### · 语句块
+
+在 C++ 中，分号是语句结束符. 也就是说，每个语句必须以分号结束. 它表明一个逻辑实体的结束. 
+
+例如，下面是三个不同的语句：
+
+```c++
+x = y; 
+y = y+1; 
+add(x, y);
+```
+
+语句块是一组使用大括号括起来的按逻辑连接的语句. 例如：
+
+```c++
+{   
+    cout << "Hello World"; 
+    // 输出 Hello World   return 0; 
+}
+```
+
+C++ 不以行末作为结束符的标识，因此可以在一行上放置多个语句. 例如：
+
+```c++
+x = y; 
+y = y+1; 
+add(x, y);
+```
+
+等同于
+
+```c++
+x = y; y = y+1; add(x, y);
+```
+
+### · 标识符
+
+C++ 标识符是用来标识变量、函数、类、模块，或任何其他用户自定义项目的名称. 一个标识符以字母 A-Z 或 a-z 或下划线 _ 开始，后跟零个或多个字母、下划线和数字（0-9）. 
+
+C++ 标识符内不允许出现标点字符，比如 @、& 和 %. C++ 是区分大小写的编程语言. 
+
+因此，在 C++ 中，**Manpower** 和 **manpower** 是两个不同的标识符. 
+
+下面列出几个有效的标识符：
+
+```
+mohd       zara    abc   move_name  a_123
+myname50   _temp   j     a23b9      retVal
+```
+
+### · 关键字
+
+下表列出了 C++ 中的保留字. 这些保留字不能作为常量名、变量名或其他标识符名称. 
+
+| asm          | else      | new              | this     |
+| ------------ | --------- | ---------------- | -------- |
+| auto         | enum      | operator         | throw    |
+| bool         | explicit  | private          | true     |
+| break        | export    | protected        | try      |
+| case         | extern    | public           | typedef  |
+| catch        | false     | register         | typeid   |
+| char         | float     | reinterpret_cast | typename |
+| class        | for       | return           | union    |
+| const        | friend    | short            | unsigned |
+| const_cast   | goto      | signed           | using    |
+| continue     | if        | sizeof           | virtual  |
+| default      | inline    | static           | void     |
+| delete       | int       | static_cast      | volatile |
+| do           | long      | struct           | wchar_t  |
+| double       | mutable   | switch           | while    |
+| dynamic_cast | namespace | template         | ......   |
+
+### · 注释
+
+程序的注释是解释性语句，您可以在 C++ 代码中包含注释，这将提高源代码的可读性。所有的编程语言都允许某种形式的注释。
+
+C++ 支持单行注释和多行注释。注释中的所有字符会被 C++ 编译器忽略。
+
+C++ 注释一般有两种：
+
+- `//` - 一般用于单行注释。
+- `/* ... */` - 一般用于多行注释。
+
+注释以 **//** 开始，直到行末为止。
+
+块注释符`/* ... */`是不可以嵌套使用的。
+
+```c++
+#include <iostream>
+using namespace std;
+ 
+int main() {
+    /* 这是注释 */
+ 
+    /* C++ 注释也可以
+     * 跨行
+     */ 
+    cout << "Hello World!";
+    return 0;
+}
+```
+
+## Part 2 数据类型
+
+下表列出了七种基本的 C++ 数据类型：
+
+| 类型     | 关键字  |
+| :------- | :------ |
+| 布尔型   | bool    |
+| 字符型   | char    |
+| 整型     | int     |
+| 浮点型   | float   |
+| 双浮点型 | double  |
+| 无类型   | void    |
+| 宽字符型 | wchar_t |
+
+其实 wchar_t 是这样来的：
+
+```
+typedef short int wchar_t;
+```
+
+所以 wchar_t 实际上的空间是和 short int 一样。
+
+一些基本类型可以使用一个或多个类型修饰符进行修饰：
+
+| 修饰符     | 描述                                   | 示例                   |
+| :--------- | :------------------------------------- | :--------------------- |
+| `signed`   | 表示有符号类型（默认）                 | `signed int x = -10;`  |
+| `unsigned` | 表示无符号类型                         | `unsigned int y = 10;` |
+| `short`    | 表示短整型                             | `short int z = 100;`   |
+| `long`     | 表示长整型                             | `long int a = 100000;` |
+| `const`    | 表示常量，值不可修改                   | `const int b = 5;`     |
+| `volatile` | 表示变量可能被意外修改，禁止编译器优化 | `volatile int c = 10;` |
+| `mutable`  | 表示类成员可以在 `const` 对象中修改    | `mutable int counter;` |
+
+下表显示了各种变量类型在内存中存储值时需要占用的内存，以及该类型的变量所能存储的最大值和最小值。
+
+不同系统会有所差异，一字节为 8 位。
+
+默认情况下，int、short、long都是带符号的，即 signed。long int 8 个字节，int 都是 4 个字节，早期的 C 编译器定义了 long int 占用 4 个字节，int 占用 2 个字节，新版的 C/C++ 标准兼容了早期的这一设定。
+
+| 数据类型             | 描述                                 | 大小（字节） | 范围/取值示例                                           |
+| :------------------- | :----------------------------------- | :----------- | :------------------------------------------------------ |
+| `bool`               | 布尔类型，表示真或假                 | 1            | `true` 或 `false`                                       |
+| `char`               | 字符类型，通常用于存储 ASCII 字符    | 1            | -128 到 127 或 0 到 255                                 |
+| `signed char`        | 有符号字符类型                       | 1            | -128 到 127                                             |
+| `unsigned char`      | 无符号字符类型                       | 1            | 0 到 255                                                |
+| `wchar_t`            | 宽字符类型，用于存储 Unicode 字符    | 2 或 4       | 取决于平台                                              |
+| `char16_t`           | 16 位 Unicode 字符类型（C++11 引入） | 2            | 0 到 65,535                                             |
+| `char32_t`           | 32 位 Unicode 字符类型（C++11 引入） | 4            | 0 到 4,294,967,295                                      |
+| `short`              | 短整型                               | 2            | -32,768 到 32,767                                       |
+| `unsigned short`     | 无符号短整型                         | 2            | 0 到 65,535                                             |
+| `int`                | 整型                                 | 4            | -2,147,483,648 到 2,147,483,647                         |
+| `unsigned int`       | 无符号整型                           | 4            | 0 到 4,294,967,295                                      |
+| `long`               | 长整型                               | 4 或 8       | 取决于平台                                              |
+| `unsigned long`      | 无符号长整型                         | 4 或 8       | 取决于平台                                              |
+| `long long`          | 长长整型（C++11 引入）               | 8            | -9,223,372,036,854,775,808 到 9,223,372,036,854,775,807 |
+| `unsigned long long` | 无符号长长整型（C++11 引入）         | 8            | 0 到 18,446,744,073,709,551,615                         |
+| `float`              | 单精度浮点数                         | 4            | 约 ±3.4e±38（6-7 位有效数字）                           |
+| `double`             | 双精度浮点数                         | 8            | 约 ±1.7e±308（15 位有效数字）                           |
+| `long double`        | 扩展精度浮点数                       | 8、12 或 16  | 取决于平台                                              |
+
+变量的大小会根据编译器和所使用的电脑而有所不同。
