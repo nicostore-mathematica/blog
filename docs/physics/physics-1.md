@@ -302,9 +302,9 @@ $$
 
 显然，这样定义的  $\vec{\tau}$  和  $\vec{n}$  都不是常向量。在轨迹的不同位置，我们有不同的  $\vec{\tau}$  和  $\vec{n}$ 。
 
-<img src="https://nicostore-mathematica.github.io/picx-images-hosting/force-1-1.4ub1pd3go0.webp" alt=/>
+<img src="https://nicostore-mathematica.github.io/picx-images-hosting/force-1-1.4ub1pd3go0.webp" alt="" />
 
-设在  $t$  和  $t + \Delta t$  时刻，质点的位置分别为  $\mathbf{r}(t)$  及  $\mathbf{r}(t + \Delta t)$ 。而它们对应的从起始点计算的弧长为  $s(t)$  和  $s(t + \Delta t)$ ，并且两点间的向量差为  $\Delta \mathbf{r}$ 。则从微分几何学中，我们知道
+设在  $t$  和  $t + \Delta t$ 时刻，质点的位置分别为  $\mathbf{r}(t)$  及  $\mathbf{r}(t + \Delta t)$ 。而它们对应的从起始点计算的弧长为  $s(t)$  和  $s(t + \Delta t)$ ，并且两点间的向量差为  $\Delta \mathbf{r}$ 。则从微分几何学中，我们知道
 
 
 $$
@@ -331,7 +331,7 @@ $$
 
 这里， $v$  称为质点的切向速率。从上式中我们可以看到，质点的速度永远是沿着切线方向的。
 
-<img src="https://nicostore-mathematica.github.io/picx-images-hosting/force-1-2.2yygwqr129.webp" alt=/>
+<img src="https://nicostore-mathematica.github.io/picx-images-hosting/force-1-2.2yygwqr129.webp" alt="" />
 
 至于加速度  $\mathbf{a}$ ，我们可以计算如下。
 
