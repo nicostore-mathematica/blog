@@ -70,7 +70,7 @@
     "index": 13,
     "python-1": 3906,
     "structure-1": 6,
-    "cpp-1": 960
+    "cpp-1": 371
   },
   "complex": {
     "index": 92,
@@ -131,14 +131,14 @@
     "weekly-1": 283
   },
   "travel": {
-    "travel-1": 11
+    "travel-1": 12
   },
   "article": {
     "r1s3vxud": 603,
     "pyvvujxp": 17,
     "resources": 485,
     "anniversary-1": 1541,
-    "article-5": 4209,
+    "article-5": 4210,
     "article-4": 3551,
     "article-3": 4312,
     "article-2": 3869,
@@ -188,9 +188,9 @@
     "algebra-10": 6084,
     "algebra-1": 5125
   },
-  "algebra\\algebra-13": 0,
-  "algebra\\algebra-12": 0,
-  "total": 355279,
-  "lastUpdated": "2026-01-22T13:24:08.209Z",
+  "algebra\\algebra-13": 3,
+  "algebra\\algebra-12": 3,
+  "total": 354698,
+  "lastUpdated": "2026-01-22T13:40:23.134Z",
   "fileCount": 157
 }
