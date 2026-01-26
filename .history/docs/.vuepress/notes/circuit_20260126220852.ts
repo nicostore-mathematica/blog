@@ -7,10 +7,10 @@ export default defineCollection({
 				text: "电路理论",
 				collapsed: true,
 				items: [
-					"/circuit/circuit/circuit-1",
-					"/circuit/circuit/circuit-2",
-					"/circuit/circuit/circuit-3",
-					"/circuit/circuit/circuit-4",
+					"/circuit/Theory/circuit-1",
+					"/circuit/Theory/circuit-2",
+					"/circuit/Theory/circuit-3",
+					"/circuit/Theory/circuit-4",
 				],
 			},
 			{

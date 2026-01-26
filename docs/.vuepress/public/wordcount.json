@@ -82,7 +82,6 @@
   },
   "circuit": {
     "index": 208,
-    "theory": 9,
     "circuit-4": 10,
     "circuit-3": 2457,
     "circuit-2": 4103,
@@ -190,7 +189,7 @@
   },
   "algebra\\algebra-13": 3,
   "algebra\\algebra-12": 3,
-  "total": 355262,
-  "lastUpdated": "2026-01-26T11:18:11.874Z",
-  "fileCount": 157
+  "total": 355253,
+  "lastUpdated": "2026-01-26T14:07:16.487Z",
+  "fileCount": 156
 }
