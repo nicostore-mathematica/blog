@@ -6,7 +6,6 @@ export default defineCollection({
 			{
 				text: "电路理论",
 				collapsed: true,
-				link: "/circuit/Theory/",
 				items: [
 					"/circuit/Theory/circuit-1",
 					"/circuit/Theory/circuit-2",
@@ -17,7 +16,6 @@ export default defineCollection({
 			{
 				text: "模拟电路",
 				collapsed: true,
-				link: "/circuit/electronic/",
 				items: [
 					"/circuit/electronic/electronic-1",
 					"/circuit/electronic/electronic-2",
@@ -42,8 +40,7 @@ export default defineCollection({
 			},
 			{
 				text: "数字电路",
-				collapsed: false,
-				link: "/circuit/Digital/",
+				collapsed: true,
 				items: [
 					"/circuit/Digital/Digital-1",
 					"/circuit/Digital/Digital-2",
@@ -54,8 +51,14 @@ export default defineCollection({
 					"/circuit/Digital/Digital-7",
 					"/circuit/Digital/Digital-8",
 					"/circuit/Digital/Digital-9",
-					"/circuit/Digital/Digital-10",
-					"/circuit/Digital/Digital-11",
+				]
+			},
+			{
+				text: "电力电子",
+				collapsed: true,
+				link: "/circuit/power/",
+				items: [
+					"/circuit/Power-Electronics/power-1",
 				]
 			}
 	],

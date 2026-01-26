@@ -1,5 +1,5 @@
 ---
-title: 四方游记·成都篇
+title: 四方游记 成都篇
 permalink: /travel/travel-1/
 createTime: 2026/01/12 22:24:51
 ---

@@ -70,7 +70,7 @@
     "index": 13,
     "python-1": 3906,
     "structure-1": 6,
-    "cpp-1": 371
+    "cpp-1": 929
   },
   "complex": {
     "index": 92,
@@ -170,8 +170,8 @@
   },
   "analytical-mechanics": {
     "index": 150,
-    "chapter-3": 12,
-    "chapter-2": 6787,
+    "chapter-3": 13,
+    "chapter-2": 6792,
     "chapter-1": 6794
   },
   "algebra": {
@@ -190,7 +190,7 @@
   },
   "algebra\\algebra-13": 3,
   "algebra\\algebra-12": 3,
-  "total": 354698,
-  "lastUpdated": "2026-01-22T13:40:23.134Z",
+  "total": 355262,
+  "lastUpdated": "2026-01-26T11:18:11.874Z",
   "fileCount": 157
 }
