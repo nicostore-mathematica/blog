@@ -25,16 +25,19 @@ export const navbar = defineNavbarConfig([
 	{
 		text: "笔记",
 		items: [
-			{ text: "微积分", link: "/integral/README.md" },
-			{ text: "代数", link: "/algebra/README.md" },
+			{ text: "数学分析", link: "/integral/README.md" },
+			{ text: "代数学基础", link: "/algebra/" },
 			{ text: "应用数学", link: "/applied-math/README.md" },
+			{ text: "计算机科学", link: "/CS/README.md" },
 			{ text: "基础物理", link: "/physics/README.md" },
-      		{ text: "电路系统", link: "/circuit/README.md" },
 			{ text: "光学", link: "/optics/README.md" },
 			{ text: "数学物理方法", link: "/complex/README.md" },
+			{ text: "分析力学", link: "/analytical-mechanics/README.md" },
+			{ text: "电动力学", link: "/electrodynamics/README.md" },
+      		{ text: "电子电路", link: "/circuit/" },
 			{ text: "工程力学", link: "/applied-mechanics/README.md" },
 			{ text: "控制理论", link: "/cybernetics/README.md" },
-			{ text: "电动力学", link: "/electrodynamics/README.md" },
+			
 
 		],
 	},
@@ -43,6 +46,7 @@ export const navbar = defineNavbarConfig([
 		items: [
 			{ text: "关于我", link: "/about/" },
 			{ text: "时间线", link: "/timeline/" },
+			{ text: "⌈ 开往 ⌋", link: "https://www.travellings.cn/go.html" }
 			/*{ text: "动态", link: "/talks/" },
 			{ text: "Bangumi", link: "/bangumi/" },*/
 		],
