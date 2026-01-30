@@ -76,16 +76,12 @@
     "index": 92,
     "complex-5": 6,
     "complex-4": 6,
-    "complex-3": 8,
-    "complex-2": 5875,
-    "complex-1": 6251
+    "complex-3": 4535,
+    "complex-2": 5876,
+    "complex-1": 7230
   },
   "circuit": {
     "index": 208,
-    "circuit-4": 10,
-    "circuit-3": 2457,
-    "circuit-2": 4103,
-    "circuit-1": 6092,
     "power": 11,
     "power-1": 6,
     "electronic": 81,
@@ -117,7 +113,11 @@
     "Digital-4": 12,
     "Digital-3": 9,
     "Digital-2": 12,
-    "Digital-1": 17
+    "Digital-1": 17,
+    "circuit-4": 10,
+    "circuit-3": 2457,
+    "circuit-2": 4103,
+    "circuit-1": 6092
   },
   "weekly": {
     "weekly-8": 377,
@@ -189,7 +189,7 @@
   },
   "algebra\\algebra-13": 3,
   "algebra\\algebra-12": 3,
-  "total": 355253,
-  "lastUpdated": "2026-01-26T14:07:16.487Z",
+  "total": 360760,
+  "lastUpdated": "2026-01-30T07:03:45.954Z",
   "fileCount": 156
 }

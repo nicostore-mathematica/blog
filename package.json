@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.26",
+    "baseline-browser-mapping": "^2.9.19",
     "gray-matter": "^4.0.3",
     "http-server": "^14.1.1",
     "typescript": "^5.9.2",
