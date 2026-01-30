@@ -4,8 +4,6 @@ createTime: 2025/08/17 19:34:31
 permalink: /complex/complex-1/
 ---
 
-# Chapter 1 解析函数
-
 > 复数当然包含实数，我们的目标是以复变量作为出发点，去研究它如何统治实变量的事实
 >
 > ——高木贞治《解析概论》
@@ -179,8 +177,9 @@ $$
 >
 > $w = f(z)$ 在 $z_0$ 的某邻域有定义（在 $z_0$ 点不一定有定义），若 $\forall \varepsilon > 0$, $\exists \delta > 0$, 当 $0 < |z - z_0| < \delta$ 时，总有 $|f(z) - w_0| < \varepsilon$, 其中 $w_0$ 为一个确定的复数，则我们称 $w_0$ 为 $f(z)$ 在 $z_0$ 处的极限，记为
 >
-> $\lim_{z \to z_0} f(z) = w_0.$
->
+> $$
+> \lim_{z \to z_0} f(z) = w_0.
+> $$
 > 若 $f$ 在 $z_0$ 处有定义，且 $f(z_0) = w_0$，则称 $f$ 在 $z_0$ 处连续。
 >
 > 若 $f(z)$ 在 $\bar{\sigma} = \sigma + l$（闭区域）上连续，则
@@ -265,7 +264,7 @@ $$
 
 > /proof/
 >
-> 记 $\frac{\partial u}{\partial x} = u_x$，$\frac{\partial u}{\partial y} = u_y$，$\frac{\partial v}{\partial x} = v_x$，$\frac{\partial v}{\partial y} = v_y$。由于这些偏导都存在且连续，因而 $u, v$ 存在全微分
+> 记 $\dfrac{\partial u}{\partial x} = u_x$，$\dfrac{\partial u}{\partial y} = u_y$，$\dfrac{\partial v}{\partial x} = v_x$，$\dfrac{\partial v}{\partial y} = v_y$。由于这些偏导都存在且连续，因而 $u, v$ 存在全微分
 >
 > $$
 > du = u_x dx + u_y dy, \quad dv = v_x dx + v_y dy,
@@ -289,7 +288,7 @@ $$
 > df = (u_x - i u_y) dz.
 > $$
 >
-> 故有 $\frac{df}{dz} = u_x - i u_y$，$f(z)$ 在区域 $\sigma$ 处处可导。因此在区域 $\sigma$ 上处处解析，所以 $f(z) = u + iv$ 在区域 $\sigma$ 上是解析函数，且有
+> 故有 $\dfrac{df}{dz} = u_x - i u_y$，$f(z)$ 在区域 $\sigma$ 处处可导。因此在区域 $\sigma$ 上处处解析，所以 $f(z) = u + iv$ 在区域 $\sigma$ 上是解析函数，且有
 >
 > $$
 > \frac{df}{dz} = \frac{\partial u}{\partial x} - i \frac{\partial u}{\partial y}.
@@ -313,7 +312,7 @@ $$
 $$
 \nabla_2^2 = \nabla_2 \cdot \nabla_2 = \left( \frac{\partial}{\partial x}, \frac{\partial}{\partial y} \right) \left( \frac{\partial}{\partial x}, \frac{\partial}{\partial y} \right) = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}
 $$
-同理三维的拉普拉斯算符 $\nabla_3^2 = \Delta_3 = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}$，其对应的拉普拉斯方程形式为
+同理三维的拉普拉斯算符 $\nabla_3^2 = \Delta_3 = \dfrac{\partial^2}{\partial x^2} + \dfrac{\partial^2}{\partial y^2} + \dfrac{\partial^2}{\partial z^2}$，其对应的拉普拉斯方程形式为
 
 $$
 \nabla_3^2 u(x, y, z) = 0. 
@@ -329,8 +328,8 @@ $$
 >
 > $$
 > \begin{cases}
-> \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = \nabla^2 u(x, y) = 0, \\
-> \frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} = \nabla^2 v(x, y) = 0.
+> \dfrac{\partial^2 u}{\partial x^2} + \dfrac{\partial^2 u}{\partial y^2} = \nabla^2 u(x, y) = 0, \\\\
+> \dfrac{\partial^2 v}{\partial x^2} + \dfrac{\partial^2 v}{\partial y^2} = \nabla^2 v(x, y) = 0.
 > \end{cases}
 > $$
 >
@@ -340,8 +339,8 @@ $$
 > >
 > > $$
 > > \begin{cases}
-> > \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}, & 1' \\
-> > \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}. & 2'
+> > \dfrac{\partial u}{\partial x} = \dfrac{\partial v}{\partial y}, & 1' \\\\
+> > \dfrac{\partial u}{\partial y} = -\dfrac{\partial v}{\partial x}. & 2'
 > > \end{cases}
 > > $$
 > >
@@ -363,7 +362,7 @@ $$
 > > \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = \frac{\partial^2 v}{\partial x \partial y} - \frac{\partial^2 v}{\partial y \partial x} = 0.
 > > $$
 > >
-> > 同理可证，$\frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} = 0$。因此 $u, v$ 均是调和函数。
+> > 同理可证，$\dfrac{\partial^2 v}{\partial x^2} + \dfrac{\partial^2 v}{\partial y^2} = 0$。因此 $u, v$ 均是调和函数。
 > >
 > > 事实上，后面的柯西积分公式会说明解析函数的任意阶导数存在，因而 $f(z)$ 的任意阶导数都是连续的. 由于关于 $z$ 连续就意味着关于 $x$ 和 $y$ 均连续，故容易由此证明 $v$ 的二阶混合偏导均连续
 >
@@ -448,7 +447,7 @@ $$
 >
 > 在这种情况下，
 >
-> 1. 它们的函数值可以大于1（例如取 $z = i$，则 $\cos i = \frac{e^{-1} + e^1}{2} > 1$，在值域上与实数很不相同）；
+> 1. 它们的函数值可以大于1（例如取 $z = i$，则 $\cos i = \dfrac{e^{-1} + e^1}{2} > 1$，在值域上与实数很不相同）；
 > 2. $$
 >    \sin^2 z + \cos^2 z = 1,\quad \quad \tan^2 z + 1 = \sec^2 z
 >    $$
@@ -459,10 +458,12 @@ $$
 >    (\cos z)' = -\sin z ,\quad (\sin z)' = \cos z
 >    $$
 > 5. $$
->    \tan z \equiv \frac{\sin z}{\cos z} (\cos z \neq 0) \quad\quad
->    \cot z \equiv \frac{\cos z}{\sin z} (\sin z \neq 0) \\
->    \sec z \equiv \frac{1}{\cos z} (\cos z \neq 0) \quad\quad
+>    \begin{aligned}
+>    &\tan z \equiv \frac{\sin z}{\cos z} (\cos z \neq 0) \quad\quad
+>    \cot z \equiv \frac{\cos z}{\sin z} (\sin z \neq 0) \\\\
+>    &\sec z \equiv \frac{1}{\cos z} (\cos z \neq 0) \quad\quad
 >    \csc z \equiv \frac{1}{\sin z} (\sin z \neq 0)
+>    \end{aligned}
 >    $$
 
 (4). 双曲函数：$\sinh z, \cosh z$.
@@ -474,6 +475,93 @@ $$
 > $$
 >
 > 简单的关系就是 $i \sinh(iz) = \sin z, \cosh(iz) = \cos z$.
+
+### · 保角变换
+
+所谓保角变换是将 $z=x+\text{i}y$ 映射到 $w=u+\text{i}v$ 上面去，这个变换具有保角性 / 共形性：
+
+考虑解析函数的微分：$\Delta w=w'(z)\Delta z$，这个微分表明，将 $z$ 空间中的一个任意矢量 $\Delta z$ 映射到 $w$ 空间内，只是相乘了一个复数而已，相当于将模放大 $|w'(z)|$ 倍，然后旋转 $\arg w'(z)$ 角度，这两个量都和 $\Delta z$ 无关 (仅仅和 $z$ 有关).
+
+因此这个变换是保角的.
+
+> 无限大导体板对折成 $\theta$，一无限长线电荷平行导体板中间的折线放置，求静电场.
+>
+> 一般而言，我们只能用电像法做 $\theta$ 整除 $\pi$ 的情况. 但是用保角变换，可以做任意情况. 考虑原空间是 $z$ 平面，用变换函数 $w(z)=z^{\pi/\theta}$ 进行变换.
+>
+> $\Longrightarrow$ 折叠的导体板被展开成无限大平板，这下就能计算结果了.
+>
+> 为什么能这么做？保角变换不改变解析性，也就不改变 Laplace 方程.
+>
+> 需要对线电荷的位置和大小做怎样的调整？(Laplace 方程在有电荷的位置不成立) 位置按照 $w(z)$，但是电荷大小不变.
+>
+> 有人会问：不是说好的“保角”吗？为什么导体板被展开了？因为保角仅仅对解析的区域成立，保角变换的一大精髓就是巧妙地设置奇点的位置来产生绝妙的效果.
+
+将保角变换应用于解决实际问题，不仅涉及区域形状的变换，而且还要涉及数学表述形式（例如微分方程）的变换。可以想象，只有在既让区域的形状变得很简单，也没有让微分方程的形式变得更复杂的条件下，保角变换才具有真正的实用价值。
+
+我们特别有兴趣于讨论二维 Laplace 算符
+
+$$
+\nabla^2 = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}
+$$
+
+在解析函数 $\zeta = \xi + i\eta = f(z)$ 所代表的变换 $(x,y) \mapsto (\xi,\eta)$ 下的变化。根据偏微商的链式法则，有
+
+$$
+\frac{\partial}{\partial x} = \frac{\partial \xi}{\partial x} \frac{\partial}{\partial \xi} + \frac{\partial \eta}{\partial x} \frac{\partial}{\partial \eta}, \quad
+\frac{\partial}{\partial y} = \frac{\partial \xi}{\partial y} \frac{\partial}{\partial \xi} + \frac{\partial \eta}{\partial y} \frac{\partial}{\partial \eta},
+$$
+
+$$
+\frac{\partial^2}{\partial x^2} = \frac{\partial^2 \xi}{\partial x^2} \frac{\partial}{\partial \xi} + \frac{\partial^2 \eta}{\partial x^2} \frac{\partial}{\partial \eta} + \left( \frac{\partial \xi}{\partial x} \right)^2 \frac{\partial^2}{\partial \xi^2} + \left( \frac{\partial \eta}{\partial x} \right)^2 \frac{\partial^2}{\partial \eta^2} + 2 \frac{\partial \xi}{\partial x} \frac{\partial \eta}{\partial x} \frac{\partial^2}{\partial \xi \partial \eta},
+$$
+
+$$
+\frac{\partial^2}{\partial y^2} = \frac{\partial^2 \xi}{\partial y^2} \frac{\partial}{\partial \xi} + \frac{\partial^2 \eta}{\partial y^2} \frac{\partial}{\partial \eta} + \left( \frac{\partial \xi}{\partial y} \right)^2 \frac{\partial^2}{\partial \xi^2} + \left( \frac{\partial \eta}{\partial y} \right)^2 \frac{\partial^2}{\partial \eta^2} + 2 \frac{\partial \xi}{\partial y} \frac{\partial \eta}{\partial y} \frac{\partial^2}{\partial \xi \partial \eta}.
+$$
+
+所以
+
+$$
+\nabla^2 = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}
+$$
+
+$$
+= \left[ \left( \frac{\partial \xi}{\partial x} \right)^2 + \left( \frac{\partial \xi}{\partial y} \right)^2 \right] \frac{\partial^2}{\partial \xi^2} + \left[ \left( \frac{\partial \eta}{\partial x} \right)^2 + \left( \frac{\partial \eta}{\partial y} \right)^2 \right] \frac{\partial^2}{\partial \eta^2}
+$$
+
+$$
++ \left( \frac{\partial^2 \xi}{\partial x^2} + \frac{\partial^2 \xi}{\partial y^2} \right) \frac{\partial}{\partial \xi} + \left( \frac{\partial^2 \eta}{\partial x^2} + \frac{\partial^2 \eta}{\partial y^2} \right) \frac{\partial}{\partial \eta} + 2 \left( \frac{\partial \xi}{\partial x} \frac{\partial \eta}{\partial x} + \frac{\partial \xi}{\partial y} \frac{\partial \eta}{\partial y} \right) \frac{\partial^2}{\partial \xi \partial \eta}.
+$$
+
+我们最终就能得到
+
+$$
+\nabla^2 = |f'(z)|^2 \left( \frac{\partial^2}{\partial \xi^2} + \frac{\partial^2}{\partial \eta^2} \right).
+$$
+
+这个结果表明：在解析函数 $\zeta = f(z)$ 所代表的保角变换之下，二维 Laplace 方程
+
+$$
+\left( \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} \right) u(x,y) = 0.
+$$
+
+在 $f'(z) \ne 0$ 的点，仍保持为二维 Laplace 方程：
+
+$$
+\left( \frac{\partial^2}{\partial \xi^2} + \frac{\partial^2}{\partial \eta^2} \right) u(x(\xi,\eta), y(\xi,\eta)) = 0;
+$$
+
+二维 Poisson 方程
+
+$$
+\left( \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} \right) u(x,y) = \rho(x,y)
+$$
+
+在变化后也仍然是二维 Poisson 方程：
+
+$$
+\left( \frac{\partial^2}{\partial \xi^2} + \frac{\partial^2}{\partial \eta^2} \right) u(x(\xi,\eta), y(\xi,\eta)) = \frac{1}{|f'(z)|^2} \rho(x(\xi,\eta), y(\xi,\eta)).
+$$
 
 ### · 多值函数
 
@@ -513,7 +601,7 @@ $$
 >
 > 这说明 $w(z)$ 有两个独立的支。在复平面上，此时我们称原点 $O$ 是 $ \sqrt{z} $ 的支点：
 >
-> 若 $z$ 所对应的点 $Z$ 一开始与 $w_1 = \sqrt{r}e^{i\frac{\theta}{2}}$ 相对应，让 $Z$ 运动一周回到原来的地方，且运动轨迹把支点 $O$ 包围了起来（如下左图），那么它的函数值将从一个支跳到另一个支上，这是因为辐角从 $\theta$ 变成了 $\theta + 2\pi$，开方后辐角一个是 $\frac{\theta}{2}$ （对应结果 $\sqrt{r}e^{i\frac{\theta}{2}}$），一个是 $\frac{\theta}{2} + \pi$ （对应结果 $-\sqrt{r}e^{i\frac{\theta}{2}}$）；如果运动一周的轨迹并没有把支点包围（如下右图），其辐角仍为 $\theta$，即辐角前后不变，则不会跳到另一个支上。
+> 若 $z$ 所对应的点 $Z$ 一开始与 $w_1 = \sqrt{r}e^{i\frac{\theta}{2}}$ 相对应，让 $Z$ 运动一周回到原来的地方，且运动轨迹把支点 $O$ 包围了起来（如下左图），那么它的函数值将从一个支跳到另一个支上，这是因为辐角从 $\theta$ 变成了 $\theta + 2\pi$，开方后辐角一个是 $\dfrac{\theta}{2}$ （对应结果 $\sqrt{r}e^{i\frac{\theta}{2}}$），一个是 $\dfrac{\theta}{2} + \pi$ （对应结果 $-\sqrt{r}e^{i\frac{\theta}{2}}$）；如果运动一周的轨迹并没有把支点包围（如下右图），其辐角仍为 $\theta$，即辐角前后不变，则不会跳到另一个支上。
 >
 > ![alt](https://nicostore-mathematica.github.io/picx-images-hosting/complex-3.7eh207w5sg.webp)
 
@@ -609,12 +697,13 @@ $$
 
 解析函数的实部与虚部的相互依赖与决定性取决于  $C - R$  条件：
 $$
-\left\{ \begin{array}{l} \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} \\ \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x} \end{array} \right.
+\left\{ \begin{array}{l} \dfrac{\partial u}{\partial x} = \dfrac{\partial v}{\partial y} \\\\ 
+\dfrac{\partial u}{\partial y} = -\dfrac{\partial v}{\partial x} \end{array} \right.
 $$
 若函数  $f(z)$  在区域  $\sigma$  上是解析函数，且已知实部  $ u(x, y) $ ，则可以求虚部  $ v(x, y) $ ，反之亦可。我们针对前一种情况进行说明。设已知实部  $ u(x, y) $ ，则由  $C - R$  条件得
 
 $$
-\left\{ \begin{array}{l} \frac{\partial v}{\partial y} = \frac{\partial u}{\partial x} \\ \frac{\partial v}{\partial x} = -\frac{\partial u}{\partial y} \end{array} \right.
+\left\{ \begin{array}{l} \dfrac{\partial v}{\partial y} = \dfrac{\partial u}{\partial x} \\\\ \dfrac{\partial v}{\partial x} = -\dfrac{\partial u}{\partial y} \end{array} \right.
 $$
 因此可知
 
@@ -631,7 +720,7 @@ $$
 $$
 -\frac{\partial}{\partial y} \frac{\partial u}{\partial x} - \frac{\partial}{\partial x} \frac{\partial u}{\partial y} = 0,
 $$
-这说明向量场  $F = \left( -\frac{\partial u}{\partial y} \frac{\partial u}{\partial x} \right)$  的旋度为 0，因而确实存在  $v$  使得
+这说明向量场  $F = \left( -\dfrac{\partial u}{\partial y} \dfrac{\partial u}{\partial x} \right)$  的旋度为 0，因而确实存在  $v$  使得
 $$
  v = \int \left( -\frac{\partial u}{\partial y} dx + \frac{\partial u}{\partial x} dy \right). 
 $$

@@ -121,7 +121,6 @@ $$
 > \oint_l f(z) dz = \iint_{\sigma} (\frac{\partial v}{\partial x} - \frac{\partial u}{\partial y}) dx dy + \iint_{\sigma} (\frac{\partial u}{\partial x} - \frac{\partial v}{\partial y}) dx dy = 0.
 > $$
 >
-> $$ 
 
 **推论1**:
 
@@ -248,7 +247,7 @@ $$
 
 ### · 例题
 
-/example/  计算围道积分  $\oint_l \frac{1}{(z - a)^n} dz$ ， $n \in \mathbb{Z}$ ， $l$  为包围  $a$  点的任意围道。
+/example/  计算围道积分  $\displaystyle\oint_l \dfrac{1}{(z - a)^n} dz$ ， $n \in \mathbb{Z}$ ， $l$  为包围  $a$  点的任意围道。
 
 > 当  $n$  为负整数或 0 时，
 > $$
@@ -258,7 +257,7 @@ $$
 > $$
 > \oint_l f(z) dz = 0.
 > $$
-> 当  $n$  为正整数时， $z = a$  是被积函数的奇点。以  $z = a$  为圆心，作一个在围道  $l$  内部半径足够小（设为  $\varepsilon$ 的)圆轨道  $l_\varepsilon$ ，将奇点  $a$  从  $l$  内挖掉，形成  $f(z) = \frac{1}{(z - a)^n}$  的一个解析的复连通区域，边界为  $L = l + l_\varepsilon$ ，如下图所示：
+> 当  $n$  为正整数时， $z = a$  是被积函数的奇点。以  $z = a$  为圆心，作一个在围道  $l$  内部半径足够小（设为  $\varepsilon$ 的)圆轨道  $l_\varepsilon$ ，将奇点  $a$  从  $l$  内挖掉，形成  $f(z) = \dfrac{1}{(z - a)^n}$  的一个解析的复连通区域，边界为  $L = l + l_\varepsilon$ ，如下图所示：
 >
 > ![](https://pic1.imgdb.cn/item/692a9e7227638c120a3c5bad.png)
 >
@@ -308,7 +307,7 @@ $$
 >
 > ![](https://pic1.imgdb.cn/item/692a9e7227638c120a3c5bae.png)
 >
-> 那么， $f(z) = \frac{1}{z^2 - 1}$  在  $L = l + l_1 + l_2$  所包围的复连通区域  $\sigma$  内处处解析，在  $\bar{\sigma} = \sigma + L$  处处连续，因此由复连通区域的柯西定理，有
+> 那么， $f(z) = \dfrac{1}{z^2 - 1}$  在  $L = l + l_1 + l_2$  所包围的复连通区域  $\sigma$  内处处解析，在  $\bar{\sigma} = \sigma + L$  处处连续，因此由复连通区域的柯西定理，有
 >
 > $$
 > \oint_l f(z) dz = \oint_{l_1} f(z) dz + \oint_{l_2} f(z) dz.
@@ -364,7 +363,7 @@ $$
 
 > /proof/
 >
-> 取包围  $a$  的足够小的圆形区域， $a$  为圆心， $\varepsilon$  为半径，使其被含于  $l$  围道之内，构成  $\frac{f(z)}{z-a}$  的复连通解析区域，如下图所示。
+> 取包围  $a$  的足够小的圆形区域， $a$  为圆心， $\varepsilon$  为半径，使其被含于  $l$  围道之内，构成  $\dfrac{f(z)}{z-a}$  的复连通解析区域，如下图所示。
 >
 > ![](https://pic1.imgdb.cn/item/692bb215aae9ff4455b3c8e5.png)
 >
@@ -598,7 +597,7 @@ $$
 $$
 \oint_l \frac{e^z}{z(z^2 + 1)} dz
 $$
-其中 $l: |z - i| = \frac{1}{2}$。
+其中 $l: |z - i| = \dfrac{1}{2}$。
 
 > /proof/
 >
@@ -661,7 +660,7 @@ $$
 > $$
 > (1) 所要证明的式子是 (2) 的特殊情况（取 $n = 0, \rho = 1$），因此我们只需证 (2)。
 >
-> 由 (1) 题干的提示（求 $\oint_l \frac{e^z}{z} dz$）以及导数公式，我们考虑 
+> 由 (1) 题干的提示（求 $\oint_l \dfrac{e^z}{z} dz$）以及导数公式，我们考虑 
 > $$
 > \oint_{l_\rho} \frac{e^z}{(z - 0)^{n+1}} dz,\quad l_\rho: |z| = \rho
 > $$
@@ -741,7 +740,7 @@ $$
 > f(z) = u(x, y) + iv(x, y) = \frac{1}{2\pi i} \oint_l \frac{f(\zeta)}{\zeta - z} d\zeta,
 > $$
 >
-> 由于 $\bar{z} \notin \sigma$，在 $l$ 之外，故有 $\frac{f(\zeta)}{\zeta - \bar{z}}$ 在 $\sigma$ 内部处处解析，因此
+> 由于 $\bar{z} \notin \sigma$，在 $l$ 之外，故有 $\dfrac{f(\zeta)}{\zeta - \bar{z}}$ 在 $\sigma$ 内部处处解析，因此
 >
 >
 > $$
