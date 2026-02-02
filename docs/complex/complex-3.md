@@ -1,10 +1,10 @@
 ---
-title: Chapter 3 级数
+title: Chapter 3 无穷级数
 permalink: /complex/complex-3/
 createTime: 2025/11/28 13:02:58
 ---
 
-## Part 1 幂级数
+## Part 1 级数拓展
 
 ### · 复级数
 
@@ -37,208 +37,145 @@ $$
 \sum_{k=1}^{\infty} u_k = u, \quad \sum_{k=1}^{\infty} v_k = v.
 $$
 
-因此，复级数收敛问题可以转化为实级数收敛问题。下面将给出几个复级数收敛性判据。
+因此，复级数收敛问题可以转化为实级数收敛问题。
 
-/Theorem/
+由于 $\displaystyle\sum_{n=0}^{\infty} |u_n|$ 是实数级数，而且是正项级数，所以高等数学中的任何一种正项级数的收敛判别法都可以用来判别复数级数是否绝对收敛。下面列出最常用的几个判别法。
 
-> 柯西判据：
+**比较判别法**
+
+> 若 $\exists N \in \mathbb{N}$，对 $\forall n > N$，都有 $|u_n| < v_n$，而 $\displaystyle\sum_{n=0}^{\infty} v_n$ 收敛，则 $\displaystyle\sum_{n=0}^{\infty} |u_n|$ 收敛，即 $\displaystyle\sum_{n=0}^{\infty} u_n$ 绝对收敛。
 >
-> 如果对于 $\forall \varepsilon > 0$，总存在正整数 $N$，当 $n > N$ 时，对于任意正整数 $p$，总有
+> 若 $|u_n| > v_n > 0$，而 $\displaystyle\sum_{n=0}^{\infty} v_n$ 发散，则 $\displaystyle\sum_{n=0}^{\infty} |u_n|$ 发散。
+
+**比值判别法**
+
+> 若存在与 $n$ 无关的常数 $\rho$，则当 $|u_{n+1}/u_n| < \rho < 1$ 时，级数 $\displaystyle\sum_{n=0}^{\infty} u_n$ 绝对收敛；
+>
+> 当 $|u_{n+1}/u_n| > \rho > 1$ 时，级数 $\displaystyle\sum_{n=0}^{\infty} u_n$ 发散。
+
+**d'Alembert 判别法**
+
+> 若 $\displaystyle\varlimsup_{n \to \infty} |u_{n+1}/u_n| < 1$，则级数 $\displaystyle\displaystyle\sum_{n=0}^{\infty} u_n$ 绝对收敛；若 $\displaystyle\varliminf_{n \to \infty} |u_{n+1}/u_n| > 1$，则级数 $\displaystyle\sum_{n=0}^{\infty} u_n$ 发散。
+>
+> 若 $\displaystyle\displaystyle\lim_{n \to \infty} |u_{n+1}/u_n| = 1$，则 $\displaystyle\displaystyle\sum_{n=0}^{\infty} u_n$ 的绝对收敛性需要利用下面的 Gauss 判别法进一步检验。
+
+**Gauss 判别法**
+
+> 设级数 $\displaystyle\sum_{n=0}^{\infty} u_n$ 邻项的比值可以写成
+> $$
+> \frac{u_n}{u_{n+1}} = 1 + \frac{\mu}{n} + O(n^{-\lambda}),
+> $$
+>
+> 其中 $\mu = a + ib$，$\lambda > 1$，符号 $O$ 表示数量级。若 $a > 1$，则级数 $\displaystyle\sum_{n=0}^{\infty} u_n$ 绝对收敛；若 $a \leq 1$，则 $\displaystyle\sum_{n=0}^{\infty} |u_n|$ 发散。
+
+**Cauchy 判别法**
+
+> 若 $\varlimsup_{n \to \infty} |u_n|^{1/n} < 1$，则级数 $\displaystyle\sum_{n=0}^{\infty} u_n$ 绝对收敛；若 $\varliminf_{n \to \infty} |u_n|^{1/n} > 1$，则级数 $\displaystyle\sum_{n=0}^{\infty} u_n$ 发散。
+
+绝对收敛级数具有下列性质：
+
+> (1) 改换次序。例如，
 >
 > $$
-> |F_{n+p} - F_n| = |f_{k+1} + f_{k+2} + \cdots + f_{k+p}| < \varepsilon,
+> u_0 + u_1 + u_2 + u_3 + u_4 + \cdots = u_0 + u_1 + u_2 + u_4 + u_3 + u_6 + u_8 + u_5 + \cdots.
 > $$
 >
-> 那么 $\displaystyle\sum_{k=1}^{\infty} f_k$ 一定收敛（可证明这是一个充要条件）。
+> (2) 特别是，可以把绝对收敛级数拆成几个子级数，每个子级数仍绝对收敛。例如，
+>
+> $$
+> \sum_{n=0}^{\infty} u_n = \sum_{n=0}^{\infty} u_{2n} + \sum_{n=0}^{\infty} u_{2n+1}.
+> $$
+>
+> (3) 两个绝对收敛级数之积仍然绝对收敛，
+>
+> $$
+> \sum_k u_k \cdot \sum_l v_l = \sum_{k,l} u_k v_l.
+> $$
+>
+> 这里的乘积是一个二重级数
+>
+> $$
+> \begin{aligned}
+> & u_0 v_0 + u_0 v_1 + u_0 v_2 + u_0 v_3 + \cdots \\\\
+> & + u_1 v_0 + u_1 v_1 + u_1 v_2 + u_1 v_3 + \cdots \\\\
+> & + u_2 v_0 + u_2 v_1 + u_2 v_2 + u_2 v_3 + \cdots \\\\
+> & + \cdots
+> \end{aligned}
+> $$
+>
+> 绝对收敛性意味着可按任意顺序求和，其值不变。例如可按 $k + l = n$ 的大小顺序排列，
+>
+> $$
+> \sum_{k=0}^{\infty} u_k \cdot \sum_{l=0}^{\infty} v_l = \sum_{n=0}^{\infty} w_n, \quad w_n = \sum_{k=0}^{n} u_k v_{n-k}.
+> $$
+>
+> 而且如果限于这种求和次序，则乘法的条件还可以放宽：$\displaystyle\sum u_k$，$\displaystyle\sum v_l$ 都收敛，且其中之一绝对收敛；或 $\displaystyle\sum u_k$，$\displaystyle\sum v_l$ 和 $\displaystyle\sum w_n$ 都收敛。
 
-取 $p = 1$，得到 $\displaystyle\sum_{k=1}^{\infty} f_k$ 收敛的一个必要条件（但不充分）：
+### · 二重级数
+
+所谓二重级数，指的是排列成
 
 $$
-\lim_{k \to \infty} |f_k| = 0.
+\begin{aligned}
+& a_{11} + a_{12} + a_{13} + a_{14} + \cdots + a_{1n} + \cdots \\\\
+& + a_{21} + a_{22} + a_{23} + a_{24} + \cdots + a_{2n} + \cdots \\\\
+& + \cdots \\\\
+& + a_{m1} + a_{m2} + a_{m3} + a_{m4} + \cdots + a_{mn} + \cdots \\\\
+& + \cdots
+\end{aligned}
 $$
 
-例如，取 $f_k = (-1)^k \dfrac{1}{k}$，它满足上述必要条件，且由莱布尼茨判别法可知其对应级数收敛；
+的方阵，这个方阵的右端和下端都是无限的。方阵的每一项用 $a_{kl}$ 表示，其中的第一个指标 $k$ 表示行，第二个指标 $l$ 表示列。
 
-但取 $f_k = \dfrac{1}{k}$，满足上式，但其对应的级数不收敛。这说明上面这一条件确实是必要不充分的。
+现在求出方阵的前 $m$ 行 $n$ 列共 $m \times n$ 项之和
 
-同理我们可以给出绝对收敛的定义：
+$$
+S_{mn} = \sum_{\substack{1 \leq k \leq m \\ 1 \leq l \leq n}} a_{kl},
+$$
 
-/Definition/
+根据 $S_{mn}$ 就能构造出这个二重级数的部分和序列。容易理解，如果部分和序列收敛，
 
-> 绝对收敛：
->
-> 如果 $\displaystyle\sum_{k=1}^{\infty} |f_k|$ 收敛，则称 $\displaystyle\sum_{k=1}^{\infty} f_k$ 绝对收敛。
->
-> 原级数本身 $\displaystyle\sum_{k=1}^{\infty} f_k$ 当然也收敛，这是因为：
-> $$
-> |f_{k+1} + f_{k+2} + \cdots + f_{k+p}| < |f_{k+1}| + |f_{k+2}| + \cdots + |f_{k+p}|.
-> $$
+$$
+\lim_{\substack{m \to \infty \\ n \to \infty}} S_{mn} = S,
+$$
 
-**绝对收敛级数的性质和判别法**：
+则称此二重级数收敛。$S$ 就是这个二重级数之和：
 
-(1). 任意交换或改变次序而得到新级数仍然收敛，且其和不变。
+$$
+S = \sum_{k,l=1}^{\infty} a_{kl}.
+$$
 
-(2). 两个绝对收敛的级数，可以逐项相乘（即第一个级数的第 $k$ 项 $f_k$ 和第二个级数的第 $k$ 项 $g_k$ 相乘），所得新的级数仍然绝对收敛。
+这时，$\forall \varepsilon > 0$，总可以找到正整数 $N$，当 $m,n > N$ 时，恒有
 
-(3). d'Alembert 判别法（比值判别法、达朗贝尔判别法）：
+$$
+|S_{mn} - S| < \varepsilon.
+$$
 
-> 若 $\displaystyle\sum_{k=1}^{\infty} f_k$ 的通项 $f_k (k = 1, 2, \ldots)$ 满足
->
-> $$
-> \left| \frac{f_{k+1}}{f_k} \right| < \rho,
-> $$
->
->  $\rho < 1$ 且与 $k$ 无关
->
-> 则 $\displaystyle\sum_{k=1}^{\infty} f_k$ 绝对收敛。特别地，如果
-> $$
-> \lim_{k \to \infty} \left| \dfrac{f_{k+1}}{f_k} \right| = l,
-> $$
->
-> 则当 $l < 1$ 时，$\displaystyle\sum_{k=1}^{\infty} f_k$ 绝对收敛；
->
-> 当 $l > 1$ 时，$\displaystyle\sum_{k=1}^{\infty} f_k$ 发散；
->
-> 当 $l = 1$ 时，$\displaystyle\sum_{k=1}^{\infty} f_k$ 的敛散性须另行判断（如利用高斯判别法）。
+除了这种求和方式之外，当然还可以考虑其他求和方式。例如，考虑到上面的部分和
 
-(4). Cauchy 判别法（根式判别法）：
+$$
+S_{mn} = \sum_{\substack{1 \leq k \leq m \\ 1 \leq l \leq n}} a_{kl} = \sum_{k=1}^{m} \left( \sum_{l=1}^{n} a_{kl} \right) = \sum_{l=1}^{n} \left( \sum_{k=1}^{m} a_{kl} \right),
+$$
 
-> 对于 $\displaystyle\sum_{k=1}^{\infty} f_k$，若有
->
-> $$
-> \lim_{k \to \infty} \sqrt[k]{|f_k|} = r,
-> $$
->
-> 则当 $r < 1$ 时，$\displaystyle\sum_{k=1}^{\infty} f_k$ 绝对收敛；
->
-> 当 $r > 1$ 时，$\displaystyle\sum_{k=1}^{\infty} f_k$ 发散；
->
-> 当 $r = 1$ 时，$\displaystyle\sum_{k=1}^{\infty} f_k$ 的敛散性须另行判断（如利用高斯判别法）。
+还可以有累次求和：
 
-(5). Gauss 判别法（高斯判别法）：
+$$
+\sum_{k=1}^{\infty} \left( \sum_{l=1}^{\infty} a_{kl} \right) = \lim_{m \to \infty} \left( \lim_{n \to \infty} S_{mn} \right)
+\quad \text{or} \quad
+\sum_{l=1}^{\infty} \left( \sum_{k=1}^{\infty} a_{kl} \right) = \lim_{n \to \infty} \left( \lim_{m \to \infty} S_{nm} \right).
+$$
 
-> 对于 $\displaystyle\sum_{k=1}^{\infty} f_k$，若
->
-> $$
-> \frac{f_k}{f_{k+1}} = 1 + \frac{\mu}{k} + O\left(\frac{1}{k^\lambda}\right), \quad \lambda > 1,
-> $$
->
-> 其中 $O\left(\dfrac{1}{k^\lambda}\right)$ 的含义见下文补充，$\mu \in \mathbb{C}$。
->
-> 则当 $\operatorname{Re} \mu > 1$ 时，$\displaystyle\sum_{k=1}^{\infty} f_k$ 绝对收敛；
->
-> 当 $\operatorname{Re} \mu \leq 1$ 时，$\displaystyle\sum_{k=1}^{\infty} |f_k|$ 发散。
+前者是先按列求和，再将各列之和相加（可称为逐列求和）；后者的求和次序则相反（可称为逐行求和）。
 
-/proof/
+需要注意，即使二重级数收敛，某些行或列的和也不一定存在，因此累次求和的和也不一定存在。
 
-> 下面证明高斯判别法：
->
-> 根据 $z \bar{z} = |z|^2$，有
->
-> $$
-> \begin{aligned}
-> \left| \frac{f_k}{f_{k+1}} \right| &= \sqrt{\left(1 + \frac{\mu}{k} + O\left(\frac{1}{k^\lambda}\right)\right)\left(1 + \frac{\bar{\mu}}{k} + O\left(\frac{1}{k^\lambda}\right)\right)}\\\\
-> &= \left(1 + \frac{\mu + \bar{\mu}}{k} + O\left(\frac{1}{k^\lambda}\right)\right)^{\frac{1}{2}}.
-> \end{aligned}
-> $$
->
-> 根据
->
-> $$
-> (1 + y)^\alpha = 1 + \alpha y + O(y^2), \quad |y| \to 0,
-> $$
->
-> 取 $\alpha = \dfrac{1}{2}$，得
->
-> $$
-> \left| \frac{f_k}{f_{k+1}} \right| = 1 + \frac{\mu + \bar{\mu}}{2k} + O\left(\frac{1}{k^\lambda}\right) = 1 + \frac{\operatorname{Re} \mu}{k} + O\left(\frac{1}{k^\lambda}\right).
-> $$
->
-> 设 $g_k$ 为 $p$ 级数，则有
->
-> $$
-> \frac{g_k}{g_{k+1}} = \frac{(k+1)^p}{k^p} = 1 + \frac{p}{k} + O\left(\frac{1}{k^2}\right),
-> $$
->
-> 上面两式相应项进行比较，再根据 $p$ 级数的性质，即得当 $\operatorname{Re} \mu > 1$ 时，$\displaystyle\sum_{k=1}^{\infty} |f_k|$ 收敛，因而 $\displaystyle\sum_{k=1}^{\infty} f_k$ 绝对收敛；
->
-> 当 $\operatorname{Re} \mu \leq 1$ 时，$\displaystyle\sum_{k=1}^{\infty} |f_k|$ 发散。
->
-> 更严谨的证法如下：
->
-> 当 $\operatorname{Re} \mu > 1$ 时，选取 $p \in (1, \operatorname{Re} \mu)$。显然存在 $m$，当 $k > m$ 时，有
->
-> $$
-> \begin{aligned}
-> \frac{|f_k|}{|f_{k+1}|} &= \left| \frac{f_k}{f_{k+1}} \right| = 1 + \frac{\operatorname{Re} \mu}{k} + O\left(\frac{1}{k^\lambda}\right) \\\\
-> &\geq 1 + \frac{p}{k} + O\left(\frac{1}{k^2}\right) = \frac{g_k}{g_{k+1}},
-> \end{aligned}
-> $$
->
-> 由于此时 $p > 1$，因此 $\displaystyle\sum_{k=1}^{\infty} g_k$ 收敛。根据第二类比较判别法，可知 $\displaystyle\sum_{k=1}^{\infty} |f_k|$ 收敛，因而 $\displaystyle\sum_{k=1}^{\infty} f_k$ 绝对收敛。
->
-> 当 $\operatorname{Re} \mu < 1$ 时，选取 $p \in (\operatorname{Re} \mu, 1)$。显然存在 $m$，当 $k > m$ 时，有
->
-> $$
-> \begin{aligned}
-> \frac{|f_k|}{|f_{k+1}|} &= \left| \frac{f_k}{f_{k+1}} \right| = 1 + \frac{\operatorname{Re} \mu}{k} + O\left(\frac{1}{k^\lambda}\right) \\\\
-> &\leq 1 + \frac{p}{k} + O\left(\frac{1}{k^2}\right) = \frac{g_k}{g_{k+1}},
-> \end{aligned}
-> $$
->
-> 由于此时 $p < 1$，因此 $\displaystyle\sum_{k=1}^{\infty} g_k$ 发散。根据第二类比较判别法，$\displaystyle\sum_{k=1}^{\infty} |f_k|$ 发散。
->
-> 当 $\operatorname{Re} \mu = 1$ 时，
->
-> $$
-> \left| \frac{f_k}{f_{k+1}} \right| = 1 + \frac{1}{k} + O\left(\frac{1}{k^\lambda}\right).
-> $$
->
-> 由 $h_k = O\left(\dfrac{1}{k^\lambda}\right)$ 的含义，知存在正实数 $M > 0$ 和正整数 $k_1$，当 $k > k_1$ 时，有
->
-> $$
-> |h_k| \leq M \frac{1}{k^\lambda}.
-> $$
->
-> 由于 $\lambda > 1$，可取 $\lambda' \in (1, \lambda)$，故存在正整数 $k_2$，当 $k > k_2$ 时，有
->
-> $$
-> M k^{\lambda'} < k^\lambda \quad \Rightarrow \quad M \frac{1}{k^\lambda} < \frac{1}{k^{\lambda'}},
-> $$
->
-> 由于 $\lambda' - 1 > 0$，因此存在 $k_3$，当 $k > k_3$ 时，$k^{\lambda' - 1} > \ln k$，故
->
-> $$
-> |h_k| \leq M \frac{1}{k^\lambda} < \frac{1}{k^{\lambda'}} < \frac{1}{k \ln k}.
-> $$
->
-> 取 $k_0 = \max\{k_1, k_2, k_3\}$，当 $k > k_3$ 时，有
->
-> $$
-> \left| \frac{f_k}{f_{k+1}} \right| = 1 + \frac{1}{k} + O\left(\frac{1}{k^\lambda}\right) < 1 + \frac{1}{k} + \frac{1}{k \ln k}.
-> $$
->
-> 由于
->
-> $$
-> \begin{aligned}
-> \left(1 + \frac{1}{k}\right)^{k+1} > e &\Rightarrow (k+1)\ln\left(1 + \frac{1}{k}\right) > 1  \\\\
-> &\Rightarrow (k+1)\ln(k+1) > k \ln k + \ln k + 1,
-> \end{aligned}
-> $$
->
-> 故
->
-> $$
-> \begin{aligned}
-> \left| \frac{f_k}{f_{k+1}} \right| &< 1 + \frac{1}{k} + \frac{1}{k \ln k} = \frac{k \ln k + \ln k + 1}{k \ln k}\\\\
-> &< \frac{(k+1)\ln(k+1)}{k \ln k} = \frac{1 / k \ln k}{1 / (k+1)\ln(k+1)},
-> \end{aligned}
-> $$
->
-> 由于 $d_k = \dfrac{1}{k \ln k}$ 对应级数发散，根据第二类比较判别法，可知 $\displaystyle\sum_{k=1}^{\infty} |f_k|$ 发散。
+而且，如果逐行和逐列求和的和都存在，这两个和数也不一定相等（即和数与求和次序有关）。
 
-### · 函数项级数
+二重级数的和是否依赖于求和方式，原则上与级数是否绝对收敛有关。如果二重级数绝对收敛，则级数各项的先后次序可以重新排列，因而不同求和方式得到相同的和数。
+
+## Part 2 幂级数
+
+### · 函数级数
 
 /Definition/
 
@@ -270,7 +207,6 @@ $$
 > $$
 > \int_l F(z)\,\mathrm{d}z = \int_l \sum_{k=1}^{\infty} f_k(z)\,\mathrm{d}z = \sum_{k=1}^{\infty} \int_l f_k(z)\,\mathrm{d}z.
 > $$
->
 
 (3). 逐项可导性（Weierstrass 定理、魏尔斯特拉斯定理）：
 
@@ -294,396 +230,212 @@ $M$ 判别法：复变函数项级数绝对且一致收敛的一种判别法
 
 ### · 幂级数
 
-/Definition/
+幂级数是通项为幂函数的函数项级数，
 
-> **幂级数**：
->
-> 形如 $\displaystyle\sum_{k=0}^{\infty} a_k (z - b)^k$ 的级数，称为幂级数。
->
-> 它是一个以 $b$ 为中心的幂级数，其中 $a_k (k = 0,1,2,\ldots)$ 是复常数：$a_k \in \mathbb{C}$，$k = 0,1,2,\ldots$。
+$$
+\sum_{n=0}^{\infty} c_n(z-a)^n = c_0 + c_1(z-a) + c_2(z-a)^2 + \cdots + c_n(z-a)^n + \cdots.
+$$
 
-**Abel 定理（阿贝尔定理）**：幂级数敛散性判别法
+这是一种特殊形式的函数项级数，也是最基本、最常用的一种函数项级数。
 
-> 若幂级数 $\displaystyle\sum_{k=0}^{\infty} a_k (z - b)^k$ 在某点 $z = z_0$ 处收敛，则它在 $|z - b| < |z_0 - b|$ 内（以 $b$ 为圆心，$|z_0 - b|$ 内为半径的圆区域内）绝对收敛，在更小的闭圆（$|z - b| \leq \rho$，$\rho < |z_0 - b|$）上一致收敛。
+**定理1** (Abel 第一定理)
+
+>如果级数 $\displaystyle\sum_{n=0}^{\infty} c_n(z-a)^n$ 在某点 $z_0$ 收敛，则在以 $a$ 点为圆心、$|z_0 - a|$ 为半径的圆内绝对收敛，而在圆 $|z - a| \le r$ ($r < |z_0 - a|$) 中一致收敛。
 
 /proof/
 
-> 因为 $\displaystyle\sum_{k=0}^{\infty} a_k (z - b)^k$ 在某点 $z = z_0$ 收敛，则由柯西判据，有
+> 因为 $\displaystyle\sum_{n=0}^{\infty} c_n(z-a)^n$ 在 $z_0$ 收敛，故一定满足必要条件
 >
 > $$
-> \lim_{k \to \infty} |a_k (z_0 - b)^k| = 0,
+> \lim_{n \to \infty} c_n(z_0 - a)^n = 0.
 > $$
 >
-> 则存在正数 $h$，使得
+> 因此对 $\forall q > 0$，存在正整数 $N$，使 $\forall n > N$，$|c_n(z_0 - a)^n| < q$。所以，
 >
 > $$
-> |a_k (z_0 - b)^k| < h, \quad k = 0,1,2,\ldots
+> |c_n(z-a)^n| = |c_n(z_0 - a)^n| \cdot \left|\frac{z-a}{z_0-a}\right|^n < q \left|\frac{z-a}{z_0-a}\right|^n, \quad n > N.
 > $$
 >
-> 因此
+> 因当 $\left|\dfrac{z-a}{z_0-a}\right| < 1$（即 $|z-a| < |z_0 - a|$）时，$\displaystyle\sum_{n=0}^{\infty} \left|\dfrac{z-a}{z_0-a}\right|^n$ 收敛，故
+>
+> $\displaystyle\sum_{n=0}^{\infty} c_n(z-a)^n$ 在圆 $|z-a| < |z_0 - a|$ 内绝对收敛
+>
+> 而当 $|z-a| \le r < |z_0 - a|$ 时，
 >
 > $$
-> |a_k (z - b)^k| = \left| a_k (z_0 - b)^k \cdot \frac{(z - b)^k}{(z_0 - b)^k} \right| < h \left| \frac{(z - b)^k}{(z_0 - b)^k} \right|.
+> |c_n(z-a)^n| \le q \frac{r^n}{|z_0 - a|^n}, \quad n > N,
 > $$
 >
-> 在以 $b$ 为圆心，$|z_0 - b|$ 内为半径的圆区域内，有 $|z - b| < |z_0 - b|$，故由上式及所考察闭圆区域 $|z - b| \leq \rho$，有
+> 由于常数项级数 $\displaystyle\sum_{n=0}^{\infty} \dfrac{r^n}{|z_0 - a|^n}$ 收敛，故
 >
-> $$
-> |a_k (z - b)^k| < h \frac{\rho^k}{|z_0 - b|^k}.
-> $$
+> $\displaystyle\sum_{n=0}^{\infty} c_n(z-a)^n$ 在圆 $|z-a| \le r \ (< |z_0 - a|)$ 中一致收敛.
 >
-> 由于 $\rho < |z_0 - b|$，因而有 $\left| \dfrac{\rho}{z_0 - b} \right| < 1$，所以 $\displaystyle\sum_{k=0}^{\infty} \left| \dfrac{\rho}{z_0 - b} \right|^k$ 绝对收敛。
->
-> 根据上式以及 $M$ 判别法（取 $M_k = \left| \dfrac{\rho}{z_0 - b} \right|^k$，与 $z$ 无关），可知 $\displaystyle\sum_{k=0}^{\infty} a_k (z - b)^k$ 在更小的闭圆（$|z - b| \leq \rho$，$\rho < |z_0 - b|$）上一致收敛。
+> Abel 第一定理简称为 Abel 定理。
 
-**推论**：如果幂级数 $\displaystyle\sum_{k=0}^{\infty} a_k (z - b)^k$ 在某点 $z = z_0$ 处发散，则该幂级数在 $|z - b| > |z_0 - b|$ 上处处发散。
+**推论**
 
-> 该推论可用反证法简单证明。
+> 若级数 $\displaystyle\sum_{n=0}^{\infty} c_n(z-a)^n$ 在某点 $z_1$ 发散，则在圆 $|z-a| > |z_1 - a|$ 外处处发散。
 
-/Definition/
+Abel 定理及其推论意味着，在幂级数 $\displaystyle\sum_{n=0}^{\infty} c_n(z-a)^n$ 的收敛点与发散点之间存在一个分界线，而且这个分界线一定是圆周。圆内区域称为幂级数的**收敛圆**。收敛圆的圆心一定是 $z = a$ 点，收敛圆的半径称为**收敛半径**。
 
-> **收敛圆和收敛半径**：
+作为特殊情况，收敛半径可以是 0，即收敛圆退化为一个点。除 $z = a$ 点外，幂级数在全复平面处处发散；也可以是 $\infty$，收敛圆就是全复平面。幂级数在全复平面收敛，但在 $\infty$ 点肯定发散，除非此幂级数只有常数项一项。
+
+求幂级数的收敛半径的办法，常用的有两个：
+
+> (1) Cauchy-Hadamard 公式。根据 Cauchy 判别法，
 >
-> 从以上定理及其推论可以看出，幂级数的收敛区域和发散区域是不可能相间的。必然存在一个以 $b$ 为圆心、以 $R$（$0 \leq R < \infty$）为半径的圆，在圆内级数绝对收敛，而在圆外级数发散。这个圆称为该幂级数的收敛圆，而 $R$ 称为它的收敛半径。
-
-Abel 定理及其推论并未确定收敛圆周上的收敛性，收敛圆周上幂级数的收敛性，需要另外讨论。可能会出现在圆周上一些点收敛，另一些点发散的情况。
-
-另外，可以看出，如果对于某个以 $b$ 为圆心，以 $R$（$0 \leq R < \infty$）为半径的圆，在圆周上存在两个不同点，在一点上幂级数收敛，在另一点发散，则该圆就是收敛圆的圆周。
-
-/Definition/
-
-> **幂级数的收敛半径**：
+> 当 $\displaystyle\limsup_{n \to \infty} |c_n(z-a)^n|^{1/n} < 1$ 即 $|z-a| < \dfrac{1}{\displaystyle\limsup_{n \to \infty} |c_n|^{1/n}}$ 时，级数绝对收敛，
 >
-> 根据达朗贝尔比值判别法，可判断幂级数的收敛半径。设 $f_k = a_k (z - b)^k$。
+> 当 $\displaystyle\limsup_{n \to \infty} |c_n(z-a)^n|^{1/n} > 1$ 即 $|z-a| > \dfrac{1}{\displaystyle\limsup_{n \to \infty} |c_n|^{1/n}}$ 时，级数发散。
 >
-> 因为 $\lim_{k \to \infty} \left| \dfrac{f_{k+1}}{f_k} \right| = \lim_{k \to \infty} \left| \dfrac{a_{k+1}}{a_k} \right| |z - b|$，所以由比值判别法，
->
-> 当 $\lim_{k \to \infty} \left| \dfrac{a_{k+1}}{a_k} \right| |z - b| < 1$ 时，即 $|z - b| < \lim_{k \to \infty} \left| \dfrac{a_k}{a_{k+1}} \right|$ 时，级数绝对收敛；
->
-> 当 $\lim_{k \to \infty} \left| \dfrac{a_{k+1}}{a_k} \right| |z - b| > 1$ 时，即 $|z - b| > \lim_{k \to \infty} \left| \dfrac{a_k}{a_{k+1}} \right|$ 时，级数发散。
->
-> 因此，幂级数的收敛圆以 $b$ 为圆心，收敛半径为
+> 因此，幂级数 $\displaystyle\sum_{n=0}^{\infty} c_n(z-a)^n$ 的收敛半径是
 >
 > $$
-> R = \lim_{k \to \infty} \left| \frac{a_k}{a_{k+1}} \right|.
+> \boxed{R = \frac{1}{\limsup_{n \to \infty} |c_n|^{1/n}} = \limsup_{n \to \infty} \left|\frac{1}{c_n}\right|^{1/n}.}
 > $$
 >
-> 
->
-> 另外，也可以根据根式判别法求收敛半径，这是收敛圆半径的一种等价求法。与上面做法类似，可得
+> (2) 根据 d'Alembert 判别法，如果
 >
 > $$
-> R = \lim_{k \to \infty} \frac{1}{\sqrt[k]{|a_k|}}.
+> \lim_{n \to \infty} \left|\frac{c_{n+1}(z-a)^{n+1}}{c_n(z-a)^n}\right| = |z-a| \lim_{n \to \infty} \left|\frac{c_{n+1}}{c_n}\right|
 > $$
+>
+> 存在，则
+>
+> 当 $\displaystyle\lim_{n \to \infty} \left|\dfrac{c_{n+1}(z-a)^{n+1}}{c_n(z-a)^n}\right| < 1$ 即 $|z-a| < \displaystyle\lim_{n \to \infty} \left|\dfrac{c_n}{c_{n+1}}\right|$ 时，级数绝对收敛，
+>
+> 当 $\displaystyle\lim_{n \to \infty} \left|\dfrac{c_{n+1}(z-a)^{n+1}}{c_n(z-a)^n}\right| > 1$ 即 $|z-a| > \displaystyle\lim_{n \to \infty} \left|\dfrac{c_n}{c_{n+1}}\right|$ 时，级数发散。
+>
+> 因此，幂级数 $\displaystyle\sum_{n=0}^{\infty} c_n(z-a)^n$ 的收敛半径是
+>
+> $$
+> \boxed{R = \lim_{n \to \infty} \left|\frac{c_n}{c_{n+1}}\right|.}
+> $$
+>
+
+这两个求收敛半径的公式各有优缺点。Cauchy-Hadamard 公式是普遍成立的，d'Alembert 公式则是有条件的（要求极限 $\displaystyle\lim_{n \to \infty} |c_n/c_{n+1}|$ 存在）。但当后者能适用时，往往计算更简单。
+
+由于幂级数 $\displaystyle\sum_{n=0}^{\infty} c_n(z-a)^n$ 的每一项在复平面 $\mathbb{C}$ 内都是 $z$ 的解析函数，Abel 定理又告诉我们，幂级数在其收敛圆内闭一致收敛，因此，根据 Weierstrass 定理，幂级数在收敛圆内代表了一个解析函数，可以对幂级数逐项积分或逐项求导，而收敛半径不变：
+
+$$
+\int_{z_0}^z \sum_{n=0}^{\infty} c_n(z-a)^n \mathrm{d}z = \sum_{n=0}^{\infty} c_n \int_{z_0}^z (z-a)^n \mathrm{d}z
+$$
+$$
+= \sum_{n=0}^{\infty} \frac{c_n}{n+1} \left[(z-a)^{n+1} - (z_0-a)^{n+1}\right],
+$$
+
+$$
+\frac{\mathrm{d}}{\mathrm{d}z} \left[\sum_{n=0}^{\infty} c_n(z-a)^n\right] = \sum_{n=0}^{\infty} c_n \frac{\mathrm{d}(z-a)^n}{\mathrm{d}z} = \sum_{n=0}^{\infty} c_{n+1}(n+1)(z-a)^n.
+$$
+
+幂级数在收敛圆内一定收敛，在收敛圆外一定发散。在收敛圆的圆周上，级数可能在所有点都收敛，可能在所有点都发散，也可能在一部分点收敛，在另一部分点发散。例如：
+
+> (1). $1 + z + \cdots + z^n + \cdots$ 在 $|z| = 1$ 上处处发散；
+>
+> (2). $\dfrac{z}{1} + \dfrac{z^2}{2} + \cdots + \dfrac{z^n}{n} + \cdots$ 在 $|z| = 1$ 上除 $z = 1$ 外均收敛，而在 $z = 1$ 点发散；
+>
+> (3). $\dfrac{z^2}{1 \cdot 2} + \dfrac{z^3}{2 \cdot 3} + \cdots + \dfrac{z^n}{(n-1)n} + \cdots$ 在 $|z| = 1$ 上处处收敛。
+
+但不论哪种情况，幂级数的收敛圆的圆周上总肯定有和函数的奇点。特别需要说明，即使在和函数的奇点处，幂级数仍然可能收敛。读者可以求出上面三个级数的和函数，验证它们在 $z = 1$ 点不解析。
+
+当幂级数 $\displaystyle\sum_{n=0}^{\infty} c_n(z-a)^n$ 在收敛圆周上某点 $z_0$ 收敛时，其和与级数在收敛圆内的和函数之间的关系，有下面的定理。
+
+**定理2** (Abel 第二定理)
+
+> 若幂级数 $\displaystyle\sum_{n=0}^{\infty} c_n(z-a)^n$ 在收敛圆内收敛到 $f(z)$，且在收敛圆周上某点 $z_0$ 也收敛，和为 $S(z_0)$，则当 $z$ 由收敛圆内趋于 $z_0$ 时，只要保持在以 $z_0$ 为顶点、张角为 $2\phi < \pi$ 的范围内，$f(z)$ 就一定趋于 $S(z_0)$。
+
+需要明确一下（当收敛半径为有限值时）“和函数的奇点（或解析性）”这种说法的含义。毫无疑问，幂级数在收敛圆内收敛，在收敛圆外发散，因而幂级数只在收敛圆内有定义，并且代表了一个解析函数。另一方面，就和函数而言，尽管幂级数是在收敛圆内才收敛到和函数，但是，我们从来不会认为这个函数只是局限于收敛圆内才有定义（少数函数除外）。
+
+事实上，幂级数只不过是这个函数在收敛圆内的一种表达形式，在其他区域内可以有其他表达形式。我们总会自觉或不自觉地在整个定义域上来考察它的解析性。我们也正是在这个前提下，才能谈论函数在收敛圆周上乃至收敛圆外的奇点。
+
+## Part 3 反常积分解析性
+
+有关函数级数解析性的结论，也可以用来讨论含参量的反常积分的解析性。
+
+/Theorem/
+
+> 不妨设
+>
+> (1) $f(t,z)$ 是 $t$ 和 $z$ 的连续函数，$t > a$，$z \in \overline{G}$，
+>
+> (2) 对于任何 $t \ge a$，$f(t,z)$ 是 $\overline{G}$ 中的单值解析函数，
+>
+> (3) 积分 $\displaystyle\int_a^{\infty} f(t,z)\,\mathrm{d}t$ 在 $\overline{G}$ 中一致收敛，即 $\forall \varepsilon > 0$，$\exists T(\varepsilon)$，当 $T_2 > T_1 > T(\varepsilon)$ 时，对 $\forall z \in \overline{G}$ 都有
+> $$
+> \left|\int_{T_1}^{T_2} f(t,z)\,\mathrm{d}t\right| < \varepsilon,
+> $$
+>
+> 则 $F(z) = \displaystyle\int_a^{\infty} f(t,z)\,\mathrm{d}t$ 在 $G$ 内是解析的，且
+>
+> $$
+> F'(z) = \int_a^{\infty} \dfrac{\partial f(t,z)}{\partial z}\,\mathrm{d}t.
+> $$
+>
+
+/proof/
+
+> 任取一个单调无界序列 $\{a_n\}$，
+> $$
+> a_0 = a < a_1 < a_2 < a_3 < \cdots < a_n < a_{n+1} < \cdots, \quad \displaystyle\lim_{n \to \infty} a_n = \infty.
+> $$
+>
+> 令 $u_n(z) = \displaystyle\int_{a_n}^{a_{n+1}} f(t,z)\,\mathrm{d}t$，则根据定理 3.3（§3.6，含参量定积分的解析性）可知，$u_n(z)$ 是 $G$ 内的单值解析函数。又因为
+>
+> $$
+> F(z) = \displaystyle\sum_{n=0}^{\infty} u_n(z) = \int_a^{\infty} f(t,z)\,\mathrm{d}t
+> $$
+>
+> 在 $\overline{G}$ 中一致收敛，故根据 Weierstrass 定理，知 $F(z)$ 在 $G$ 内解析，且
+>
+> $$
+> F'(z) = \displaystyle\sum_{n=0}^{\infty} u_n'(z) = \int_a^{\infty} \dfrac{\partial f(t,z)}{\partial z}\,\mathrm{d}t.
+> $$
+>
+
+对于含参量的积积分也可以类似地处理。
+
+在应用这个定理时，需要判断无穷积分（或瑕积分）是否一致收敛。常用的判别法是：如果存在函数 $\phi(t)$，使得 $\exists T > a$，对 $\forall t > T$，$\forall z \in \overline{G}$，都有 $|f(t,z)| < \phi(t)$，而且 $\displaystyle\int_a^{\infty} \phi(t)\,\mathrm{d}t$ 收敛，则 $\displaystyle\int_a^{\infty} f(t,z)\,\mathrm{d}t$ 在 $\overline{G}$ 中绝对而且一致收敛。
 
 /example/
 
-> 求如下级数的收敛半径，并讨论其收敛圆圆周上的敛散性：
+> 作为含参量的无穷积分的一个例子，下面讨论积分
+> $$
+> F(z) = \int_0^{\infty} \mathrm{e}^{-t^2} \cos 2zt\,\mathrm{d}t.
+> $$
 >
-> (1).
-> $$
-> \sum_{k=1}^{\infty} \dfrac{1}{k} z^k
-> $$
-> (2).
-> $$
-> \sum_{k=1}^{\infty} \dfrac{1}{k^2} z^k
-> $$
-> (3).
-> $$
-> \sum_{k=0}^{\infty} \dfrac{1}{2^{2k}} z^k
-> $$
 
 /proof/
 
-> (1) 由题设，$a_k = \dfrac{1}{k}$，则  
+> 这个积分中的被积函数显然满足定理的前两个条件，而且因为对于复数 $z = x + \mathrm{i}y$，有
 > $$
-> R = \lim_{k \to \infty} \frac{a_k}{a_{k+1}} = \lim_{k \to \infty} \frac{\frac{1}{k}}{\frac{1}{k+1}} = \lim_{k \to \infty} \frac{k+1}{k} = 1.
-> $$
-> 收敛圆为 $|z| = 1$。
->
-> 在 $|z| = 1$ 上时，若 $z = 1$，原级数成为调和级数，此时级数发散；若 $z = -1$，级数变为 $\displaystyle\sum_{k=1}^{\infty} \dfrac{(-1)^k}{k}$，是交错级数。由莱布尼茨判别法，由于 $\left| \dfrac{(-1)^k}{k} \right| \to 0$（$k \to \infty$），可知此时级数收敛。
->
-> 对于圆周上其它点对应级数敛散性的讨论，需要用到数学分析课程中的一个例子。
->
-> 我们知道，复级数 $\displaystyle\sum_{k=1}^{\infty} z_k$ 收敛当且仅当 $\displaystyle\sum_{k=1}^{\infty} \operatorname{Re} z_k$ 和 $\displaystyle\sum_{k=1}^{\infty} \operatorname{Im} z_k$ 均收敛。因 $|z| = 1$，可设 $z = e^{i\varphi}$，$\varphi \in [0, 2\pi)$。于是有
->
-> $$
-> \sum_{k=1}^{\infty} \frac{z^k}{k} = \sum_{k=1}^{\infty} \frac{e^{ik\varphi}}{k} = \sum_{k=1}^{\infty} \frac{\cos k\varphi}{k} + i \sum_{k=1}^{\infty} \frac{\sin k\varphi}{k}.
+> |\cos 2zt| = \sqrt{\cosh^2 2yt - \cos^2 2xt} \le \cosh 2|yt| \le \mathrm{e}^{2|yt|}.
 > $$
 >
-> 问题转化为 $\displaystyle\sum_{k=1}^{\infty} \dfrac{\cos k\varphi}{k}$ 和 $\displaystyle\sum_{k=1}^{\infty} \dfrac{\sin k\varphi}{k}$ 的敛散性问题。
->
-> 我们仅考虑 $z \ne 1$ 的情况，此时 $\varphi \ne 0$。根据数学分析的知识$^{11}$可知 $\varphi \ne 0$ 时，以上两个级数均收敛。所以 $\displaystyle\sum_{k=1}^{\infty} \dfrac{1}{k} z^k$ 在复平面上的单位圆除去 $z = 1$ 是收敛的。
->
-> (2) 由题设，$a_k = \dfrac{1}{k^2}$，则  
-> $$
-> R = \lim_{k \to \infty} \frac{a_k}{a_{k+1}} = \lim_{k \to \infty} \frac{\frac{1}{k^2}}{\frac{1}{(k+1)^2}} = \lim_{k \to \infty} \frac{(k+1)^2}{k^2} = 1.
-> $$
-> 收敛圆为 $|z| = 1$。
->
-> 在 $|z| = 1$ 时，$\displaystyle\sum_{k=1}^{\infty} \left| \dfrac{1}{k^2} z^k \right| = \displaystyle\sum_{k=1}^{\infty} \dfrac{1}{k^2}$ 收敛，所以 $\displaystyle\sum_{k=1}^{\infty} \dfrac{1}{k^2} z^k$ 在该圆周上处处绝对收敛，因而处处收敛。
->
-> (3) 由题设，$a_k = \dfrac{1}{2^{2k}}$，则  
-> $$
-> R = \lim_{k \to \infty} \frac{1}{\sqrt[k]{|a_k|}} = \lim_{k \to \infty} \frac{1}{\sqrt[k]{\frac{1}{2^{2k}}}} = \lim_{k \to \infty} \frac{1}{\left( \frac{1}{2^{2k}} \right)^{1/k}} = \lim_{k \to \infty} \frac{1}{\frac{1}{2^2}} = 4.
-> $$
-> 因此收敛圆为 $|z| = 4$。
->
-> 在 $|z| = 4$ 上，可设 $z = 4e^{i\varphi}$，$\varphi \in [0, 2\pi)$，代入级数，利用等比数列求和公式求其前 $k$ 项和，得
+> 所以，对于 $z$ 复平面内任意一个有界闭区域中的点，都有 $|\operatorname{Im} z| < y_0$，于是
 >
 > $$
-> F_k =
-> \begin{cases}
-> \displaystyle \frac{1 - e^{ik\varphi}}{1 - e^{i\varphi}}, & \varphi \ne 0, \\\\
-> k, & \varphi = 0.
-> \end{cases}
+> \left|\mathrm{e}^{-t^2} \cos 2zt\right| < \mathrm{e}^{-t^2 + 2y_0 t}, \quad t > 0.
 > $$
 >
-> 当 $\varphi = 0$ 时，序列 $\{F_k\}$ 在 $k \to \infty$ 时不收敛；当 $\varphi \ne 0$ 且 $\varphi = 2\pi \dfrac{p}{q}$（$\dfrac{p}{q}$ 表示有理数）时，$F_k$ 是周期序列，在 $k \to \infty$ 时不收敛；当 $\varphi = 2\pi a$，$a$ 为无理数时，$e^{ik\varphi}$ 代表的向量在复平面上随着 $k$ 增大一直绕原点旋转，不可能收敛，故序列 $\{F_k\}$ 在 $k \to \infty$ 时不收敛。
->
-> 因此 $\displaystyle\sum_{k=0}^{\infty} \dfrac{1}{2^{2k}} z^k$ 在 $|z| = 4$ 上处处发散。
-
-**幂级数的一致收敛性带来的性质**：
-
-> 幂级数在比收敛圆稍小的闭圆上一致收敛，故具有逐项可积性和逐项可导性。易于证明，逐项积分和微分后，得到新的前后项系数比的模的极限没变：
+> 而积分 $\displaystyle\int_0^{\infty} \mathrm{e}^{-t^2 + 2y_0 t}\,\mathrm{d}t$ 收敛，所以含参量的无穷积分 (4.28) 一致收敛，因此，这个积分作为 $z$ 的函数，在 $z$ 复平面内的任意一个有界区域内解析。更进一步，就有
 >
 > $$
-> \lim_{k \to \infty} \left| \frac{a_k}{a_{k+1}} \right| = \lim_{k \to \infty} \left| \frac{k a_k}{(k+1)a_{k+1}} \right| = \lim_{k \to \infty} \left| \frac{\frac{a_k}{k+1}}{\frac{a_{k+1}}{k+2}} \right|,
+> F'(z) = -\int_0^{\infty} \mathrm{e}^{-t^2} 2t \sin 2zt\,\mathrm{d}t
+> $$
+>
+> $$
+> = \left.\mathrm{e}^{-t^2} \sin 2zt\right|_0^{\infty} - 2z \int_0^{\infty} \mathrm{e}^{-t^2} \cos 2zt\,\mathrm{d}t = -2z F(z).
+> $$
+>
+> 解这个微分方程，就可以得到 $F(z) = C \mathrm{e}^{-z^2}$，其中常数 $C$ 是
+>
+> $$
+> C = F(0) = \int_0^{\infty} \mathrm{e}^{-t^2}\,\mathrm{d}t = \dfrac{1}{2} \sqrt{\pi},
+> $$
+>
+> 这样，最后就得到
+>
+> $$
+> \int_0^{\infty} \mathrm{e}^{-t^2} \cos 2zt\,\mathrm{d}t = \dfrac{1}{2} \sqrt{\pi} \mathrm{e}^{-z^2}.
 > $$
 
-/example/
-
-> 求下列无穷级数
->
-> $$
-> S(t) = \sum_{n=2}^{\infty} \frac{e^{-nt}}{n^2 - 1}, \quad t > 0.
-> $$
-
-/proof/
-
-> 已知
-> $$
-> S(t) = \frac{1}{2} \sum_{n=2}^{\infty} \left( \frac{e^{-nt}}{n-1} - \frac{e^{-nt}}{n+1} \right).
-> $$
->
-> 考察积分
->
-> $$
-> \int_t^{\infty} e^{-(n+1)x} \,\mathrm{d}x = -\frac{1}{n+1} e^{-(n+1)x} \Big|_t^{\infty} = \frac{1}{n+1} e^{-(n+1)t},
-> $$
->
-> $$
-> \int_t^{\infty} e^{-(n-1)x} \,\mathrm{d}x = -\frac{1}{n-1} e^{-(n-1)x} \Big|_t^{\infty} = \frac{1}{n-1} e^{-(n-1)t},
-> $$
->
-> 利用以上二式，有
->
-> $$
-> \begin{aligned}
-> S(t) &= \frac{1}{2} \sum_{n=2}^{\infty} \left( \frac{e^{-nt}}{n-1} - \frac{e^{-nt}}{n+1} \right) \\\\
-> &=\frac{1}{2} \sum_{n=2}^{\infty} \left( e^{-t} \int_t^{\infty} e^{-(n-1)x} \,\mathrm{d}x + e^{t} \int_t^{\infty} e^{-(n+1)x} \,\mathrm{d}x \right),
-> \end{aligned}
-> $$
->
-> 由于 $\displaystyle\sum_{n=2}^{\infty} e^{-(n \pm 1)x}$ 在 $x > 0$ 时一致收敛（利用等比数列求和公式），因此上式积分和求和次序可以交换。因而有
->
-> $$
-> \begin{aligned}
-> S(t) &= \frac{1}{2} \left[ \int_t^{\infty} \left( e^{-t} \sum_{n=2}^{\infty} e^{-(n-1)x} + e^{t} \sum_{n=2}^{\infty} e^{-(n+1)x} \right) \,\mathrm{d}x \right] \\\\
-> &= \frac{1}{2} \left[ \int_t^{\infty} \left( e^{-t} \frac{e^{-x}}{1 - e^{-x}} + e^{t} \frac{e^{3x}}{1 - e^{x}} \right) \,\mathrm{d}x \right].
-> \end{aligned}
-> $$
->
-> 令 $y = e^{-x}$。代入上式可得
->
-> $$
-> \begin{aligned}
-> S(t) &= \frac{1}{2} \left[ \int_{e^{-t}}^{0} e^{-t} \frac{1}{1 - y} \,\mathrm{d}y + \int_{e^{-t}}^{0} e^{t} \frac{y^2}{1 - y} \,\mathrm{d}y \right] \\\\
-> &= \ln(1 - e^{-t}) \sinh t + \frac{e^{-t}}{4} + \frac{1}{2}.
-> \end{aligned}
-> $$
-
-### · 泰勒级数
-
-/Definition/
-
-> **Taylor 定理（泰勒定理）**：
->
-> 设 $f(z)$ 在区域 $\sigma$ 内解析，则在 $\sigma$ 内任意一点 $z = b$ 的邻域 $|\zeta - b| < R$（含于 $\sigma$ 内），则 $f(z)$ 可以展开为幂级数
->
-> $$
-> f(z) = \sum_{k=0}^{\infty} a_k (z - b)^k,
-> $$
->
-> 称为 Taylor 级数（泰勒级数）。其中系数
->
-> $$
-> a_k = \frac{1}{k!} f^{(k)}(b), \quad k = 0,1,2,\ldots,
-> $$
-> 称为泰勒系数。此展开是唯一的。
-
-/proof/
-
-> 设 $z$ 为圆 $|\zeta - b| = R$ 内一给定点，则总可以找到一个更小的圆 $l: |\zeta - b| = \rho < R$，使 $z$ 也在此圆的内部。使用柯西公式，得
->
-> $$
-> f(z) = \frac{1}{2\pi i} \oint_l \frac{f(\zeta)}{\zeta - z} \,\mathrm{d}\zeta,
-> $$
->
-> 然后对 $\dfrac{1}{\zeta - z}$ 进行变形和展开，有（注意 $|z - b| < |\zeta - b|$，即 $\left| \frac{z - b}{\zeta - b} \right| < 1$）
->
-> $$
-> \frac{1}{\zeta - z} = \frac{1}{\zeta - b - (z - b)} = \left( \frac{1}{\zeta - b} \right) \frac{1}{1 - \left( \frac{z - b}{\zeta - b} \right)} = \frac{1}{\zeta - b} \sum_{k=0}^{\infty} \left( \frac{z - b}{\zeta - b} \right)^k,
-> $$
->
-> 代入 $\dfrac{f(\zeta)}{\zeta - z}$，可得
->
-> $$
-> \begin{aligned}
-> \frac{f(\zeta)}{\zeta - z} &= \frac{f(\zeta)}{\zeta - b} \sum_{k=0}^{\infty} \left( \frac{z - b}{\zeta - b} \right)^k \\\\
-> &= \sum_{k=0}^{\infty} \frac{f(\zeta)}{(\zeta - b)^{k+1}} (z - b)^k,
-> \end{aligned}
-> $$
->
-> 这说明 $\displaystyle\sum_{k=0}^{\infty} \dfrac{f(\zeta)}{(\zeta - b)^{k+1}} (z - b)^k$ 在 $l$ 内一致收敛于 $\dfrac{f(\zeta)}{\zeta - z}$，因此可以交换积分和求和的次序。故
->
-> $$
-> \begin{aligned}
-> f(z) &= \frac{1}{2\pi i} \sum_{k=0}^{\infty} \oint_l \frac{f(\zeta)}{(\zeta - b)^{k+1}} \,\mathrm{d}\zeta (z - b)^k \\\\
-> &= \sum_{k=0}^{\infty} \left( \frac{1}{2\pi i} \oint_l \frac{f(\zeta)}{(\zeta - b)^{k+1}} \,\mathrm{d}\zeta \right) (z - b)^k,
-> \end{aligned}
-> $$
->
-> 根据解析函数的导数公式，有 $f^{(k)}(b) = \dfrac{k!}{2\pi i} \displaystyle\oint_l \dfrac{f(\zeta)}{(\zeta - b)^{k+1}} \,\mathrm{d}\zeta$，代入上式，有
->
-> $$
-> f(z) = \sum_{k=0}^{\infty} \frac{f^{(k)}(b)}{k!} (z - b)^k.
-> $$
->
-> 所以 $a_k = \dfrac{1}{k!} f^{(k)}(b)$，$k = 0,1,2,\ldots$。下面证明唯一性。
->
-> 设有两个泰勒级数代表同一个解析函数
->
-> $$
-> f(z) = \sum_{k=0}^{\infty} a_k (z - b)^k = \sum_{k=0}^{\infty} a'_k (z - b)^k,
-> $$
->
-> 令 $z = b$，得到 $a_0 = a'_0$。对上式求导（注意一致收敛带来的逐项可导性），有
->
-> $$
-> f'(z) = \sum_{k=1}^{\infty} k a_k (z - b)^{k-1} = \sum_{k=1}^{\infty} k a'_k (z - b)^{k-1},
-> $$
->
-> 再令 $z = b$，得到 $a_1 = a'_1$。仿照这种方法一直做下去，即可证明对于所有的 $k (k = 0,1,2,\ldots)$ 均有 $a_k = a'_k$，因此展开是唯一的。
-
-**常用的展开公式**：
-
-> (1). 最简单的有理分式展开式：
->
-> $$
-> \frac{1}{1 - z} = \sum_{k=0}^{\infty} z^k, \quad |z| < 1.
-> $$
->
-> $$
-> \frac{1}{1 + z} = \sum_{k=0}^{\infty} (-1)^k z^k, \quad |z| < 1.
-> $$
->
-> (2). 指数函数展开式：
->
-> $$
-> e^z = \sum_{k=0}^{\infty} \frac{z^k}{k!}, \quad |z| < \infty.
-> $$
->
-> (3). 三角函数展开式：
->
-> $$
-> \sin z = \sum_{k=0}^{\infty} \frac{(-1)^k z^{2k+1}}{(2k+1)!}, \quad |z| < \infty.
-> $$
->
-> $$
-> \cos z = \sum_{k=0}^{\infty} \frac{(-1)^k z^{2k}}{(2k)!}, \quad |z| < \infty.
-> $$
->
-> (4). 对数函数展开式：
->
-> $$
-> \ln(1 - z) = -\sum_{k=1}^{\infty} \frac{z^k}{k}, \quad |z| < 1.
-> $$
->
-> $$
-> \ln(1 + z) = \sum_{k=1}^{\infty} \frac{(-1)^{k-1} z^k}{k}, \quad |z| < 1.
-> $$
-
-/example/ 求 $\dfrac{1}{1 + z + z^2}$ 在 $z = 0$ 的邻域的泰勒展开。
-
-/proof/
-
-> 原式 $= \dfrac{1 - z}{1 - z^3} = (1 - z) \displaystyle\sum_{k=0}^{\infty} (z^3)^k$，收敛域为 $|z^3| < 1$，即 $|z| < 1$。则
->
-> $$
-> \frac{1}{1 + z + z^2} = \sum_{k=0}^{\infty} (z^{3k} - z^{3k+1}).
-> $$
-
-/Definition/
-
-> **柯西乘积（Cauchy product）**：
->
-> 对于两个绝对收敛的级数 $\displaystyle\sum_{n=0}^{\infty} a_n$ 和 $\displaystyle\sum_{n=0}^{\infty} b_n$，其柯西乘积定义为
->
-> $$
-> \left( \sum_{n=0}^{\infty} a_n \right) \left( \sum_{n=0}^{\infty} b_n \right) = \sum_{n=0}^{\infty} c_n,
-> $$
->
-> 其中
->
-> $$
-> c_n = \sum_{k=0}^{n} a_k b_{n-k}.
-> $$
->
-> 对于函数项级数 $\displaystyle\sum_{n=0}^{\infty} a_n z^n$ 和 $\displaystyle\sum_{n=0}^{\infty} b_n z^n$，其柯西乘积为
->
-> $$
-> \left( \sum_{n=0}^{\infty} a_n z^n \right) \left( \sum_{n=0}^{\infty} b_n z^n \right) = \sum_{n=0}^{\infty} c_n z^n.
-> $$
-
-**无穷级数乘积的敛散性**：
-
-> 设 $\{a_n\}$ 和 $\{b_n\}$ 是两个实序列或者复数序列。如果
->
-> $$
-> \sum_{n=0}^{\infty} a_n = A, \quad \sum_{n=0}^{\infty} b_n = B,
-> $$
->
-> 且其中一个级数绝对收敛，则其柯西乘积收敛于 $AB$，即
->
-> $$
-> \sum_{n=0}^{\infty} c_n = AB.
-> $$
->
-> 该定理称为 Mertens 定理（梅滕斯定理）。
->
-> 如果 $\displaystyle\sum_{n=0}^{\infty} a_n$ 和 $\displaystyle\sum_{n=0}^{\infty} b_n$ 均绝对收敛，则其乘积（无论其各项如何排序和组合）也绝对收敛。
-
-/example/ 求 $\dfrac{1}{1 - z^2}$ 在 $|z| < 1$ 时以 $z = 0$ 为中心的泰勒展开。
-
-/proof/
-
-> **方法 1**：当 $|z| < 1$ 时，
->
-> $$
-> \frac{1}{1 - z^2} = \sum_{k=0}^{\infty} (z^2)^k = \sum_{k=0}^{\infty} z^{2k}.
-> $$
->
-> **方法 2**：
->
-> $$
-> \frac{1}{1 - z^2} = \frac{1}{2} \left( \frac{1}{1 - z} + \frac{1}{1 + z} \right) = \frac{1}{2} \left( \sum_{k=0}^{\infty} z^k + \sum_{k=0}^{\infty} (-1)^k z^k \right) = \sum_{k=0}^{\infty} z^{2k}.
-> $$
->
-> **方法 3**：还可以用柯西乘积表的方法
->
-> $$
-> \frac{1}{1 - z^2} = \left( \frac{1}{1 - z} \right) \left( \frac{1}{1 + z} \right) = \left( \sum_{k=0}^{\infty} z^k \right) \left( \sum_{k=0}^{\infty} (-1)^k z^k \right),
-> $$
-
-## Part 2 Laurent 级数
