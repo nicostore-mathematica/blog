@@ -66,6 +66,11 @@ list:
   link: https://blog.qiuguang.top/
   avatar: https://blog.qiuguang.top/avatar.jpg
   desc: 追着光梦游
+
+- name: 起汐のBlog
+  link: https://arckive.link/
+  avatar: https://arckive.link/images/avatar_hu7f2c2fe951ac8f9f9491bfd5a63f9e93_322812_300x0_resize_box_3.png
+  desc: このままずっと遠くに行けたらいいのにな
 ---
 
 目前来说本站并不会卡任何友链喵，还是希望能多多和大家交朋友！

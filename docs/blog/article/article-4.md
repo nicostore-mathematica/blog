@@ -5,6 +5,10 @@ permalink: /article/article-4/
 changelog: false
 ---
 
+> [!warning]
+>
+> 本文含有巨量负面情绪，请谨慎阅读
+
 书接上文。
 
 > “法棍老师直到怎么样达到自己想要的生活吗”

@@ -3,7 +3,7 @@
   "README": 230,
   "random": 71,
   "notes": 115,
-  "links": 418,
+  "links": 430,
   "about": 210,
   "RoboMaster": {
     "index": 791
@@ -39,7 +39,7 @@
     "integral-25": 6,
     "integral-24": 6442,
     "integral-23": 6137,
-    "integral-22": 5288,
+    "integral-22": 5286,
     "integral-21": 6756,
     "integral-20": 5059,
     "integral-2": 5520,
@@ -64,7 +64,7 @@
   "cybernetics": {
     "index": 501,
     "cybernetics-2": 6,
-    "cybernetics-1": 1320
+    "cybernetics-1": 1353
   },
   "CS": {
     "index": 13,
@@ -74,9 +74,10 @@
   },
   "complex": {
     "index": 92,
-    "complex-5": 6,
-    "complex-4": 6,
-    "complex-3": 4535,
+    "complex-6": 10,
+    "complex-5": 10,
+    "complex-4": 14,
+    "complex-3": 3443,
     "complex-2": 5876,
     "complex-1": 7230
   },
@@ -84,26 +85,7 @@
     "index": 208,
     "power": 11,
     "power-1": 6,
-    "electronic": 81,
-    "electronic-9": 1241,
-    "electronic-8": 5381,
-    "electronic-7": 13,
-    "electronic-6": 2167,
-    "electronic-5": 2177,
-    "electronic-4": 604,
-    "electronic-3": 2078,
-    "electronic-2": 2682,
-    "electronic-19": 12,
-    "electronic-18": 11,
-    "electronic-17": 12,
-    "electronic-16": 1240,
-    "electronic-15": 12,
-    "electronic-14": 10,
-    "electronic-13": 14,
-    "electronic-12": 10,
-    "electronic-11": 741,
-    "electronic-10": 442,
-    "electronic-1": 2871,
+    "electronic-1": 13,
     "Digital": 9,
     "Digital-9": 12,
     "Digital-8": 10,
@@ -130,7 +112,7 @@
     "weekly-1": 283
   },
   "travel": {
-    "travel-1": 12
+    "travel-1": 28
   },
   "article": {
     "r1s3vxud": 603,
@@ -138,7 +120,7 @@
     "resources": 485,
     "anniversary-1": 1541,
     "article-5": 4210,
-    "article-4": 3551,
+    "article-4": 3567,
     "article-3": 4312,
     "article-2": 3869,
     "article-1": 1439
@@ -189,7 +171,7 @@
   },
   "algebra\\algebra-13": 3,
   "algebra\\algebra-12": 3,
-  "total": 360760,
-  "lastUpdated": "2026-01-30T07:03:45.954Z",
-  "fileCount": 156
+  "total": 337979,
+  "lastUpdated": "2026-02-18T04:54:45.937Z",
+  "fileCount": 138
 }
