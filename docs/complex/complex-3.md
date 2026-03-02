@@ -379,7 +379,7 @@ $$
 > a_0 = a < a_1 < a_2 < a_3 < \cdots < a_n < a_{n+1} < \cdots, \quad \displaystyle\lim_{n \to \infty} a_n = \infty.
 > $$
 >
-> 令 $u_n(z) = \displaystyle\int_{a_n}^{a_{n+1}} f(t,z)\,\mathrm{d}t$，则根据定理 3.3（§3.6，含参量定积分的解析性）可知，$u_n(z)$ 是 $G$ 内的单值解析函数。又因为
+> 令 $u_n(z) = \displaystyle\int_{a_n}^{a_{n+1}} f(t,z)\,\mathrm{d}t$，则根据含参量定积分的解析性可知，$u_n(z)$ 是 $G$ 内的单值解析函数。又因为
 >
 > $$
 > F(z) = \displaystyle\sum_{n=0}^{\infty} u_n(z) = \int_a^{\infty} f(t,z)\,\mathrm{d}t

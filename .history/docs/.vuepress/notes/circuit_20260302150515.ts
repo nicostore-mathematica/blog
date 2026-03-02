@@ -17,25 +17,8 @@ export default defineCollection({
 				text: "模拟电路",
 				collapsed: true,
 				items: [
+					"/circuit/electronic/electronic-0",
 					"/circuit/electronic/electronic-1",
-					"/circuit/electronic/electronic-2",
-					"/circuit/electronic/electronic-3",
-					"/circuit/electronic/electronic-4",
-					"/circuit/electronic/electronic-5",
-					"/circuit/electronic/electronic-6",
-					"/circuit/electronic/electronic-7",
-					"/circuit/electronic/electronic-8",
-					"/circuit/electronic/electronic-9",
-					"/circuit/electronic/electronic-10",
-					"/circuit/electronic/electronic-11",
-					"/circuit/electronic/electronic-12",
-					"/circuit/electronic/electronic-13",
-					"/circuit/electronic/electronic-14",
-					"/circuit/electronic/electronic-15",
-					"/circuit/electronic/electronic-16",
-					"/circuit/electronic/electronic-17",
-					"/circuit/electronic/electronic-18",
-					"/circuit/electronic/electronic-19",
 				],
 			},
 			{
@@ -54,7 +37,7 @@ export default defineCollection({
 				]
 			},
 			{
-				text: "电力电子",
+				text: "电力电子电路",
 				collapsed: true,
 				items: [
 					"/circuit/Power-Electronics/power-1",
