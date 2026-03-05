@@ -31,6 +31,6 @@
     "@vuepress/plugin-feed": "2.0.0-rc.120",
     "@vuepress/theme-default": "2.0.0-rc.120",
     "glob": "^11.0.3",
-    "twikoo": "^1.6.44"
+    "twikoo": "^1.7.1"
   }
 }
