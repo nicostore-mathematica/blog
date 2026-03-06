@@ -215,6 +215,8 @@ Step 3 —— 对补码进行加法运算，再对结果求补码，即为最终
 
 逻辑代数基本运算包括“与”“或”“非”三种运算：
 
+/Definition/
+
 > “与”运算也称为逻辑乘，用 “·” 表示，分别为
 > $$
 > 0 \cdot 0 = 0 \quad\quad 0 \cdot 1 = 0 \quad\quad 1 \cdot 0 = 0 \quad\quad 1 \cdot 1 = 1
@@ -244,17 +246,6 @@ Step 3 —— 对补码进行加法运算，再对结果求补码，即为最终
 > F = \overline{A}
 > $$
 > $A$ 为逻辑变量。
-
-同样，我们还存在如下复合逻辑：
-
-> **异或**：
-> $$
-> F = A \oplus B = A \overline{B} + \overline{A} B
-> $$
-> **同或**：
-> $$
-> F = A \odot B = A B + \overline{A} \overline{B} = \overline{A \oplus B}
-> $$
 
 下面我们给出逻辑代数的基本定律：
 
@@ -294,6 +285,17 @@ Step 3 —— 对补码进行加法运算，再对结果求补码，即为最终
 > $$
 
 可以用真值表证明上述定律的正确性。
+
+同样，我们还存在如下复合逻辑：
+
+> **异或**：
+> $$
+> F = A \oplus B = A \overline{B} + \overline{A} B
+> $$
+> **同或**：
+> $$
+> F = A \odot B = A B + \overline{A} \overline{B} = \overline{A \oplus B}
+> $$
 
 下面讲讲逻辑代数的**基本规则**：
 
@@ -359,33 +361,19 @@ $$
 
 在多变量异或运算中，运算结果只与变量为 1 的个数有关，与变量为 0 的个数无关。若有奇数个变量为 1，则结果为 1；若有偶数个变量为 1，则结果为 0。
 
-```
+/example/  已知 $F=A(B+\overline{C})+CD$，求 $F'$。
+
+> /proof/
+> $$
+> F'=(A+B\overline{C})(C+D)
+> $$
+
+/example/ 已知 $G=\overline{(W+X)\overline{Y}\cdot Z\cdot X}$，求 $G'$
+
+> /proof/
+> $$
+> G'=\overline{W}X+\overline{Y}+\overline{Z}+X
+> $$
 
 
-
-
-
-
-
-
-
-
-
-
-【例 1.17】已知 $F=A(B+\overline{C})+CD$，求 $F'$。  
-
-解：  
-$$
-F'=(A+B\overline{C})(C+D)
-$$
-
-【例 1.18】已知 $G=\overline{(W+X)\overline{Y}\cdot Z\cdot X}$，求 $G'$。  
-
-解：  
-$$
-G'=\overline{W}X+\overline{Y}+\overline{Z}+X
-$$
-
-
-```
 
