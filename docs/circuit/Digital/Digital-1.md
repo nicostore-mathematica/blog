@@ -1,5 +1,5 @@
 ---
-title: Chapter 1 数制与码制
+title: Chapter 1 数字逻辑基础
 permalink: /circuit/Digital-1/
 createTime: 2025/12/23 16:09:17
 ---
@@ -137,12 +137,6 @@ Step 3 —— 对补码进行加法运算，再对结果求补码，即为最终
 
 注意最后一步，对补码进行加法运算时，数字位最高位产生的进位要进到符号位上去！（教材中描述的“舍弃产生的进位”指的是舍弃符号位产生的进位）
 
-```
-
-```
-
-
-
 ## Part 2 码制
 
 ### · 编码概念
@@ -210,3 +204,188 @@ Step 3 —— 对补码进行加法运算，再对结果求补码，即为最终
 ### · 总结
 
 > 关于编码一节，理解编码的概念，明白为什么要编码、编码用来做什么，了解常见的几种编码即可，第一次学习时不需要严格地死记硬背教材上列举的各种编码，后期继续学习过程中用到时再复习，重点是每种编码的编码规则和特点；
+
+## Part 3 布尔代数
+
+数字电路使用二进制，即电路中的信号变量均为二值变量，只能有 0 和 1 两种取值。逻辑代数描述了二值变量的运算规律，它是英国数学家布尔（George Boole）于 19 世纪中叶在他的著作《逻辑的数学分析》及《思维规律》中提出的，也称为布尔代数。逻辑代数是按逻辑规律进行运算的代数，是分析和设计数字逻辑电路不可缺少的基础数学工具。
+
+### · 运算法则
+
+逻辑代数中的变量只有 0 和 1 两种取值，逻辑函数的输入变量可以有多个，输出变量为一位。
+
+逻辑代数基本运算包括“与”“或”“非”三种运算：
+
+> “与”运算也称为逻辑乘，用 “·” 表示，分别为
+> $$
+> 0 \cdot 0 = 0 \quad\quad 0 \cdot 1 = 0 \quad\quad 1 \cdot 0 = 0 \quad\quad 1 \cdot 1 = 1
+> $$
+> 
+>
+> 两个逻辑变量的“与”运算表示为  
+> $$
+> F = A \cdot B
+> $$
+> $A$、$B$ 分别为逻辑变量。$n$ 个变量的“与”运算表示为
+> $$
+> F = A_1 \cdot A_2 \cdots A_n
+> $$
+> “或”运算也称为逻辑加，用 “+” 表示，分别为 $0 + 0 = 0$，$0 + 1 = 1$，$1 + 0 = 1$，$1 + 1 = 1$。  
+>
+> 两个逻辑变量的“或”运算表示为  
+> $$
+> F = A + B
+> $$
+> $A$、$B$ 分别为逻辑变量。$n$ 个变量的“或”运算表示为  
+> $$
+> F = A_1 + A_2 + \cdots + A_n
+> $$
+> “非”运算也称为反相运算，即 $\overline{0} = 1$，$\overline{1} = 0$。“非”运算表示为  
+> $$
+> F = \overline{A}
+> $$
+> $A$ 为逻辑变量。
+
+同样，我们还存在如下复合逻辑：
+
+> **异或**：
+> $$
+> F = A \oplus B = A \overline{B} + \overline{A} B
+> $$
+> **同或**：
+> $$
+> F = A \odot B = A B + \overline{A} \overline{B} = \overline{A \oplus B}
+> $$
+
+下面我们给出逻辑代数的基本定律：
+
+> （1）交换律：
+> $$
+> A\cdot B=B\cdot A,\quad A+B=B+A
+> $$
+> （2）结合律：
+> $$
+> A\cdot(B\cdot C)=(A\cdot B)\cdot C,\quad A+(B+C)=(A+B)+C
+> $$
+> （3）分配律：
+> $$
+> A\cdot(B+C)=A\cdot B+A\cdot C,\quad A+B\cdot C=(A+B)\cdot(A+C)
+> $$
+> （4）01 律：
+> $$
+> 1\cdot A=A,\quad1+A=1,\quad0\cdot A=0,\quad 0+A=A
+> $$
+> （5）互补律：
+> $$
+> A\cdot\overline{A}=0,\quad A+\overline{A}=1
+> $$
+>  
+>
+> （6）重叠律：
+> $$
+> A\cdot A=A,\quad A+A=A
+> $$
+> （7）还原律：
+> $$
+> \overline{\overline{A}}=A
+> $$
+> （8）反演律，即 De Morgan Theorems：
+> $$
+> \overline{A\cdot B}=\overline{A}+\overline{B} ,\quad \overline{A+B}=\overline{A}\cdot\overline{B}
+> $$
+
+可以用真值表证明上述定律的正确性。
+
+下面讲讲逻辑代数的**基本规则**：
+
+> **代入规则**：在任何一个逻辑代数等式中，如果等式两边出现的某一变量都用同一个逻辑函数代替，则等式依然成立。
+
+例如，用代入规则证明摩根定理也适用于多变量的情况。已知 $\overline{A\cdot B}=\overline{A}+\overline{B}$，将 $(BC)$ 代入等号左边 $B$ 的位置，有  
+$$
+\overline{A\cdot(BC)}=\overline{A}+\overline{BC}=\overline{A}+\overline{B}+\overline{C} 
+$$
+
+同样，已知 $\overline{A+B}=\overline{A}\cdot\overline{B}$，将 $(B+C)$ 代入等号左边 $B$ 的位置，有  
+
+$$
+\overline{A+(B+C)}=\overline{A}\cdot\overline{B+C}=\overline{A}\cdot\overline{B}\cdot\overline{C}
+$$
+再如，由 01 律，已知 $1+A=1$，则有 $1=1+A=1+A+B+C+ABC+DE\cdots$，即 1 可以吸收或扩展出任意的项。
+
+> **反演规则**：
+>
+> 设 $F$ 为逻辑函数，如果将该函数表达式中所有的“与”（·）换成“或”（+），“或”（+）换成“与”（·）；“0”换成“1”，“1”换成“0”；原变量换成反变量，反变量换成原变量，则所得到的逻辑函数即 $F$ 的反函数，表达式为 $\overline{F}$。
+>
+> 若函数 $F$ 成立，其反函数 $\overline{F}$ 也成立，同时有 $\overline{\overline{F}}=F$。
+>
+> 运用反演规则时要注意以下两点：
+>
+> （1）运算优先顺序不变；
+>
+> （2）不是单一变量上的反号保持不变。
+
+最后则是对偶规则：
+
+> **对偶规则**：
+>
+> 若 $F$ 为逻辑函数，如果将该函数表达式中所有“与”（·）换成“或”（+），“或”（+）换成“与”（·）；“0”换成“1”，“1”换成“0”，则所得到的逻辑函数即 $F$ 的对偶式，表达式为 $F'$。若 $F$ 成立，则 $F'$ 也成立，同时有 $(F')'=F$。
+
+> [!important]
+>
+> 利用对偶规则可以使要证明的公式数量减少一半。
+
+逻辑代数的常用公式列举如下：
+
+> （1）$A+AB=A$，$A(A+B)=A$。也称为吸收律。  
+>
+> （2）$AB+\overline{A}B=A$，$(A+B)(A+\overline{B})=A$。也称为合并律。  
+>
+> （3）$A+\overline{A}B=A+B$，$A(\overline{A}+B)=AB$。  
+>
+> （4）$AB+\overline{A}C+BC=AB+\overline{A}C$。也称为冗余定理。推论为：
+> $$
+> AB+\overline{A}C+BCDE=AB+\overline{A}C
+> $$
+> （5）$A\oplus B=A\oplus B$。可证明：
+> $$
+> \overline{A\oplus B}=\overline{A}B+A\overline{B}=(\overline{A}+B)(A+\overline{B})=AB+\overline{A}\cdot\overline{B}=A\odot B
+> $$
+> （6）$A\oplus A=0$，$A\oplus\overline{A}=1$，$A\oplus0=A$，$A\oplus1=\overline{A}$。 
+>
+> （7）如果 $A\oplus B=C$，则 $A\oplus C=B$，$B\oplus C=A$。推论：如果 $A\oplus B\oplus C=0$，则有 
+> $$
+> A\oplus B\oplus0=C,\quad C\oplus B\oplus0=A
+> $$
+> 
+
+在多变量异或运算中，运算结果只与变量为 1 的个数有关，与变量为 0 的个数无关。若有奇数个变量为 1，则结果为 1；若有偶数个变量为 1，则结果为 0。
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+【例 1.17】已知 $F=A(B+\overline{C})+CD$，求 $F'$。  
+
+解：  
+$$
+F'=(A+B\overline{C})(C+D)
+$$
+
+【例 1.18】已知 $G=\overline{(W+X)\overline{Y}\cdot Z\cdot X}$，求 $G'$。  
+
+解：  
+$$
+G'=\overline{W}X+\overline{Y}+\overline{Z}+X
+$$
+
+
+```
+
