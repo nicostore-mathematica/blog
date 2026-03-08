@@ -112,4 +112,11 @@ aside: false
 
   加入友链 [ilta]((https://ilta2617.wordpress.com/))
 
+- 2026-2-21
+
+  加入友链 [起汐のBlog](https://arckive.link/) 和 [Weichky's Blog](https://blog.weichky.com)
+
+- 2026-2-21
+
+  加入友链 [Secaumene](https://secaumene.github.io/)
 :::
