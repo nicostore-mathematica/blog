@@ -76,6 +76,11 @@ list:
   link: https://blog.weichky.com
   avatar: https://assets.weichky.com/imgs/favicon.png
   desc: 物不可穷也，故受之以未济。
+
+- name: Secaumene
+  link: https://secaumene.github.io/
+  avatar: 
+  desc: Ich liebe dich immer noch.
 ---
 
 目前来说本站并不会卡任何友链喵，还是希望能多多和大家交朋友！
