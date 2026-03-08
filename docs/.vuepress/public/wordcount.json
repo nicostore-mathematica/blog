@@ -85,7 +85,8 @@
     "index": 208,
     "power": 11,
     "power-1": 6,
-    "electronic-1": 4669,
+    "electronic-1": 127,
+    "electronic-0": 4670,
     "Digital": 9,
     "Digital-9": 12,
     "Digital-8": 10,
@@ -95,7 +96,7 @@
     "Digital-4": 12,
     "Digital-3": 9,
     "Digital-2": 12,
-    "Digital-1": 1608,
+    "Digital-1": 2842,
     "circuit-4": 10,
     "circuit-3": 2457,
     "circuit-2": 4103,
@@ -112,7 +113,7 @@
     "weekly-1": 283
   },
   "travel": {
-    "travel-1": 48
+    "travel-1": 49
   },
   "article": {
     "r1s3vxud": 603,
@@ -171,7 +172,7 @@
   },
   "algebra\\algebra-13": 3,
   "algebra\\algebra-12": 3,
-  "total": 344292,
-  "lastUpdated": "2026-03-02T07:02:54.998Z",
+  "total": 345655,
+  "lastUpdated": "2026-03-08T07:28:37.466Z",
   "fileCount": 139
 }
