@@ -81,6 +81,11 @@ list:
   link: https://secaumene.github.io/
   avatar: 
   desc: Ich liebe dich immer noch.
+
+- name: HongLiu的小站
+  link: https://hongliu.icu
+  avatar: https://hongliu.icu/image/avator_1.jpg
+  desc: 做自己所爱的事，爱自己所做的事。
 ---
 
 目前来说本站并不会卡任何友链喵，还是希望能多多和大家交朋友！

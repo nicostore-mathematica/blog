@@ -116,7 +116,11 @@ aside: false
 
   加入友链 [起汐のBlog](https://arckive.link/) 和 [Weichky's Blog](https://blog.weichky.com)
 
-- 2026-2-21
+- 2026-3-09
 
   加入友链 [Secaumene](https://secaumene.github.io/)
+
+- 2026-3-11
+  
+  加入友链 [HongLiu的小站](https://hongliu.icu/)
 :::
