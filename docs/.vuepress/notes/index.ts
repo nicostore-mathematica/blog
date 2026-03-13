@@ -12,6 +12,7 @@ import optics from "./optics.ts";
 import electrodynamics from "./electrodynamics.ts";
 import appliedMechanics from "./applied-mechanics.ts";
 import analyticalMechanics from "./analytical-mechanics.ts";
+import computationalPhysics from "./computational-physics.ts";
 
 export const notes = defineCollections([
 		circuit,
@@ -22,6 +23,7 @@ export const notes = defineCollections([
 		CS,
 		complex,
 		RoboMaster,
+		computationalPhysics,
 		cybernetics,
 		optics,
 		electrodynamics,

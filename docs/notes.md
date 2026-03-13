@@ -3,7 +3,7 @@ title: Notes
 permalink: /notes/
 ---
 
-笔记目前总字数：<WordCount type="circuit, integral, algebra, physics, applied-math, complex, cybernetics, optics, electrodynamics, applied-mechanics, analytical-mechanics, CS" />
+笔记目前总字数：<WordCount type="circuit, integral, algebra, physics, applied-math, complex, cybernetics, optics, electrodynamics, applied-mechanics, analytical-mechanics, CS, computational-physics" />
 
 ### · math
 
@@ -24,6 +24,8 @@ permalink: /notes/
 [分析力学](/analytical-mechanics/)
 
 [电动力学](/electrodynamics/)
+
+[计算物理导论](/computational-physics/)
 
 ### · Technology
 

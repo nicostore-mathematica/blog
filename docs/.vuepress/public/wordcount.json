@@ -2,14 +2,14 @@
   "timeline": 184,
   "README": 230,
   "random": 71,
-  "notes": 115,
-  "links": 492,
+  "notes": 122,
+  "links": 523,
   "about": 210,
   "RoboMaster": {
     "index": 791
   },
   "physics": {
-    "index": 127,
+    "index": 30,
     "physics-9": 2840,
     "physics-8": 2803,
     "physics-7": 5256,
@@ -23,7 +23,7 @@
     "physics-0": 4112
   },
   "optics": {
-    "index": 80,
+    "index": 83,
     "optics-2": 6,
     "optics-1": 6
   },
@@ -57,9 +57,12 @@
     "integral-0": 316
   },
   "electrodynamics": {
-    "index": 12,
-    "electrodynamics-2": 6,
-    "electrodynamics-1": 10
+    "index": 105,
+    "electrodynamics-4": 11,
+    "electrodynamics-3": 10,
+    "electrodynamics-2": 7734,
+    "electrodynamics-1": 6420,
+    "electrodynamics-0": 2829
   },
   "cybernetics": {
     "index": 501,
@@ -71,6 +74,14 @@
     "python-1": 3906,
     "structure-1": 6,
     "cpp-1": 929
+  },
+  "computational-physics": {
+    "index": 85,
+    "chapter-5": 5,
+    "chapter-4": 5,
+    "chapter-3": 5,
+    "chapter-2": 5,
+    "chapter-1": 6
   },
   "complex": {
     "index": 92,
@@ -172,7 +183,7 @@
   },
   "algebra\\algebra-13": 3,
   "algebra\\algebra-12": 3,
-  "total": 345669,
-  "lastUpdated": "2026-03-08T16:13:21.330Z",
-  "fileCount": 139
+  "total": 362805,
+  "lastUpdated": "2026-03-13T14:17:05.244Z",
+  "fileCount": 148
 }

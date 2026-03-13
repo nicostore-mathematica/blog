@@ -32,6 +32,7 @@ export const navbar = defineNavbarConfig([
 			{ text: "基础物理", link: "/physics/README.md" },
 			{ text: "光学", link: "/optics/README.md" },
 			{ text: "数学物理方法", link: "/complex/README.md" },
+			{ text: "计算物理导论", link: "/computational-physics/README.md" },
 			{ text: "分析力学", link: "/analytical-mechanics/README.md" },
 			{ text: "电动力学", link: "/electrodynamics/README.md" },
       		{ text: "电子电路", link: "/circuit/" },

@@ -8,8 +8,11 @@ export default defineCollection({
 			collapsed: false,
 			link: "/electrodynamics/",
 			items: [
+				"electrodynamics-0",
 				"electrodynamics-1",
 				"electrodynamics-2",
+				"electrodynamics-3",
+				"electrodynamics-4",
 			],
 		},
 	],
