@@ -1,5 +1,5 @@
 ---
-title: Chapter 2
+title: Chapter 2 线性方程组直接解法
 permalink: /computational-physics/chapter-2/
 createTime: 2026/03/13 22:16:04
 ---

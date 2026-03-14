@@ -1,5 +1,5 @@
 ---
-title: complex
+title: 数学物理方法
 createTime: 2025/09/23 20:00:48
 permalink: /complex/
 ---

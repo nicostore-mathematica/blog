@@ -679,7 +679,7 @@ $$
 -\frac{\delta S}{\delta f} = \boxed{\frac{d}{dt} \left(\frac{\partial L}{\partial f'}\right) - \frac{\partial L}{\partial f} = 0}.
 $$
 
-这是关于 $f(t)$ 的二阶微分方程，被称为变分问题的欧拉-拉格朗日方程（Euler-Lagrange equation）.其意义是，泛函 (1.37) 在 $f = f(t)$ 处取得极值的必要条件是 $f(t)$ 满足二阶微分方程.
+这是关于 $f(t)$ 的二阶微分方程，被称为变分问题的欧拉-拉格朗日方程（Euler-Lagrange equation）.其意义是，泛函在 $f = f(t)$ 处取得极值的必要条件是 $f(t)$ 满足二阶微分方程.
 
 并不是所有的微分方程都是欧拉-拉格朗日方程，即都对应某个泛函的极值.
 

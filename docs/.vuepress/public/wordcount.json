@@ -58,7 +58,9 @@
   },
   "electrodynamics": {
     "index": 105,
-    "electrodynamics-4": 6499,
+    "electrodynamics-6": 15,
+    "electrodynamics-5": 13,
+    "electrodynamics-4": 8333,
     "electrodynamics-3": 5747,
     "electrodynamics-2": 7734,
     "electrodynamics-1": 6420,
@@ -78,10 +80,10 @@
   "computational-physics": {
     "index": 85,
     "chapter-5": 6,
-    "chapter-4": 6,
-    "chapter-3": 6,
-    "chapter-2": 6,
-    "chapter-1": 6
+    "chapter-4": 10,
+    "chapter-3": 9,
+    "chapter-2": 15,
+    "chapter-1": 12
   },
   "complex": {
     "index": 92,
@@ -163,6 +165,7 @@
   },
   "analytical-mechanics": {
     "index": 150,
+    "chapter-4": 10073,
     "chapter-3": 13,
     "chapter-2": 6792,
     "chapter-1": 6794
@@ -183,7 +186,7 @@
   },
   "algebra\\algebra-13": 3,
   "algebra\\algebra-12": 3,
-  "total": 375034,
-  "lastUpdated": "2026-03-14T05:11:25.726Z",
-  "fileCount": 148
+  "total": 386991,
+  "lastUpdated": "2026-03-14T18:14:13.772Z",
+  "fileCount": 151
 }

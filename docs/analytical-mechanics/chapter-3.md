@@ -4,6 +4,4 @@ permalink: /analytical-mechanics/chapter-3/
 createTime: 2025/12/14 21:32:28
 ---
 
-1
-
 ## Part 1
