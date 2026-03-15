@@ -4,6 +4,8 @@ permalink: /electrodynamics/electrodynamics-0/
 createTime: 2026/03/13 20:35:00
 ---
 
+## Part 1 历史
+
 众所周知，力学是第一门发展起来的现代意义上的物理学科。之所以会这样，是由于它的实用性导致了各国君主和贵族们的大力资助。这一事实的一个后果是，由于专业术语使用的“经济性”原则，力学的许多概念和名词稍加改动后即被应用到稍后发展起来的其它物理学科，例如电磁学，统计力学和量子力学。因此，人们不难理解，为什么物理专业学生进入大学后要系统学习的第一门专业课程是力学。
 
 ### · 静电学
@@ -72,3 +74,285 @@ $$
 被称为法拉第的电磁感应定律。
 
 如上所述，最重要的一些关于电磁学的实验在 1840 年左右都已完成。接下来需要的是具有卓越的数学解析能力的牛顿类型的物理学家对之加以归纳、整理，使其系统化。历史将这一任务交给了在英国剑桥大学工作的苏格兰物理学家麦克斯韦 (James Maxwell)。正是由于他发表于 1856 年里程碑式的工作，电动力学才最终成为继“力学”之后的第二门在现代意义上建立起来的物理学分支。
+
+## Part 2 最小作用量原理
+
+支配一个力学体系运动规律的最普适的数学表达形式是所谓最小作用量原理（The least action principle），或曰哈密顿变分原理（The Hamilton principle）。根据这一原理，每一个力学体系由一个称为拉格朗日量（Lagrangian）的形为 $L(q_1, q_2, \cdots, q_k, \dot{q}_1, \dot{q}_2, \cdots, \dot{q}_k)$ 的函数来描述。这里，$q_1, q_2, \cdots, q_k$ 称为该体系的广义坐标，而 $\dot{q}_1, \dot{q}_2, \cdots, \dot{q}_k$ 则为其广义速度。它们是彼此独立的变量。此时，$k$ 即为该体系的自由度。当这一函数满足某些条件时，可利用变分法推导出该力学体系作真实运动时所满足的方程，即牛顿方程。具体一点讲，若此力学体系在时刻 $t_1$ 和 $t_2$ 时分别占据位形空间中的两个固定点 $P$ 和 $Q$，那么它的运动在位形空间中所画出的轨迹由积分
+$$
+S = \int_{t_1}^{t_2} L(q_1, q_2, \cdots, q_k, \dot{q}_1, \dot{q}_2, \cdots, \dot{q}_k) dt
+$$
+
+的极值曲线给出。这就是最小作用量原理的表述形式。这里，积分 $S$ 被称为该体系的作用量（action）。
+
+最小作用量原理的起源最早可以追溯到 1696 年。当时，一位瑞士物理学家伯努利（Johann Bernoulli）向另外一位瑞士数学家伯努利（Jacob Bernoulli）请教如何找到一条连接空间中两个固定点 $a$ 和 $b$ 的曲线，使得一个质量为 $m$ 的算珠仅在重力作用下沿此曲线从 $a$ 点起始，最后到达 $b$ 点所用的时间最短。此问题被称为最陡降线问题（brachistochrone）。它引起了莱布尼兹和牛顿等人的兴趣。
+
+最漂亮的解决方法是由欧拉在 1744 年给出的，并在此基础上发展了所谓变分法理论。这一方法可以用来处理许多当时几何学家感兴趣的问题。例如，考虑一个悬于两个中心位于 $x$ 轴上 $x = a$ 和 $x = b$ 处的圆环上的肥皂膜。假设两个圆环的半径分别为 $r_a$ 和 $r_b$，且 $r_a \ne r_b$。它的轮廓线是 $x$ 的一个函数，可以写作 $r = y(x)$。现在的问题是如何决定这一函数，使得肥皂膜的表面积
+$$
+A = \int_a^b 2\pi r \, dS = \int_a^b 2\pi r \sqrt{1 + \left( \frac{dr}{dx} \right)^2} dx = \int_a^b 2\pi y(x) \sqrt{1 + y'^2(x)} dx
+$$
+
+最小。由欧拉给出的这个问题的解为
+
+$$
+r = y(x) = C_1 \mathrm{ch} \left( \frac{x}{C_1} + C_2 \right).
+$$
+
+这里，常数 $C_1$ 和 $C_2$ 由边条件
+
+$$
+y(x = a) = r_a = C_1 \mathrm{ch} \left( \frac{a}{C_1} + C_2 \right), \quad y(x = b) = r_b = C_1 \mathrm{ch} \left( \frac{b}{C_1} + C_2 \right)
+$$
+
+来决定。
+
+另一方面，在光学的研究中，学者们也一直试图将反射现象和折射现象的解释归结为一个几何问题。首先，当时关于光的本质存在着两种不同的意见。以笛卡尔为代表的
+
+一派认为光是由粒子组成的，并且在光密物质中传播速率大。这一观点得到了牛顿的支持。另外一派则以费马（Pierre de Fermat）为代表，认为同声波一样，光是波动现象，只不过是在称为以太的一种媒介质传播，而在光疏物质中其速率较大。在 1662 年，他进一步提出了所谓费马原理（Fermat's principle）。根据这一原理，光从空间中一点 $P$ 传播到另外一点 $Q$ 所行走的路线将使得其所用的时间最小。由于类似于声波，光在媒介质传播的速率为
+
+$$
+v_{\text{wave}} = \frac{c}{n},
+$$
+
+这里，$c$ 为光在以太（或真空）中传播的速率，而 $n$ 为该媒介质的折射率，故费马原理可以表述为
+
+$$
+\delta \int_P^Q \frac{dl}{v_{\text{wave}}} = \delta \int_P^Q \frac{1}{c} n \, dl = 0.
+$$
+
+的确，利用这一原理，可以很容易地解释波的反射和折射定律。大约一百年后，法国学者莫陪督（Pierre-Louis Maupertuis）也于 1747 年提出了以他的名字命名的最小作用量原理。当与费马不同的是，他坚持笛卡尔的观点，认为组成光的粒子在介质中传播的速度为
+
+$$
+v_{\text{particle}} = nc.
+$$
+
+这样一来，费马原理就要被改写成
+
+$$
+\delta \bar{S} = \delta \int_P^Q n \, dl = \delta \int_P^Q \frac{v_{\text{particle}}}{c} dl = 0.
+$$
+
+并且，他将这一原理推广到了一般质点的动力学研究中。根据推广了的莫陪督原理，在位形空间中的给定两点间所有体系能量相同的轨迹中，体系的实际轨道的作用量取极值。
+
+莫陪督原理对于后人的工作极具启发性。1788 年，拉格朗日（Joseph-Louis Lagrange）在达朗贝尔（Jean D'Alembert）于 1743 年提出的虚功原理的基础上，发表了“分析力学”一书。其中，他提出一个多质点体系之间的约束关系可以用来减少体系的自由度，故粒子之间的约束力可以不计。如此一来，体系的运动可以用 $k$ 个微分方程
+
+$$
+\frac{d}{dt} \frac{\partial L}{\partial \dot{q}_i} - \frac{\partial L}{\partial q_i} = 0, \quad i = 1, 2, \cdots, k
+$$
+
+来描述。进一步，对于一个保守系，拉格朗日函数 $L$ 可以写作
+
+$$
+L(q_1, q_2, \cdots, q_k, \dot{q}_1, \dot{q}_2, \cdots, \dot{q}_k) = T(\dot{q}_1, \dot{q}_2, \cdots, \dot{q}_k) - V(q_1, q_2, \cdots, q_k).
+$$
+
+这里 $T(\dot{q}_1, \dot{q}_2, \cdots, \dot{q}_k)$ 为体系的动能函数，而 $V(q_1, q_2, \cdots, q_k)$ 则代表体系的势能函数。由于方程
+$$
+\frac{d}{dt} \frac{\partial L}{\partial \dot{q}_i} - \frac{\partial L}{\partial q_i} = 0, \quad i = 1, 2, \cdots, k
+$$
+在欧拉解决最陡降线问题时已经写出过，故在文献中被称为欧拉 - 拉格朗日方程（Euler-Lagrange equations）。
+
+直到 1834 年，爱尔兰数学家哈密尔顿（William Hamilton）才从变分法的角度出发，重新推导出了这些方程。他提出，对于位形空间中的两个固定点 $P$ 和 $Q$，任取一条可能的路径 $C$，计算如下 的作用量
+
+$$
+S = \int_{t_1}^{t_2} L(q_1, q_2, \cdots, q_k, \dot{q}_1, \dot{q}_2, \cdots, \dot{q}_k) dt.
+$$
+
+若要求当 $t = t_1$ 时，体系从 $P$ 点出发，并在给定的 $t = t_2$ 时刻到达 $Q$ 点，那么体系在位形空间中所行的真实轨迹应当使得 $S$ 取极（小）值。这一法则称为（哈密顿的）最小作用量原理。实际上，若我们取 $S$ 的变分，则
+
+$$
+\begin{aligned}
+\delta S &= \delta \int_{t_1}^{t_2} L(q_1, q_2, \cdots, q_k, \dot{q}_1, \dot{q}_2, \cdots, \dot{q}_k) dt \\\\
+&= \int_{t_1}^{t_2} \delta L(q_1, q_2, \cdots, q_k, \dot{q}_1, \dot{q}_2, \cdots, \dot{q}_k) dt \\\\
+&= \int_{t_1}^{t_2} \sum_{i=1}^k \left( \frac{\partial L}{\partial q_i} \delta q_i + \frac{\partial L}{\partial \dot{q}_i} \delta \dot{q}_i \right) dt \\\\
+&= \sum_{i=1}^k \int_{t_1}^{t_2} \frac{\partial L}{\partial q_i} \delta q_i \, dt + \sum_{i=1}^k \int_{t_1}^{t_2} \frac{\partial L}{\partial \dot{q}_i} \left( \frac{d}{dt} \delta q_i(t) \right) dt \\\\
+&= \sum_{i=1}^k \int_{t_1}^{t_2} \frac{\partial L}{\partial q_i} \delta q_i \, dt + \sum_{i=1}^k \left[ \frac{\partial L}{\partial \dot{q}_i} \delta q_i(t) \right]_{t_1}^{t_2} - \int_{t_1}^{t_2} \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_i} \delta q_i(t) dt \Bigg).
+\end{aligned}
+$$
+
+由于 $\delta q_i(t_1) = \delta q_i(t_2) = 0$ 对于所有的 $1 \le i \le k$ 成立，故上式又可被写作
+
+$$
+\delta S = \sum_{i=1}^k \int_{t_1}^{t_2} \left( \frac{\partial L}{\partial q_i} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_i} \right) \delta q_i(t) \, dt.
+$$
+
+当体系在位形空间的真实轨道上运动时，作用量 $S$ 应该取极值，即 $\delta S = 0$，故我们有
+
+$$
+\delta S = \sum_{i=1}^k \int_{t_1}^{t_2} \left( \frac{\partial L}{\partial q_i} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_i} \right) \delta q_i(t) \, dt = 0.
+$$
+
+又考虑到 $\delta q_i(t)$ 彼此是独立的，我们由此得到
+
+$$
+\frac{\partial L(q_1, q_2, \cdots, q_k, \dot{q}_1, \dot{q}_2, \cdots, \dot{q}_k)}{\partial q_i} - \frac{d}{dt} \frac{\partial L(q_1, q_2, \cdots, q_k, \dot{q}_1, \dot{q}_2, \cdots, \dot{q}_k)}{\partial \dot{q}_i} = 0.
+$$
+
+此即欧拉 - 拉格朗日方程。
+
+应该说，无论是莫陪督原理还是哈密尔顿原理的提出在很大程度上是基于形而上学（metaphysics）的考虑的。但一经提出，即被学者们视作物理学中的最高原理，而一切动力学方程都应该利用这些原理推导出来。
+
+鉴于（哈密顿的）最小作用量原理如此重要，我们下面结合一个具体例子给出一个“粗人（poor man）”式的推导，以使得这一原理更容易被接受。
+
+让我们考虑一个一维谐振子。这个体系只有一个广义坐标 $q_1 = x$ 以及相应的广义速度 $\dot{q}_1 = \dot{x}$。振子所满足的牛顿方程为
+
+$$
+m \ddot{x}(t) = -k x(t).
+$$
+
+这里，$m$ 为质点的质量，而 $k$ 为弹簧的弹性系数。我们知道，这个振子的动能为 $T = \frac{1}{2} m \dot{x}^2$，而其势能为 $V(x) = \frac{1}{2} k x^2$，并且其总机械能
+
+$$
+E = T + V = \frac{1}{2} m \dot{x}^2 + \frac{1}{2} k x^2
+$$
+
+是守恒，即不随时间改变的。人们早就意识到，这一事实可以被用来“反向”推导相关的牛顿方程。实际上，若我们将 () 式的两边分别对于时间求导的话，可以得到
+
+$$
+\frac{dE}{dt} = \frac{d}{dt} \left( \frac{1}{2} m \dot{x}^2 + \frac{1}{2} k x^2 \right) = m \dot{x} \ddot{x} + k x \dot{x} = 0.
+$$
+
+将上式左边的第二项移项并同时除掉 $\dot{x}$ 后，我们即可得到运动方程
+
+$$
+m \ddot{x} = -k x.
+$$
+
+推而广之，这一方法经常被用来推导有约束条件存在时的多质点体系的运动方程。例如，若一个质点 $m$ 置于 $z = 0$ 的光滑水平桌面上，而另外一个质点 $m$ 则位于通过坐标原点的的深阱中，设阱壁是光滑的。
+
+二者之间通过一根长度为 $2l$ 的无质量的刚性轻杆联系起来。那么，这个体系的总机械能可以被写作
+$$
+E = T + V = \frac{1}{2} m \dot{x}_1^2 + \frac{1}{2} m \dot{z}_2^2 + m g z_2.
+$$
+
+这里，$x_1$ 为第一个质点在桌面上的坐标，而 $z_2$ 为第二个质点在深阱内的坐标。若取 $\theta$ 为连接两个质点的轻杆与 $z$ 轴的夹角，则关系式
+
+$$
+x_1 = 2l \sin \theta, \quad z_2 = -2l \cos \theta
+$$
+
+成立。将之代入总机械能的表达式后，我们有
+
+$$
+E = \frac{1}{2} m (2l \cos \theta \dot{\theta})^2 + \frac{1}{2} m (2l \sin \theta \dot{\theta})^2 - 2mgl \cos \theta = 2ml^2 \dot{\theta}^2 - 2mgl \cos \theta.
+$$
+
+因此，对于这个有约束的体系来说，它有一个广义坐标 $q_1 = \theta$，而相应的广义速度为 $\dot{q}_1 = \dot{\theta}$。现将总机械能表达式的两边同时对时间 $t$ 求导后，我们可得这个体系的运动方程
+
+$$
+\frac{dE}{dt} = \frac{d}{dt} (2ml^2 \dot{\theta}^2 - 2mgl \cos \theta) = 4ml^2 \ddot{\theta} + 2mgl \sin \theta \dot{\theta} = 0.
+$$
+
+经过整理后，我们进一步有
+
+$$
+2l \ddot{\theta} + g \sin \theta = 0.
+$$
+
+对于微小振动的情况，$\theta \sim 0$，而 $\sin \theta \sim \theta$，故上式可以化简为
+
+$$
+\ddot{\theta} + \frac{g}{2l} \theta = 0.
+$$
+
+这是一个简谐振动方程，其振动周期为
+
+$$
+T = \frac{2\pi}{\omega_0} = \frac{2\pi}{\sqrt{\frac{g}{2l}}} = 2\pi \sqrt{\frac{2l}{g}}.
+$$
+
+由此我们看到，利用机械能守恒定理反推具有约束的质点系的动力学方程的确是一个行之有效的方法。
+
+现在，让我们返回到一维谐振子的问题。若我们引入广义动量
+$$
+p = m \dot{x},
+$$
+
+则关系式
+
+$$
+p = \frac{\partial}{\partial \dot{x}} \left( \frac{1}{2} m \dot{x}^2 + \frac{1}{2} k x^2 \right) = \frac{\partial E}{\partial \dot{x}}
+\tag{1}
+$$
+
+显然成立，而且谐振子的机械能可以被改写作
+
+$$
+E = \frac{1}{2} m \dot{x}^2 + \frac{1}{2} k x^2 = \frac{p^2}{2m} + \frac{1}{2} k x^2.
+$$
+
+它是广义坐标 $x$ 和广义动量 $p$ 的函数，被称为该谐振子的哈密顿量（Hamiltonian），而相应的“位形空间”则改称为相空间。同时，牛顿方程现在可以写作
+
+$$
+m \ddot{x} = \frac{d}{dt} (m \dot{x}) = \frac{dp}{dt} = \dot{p}(t) = -k x = -\frac{\partial E}{\partial x} = -\frac{\partial H}{\partial x},
+$$
+
+而方程 $p = m \dot{x}$ 可以被改写为
+
+$$
+\dot{x} = \frac{1}{m} p = \frac{\partial}{\partial p} \left( \frac{p^2}{2m} + \frac{1}{2} k x^2 \right) = \frac{\partial H}{\partial p}.
+\tag{2}
+$$
+
+方程 (1) 与 (2) 一起被称为一维谐振子的哈密顿方程（Hamilton equations）。现在我们要问，如此给出的哈密顿方程是否可以通过某种形式的变分原理重新推导出来？答案是肯定的。
+
+为此，我们定义
+
+$$
+\begin{aligned}
+S &= \int_{t_1}^{t_2} \left( \sum_{i=1}^k \dot{q}_i p_i - H(q_1, q_2, \cdots, q_k, p_1, p_2, \cdots, p_k) \right) dt \\\\
+&= \int_{t_1}^{t_2} (\dot{q}_1 p_1 - H(q_1, p_1)) dt = \int_{t_1}^{t_2} (\dot{x} p - H(x, p)) dt.
+\end{aligned}
+$$
+
+取其变分后，我们有
+
+$$
+\begin{aligned}
+\delta S &= \delta \int_{t_1}^{t_2} (\dot{x} p - H(x, p)) dt = \int_{t_1}^{t_2} \delta (\dot{x} p - H(x, p)) dt \\\\
+&= \int_{t_1}^{t_2} ((\delta \dot{x}) + \dot{x} \delta p - \delta H(x, p)) dt \\\\
+&= \int_{t_1}^{t_2} \left( (\delta \dot{x}) p + \dot{x} \delta p - \frac{\partial H(x, p)}{\partial x} \delta x - \frac{\partial H(x, p)}{\partial p} \delta p \right) dt \\\\
+&= \int_{t_1}^{t_2} \delta \dot{x} p \, dt + \int_{t_1}^{t_2} \left( \dot{x} \delta p - \frac{\partial H(x, p)}{\partial x} \delta x - \frac{\partial H(x, p)}{\partial p} \delta p \right) dt \\\\
+&= \delta x \cdot p \big|_{t_1}^{t_2} - \int_{t_1}^{t_2} \dot{p} \delta x \, dt + \int_{t_1}^{t_2} \left( \dot{x} \delta p - \frac{\partial H}{\partial x} \delta x - \frac{\partial H}{\partial p} \delta p \right) dt.
+\end{aligned}
+$$
+
+由于 $\delta x(t_1) = \delta x(t_2) = 0$，上式可以被给写作
+
+$$
+\delta S = \int_{t_1}^{t_2} \left[ \left( \dot{x} - \frac{\partial H(x, p)}{\partial p} \right) \delta p - \left( \dot{p} + \frac{\partial H(x, p)}{\partial x} \right) \delta x \right] dt.
+$$
+
+若令 $\delta S = 0$，则上式给出
+
+$$
+\delta S = \int_{t_1}^{t_2} \left[ \left( \dot{x} - \frac{\partial H(x, p)}{\partial p} \right) \delta p - \left( \dot{p} + \frac{\partial H(x, p)}{\partial x} \right) \delta x \right] dt = 0.
+$$
+
+又由于 $\delta p$ 和 $\delta x$ 是彼此独立的，故我们有
+
+$$
+\dot{x} - \frac{\partial H(x, p)}{\partial p} = 0, \quad \dot{p} + \frac{\partial H(x, p)}{\partial x} = 0
+$$
+
+必须成立。此即一维谐振子哈密尔顿方程。也就是说，一个力学体系的哈密尔顿方程可以通过对相应的作用量 $S$ 求变分而得到。我们可以将其解释作，若体系在 $t = t_1$ 时从位形空间的点 $P = (q_1(t_1), q_2(t_1), \cdots, q_k(t_1))$ 出发，并在 $t = t_2$ 时到达位形空间的点 $Q = (q_1(t_2), q_2(t_2), \cdots, q_k(t_2))$，那么它在位形空间中所行的真实轨迹使得作用量 $S$ 取极值。
+
+另一方面，根据法国学者勒让德（Adrien Legendre）于 1787 年提出的勒让德变换（Legendre transformation）理论，作用量 $S$ 中的被积函数现在应该是广义坐标和广义速度的函数，而不再是广义坐标和广义动量的函数。同时，这一函数可以写作
+
+$$
+L(q_1, q_2, \cdots, q_k, \dot{q}_1, \dot{q}_2, \cdots, \dot{q}_k) = T(\dot{q}_1, \dot{q}_2, \cdots, \dot{q}_k) - V(q_1, q_2, \cdots, q_k),
+$$
+
+即拉格朗日量的形式。仍以一维谐振子为例。我们有
+
+$$
+\begin{aligned}
+\dot{x} p - H(x, p) &= \dot{x} \cdot (m \dot{x}) - \left( \frac{p^2}{2m} + \frac{1}{2} k x^2 \right) \\\\
+&= m \dot{x}^2 - \frac{1}{2} m \dot{x}^2 - \frac{1}{2} k x^2 = \frac{1}{2} m \dot{x}^2 - \frac{1}{2} k x^2 \\\\
+&= T(\dot{x}) - V(x) = L(x, \dot{x}).
+\end{aligned}
+$$
+
+以上所述，可视作最小作用量原理的一个“粗人”式的推导。
+
+必须指出的是，最小作用量原理的应用范围是非常广泛的。例如，对于某些非保守力学体系，已无法定义其势能函数（例如，一个带电粒子在磁场中运动时感受到的是所谓洛伦兹力。它对粒子不作功，故其势能函数为一常数），故无法用机械能守恒定理来反推其运动方程。然而，即使是在这种情况下，仍有可能定义其作用量 $S$，并利用最小作用量原理推导出该体系的运动方程。
+
