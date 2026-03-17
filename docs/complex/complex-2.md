@@ -68,7 +68,7 @@ $$
 
 ![](https://pic1.imgdb.cn/item/692a5e93b4e23f08080b81d9.png)
 
-考察复积分  $\int_l \operatorname{Re} z dz$ 。因为  $\operatorname{Re} z$  不满足  $C - R$  条件，所以不是解析函数。分别求复平面上  $\operatorname{Re} z$  沿路径  $O \rightarrow A$  及  $O \rightarrow B \rightarrow A$  从  $O$  到  $A$  点的复积分，如图所示：
+考察复积分  $\displaystyle\int_l \operatorname{Re} z dz$ 。因为  $\operatorname{Re} z$  不满足  $C - R$  条件，所以不是解析函数。分别求复平面上  $\operatorname{Re} z$  沿路径  $O \rightarrow A$  及  $O \rightarrow B \rightarrow A$  从  $O$  到  $A$  点的复积分，如图所示：
 
 记  $O \rightarrow A$  为路径  $l_1$ ， $O \rightarrow B \rightarrow A$  为路径  $l_2$ 。则（注意路径  $l_1$  满足  $x = 2y, y: 0 \rightarrow 1$ ）
 
@@ -118,7 +118,7 @@ $$
 > $$
 > 中运用，再由  $C - R$  条件，有
 > $$
-> \oint_l f(z) dz = \iint_{\sigma} (\frac{\partial v}{\partial x} - \frac{\partial u}{\partial y}) dx dy + \iint_{\sigma} (\frac{\partial u}{\partial x} - \frac{\partial v}{\partial y}) dx dy = 0.
+> \oint_l f(z) dz = -\iint_{\sigma} (\frac{\partial v}{\partial x} + \frac{\partial u}{\partial y}) dx dy + i\iint_{\sigma} (\frac{\partial u}{\partial x} - \frac{\partial v}{\partial y}) dx dy = 0.
 > $$
 >
 
@@ -135,7 +135,7 @@ $$
 > $$
 > \oint_l f(z) dz = 0.
 > $$
-> 原函数和不定积分：在  $f(z)$  的单连通解析区域  $\sigma$  内，积分函数（变上限积分） $\int_{z_0(l)}^z f(z) dz$  与路径无关，但随着  $z$  的变化而变化（即  $\int_{z_0(l)}^z f(z) d$  是关于  $z$  的单值函数），记为
+> 原函数和不定积分：在  $f(z)$  的单连通解析区域  $\sigma$  内，积分函数（变上限积分） $\displaystyle\int_{z_0(l)}^z f(z) dz$  与路径无关，但随着  $z$  的变化而变化（即  $\displaystyle\int_{z_0(l)}^z f(z) dz$  是关于  $z$  的单值函数），记为
 >
 > $$
 > F(z) = \int_{z_0(l)}^z f(z) dz.
@@ -154,7 +154,7 @@ $$
 >
 > > i.  $f(z)$  在单连通区域  $\sigma$  上连续；
 > >
-> > ii.  $\int f(z) dz$  沿区域  $\sigma$  内任意围线的积分为 0。
+> > ii.  $\displaystyle\int f(z) dz$  沿区域  $\sigma$  内任意围线的积分为 0。
 >
 > 只要满足这两个条件， $F'(z) = f(z)$  总成立。这一点后面证明 Morera 定理（摩勒纳定理）时会用到。
 >
@@ -177,7 +177,7 @@ $$
 $$
 \oint_l f(z) dz = 0.
 $$
-设  $L = l + \sum_{k=1}^{n} l_k$  为复连通区域  $\sigma$  的全部边界曲线，其中 $l_k (k = 1, 2, \ldots, n)$ 为内边界。若  $f(z)$  在  $\sigma$  内解析，在  $\bar{\sigma} = \sigma + L$  上连续，则有
+设  $L = l + \displaystyle\sum_{k=1}^{n} l_k$  为复连通区域  $\sigma$  的全部边界曲线，其中 $l_k (k = 1, 2, \ldots, n)$ 为内边界。若  $f(z)$  在  $\sigma$  内解析，在  $\bar{\sigma} = \sigma + L$  上连续，则有
 
 $$
 \oint_l f(z) dz = \sum_{k=1}^{n} \oint_{l_k} f(z) dz,
