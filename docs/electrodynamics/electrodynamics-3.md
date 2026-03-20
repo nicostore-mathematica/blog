@@ -6,8 +6,16 @@ createTime: 2026/03/13 20:57:20
 
 ## Part 1 含时电磁场
 
-到目前为止，我们仅仅讨论了静电场和静磁场的情况。我们看到，在这种情况下，$\mathbf{E}(\mathbf{r})$ 和 $\mathbf{B}(\mathbf{r})$ 是彼此独立的。为了将二者联系起来，我们需要考虑随时间改变的电磁场的情况。为此，我们可以借助法拉第的电磁感应定律
+前面我们仅仅讨论了静电场和静磁场的情况，我们得到如下的两条方程：
+$$
+\nabla \cdot \mathbf{E}(\mathbf{r}, t) = \frac{1}{\epsilon_0} \rho(\mathbf{r}, t)
+$$
 
+$$
+\nabla \cdot \mathbf{B}(\mathbf{r}, t) = 0
+$$
+
+我们看到，在这种情况下，$\mathbf{E}(\mathbf{r})$ 和 $\mathbf{B}(\mathbf{r})$ 是彼此独立的。为了将二者联系起来，我们需要考虑随时间改变的电磁场的情况。为此，我们可以借助法拉第的电磁感应定律
 $$
 \mathcal{E}(t) = - \frac{d\Phi_B(t)}{dt}.
 $$
@@ -65,7 +73,7 @@ $$
 \nabla \cdot \mathbf{j}(\mathbf{r}, t) = - \frac{\partial \rho(\mathbf{r}, t)}{\partial t},
 $$
 
-一般来说并不为零。为了消除这一不自治之处，麦克斯韦又注意到，若将方程组 (126) 中的第一式的两边对时间求导的话，则
+一般来说并不为零。为了消除这一不自治之处，麦克斯韦又注意到，若将 Maxwell 方程组中的第一式的两边对时间求导的话，则
 
 $$
 \epsilon_0 \nabla \cdot \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t} = \frac{\partial \rho(\mathbf{r}, t)}{\partial t}
