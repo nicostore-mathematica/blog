@@ -1,17 +1,17 @@
 import { defineCollection } from "vuepress-theme-plume";
 
 export default defineCollection({
-	dir: "RoboMaster",
+	dir: "mathematical-physics",
 	sidebar: [
 		{
-			text: "RoboMaster",
+			text: "数学物理方程",
 			collapsed: false,
+			link: "/mathematical-physics/",
 			items: [
-				"RoboMaster-1",
-				"RoboMaster-2",
+				"chapter-0",
 			],
 		},
 	],
 	type: "doc",
-	title: "RoboMaster"
+	title: "数学物理方程"
 });

@@ -1,7 +1,7 @@
 ---
 title: Chapter 2 数理统计
 createTime: 2025/09/17 23:21:42
-permalink: /applied-math/probstathsy-2/
+permalink: /probstathsy/probstathsy-2/
 ---
 
 # Chapter 2 数理统计

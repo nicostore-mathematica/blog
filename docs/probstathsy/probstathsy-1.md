@@ -1,7 +1,7 @@
 ---
 title: Chapter 1 概率论
 createTime: 2025/09/17 23:22:15
-permalink: /applied-math/probstathsy-1/
+permalink: /probstathsy/probstathsy-1/
 ---
 
 # Chapter 1 概率论

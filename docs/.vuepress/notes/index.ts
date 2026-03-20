@@ -2,33 +2,31 @@ import { defineCollections } from "vuepress-theme-plume";
 import circuit from "./circuit.ts";
 import integral from "./integral.ts";
 import physics from "./physics.ts";
-import appliedMath from "./applied-math.ts";
+import probstathsy from "./probstathsy.ts";
 import algebra from "./algebra.ts";
 import CS from "./CS.ts";
 import complex from "./complex.ts";
-import RoboMaster from "./RoboMaster.ts";
 import cybernetics from "./cybernetics.ts";
 import optics from "./optics.ts";
 import electrodynamics from "./electrodynamics.ts";
-import appliedMechanics from "./applied-mechanics.ts";
 import analyticalMechanics from "./analytical-mechanics.ts";
 import computationalPhysics from "./computational-physics.ts";
+import mathematicalPhysics from "./mathematical-physics.ts";
 
 export const notes = defineCollections([
 		circuit,
 		integral,
 		algebra,
-		appliedMath,
+		probstathsy,
 		physics,
 		CS,
 		complex,
-		RoboMaster,
 		computationalPhysics,
 		cybernetics,
 		optics,
 		electrodynamics,
-		appliedMechanics,
 		analyticalMechanics,
+		mathematicalPhysics,
 
 
 ]);

@@ -3,7 +3,7 @@ title: Notes
 permalink: /notes/
 ---
 
-笔记目前总字数：<WordCount type="circuit, integral, algebra, physics, applied-math, complex, cybernetics, optics, electrodynamics, applied-mechanics, analytical-mechanics, CS, computational-physics" />
+笔记目前总字数：<WordCount type="circuit, integral, algebra, physics, probstathsy, complex, cybernetics, optics, electrodynamics, analytical-mechanics, computational-physics, mathematical-physics" />
 
 ### · math
 
@@ -11,9 +11,11 @@ permalink: /notes/
 
 [代数学基础](/algebra/)
 
-[应用数学](/applied-math/) （包含数理统计，数值分析等，我是鸽子）
+[应用数学](/probstathsy/) （包含数理统计，数值分析等，我是鸽子）
 
-[数学物理方法](/complex/)
+[复变函数](/complex/)
+
+[数学物理方程](/mathematical-physics/)
 
 ### · physics
 
@@ -29,12 +31,10 @@ permalink: /notes/
 
 ### · Technology
 
-[计算机科学](/CS/) 
+~~[计算机科学](/CS/)~~
 
-[电路系统](/circuit/)
+[电子电路](/circuit/)
 
-[工程力学](/applied-mechanics/)
-
-[RoboMaster](/RoboMaster/) (这部分也是一个半废弃的模块，我在想怎么抢救回来)
+[RoboMaster]() (一个半废弃的模块)
 
 [控制理论](/cybernetics/)

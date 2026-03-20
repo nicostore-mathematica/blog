@@ -1,21 +1,18 @@
 import { defineCollection } from "vuepress-theme-plume";
 
 export default defineCollection({
-	dir: "complex",
+	dir: "probstathsy",
 	sidebar: [
 		{
-			text: "复变函数",
+			text: "概率统计基础",
 			collapsed: false,
-			link: "/complex/",
+			link: "/probstathsy/",
 			items: [
-				"complex-1",
-				"complex-2",
-				"complex-3",
-				"complex-4",
-				"complex-5",
+				"probstathsy-1",
+				"probstathsy-2",
 			],
 		},
 	],
 	type: "doc",
-	title: "复变函数"
+	title: "概率统计"
 });
