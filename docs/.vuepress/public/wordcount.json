@@ -3,9 +3,9 @@
   "timeline": 184,
   "README": 230,
   "random": 71,
-  "notes": 112,
+  "notes": 107,
   "links": 523,
-  "about": 210,
+  "about": 206,
   "probstathsy": {
     "index": 12,
     "probstathsy-2": 6392,
@@ -31,7 +31,7 @@
     "optics-1": 6
   },
   "mathematical-physics": {
-    "index": 10,
+    "index": 13,
     "chapter-0": 6
   },
   "integral": {
@@ -158,7 +158,7 @@
   "algebra": {
     "index": 112,
     "algebra-9": 4333,
-    "algebra-8": 6306,
+    "algebra-8": 6305,
     "algebra-7": 6213,
     "algebra-6": 3271,
     "algebra-5": 4663,
@@ -171,7 +171,7 @@
   },
   "algebra\\algebra-13": 3,
   "algebra\\algebra-12": 3,
-  "total": 399574,
-  "lastUpdated": "2026-03-20T08:48:48.075Z",
+  "total": 399567,
+  "lastUpdated": "2026-03-20T10:00:25.512Z",
   "fileCount": 140
 }
