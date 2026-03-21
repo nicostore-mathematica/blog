@@ -13,6 +13,8 @@ export default defineCollection({
 				"complex-3",
 				"complex-4",
 				"complex-5",
+				"complex-6",
+				"complex-7",
 			],
 		},
 	],
