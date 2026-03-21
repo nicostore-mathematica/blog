@@ -417,7 +417,7 @@ $$
 > \left|\mathrm{e}^{-t^2} \cos 2zt\right| < \mathrm{e}^{-t^2 + 2y_0 t}, \quad t > 0.
 > $$
 >
-> 而积分 $\displaystyle\int_0^{\infty} \mathrm{e}^{-t^2 + 2y_0 t}\,\mathrm{d}t$ 收敛，所以含参量的无穷积分 (4.28) 一致收敛，因此，这个积分作为 $z$ 的函数，在 $z$ 复平面内的任意一个有界区域内解析。更进一步，就有
+> 而积分 $\displaystyle\int_0^{\infty} \mathrm{e}^{-t^2 + 2y_0 t}\,\mathrm{d}t$ 收敛，所以含参量的无穷积分一致收敛，因此，这个积分作为 $z$ 的函数，在 $z$ 复平面内的任意一个有界区域内解析。更进一步，就有
 >
 > $$
 > F'(z) = -\int_0^{\infty} \mathrm{e}^{-t^2} 2t \sin 2zt\,\mathrm{d}t
