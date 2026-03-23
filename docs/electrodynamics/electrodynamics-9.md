@@ -462,38 +462,30 @@ $$
 > $$
 > \nabla_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} = -\frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}
 > $$
-> 
->成立。其次，利用在第二章中的相关推导，我们看到当 $\mathbf{r} \ne \mathbf{r}'$ 时，
-> 
+> 成立。其次，利用在第二章中的相关推导，我们看到当 $\mathbf{r} \ne \mathbf{r}'$ 时，
 >$$
 > \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} = -\nabla_{\mathbf{r}} \cdot \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} = 0.
-> $$
-> 
-> 因此，我们只需研究 $\nabla^2_{\mathbf{r}} \dfrac{1}{|\mathbf{r} - \mathbf{r}'|}$ 在 $\mathbf{r} \simeq \mathbf{r}'$ 附近的行为即可。取一个以 $\mathbf{r}$ 为球心，$\delta$ 为半径的小球体 $\Omega_\delta$。则我们有
->
-> $$
->\begin{aligned}
-> &\int \int \int_{R^3} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz \\\\
-> &= \int \int \int_{R^3 \setminus \Omega_\delta} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz + \int \int \int_{\Omega_\delta} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz \\\\
-> &= \int \int \int_{\Omega_\delta} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz.
-> \end{aligned}
-> $$
-> 
-> 对上式的右边使用高斯定理后，我们进一步得到
-> 
 >$$
+> 因此，我们只需研究 $\nabla^2_{\mathbf{r}} \dfrac{1}{|\mathbf{r} - \mathbf{r}'|}$ 在 $\mathbf{r} \simeq \mathbf{r}'$ 附近的行为即可。取一个以 $\mathbf{r}$ 为球心，$\delta$ 为半径的小球体 $\Omega_\delta$。则我们有
+> $$
 > \begin{aligned}
->\int \int \int_{R^3} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz &= \int \int \int_{\Omega_\delta} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz \\\\
+> &\int \int \int_{R^3} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz \\\\
+>&= \int \int \int_{R^3 \setminus \Omega_\delta} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz + \int \int \int_{\Omega_\delta} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz \\\\
+> &= \int \int \int_{\Omega_\delta} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz.
+>\end{aligned}
+> $$
+> 对上式的右边使用高斯定理后，我们进一步得到
+> $$
+> \begin{aligned}
+> \int \int \int_{R^3} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz &= \int \int \int_{\Omega_\delta} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz \\\\
 > &= \oint \oint_{S_\delta} \left( \nabla_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} \right) \cdot d\mathbf{S} = -\oint \oint_{S_\delta} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \cdot d\mathbf{S} = -4\pi.
 > \end{aligned}
 > $$
-> 
-> 另一方面，按照定义，我们有
-> 
+>另一方面，按照定义，我们有
 > $$
 >\int \int \int_{R^3} (-4\pi) \delta(\mathbf{r} - \mathbf{r}') dxdydz = -4\pi,
 > $$
->
+> 
 > 故成立。
 
 在做了这些准备之后，我们现在可以引入静电学问题中的格林函数了。它被定义作方程
@@ -502,7 +494,13 @@ $$
 \nabla^2_{\mathbf{r}} G(\mathbf{r}, \mathbf{r}') = -\frac{1}{\epsilon_0} \delta(\mathbf{r} - \mathbf{r}')
 $$
 
-的解。根据点电荷与 $\delta$ 函数的关系，$G(\mathbf{r}, \mathbf{r}')$ 也可以被解释作真空中一个位于空间 $ \mathbf{r}' $ 处带电量为 $q = 1$ 的点电荷在空间 $\mathbf{r}$ 处产生的静电势。需要强调一点的是，由于 $\delta(\mathbf{r})$ 是一个偶函数，故 $\nabla^2_{\mathbf{r}} G(\mathbf{r}, \mathbf{r}') = \nabla^2_{\mathbf{r}'} G(\mathbf{r}', \mathbf{r})$ 显然成立。除此之外，亦可证明，在第一类边值条件下，$G(\mathbf{r}, \mathbf{r}') = G(\mathbf{r}', \mathbf{r})$ 也成立。这一互易关系隐含着，在给定的边值条件下，位于 $ \mathbf{r}' $ 处的单位电荷在 $\mathbf{r}$ 处产生的电势与位于 $\mathbf{r}$ 处的单位电荷在 $ \mathbf{r}' $ 处产生的电势是等值的。
+的解。
+
+根据点电荷与 $\delta$ 函数的关系，$G(\mathbf{r}, \mathbf{r}')$ 也可以被解释作真空中一个位于空间 $\mathbf{r}'$ 处带电量为 $q = 1$ 的点电荷在空间 $\mathbf{r}$ 处产生的静电势。
+
+需要强调一点的是，由于 $\delta(\mathbf{r})$ 是一个偶函数，故 $\nabla^2_{\mathbf{r}} G(\mathbf{r}, \mathbf{r}') = \nabla^2_{\mathbf{r}'} G(\mathbf{r}', \mathbf{r})$ 显然成立。除此之外，亦可证明，在第一类边值条件下，$G(\mathbf{r}, \mathbf{r}') = G(\mathbf{r}', \mathbf{r})$ 也成立。
+
+这一互易关系隐含着，在给定的边值条件下，位于 $\mathbf{r}'$ 处的单位电荷在 $\mathbf{r}$ 处产生的电势与位于 $\mathbf{r}$ 处的单位电荷在 $\mathbf{r}'$ 处产生的电势是等值的。
 
 我们知道，要想唯一地决定 $G(\mathbf{r}, \mathbf{r}')$，需要给出在相关的空间区域 $\Omega$ 的边界 $S = \partial\Omega$ 上的电势分布 $\Phi_S$ 或其导数分布 $\left.\dfrac{\partial\Phi_S}{\partial n}\right|_S$。让我们结合讲过的例子，分别考虑以下三种情况。
 
@@ -530,8 +528,10 @@ $$
 > (2) 上半平面的格林函数。我们可以写出此时的格林函数
 >
 > $$
-> G_1(\mathbf{r}, \mathbf{r}') &= \frac{1}{4\pi\epsilon_0} \left( \frac{1}{\sqrt{(x - x')^2 + (y - y')^2 + (z - z')^2}} \right. \\
+> \begin{aligned}
+> G_1(\mathbf{r}, \mathbf{r}') &= \frac{1}{4\pi\epsilon_0} \left( \frac{1}{\sqrt{(x - x')^2 + (y - y')^2 + (z - z')^2}} \right. \\\\
 > &\quad \left. - \frac{1}{\sqrt{(x - x')^2 + (y - y')^2 + (z + z')^2}} \right).
+> \end{aligned}
 > $$
 >
 > (3) 球外空间的格林函数。若令
@@ -546,14 +546,17 @@ $$
 > G_2(\mathbf{r}, \mathbf{r}') = \frac{1}{4\pi\epsilon_0} \left( \frac{1}{\sqrt{r^2 + r'^2 - 2rr' \cos\alpha}} - \frac{R_0 / r'}{\sqrt{r^2 + b^2 - 2rb \cos\alpha}} \right),
 > $$
 >
-> 这里，$R_0$ 为球的半径，电荷点为 $P$，场点 $P'$，角度 $\alpha$ 为 $\overrightarrow{OP}$ 和 $\overrightarrow{OP'}$ 的夹角。将 $b = \dfrac{R_0^2}{r'}$ 代入上式后，我们有
+> 这里，$R_0$ 为球的半径，电荷点为 $P$，场点 $P'$，角度 $\alpha$ 为 $\overrightarrow{OP}$ 和 $\overrightarrow{OP'}$ 的夹角。
 >
+> 将 $b = \dfrac{R_0^2}{r'}$ 代入上式后，我们有
 > $$
 > G_2(\mathbf{r}, \mathbf{r}') = \frac{1}{4\pi\epsilon_0} \left( \frac{1}{\sqrt{r^2 + r'^2 - 2rr' \cos\alpha}} - \frac{1}{\sqrt{\left( \frac{rr'}{R_0} \right)^2 + R_0^2 - 2rr' \cos\alpha}} \right).
 > $$
 >
 
-接下来，我们讨论如何利用格林函数获得一般边值问题的解。先看第一类边值问题。由于自由电荷在空间中的分布密度函数 $ \rho_f(\mathbf{r}') $ 是已知的，故泊松方程
+接下来，我们讨论如何利用格林函数获得一般边值问题的解。先看第一类边值问题。
+
+由于自由电荷在空间中的分布密度函数 $\rho_f(\mathbf{r}')$ 是已知的，故泊松方程
 $$
 \nabla_{\mathbf{r}'}^2 \Phi(\mathbf{r}') = -\frac{1}{\epsilon} \rho_f(\mathbf{r}')
 $$
@@ -564,7 +567,7 @@ $$
 \nabla_{\mathbf{r}}^2 G(\mathbf{r}, \mathbf{r}') = -\frac{1}{\epsilon_0} \delta(\mathbf{r} - \mathbf{r}')
 $$
 
-成立。将 $\displaystyle\nabla_{\mathbf{r}'}^2 \Phi(\mathbf{r}') = -\dfrac{1}{\epsilon} \rho_f(\mathbf{r}')$ 乘以 $G(\mathbf{r}, \mathbf{r}')$ 再减去 $\displaystyle\nabla_{\mathbf{r}}^2 G(\mathbf{r}, \mathbf{r}') = -\dfrac{1}{\epsilon_0} \delta(\mathbf{r} - \mathbf{r}') $ 乘以 $\Phi(\mathbf{r}')$ 后
+成立。将 $\displaystyle\nabla_{\mathbf{r}'}^2 \Phi(\mathbf{r}') = -\dfrac{1}{\epsilon} \rho_f(\mathbf{r}')$ 乘以 $G(\mathbf{r}, \mathbf{r}')$ 再减去 $\displaystyle\nabla_{\mathbf{r}}^2 G(\mathbf{r}, \mathbf{r}') = -\dfrac{1}{\epsilon_0} \delta(\mathbf{r} - \mathbf{r}')$ 乘以 $\Phi(\mathbf{r}')$ 后
 
 $$
 \begin{aligned}
