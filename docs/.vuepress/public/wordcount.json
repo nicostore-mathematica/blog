@@ -65,7 +65,7 @@
   },
   "electrodynamics": {
     "index": 105,
-    "electrodynamics-9": 7831,
+    "electrodynamics-9": 7827,
     "electrodynamics-8": 7035,
     "electrodynamics-7": 4199,
     "electrodynamics-6": 6085,
@@ -172,7 +172,7 @@
   },
   "algebra\\algebra-13": 3,
   "algebra\\algebra-12": 3,
-  "total": 424216,
-  "lastUpdated": "2026-03-23T18:01:22.477Z",
+  "total": 424212,
+  "lastUpdated": "2026-03-25T02:33:10.964Z",
   "fileCount": 141
 }
