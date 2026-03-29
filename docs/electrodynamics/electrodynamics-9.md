@@ -635,8 +635,10 @@ $$
 当 $|\mathbf{r}'| \ll |\mathbf{r}|$ 时，我们近似有
 
 $$
+\begin{aligned}
 f(\mathbf{r}-\mathbf{r}') &\cong f(\mathbf{r})+\sum_{i=1}^{3}\frac{\partial f(\mathbf{r})}{\partial x_i}(-x'_i)+\frac{1}{2!}\sum_{i=1}^{3}\sum_{j=1}^{3}\frac{\partial^2 f(\mathbf{r})}{\partial x_i\partial x_j}(-x'_i)(-x'_j) \\
 &= f(\mathbf{r})-\mathbf{r}'\cdot\nabla_{\mathbf{r}}f(\mathbf{r})+\frac{1}{2!}(\mathbf{r}'\cdot\nabla_{\mathbf{r}})^2f(\mathbf{r}).
+\end{aligned}
 $$
 
 将此展开式应用到上式中的被积函数，我们有
