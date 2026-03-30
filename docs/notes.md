@@ -3,7 +3,7 @@ title: Notes
 permalink: /notes/
 ---
 
-笔记目前总字数：<WordCount type="circuit, integral, algebra, physics, probstathsy, complex, cybernetics, optics, electrodynamics, analytical-mechanics, computational-physics, mathematical-physics" />
+笔记目前总字数：<WordCount type="circuit, integral, algebra, physics, probstathsy, complex, cybernetics, optics, electrodynamics, analytical-mechanics, computational-physics, mathematical-physics,signal-analysis " />
 
 ### · math
 

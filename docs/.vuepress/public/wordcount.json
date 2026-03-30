@@ -6,6 +6,11 @@
   "notes": 107,
   "links": 523,
   "about": 206,
+  "signal-analysis": {
+    "signal-2": 5,
+    "signal-1": 5,
+    "index": 30
+  },
   "probstathsy": {
     "index": 12,
     "probstathsy-2": 6392,
@@ -65,7 +70,7 @@
   },
   "electrodynamics": {
     "index": 105,
-    "electrodynamics-9": 7827,
+    "electrodynamics-9": 7831,
     "electrodynamics-8": 7035,
     "electrodynamics-7": 4199,
     "electrodynamics-6": 6085,
@@ -73,7 +78,7 @@
     "electrodynamics-4": 8333,
     "electrodynamics-3": 5776,
     "electrodynamics-2": 7734,
-    "electrodynamics-10": 10,
+    "electrodynamics-10": 6028,
     "electrodynamics-1": 6420,
     "electrodynamics-0": 6796
   },
@@ -172,7 +177,7 @@
   },
   "algebra\\algebra-13": 3,
   "algebra\\algebra-12": 3,
-  "total": 424212,
-  "lastUpdated": "2026-03-25T02:33:10.964Z",
-  "fileCount": 141
+  "total": 430274,
+  "lastUpdated": "2026-03-30T10:27:12.926Z",
+  "fileCount": 144
 }

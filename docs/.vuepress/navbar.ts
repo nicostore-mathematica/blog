@@ -36,6 +36,7 @@ export const navbar = defineNavbarConfig([
 			{ text: "分析力学", link: "/analytical-mechanics/README.md" },
 			{ text: "电动力学", link: "/electrodynamics/README.md" },
       		{ text: "电子电路", link: "/circuit/" },
+			{ text: "信号分析", link: "/signal-analysis/README.md" },
 			{ text: "控制理论", link: "/cybernetics/README.md" },
 			
 
