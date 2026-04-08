@@ -1,7 +1,8 @@
 ---
 title: 在这世界的某个角落
-permalink: /article/article-5/
+permalink: /article/article-6/
 changelog: false
+createTime: 2026/04/06 14:25:06
 ---
 
 > “如果在春天，十个此间。”
