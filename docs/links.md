@@ -86,6 +86,11 @@ list:
   link: https://hongliu.icu
   avatar: https://hongliu.icu/image/avator_1.jpg
   desc: 做自己所爱的事，爱自己所做的事。
+
+- name: 垚森
+  link: https://blog.qsq.cool/
+  avatar: https://qsq.cool/logo.png
+  desc: 
 ---
 
 目前来说本站并不会卡任何友链喵，还是希望能多多和大家交朋友！
