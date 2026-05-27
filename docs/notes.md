@@ -35,6 +35,6 @@ permalink: /notes/
 
 [电子电路](/circuit/)
 
-[RoboMaster]() (一个半废弃的模块)
+[RoboMaster]() (一个半废弃的模块，以后有概率复活)
 
 [控制理论](/cybernetics/)
