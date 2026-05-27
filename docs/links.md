@@ -102,8 +102,6 @@ list:
 - 链接：``https://soda-official.top/``
 - 图片：``https://soda-official.top/images/soda.jpg``
 
-
-
 ---
 
 叠个甲喵，<u>**本站不对友情链接网页内容负责.**</u>
