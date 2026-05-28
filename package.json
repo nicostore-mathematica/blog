@@ -30,7 +30,9 @@
     "@vuepress/plugin-comment": "2.0.0-rc.120",
     "@vuepress/plugin-feed": "2.0.0-rc.120",
     "@vuepress/theme-default": "2.0.0-rc.120",
+    "@vueuse/core": "^14.3.0",
     "glob": "^11.0.3",
-    "twikoo": "^1.7.3"
+    "twikoo": "^1.7.3",
+    "vite": "^8.0.14"
   }
 }
