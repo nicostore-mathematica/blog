@@ -1,5 +1,5 @@
 ---
-title: Chapter 2 静态电磁学基础
+title: Lesson 2 Maxwell方程组 I
 permalink: /electrodynamics/electrodynamics-2/
 createTime: 2025/11/18 19:50:40
 ---

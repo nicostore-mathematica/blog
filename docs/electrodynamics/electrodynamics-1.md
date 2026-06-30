@@ -1,5 +1,5 @@
 ---
-title: Chapter 1 数学基础
+title: Lesson 1 数学基础
 createTime: 2025/11/18 19:50:24
 permalink: /electrodynamics/electrodynamics-1/
 ---

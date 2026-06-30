@@ -4,11 +4,11 @@
   "README": 230,
   "random": 71,
   "notes": 107,
-  "links": 523,
+  "links": 548,
   "about": 206,
   "signal-analysis": {
     "signal-2": 6,
-    "signal-1": 6,
+    "signal-1": 5147,
     "index": 31
   },
   "probstathsy": {
@@ -70,16 +70,16 @@
   },
   "electrodynamics": {
     "index": 105,
-    "electrodynamics-9": 7831,
-    "electrodynamics-8": 7035,
-    "electrodynamics-7": 4199,
-    "electrodynamics-6": 6085,
-    "electrodynamics-5": 4109,
-    "electrodynamics-4": 8333,
-    "electrodynamics-3": 5776,
-    "electrodynamics-2": 7734,
-    "electrodynamics-11": 6,
-    "electrodynamics-10": 6028,
+    "electrodynamics-9": 7035,
+    "electrodynamics-8": 4196,
+    "electrodynamics-7": 6084,
+    "electrodynamics-6": 4105,
+    "electrodynamics-5": 5297,
+    "electrodynamics-4": 3020,
+    "electrodynamics-3": 5777,
+    "electrodynamics-2": 7732,
+    "electrodynamics-11": 6028,
+    "electrodynamics-10": 7831,
     "electrodynamics-1": 6420,
     "electrodynamics-0": 6796
   },
@@ -128,6 +128,7 @@
     "circuit-1": 6092
   },
   "weekly": {
+    "weekly-9": 988,
     "weekly-8": 377,
     "weekly-7": 1250,
     "weekly-6": 1209,
@@ -179,7 +180,7 @@
   },
   "algebra\\algebra-13": 3,
   "algebra\\algebra-12": 3,
-  "total": 432184,
-  "lastUpdated": "2026-05-15T14:12:48.364Z",
-  "fileCount": 146
+  "total": 438307,
+  "lastUpdated": "2026-06-30T13:49:48.346Z",
+  "fileCount": 147
 }

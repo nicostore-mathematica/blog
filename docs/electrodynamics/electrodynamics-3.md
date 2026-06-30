@@ -1,10 +1,10 @@
 ---
-title: Chapter 3 Maxwell 方程组
+title: Lesson 3 Maxwell 方程组 II
 permalink: /electrodynamics/electrodynamics-3/
 createTime: 2026/03/13 20:57:20
 ---
 
-## Part 1 含时电磁场
+## Part 3 含时电磁场
 
 前面我们仅仅讨论了静电场和静磁场的情况，我们得到如下的两条方程：
 $$
@@ -107,7 +107,7 @@ $$
 
 从而完成了经典电动力学的最后建立。
 
-## Part 2 Maxwell 方程组推论
+## Part 4 Maxwell 方程组推论
 
 接下来，让我们看一下麦克斯韦方程组的一些直接推论。
 
@@ -502,7 +502,7 @@ $$
 
 特别是力学量 $\epsilon_0 \mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)$ 尽管看起来像是玻印亭矢量，但它实际上是电磁场的动量密度矢量。
 
-## Part 3 标量势矢量势规范变换
+## Part 5 标量势矢量势规范变换
 
 在讨论静电场和静磁场时，我们引入了标量势和矢量势的概念，以及规范变换的定义。现在的问题是，在电场强度和磁感应强度可以随时间改变的情况下，我们应该对这些概念和定义做什么样的修改？
 

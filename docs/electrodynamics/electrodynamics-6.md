@@ -1,677 +1,370 @@
 ---
-title: Chapter 6 电磁场变换
+title: Lesson 6 Lagrange 形式 I
 permalink: /electrodynamics/electrodynamics-6/
-createTime: 2026/03/14 22:19:58
+createTime: 2026/03/14 17:03:20
 ---
 
-## Part 1 惯性系间矢量变换
+前面我们已经讲述了电动力学的发展简史，主要概念和基本方程式。现在开始我们将用所谓拉格朗日量的形式把它们复述一遍。这样做的目的，不仅是为了将电动力学用一种更为紧凑和明晰的形式表达出来，也是由于这一形式有助于我们加深对于电动力学和狭义相对论之间的关系的理解。
 
-接下来，我们考虑矢势 $\mathbf{A}(x_1, x_2, x_3, x_4)$ 和标势 $\Phi(x_1, x_2, x_3, x_4)$ 在两个惯性参照系之间的变换关系。由于 $A_x(x_1, x_2, x_3, x_4)$, $A_y(x_1, x_2, x_3, x_4)$, $A_z(x_1, x_2, x_3, x_4)$ 和 $i \Phi(x_1, x_2, x_3, x_4)/c$ 是一个四维协变矢量（四维势）的分量，故它们在两个不同惯性参照系之间的变换关系应与四维坐标 $x_1, x_2, x_3$ 和 $x_4$ 满足的变换关系，即洛伦兹变换
+同时，更为重要的是，早在 1925 年，狄拉克 (Paul Dirac) 即已发现，基于拉格朗日形式的所谓正则量子化方法 (canonical quantization)，可以使得人们从经典物理的牛顿方程出发，直接写出一个体系所满足的量子力学的薛定谔方程 (Schrödinger equation)。这就使得拉格朗日形式的表述成为研究量子力学的不可或缺的工具。
+
+## Part 1 自由粒子的作用量
+
+拉格朗日表述的出发点是所谓最小作用量原理。这一原理告诉我们，对于每一个力学体系，有一个叫作“作用量 (action)”的积分 $S$ 存在。对于体系的实际运动过程，这个量应该取极值，即它的变分 $\delta S$ 为零。首先，我们看一个自由粒子的作用量。按照爱因斯坦的相对性原理，它应该与我们所选取的惯性参照系无关。也就是说，在洛伦兹变换下，它应该是一个不变量。一个简单明了的选择是
+
+$$
+S = \int_a^b \alpha\, d\tau.
+$$
+
+这里，$\alpha$ 为一个待定常数，$a$ 和 $b$ 为自由粒子在一段时间间隔内运动的出发时的初始时空点和最后到达的终止时空点。$\tau$ 为粒子的原时 (或固有时)。至于这样选取 $S$ 是否合适以及如何确定常数 $\alpha$，则要由可否利用最小作用量原理推导出我们先前已知的结果来决定。
+
+我们已经知道，对于实验室系而言，作用量 $S$ 可以重新写作
+
+$$
+S = \int_{t_a}^{t_b} \alpha \sqrt{1 - \frac{v^2}{c^2}}\, dt.
+$$
+
+这里，$t$ 为实验室参照系中的时间，$c$ 为真空中的光速，而 $v$ 为自由粒子相对于实验室参照系的速率。在文献中，被积函数
+
+$$
+L(x, y, z, \dot{x}, \dot{y}, \dot{z}) = \alpha \sqrt{1 - \frac{v^2}{c^2}} = \alpha \sqrt{1 - \frac{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}{c^2}}
+$$
+
+称为粒子在实验室参照系中的拉格朗日量 (lagrangian)。
+
+接下来，我们要决定常数 $\alpha$。根据广义动量的定义，我们知道
+
+$$
+p_x = \frac{\partial L}{\partial v_x}, \quad p_y = \frac{\partial L}{\partial v_y}, \quad p_z = \frac{\partial L}{\partial v_z}
+$$
+
+成立。以 $p_x$ 为例，我们有
+
+$$
+p_x = \frac{\partial L}{\partial v_x} = \frac{\partial}{\partial \dot{x}} \left( \alpha \sqrt{1 - \frac{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}{c^2}} \right) = \frac{\alpha}{2} \frac{1}{\sqrt{1 - \frac{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}{c^2}}} \left( -\frac{2\dot{x}}{c^2} \right) = \frac{-\alpha v_x}{c^2 \sqrt{1 - \frac{v^2}{c^2}}}.
+$$
+
+另一方面，我们已知
+
+$$
+p_x = \frac{m_0 v_x}{\sqrt{1 - \frac{v^2}{c^2}}}.
+$$
+
+比较以上两式，我们得到 $\alpha = -m_0 c^2$。因此，粒子的作用量 $S$ 可以被重新写作
+
+$$
+S = -m_0 c^2 \int_{t_a}^{t_b} \sqrt{1 - \frac{v^2}{c^2}}\, dt.
+$$
+
+有了粒子的拉格朗日量之后，我们即可写出其哈密顿量 $H$。我们有
 
 $$
 \begin{aligned}
-x'_1 &= x_1 \cos \theta + x_4 \sin \theta, & x'_4 &= -x_1 \sin \theta + x_4 \cos \theta, \\\\
-x'_2 &= x_2, & x'_3 &= x_3
+H &= p_x \dot{x} + p_y \dot{y} + p_z \dot{z} - L = \frac{m_0 v^2}{\sqrt{1 - \frac{v^2}{c^2}}} + m_0 c^2 \sqrt{1 - \frac{v^2}{c^2}} \\\\
+&= \frac{m_0}{\sqrt{1 - \frac{v^2}{c^2}}} \left[ v^2 + c^2 \left( 1 - \frac{v^2}{c^2} \right) \right] = \frac{m_0 c^2}{\sqrt{1 - \frac{v^2}{c^2}}}.
 \end{aligned}
 $$
 
-相同。这里，$\tan \theta = -V / i c$。因此，我们有
+我们看到，这恰恰是粒子的能量。
 
-$$
-\begin{aligned}
-A'_x(x'_1, x'_2, x'_3, x'_4) &= A'_1(x'_1, x'_2, x'_3, x'_4) = A_1(x_1, x_2, x_3, x_4) \cos \theta + A_4(x_1, x_2, x_3, x_4) \sin \theta \\\\
-&= \frac{1}{\sqrt{1 - \frac{V^2}{c^2}}} A_x(x_1, x_2, x_3, x_4) + \frac{-V}{\sqrt{1 - \frac{V^2}{c^2}}} \left( \frac{i}{c} \Phi(x_1, x_2, x_3, x_4) \right) \\\\
-&= \frac{A_x(x_1, x_2, x_3, x_4) - \frac{V}{c} \Phi(x_1, x_2, x_3, x_4)}{\sqrt{1 - \frac{V^2}{c^2}}},
-\end{aligned}
-$$
+现在，我们要利用最小作用量原理推导自由粒子的运动方程。首先，我们将粒子的作用量改写作
 
 $$
 \begin{aligned}
-A'_y(x'_1, x'_2, x'_3, x'_4) &= A'_2(x'_1, x'_2, x'_3, x'_4) = A_2(x_1, x_2, x_3, x_4) = A_y(x_1, x_2, x_3, x_4), \\\\
-A'_z(x'_1, x'_2, x'_3, x'_4) &= A'_3(x'_1, x'_2, x'_3, x'_4) = A_3(x_1, x_2, x_3, x_4) = A_z(x_1, x_2, x_3, x_4),
+S &= -m_0 c^2 \int_a^b d\tau = -m_0 c \int_a^b \sqrt{c^2 (dt)^2 - (dx)^2 - (dy)^2 - (dz)^2} \\\\
+&= -m_0 c \int_a^b \sqrt{ -\sum_{i=1}^4 (dx_i)^2 }.
 \end{aligned}
+$$
+
+显然，这一表达式在洛伦兹变换下是不变的。将之取变分后，我们有
+
+$$
+\delta S = -m_0 c \int_a^b \delta \sqrt{ -\sum_{i=1}^4 (dx_i)^2 }
+$$
+
+$$
+= -m_0 c \int_a^b \frac{(-1) \sum_{i=1}^4 2 dx_i\, \delta(dx_i)}{2 \sqrt{ -\sum_{i=1}^4 (dx_i)^2 }} = m_0 c \int_a^b \frac{ \sum_{i=1}^4 dx_i\, d(\delta x_i) }{ \sqrt{ -\sum_{i=1}^4 (dx_i)^2 } }
+$$
+
+$$
+= m_0 \sum_{i=1}^4 \frac{dx_i}{ \sqrt{ -\sum_{i=1}^4 (dx_i)^2 } } \delta x_i \bigg|_a^b - m_0 c \int_a^b \sum_{i=1}^4 d \left( \frac{dx_i}{ \sqrt{ -\sum_{i=1}^4 (dx_i)^2 } } \right) \delta x_i
+$$
+
+$$
+= m_0 \sum_{i=1}^4 \frac{dx_i}{ \sqrt{ -\frac{1}{c^2} \sum_{i=1}^4 (dx_i)^2 } } \delta x_i \bigg|_a^b - m_0 \int_a^b \sum_{i=1}^4 d \left( \frac{dx_i}{ \sqrt{ -\frac{1}{c^2} \sum_{i=1}^4 (dx_i)^2 } } \right) \delta x_i
+$$
+
+$$
+= \sum_{i=1}^4 \left( m_0 \frac{dx_i}{d\tau} \right) \delta x_i \bigg|_a^b - \int_a^b \sum_{i=1}^4 d \left( m_0 \frac{dx_i}{d\tau} \right) \delta x_i.
+$$
+
+分别令
+
+$$
+\frac{dx_i}{d\tau} = u_i, \quad m_0 \frac{dx_i}{d\tau} = p_i,
+$$
+
+为四维速度和动量。对于粒子的真实运动，作用量应该取极值。因此，我们有
+
+$$
+\delta S = \sum_{i=1}^4 (m_0 u_i) \delta x_i \bigg|_a^b - \int_a^b \sum_{i=1}^4 d(m_0 u_i) \delta x_i = \sum_{i=1}^4 p_i \delta x_i \bigg|_a^b - \sum_{i=1}^4 \left( \int_a^b \frac{dp_i}{d\tau} d\tau \right) \delta x_i = 0.
+$$
+
+由于 $(\delta x_i)_a = (\delta x_i)_b = 0$，故上式中的第一项为零。因此，
+
+$$
+\delta S = - \sum_{i=1}^4 \left( \int_a^b \frac{dp_i}{d\tau} d\tau \right) \delta x_i = 0.
+$$
+
+成立。又由于 $\delta x_i$ 是彼此独立的，故我们进一步有
+
+$$
+\int_a^b \frac{dp_i}{d\tau} d\tau = 0.
+$$
+
+考虑到出发时的初始点 $a$ 和最后到达的终止点 $b$ 的任意性，则被积函数本身必须为零，即
+
+$$
+\frac{dp_i}{d\tau} = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{d}{dt} \left( \frac{m_0 v_i}{\sqrt{1 - \frac{v^2}{c^2}}} \right) = 0,
+$$
+
+或是
+
+$$
+\frac{d}{dt} \left( \frac{m_0 v_i}{\sqrt{1 - \frac{v^2}{c^2}}} \right) = 0.
+$$
+
+这就是我们已经熟悉的自由粒子运动满足的牛顿方程。
+
+## Part 2 粒子与电磁场相互作用
+
+接下来，我们看看如何用拉格朗日形式来描述一个带电粒子和外加电磁场之间的相互作用。我们将相应的作用量写作
+
+$$
+S = S_\mathrm{m} + S_\mathrm{mf} = -m_0 c^2 \int_a^b d\tau + S_\mathrm{mf}.
+$$
+
+这里，“m”为 matter(物质)的第一个字母，而“f”为 field(场)的第一个字母。因此，$S_\mathrm{m}$ 为带电粒子的作用量，而 $S_\mathrm{mf}$ 表示粒子和外场相互作用的作用量。现在的问题是如何决定后者。
+
+我们已经得知，电磁场可以用矢势和标势来描述。因此，我们引入四维势，其分量为 $A_1(x, y, z, t), A_2(x, y, z, t), A_3(x, y, z, t)$ 和 $A_4(x, y, z, t)$。我们要求它们在洛伦兹变换下同四维坐标 $x_1 = x, x_2 = y, x_3 = z$ 和 $x_4 = i c t$ 一样地变换。在此要求下，下面的积分
+
+$$
+I = \int_a^b (A_1(x, y, z, t) dx_1 + A_2(x, y, z, t) dx_2 + A_3(x, y, z, t) dx_3 + A_4(x, y, z, t) dx_4)
+$$
+
+显然是一个相对论不变量（即在洛伦兹变换下不变的量）。因此，我们可以将相互作用量 $S_\mathrm{mf}$ 写作
+
+$$
+S_\mathrm{mf} = \beta \int_a^b (A_1(x, y, z, t) dx_1 + A_2(x, y, z, t) dx_2 + A_3(x, y, z, t) dx_3 + A_4(x, y, z, t) dx_4).
+$$
+
+这里，$\beta$ 是一个待定常数。同四维势的分量 $A_1(x, y, z, t), A_2(x, y, z, t), A_3(x, y, z, t)$ 和 $A_4(x, y, z, t)$ 一起，我们需要对总的作用量求变分后再利用最小作用量原理重新推导出带电粒子在外加电磁场中满足的运动方程后对之加以确定。
+
+我们将看到，$A_1(x, y, z, t)$, $A_2(x, y, z, t)$ 和 $A_3(x, y, z, t)$ 恰好是电磁场的矢势分量 $A_x(x, y, z, t)$, $A_y(x, y, z, t)$ 和 $A_z(x, y, z, t)$，而 $A_4(x, y, z, t) = i \Phi(x, y, z, t)/c$。这里，$\Phi(x, y, z, t)$ 为电磁场的标量势，而 $c$ 为真空中的光速。
+
+现在，我们将总的作用量 $S$ 对于坐标 $x_i$ 取变分，并得到
+
+$$
+\begin{aligned}
+\delta S &= \delta S_\mathrm{m} + \delta S_\mathrm{mf} \\\\
+&= \delta \left( -m_0 c^2 \int_a^b d\tau \right) + \delta \left( \beta \int_a^b (A_1 dx_1 + A_2 dx_2 + A_3 dx_3 + A_4 dx_4) \right)\\\\
+&= -m_0 c\, \delta \left( \int_a^b \sqrt{ -\sum_{i=1}^4 (dx_i)^2 } \right) + \beta\, \delta \left( \int_a^b (A_1 dx_1 + A_2 dx_2 + A_3 dx_3 + A_4 dx_4) \right)\\\\
+&= m_0 c \int_a^b \left( \sum_{i=1}^4 \frac{dx_i \delta(dx_i)}{ \sqrt{ -\sum_{i=1}^4 (dx_i)^2 } } \right) + \beta \int_a^b \left( \sum_{i=1}^4 (\delta A_i) dx_i + \sum_{i=1}^4 A_i (\delta dx_i) \right)\\\\
+&= m_0 \sum_{i=1}^4 \int_a^b \frac{dx_i \delta(dx_i)}{ \frac{1}{c} \sqrt{ -\sum_{i=1}^4 (dx_i)^2 } } + \beta \int_a^b \left( \sum_{i=1}^4 (\delta A_i) dx_i + \sum_{i=1}^4 A_i\, d(\delta x_i) \right)\\\\
+&= m_0 \sum_{i=1}^4 \int_a^b u_i\, d(\delta x_i) + \beta \sum_{i=1}^4 \int_a^b \left( \sum_{k=1}^4 \frac{\partial A_i}{\partial x_k} dx_k \right) dx_i + \beta \sum_{i=1}^4 \int_a^b A_i\, d(\delta x_i).
+\end{aligned}
+$$
+
+利用分步积分和条件 $(\delta x_i)_a = (\delta x_i)_b = 0$，我们进一步得到
+
+$$
+\begin{aligned}
+\delta S &= \delta S_\mathrm{m} + \delta S_\mathrm{mf} \\\\
+&= -m_0 \sum_{i=1}^4 \int_a^b d u_i\, \delta x_i + \beta \sum_{i=1}^4 \sum_{k=1}^4 \int_a^b \frac{\partial A_i}{\partial x_k} dx_i \delta x_k - \beta \sum_{i=1}^4 \int_a^b d A_i\, \delta x_i \\\\
+&= -m_0 \sum_{i=1}^4 \int_a^b d u_i\, \delta x_i + \beta \sum_{i=1}^4 \sum_{k=1}^4 \int_a^b \frac{\partial A_k}{\partial x_i} dx_k \delta x_i - \beta \sum_{i=1}^4 \int_a^b \left( \sum_{k=1}^4 \frac{\partial A_i}{\partial x_k} dx_k \right) \delta x_i \\\\
+&= \sum_{i=1}^4 \left[ \int_a^b \left( -m_0\, d u_i + \beta \sum_{k=1}^4 \frac{\partial A_k}{\partial x_i} dx_k - \beta \sum_{k=1}^4 \frac{\partial A_i}{\partial x_k} dx_k \right) \right] \delta x_i \\\\
+&= \sum_{i=1}^4 \left[ \int_a^b \left( -m_0 \frac{d u_i}{d\tau} + \beta \sum_{k=1}^4 \frac{\partial A_k}{\partial x_i} \frac{dx_k}{d\tau} - \beta \sum_{k=1}^4 \frac{\partial A_i}{\partial x_k} \frac{dx_k}{d\tau} \right) d\tau \right] \delta x_i.
+\end{aligned}
+$$
+
+对于粒子真实的运动，$S$ 应取极值。因此，我们有
+
+$$
+\delta S = \sum_{i=1}^4 \left[ \int_a^b \left( -m_0 \frac{d u_i}{d\tau} + \beta \sum_{k=1}^4 \frac{\partial A_k}{\partial x_i} \frac{dx_k}{d\tau} - \beta \sum_{k=1}^4 \frac{\partial A_i}{\partial x_k} \frac{dx_k}{d\tau} \right) d\tau \right] \delta x_i = 0.
+$$
+
+考虑到 $\delta x_1, \delta x_2, \delta x_3$ 和 $\delta x_4$ 是彼此独立的，故
+
+$$
+\int_a^b \left( -m_0 \frac{d u_i}{d\tau} + \beta \sum_{k=1}^4 \frac{\partial A_k}{\partial x_i} \frac{dx_k}{d\tau} - \beta \sum_{k=1}^4 \frac{\partial A_i}{\partial x_k} \frac{dx_k}{d\tau} \right) d\tau = 0
+$$
+
+必须成立。又由于初始点 $a$ 和终止点 $b$ 的任意性，则被积函数本身必须为零，即
+
+$$
+-m_0 \frac{d u_i}{d\tau} + \beta \sum_{k=1}^4 \frac{\partial A_k}{\partial x_i} \frac{dx_k}{d\tau} - \beta \sum_{k=1}^4 \frac{\partial A_i}{\partial x_k} \frac{dx_k}{d\tau} = 0,
+$$
+
+或是
+
+$$
+m_0 \frac{d u_i}{d\tau} = \beta \sum_{k=1}^4 \left( \frac{\partial A_k}{\partial x_i} - \frac{\partial A_i}{\partial x_k} \right) u_k.
+$$
+
+若我们令
+
+$$
+F_{ik}(x_1, x_2, x_3, x_4) = \frac{\partial A_k(x_1, x_2, x_3, x_4)}{\partial x_i} - \frac{\partial A_i(x_1, x_2, x_3, x_4)}{\partial x_k},
+$$
+
+则上式又可被写作
+
+$$
+m_0 \frac{d u_i}{d\tau} = \beta \sum_{k=1}^4 F_{ik}(x_1, x_2, x_3, x_4) u_k.
+$$
+
+根据定义，矩阵元 $F_{ik}$ 是反对称的，即
+
+$$
+F_{ik}(x_1, x_2, x_3, x_4) = -F_{ki}(x_1, x_2, x_3, x_4)
+$$
+
+成立。因此，对角元 $F_{11}, F_{22}, F_{33}$ 和 $F_{44}$ 皆为零。例如，当 $i = 1$ 时，运动方程
+$$
+m_0 \frac{d u_i}{d\tau} = \beta \sum_{k=1}^4 F_{ik}(x_1, x_2, x_3, x_4) u_k.
+$$
+可以写作
+
+$$
+m_0 \frac{d u_1}{d\tau} = \beta F_{12}(x_1, x_2, x_3, x_4) u_2 + \beta F_{13}(x_1, x_2, x_3, x_4) u_3 + \beta F_{14}(x_1, x_2, x_3, x_4) u_4.
+$$
+
+另一方面，根据定义，我们有
+
+$$
+\begin{aligned}
+F_{12}(x_1, x_2, x_3, x_4) &= \frac{\partial A_2(x_1, x_2, x_3, x_4)}{\partial x_1} - \frac{\partial A_1(x_1, x_2, x_3, x_4)}{\partial x_2} \\\\
+&= \frac{\partial A_y(x_1, x_2, x_3, x_4)}{\partial x} - \frac{\partial A_x(x_1, x_2, x_3, x_4)}{\partial y} = (\mathrm{rot}\mathbf{A}(x_1, x_2, x_3, x_4))_z, \\\\
+F_{13}(x_1, x_2, x_3, x_4) &= \frac{\partial A_3(x_1, x_2, x_3, x_4)}{\partial x_1} - \frac{\partial A_1(x_1, x_2, x_3, x_4)}{\partial x_3} \\\\
+&= \frac{\partial A_z(x_1, x_2, x_3, x_4)}{\partial x} - \frac{\partial A_x(x_1, x_2, x_3, x_4)}{\partial z} = -(\mathrm{rot}\mathbf{A}(x_1, x_2, x_3, x_4))_y, \\\\
+F_{14}(x_1, x_2, x_3, x_4) &= \frac{\partial A_4(x_1, x_2, x_3, x_4)}{\partial x_1} - \frac{\partial A_1(x_1, x_2, x_3, x_4)}{\partial x_4} \\\\
+&= \frac{\partial A_4(x_1, x_2, x_3, x_4)}{\partial x} + i \frac{\partial A_x(x_1, x_2, x_3, x_4)}{c\, \partial t} \\\\
+&= \frac{\partial A_4(x_1, x_2, x_3, x_4)}{\partial x} + i \frac{1}{c} \dot{A}_x(x_1, x_2, x_3, x_4).
+\end{aligned}
+$$
+
+除此之外，我们还有
+
+$$
+d\tau = \sqrt{1 - \frac{v^2}{c^2}}\, dt,
 $$
 
 以及
 
 $$
-\begin{aligned}
-\frac{i}{c} \Phi'(x'_1, x'_2, x'_3, x'_4) &= A'_4(x'_1, x'_2, x'_3, x'_4) = -A_1(x_1, x_2, x_3, x_4) \sin \theta + A_4(x_1, x_2, x_3, x_4) \cos \theta \\\\
-&= -\frac{-V}{\sqrt{1 - \frac{V^2}{c^2}}} A_x(x_1, x_2, x_3, x_4) + \frac{1}{\sqrt{1 - \frac{V^2}{c^2}}} \left( \frac{i}{c} \Phi(x_1, x_2, x_3, x_4) \right),
-\end{aligned}
+u_1 = \frac{v_x}{\sqrt{1 - \frac{v^2}{c^2}}}, \quad u_2 = \frac{v_y}{\sqrt{1 - \frac{v^2}{c^2}}}, \quad u_3 = \frac{v_z}{\sqrt{1 - \frac{v^2}{c^2}}}, \quad u_4 = \frac{i c}{\sqrt{1 - \frac{v^2}{c^2}}}.
 $$
 
-或是
-
+将这些表达式代入
 $$
-\Phi'(x'_1, x'_2, x'_3, x'_4) = \frac{\Phi(x_1, x_2, x_3, x_4) - V A_x(x_1, x_2, x_3, x_4)}{\sqrt{1 - \frac{V^2}{c^2}}}.
+m_0 \frac{d u_1}{d\tau} = \beta F_{12}(x_1, x_2, x_3, x_4) u_2 + \beta F_{13}(x_1, x_2, x_3, x_4) u_3 + \beta F_{14}(x_1, x_2, x_3, x_4) u_4.
 $$
-
-另一方面，根据定义，电磁场强度矢量由
-
-$$
-F_{ij}(x_1, x_2, x_3, x_4) = \frac{\partial A_j(x_1, x_2, x_3, x_4)}{\partial x_i} - \frac{\partial A_i(x_1, x_2, x_3, x_4)}{\partial x_j}
-$$
-
-给出。具体一点讲，我们有
-
-$$
-\mathcal{F} = \left( \begin{array}{cccc}
-F_{11} & F_{12} & F_{13} & F_{14} \\
-F_{21} & F_{22} & F_{23} & F_{24} \\
-F_{31} & F_{32} & F_{33} & F_{34} \\
-F_{41} & F_{42} & F_{43} & F_{44}
-\end{array} \right) = \left( \begin{array}{cccc}
-0 & B_z & -B_y & -\dfrac{i E_x}{c} \\\\
--B_z & 0 & B_x & -\dfrac{i E_y}{c} \\\\
-B_y & -B_x & 0 & -\dfrac{i E_z}{c} \\\\
-\dfrac{i E_x}{c} & \dfrac{i E_y}{c} & \dfrac{i E_z}{c} & 0
-\end{array} \right).
-$$
-
-因此，为了决定电磁场强度矢量在两个参照系之间的变换，我们只需考虑矩阵元 $F_{ij}$ 的变换关系即可。
-
-首先，我们有
-
-$$
-F'_{23} = \frac{\partial A'_3}{\partial x'_2} - \frac{\partial A'_2}{\partial x'_3} = \frac{\partial A_3}{\partial x_2} - \frac{\partial A_2}{\partial x_3} = F_{23}.
-$$
-
-这意味着
-
-$$
-B'_x(x'_1, x'_2, x'_3, x'_4) = B_x(x_1, x_2, x_3, x_4).
-$$
-
-又因为
+式后，我们有
 
 $$
 \begin{aligned}
-F'_{14} &= \frac{\partial A'_4}{\partial x'_1} - \frac{\partial A'_1}{\partial x'_4} = \left( \frac{\partial A'_4}{\partial x_1} \frac{\partial x_1}{\partial x'_1} + \frac{\partial A'_4}{\partial x_4} \frac{\partial x_4}{\partial x'_1} \right) - \left( \frac{\partial A'_1}{\partial x_1} \frac{\partial x_1}{\partial x'_4} + \frac{\partial A'_1}{\partial x_4} \frac{\partial x_4}{\partial x'_4} \right) \\\\
-&= \left( \frac{\partial A'_4}{\partial x_1} \cos \theta + \frac{\partial A'_4}{\partial x_4} \sin \theta \right) - \left( \frac{\partial A'_1}{\partial x_1} (-\sin \theta) + \frac{\partial A'_1}{\partial x_4} \cos \theta \right) \\\\
-&= \left( \left[ \frac{\partial}{\partial x_1} (-\sin \theta A_1 + \cos \theta A_4) \right] \cos \theta + \left[ \frac{\partial}{\partial x_4} (-\sin \theta A_1 + \cos \theta A_4) \right] \sin \theta \right) \\\\
-&- \left( \left[ \frac{\partial}{\partial x_1} (\cos \theta A_1 + \sin \theta A_4) \right] (-\sin \theta) + \left[ \frac{\partial}{\partial x_4} (\cos \theta A_1 + \sin \theta A_4) \right] \cos \theta \right) \\\\
-&= \left( -\sin \theta \cos \theta \frac{\partial A_1}{\partial x_1} + \cos^2 \theta \frac{\partial A_4}{\partial x_1} - \sin^2 \theta \frac{\partial A_1}{\partial x_4} + \cos \theta \sin \theta \frac{\partial A_4}{\partial x_4} \right) \\\\
-&- \left( -\cos \theta \sin \theta \frac{\partial A_1}{\partial x_1} - \sin^2 \theta \frac{\partial A_4}{\partial x_1} + \cos^2 \theta \frac{\partial A_1}{\partial x_4} + \cos \theta \sin \theta \frac{\partial A_4}{\partial x_4} \right) \\\\
-&= \frac{\partial A_4}{\partial x_1} - \frac{\partial A_1}{\partial x_4} = F_{14},
+&\frac{d}{\sqrt{1 - \frac{v^2}{c^2}}\, dt} \left( \frac{m_0 v_x}{\sqrt{1 - \frac{v^2}{c^2}}} \right) = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}\, \frac{d p_x}{dt} \\\\
+&= \beta (\mathrm{rot}\mathbf{A}(x_1, x_2, x_3, x_4))_z \frac{v_y}{\sqrt{1 - \frac{v^2}{c^2}}} - \beta (\mathrm{rot}\mathbf{A}(x_1, x_2, x_3, x_4))_y \frac{v_z}{\sqrt{1 - \frac{v^2}{c^2}}} \\\\
+&+ \beta \left( \frac{\partial A_4(x_1, x_2, x_3, x_4)}{\partial x} + i \frac{1}{c} \frac{\partial A_x(x_1, x_2, x_3, x_4)}{\partial t} \right) \frac{i c}{\sqrt{1 - \frac{v^2}{c^2}}} \\\\
+&= \frac{\beta}{\sqrt{1 - \frac{v^2}{c^2}}} \left( [\mathbf{v} \times \mathrm{rot}\mathbf{A}]_x + i c \frac{\partial A_4(x_1, x_2, x_3, x_4)}{\partial x} - \frac{\partial A_x(x_1, x_2, x_3, x_4)}{\partial t} \right).
 \end{aligned}
 $$
 
-即
+整理后，我们得到
 
 $$
-E'_x(x'_1, x'_2, x'_3, x'_4) = E_x(x_1, x_2, x_3, x_4).
+\frac{d p_x}{dt} = \beta \left( [\mathbf{v} \times \mathrm{rot}\mathbf{A}(x_1, x_2, x_3, x_4)]_x + i c \frac{\partial A_4(x_1, x_2, x_3, x_4)}{\partial x} - \frac{\partial A_x(x_1, x_2, x_3, x_4)}{\partial t} \right).
 $$
 
-接下来，我们研究 $F_{12}$ 的变换规律。我们有
+若我们取 $\beta$ 为带电粒子的电荷 $q$，$A_x(x_1, x_2, x_3, x_4), A_y(x_1, x_2, x_3, x_4)$ 和 $A_z(x_1, x_2, x_3, x_4)$ 为外加电磁场的矢势的三个分量，以及 $A_4(x_1, x_2, x_3, x_4) = i \Phi(x_1, x_2, x_3, x_4)/c$（这里，$\Phi(x_1, x_2, x_3, x_4)$ 为外加电磁场的标势），那么上式可进一步写作
 
 $$
 \begin{aligned}
-F'_{12}(x'_1, x'_2, x'_3, x'_4) &= \frac{\partial A'_2}{\partial x'_1} - \frac{\partial A'_1}{\partial x'_2} = \frac{\partial A_2}{\partial x'_1} - \frac{\partial A'_1}{\partial x_2} \\\\
-&= \left( \frac{\partial A_2}{\partial x_1} \frac{\partial x_1}{\partial x'_1} + \frac{\partial A_2}{\partial x_4} \frac{\partial x_4}{\partial x'_1} \right) - \frac{\partial}{\partial x_2} (A_1 \cos \theta + A_4 \sin \theta) \\\\
-&= \frac{\partial A_2}{\partial x_1} \cos \theta + \frac{\partial A_2}{\partial x_4} \sin \theta - \frac{\partial A_1}{\partial x_2} \cos \theta - \frac{\partial A_4}{\partial x_2} \sin \theta \\\\
-&= \left( \frac{\partial A_2}{\partial x_1} - \frac{\partial A_1}{\partial x_2} \right) \cos \theta + \left( \frac{\partial A_2}{\partial x_4} - \frac{\partial A_4}{\partial x_2} \right) \sin \theta \\\\
-&= \cos \theta F_{12}(x_1, x_2, x_3, x_4) + \sin \theta F_{42}(x_1, x_2, x_3, x_4).
+\frac{d p_x}{dt} &= q(\mathbf{v} \times \mathbf{B})_x + q \left( i c \cdot \frac{1}{c} \frac{\partial \Phi(x_1, x_2, x_3, x_4)}{\partial x} - \frac{\partial A_x(x_1, x_2, x_3, x_4)}{\partial t} \right) \\\\
+&= q(\mathbf{v} \times \mathbf{B})_x + q \left( -(\nabla \Phi(x_1, x_2, x_3, x_4))_x - \frac{\partial A_x(x_1, x_2, x_3, x_4)}{\partial t} \right) \\\\
+&= q(\mathbf{v} \times \mathbf{B}(x_1, x_2, x_3, x_4))_x + q E_x(x_1, x_2, x_3, x_4).
 \end{aligned}
 $$
 
-也就是说，在两个惯性参照系之间的变换下，$F_{12}$ 的脚标中只有 $i = 1$ 是按照洛伦兹变换改变的。同理，我们可以推得
+同理，对于 $i = 2$ 和 $i = 3$，我们也可得到
 
 $$
-F'_{13}(x'_1, x'_2, x'_3, x'_4) = \cos \theta F_{13}(x_1, x_2, x_3, x_4) + \sin \theta F_{43}(x_1, x_2, x_3, x_4),
+\frac{d p_y}{dt} = q(\mathbf{v} \times \mathbf{B}(x_1, x_2, x_3, x_4))_y + q E_y(x_1, x_2, x_3, x_4),
 $$
 
-$$
-F'_{42}(x'_1, x'_2, x'_3, x'_4) = -\sin \theta F_{12}(x_1, x_2, x_3, x_4) + \cos \theta F_{42}(x_1, x_2, x_3, x_4),
-$$
+和
 
 $$
-F'_{43}(x'_1, x'_2, x'_3, x'_4) = -\sin \theta F_{13}(x_1, x_2, x_3, x_4) + \cos \theta F_{43}(x_1, x_2, x_3, x_4).
+\frac{d p_z}{dt} = q(\mathbf{v} \times \mathbf{B}(x_1, x_2, x_3, x_4))_z + q E_z(x_1, x_2, x_3, x_4),
 $$
 
-现将
+即带电粒子在电磁场中运动所满足的牛顿方程
+
+$$
+\frac{d \mathbf{p}}{dt} = q \mathbf{v} \times \mathbf{B}(x_1, x_2, x_3, x_4) + q \mathbf{E}(x_1, x_2, x_3, \\
+$$
+
+的分量表达式。
+
+现在，我们可以将作用量 $S$ 明确写作
 
 $$
 \begin{aligned}
-F_{12} &= B_z, & F_{42} &= \frac{i E_y}{c}, \\\\
-\cos \theta &= \frac{1}{\sqrt{1 - \frac{V^2}{c^2}}}, & \sin \theta &= \frac{\left( \frac{V}{i c} \right)}{\sqrt{1 - \frac{V^2}{c^2}}},
+S &= S_\mathrm{m} + S_\mathrm{mf} = -m_0 c^2 \int_a^b d\tau + q \int_a^b (A_1 dx_1 + A_2 dx_2 + A_3 dx_3 + A_4 dx_4) \\\\
+&= -m_0 c^2 \int_a^b d\tau + q \int_a^b \left( A_1 \frac{dx_1}{d\tau} + A_2 \frac{dx_2}{d\tau} + A_3 \frac{dx_3}{d\tau} + A_4 \frac{dx_4}{d\tau} \right) d\tau \\\\
+&= \int_a^b \left( -m_0 c^2 + q A_1 u_1 + q A_2 u_2 + q A_3 u_3 + q A_4 u_4 \right) d\tau \\\\
+&= \int_{t_a}^{t_b} \left( -m_0 c^2 + q A_x \frac{v_x}{\sqrt{1 - \frac{v^2}{c^2}}} + q A_y \frac{v_y}{\sqrt{1 - \frac{v^2}{c^2}}} + q A_z \frac{v_z}{\sqrt{1 - \frac{v^2}{c^2}}} + q \frac{i \Phi}{c} \frac{i c}{\sqrt{1 - \frac{v^2}{c^2}}} \right) \sqrt{1 - \frac{v^2}{c^2}}\, dt \\\\
+&= \int_{t_a}^{t_b} \left( -m_0 c^2 \sqrt{1 - \frac{v^2}{c^2}} + q \mathbf{A}(x_1, x_2, x_3, x_4) \cdot \mathbf{v} - q \Phi(x_1, x_2, x_3, x_4) \right) dt,
 \end{aligned}
 $$
 
-代入 $F'_{12}(x'_1, x'_2, x'_3, x'_4)$ 后，我们有
+即带电粒子在电磁场中运动的拉格朗日量为
 
 $$
-B'_z = \frac{B_z}{\sqrt{1 - \frac{V^2}{c^2}}} + \frac{i E_y}{c} \frac{\left( -\frac{V}{i c} \right)}{\sqrt{1 - \frac{V^2}{c^2}}} = \frac{B_z - \frac{V}{c^2} E_y}{\sqrt{1 - \frac{V^2}{c^2}}},
+L = -m_0 c^2 \sqrt{1 - \frac{v^2}{c^2}} + q \mathbf{A}(x_1, x_2, x_3, x_4) \cdot \mathbf{v} - q \Phi(x_1, x_2, x_3, x_4).
 $$
 
-或是
+最后，我们再来看一下 $i = 4$ 的情况。我们有
 
 $$
-B'_z(x'_1, x'_2, x'_3, x'_4) = \frac{B_z(x_1, x_2, x_3, x_4) - \frac{V}{c^2} E_y(x_1, x_2, x_3, x_4)}{\sqrt{1 - \frac{V^2}{c^2}}}.
+m_0 \frac{d u_4}{d\tau} = q F_{41}(x_1, x_2, x_3, x_4) u_1 + q F_{42}(x_1, x_2, x_3, x_4) u_2 + q F_{43}(x_1, x_2, x_3, x_4) u_3.
 $$
 
-同理，将 $F_{13} = -B_y$, $F_{43} = \frac{i E_z}{c}$ 以及 $\cos \theta$ 和 $\sin \theta$ 的表达式代入
-$$
-F'_{13}(x'_1, x'_2, x'_3, x'_4) = \cos \theta F_{13}(x_1, x_2, x_3, x_4) + \sin \theta F_{43}(x_1, x_2, x_3, x_4),
-$$
-后有
-
-$$
--B'_y = \frac{(-B_y)}{\sqrt{1 - \frac{V^2}{c^2}}} + \frac{i E_z}{c} \frac{\left( -\frac{V}{i c} \right)}{\sqrt{1 - \frac{V^2}{c^2}}} = \frac{-B_y - \frac{V}{c^2} E_z}{\sqrt{1 - \frac{V^2}{c^2}}},
-$$
-
-或是
-
-$$
-B'_y(x'_1, x'_2, x'_3, x'_4) = \frac{B_y(x_1, x_2, x_3, x_4) + \frac{V}{c^2} E_z(x_1, x_2, x_3, x_4)}{\sqrt{1 - \frac{V^2}{c^2}}}.
-$$
-
-将 $F_{42} = \frac{i E_y}{c}$, $F_{12} = B_z$ 以及 $\cos \theta$ 和 $\sin \theta$ 的表达式代入
-$$
-F'_{42}(x'_1, x'_2, x'_3, x'_4) = -\sin \theta F_{12}(x_1, x_2, x_3, x_4) + \cos \theta F_{42}(x_1, x_2, x_3, x_4),
-$$
-后有
-
-$$
-\frac{i E'_y}{c} = \frac{B_z \left( \frac{V}{i c} \right)}{\sqrt{1 - \frac{V^2}{c^2}}} + \frac{\frac{i E_y}{c}}{\sqrt{1 - \frac{V^2}{c^2}}} = \left( \frac{i}{c} \right) \frac{-V B_z + E_y}{\sqrt{1 - \frac{V^2}{c^2}}},
-$$
-
-或是
-
-$$
-E'_y(x'_1, x'_2, x'_3, x'_4) = \frac{E_y(x_1, x_2, x_3, x_4) - V B_z(x_1, x_2, x_3, x_4)}{\sqrt{1 - \frac{V^2}{c^2}}}.
-$$
-
-最后，将 $F_{13} = \frac{i E_z}{c}$, $F_{13} = -B_y$ 以及 $\cos \theta$ 和 $\sin \theta$ 的表达式代入
-$$
-F'_{43}(x'_1, x'_2, x'_3, x'_4) = -\sin \theta F_{13}(x_1, x_2, x_3, x_4) + \cos \theta F_{43}(x_1, x_2, x_3, x_4).
-$$
-后有
-
-$$
-\frac{i E'_z}{c} = \frac{-B_y \left( \frac{V}{i c} \right)}{\sqrt{1 - \frac{V^2}{c^2}}} + \frac{\frac{i E_z}{c}}{\sqrt{1 - \frac{V^2}{c^2}}} = \left( \frac{i}{c} \right) \frac{V B_y + E_z}{\sqrt{1 - \frac{V^2}{c^2}}},
-$$
-
-或是
-
-$$
-E'_z(x'_1, x'_2, x'_3, x'_4) = \frac{E_z(x_1, x_2, x_3, x_4) + V B_y(x_1, x_2, x_3, x_4)}{\sqrt{1 - \frac{V^2}{c^2}}}.
-$$
-
-通过比较可以很容易地验证，电磁场强度矢量分量所满足的这些变换关系前面给出的结果完全一样。
-
-当 $V/c \sim 0$ 时，我们可以令 $\frac{1}{\sqrt{1 - \frac{V^2}{c^2}}} \sim 1$。此时，上述变换式可以近似写作
+这里，
 
 $$
 \begin{aligned}
-E'_x &= E_x, & E'_y &= E_y - V B_z, & E'_z &= E_z + V B_y, \\
-B'_x &= B_x, & B'_y &= B_y + \frac{V}{c^2} E_z, & B'_z &= B_z - \frac{V}{c^2} E_y,
+F_{41}(x_1, x_2, x_3, x_4) &= \frac{\partial A_1(x_1, x_2, x_3, x_4)}{\partial x_4} - \frac{\partial A_4(x_1, x_2, x_3, x_4)}{\partial x_1} \\\\
+&= \frac{\partial A_x(x_1, x_2, x_3, x_4)}{\partial (i c t)} - \frac{\partial \left( i \frac{\Phi(x_1, x_2, x_3, x_4)}{c} \right)}{\partial x} = \frac{i}{c} \left( -\frac{\partial A_x}{\partial t} - \frac{\partial \Phi}{\partial x} \right) \\\\
+&= \frac{i}{c} E_x(x_1, x_2, x_3, x_4), \\\\
+F_{42}(x_1, x_2, x_3, x_4) &= \frac{\partial A_2(x_1, x_2, x_3, x_4)}{\partial x_4} - \frac{\partial A_4(x_1, x_2, x_3, x_4)}{\partial x_2} \\\\
+&= \frac{i}{c} E_y(x_1, x_2, x_3, x_4), \\\\
+F_{43}(x_1, x_2, x_3, x_4) &= \frac{\partial A_3(x_1, x_2, x_3, x_4)}{\partial x_4} - \frac{\partial A_4(x_1, x_2, x_3, x_4)}{\partial x_3} \\\\
+&= \frac{i}{c} E_z(x_1, x_2, x_3, x_4).
 \end{aligned}
 $$
 
-或者等价地
+将这些结果代入上面的方程后，我们得到
 
 $$
-\begin{aligned}
-E_x &= E'_x, & E_y &= E'_y + V B'_z, & E_z &= E'_z - V B'_y, \\\\
-B_x &= B'_x, & B_y &= B'_y - \frac{V}{c^2} E'_z, & B_z &= B'_z + \frac{V}{c^2} E'_y.
-\end{aligned}
+m_0 \frac{d \left( \frac{i c}{\sqrt{1 - \frac{v^2}{c^2}}} \right)}{\sqrt{1 - \frac{v^2}{c^2}}\, dt} = q \left( \frac{i}{c} E_x \right) \frac{v_x}{\sqrt{1 - \frac{v^2}{c^2}}} + q \left( \frac{i}{c} E_y \right) \frac{v_y}{\sqrt{1 - \frac{v^2}{c^2}}} + q \left( \frac{i}{c} E_z \right) \frac{v_z}{\sqrt{1 - \frac{v^2}{c^2}}}.
 $$
 
-我们可以将这些变换式更为紧凑地写作
+简化整理后我们有
 
 $$
-\mathbf{E}(x_1, x_2, x_3, x_4) = \mathbf{E}'(x'_1, x'_2, x'_3, x'_4) - \mathbf{V} \times \mathbf{B}'(x'_1, x'_2, x'_3, x'_4),
+\frac{d}{dt} \left( \frac{m_0 c^2}{\sqrt{1 - \frac{v^2}{c^2}}} \right) = q \mathbf{E}(x_1, x_2, x_3, x_4) \cdot \mathbf{v},
 $$
 
-以及
-
-$$
-\mathbf{B}(x_1, x_2, x_3, x_4) = \mathbf{B}'(x'_1, x'_2, x'_3, x'_4) + \frac{\mathbf{V}}{c^2} \times \mathbf{E}'(x'_1, x'_2, x'_3, x'_4).
-$$
-
-因此，若在 $S'$ 系中，$\mathbf{B}' = 0$，则在实验室系中我们有
-
-$$
-\mathbf{E}(x_1, x_2, x_3, x_4) = \mathbf{E}'(x'_1, x'_2, x'_3, x'_4), \quad \mathbf{B}(x_1, x_2, x_3, x_4) = \frac{\mathbf{V}}{c^2} \times \mathbf{E}'(x'_1, x'_2, x'_3, x'_4),
-$$
-
-即
-
-$$
-\mathbf{B}(x_1, x_2, x_3, x_4) = \frac{\mathbf{V}}{c^2} \times \mathbf{E}(x_1, x_2, x_3, x_4).
-$$
-
-同理，若在 $S'$ 系中 $\mathbf{E}' = 0$ 成立，则在实验室中我们有
-
-$$
-\mathbf{E}(x_1, x_2, x_3, x_4) = -\mathbf{V} \times \mathbf{B}'(x'_1, x'_2, x'_3, x'_4), \quad \mathbf{B}(x_1, x_2, x_3, x_4) = \mathbf{B}'(x'_1, x'_2, x'_3, x'_4),
-$$
-
-或是
-
-$$
-\mathbf{E}(x_1, x_2, x_3, x_4) = -\mathbf{V} \times \mathbf{B}(x_1, x_2, x_3, x_4).
-$$
-
-## Part 2 Maxwell 方程组推导
-
-接下来的一个问题是，我们可否利用矩阵 $\mathcal{F}$ 的矩阵元写出麦克斯韦方程组？答案是肯定的。
-
-首先，我们注意到矩阵 $\mathcal{F}(x_1, x_2, x_3, x_4)$ 的矩阵元满足如下的恒等式
-
-$$
-\frac{\partial F_{ij}}{\partial x_k} + \frac{\partial F_{jk}}{\partial x_i} + \frac{\partial F_{ki}}{\partial x_j} \equiv 0.
-$$
-
-实际上，按照矩阵元的定义，我们有
-
-$$
-\begin{aligned}
-&\frac{\partial F_{ij}}{\partial x_k} + \frac{\partial F_{jk}}{\partial x_i} + \frac{\partial F_{ki}}{\partial x_j} \\\\
-&= \frac{\partial}{\partial x_k} \left( \frac{\partial A_j}{\partial x_i} - \frac{\partial A_i}{\partial x_j} \right) + \frac{\partial}{\partial x_i} \left( \frac{\partial A_k}{\partial x_j} - \frac{\partial A_j}{\partial x_k} \right) + \frac{\partial}{\partial x_j} \left( \frac{\partial A_i}{\partial x_k} - \frac{\partial A_k}{\partial x_i} \right) \\\\
-&= \frac{\partial^2 A_j}{\partial x_k \partial x_i} - \frac{\partial^2 A_i}{\partial x_k \partial x_j} + \frac{\partial^2 A_k}{\partial x_i \partial x_j} - \frac{\partial^2 A_j}{\partial x_i \partial x_k} + \frac{\partial^2 A_i}{\partial x_j \partial x_k} - \frac{\partial^2 A_k}{\partial x_j \partial x_i} = 0.
-\end{aligned}
-$$
-现在在恒等式
-$$
-\frac{\partial F_{ij}}{\partial x_k} + \frac{\partial F_{jk}}{\partial x_i} + \frac{\partial F_{ki}}{\partial x_j} \equiv 0.
-$$
-中取 $i = 1, j = 2, k = 3$，则我们有
-
-$$
-\frac{\partial F_{12}}{\partial x_3} + \frac{\partial F_{23}}{\partial x_1} + \frac{\partial F_{31}}{\partial x_2} = \frac{\partial B_z}{\partial z} + \frac{\partial B_x}{\partial x} + \frac{\partial B_y}{\partial y} = 0,
-$$
-
-即麦克斯韦方程之一的
-
-$$
-\nabla \cdot \mathbf{B}(x, y, z, t) = 0.
-$$
-
-又若我们恒等式 
-$$
-\frac{\partial F_{ij}}{\partial x_k} + \frac{\partial F_{jk}}{\partial x_i} + \frac{\partial F_{ki}}{\partial x_j} \equiv 0.
-$$
- 取 $i = 1, j = 2, k = 4$，则得到
-
-$$
-\frac{\partial F_{12}}{\partial x_4} + \frac{\partial F_{24}}{\partial x_1} + \frac{\partial F_{41}}{\partial x_2} = \frac{\partial B_z}{\partial (i c t)} + \frac{\partial \left( -\frac{i}{c} E_y \right)}{\partial x} + \frac{\partial \left( \frac{i}{c} E_x \right)}{\partial y} = 0,
-$$
-
-或是
-
-$$
-\frac{\partial E_x}{\partial y} - \frac{\partial E_y}{\partial x} = -(\nabla \times \mathbf{E})_z = \frac{\partial B_z}{\partial t}.
-$$
-
-这是另外一个麦克斯韦方程
-
-$$
-\nabla \times \mathbf{E}(x, y, z, t) = -\frac{\partial \mathbf{B}(x, y, z, t)}{\partial t}
-$$
-
-的 $z$ 分量。类似地，若我们在恒等式中取 $i = 1, j = 3, k = 4$，则得到
-
-$$
--(\nabla \times \mathbf{E})_y = \frac{\partial B_y}{\partial t},
-$$
-
-而若在恒等式中取 $i = 2, j = 3, k = 4$，就会得到
-
-$$
--(\nabla \times \mathbf{E})_x = \frac{\partial B_x}{\partial t}.
-$$
-
-### · 四维张量和对偶张量
-
-为了写出另外两个麦克斯韦方程，我们需要引进电磁场自身的作用量 $S_f$。为此，先让我们研究一下矩阵 $\mathcal{F}(x_1, x_2, x_3, x_4)$ 的矩阵元在洛伦兹变换下的改变。一般的洛伦兹变换可以写作
-
-$$
-x_i = \sum_{k=1}^{4} \alpha_{ik} x'_k,
-$$
-
-或者是等价地
-
-$$
-x'_i = \sum_{k=1}^{4} \left( \alpha^{-1} \right)_{ik} x_k.
-$$
-
-这里，$\alpha^{-1}$ 代表洛伦兹变换矩阵 $\alpha$ 的逆矩阵。由于我们要求
-
-$$
-\begin{aligned}
-&x_1^2 + x_2^2 + x_3^2 + x_4^2 = \sum_{i=1}^{4} x_i x_i = \sum_{i=1}^{4} \left( \sum_{j=1}^{4} \alpha_{ij} x'_j \right) \left( \sum_{k=1}^{4} \alpha_{ik} x'_k \right) \\\\
-&= \sum_{j=1}^{4} \sum_{k=1}^{4} \left( \sum_{i=1}^{4} \alpha_{ij} \alpha_{ik} \right) x'_j x'_k = \sum_{j=1}^{4} x'^2_j + x'^2_2 + x'^2_3 + x'^2_4
-\end{aligned}
-$$
-
-成立，故应有
-
-$$
-\sum_{i=1}^{4} \alpha_{ij} \alpha_{ik} = \delta_{jk},
-$$
-
-即洛伦兹变换矩阵的任意两列彼此是正交的，而同一列则是归一的。这样的矩阵被称为正交矩阵。利用矩阵转置的概念，我们又可将上式重写为
-
-$$
-\sum_{i=1}^{4} \alpha_{ij} \alpha_{ik} = \sum_{i=1}^{4} \left( \alpha^T \right)_{ji} \alpha_{ik} = \delta_{jk}.
-$$
-
-因此，一个正交矩阵的转置就是它的逆矩阵，记作
-
-$$
-\alpha^T = \alpha^{-1}.
-$$
-
-值得强调一点的是，在一般性洛伦兹变换中
-$$
-x_i = \sum_{k=1}^{4} \alpha_{ik} x'_k,
-$$
-我们已经将空间旋转变换，空间反射变化变换
-
-$$
-\begin{aligned}
-x = x_1 &= -x'_1 = -x', & y = x_2 &= -x'_2 = -y', \\\\
-z = x_3 &= -x'_3 = -z', & i c t = x_4 &= x'_4 = i c t',
-\end{aligned}
-$$
-
-以及时间反演变换
-
-$$
-\begin{aligned}
-x = x_1 &= x'_1 = x', & y = x_2 &= x'_2 = y', \\\\
-z = x_3 &= x'_3 = z', & i c t = x_4 &= -x'_4 = -i c t'
-\end{aligned}
-$$
-
-都包括进来了。这些变换的全体构成的集合称为洛伦兹群 (Lorentz group)。又由于任何一个洛伦兹变换所对应的矩阵 $A$ 都是正交的，即
-
-$$
-\alpha \alpha^T = I
-$$
-
-成立，故将此式的两边取行列式后我们有
-
-$$
-\det(\alpha \alpha^T) = (\det \alpha)(\det \alpha^T) = (\det \alpha)^2 = \det I = 1,
-$$
-
-即
-
-$$
-\det \alpha = 1.
-$$
-
-当一个洛伦兹变换的行列式 $\det \alpha = 1$，我们称它为真洛伦兹变换 (proper Lorentz transformation)，否则为赝洛伦兹变换 (improper Lorentz transformation)。以空间反射变换为例。它的变换矩阵为
-
-$$
-\alpha = \left( \begin{array}{cccc}
--1 & 0 & 0 & 0 \\
-0 & -1 & 0 & 0 \\
-0 & 0 & -1 & 0 \\
-0 & 0 & 0 & 1
-\end{array} \right).
-$$
-
-显然，它的行列式为 $-1$，即空间反射变换是一个赝洛伦兹变换。同理可知，时间反演变换也是一个赝洛伦兹变换。
-
-现在，我们可以对于四维矢量的定义做一推广了。若一个量 $p^{(4)}$ 有四个分量 $p^{(4)} = (p^{(4)}_1, p^{(4)}_2, p^{(4)}_3, p^{(4)}_4)$，且它们在两个参照系之间的变换满足与坐标 $(x_1, x_2, x_3, x_4)$ 相同的洛伦兹变换，即
-
-$$
-p^{(4)}_i = \sum_{k=1}^{4} \alpha_{ik} p'^{(4)}_k = \alpha_{i1} p'^{(4)}_1 + \alpha_{i2} p'^{(4)}_2 + \alpha_{i3} p'^{(4)}_3 + \alpha_{i4} p'^{(4)}_4,
-$$
-
-则我们称它为一个四维矢量。显然，一个四维矢量的分量满足恒等式
-
-$$
-\begin{aligned}
-&\left( p^{(4)}_1 \right)^2 + \left( p^{(4)}_2 \right)^2 + \left( p^{(4)}_3 \right)^2 + \left( p^{(4)}_4 \right)^2 = \sum_{i=1}^{4} \left( p^{(4)}_i \right)^2 \\\\
-&= \sum_{k_1=1}^{4} \left( \sum_{k_1}^{4} \alpha_{ik_1} p'^{(4)}_{k_1} \right) \left( \sum_{k_2=1}^{4} \alpha_{ik_2} p'^{(4)}_{k_2} \right) = \sum_{k_1}^{4} \sum_{k_2}^{4} \left( \sum_{i=1}^{4} \alpha_{ik_1} \alpha_{ik_2} \right) p'^{(4)}_{k_1} p'^{(4)}_{k_2} \\\\
-&= \sum_{k_1}^{4} \sum_{k_2}^{4} \delta_{k_1 k_2} p'^{(4)}_{k_1} p'^{(4)}_{k_2} = \sum_{k_1}^{4} \left( p'^{(4)}_{k_1} \right)^2 = \left( p'^{(4)}_1 \right)^2 + \left( p'^{(4)}_2 \right)^2 + \left( p'^{(4)}_3 \right)^2 + \left( p'^{(4)}_4 \right)^2
-\end{aligned}
-$$
-
-即一个四维矢量的“长度”在洛伦兹变换下是不变的。同理可证，任意两个四维矢量的“点乘”在洛伦兹变换下也是不变的。以四维坐标矢量和一个四维矢量 $(p^{(4)}_1, p^{(4)}_2, p^{(4)}_3, p^{(4)}_4)$ 为例，我们有
-
-$$
-\begin{aligned}
-&x_1 p^{(4)}_1 + x_2 p^{(4)}_2 + x_3 p^{(4)}_3 + x_4 p^{(4)}_4 = \sum_{i=1}^{4} x_i p^{(4)}_i = \sum_{i=1}^{4} \left( \sum_{k_1=1}^{4} \alpha_{ik_1} x'_{k_1} \right) \left( \sum_{k_2=1}^{4} \alpha_{ik_2} p'^{(4)}_{k_2} \right) \\\\
-&= \sum_{k_1=1}^{4} \sum_{k_2=1}^{4} \left( \sum_{i=1}^{4} \alpha_{ik_1} \alpha_{ik_2} \right) x'_{k_1} p'^{(4)}_{k_2} = \sum_{k_1=1}^{4} \sum_{k_2=1}^{4} \delta_{k_1 k_2} x'_{k_1} p'^{(4)}_{k_2} = \sum_{k_1=1}^{4} x'_{k_1} p'^{(4)}_{k_1} \\\\
-&= x'_1 p'^{(4)}_1 + x'_2 p'^{(4)}_2 + x'_3 p'^{(4)}_3 + x'_4 p'^{(4)}_4.
-\end{aligned}
-$$
-
-的确，它们的点乘在洛伦兹变换下也是不变的。
-
-接下来，我们要引进所谓四维二阶张量的定义。若一个 $4 \times 4$ 矩阵的矩阵元在一个洛伦兹变换下按照如下规律改变
-
-$$
-B_{ij} = \sum_{k=1}^{4} \sum_{l=1}^{4} \alpha_{ik} \alpha_{jl} B'_{kl},
-$$
-
-则这个矩阵被称为一个四维二阶张量。我们要证明，根据这一定义，
-$$
-\mathcal{F} = \left( \begin{array}{cccc}
-F_{11} & F_{12} & F_{13} & F_{14} \\
-F_{21} & F_{22} & F_{23} & F_{24} \\
-F_{31} & F_{32} & F_{33} & F_{34} \\
-F_{41} & F_{42} & F_{43} & F_{44}
-\end{array} \right) = \left( \begin{array}{cccc}
-0 & B_z & -B_y & -\dfrac{i E_x}{c} \\\\
--B_z & 0 & B_x & -\dfrac{i E_y}{c} \\\\
-B_y & -B_x & 0 & -\dfrac{i E_z}{c} \\\\
-\dfrac{i E_x}{c} & \dfrac{i E_y}{c} & \dfrac{i E_z}{c} & 0
-\end{array} \right).
-$$
-给出的矩阵 $\mathcal{F}$ 即是一个四维二阶张量，称为电磁场强度张量。
-
-事实上，我们有
-
-$$
-\begin{aligned}
-F_{ij} &= \frac{\partial A_j}{\partial x_i} - \frac{\partial A_i}{\partial x_j} = \frac{\partial}{\partial x_i} \left( \sum_{l=1}^{4} \alpha_{jl} A'_l \right) - \frac{\partial}{\partial x_j} \left( \sum_{k=1}^{4} \alpha_{ik} A'_k \right) \\\\
-&= \sum_{l=1}^{4} \alpha_{jl} \frac{\partial A'_l}{\partial x_i} - \sum_{k=1}^{4} \alpha_{ik} \frac{\partial A'_k}{\partial x_j} = \sum_{l=1}^{4} \alpha_{jl} \left( \sum_{k=1}^{4} \frac{\partial A'_l}{\partial x'_k} \frac{\partial x'_k}{\partial x_i} \right) - \sum_{k=1}^{4} \alpha_{ik} \left( \sum_{l=1}^{4} \frac{\partial A'_k}{\partial x'_l} \frac{\partial x'_l}{\partial x_j} \right) \\\\
-&= \sum_{l=1}^{4} \alpha_{jl} \left( \sum_{k=1}^{4} \frac{\partial A'_l}{\partial x'_k} \left( \alpha^{-1} \right)_{ki} \right) - \sum_{k=1}^{4} \alpha_{ik} \left( \sum_{l=1}^{4} \frac{\partial A'_k}{\partial x'_l} \left( \alpha^{-1} \right)_{lj} \right).
-\end{aligned}
-$$
-
-利用 $\alpha$ 是一个正交矩阵这一事实，我们有可将该式进一步改写为
-
-$$
-\begin{aligned}
-F_{ij} &= \sum_{l=1}^{4} \alpha_{jl} \left( \sum_{k=1}^{4} \frac{\partial A'_l}{\partial x'_k} \left( \alpha^T \right)_{ki} \right) - \sum_{k=1}^{4} \alpha_{ik} \left( \sum_{l=1}^{4} \frac{\partial A'_k}{\partial x'_l} \left( \alpha^T \right)_{lj} \right) \\\\
-&= \sum_{k=1}^{4} \sum_{l=1}^{4} \alpha_{ik} \alpha_{jl} \frac{\partial A'_l}{\partial x'_k} - \sum_{k=1}^{4} \sum_{l=1}^{4} \alpha_{ik} \alpha_{jl} \frac{\partial A'_k}{\partial x'_l} = \sum_{k=1}^{4} \sum_{l=1}^{4} \alpha_{ik} \alpha_{jl} \left( \frac{\partial A'_l}{\partial x'_k} - \frac{\partial A'_k}{\partial x'_l} \right) \\\\
-&= \sum_{k=1}^{4} \sum_{l=1}^{4} \alpha_{ik} \alpha_{jl} F'_{kl}.
-\end{aligned}
-$$
-
-即 $\mathcal{F}$ 是一个四维二阶 (反对称) 张量。
-
-根据四维二阶张量的定义，我们可以很容易地证明，任意两个四维二阶张量 $\mathcal{B}$ 和 $\mathcal{D}$ 的内积
-
-$$
-\mathcal{B} \cdot \mathcal{D} \equiv \sum_{i=1}^{4} \sum_{j=1}^{4} B_{ij} D_{ij}
-$$
-
-在一个洛伦兹变换下是不变的，即它是一个四维标量。事实上，我们有
-
-$$
-\begin{aligned}
-&\mathcal{B} \cdot \mathcal{D} \\\\
-&= \sum_{i=1}^{4} \sum_{j=1}^{4} B_{ij} D_{ij} = \sum_{i=1}^{4} \sum_{j=1}^{4} \left( \sum_{k_1=1}^{4} \sum_{l_1=1}^{4} \alpha_{ik_1} \alpha_{jl_1} B'_{k_1 l_1} \right) \left( \sum_{k_2=1}^{4} \sum_{l_2=1}^{4} \alpha_{ik_2} \alpha_{jl_2} D'_{k_2 l_2} \right) \\\\
-&= \sum_{k_1=1}^{4} \sum_{l_1=1}^{4} \sum_{k_2=1}^{4} \sum_{l_2=1}^{4} \left( \sum_{i=1}^{4} \alpha_{ik_1} \alpha_{ik_2} \right) \left( \sum_{j=1}^{4} \alpha_{jl_1} \alpha_{jl_2} \right) B'_{k_1 l_1} D'_{k_2 l_2} \\\\
-&= \sum_{k_1=1}^{4} \sum_{l_1=1}^{4} \sum_{k_2=1}^{4} \sum_{l_2=1}^{4} \delta_{k_1 k_2} \delta_{l_1 l_2} B'_{k_1 l_1} D'_{k_2 l_2} = \sum_{k_1=1}^{4} \sum_{l_1=1}^{4} B'_{k_1 l_1} D'_{k_1 l_1} = \mathcal{B}' \cdot \mathcal{D}'.
-\end{aligned}
-$$
-
-特别是当 $\mathcal{B} = \mathcal{D}$ 时，我们有
-
-$$
-\mathcal{B} \cdot \mathcal{B} = \mathcal{B}' \cdot \mathcal{B}'.
-$$
-
-作为一个例子，我们看到
-
-$$
-\mathcal{F} \cdot \mathcal{F} = \sum_{i=1}^{4} \sum_{j=1}^{4} F_{ij} F_{ij} = 2 \left( B^2(x, y, z, t) - \frac{1}{c^2} E^2(x, y, z, t) \right)
-$$
-
-是一个洛伦兹变化下的不变量。
-
-同理，我们可以定义四维三阶张量，四维四阶张量等等。以四维三阶张量为例。一组数（共 64 个）$(C_{ijk})$ 构成一个四维三阶张量，若它们在一个洛伦兹变换下按照如下规律改变
-
-$$
-C_{ijk} = \sum_{l=1}^{4} \sum_{m=1}^{4} \sum_{n=1}^{4} \alpha_{il} \alpha_{jm} \alpha_{kn} C'_{lmn}.
-$$
-
-根据这一定义，我们亦可将一个四维标量称为四维零阶张量，一个四维矢量称为四维一阶张量。在这里，我们仅介绍一个与电动力学研究有关的四维四阶张量。关于四维高阶张量的知识会在今后学习广义相对论和引力理论时引入。
-
-我们定义四维完全反对称四阶张量为
-
-$$
-\epsilon_{ijkl} = \left\{
-\begin{array}{ll}
-1, & \text{if } (i,j,k,l) \text{ is a even permutation of } (1,2,3,4) ; \\\\
--1, & \text{if } (i,j,k,l) \text{ is a odd permutation of } (1,2,3,4).
-\end{array}
-\right.
-$$
-
-按照定义，下脚标 $(i,j,k,l)$ 是两两不相等的。然而，我们可以很容易看到，若规定当一个分量的两个下脚标相等时该分量为零，则此定义可以很容易地被加以推广。因此，不为零的分量的个数恰好等于四个下脚标的全排列的个数，即 $4!$。也就是说，
-
-$$
-\sum_{i=1}^{4} \sum_{j=1}^{4} \sum_{k=1}^{4} \sum_{l=1}^{4} \epsilon^2_{ijkl} = 4!
-$$
-
-成立。
-
-我们接下来要证明，在一个真的洛伦兹变换下，如此定义的 $\{\epsilon_{ijkl}\}$ 的确是按照一个四维四阶张量的方式变换的。为此，我们假设 $\{\epsilon'_{ijkl}\}$ 是定义在 $S'$ 系中的四维完全反对称四阶张量，即其各个分量满足定义式。又取一真洛伦兹变换 $\alpha$，并考虑如下定义的量
-
-$$
-\epsilon_{mnst} = \sum_{i=1}^{4} \sum_{j=1}^{4} \sum_{k=1}^{4} \sum_{l=1}^{4} \alpha_{mi} \alpha_{nj} \alpha_{sk} \alpha_{tl} \; \epsilon'_{ijkl}.
-$$
-
-我们要证明
-
-$$
-\epsilon_{mnst} = \epsilon_{mnst},
-$$
-
-即 $S$ 系内的四维完全反对称四阶张量的分量。实际上，若注意到上面的变换式具有一个行列式的形式，并利用行列式的性质，我们可以直接写出
-
-$$
-\epsilon_{mnst} = \sum_{i=1}^{4} \sum_{j=1}^{4} \sum_{k=1}^{4} \sum_{l=1}^{4} \alpha_{mi} \alpha_{nj} \alpha_{sk} \alpha_{tl} \; \epsilon'_{ijkl} = \det \alpha \; \epsilon_{mnst} = \epsilon_{mnst}.
-$$
-
-这里，我们利用了一个真洛伦兹变换的行列式 $\det \alpha = 1$ 这一事实。
-
-对于赝洛伦兹变换，情况变得有些复杂。以空间反射变换为例，我们有
-
-$$
-\alpha_{1i} = -\delta_{1i}, \quad \alpha_{2j} = -\delta_{2j}, \quad \alpha_{3k} = -\delta_{3k}, \quad \alpha_{4l} = \delta_{4l}
-$$
-
-成立。因此，一个四维四阶张量 $\mathcal{F}$ 的分量应该满足变换关系
-
-$$
-\begin{aligned}
-F_{1234} &= \sum_{i=1}^{4} \sum_{j=1}^{4} \sum_{k=1}^{4} \sum_{l=1}^{4} \alpha_{1i} \alpha_{2j} \alpha_{3k} \alpha_{4l} \; F'_{ijkl} \\\\
-&= \sum_{i=1}^{4} \sum_{j=1}^{4} \sum_{k=1}^{4} \sum_{l=1}^{4} (-1)^3 \delta_{1i} \delta_{2j} \delta_{3k} \delta_{4l} \; F'_{ijkl} = -F'_{1234}.
-\end{aligned}
-$$
-
-但根据定义，我们显然有
-
-$$
-\epsilon_{1234} = \epsilon'_{1234},
-$$
-并不变号，即 $\{\epsilon_{ijkl}\}$ 不按照赝洛伦兹变换进行变换。我们称这种量为赝四维四阶张量，以便与通常意义下的四维四阶张量 $\mathcal{F}$ 有所区别。
-
-在定义了四维完全反对称四阶张量 $\{\epsilon_{ijkl}\}$ 后，我们可以引进所谓对偶张量的定义了。任给一个四维二阶张量 $\mathcal{B} = (B_{ij})$，我们定义与它对偶的四维二阶（赝）张量 $\tilde{\mathcal{B}}$ 的分量为
-
-$$
-\tilde{B}_{ij} = \frac{1}{2} \sum_{k=1}^{4} \sum_{l=1}^{4} \epsilon_{ijkl} B_{kl}.
-$$
-
-> 同理，任给一个四维一阶张量（即四维矢量 $(B_1, B_2, B_3, B_4)$），我们定义与它对偶的四维三阶（赝）张量的分量为 $
-> $$
-> \tilde{B}_{ijk} = \epsilon_{ijk1} B_1 + \epsilon_{ijk2} B_2 + \epsilon_{ijk3} B_3 + \epsilon_{ijk4} B_4
-> $$
-
-一个重要的事实是，在一个真的洛伦兹变换下，一个四维二阶张量 $\mathcal{B}$ 同与它对偶的四维二阶张量 $\tilde{\mathcal{B}}$ 的内积是不变的。实际上，我们有
-
-$$
-\begin{aligned}
-\mathcal{B} \cdot \tilde{\mathcal{B}} &\equiv \sum_{i=1}^{4} \sum_{j=1}^{4} B_{ij} \tilde{B}_{ij} = \sum_{i=1}^{4} \sum_{j=1}^{4} B_{ij} \left( \frac{1}{2} \sum_{k=1}^{4} \sum_{l=1}^{4} \epsilon_{ijkl} B_{kl} \right) = \frac{1}{2} \sum_{i=1}^{4} \sum_{j=1}^{4} \sum_{k=1}^{4} \sum_{l=1}^{4} \epsilon_{ijkl} B_{ij} B_{kl} \\\\
-&= \frac{1}{2} \sum_{i=1}^{4} \sum_{j=1}^{4} \sum_{k=1}^{4} \sum_{l=1}^{4} \epsilon_{ijkl} \left( \sum_{m=1}^{4} \sum_{n=1}^{4} \alpha_{im} \alpha_{jn} B'_{mn} \right) \left( \sum_{s=1}^{4} \sum_{t=1}^{4} \alpha_{ks} \alpha_{lt} B'_{st} \right) \\\\
-&= \frac{1}{2} \sum_{m=1}^{4} \sum_{n=1}^{4} \sum_{s=1}^{4} \sum_{t=1}^{4} \left( \sum_{i=1}^{4} \sum_{j=1}^{4} \sum_{k=1}^{4} \sum_{l=1}^{4} \epsilon_{ijkl} \; \alpha_{im} \alpha_{jn} \alpha_{ks} \alpha_{lt} \right) B'_{mn} B'_{st}.
-\end{aligned}
-$$
-
-注意到，按照行列式的定义，上式中最后一步中的括号中的求和可以写作
-
-$$
-\begin{aligned}
-&\sum_{i=1}^{4} \sum_{j=1}^{4} \sum_{k=1}^{4} \sum_{l=1}^{4} \epsilon_{ijkl} \; \alpha_{im} \alpha_{jn} \alpha_{ks} \alpha_{lt} = \sum_{i=1}^{4} \sum_{j=1}^{4} \sum_{k=1}^{4} \sum_{l=1}^{4} \epsilon_{ijkl} \; \alpha^{-1}_{mi} \alpha^{-1}_{nj} \alpha^{-1}_{sk} \alpha^{-1}_{tl} \\\\
-&= \det \alpha^{-1} \; \epsilon'_{mnst} = \epsilon'_{mnst}.
-\end{aligned}
-$$
-
-代入上式后，我们得到
-
-$$
-\mathcal{B} \cdot \tilde{\mathcal{B}} = \frac{1}{2} \sum_{m=1}^{4} \sum_{n=1}^{4} \sum_{s=1}^{4} \sum_{t=1}^{4} \epsilon'_{mnst} B'_{mn} B'_{st} = \mathcal{B}' \cdot \tilde{\mathcal{B}}',
-$$
-
-即 $\mathcal{B} \cdot \tilde{\mathcal{B}}$ 在真洛伦兹变换下的确是不变的。但必须指出的是，$\mathcal{B} \cdot \tilde{\mathcal{B}}$ 不是一个四维标量，而是一个四维赝标量。这是由于，一个真正的四维标量在空间反射变换下应该是不变的。然而可以验证，$\mathcal{B} \cdot \tilde{\mathcal{B}}$ 在空间反射变换下会改变符号。
-
-现在，我们将上述结果应用到电磁场张量 $\mathcal{F}$。通过直接了当的计算，我们得到
-
-$$
-\mathcal{F} \cdot \tilde{\mathcal{F}} = -\frac{8i}{c} \mathbf{B}(x, y, z, t) \cdot \mathbf{E}(x, y, z, t).
-$$
-
-因此，$\mathbf{B} \cdot \mathbf{E}$ 也是一个洛伦兹变换下的不变量（它实际上是一个赝标量，即它在空间反射下是变好的）。这一事实导致了一些有趣的结论：
-
-> (i) 若一个体系中的电场强度 $\mathbf{E}$ 与磁感应强度 $\mathbf{B}$ 在一个惯性系中是彼此垂直的，则它们在任何一个惯性系中都是垂直的。
->
-> (ii) 若在一个惯性系中，电场强度 $\mathbf{E}$ 与磁感应强度 $\mathbf{B}$ 的夹角是锐角（或钝角），则在其它惯性系中，这一夹角仍为锐角（或钝角）。
->
-> (iii) 若在一个惯性系中，$\mathbf{E} \cdot \mathbf{B} = 0$，那么考虑到 $B^2 - \frac{1}{c^2} E^2$ 也是一个洛伦兹变换下的不变量，那么我们总可以找到另外一个惯性参照系，在其中 $\mathbf{E} = 0$ 或是 $\mathbf{B} = 0$ 成立（取决于 $B^2 - \frac{1}{c^2} E^2 > 0$ 还是 $B^2 - \frac{1}{c^2} E^2 < 0$ 成立）。
->
-> (iv) 反之，若在某一惯性参照系中，$\mathbf{E} = 0$ 或 $\mathbf{B} = 0$ 成立，那么在其它惯性系中的电场强度矢量和磁感应强度矢量总是彼此垂直的。
-
-最后，我们再看一下所谓四维体积元
-
-$$
-d\Omega \equiv dx_1 dx_2 dx_3 dx_4
-$$
-
-在洛伦兹变换下的变换规律。从多元微积分我们知道，如下的变换关系
-
-$$
-d\Omega = dx_1 dx_2 dx_3 dx_4 = \left| \frac{D(x_1, x_2, x_3, x_4)}{D(x'_1, x'_2, x'_3, x'_4)} \right| dx'_1 dx'_2 dx'_3 dx'_4 = |J| d\Omega'
-$$
-
-在两套坐标系间成立。这里，
-
-$$
-J = \frac{D(x_1, x_2, x_3, x_4)}{D(x'_1, x'_2, x'_3, x'_4)} = 
-\begin{vmatrix}
-\dfrac{\partial x_1}{\partial x'_1} & \dfrac{\partial x_1}{\partial x'_2} & \dfrac{\partial x_1}{\partial x'_3} & \dfrac{\partial x_1}{\partial x'_4} \\\\
-\dfrac{\partial x_2}{\partial x'_1} & \dfrac{\partial x_2}{\partial x'_2} & \dfrac{\partial x_2}{\partial x'_3} & \dfrac{\partial x_2}{\partial x'_4} \\\\
-\dfrac{\partial x_3}{\partial x'_1} & \dfrac{\partial x_3}{\partial x'_2} & \dfrac{\partial x_3}{\partial x'_3} & \dfrac{\partial x_3}{\partial x'_4} \\\\
-\dfrac{\partial x_4}{\partial x'_1} & \dfrac{\partial x_4}{\partial x'_2} & \dfrac{\partial x_4}{\partial x'_3} & \dfrac{\partial x_4}{\partial x'_4}
-\end{vmatrix}
-$$
-
-被称为雅可比行列式（Jacobi determinant）。对于洛伦兹变换，不难验证此时的雅可比行列式恰为洛伦兹变换的矩阵 $\alpha$ 的行列式。因此，对于真洛伦兹变换它等于 $+1$，而对于赝洛伦兹变换它等于 $-1$。但在取了绝对值后，最后的结果都是 $+1$。因此，我们有
-
-$$
-d\Omega = |J| d\Omega' = |\det \alpha| \; d\Omega' = d\Omega'.
-$$
-
-
+即单位时间内粒子能量的改变等于外加电磁场作功的功率。这一结论显然是合理的。
 

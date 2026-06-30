@@ -1,5 +1,5 @@
 ---
-title: Chapter 0 绪论
+title: Lesson 0 绪论
 permalink: /electrodynamics/electrodynamics-0/
 createTime: 2026/03/13 20:35:00
 ---
