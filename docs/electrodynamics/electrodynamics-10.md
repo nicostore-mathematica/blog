@@ -1,782 +1,590 @@
 ---
-title: Lesson 10 静电学
+title: Lesson 10 连续介质 Maxwell
 permalink: /electrodynamics/electrodynamics-10/
-createTime: 2026/03/15 22:15:42
+createTime: 2026/03/15 22:14:44
 ---
 
-## Part 1 概论
+## Part 1 束缚电荷和分子电流
 
-在前面介绍了经典电动力学的理论框架。从本章开始，让我们研究经典电动力学在一些特殊情况下的应用。首先，我们考虑电荷静止不动的情况。此时，系统中不存在电流，故磁场亦不存在。因此，麦克斯韦方程组退化为
+在实际问题中，我们遇到更多的是电磁波在物质（或者说连续连续媒介质）中传播的情况。在这一章中，我们要考虑由于连续媒介质的存在引起的对于麦克斯韦方程组的修正。
 
-$$
-\nabla \times \mathbf{E}(\mathbf{r}) = \mathrm{rot}\,\mathbf{E}(\mathbf{r}) = 0, \quad \nabla \cdot \mathbf{D}(\mathbf{r}) = \mathrm{div}\,\mathbf{D}(\mathbf{r}) = \rho_f(\mathbf{r}).
-$$
+今天我们知道，物质是由原子组成的。而原子本身是由带正电荷的原子核以及带负电荷的电子构成的。这些电荷彼此之间的距离大约为 $10^{-8}$ 厘米，而它们的个数（在一克物质中）大约为 $10^{23}$。考虑到在多数情况下，我们所处理的电磁波的波长要远大于 $10^{-8}$ 厘米（以可见光为例，其波长大约为 $10^4\AA$ 的量级），我们可以略去物质的原子结构，而将之视作连续媒介质。这样做可以大大减少我们的计算量。
 
-第一个方程隐含着存在一个标量势 $\Phi(\mathbf{r})$，使得
+我们的出发点仍然是真空中的麦克斯韦方程组。仿照朗道和栗弗席兹的作法，我们用小写字母表示真空中的电磁场强度矢量，则这些方程可被写作
 
 $$
-\mathbf{E}(\mathbf{r}) = -\nabla \Phi(\mathbf{r}) = -\mathrm{grad}\,\Phi(\mathbf{r})
+\nabla \cdot \mathbf{e}(\mathbf{r}, t) = \frac{1}{\epsilon_0} \rho(\mathbf{r}, t), \quad \nabla \times \mathbf{e}(\mathbf{r}, t) = -\frac{\partial \mathbf{b}(\mathbf{r}, t)}{\partial t},
+$$
+$$
+\nabla \cdot \mathbf{b}(\mathbf{r}, t) = 0, \quad \nabla \times \mathbf{b}(\mathbf{r}, t) = \mu_0 \mathbf{j}(\mathbf{r}, t) + \mu_0 \epsilon_0 \frac{\partial \mathbf{e}(\mathbf{r}, t)}{\partial t}.
 $$
 
-成立。又利用关系式 $\mathbf{D}(\mathbf{r}) = \epsilon \mathbf{E}(\mathbf{r})$，从第二个方程我们得到
+在引入连续媒介质后，其中的电子和原子核的运动都会对电荷密度 $\rho(\mathbf{r}, t)$ 以及电流密度 $\mathbf{j}(\mathbf{r}, t)$ 带来影响，而这些影响无论是在空间尺度上还是时间尺度上都是存在剧烈涨落的。因此，不可避免的，我们需要对之进行统计处理。
 
-$$
-\nabla \cdot \mathbf{D}(\mathbf{r}) = \nabla \cdot (\epsilon \mathbf{E}(\mathbf{r})) = \rho_f(\mathbf{r}).
-$$
+人们发现，在许多情况下仅需对电子和原子核的运动所带来影响进行空间上的平均即可。这一点从计算的角度看是十分重要的。
 
-再代入
+事实上，对于涨落效应进行时间平均是一件困难的事情。为了克服这一困难，人们往往只能先将含时问题通过傅立叶变换（Fourier transformation）将其转换成一个以频率为自变量的问题，然后进行处理，而很少直接使用对于时间求平均的办法。
+
+因此，在下面的讨论中，若无特殊声明，对于各个物理的求平均将被理解为是指的对于空间中一个以 $\mathbf{r}$ 点为中心的宏观无穷小，但微观很大的区域 $\Delta\Omega(\mathbf{r})$ 进行的空间平均。例如，我们将电场强度矢量 $\mathbf{e}(\bar{\mathbf{r}}, t)$ 对于空间自由度的平均值记作
 $$
-\mathbf{E}(\mathbf{r}) = -\nabla \Phi(\mathbf{r}) = -\mathrm{grad}\,\Phi(\mathbf{r})
-$$
-后，我们得到有均匀连续介质存在时的泊松方程
-$$
-\nabla^2 \Phi(\mathbf{r}) = -\frac{1}{\epsilon} \rho_f(\mathbf{r}).
+\mathbf{E}(\mathbf{r}, t) \equiv \langle \mathbf{e}(\bar{\mathbf{r}}, t) \rangle \equiv \frac{1}{V_{\Delta\Omega}} \int \int \int_{\Delta\Omega(\mathbf{r})} \mathbf{e}(\bar{x}, \bar{y}, \bar{z}, t) d\bar{x} d\bar{y} d\bar{z}.
 $$
 
-此处，让我们做一个注释。由于在静电学问题中磁场的缺失，代表电磁场能量流的坡印亭矢量 $\mathbf{S}(\mathbf{r})$ 恒为零。但其能量密度按照定义可以写作
+这里，$V_{\Delta\Omega}$ 为区域 $\Delta\Omega(\mathbf{r})$ 的体积。
+
+对于麦克斯韦方程组中的方程求平均后，我们有
 
 $$
-w(\mathbf{r}) = \frac{1}{2} \epsilon E^2(\mathbf{r}) = \frac{1}{2} \mathbf{D}(\mathbf{r}) \cdot \mathbf{E}(\mathbf{r}).
+\nabla \cdot \langle \mathbf{e}(\bar{\mathbf{r}}, t) \rangle = \nabla \cdot \mathbf{E}(\mathbf{r}, t) = \frac{1}{\epsilon_0} \langle \rho(\bar{\mathbf{r}}, t) \rangle \equiv \frac{1}{\epsilon_0} \overline{\rho}(\mathbf{r}, t)
+$$
+$$
+\nabla \times \langle \mathbf{e}(\bar{\mathbf{r}}, t) \rangle = \nabla \times \mathbf{E}(\mathbf{r}, t) = -\frac{\partial \langle \mathbf{b}(\bar{\mathbf{r}}, t) \rangle}{\partial t} = -\frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t},
+$$
+$$
+\nabla \cdot \langle \mathbf{b}(\bar{\mathbf{r}}, t) \rangle = \nabla \cdot \mathbf{B}(\mathbf{r}, t) = 0,
+$$
+$$
+\begin{aligned}
+\nabla \times \langle \mathbf{b}(\bar{\mathbf{r}}, t) \rangle &= \nabla \times \mathbf{B}(\mathbf{r}, t) = \mu_0 \langle \mathbf{j}(\bar{\mathbf{r}}, t) \rangle + \mu_0 \epsilon_0 \frac{\partial \langle \mathbf{e}(\bar{\mathbf{r}}, t) \rangle}{\partial t}\\\\
+&= \mu_0 \mathbf{J}(\mathbf{r}, t) + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t}.
+\end{aligned}
+$$
+要继续简化这些方程的关键一步在于意识到，出现在这些方程里的平均电荷密度 $\overline{\rho}(\mathbf{r}, t)$ 和平均电流密度 $\mathbf{J}(\mathbf{r}, t)$ 可以分为“自由的”（free）和“束缚的”（bounded）两部分，即我们有
+
+$$
+\overline{\rho}(\mathbf{r}, t) = \langle \rho(\bar{\mathbf{r}}, t) \rangle = \rho_f(\mathbf{r}, t) + \rho_b(\mathbf{r}, t),
 $$
 
-因此，在整个空间中，电场的总能量为
+以及
+
+$$
+\mathbf{J}(\mathbf{r}, t) = \langle \mathbf{j}(\bar{\mathbf{r}}, t) \rangle = \mathbf{J}_f(\mathbf{r}, t) + \mathbf{J}_b(\mathbf{r}, t).
+$$
+
+为了说明这一分拆的合理性，让我们取连续媒介质静止的参照系为实验室系。那么，在这个参照系中，可以在介质中移动一个宏观尺度距离的电荷即称为“自由电荷”，由它们形成的电流则称为“自由电流”。与之对应的，只能局限在某个给定点 $\mathbf{r}$ 周围微观尺度区域内运动的电荷则称为“束缚电荷”，而由它们形成的电流则称为“束缚电流”。
+
+为什么会出现束缚电荷和束缚电流呢？我们知道，在自然界存在两类电介质。一类介质的分子中的正电荷密度的中心和负电荷密度的中心相重合，没有固定的非零电偶极矩，例如氢气（H₂）分子，称为无极分子。而在另外一类介质的分子中的正电荷密度的中心和负电荷密度的中心不重合，从而导致一个固有的电偶极矩，例如水（H₂O）分子，称为极化分子。
+
+但即使是后者，在周围环境的温度不太低时，由于分子热运动的影响，各个极化分子的电偶极矩矢量也会是杂乱无章地取向的。这使得在整块连续媒介质内分子的固有电偶极矩的平均值仍为零。但在有外加电场存在的情况下，无极分子中的正电荷和负电荷的位置会被移动，使得它们的密度中心不再重合，从而产生不为零的电偶极矩。而极化分子的固有电偶极矩的趋向则会发生改变，指向一个共同的方向。
+
+无论哪种情况，外加电场的引入都会诱导宏观电偶极矩分布的出现，导致一个非零的束缚电荷密度分布 $\rho_b(\mathbf{r}, t)$。同理，介质分子中的电子运动会形成微观电流环，在没有外加磁场的情况下，它们各自的取向也是杂乱无章的，故不会形成宏观电流密度。而在有外加磁场的情况下，这些分子电流环的取向会变得一致，从而导致宏观电流密度，即束缚电流密度的出现。
+
+若上述解释是合理的，我们期待束缚电荷密度 $\rho_b(\mathbf{r}, t)$ 将会与平均极化密度（electric polarization density）矢量
+
+$$
+\mathbf{P}(\mathbf{r}, t) = \lim_{V_{\Delta\Omega} \to 0} \frac{\sum_i \mathbf{P}_i(t)}{V_{\Delta\Omega}}
+$$
+
+有关。这里，$\mathbf{r}$ 为介质中的一点，而 $\Delta\Omega$ 是以 $\mathbf{r}$ 为中心的一个小区域，$V_{\Delta\Omega}$ 为它的体积。上式中的求和是对 $\Delta\Omega$ 中各个分子的电偶极矩进行的。而束缚电流密度 $\mathbf{J}_b(\mathbf{r}, t)$ 将会与平均磁化密度（magnetization）矢量
+
+$$
+\mathbf{M}(\mathbf{r}, t) = \lim_{V_{\Delta\Omega} \to 0} \frac{\sum_i \mathbf{m}_i(t)}{V_{\Delta\Omega}}
+$$
+
+有关。此式中的分子磁矩（magnetic moment）被定义作
+
+> $\mathbf{m}_i = I_i \mathbf{a}_i =$ 第 $i$ 个分子中的电流 $\times$ 第 $i$ 个分子中电流回路所围的面积矢量.
+
+下面，我们将推导这些关系。
+
+先考虑束缚电荷密度 $\rho_b(\mathbf{r}, t)$ 与极化密度矢量 $\mathbf{P}(\mathbf{r}, t)$ 之间的关系。首先，电介质内部的全部的束缚电荷在有外加电场的情况下仍然满足中性条件，即
+
+$$
+\int \int \int_\Omega \rho_b(\bar{\mathbf{r}}, t) d\bar{x} d\bar{y} d\bar{z} = 0.
+$$
+
+这里，$\Omega$ 为电介质所占据的空间区域。另一方面，任取一个在区域 $\Omega$ 外为零的矢量场 $\mathbf{G}(\mathbf{r}, t)$，我们都
+
+$$
+0 = \oint \oint_{S_\Omega} \mathbf{G} \cdot d\mathbf{S} = \int \int \int_\Omega \mathrm{div} \mathbf{G}(\bar{x}, \bar{y}, \bar{z}, t) d\bar{x} d\bar{y} d\bar{z}.
+$$
+因此，
+
+$$
+0 = \int \int \int_\Omega \rho_b(\bar{\mathbf{r}}, t) d\bar{x} d\bar{y} d\bar{z} = \oint \oint_{S_\Omega} \mathbf{G} \cdot d\mathbf{S} = \int \int \int_\Omega \mathrm{div} \mathbf{G}(\bar{x}, \bar{y}, \bar{z}, t) d\bar{x} d\bar{y} d\bar{z}
+$$
+
+成立。由此，我们期待可以将 $\rho_b(\mathbf{r}, t)$ 写成
+
+$$
+\rho_b(\mathbf{r}, t) = \mathrm{div} \mathbf{G}(\mathbf{r}, t)
+$$
+
+的形式，而 $\mathbf{G}(\mathbf{r}, t)$ 是一个在区域 $\Omega$ 外为零的矢量场。我们要证明，这一猜想是对的，即我们有
+
+$$
+\rho_b(\mathbf{r}, t) = -\mathrm{div} \mathbf{P}(\mathbf{r}, t),
+$$
+
+而 $\mathbf{P}(\mathbf{r}, t)$ 是电介质的极化密度矢量。
+
+为此，让我们考虑积分
+
+$$
+\mathcal{P}_{\text{dipole moment}} = \int \int \int_\Omega \rho_b(\bar{\mathbf{r}}, t) \bar{\mathbf{r}} d\bar{x} d\bar{y} d\bar{z} \equiv \int \int \int_\Omega \rho_b(\bar{x}, \bar{y}, \bar{z}, t) (\bar{x}\mathbf{i} + \bar{y}\mathbf{j} + \bar{z}\mathbf{k}) d\bar{x} d\bar{y} d\bar{z}
+$$
+
+显然，$\mathcal{P}_{\text{偶极矩}}$ 可以解释作占据空间区域 $\Omega$ 的连续电媒介质的总电偶极矩（electric dipole moment）。现将
+$$
+\rho_b(\mathbf{r}, t) = \mathrm{div} \mathbf{G}(\mathbf{r}, t)
+$$
+代入这一定义式后，我们得到
 
 $$
 \begin{aligned}
-W &= \int \int \int_{R^3} w(\mathbf{r}) dx dy dz \\\\
-&= \int \int \int_{R^3} \frac{1}{2} \mathbf{D}(\mathbf{r}) \cdot \mathbf{E}(\mathbf{r}) dx dy dz = -\frac{1}{2} \int \int \int_{R^3} \mathbf{D}(\mathbf{r}) \cdot (\nabla \Phi(\mathbf{r})) dx dy dz \\\\
-&= -\frac{1}{2} \int \int \int_{R^3} \nabla \cdot (\mathbf{D}(\mathbf{r}) \Phi(\mathbf{r})) dx dy dz + \frac{1}{2} \int \int \int_{R^3} \Phi(\mathbf{r}) (\nabla \cdot \mathbf{D}(\mathbf{r})) dx dy dz.
+\mathcal{P}_{\text{dipole moment}} &= \int \int \int_\Omega \mathrm{div} \mathbf{G}(\bar{\mathbf{r}}, t) (\bar{x}\mathbf{i} + \bar{y}\mathbf{j} + \bar{z}\mathbf{k}) d\bar{x} d\bar{y} d\bar{z}\\\\
+&= \int \int \int_\Omega \left( \frac{\partial G_x(\bar{x}, \bar{y}, \bar{z}, t)}{\partial x} + \frac{\partial G_y(\bar{x}, \bar{y}, \bar{z}, t)}{\partial y} + \frac{\partial G_z(\bar{x}, \bar{y}, \bar{z}, t)}{\partial z} \right) (\bar{x}\mathbf{i} + \bar{y}\mathbf{j} + \bar{z}\mathbf{k}) d\bar{x} d\bar{y} d\bar{z}\\\\
+&= \left( \int \int \int_\Omega \bar{x} \frac{\partial G_x}{\partial x} d\bar{x} d\bar{y} d\bar{z} + \int \int \int_\Omega \bar{x} \frac{\partial G_y}{\partial y} d\bar{x} d\bar{y} d\bar{z} + \int \int \int_\Omega \bar{x} \frac{\partial G_z}{\partial z} d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{i}\\\\
+&+ \left( \int \int \int_\Omega \bar{y} \frac{\partial G_x}{\partial x} d\bar{x} d\bar{y} d\bar{z} + \int \int \int_\Omega \bar{y} \frac{\partial G_y}{\partial y} d\bar{x} d\bar{y} d\bar{z} + \int \int \int_\Omega \bar{y} \frac{\partial G_z}{\partial z} d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{j}\\\\
+&+ \left( \int \int \int_\Omega \bar{z} \frac{\partial G_x}{\partial x} d\bar{x} d\bar{y} d\bar{z} + \int \int \int_\Omega \bar{z} \frac{\partial G_y}{\partial y} d\bar{x} d\bar{y} d\bar{z} + \int \int \int_\Omega \bar{z} \frac{\partial G_z}{\partial z} d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{k}\\\\
+&= \left( \int \int \int_\Omega \bar{x} \frac{\partial G_x}{\partial x} d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{i} + \left( \int \int \int_\Omega \bar{y} \frac{\partial G_y}{\partial y} d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{j} + \left( \int \int \int_\Omega \bar{z} \frac{\partial G_z}{\partial z} d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{k}\\\\
+&= \left( -\int \int \int_\Omega G_x d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{i} + \left( -\int \int \int_\Omega G_y d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{j} + \left( -\int \int \int_\Omega G_z d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{k}\\\\
+&= \int \int \int_\Omega (-\mathbf{G}(\bar{x}, \bar{y}, \bar{z}, t)) d\bar{x} d\bar{y} d\bar{z}.
+\end{aligned}
+$$
+显然，根据定义，$-\mathbf{G}(\bar{x}, \bar{y}, \bar{z}, t)$ 可以解释作极化密度矢量，即
+
+$$
+-\mathbf{G}(\bar{x}, \bar{y}, \bar{z}, t) = \mathbf{P}(\bar{x}, \bar{y}, \bar{z}, t)
+$$
+
+成立。因此，我们证明了公式
+$$
+\rho_b(\mathbf{r}, t) = -\mathrm{div} \mathbf{P}(\mathbf{r}, t),
+$$
+接下来，我们考虑束缚电流密度 $\mathbf{J}_b(\mathbf{r}, t)$ 与磁化密度矢量 $\mathbf{M}(\mathbf{r}, t)$ 之间的关系。首先，我们注意到，$\mathbf{J}_b(\mathbf{r}, t)$ 实际上可以分成两部分
+
+$$
+\mathbf{J}_b(\mathbf{r}, t) = \mathbf{J}_b^{\mathrm{P}}(\mathbf{r}, t) + \mathbf{J}_b^{\mathrm{M}}(\mathbf{r}, t).
+$$
+
+其中第一项来自束缚电荷（包括束缚电子和原子核的电荷）的运动的贡献。取以介质中一点 $\mathbf{r}$ 为中心的一个小区域 $\Delta\Omega(\mathbf{r})$，则束缚束缚电流密度 $\mathbf{J}_b^{\mathrm{P}}(\mathbf{r}, t)$ 可以写作
+
+$$
+\mathbf{J}_b^{\mathrm{P}}(\mathbf{r}, t) = \lim_{V_{\Delta\Omega(r)} \to 0} \frac{\sum_i q_i \mathbf{v}_i}{V_{\Delta\Omega(r)}} = \frac{\partial}{\partial t} \left( \lim_{V_{\Delta\Omega(r)} \to 0} \frac{\sum_i q_i \mathbf{r}_i}{V_{\Delta\Omega(r)}} \right) = \frac{\partial \mathbf{P}(\mathbf{r}, t)}{\partial t}.
+$$
+
+上式中的求和是对 $\Delta\Omega(\mathbf{r})$ 中的所有电荷 $q_i$ 及其速度 $\mathbf{v}_i$ 进行的。而 $\mathbf{J}_b^{\mathrm{M}}(\mathbf{r}, t)$ 则是来自分子内部电子的环路运动形成的分子电流环的贡献。因此，对于介质内的任何一个封闭曲面 $S$，我们期待
+
+$$
+\oint \oint_S \mathbf{J}_b^{\mathrm{M}}(\mathbf{r}, t) \cdot d\mathbf{S} = 0
+$$
+
+成立。又利用高斯定理，我们得到
+
+$$
+0 = \oint \oint_S \mathbf{J}_b^{\mathrm{M}}(\mathbf{r}, t) \cdot d\mathbf{S} = \int \int \int_\Omega \mathrm{div} \mathbf{J}_b^{\mathrm{M}}(x, y, z, t) dx dy dz.
+$$
+
+这导致了
+
+$$
+\mathrm{div} \mathbf{J}_b^{\mathrm{M}}(x, y, z, t) = 0
+$$
+
+在介质内的每一点都成立。因此，我们期待 $\mathbf{J}_b^{\mathrm{M}}(x, y, z, t)$ 可以写成
+
+$$
+\mathbf{J}_b^{\mathrm{M}}(x, y, z, t) = \nabla \times \mathbf{K}(x, y, z, t),
+$$
+
+而 $\mathbf{K}(x, y, z, t)$ 是一个在连续媒介质外为零的矢量场。接下来，我们要证明，$\mathbf{K}(x, y, z, t)$ 是存在的，且实际上是磁化密度矢量 $\mathbf{M}(x, y, z, t)$。
+
+为此，让我们考虑积分
+
+$$
+\mathcal{M}_{\text{magnetic dipole moment}} = \frac{1}{2} \int \int \int_\Omega \bar{\mathbf{r}} \times \mathbf{J}_b^{\mathrm{M}}(\bar{x}, \bar{y}, \bar{z}, t) d\bar{x} d\bar{y} d\bar{z}.
+$$
+
+显然，这是占据空间区域 $\Omega$ 的介质的总磁矩。代入
+$$
+\mathbf{J}_b^{\mathrm{M}}(x, y, z, t) = \nabla \times \mathbf{K}(x, y, z, t),
+$$
+后，我们有
+
+$$
+\begin{aligned}
+\mathcal{M}_{\text{magnetic dipole moment}} &= \frac{1}{2} \int \int \int_\Omega \bar{\mathbf{r}} \times \mathbf{J}_b^{\mathrm{M}}(\bar{x}, \bar{y}, \bar{z}, t) d\bar{x} d\bar{y} d\bar{z} \\\\
+&= \frac{1}{2} \int \int \int_\Omega \bar{\mathbf{r}} \times (\nabla \times \mathbf{K}(\bar{x}, \bar{y}, \bar{z}, t)) d\bar{x} d\bar{y} d\bar{z}.
 \end{aligned}
 $$
 
-对于上式中的第一项，我们可使用高斯定理，而对于第二项中的 $\nabla \cdot \mathbf{D}(\mathbf{r})$，将之用 $\rho_f(\mathbf{r})$ 替换后得到
+再利用矢量场满足的恒等式
 
 $$
-W = -\frac{1}{2} \oint \oint_{S_\infty} (\mathbf{D}(\mathbf{r}) \Phi(\mathbf{r})) d\mathbf{S} + \frac{1}{2} \int \int \int_{R^3} \Phi(\mathbf{r}) \rho_f(\mathbf{r})) dx dy dz.
+\nabla(\mathbf{K} \cdot \mathbf{r}) = (\mathbf{K} \cdot \nabla)\mathbf{r} + (\mathbf{r} \cdot \nabla)\mathbf{K} + \mathbf{r} \times (\nabla \times \mathbf{K}) + \mathbf{K} \times (\nabla \times \mathbf{r}),
 $$
 
-当电荷是分布在一个有限的区域 $\Omega$ 中时，上式的第—项为零，故我们最后得到
+我们有
 
 $$
-W = \frac{1}{2} \int \int \int_\Omega \Phi(\mathbf{r}) \rho_f(\mathbf{r})) dx dy dz.
+\begin{aligned}
+\mathbf{r} \times (\nabla \times \mathbf{K}) &= \nabla(\mathbf{K} \cdot \mathbf{r}) - (\mathbf{K} \cdot \nabla)\mathbf{r} - (\mathbf{r} \cdot \nabla)\mathbf{K} - \mathbf{K} \times (\nabla \times \mathbf{r}) \\\\
+&= \nabla(\mathbf{K} \cdot \mathbf{r}) - (\mathbf{K} \cdot \nabla)\mathbf{r} - (\mathbf{r} \cdot \nabla)\mathbf{K} \\\\
+&= \nabla(\mathbf{K} \cdot \mathbf{r}) - \mathbf{K} - (\mathbf{r} \cdot \nabla)\mathbf{K}.
+\end{aligned}
 $$
 
-现在，我们可以专注于如何求解静电学问题了。
-
-## Part 2 导体外的静电场
-
-所有的连续介质按照电学性质可分为两大类，既导体和绝缘体。前者和后者的区别在于，电场会在导体内引起电荷的运动，从而形成电流。从这一基本性质出发可知，在电荷静止的情况下，导体内的电场强度矢量 $\mathbf{E}$ 必须处处为零，否则会引起电荷的运动，产生电流。但电流在导体内的流动会导致焦耳热的释放，故不可能持久。另一方面，由于
+将之代入 $\mathcal{M}_{\text{magnetic dipole moment}}$ 的表达式后，我们得到
 
 $$
-\nabla \cdot \mathbf{E}(\mathbf{r}) = \rho_f(\mathbf{r}) + \rho_b(\mathbf{r}) = 0,
+\begin{aligned}
+\mathcal{M}_{\text{magnetic dipole moment}} &= \frac{1}{2} \int \int \int_\Omega \bar{\mathbf{r}} \times (\nabla_{\bar{\mathbf{r}}} \times \mathbf{K}) d\bar{x} d\bar{y} d\bar{z} \\\\
+&= \frac{1}{2} \int \int \int_\Omega \nabla_{\bar{\mathbf{r}}}(\mathbf{K} \cdot \bar{\mathbf{r}}) dV - \frac{1}{2} \int \int \int_\Omega \mathbf{K} dV - \frac{1}{2} \int \int \int_\Omega (\bar{\mathbf{r}} \cdot \nabla_{\bar{\mathbf{r}}})\mathbf{K} dV \\\\
+&= -\frac{1}{2} \int \int \int_\Omega \mathbf{K} dV - \frac{1}{2} \int \int \int_\Omega \left( \bar{x} \frac{\partial \mathbf{K}}{\partial \bar{x}} + \bar{y} \frac{\partial \mathbf{K}}{\partial \bar{y}} + \bar{z} \frac{\partial \mathbf{K}}{\partial \bar{z}} \right) d\bar{x} d\bar{y} d\bar{z} \\\\
+&= -\frac{1}{2} \int \int \int_\Omega \mathbf{K} dV + \frac{1}{2} \int \int \int_\Omega (\mathbf{K} + \mathbf{K} + \mathbf{K}) d\bar{x} d\bar{y} d\bar{z} \\\\
+&= \int \int \int_\Omega \mathbf{K}(\bar{x}, \bar{y}, \bar{z}, t) d\bar{x} d\bar{y} d\bar{z}.
+\end{aligned}
 $$
 
-以及 $\rho_b(\mathbf{r}) = 0$ 在导体内部成立，立刻可得
+因此，根据磁化密度矢量 $\mathbf{M}(\bar{x}, \bar{y}, \bar{z}, t)$ 的定义，我们有
 
 $$
-\rho_f(\mathbf{r}) = 0,
+\mathbf{K}(\bar{x}, \bar{y}, \bar{z}, t) = \mathbf{M}(\bar{x}, \bar{y}, \bar{z}, t).
 $$
 
-即自由电荷只能分布在导体表面。因此，有关导体的静电学问题就归结为确定导体外区域的电场分布和导体表面的电荷分布。
-
-考虑到电场强度矢量 $\mathbf{E}(\mathbf{r})$ 在导体内为零，而靠近导体表面处的电场的切向分量又应该是连续改变的，立刻得到结论
+现在，让我们重新考虑平均后的 Maxwell 方程组。先看第一个方程。我们有
 
 $$
-\mathbf{E}_t(\mathbf{r}) = 0
+\nabla \cdot \mathbf{E}(\mathbf{r}, t) = \frac{1}{\epsilon_0} \langle \rho(\mathbf{r}', t) \rangle = \frac{1}{\epsilon_0} \rho_f(\mathbf{r}, t) + \frac{1}{\epsilon_0} \rho_b(\mathbf{r}, t).
 $$
 
-在导体表面上成立。因此，在导体表面上，每一点处的电场强度矢量都应该 是沿法线方向的。同时，由于 $\mathbf{E}(\mathbf{r}) = -\nabla \Phi(\mathbf{r})$，故在导体表面上，$\Phi(\mathbf{r})$ 应该为一个常数。也就是说，导体表面是静电势的一个等势面。
-
-垂直于导体表面的电场分量和分布在导体表面上的电荷密度之间存在一个简单的比例关系。由于电感应矢量 $\mathbf{D}(\mathbf{r})$ 在两种介质分界面处的法线分量满足关系式
+代入
+$$
+\rho_b(\mathbf{r}, t) = -\mathrm{div} \mathbf{P}(\mathbf{r}, t),
+$$
+后，我们可以将之重写作
 
 $$
-D_{2n} - D_{1n} = \sigma_f,
+\nabla \cdot \mathbf{E}(\mathbf{r}, t) = \frac{1}{\epsilon_0} \rho_f(\mathbf{r}, t) - \frac{1}{\epsilon_0} \nabla \cdot \mathbf{P}(\mathbf{r}, t),
 $$
-
-而在导体内
-
-$$
-D_{1n} = \epsilon_1 E_{1n} = 0
-$$
-
-成立，故我们有
+或是
 
 $$
-D_{2n} = \epsilon_2 E_{2n} = \sigma_f,
+\nabla \cdot (\epsilon_0 \mathbf{E}(\mathbf{r}, t) + \mathbf{P}(\mathbf{r}, t)) = \rho_f(\mathbf{r}, t).
+$$
+
+令
+
+$$
+\mathbf{D}(\mathbf{r}, t) = \epsilon_0 \mathbf{E}(\mathbf{r}, t) + \mathbf{P}(\mathbf{r}, t),
+$$
+
+则上式化为
+
+$$
+\nabla \cdot \mathbf{D}(\mathbf{r}, t) = \rho_f(\mathbf{r}, t).
+$$
+
+文献中，$\mathbf{D}(\mathbf{r}, t)$ 被称为电感应强度（electric induction）矢量或电位移（electric displacement）矢量。
+
+当电场强度 $\mathbf{E}(\mathbf{r}, t)$ 不太强时，且连续介质是各向同性的，极化密度矢量 $\mathbf{P}(\mathbf{r}, t)$ 一般可以写作
+
+$$
+\mathbf{P}(\mathbf{r}, t) = \chi_e \epsilon_0 \mathbf{E}(\mathbf{r}, t),
+$$
+
+而 $\chi_e$ 被称为介质的极化率（electric susceptibility）。由此，我们得到电感应强度矢量 $\mathbf{D}(\mathbf{r}, t)$ 与电场强度矢量 $\mathbf{E}(\mathbf{r}, t)$ 之间的关系
+
+$$
+\mathbf{D}(\mathbf{r}, t) = \epsilon_0 \mathbf{E}(\mathbf{r}, t) + \chi_e \epsilon_0 \mathbf{E}(\mathbf{r}, t) = \epsilon_0 (1 + \chi_e) \mathbf{E}(\mathbf{r}, t) = \epsilon_0 \epsilon_r \mathbf{E}(\mathbf{r}, t) = \epsilon \mathbf{E}(\mathbf{r}, t).
+$$
+
+比例系数 $\epsilon_r$ 被称为相对电容率（relative electric permittivity），而比例系数 $\epsilon = \epsilon_r \epsilon_0$ 被称为介质的电容率（electric permittivity）或介电常数（dielectric constant）。当介质是各向异性的（例如某些晶体），或者电场强度矢量较大时（例如在激光场中），这一关系会比较复杂。在本课程中，我们不去讨论这些情况。
+
+接下来，我们化简平均后的 Maxwell 方程组中的第四个方程。我们有
+
+$$
+\begin{aligned}
+\nabla \times \mathbf{B}(\mathbf{r}, t) &= \mu_0 \langle \mathbf{j}(\mathbf{r}, t) \rangle + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t} \\\\
+&= \mu_0 \left( \mathbf{J}_f(\mathbf{r}, t) + \mathbf{J}_b^{\mathrm{P}}(\mathbf{r}, t) + \mathbf{J}_b^{\mathrm{M}}(\mathbf{r}, t) \right) + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t} \\\\
+&= \mu_0 \mathbf{J}_f(\mathbf{r}, t) + \mu_0 \frac{\partial \mathbf{P}(\mathbf{r}, t)}{\partial t} + \mu_0 \nabla \times \mathbf{M}(\mathbf{r}, t) + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t}.
+\end{aligned}
+$$
+
+将上式右边的第三项移项，并将第二项和第四项合并后，我们得到
+
+$$
+\nabla \times (\mathbf{B}(\mathbf{r}, t) - \mu_0 \mathbf{M}(\mathbf{r}, t)) = \mu_0 \mathbf{J}_f(\mathbf{r}, t) + \mu_0 \frac{\partial}{\partial t} (\epsilon_0 \mathbf{E}(\mathbf{r}, t) + \mathbf{P}(\mathbf{r}, t)).
+$$
+
+引入新的矢量场
+
+$$
+\mathbf{H}(\mathbf{r}, t) = \frac{1}{\mu_0} \mathbf{B}(\mathbf{r}, t) - \mathbf{M}(\mathbf{r}, t),
+$$
+
+并利用电感应强度矢量 $\mathbf{D}(\mathbf{r}, t)$ 的定义，我们可将此式重新写作
+
+$$
+\nabla \times \mathbf{H}(\mathbf{r}, t) = \mathbf{J}_f(\mathbf{r}, t) + \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t}.
+$$
+
+在文献中，$\mathbf{H}(\mathbf{r}, t)$ 被称为磁场强度（magnetic field）矢量。当连续介质是各向同性的时，磁化密度矢量 $\mathbf{M}(\mathbf{r}, t)$ 一般可以写作
+
+$$
+\mathbf{M}(\mathbf{r}, t) = \chi_m \mathbf{H}(\mathbf{r}, t),
+$$
+
+而 $\chi_m$ 被称为介质的磁化率（magnetic susceptibility）。由此，我们得到磁感应强度矢量 $\mathbf{B}(\mathbf{r}, t)$ 与磁场强度矢量 $\mathbf{H}(\mathbf{r}, t)$ 之间的关系
+
+$$
+\mathbf{H}(\mathbf{r}, t) = \frac{1}{\mu_0} \mathbf{B}(\mathbf{r}, t) - \chi_m \mathbf{H}(\mathbf{r}, t),
 $$
 
 或是
 
 $$
-E_{2n} = \frac{\sigma_f}{\epsilon_2}.
+\mathbf{B}(\mathbf{r}, t) = \mu_0 (1 + \chi_m) \mathbf{H}(\mathbf{r}, t) = \mu_0 \mu_r \mathbf{H}(\mathbf{r}, t) = \mu \mathbf{H}(\mathbf{r}, t).
 $$
 
-因此，导体上的全部电荷量为
+文献中，$\mu_r$ 被称为介质的相对磁导率（relative magnetic permeability），而 $\mu$ 则被称为介质的磁导率（magnetic permeability）。
 
+现将
 $$
-Q = \oint \oint_S \epsilon_2 E_{2n} dS = \oint \oint_S \mathbf{D} \cdot d\mathbf{S}.
+\begin{aligned}
+\nabla \cdot \mathbf{D}(\mathbf{r}, t) &= \rho_f(\mathbf{r}, t).\\\\
+\nabla \times \mathbf{H}(\mathbf{r}, t) &= \mathbf{J}_f(\mathbf{r}, t) + \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t}.
+\end{aligned}
 $$
-
-这里，$S$ 为包围导体的介质与导体之间的分界面。这些结论是我们在处理有关导体存在时的静电问题时所需注意的。
-
-## Part 3 静电学唯一性定理
-
-如上所述，需要求解的静电学问题可以归结为在边界条件
-
-$$
-\Phi_1(\mathbf{r}) = \Phi_2(\mathbf{r})
-$$
-
-以及
-
-$$
-\epsilon_1 \frac{\partial \Phi_1(\mathbf{r})}{\partial n} - \epsilon_2 \frac{\partial \Phi_2(\mathbf{r})}{\partial n} = \sigma_f(\mathbf{r})
-$$
-
-下求解泊松方程
-
-$$
-\nabla^2 \Phi(\mathbf{r}) = -\frac{1}{\epsilon} \rho_f(\mathbf{r}).
-$$
-
-我们要证明，在某些条件下，若这一问题有解的话，解是唯一的。更为精确一点讲，我们有
-
-**唯一性定理：** 
-
-> 设在空间区域 $\Omega$ 内分布的体电荷密度 $\rho_f(\mathbf{r})$ 以及面电荷密度 $\sigma_f(\mathbf{r})$ 给定。
->
-> 又假设在 $\Omega$ 的边界面 $S = \partial \Omega$ 上，电势 $\Phi(\mathbf{r})|_S$，或 $\left.\dfrac{\partial \Phi(\mathbf{r})}{\partial n}\right|_S$ 给定，那么静电学问题的解是唯一的。
-
-/proof/
-
-> 为了简单起见，我们先考虑区域 $\Omega$ 内的介质为同质的情况。假设定理的结论不对，即存在至少两个方程
-> $$
-> \nabla^2 \Phi(\mathbf{r}) = -\frac{1}{\epsilon} \rho_f(\mathbf{r}).
-> $$
-> 的解 $\Phi(\mathbf{r})$ 和 $\Psi(\mathbf{r})$。那么，二者之差
->
-> $$
-> \tilde{\Phi}(\mathbf{r}) = \Phi(\mathbf{r}) - \Psi(\mathbf{r})
-> $$
-> 
->满足拉普拉斯方程
-> 
->$$
-> \nabla^2 \tilde{\Phi}(\mathbf{r}) = \nabla^2 \Phi(\mathbf{r}) - \nabla^2 \Psi(\mathbf{r}) = -\frac{1}{\epsilon} \rho_f(\mathbf{r}) - \left(-\frac{1}{\epsilon} \rho_f(\mathbf{r})\right) = 0,
-> $$
-> 
-> 且在 $\Omega$ 的边界上有
->
-> $$
->\tilde{\Phi}(\mathbf{r})\big|_S = \Phi(\mathbf{r})\big|_S - \Psi(\mathbf{r})\big|_S = 0,
-> $$
-> 
-> 或者
-> 
->$$
-> \left.\frac{\partial \tilde{\Phi}(\mathbf{r})}{\partial n}\right|_S = \left.\frac{\partial \Phi(\mathbf{r})}{\partial n}\right|_S - \left.\frac{\partial \Psi(\mathbf{r})}{\partial n}\right|_S = 0.
->$$
-> 
-> 因此，我们有
-> 
-> $$
->\begin{aligned}
-> 0 &= \int \int \int_\Omega \epsilon \tilde{\Phi}(\mathbf{r}) \nabla^2 \tilde{\Phi}(\mathbf{r}) dx dy dz \\\\
->&= \oint \oint_S \epsilon \tilde{\Phi}(\mathbf{r}) (\nabla \tilde{\Phi}(\mathbf{r})) \cdot d\mathbf{S} - \int \int \int_\Omega \epsilon (\nabla \tilde{\Phi}(\mathbf{r})) \cdot (\nabla \tilde{\Phi}(\mathbf{r})) dx dy dz.
-> \end{aligned}
-> $$
-> 
-> 又由于在边界上，条件 $\tilde{\Phi}(\mathbf{r})\big|_S = 0$ 或 $\left.\dfrac{\partial \tilde{\Phi}(\mathbf{r})}{\partial n}\right|_S = 0$ 必有一个成立，故进一步得到
-> 
-> $$
->0 = -\int \int \int_\Omega \epsilon (\nabla \tilde{\Phi}(\mathbf{r})) \cdot (\nabla \tilde{\Phi}(\mathbf{r})) dx dy dz
-> $$
->
-> 也就是说，
-> 
-> $$
-> \nabla \tilde{\Phi}(\mathbf{r}) = 0.
->$$
-> 
->这意味着
-> 
-> $$
-> \tilde{\Phi}(\mathbf{r}) = \Phi(\mathbf{r}) - \Psi(\mathbf{r}) = \text{Const}
-> $$
->
-> 成立。换句话说，
->$$
-> \nabla^2 \Phi(\mathbf{r}) = -\frac{1}{\epsilon} \rho_f(\mathbf{r}).
-> $$
-> 的任意两个解最多只相差一个常数。但静电势函数附加上一个常数，对于由它决定的电场强度分布 $\mathbf{E}(\mathbf{r})$ 并无影响，可以略去不计。
-> 
->接下来，我们考虑区域 $\Omega$ 是由一些不同质的介质组成的情况。将第 $i$ 种介质占据的区域记作 $\Omega_i$，即
-> 
-> $$
-> \Omega = \cup_{i=1}^n \Omega_i.
-> $$
-> 
->而
-> 
->$$
-> 0 = \sum_{i=1}^n \int \int \int_{\Omega_i} \epsilon_i \tilde{\Phi}_i(\mathbf{r}) \nabla^2 \tilde{\Phi}_i(\mathbf{r}) dx_i dy_i dz_i
-> $$
-> 
-> 成立。若其中的某些区域，例如 $\Omega_k$ 是由导体占据的，那么与之有关的积分中的被积函数
->
-> $$
->\nabla^2 \tilde{\Phi}_i(\mathbf{r}) = \nabla^2 \Phi_i(\mathbf{r}) - \nabla^2 \Psi_i(\mathbf{r}) = 0.
-> $$
-> 
-> 因此，该积分实际上并不出现在求和中，即我们有
-> 
->$$
-> 0 = \sum_{i=1}^n{}' \int \int \int_{\Omega_i} \epsilon_i \tilde{\Phi}_i(\mathbf{r}) \nabla^2 \tilde{\Phi}_i(\mathbf{r}) dx_i dy_i dz_i
->$$
-> 
-> 这里，$\sum'$ 表示已从求和中去除了导体占据的区域。接下来对
-> $$
-> 0 = \sum_{i=1}^n \int \int \int_{\Omega_i} \epsilon_i \tilde{\Phi}_i(\mathbf{r}) \nabla^2 \tilde{\Phi}_i(\mathbf{r}) dx_i dy_i dz_i
->$$
-> 每一项做分部积分，并由此得到
->
-> $$
-> 0 = \sum_{i=1}^n{}' \oint \oint_{S_i} [\epsilon_i \tilde{\Phi}_i(\mathbf{r}) \nabla \tilde{\Phi}_i(\mathbf{r})] \cdot d\mathbf{S}_i - \sum_{i=1}^n{}' \int \int \int_{\Omega_i} \epsilon_i \left(\nabla \tilde{\Phi}_i(\mathbf{r})\right)^2 dx_i dy_i dz_i.
-> $$
-> 
->我们要论证，上式中的第一个积分恒为零。为此分别考虑两种情况。
-> 
-> > (i) $S_i$ 的一部分为 $S = \partial \Omega$ 的一部分。此时，由于 $\tilde{\Phi}(\mathbf{r})\big|_S = 0$ 或 $\left.\dfrac{\partial \tilde{\Phi}(\mathbf{r})}{\partial n}\right|_S = 0$ 成立，故上式中第一个求和号中的相应的积分贡献为零。
-> >
-> > (ii) $S_i$ 的一部分为内边界，即存在一个区域 $\Omega_j$，它和 $\Omega_i$ 共享这一分界面。此时需要考虑两个积分的贡献之和
-> >
->> $$
-> > \Delta_{ij} = \int \int_{S_i'} [\epsilon_i \tilde{\Phi}_i(\mathbf{r}) \nabla \tilde{\Phi}_i(\mathbf{r})] \cdot d\mathbf{S}_i + \int \int_{S_j'} [\epsilon_j \tilde{\Phi}_j(\mathbf{r}) \nabla \tilde{\Phi}_j(\mathbf{r})] \cdot d\mathbf{S}_j.
-> > $$
-> > 
-> >这里，$S_i'$ 和 $S_j'$ 为区域 $\Omega_i$ 和区域 $\Omega_j$ 共享的那部分边界，只不过由于它们的外法线方向正好相反，故用不同记号标记。由于在这部分边界上有 $\tilde{\Phi}_i(\mathbf{r}) = \tilde{\Phi}_j(\mathbf{r})$ 以及 $d\mathbf{S}_i = -d\mathbf{S}_j$，故上式可以改写作
->> 
-> >$$
->> \begin{aligned}
-> > \Delta_{ij} &= \int \int_{S_i'} [\epsilon_i \tilde{\Phi}_i(\mathbf{r}) \nabla \tilde{\Phi}_i(\mathbf{r})] \cdot d\mathbf{S}_i + \int \int_{S_j'} [\epsilon_j \tilde{\Phi}_j(\mathbf{r}) \nabla \tilde{\Phi}_j(\mathbf{r})] \cdot (-d\mathbf{S}_i) \\\\
-> > &= \int \int_{S_i'} \tilde{\Phi}_i(\mathbf{r}) \left(\epsilon_i \frac{\partial \tilde{\Phi}_i}{\partial n} - \epsilon_j \frac{\partial \tilde{\Phi}_j}{\partial n}\right) d\mathbf{S}_i.
-> > \end{aligned}
-> > $$
-> > 
-> >在分界面两边皆为绝缘体时，有
-> > 
-> >$$
-> > \begin{aligned}
-> > \Delta_{ij} &= \int \int_{S_i'} \tilde{\Phi}_i(\mathbf{r}) \left[\left(\epsilon_i \frac{\partial \Phi_i(\mathbf{r})}{\partial n} - \epsilon_j \frac{\partial \Phi_j(\mathbf{r})}{\partial n}\right) - \left(\epsilon_i \frac{\partial \Psi_i(\mathbf{r})}{\partial n} - \epsilon_j \frac{\partial \Psi_j(\mathbf{r})}{\partial n}\right)\right] dS_i \\\\
-> > &= \int \int_{S_i'} \tilde{\Phi}_i(\mathbf{r}) \left[-\sigma_{if}(\mathbf{r}) - (-\sigma_{if}(\mathbf{r}))\right] dS_i = 0.
-> > \end{aligned}
-> > $$
-> > 
-> >而当分界面的两边分别被绝缘体和导体占据时，有
-> > 
-> >$$
-> > \begin{aligned}
-> > \Delta_{ij} &= \int \int_{S_i'} \left(\epsilon_i \tilde{\Phi}_i(\mathbf{r}) \nabla \tilde{\Phi}_i(\mathbf{r})\right) \cdot d\mathbf{S}_i = \tilde{\Phi}_i \int \int_{S_i'} \epsilon_i \frac{\partial \tilde{\Phi}_i(\mathbf{r})}{\partial n} dS_i \\\\
-> > &= \tilde{\Phi}_i \left(\int \int_{S_i'} \epsilon_i \frac{\partial \Phi_i(\mathbf{r})}{\partial n} dS_i - \int \int_{S_i'} \epsilon_i \frac{\partial \Psi_i(\mathbf{r})}{\partial n} dS_i\right) \\\\
-> > &= \tilde{\Phi}_i \left(\int \int_{S_i'} [\sigma_f(\mathbf{r}) - \sigma_f(\mathbf{r})] dS_i\right) = 0.
-> > \end{aligned}
-> > $$
-> > 
-> > 因此
-> >$$
-> > 0= \sum_{i=1}^n{}' \oint \oint_{S_i} [\epsilon_i \tilde{\Phi}_i(\mathbf{r}) \nabla \tilde{\Phi}_i(\mathbf{r})] \cdot d\mathbf{S}_i - \sum_{i=1}^n{}' \int \int \int_{\Omega_i} \epsilon_i \left(\nabla \tilde{\Phi}_i(\mathbf{r})\right)^2 dx_i dy_i dz_i.
-> > $$
-> > 第一项在定理给定的条件下恒为零，而我们也由此得到
-> > 
-> > $$
-> >\sum_{i=1}^n{}' \int \int \int_\Omega \epsilon_i \left(\nabla \tilde{\Phi}_i(\mathbf{r})\right)^2 dx dy dz = 0.
-> > $$
-> > 
-> > 如前所述，它隐含着泊松方程的两个解 $\Phi(\mathbf{r})$ 和 $\Psi(\mathbf{r})$ 之间最多差一个常数。
-> 
-> 在解决实际问题时，往往给定的不是导体表面的面电荷密度 $\sigma_f(\mathbf{r})$，而是导体带的总电荷 $Q_f$。即便如此，唯一性定理仍然成立。这是由于此时
-> $$
-> 0= \sum_{i=1}^n{}' \oint \oint_{S_i} [\epsilon_i \tilde{\Phi}_i(\mathbf{r}) \nabla \tilde{\Phi}_i(\mathbf{r})] \cdot d\mathbf{S}_i - \sum_{i=1}^n{}' \int \int \int_{\Omega_i} \epsilon_i \left(\nabla \tilde{\Phi}_i(\mathbf{r})\right)^2 dx_i dy_i dz_i.
-> $$
-> 求和的第一项仍然为零。实际上，重复上面的论证，我们看到
-> 
-> $$
-> \begin{aligned}
-> &\sum_{i=1}^n{}' \int \int_{S_i} \epsilon_i \left(\tilde{\Phi}_i(\mathbf{r}) \nabla \tilde{\Phi}_i(\mathbf{r})\right) \cdot d\mathbf{S}_i \\\\
-> &= \epsilon_1 \tilde{\Phi}_1\big|_{S_1'} \int \int_{S_1'} \frac{\partial \tilde{\Phi}_1}{\partial n} dS + \epsilon_2 \tilde{\Phi}_2\big|_{S_2'} \int \int_{S_2'} \frac{\partial \tilde{\Phi}_2}{\partial n} dS + \epsilon_3 \tilde{\Phi}_3\big|_{S_3'} \int \int_{S_3'} \frac{\partial \tilde{\Phi}_3}{\partial n} dS.
-> \end{aligned}
-> $$
-> 
-> 这里为了简化问题，我们假设区域 $\Omega$ 内只有一个导体，它被三种不同的介质 1，2 和 3 所包围，分别共享边界 $S_1'$，$S_2'$ 和 $S_3'$
->
-> 由于导体在静电的情况下是等势面，所以
-> $$
-> \tilde{\Phi}_1\big|_{S_1'} = \tilde{\Phi}_2\big|_{S_2'} = \tilde{\Phi}_3\big|_{S_3'} = K.
-> $$
-> 
->$K$ 为一个常数。又由于
-> 
-> $$
-> \epsilon_i \left.\frac{\partial \tilde{\Phi}_i}{\partial n}\right|_{S_i'} = \epsilon_i \left.\frac{\partial \Phi_i}{\partial n}\right|_{S_i'} - \epsilon_i \left.\frac{\partial \Psi_i}{\partial n}\right|_{S_i'} = \sigma_f^{\Psi_i}(\mathbf{r}) - \sigma_f^{\Phi_i}(\mathbf{r}), \quad i = 1,2,3,\cdots
-> $$
-> 
-> 我们可得
->
-> $$
->\sum_{i=1}^n{}' \int \int_{S_i} \epsilon_i (\tilde{\Phi}(\mathbf{r}) \nabla \tilde{\Phi}(\mathbf{r})) \cdot d\mathbf{S}_i = K \int \int_{S_1'} (\sigma_f^{\Psi_1}(\mathbf{r}) - \sigma_f^{\Phi_1}(\mathbf{r})) dS
-> $$
-> 
-> $$
-> + K \int \int_{S_2'} (\sigma_f^{\Psi_2}(\mathbf{r}) - \sigma_f^{\Phi_2}(\mathbf{r})) dS + K \int \int_{S_3'} (\sigma_f^{\Psi_3}(\mathbf{r}) - \sigma_f^{\Phi_3}(\mathbf{r})) dS
->$$
-> 
->$$
-> = K \left(\int \int_{S_1'} \sigma_f^{\Psi_1}(\mathbf{r}) dS_1 + \int \int_{S_2'} \sigma_f^{\Psi_2}(\mathbf{r}) dS_2 + \int \int_{S_3'} \sigma_f^{\Psi_3}(\mathbf{r}) dS_3\right)
-> $$
-> 
-> $$
->- K \left(\int \int_{S_1'} \sigma_f^{\Phi_1}(\mathbf{r}) dS_1 + \int \int_{S_2'} \sigma_f^{\Phi_2}(\mathbf{r}) dS_2 + \int \int_{S_3'} \sigma_f^{\Phi_3}(\mathbf{r}) dS_3\right)
-> $$
->
-> $$
-> = K(Q_f - Q_f) = 0.
-> $$
->
-> 因此静电学的唯一性定理仍然成立。
-
-静电学问题解的唯一性定理给予了我们很大的灵活性。换句话说，无论我们用什么办法找到一个势函数 $\Phi(\mathbf{r})$，它在区域 $\Omega$ 内满足给定的泊松方程，又在 $\Omega$ 的边界 $\partial \Omega$ 上满足给定的边界条件，那么它就一定是该静电学问题的唯一解。
-
-## Part 4 格林函数
-
-下面要考虑一般的静电学问题。为了这一目的，我们引入格林函数方法。
-
-一般的静电学问题可以大致分为两类：
-
-> **第一类边值问题**：空间区域 $\Omega$ 中的电荷分布 $\rho_f(\mathbf{r})$ 和边界 $S = \partial\Omega$ 上各点处的电势 $\Phi_S(\mathbf{r})$ 已经给定；
->
-> **第二类边值问题**： $\Omega$ 内的电荷分布 $\rho_f(\mathbf{r})$ 和边界 $S = \partial\Omega$ 上各点处的电场的法线分量 $\dfrac{\partial\Phi_S(\mathbf{r})}{\partial n}$ 已经给定。
-
-我们的任务是用格林函数方法，在这两类边值条件下求解电势在 $\Omega$ 内各点处的分布 $\Phi(\mathbf{r})$。
-
-为此，我们引入所谓 $\delta$-函数的定义。它被定义作
-$$
-\delta(x) = 
-\begin{cases}
-0, & \text{if } x \ne 0; \\\\
-\infty, & \text{if } x = 0,
-\end{cases}
-$$
-
-并且满足条件
-
-$$
-\int_{-\infty}^{\infty} \delta(x) dx = 1.
-$$
-
-这一函数原本是狄拉克（Dirac）于 1926 年引入以解决量子力学中连续谱态的归一化问题的，后被物理学家广泛应用于处理各种边值问题。严格地说，它不是一种通常意义上的函数，而是一种被称之为分布（distribution）的连续泛函。在实际运算中，人们常常用某些函数来逼近它。例如，在一维空间中，若我们考虑函数
-
-$$
-f_\epsilon(x) = \frac{1}{\pi} \frac{\epsilon}{x^2 + \epsilon^2}, \quad \epsilon > 0.
-$$
-
-显然，当 $x \ne 0$ 时，我们有
-
-$$
-\lim_{\epsilon \to 0^+} f_\epsilon(x) = \lim_{\epsilon \to 0^+} \frac{1}{\pi} \frac{\epsilon}{x^2 + \epsilon^2} = 0,
-$$
-
-而当 $x = 0$ 时，我们又有
-
-$$
-\lim_{\epsilon \to 0^+} f_\epsilon(x = 0) = \lim_{\epsilon \to 0^+} \frac{1}{\pi} \frac{\epsilon}{\epsilon^2} = \lim_{\epsilon \to 0^+} \frac{1}{\pi\epsilon} = \infty.
-$$
-
-另一方面，将 $f_\epsilon(x)$ 在实轴上积分后我们有
+以及平均后的 Maxwell 方程组中的第二和三式合写在一起，我们最后得到修改后的在连续介质内的麦克斯韦方程组
 
 $$
 \begin{aligned}
-\int_{-\infty}^{\infty} f_\epsilon(x) dx &= \int_{-\infty}^{\infty} \frac{1}{\pi} \frac{\epsilon}{x^2 + \epsilon^2} dx = \left. \frac{1}{\pi} \arctan\frac{x}{\epsilon} \right|_{-\infty}^{\infty} \\\\
-&= \frac{1}{\pi} (\arctan\infty - \arctan(-\infty)) = \frac{1}{\pi} \left( \frac{\pi}{2} - \left( -\frac{\pi}{2} \right) \right) = 1.
+\nabla \cdot \mathbf{D}(\mathbf{r}, t) &= \rho_f(\mathbf{r}, t), & \nabla \times \mathbf{E}(\mathbf{r}, t) &= -\frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t}, \\\\
+\nabla \cdot \mathbf{B}(\mathbf{r}, t) &= 0, & \nabla \times \mathbf{H}(\mathbf{r}, t) &= \mathbf{J}_f(\mathbf{r}, t) + \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t}.
 \end{aligned}
 $$
 
-因此，按照定义，我们当有
+同时实验上也观察到，在低频电磁场中，$\mathbf{J}_f(\mathbf{r}, t)$ 是与电场强度矢量 $\mathbf{E}(\mathbf{r}, t)$ 是成正比的，即
 
 $$
-\lim_{\epsilon \to 0^+} \frac{1}{\pi} \frac{\epsilon}{x^2 + \epsilon^2} = \delta(x).
+\mathbf{J}_f(\mathbf{r}, t) = \sigma \mathbf{E}(\mathbf{r}, t).
 $$
 
-有了 $\delta$ 函数的定义后，我们现在可以将位于坐标原点处的一个带电量为 $Q$ 的点电荷分布写作 $\rho(\mathbf{r}) = Q\delta(\mathbf{r})$。这是由于等式
+$\sigma$ 称为介质的电导率（conductivity），而此公式称为欧姆定律（Ohm's law）。
+
+## Part 2 电磁场的边值关系
+
+我们上面所讨论的是在一个同质介质中电磁场的产生和传播的问题。在实际应用中，我们所遇到的情况往往是整个空间是由不同质的介质占据的，例如空气和水。此时，为了决定电磁场在空间的分布，除了解麦克斯韦方程之外，我们还需考虑在这些介质彼此之间的分界面上，电磁场强度矢量是如何改变的。
+
+以电场强度矢量为例。我们考虑一个横跨两种介质分界面的圆柱体小盒子。将方程
 
 $$
-\begin{aligned}
-\int \int \int_{R^3} \rho(\mathbf{r}) dxdydz &= \int \int \int_{R^3} Q\delta(\mathbf{r}) dxdydz = \int \int \int_{R^3} Q\delta(x)\delta(y)\delta(z) dxdydz \\\\
-&= Q \left( \int_{-\infty}^{\infty} \delta(x) dx \right) \left( \int_{-\infty}^{\infty} \delta(y) dy \right) \left( \int_{-\infty}^{\infty} \delta(z) dz \right) = Q
-\end{aligned}
+\mathrm{div} \mathbf{D}(x, y, z, t) = \rho_f(x, y, z, t)
 $$
 
-成立。$\delta$ 函数的另外一个有用的性质是，它与一个连续函数 $f(\mathbf{r})$ 的乘积的积分等于该函数在 $\mathbf{r} = 0$ 处的值，即我们有
+的两边对于小盒子所占的区域 $\Omega$ 求积分，并使用高斯定理后，我们有
 
 $$
-\int \int \int_{R^3} f(\mathbf{r}) \delta(\mathbf{r}) dxdydz = f(0).
+\int \int_\Omega \mathrm{div} \mathbf{D}(x, y, z, t) dx dy dz = \oint \oint_S \mathbf{D} \cdot d\mathbf{S} = \int \int_\Omega \rho_f(x, y, z, t) dx dy dz.
 $$
 
-这一公式的证明非常简单。让我们任取一个以原点为球心，半径为 $\epsilon$ 的小球 $\Omega_\epsilon$。那么，我们都有的
+显然，当盒子的高度 $h$ 以及上、下端面的半径 $\delta$ 都很小时，上式可以近似写作
 
 $$
-\begin{aligned}
-&\int \int \int_{R^3} f(\mathbf{r}) \delta(\mathbf{r}) dxdydz \\\\
-&= \int \int \int_{R^3 \setminus \Omega_\epsilon} f(\mathbf{r}) \delta(\mathbf{r}) dxdydz + \int \int \int_{\Omega_\epsilon} f(\mathbf{r}) \delta(\mathbf{r}) dxdydz \\\\
-&= \int \int \int_{\Omega_\epsilon} f(\mathbf{r}) \delta(\mathbf{r}) dxdydz.
-\end{aligned}
+\int \int_{\text{top surface}} \mathbf{D} \cdot d\mathbf{S} + \int \int_{\text{lower surface}} \mathbf{D} \cdot d\mathbf{S} + \int \int_{\text{side surface}} \mathbf{D} \cdot d\mathbf{S} \cong \sigma_f(\mathbf{r}, t)(\pi \delta^2) + Q_f.
 $$
 
-当 $\epsilon$ 足够小时，我们可以利用 $f(\mathbf{r})$ 在 $\mathbf{r} = 0$ 处的值 $f(0)$ 代替它在被积函数的位置，从而得到
+这里，$\sigma_f(\mathbf{r}, t)$ 为盒子中心处两种介质分界面上的自由面电荷密度，而 $Q_f$ 为盒子内的体电荷密度的体积分。若我们规定，上表面处的外法线方向为正，侧表面的外法线方向记作 $\mathbf{t}$，则上式又可被进一步写作
 
 $$
-\begin{aligned}
-&\int \int \int_{R^3} f(\mathbf{r}) \delta(\mathbf{r}) dxdydz = \int \int \int_{\Omega_\epsilon} f(\mathbf{r}) \delta(\mathbf{r}) dxdydz \\\\
-&\simeq \int \int \int_{\Omega_\epsilon} f(0) \delta(\mathbf{r}) dxdydz = f(0) \int \int \int_{\Omega_\epsilon} \delta(\mathbf{r}) dxdydz \\\\
-&= f(0) \int \int \int_{R^3} \delta(\mathbf{r}) dxdydz = f(0).
-\end{aligned}
+D_{2n}(\pi \delta^2) - D_{1n}(\pi \delta^2) + D_t(2\pi \delta h) \cong \sigma_f(\mathbf{r}, t)(\pi \delta^2) + Q_f.
 $$
 
-最后，我们令 $\epsilon \to 0$，则上式变为一个等式，即
+现在，我们令 $h \to 0$。那么，$Q_f \to 0$，且上式左边的第三项亦趋近于零。因此，上式化简为
 
 $$
-\int \int \int_{R^3} f(\mathbf{r}) \delta(\mathbf{r}) dxdydz = f(0).
-$$
-
-可以形象地讲，$\delta$ 函数将任何一个连续函数都映射到一个复数 $f(0)$ 去。在这种意义上，$\delta$ 函数可以被理解为一个连续泛函（continuous functional）。
-
-接下来，我们要介绍一个十分有用的恒等式
-
-$$
-\nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} = -4\pi \delta(\mathbf{r} - \mathbf{r}').
-$$
-
-/proof/
-
-> 首先，不难验证
->
-> $$
-> \nabla_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} = -\frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}
-> $$
-> 成立。其次，利用在第二章中的相关推导，我们看到当 $\mathbf{r} \ne \mathbf{r}'$ 时，
->$$
-> \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} = -\nabla_{\mathbf{r}} \cdot \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} = 0.
->$$
-> 因此，我们只需研究 $\nabla^2_{\mathbf{r}} \dfrac{1}{|\mathbf{r} - \mathbf{r}'|}$ 在 $\mathbf{r} \simeq \mathbf{r}'$ 附近的行为即可。取一个以 $\mathbf{r}$ 为球心，$\delta$ 为半径的小球体 $\Omega_\delta$。则我们有
-> $$
-> \begin{aligned}
-> &\int \int \int_{R^3} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz \\\\
->&= \int \int \int_{R^3 \setminus \Omega_\delta} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz + \int \int \int_{\Omega_\delta} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz \\\\
-> &= \int \int \int_{\Omega_\delta} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz.
->\end{aligned}
-> $$
-> 对上式的右边使用高斯定理后，我们进一步得到
-> $$
-> \begin{aligned}
-> \int \int \int_{R^3} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz &= \int \int \int_{\Omega_\delta} \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} dxdydz \\\\
-> &= \oint \oint_{S_\delta} \left( \nabla_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} \right) \cdot d\mathbf{S} = -\oint \oint_{S_\delta} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \cdot d\mathbf{S} = -4\pi.
-> \end{aligned}
-> $$
->另一方面，按照定义，我们有
-> $$
->\int \int \int_{R^3} (-4\pi) \delta(\mathbf{r} - \mathbf{r}') dxdydz = -4\pi,
-> $$
-> 
-> 故成立。
-
-在做了这些准备之后，我们现在可以引入静电学问题中的格林函数了。它被定义作方程
-
-$$
-\nabla^2_{\mathbf{r}} G(\mathbf{r}, \mathbf{r}') = -\frac{1}{\epsilon_0} \delta(\mathbf{r} - \mathbf{r}')
-$$
-
-的解。
-
-根据点电荷与 $\delta$ 函数的关系，$G(\mathbf{r}, \mathbf{r}')$ 也可以被解释作真空中一个位于空间 $\mathbf{r}'$ 处带电量为 $q = 1$ 的点电荷在空间 $\mathbf{r}$ 处产生的静电势。
-
-需要强调一点的是，由于 $\delta(\mathbf{r})$ 是一个偶函数，故 $\nabla^2_{\mathbf{r}} G(\mathbf{r}, \mathbf{r}') = \nabla^2_{\mathbf{r}'} G(\mathbf{r}', \mathbf{r})$ 显然成立。除此之外，亦可证明，在第一类边值条件下，$G(\mathbf{r}, \mathbf{r}') = G(\mathbf{r}', \mathbf{r})$ 也成立。
-
-这一互易关系隐含着，在给定的边值条件下，位于 $\mathbf{r}'$ 处的单位电荷在 $\mathbf{r}$ 处产生的电势与位于 $\mathbf{r}$ 处的单位电荷在 $\mathbf{r}'$ 处产生的电势是等值的。
-
-我们知道，要想唯一地决定 $G(\mathbf{r}, \mathbf{r}')$，需要给出在相关的空间区域 $\Omega$ 的边界 $S = \partial\Omega$ 上的电势分布 $\Phi_S$ 或其导数分布 $\left.\dfrac{\partial\Phi_S}{\partial n}\right|_S$。让我们结合讲过的例子，分别考虑以下三种情况。
-
-> (1) 无界空间中的格林函数。在此情况下，可以将无穷远处的电势取为零。因此，$G_0(\mathbf{r}, \mathbf{r}')$ 可以唯一地决定下来。我们有
->
-> $$
-> G_0(\mathbf{r}, \mathbf{r}') = \frac{1}{4\pi\epsilon_0} \frac{1}{\sqrt{(x - x')^2 + (y - y')^2 + (z - z')^2}} = \frac{1}{4\pi\epsilon_0} \frac{1}{|\mathbf{r} - \mathbf{r}'|}.
-> $$
->
-> 事实上，利用
-> $$
-> \nabla^2_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} = -4\pi \delta(\mathbf{r} - \mathbf{r}').
-> $$
-> 我们可以直接验证
->
-> $$
-> \begin{aligned}
-> \nabla_{\mathbf{r}}^2 G_0(\mathbf{r}, \mathbf{r}') &= \nabla_{\mathbf{r}}^2 \left( \frac{1}{4\pi\epsilon_0} \frac{1}{|\mathbf{r} - \mathbf{r}'|} \right) = \frac{1}{4\pi\epsilon_0} \nabla_{\mathbf{r}}^2 \frac{1}{|\mathbf{r} - \mathbf{r}'|} \\\\
-> &= \frac{1}{4\pi\epsilon_0} (-4\pi \delta(\mathbf{r} - \mathbf{r}')) = -\frac{1}{\epsilon_0} \delta(\mathbf{r} - \mathbf{r}').
-> \end{aligned}
-> $$
->
-> 的确是我们要找的解。
->
-> (2) 上半平面的格林函数。我们可以写出此时的格林函数
->
-> $$
-> \begin{aligned}
-> G_1(\mathbf{r}, \mathbf{r}') &= \frac{1}{4\pi\epsilon_0} \left( \frac{1}{\sqrt{(x - x')^2 + (y - y')^2 + (z - z')^2}} \right. \\\\
-> &\quad \left. - \frac{1}{\sqrt{(x - x')^2 + (y - y')^2 + (z + z')^2}} \right).
-> \end{aligned}
-> $$
->
-> (3) 球外空间的格林函数。若令
->
-> $$
-> r = \sqrt{x^2 + y^2 + z^2}, \quad r' = \sqrt{x'^2 + y'^2 + z'^2}.
-> $$
->
-> 则我们有
->
-> $$
-> G_2(\mathbf{r}, \mathbf{r}') = \frac{1}{4\pi\epsilon_0} \left( \frac{1}{\sqrt{r^2 + r'^2 - 2rr' \cos\alpha}} - \frac{R_0 / r'}{\sqrt{r^2 + b^2 - 2rb \cos\alpha}} \right),
-> $$
->
-> 这里，$R_0$ 为球的半径，电荷点为 $P$，场点 $P'$，角度 $\alpha$ 为 $\overrightarrow{OP}$ 和 $\overrightarrow{OP'}$ 的夹角。
->
-> 将 $b = \dfrac{R_0^2}{r'}$ 代入上式后，我们有
-> $$
-> G_2(\mathbf{r}, \mathbf{r}') = \frac{1}{4\pi\epsilon_0} \left( \frac{1}{\sqrt{r^2 + r'^2 - 2rr' \cos\alpha}} - \frac{1}{\sqrt{\left( \frac{rr'}{R_0} \right)^2 + R_0^2 - 2rr' \cos\alpha}} \right).
-> $$
->
-
-接下来，我们讨论如何利用格林函数获得一般边值问题的解。先看第一类边值问题。
-
-由于自由电荷在空间中的分布密度函数 $\rho_f(\mathbf{r}')$ 是已知的，故泊松方程
-$$
-\nabla_{\mathbf{r}'}^2 \Phi(\mathbf{r}') = -\frac{1}{\epsilon} \rho_f(\mathbf{r}')
-$$
-
-以及
-
-$$
-\nabla_{\mathbf{r}}^2 G(\mathbf{r}, \mathbf{r}') = -\frac{1}{\epsilon_0} \delta(\mathbf{r} - \mathbf{r}')
-$$
-
-成立。将 $\displaystyle\nabla_{\mathbf{r}'}^2 \Phi(\mathbf{r}') = -\dfrac{1}{\epsilon} \rho_f(\mathbf{r}')$ 乘以 $G(\mathbf{r}, \mathbf{r}')$ 再减去 $\displaystyle\nabla_{\mathbf{r}}^2 G(\mathbf{r}, \mathbf{r}') = -\dfrac{1}{\epsilon_0} \delta(\mathbf{r} - \mathbf{r}')$ 乘以 $\Phi(\mathbf{r}')$ 后
-
-$$
-\begin{aligned}
-G(\mathbf{r}, \mathbf{r}') \nabla_{\mathbf{r}'}^2 \Phi(\mathbf{r}') - \Phi(\mathbf{r}') \nabla_{\mathbf{r}'}^2 G(\mathbf{r}, \mathbf{r}') &= G(\mathbf{r}', \mathbf{r}) \nabla_{\mathbf{r}'}^2 \Phi(\mathbf{r}') - \Phi(\mathbf{r}') \nabla_{\mathbf{r}'}^2 G(\mathbf{r}', \mathbf{r}) \\\\
-&= -\frac{1}{\epsilon} \rho_f(\mathbf{r}') G(\mathbf{r}, \mathbf{r}') + \frac{1}{\epsilon_0} \delta(\mathbf{r} - \mathbf{r}') \Phi(\mathbf{r}').
-\end{aligned}
-$$
-
-将此式的两边对全空间积分后，有
-
-$$
-\begin{aligned}
-&\int \int \int_\Omega \left( G(\mathbf{r}', \mathbf{r}) \nabla_{\mathbf{r}'}^2 \Phi(\mathbf{r}') - \Phi(\mathbf{r}') \nabla_{\mathbf{r}'}^2 G(\mathbf{r}', \mathbf{r}) \right) dx' dy' dz' \\\\
-&= \int \int \int_\Omega \left( -\frac{1}{\epsilon} \rho_f(\mathbf{r}') G(\mathbf{r}, \mathbf{r}') + \frac{1}{\epsilon_0} \delta(\mathbf{r} - \mathbf{r}') \Phi(\mathbf{r}') \right) dx' dy' dz' \\\\
-&= -\frac{1}{\epsilon} \int \int \int_\Omega \rho_f(\mathbf{r}') G(\mathbf{r}, \mathbf{r}') dx' dy' dz' + \frac{1}{\epsilon_0} \Phi(\mathbf{r}).
-\end{aligned}
-$$
-
-对于上式的左边，可以使用恒等式
-
-$$
-\Psi(\mathbf{r}') \nabla_{\mathbf{r}'}^2 \Phi(\mathbf{r}') - \Phi(\mathbf{r}') \nabla_{\mathbf{r}'}^2 \Psi(\mathbf{r}') = \nabla_{\mathbf{r}'} \cdot \left( \Psi(\mathbf{r}') \nabla_{\mathbf{r}'} \Phi(\mathbf{r}') - \Phi(\mathbf{r}') \nabla_{\mathbf{r}'} \Psi(\mathbf{r}') \right)
-$$
-
-因此，上式可以被改写作
-
-$$
-\begin{aligned}
-&\int \int \int_\Omega \left( G(\mathbf{r}', \mathbf{r}) \nabla_{\mathbf{r}'}^2 \Phi(\mathbf{r}') - \Phi(\mathbf{r}') \nabla_{\mathbf{r}'}^2 G(\mathbf{r}', \mathbf{r}) \right) dx' dy' dz'\\\\
-&= \int \int \int_\Omega \nabla_{\mathbf{r}'} \left( G(\mathbf{r}', \mathbf{r}) \nabla_{\mathbf{r}'} \Phi(\mathbf{r}') - \Phi(\mathbf{r}') \nabla_{\mathbf{r}'} G(\mathbf{r}', \mathbf{r}) \right) dx' dy' dz' \\\\
-&= \oint \oint_{\partial\Omega} \left( G(\mathbf{r}', \mathbf{r}) \nabla_{\mathbf{r}'} \Phi(\mathbf{r}') - \Phi(\mathbf{r}') \nabla_{\mathbf{r}'} G(\mathbf{r}', \mathbf{r}) \right) \cdot d\mathbf{S}' \\\\
-&= \oint \oint_{\partial\Omega} \left( G(\mathbf{r}', \mathbf{r}) \frac{\partial \Phi(\mathbf{r}')}{\partial n'} - \Phi(\mathbf{r}') \frac{\partial G(\mathbf{r}', \mathbf{r})}{\partial n'} \right) dS' \\\\
-&= -\frac{1}{\epsilon} \int \int \int_\Omega \rho_f(\mathbf{r}') G(\mathbf{r}, \mathbf{r}') dx' dy' dz' + \frac{1}{\epsilon_0} \Phi(\mathbf{r}),
-\end{aligned}
+D_{2n}(\pi \delta^2) - D_{1n}(\pi \delta^2) \cong \sigma_f(\mathbf{r}, t)(\pi \delta^2),
 $$
 
 或是
 
 $$
-\begin{aligned}
-\Phi(\mathbf{r}) &= \frac{\epsilon_0}{\epsilon} \int \int \int_\Omega \rho_f(\mathbf{r}') G(\mathbf{r}, \mathbf{r}') dx' dy' dz' \\\\
-&\quad + \epsilon_0 \oint \oint_{\partial\Omega} \left( G(\mathbf{r}', \mathbf{r}) \frac{\partial \Phi(\mathbf{r}')}{\partial n'} - \Phi(\mathbf{r}') \frac{\partial G(\mathbf{r}', \mathbf{r})}{\partial n'} \right) dS'. 
-\end{aligned}
+D_{2n} - D_{1n} \cong \sigma_f(\mathbf{r}, t).
 $$
 
-由于在第一类边值问题中，$\rho_f(\mathbf{r}')$ 和 $\Phi(\mathbf{r}')|_{\partial\Omega}$ 是已知的，且在 $\partial\Omega$ 上，$G(\mathbf{r}', \mathbf{r}) = 0$，故我们进一步得到
+我们再令 $\delta \to 0$，即可得到
 
 $$
-\Phi(\mathbf{r}) = \frac{\epsilon_0}{\epsilon} \int \int \int_\Omega \rho_f(\mathbf{r}') G(\mathbf{r}, \mathbf{r}') dx' dy' dz' - \epsilon_0 \oint \oint_{\partial\Omega} \Phi(\mathbf{r}') \frac{\partial G(\mathbf{r}', \mathbf{r})}{\partial n'} dS'.
+D_{2n}(\mathbf{r}, t) - D_{1n}(\mathbf{r}, t) = \sigma_f(\mathbf{r}, t).
 $$
 
-因此，$\Phi(\mathbf{r})$ 可以唯一地决定下来。
-
-对于第二类边值问题，除了 $\left. \dfrac{\partial \Phi(\mathbf{r}')}{\partial n} \right|_{\partial\Omega}$ 的值外，我们还需知道 $\Phi(\mathbf{r}')$ 在边界上的值。因此，格林函数在边界上的取值需要加以改动。
-
-## Part 5 电多极矩
-
-一个无限大均匀介质中给定电荷密度 $\rho_f(\mathbf{r})$ 所产生的电势为
+此即联系两种不同介质中的电感应强度矢量的沿分界面的法向分量的边值关系。将类似的推导过程应用到方程
 
 $$
-\Phi(\mathbf{r}) = \frac{1}{4\pi\epsilon} \int \int \int_{R^3} \frac{\rho_f(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|} dx'dy'dz'.
-$$
-在许多物理问题中，电荷只分布在在一个很小的区域 $\Omega$ 内，而人们所关心的又是电势 $\Phi(\mathbf{r})$ 在距离这一区域较远，即 $|\mathbf{r}-\mathbf{r}'|$ 远大于区域 $\Omega$ 的线度 $l$ 处的值。因此，我们没有必要对上式中的积分求精确值。近似地，我们可以将被积表达式按照 $l/|\mathbf{r}|$ 的幂次做展开，然后决定 $\Phi(\mathbf{r})$ 的各级近似值。
-
-当 $|\mathbf{r}'| \ll |\mathbf{r}|$ 时，我们近似有
-
-$$
-\begin{aligned}
-f(\mathbf{r}-\mathbf{r}') &\cong f(\mathbf{r})+\sum_{i=1}^{3}\frac{\partial f(\mathbf{r})}{\partial x_i}(-x'_i)+\frac{1}{2!}\sum_{i=1}^{3}\sum_{j=1}^{3}\frac{\partial^2 f(\mathbf{r})}{\partial x_i\partial x_j}(-x'_i)(-x'_j) \\
-&= f(\mathbf{r})-\mathbf{r}'\cdot\nabla_{\mathbf{r}}f(\mathbf{r})+\frac{1}{2!}(\mathbf{r}'\cdot\nabla_{\mathbf{r}})^2f(\mathbf{r}).
-\end{aligned}
+\mathrm{div} \mathbf{B}(\mathbf{r}, t) = 0,
 $$
 
-将此展开式应用到上式中的被积函数，我们有
+我们立刻可得
 
 $$
-\begin{aligned}
-\Phi(\mathbf{r})&\cong\frac{1}{4\pi\epsilon}\int\int\int_{\Omega}\rho_f(\mathbf{r}')\left(\frac{1}{r}-\mathbf{r}'\cdot\nabla_{\mathbf{r}}\frac{1}{r}+\frac{1}{2!}(\mathbf{r}'\cdot\nabla_{\mathbf{r}})^2\frac{1}{r}\right)dx'dy'dz'\\\\
-&=\frac{1}{4\pi\epsilon r}\int\int\int_{\Omega}\rho_f(\mathbf{r}')dx'dy'dz'-\frac{1}{4\pi\epsilon}\int\int\int_{\Omega}\rho_f(\mathbf{r}')\mathbf{r}'\cdot\left(\nabla_{\mathbf{r}}\frac{1}{r}\right)dx'dy'dz'\\\\
-&+\frac{1} {8\pi\epsilon}\int\int\int_{\Omega}\rho(\mathbf{r}')\sum_{i=1}^{3}\sum_{j=1}^{3}x'_ix'_j\left(\frac{\partial}{\partial x_i}\frac{\partial}{\partial x_j}\frac{1}{r}\right)dx'dy'dz'\\\\
-&=\frac{1}{4\pi\epsilon}\frac{Q}{r}-\frac{1}{4\pi\epsilon}\mathbf{P}\cdot\nabla_{\mathbf{r}}\frac{1}{r}+\frac{1}{4\pi\epsilon}\frac{1}{6}\sum_{i=1}^{3}\sum_{j=1}^{3}D_{ij}\frac{\partial}{\partial x_i}\frac{\partial}{\partial x_j}\frac{1}{r}.
-\end{aligned}
-\tag{a}
+B_{2n}(\mathbf{r}, t) - B_{1n}(\mathbf{r}, t) = 0,
 $$
 
-这里，
+或是
 
 $$
-Q=\int\int\int_{\Omega}\rho_f(\mathbf{r}')dx'dy'dz',\quad \mathbf{P}=\int\int\int_{\Omega}\rho_f(\mathbf{r}')\mathbf{r}'dx'dy'dz',
+B_{2n}(\mathbf{r}, t) = B_{1n}(\mathbf{r}, t).
 $$
 
-以及
+也就是说，磁感应强度矢量在两种不同介质的分界面处的法向分量是连续的。
+
+用同样的办法，我们也可以很容易地得到电场强度矢量 $\mathbf{E}(\mathbf{r}, t)$，电极化密度矢量 $\mathbf{P}(\mathbf{r}, t)$，磁场强度矢量 $\mathbf{H}(\mathbf{r}, t)$ 以及磁化密度矢量 $\mathbf{M}(\mathbf{r}, t)$ 在两种不同介质的分界面上的法向分量所满足的边值关系。以电极化密度矢量 $\mathbf{P}(\mathbf{r}, t)$ 为例。由于
 
 $$
-D_{ij}=\int\int\int_{\Omega}\rho_f(\mathbf{r}')3x'_ix'_jdx'dy'dz'.
+\mathrm{div} \mathbf{P}(\mathbf{r}, t) = -\rho_b(\mathbf{r}, t),
 $$
 
-分别称为体系的总电荷，电偶极矩和电四极矩。
-
-由表达式 (a)，我们得出结论，作为第一级近似，可以将所有得电荷都置于原点处，那么在远离区域 $\Omega$ 的 $\mathbf{r}$ 处，电势将由 (a) 式中的第一项给出。进一步，若电荷密度分布 $\rho(\mathbf{r}')$ 对于坐标原点不对称，那么 $\mathbf{P}$ 一般不为零。此时，(a) 式中的第二项对于电势的贡献会显现出来，我们有
+我们可以推得
 
 $$
-\Phi^{(2)}(\mathbf{r})=-\frac{1}{4\pi\epsilon}\mathbf{P}\cdot\nabla_{\mathbf{r}}\frac{1}{r}=\frac{\mathbf{P}\cdot\mathbf{r}}{4\pi\epsilon r^3}.
+P_{2n}(\mathbf{r}, t) - P_{1n}(\mathbf{r}, t) = -\sigma_b(\mathbf{r}, t)
 $$
 
-由于体系的总电荷以及电偶极矩的概念相对比较熟悉，我们下面将集中讨论电四极矩的性质。首先，我们注意到，按照定义，$\{D_{ij}\}$ 构成了一个 $3\times 3$ 矩阵的矩阵元，并且这个矩阵是对称的，即
+在两种不同介质的分界面处成立。
 
-$$
-D_{ij}=\int\int\int_{\Omega}3x'_ix'_j\rho_f(x',y',z')dx'dy'dz'=D_{ji}.
-$$
+接下来，我们研究电磁场强度矢量在连续介质分界面上的切向分量所满足的边值条件。
 
-因此，这九个量中最多只能有六个是彼此独立的。我们要证明，实际上它们之中只有五个是独立的。为此，我们先假定 $D_{11}, D_{22}, D_{33}, D_{12}, D_{13}$ 和 $D_{23}$ 是独立的。那么，若在前三个分量上各自加上一个常数 $C$，则新定义的六个分量
-
+以磁场强度矢量 $\mathbf{H}(\mathbf{r}, t)$ 为例。将方程
 $$
-D'_{11}=D_{11}+C,\, D'_{22}=D_{22}+C,\, D'_{33}=D_{33}+C,\, D'_{12}=D_{12},\, D'_{13}=D_{13},\, D'_{23}=D_{23}
+\nabla \times \mathbf{H}(\mathbf{r}, t) = \mathbf{J}_f(\mathbf{r}, t) + \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t}
 $$
 
-亦应该是独立的。现在，我们取
+的两边沿如图所示的围道进行积分，
 
-$$
-C=-\int\int\int_{\Omega}r'^2\rho_f(x',y',z')dx'dy'dz',
-$$
+<img src="https://pic1.imgdb.cn/item/6a44c59fd82989bc6aac28b2.png" style="zoom: 33%;" />
 
-则如此定义的新的六个分量可以统一地写作
-
+并利用斯托克斯公式，我们得到
 $$
-D'_{ij}=D_{ij}-\delta_{ij}\int\int\int_{\Omega}r'^2\rho_f(x',y',z')dx'dy'dz'.
+\oint_C \mathbf{H} \cdot d\mathbf{l} = \int \int_S \nabla \times \mathbf{H} \cdot d\mathbf{S} = \int \int_S \mathbf{J}_f \cdot d\mathbf{S} + \int \int_S \frac{\partial \mathbf{D}}{\partial t} \cdot d\mathbf{S}.
 $$
 
-接下来，我们要论证，它们给出的相应的电势的表达式并不改变。实际上，我们有
+这里，$S$ 代表由围道所界定的小矩形。若围道的长度为为 $\Delta l$，宽度为 $\Delta h$，当 $\Delta h \cong 0$ 时，我们近似有
 
 $$
 \begin{aligned}
-&\frac{1}{4\pi\epsilon}\frac{1}{6}\sum_{i=1}^{3}\sum_{j=1}^{3}D'_{ij}\frac{\partial}{\partial x_i}\frac{\partial}{\partial x_j}\frac{1}{r}dx'dy'dz'=\frac{1}{4\pi\epsilon}\frac{1}{6}\sum_{i=1}^{3}\sum_{j=1}^{3}D_{ij}\frac{\partial}{\partial x_i}\frac{\partial}{\partial x_j}\frac{1}{r}dx'dy'dz'\\\\
-&-\frac{1}{4\pi\epsilon}\frac{1}{6}\sum_{i=1}^{3}\sum_{j=1}^{3}\delta_{ij}\int\int\int_{\Omega}r'^2\rho_f(x',y',z')\frac{\partial}{\partial x_i}\frac{\partial}{\partial x_j}\frac{1}{r}dx'dy'dz'\\\\
-&=\frac{1}{4\pi\epsilon}\frac{1}{6}\sum_{i=1}^{3}\sum_{j=1}^{3}D_{ij}\frac{\partial}{\partial x_i}\frac{\partial}{\partial x_j}\frac{1}{r}dx'dy'dz'-\frac{1}{4\pi\epsilon}\frac{1}{6}\int\int\int_{\Omega}r'^2\rho_f(\mathbf{r}')\left(\nabla^2_{\mathbf{r}}\frac{1}{r}\right)dx'dy'dz'.
+\oint_C \mathbf{H} \cdot d\mathbf{l} &= \int_{C_1} \mathbf{H} \cdot d\mathbf{l} + \int_{C_2} \mathbf{H} \cdot d\mathbf{l} + \int_{H_1} \mathbf{H} \cdot d\mathbf{l} + \int_{H_2} \mathbf{H} \cdot d\mathbf{l} \\\\
+&\cong J_{\sigma f}^{t_1}(\mathbf{r}, t)\Delta l + J_{\rho_f}^{t_1}(\mathbf{r}, t)\Delta l\Delta h + \int \int_S \frac{\partial \mathbf{D}}{\partial t} \cdot d\mathbf{S}.
 \end{aligned}
 $$
 
-利用方程 $\nabla^2_{\mathbf{r}}\dfrac{1}{r}=-4\pi\delta(\mathbf{r})$，我们看到，当 $\mathbf{r}\neq 0$ 时，上式的第二项为零。因此，四极矩 $\{D'_{ij}\}$ 和 $\{D_{ij}\}$ 在远处产生的静电势并无区别。
+这里，$\mathbf{r}$ 代表小矩形中分界面上的一点，而 $J_{\sigma f}^{t_1}(\mathbf{r}, t)\Delta l$ 和 $J_{\rho_f}^{t_1}(\mathbf{r}, t)\Delta l\Delta h$ 分别为有由自由面电流密度的切向分量和自由体电流切向分量给出的贡献。
 
-另一方面，按照定义，我们有
+现在，我们令 $\Delta h \to 0$。由于磁场强度矢量 $\mathbf{H}$ 在分界面两边的介质中是有限的，电感应强度矢量 $\mathbf{D}$ 对时间的导数亦是有限的，故在此极限下上式可以简化为
+
+$$
+\int_{C_1} \mathbf{H} \cdot d\mathbf{l} + \int_{C_2} \mathbf{H} \cdot d\mathbf{l} \cong H_{2t_2}(\mathbf{r}, t)\Delta l - H_{1t_2}(\mathbf{r}, t)\Delta l \cong J_{\sigma f}^{t_1}(\mathbf{r}, t)\Delta l,
+$$
+
+或是
+
+$$
+H_{2t_2}(\mathbf{r}, t) - H_{1t_2}(\mathbf{r}, t) \cong J_{\sigma f}^{t_1}(\mathbf{r}, t).
+$$
+
+再令 $\Delta l \to 0$ 后，我们得到
+
+$$
+H_{2t_2}(\mathbf{r}, t) - H_{1t_2}(\mathbf{r}, t) = J_{\sigma f}^{t_1}(\mathbf{r}, t).
+$$
+
+此即磁场强度矢量 $\mathbf{H}(\mathbf{r}, t)$ 在介质 1 和介质 2 的分界面上的切向分量所满足的边值关系。
+
+类似的论证也可以应用到方程
+
+$$
+\nabla \times \mathbf{E}(\mathbf{r}, t) = -\frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t}.
+$$
+
+因此我们得到
+
+$$
+E_{2t}(\mathbf{r}, t) - E_{1t}(\mathbf{r}, t) = 0,
+$$
+
+或是
+
+$$
+E_{2t}(\mathbf{r}, t) = E_{1t}(\mathbf{r}, t).
+$$
+
+引进自介质 1 指向介质 2 的单位法线矢量 $\mathbf{e}_n$ 后，这些边值关系可以写成如下的紧凑形式
 
 $$
 \begin{aligned}
-D'_{11}+D'_{22}+D'_{33}&=\left(D_{11}-\int\int\int_{\Omega}r'^2\rho_f(\mathbf{r}')dx'dy'dz'\right)\\\\
-&+\left(D_{22}-\int\int\int_{\Omega}r'^2\rho_f(\mathbf{r}')dx'dy'dz'\right)+\left(D_{33}-\int\int\int_{\Omega}r'^2\rho_f(\mathbf{r}')dx'dy'dz'\right)\\\\
-&=\int\int\int_{\Omega}3x'x'\rho_f(x',y',z')dx'dy'dz'+\int\int\int_{\Omega}3y'y'\rho_f(x',y',z')dx'dy'dz'\\\\
-&+\int\int\int_{\Omega}3z'z'\rho_f(x',y',z')dx'dy'dz'-3\int\int\int_{\Omega}r'^2\rho_f(x',y',z')dx'dy'dz'\\\\
-&=3\int\int\int_{\Omega}r'^2\rho_f(x',y',z')dx'dy'dz'-3\int\int\int_{\Omega}r'^2\rho_f(x',y',z')dx'dy'dz'\\\\
-&=0.
+\mathbf{e}_n \times (\mathbf{E}_2 - \mathbf{E}_1) &= 0, & \mathbf{e}_n \times (\mathbf{H}_2 - \mathbf{H}_1) &= J_{\sigma f}^{t}(\mathbf{r}, t), \\\\
+\mathbf{e}_n \cdot (\mathbf{D}_2 - \mathbf{D}_1) &= \sigma_f(\mathbf{r}, t), & \mathbf{e}_n \cdot (\mathbf{B}_2 - \mathbf{B}_1) &= 0.
 \end{aligned}
 $$
 
-也就是说，$D'_{11}, D'_{22}$ 和 $D'_{33}$ 并非独立的。这导致了悖论。因此，六个分量 $D_{11}, D_{22}, D_{33}, D_{12}, D_{13}$ 和 $D_{23}$ 中最多只有五个是独立的。在文献中，人们一般将 $\{D'_{ij}\}$ 定义作一个电荷体系的电四极矩张量。
+这些关系在解决实际的电磁场强度分布问题时是十分有用的。
 
-/example/
+## Part 3 电磁场的能量和能量流
 
-> 设外电场 $\mathbf{E}_{\text{out}}(\mathbf{r})$ 的电势为 $\Phi_{\text{out}}(\mathbf{r})$。那么，一个处于此电场中的带电体的能量为
->
-> $$
-> W=\int\int\int_{\Omega}\rho(\mathbf{r})\Phi_{\text{out}}(\mathbf{r})dxdydz.
-> $$
->
-> 假设 $\Omega$ 是一个非常小的区域，使得我们可以将其中的电势 $\Phi_{\text{out}}(\mathbf{r})$ 在某一点（记作 $\mathbf{r}=0$）附近做展开，即
->
-> $$
-> \Phi_{\text{out}}(\mathbf{r})\cong\Phi_{\text{out}}(0)+\sum_{i=1}^{3}x_i\frac{\partial\Phi_{\text{out}}(0)}{\partial x_i}+\frac{1}{2!}\sum_{i=1}^{3}\sum_{j=1}^{3}x_ix_j\frac{\partial^2\Phi_{\text{out}}(0)}{\partial x_i\partial x_j}.
-> $$
->
-> 将之代入 $W$ 的表达式后，我们有
->
-> $$
-> \begin{aligned}
-> W &= \int\int\int_{\Omega}\rho(\mathbf{r})\Phi_{\text{out}}(\mathbf{r})dxdydz=\int\int\int_{\Omega}\rho(\mathbf{r})\Phi_{\text{out}}(0)dxdydz\\\\
-> &+ \sum_{i=1}^{3}\int\int\int_{\Omega}\rho(\mathbf{r})x_i\frac{\partial\Phi_{\text{out}}(0)}{\partial x_i}dxdydz+\frac{1}{2!}\sum_{i=1}^{3}\sum_{j=1}^{3}\int\int\int_{\Omega}\rho(\mathbf{r})x_ix_j\frac{\partial^2\Phi_{\text{out}}(0)}{\partial x_i\partial x_j}dxdydz\\\\
-> &= Q\Phi_{\text{out}}(0)+\mathbf{P}\cdot\nabla\Phi_{\text{out}}(0)+\frac{1}{6}\sum_{i=1}^{3}\sum_{j=1}^{3}D_{ij}\frac{\partial^2\Phi_{\text{out}}(0)}{\partial x_i\partial x_j}.
-> \end{aligned}
-> $$
->
-> 其中的第一项可视作体系的电荷都集中在原点 $\mathbf{r}=0$ 时的电势能，第二项则解释作体系的电偶极矩在外场中的能量。我们又可将之写作
->
-> $$
-> W^{(2)}=\mathbf{P}\cdot\nabla\Phi_{\text{out}}(0)=-\mathbf{P}\cdot\mathbf{E}_{\text{out}}(0).
-> $$
->
-> 而第三项则为体系的电四极矩在外电场中的能量。它也可被重新写作
->
-> $$
-> W^{(3)}=\frac{1}{6}\sum_{i=1}^{3}\sum_{j=1}^{3}D_{ij}\frac{\partial^2\Phi_{\text{out}}(0)}{\partial x_i\partial x_j}=-\frac{1}{6}\sum_{i=1}^{3}\sum_{j=1}^{3}D_{ij}\frac{\partial E_{\text{out}}^j(0)}{\partial x_i}.
-> $$
->
-> 因此可见，只有在非均匀外电场中，电四极矩对电势能的贡献才不为零。
->
-
-利用电偶极矩的势能函数，我们可以计算它在电场 $\mathbf{E}_{\text{out}}(\mathbf{r})$ 中所感受到的力和力矩 $\mathbf{M}_{\text{out}}$，即
+将方程
 $$
-\begin{aligned}
-\mathbf{F} &= -\nabla W^{(2)}=-\nabla(-\mathbf{P}\cdot\mathbf{E}_{\text{out}}(\mathbf{r}))=\nabla(\mathbf{P}\cdot\mathbf{E}_{\text{out}}(\mathbf{r}))\\\\
-&= (\mathbf{P}\cdot\nabla)\mathbf{E}_{\text{out}}(\mathbf{r})+(\mathbf{E}_{\text{out}}(\mathbf{r})\cdot\nabla)\mathbf{P}+\mathbf{P}\times(\nabla\times\mathbf{E}_{\text{out}}(\mathbf{r}))+\mathbf{E}_{\text{out}}(\mathbf{r})\times(\nabla\times\mathbf{P})\\\\
-&= (\mathbf{P}\cdot\nabla)\mathbf{E}_{\text{out}}(\mathbf{r}),
-\end{aligned}
+\nabla \times \mathbf{H}(\mathbf{r}, t) = \mathbf{J}_f(\mathbf{r}, t) + \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t}
 $$
-
-而
+的两边与电场强度矢量做点乘后，我们得到
 
 $$
-\begin{aligned}
-\mathbf{M}_{\text{out}} &= -\frac{\partial W^{(2)}}{\partial\vec{\varphi}}=-\frac{\partial}{\partial\varphi}\left(-\mathbf{P}\cdot\mathbf{E}_{\text{out}}(\mathbf{r})\right)\\\\
-&= \frac{\partial}{\partial\varphi}\left(PE_{\text{out}}(\mathbf{r})\cos\varphi\right)\mathbf{e}_{\phi\varphi}=-PE_{\text{out}}(\mathbf{r})\sin\theta\mathbf{e}_{\phi\varphi}=\mathbf{P}\times\mathbf{E}_{\text{out}}(\mathbf{r}).
-\end{aligned}
+\mathbf{E}(\mathbf{r}, t) \cdot (\nabla \times \mathbf{H}(\mathbf{r}, t)) = \mathbf{E}(\mathbf{r}, t) \cdot \mathbf{J}_f(\mathbf{r}, t) + \mathbf{E}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t}.
 $$
+
+再利用恒等式
+
+$$
+\mathbf{E}(\mathbf{r}, t) \cdot (\nabla \times \mathbf{H}(\mathbf{r}, t)) = -\nabla \cdot (\mathbf{E}(\mathbf{r}, t) \times \mathbf{H}(\mathbf{r}, t)) + \mathbf{H}(\mathbf{r}, t) \cdot (\nabla \times \mathbf{E}(\mathbf{r}, t)),
+$$
+
+可以将这一方程改写为
+
+$$
+-\nabla \cdot (\mathbf{E}(\mathbf{r}, t) \times \mathbf{H}(\mathbf{r}, t)) + \mathbf{H}(\mathbf{r}, t) \cdot (\nabla \times \mathbf{E}(\mathbf{r}, t)) = \mathbf{E}(\mathbf{r}, t) \cdot \mathbf{J}_f(\mathbf{r}, t) + \mathbf{E}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t}.
+$$
+
+将方程
+
+$$
+\nabla \times \mathbf{E}(\mathbf{r}, t) = -\frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t}
+$$
+
+代入后，我们进一步得到
+
+$$
+-\nabla \cdot (\mathbf{E}(\mathbf{r}, t) \times \mathbf{H}(\mathbf{r}, t)) - \mathbf{H}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t} = \mathbf{E}(\mathbf{r}, t) \cdot \mathbf{J}_f(\mathbf{r}, t) + \mathbf{E}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t}.
+$$
+
+将此式左边的两项移项到右边后给出
+
+$$
+\mathbf{E}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t} + \mathbf{H}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t} + \nabla \cdot (\mathbf{E}(\mathbf{r}, t) \times \mathbf{H}(\mathbf{r}, t)) + \mathbf{E}(\mathbf{r}, t) \cdot \mathbf{J}_f(\mathbf{r}, t) = 0.
+$$
+
+将
+
+$$
+\mathbf{D}(\mathbf{r}, t) = \epsilon \mathbf{E}(\mathbf{r}, t), \quad \mathbf{H}(\mathbf{r}, t) = \frac{1}{\mu} \mathbf{B}(\mathbf{r}, t)
+$$
+
+代入此式后，我们最后得到
+
+$$
+\frac{\partial}{\partial t} \left( \frac{\epsilon}{2} E^2(\mathbf{r}, t) + \frac{1}{2\mu} B^2(\mathbf{r}, t) \right) + \nabla \cdot \mathbf{S} + \mathbf{J}_f(\mathbf{r}, t) \cdot \mathbf{E}(\mathbf{r}, t) = 0.
+$$
+
+如同真空时的情况，我们将
+
+$$
+w = \frac{\epsilon}{2} E^2(\mathbf{r}, t) + \frac{1}{2\mu} B^2(\mathbf{r}, t) = \frac{1}{2} \mathbf{E}(\mathbf{r}, t) \cdot \mathbf{D}(\mathbf{r}, t) + \frac{1}{2} \mathbf{B}(\mathbf{r}, t) \cdot \mathbf{H}(\mathbf{r}, t)
+$$
+
+解释作介质中的电磁场能量密度，而将坡印亭矢量
+
+$$
+\mathbf{S}(\mathbf{r}, t) = \mathbf{E}(\mathbf{r}, t) \times \mathbf{H}(\mathbf{r}, t) = \frac{1}{\mu} \mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)
+$$
+
+解释作介质中的电磁场能量流密度，$\mathbf{J}_f \cdot \mathbf{E}$ 解释作电磁场对自由电荷做功的功率密度。它或者转化成电荷的动能，或者转化成焦耳热释放掉。
+

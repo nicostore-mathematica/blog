@@ -1,270 +1,520 @@
 ---
-title: Lesson 4 狭义相对论 I
+title: Lesson 4 Maxwell 方程组 III
 permalink: /electrodynamics/electrodynamics-4/
-createTime: 2026/03/13 22:03:59
+createTime: 2026/03/13 20:57:20
 ---
 
-## Part 1 基本假设
+## Part 4 Maxwell 方程组推论
 
-### · 基本假设
+接下来，让我们看一下麦克斯韦方程组的一些直接推论。
 
-在上一章中引入的麦克斯韦方程组看起来是完备的，但实际上仍然存在着一处需要澄清的地方. 
+### · 真空中电磁波传播
 
-我们已经知道，通过联立求解这些方程，人们可以得到如下的描写在真空中传播的电磁场波动方程
+首先是真空中电磁波的传播。
 
+将 Maxwell 方程组中的第二式再取一次旋度后，我们有
 $$
-\epsilon_0 \mu_0 \frac{\partial^2 \mathbf{E}}{\partial t^2} - \frac{\partial^2 \mathbf{E}}{\partial x^2} - \frac{\partial^2 \mathbf{E}}{\partial y^2} - \frac{\partial^2 \mathbf{E}}{\partial z^2} = \frac{1}{c^2} \frac{\partial^2 \mathbf{E}}{\partial t^2} - \frac{\partial^2 \mathbf{E}}{\partial x^2} - \frac{\partial^2 \mathbf{E}}{\partial y^2} - \frac{\partial^2 \mathbf{E}}{\partial z^2} = 0,
-\tag{1}
-$$
-
-以及
-
-$$
-\epsilon_0 \mu_0 \frac{\partial^2 \mathbf{B}}{\partial t^2} - \frac{\partial^2 \mathbf{B}}{\partial x^2} - \frac{\partial^2 \mathbf{B}}{\partial y^2} - \frac{\partial^2 \mathbf{B}}{\partial z^2} = \frac{1}{c^2} \frac{\partial^2 \mathbf{B}}{\partial t^2} - \frac{\partial^2 \mathbf{B}}{\partial x^2} - \frac{\partial^2 \mathbf{B}}{\partial y^2} - \frac{\partial^2 \mathbf{B}}{\partial z^2} = 0.
-\tag{2}
+\nabla \times (\nabla \times \mathbf{E}(\mathbf{r}, t)) = \nabla \times \left( - \frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t} \right) = - \frac{\partial}{\partial t} (\nabla \times \mathbf{B}(\mathbf{r}, t)).
 $$
 
-这里，$\mathbf{E}(x, y, z, t)$ 和 $\mathbf{B}(x, y, z, t)$ 为电磁波的电场和磁场强度，而常数
+现将 Maxwell 方程组中的第四式代入上式的右边后，我们有
 
 $$
-c = \frac{1}{\sqrt{\epsilon_0 \mu_0}} = 299792458 \text{m/s}
+\nabla \times (\nabla \times \mathbf{E}(\mathbf{r}, t)) = - \frac{\partial}{\partial t} \left( \mu_0 \mathbf{j}(\mathbf{r}, t) + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t} \right) = - \mu_0 \epsilon_0 \frac{\partial^2 \mathbf{E}(\mathbf{r}, t)}{\partial t^2}.
 $$
 
-具有速度的量纲，被定义作电磁波在真空中的传播速度. 但是由于在推导 (1) 式和 (2) 式时，并没有特别指定是在哪一个参照系中进行的，导致的一个直接的推论是，光速是一个不依赖于参照系的普适常数. 换句话说，在两个彼此做匀速直线运动的惯性参照系中，电磁波是以相同的速度传播的. 这是与力学中的伽里略变换关系相矛盾的. 
-
-为了摆脱这一困难，麦克斯韦以及同时代的一些物理学家提出了“以太”假说，即认为在空间中存在一种称为以太的连续媒介质，而电磁波是在这种媒介质中传播的横波. 那么，方程 (1) 和 (2) 中出现的光速就可以解释作电磁波相对于以太在其中处于静止状态的参照系的传播速度. 
-
-然而，这一学说被美国学者迈克耳逊（Albert Michelson）和莫雷（Edward Morley）于 1887 年用实验加以否定. 他们用实验表明，电磁波的传播速度在所有的惯性参照系中都是 $c = 299792458$ 米/秒. 这就使得人们要么放弃相对性原理，要么放弃以太存在的假说. 爱因斯坦（Albert Einstein）选择了后者. 
-
-爱因斯坦首先提出了狭义相对论的两个基本假设. 
-
-> (1) 相对性原理：物理定律在所有的惯性参照系都是等价的. 因此，有关的运动方程应该具有相同的形式. 
->
-> (2) 光速不变原理：在所有的参照系中，光在真空中传播的速率皆为 $c$. 而任何粒子在惯性参照系中的运动速率皆小于或等于光速. 
-
-### · 运动学理论
-
-我们考虑两个惯性参照系 $S$ 和 $S'$. 假设 $S'$ 系相对于 $S$ 系做匀速直线运动，速度为 $\mathbf{V}$. 设在 $t = t' = 0$ 时刻，两个参照系的原点 $O$ 和 $O'$ 重合，并从该处发射一个光脉冲信号. 因此，在时刻 $t$ 时，这个脉冲在 $S$ 系中走过的距离为
+这里，我们用到了在真空中 $\mathbf{j}(\mathbf{r}, t) = 0$ 这一事实。再利用恒等式
 
 $$
-L = \sqrt{x^2 + y^2 + z^2} = ct.
+\nabla \times (\nabla \times \mathbf{a}) = \nabla (\nabla \cdot \mathbf{a}) - \nabla^2 \mathbf{a}
 $$
 
-同理，它在 $S'$ 系中走过的距离为
+化简上式的左边，我们得到
 
 $$
-L' = \sqrt{x'^2 + y'^2 + z'^2} = c't'.
+\nabla \cdot (\nabla \cdot \mathbf{E}(\mathbf{r}, t)) - \nabla^2 \mathbf{E}(\mathbf{r}, t) = - \mu_0 \epsilon_0 \frac{\partial^2 \mathbf{E}(\mathbf{r}, t)}{\partial t^2}.
 $$
 
-根据光速不变假设，我们有 $c = c'$. 因此，联合上面两式，我们得到
+将 Maxwell 方程组中的第一式代入上式的右边后有
 
 $$
-x^2 + y^2 + z^2 - c^2 t^2 = 0 = x'^2 + y'^2 + z'^2 - c^2 t'^2.
+\nabla \cdot \left( \frac{1}{\epsilon_0} \rho(\mathbf{r}, t) \right) - \nabla^2 \mathbf{E}(\mathbf{r}, t) = - \mu_0 \epsilon_0 \frac{\partial^2 \mathbf{E}(\mathbf{r}, t)}{\partial t^2}.
 $$
 
-对于这个恒等式，我们可以给出如下的几何解释. 引入一个假想的四维空间. 令沿着它的四个互相垂直方向的单位向量为 $\mathbf{e}_x$, $\mathbf{e}_y$, $\mathbf{e}_z$ 和 $\mathbf{e}_t$. 并且，我们将这个四维空间中任何一点的位置向量写作
+但由于在真空中 $\rho(\mathbf{r}, t) = 0$ 成立，故我们最后得到
 
 $$
-\mathbf{R} = x \mathbf{e}_x + y \mathbf{e}_y + z \mathbf{e}_z + (ict) \mathbf{e}_t.
-$$
-
-注意，这里第四个分量（时间分量）为一个虚数. 这是与通常的三维向量不同的. 仿照通常三维空间中的解析几何学，我们定义四维向量 $\mathbf{R}$ 的长度的平方为
-
-$$
-\mathbf{R} \cdot \mathbf{R} = x^2 + y^2 + z^2 + (ict)^2 = x^2 + y^2 + z^2 - c^2 t^2.
-$$
-
-这一长度被称为四维长度. 我们现在可以说，光脉冲信号在物理空间中的运动可以用四维空间中的一条直线来代表. 这条直线上的每一点到原点的四维距离都是零. 
-
-相应地，我们可以将两个不同参照系 $S$ 和 $S'$ 中光脉冲的坐标值 $(x, y, z, ict)$ 和 $(x', y', z', ict')$ 解释作四维空间中同一点 $\mathbf{R}$ 相对两组不同坐标轴 $(\mathbf{e}_x, \mathbf{e}_y, \mathbf{e}_z, \mathbf{e}_t)$ 以及 $(\mathbf{e}'_x, \mathbf{e}'_y, \mathbf{e}'_z, \mathbf{e}'_t)$ 的分量. 这是由于方程
-$$
-x^2 + y^2 + z^2 - c^2 t^2 = 0 = x'^2 + y'^2 + z'^2 - c^2 t'^2.
-$$
-告诉我们，在四维空间中，这两组坐标给出的光脉冲点到原点的距离是相同的. 而从解析几何中我们得知，它们所对应的坐标系是可以通 过空间的旋转联系起来的. 这就使得我们有可能找到 $(x, y, z, ict)$ 与 $(x', y', z', ict')$ 的关系. 
-
-为了简单起见，我们假设 $S$ 系相对于 $S'$ 系的运动速度是沿 $\mathbf{e}_x$ 方向的. 此时，我们可以取 $y = y'$ 和 $z = z'$. 也就是说，我们假设，四维空间的旋转是发生在 $x - ict$ 平面内的. 因此，四维空间中任一点 $P$ 的坐标变换可以写作
-
-$$
-x' = x \cos \theta + (ict) \sin \theta, \quad ict' = -x \sin \theta + (ict) \cos \theta, \quad y = y', \quad z = z'.
-$$
-
-这里，$\theta$ 是两套坐标系 $(\mathbf{e}_x, \mathbf{e}_y, \mathbf{e}_z, \mathbf{e}_t)$ 和 $(\mathbf{e}'_x, \mathbf{e}'_y, \mathbf{e}'_z, \mathbf{e}'_t)$ 中向量 $\mathbf{e}_x$ 及 $\mathbf{e}'_x$ 之间的夹角. 
-
-不难验证，在这样的坐标变换下，$P$ 点的四维长度不变. 事实上，我们有
-
-$$
-\begin{aligned}
-&x'^2 + y'^2 + z'^2 - c^2 t'^2 \\\\
-&= x^2 + y^2 + z^2 + (ict)^2 \\\\
-&= [x \cos \theta + (ict) \sin \theta]^2 + y^2 + z^2 + [-x \sin \theta + (ict) \cos \theta]^2 \\\\
-&= x^2 \cos^2 \theta + 2x(ict) \cos \theta \sin \theta + (ict)^2 \sin^2 \theta + y^2 + z^2 \\\\
-&+ x^2 \sin^2 \theta - 2x(ict) \cos \theta \sin \theta + (ict)^2 \cos^2 \theta \\\\
-&= x^2 + y^2 + z^2 + (ict)^2 = x^2 + y^2 + z^2 - c^2 t^2.
-\end{aligned}
-$$
-
-因此，光脉冲的运动方程在此变换下自动被满足. 
-
-现在，我们来看看如何通过已知条件定出 $\theta$ 的值. 为此，我们考虑 $S'$ 参照系原点 $O'$ 在 $S$ 系中的运动. 首先，$O'$ 点在 $S'$ 系的坐标为 $x' = y' = z' = 0$. 而在 $S$ 参考系中，在时刻 $t$ 时，其空间坐标为
-
-$$
-x = Vt, \quad y = 0, \quad z = 0.
-$$
-
-因此，对于 $O'$ 点而言，我们有如下的坐标变换关系
-
-$$
-\begin{aligned}
-x' &= 0 = x \cos \theta + (ict) \sin \theta = Vt \cos \theta + (ict) \sin \theta, \\\\
-ict' &= -x \sin \theta + (ict) \cos \theta = -Vt \sin \theta + (ict) \cos \theta.
-\end{aligned}
-$$
-
-从第一个方程，我们解得
-
-$$
--\frac{x}{ict} = -\frac{V}{ic} = \frac{\sin \theta}{\cos \theta} = \tan \theta.
-$$
-
-进而，我们有
-
-$$
-\cos \theta = \frac{1}{\sec \theta} = \frac{1}{\sqrt{1 + \tan^2 \theta}} = \frac{1}{\sqrt{1 - \frac{V^2}{c^2}}},
-$$
-
-以及
-
-$$
-\sin \theta = \tan \theta \cos \theta = -\frac{V}{ic} \frac{1}{\sqrt{1 - \frac{V^2}{c^2}}}.
-$$
-
-将这些函数代入方程
-$$
-x' = x \cos \theta + (ict) \sin \theta, \quad ict' = -x \sin \theta + (ict) \cos \theta, \quad y = y', \quad z = z'.
-$$
-中，我们得到
-
-$$
-\begin{aligned}
-x' &= x \cos \theta + (ict) \sin \theta = \frac{x}{\sqrt{1 - \frac{V^2}{c^2}}} + \frac{ict \left( -\frac{V}{ic} \right)}{\sqrt{1 - \frac{V^2}{c^2}}} = \frac{x - Vt}{\sqrt{1 - \frac{V^2}{c^2}}}, \\\\
-ict' &= -x \sin \theta + (ict) \cos \theta = \frac{-x \left( -\frac{V}{ic} \right)}{\sqrt{1 - \frac{V^2}{c^2}}} + ict \frac{1}{\sqrt{1 - \frac{V^2}{c^2}}}.
-\end{aligned}
-$$
-
-将第二个方程的两边同时除以 $ic$ 后，我们得到
-
-$$
-t' = \frac{t - x \frac{V}{c^2}}{\sqrt{1 - \frac{V^2}{c^2}}}.
-$$
-
-这些变换公式和 $y' = y$, $z' = z$ 一起，被称为洛伦兹（Hendrik Lorentz）变换公式. 从这些公式中，我们可以看到，若要求光速 $c$ 在各个惯性参照系中不变的话，则时间在不同的参照系中是不同的. 这一点是与伽里略变换非常不一样的. 
-
-上面，我们利用光速在各个参照系中不变的假设，导出了洛伦兹变换公式. 对于任何一个四维空间中的点的坐标 $(x, y, z, ict)$ 而言，除了满足光信号的运动方程
-
-$$
-\mathbf{R} \cdot \mathbf{R} = x^2 + y^2 + z^2 - c^2 t^2 = 0
-$$
-
-之外，还可能满足
-
-$$
-\mathbf{R} \cdot \mathbf{R} = x^2 + y^2 + z^2 - c^2 t^2 > 0,
+- \nabla^2 \mathbf{E}(\mathbf{r}, t) = - \mu_0 \epsilon_0 \frac{\partial^2 \mathbf{E}(\mathbf{r}, t)}{\partial t^2},
 $$
 
 或是
 
 $$
-\mathbf{R} \cdot \mathbf{R} = x^2 + y^2 + z^2 - c^2 t^2 < 0.
+\frac{\partial^2 \mathbf{E}(\mathbf{r}, t)}{\partial t^2} - \frac{1}{\mu_0 \epsilon_0} \nabla^2 \mathbf{E}(\mathbf{r}, t) = 0.
 $$
 
-前者表示，质点在时刻 $t = 0$ 时从原点出发，在 $t$ 时刻到达坐标为 $(x, y, z)$ 的三维空间位置. 这要求它的速率为
+若令
 
 $$
-v = \sqrt{\frac{x^2 + y^2 + z^2}{t^2}} > c.
+c = \frac{1}{\sqrt{\mu_0 \epsilon_0}},
 $$
 
-但是按照爱因斯坦狭义相对论的第一条假设，这在物理上是不可能的. 这样的点被称为类空点. 相反，第二种可能性描写在时刻 $t = 0$ 时从原点出发，以小于光速的速率 $v$ 在 $t$ 时刻到达坐标为 $(x, y, z)$ 的三维空间位置的粒子的运动. 这在物理上是可以实现的. 这类点被称为类时点. 而类空点集合与类时点集合是由满足方程
-$$
-\mathbf{R} \cdot \mathbf{R} = x^2 + y^2 + z^2 - c^2 t^2 = 0
-$$
-的全体点的集合（代表光信号的全部可能轨迹，被称为光锥面）隔开. 
-
-在讨论洛伦兹变换所导致的一些结果之前，我们要强调一下，四维时空中任何一点的位置向量 $\mathbf{R}$ 的模
+则此式又可被写作
 
 $$
-\mathbf{R} \cdot \mathbf{R} = x^2 + y^2 + z^2 - c^2 t^2
+\frac{\partial^2 \mathbf{E}(\mathbf{r}, t)}{\partial t^2} - c^2 \nabla^2 \mathbf{E}(\mathbf{r}, t) = 0.
 $$
 
-在洛伦兹变换下都是不变的. 今后我们会看到，在适当引入的动量 - 能量向量以及所谓四维力向量的模也具有这样的性质. 它们被统称为四维向量（或四维矢量）. 今后，我们会看到，四维矢量的概念是非常有用的. 
-
-现在，让我们回过头来看一下洛伦兹变换带来的结论. 首先，我们从公式
+相似地，我们也可推出磁感应强度分布 $\mathbf{B}(\mathbf{r}, t)$ 在真空中所满足的传播方程，即
 
 $$
-t' = \frac{t - x \frac{V}{c^2}}{\sqrt{1 - \frac{V^2}{c^2}}}
+\frac{\partial^2 \mathbf{B}(\mathbf{r}, t)}{\partial t^2} - c^2 \nabla^2 \mathbf{B}(\mathbf{r}, t) = 0.
 $$
 
-出发. 将此式的两边对于 $t$ 求导后，我们有
+此种类型的方程被称为达朗贝尔方程（D'Alembert equation），在力学中被用来描述弹性波在连续介质中的传播。
+
+> 为了看清楚这一点，让我们回顾一下声波在钢丝线上的传播方程的推导。我们以 $\xi(x, t)$ 标记钢丝上 $x$ 处的横向位移。任取一小段位于 $(x, x + \Delta x)$ 处的钢丝，则其运动满足牛顿方程
+> $$
+> (\rho \Delta x) \frac{\partial^2 \xi(x, t)}{\partial t^2} = T \sin(\theta + \Delta\theta) - T \sin\theta.
+> $$
+>
+> 又由于在 $x$-轴方向上，这一段弦没有移动，故我们有
+>
+> $$
+> T \cos(\theta + \Delta\theta) - T \cos\theta \approx 0.
+> $$
+>
+> 当钢丝做微小振动时，角度 $\theta$ 很小，可以近似地取作 $\theta \approx 0$。因此
+> $$
+> (\rho \Delta x) \frac{\partial^2 \xi(x, t)}{\partial t^2} = T \sin(\theta + \Delta\theta) - T \sin\theta.
+> $$
+> 可以近似地写作
+>
+> $$
+> \begin{aligned}
+> (\rho \Delta x) \frac{\partial^2 \xi(x, t)}{\partial t^2} &\approx \left( T \frac{\sin(\theta + \Delta\theta)}{\cos(\theta + \Delta\theta)} - T \frac{\sin\theta}{\cos\theta} \right) \cos\theta \\\\
+> &\approx T \left( \tan(\theta + \Delta\theta) - \tan\theta \right) = T \left( \left. \frac{\partial \xi(x, t)}{\partial x} \right|_{x + \Delta x} - \left. \frac{\partial \xi(x, t)}{\partial x} \right|_x \right) \\\\
+> &\approx T \frac{\partial^2 \xi(x, t)}{\partial x^2} \Delta x.
+> \end{aligned}
+> $$
+>
+> 将上式两边同时除以 $\Delta x$ 后，再令它趋向于零，我们得到
+>
+> $$
+> \rho \frac{\partial^2 \xi(x, t)}{\partial t^2} = T \frac{\partial^2 \xi(x, t)}{\partial x^2},
+> $$
+>
+> 或是
+>
+> $$
+> \frac{\partial^2 \xi(x, t)}{\partial t^2} - \frac{T}{\rho} \frac{\partial^2 \xi(x, t)}{\partial x^2} = \frac{\partial^2 \xi(x, t)}{\partial t^2} - u^2 \frac{\partial^2 \xi(x, t)}{\partial x^2} = 0.
+> $$
+>
+> 不难验证，上式中出现的量
+>
+> $$
+> u = \sqrt{\frac{T}{\rho}}
+> $$
+>
+> 具有速率的量纲，被解释作声波在钢丝线上的传播速率。事实上，若将已知的平面行波的表达式
+>
+> $$
+> \xi(x, t) = A \cos(\omega t - kx + \varphi_0)
+> $$
+>
+> 代入上式后，我们得到
+>
+> $$
+> u = \frac{\omega}{k}.
+> $$
+>
+> 而这恰是平面行波相速率的表达式。
+
+因此，麦克斯韦得出结论，真空中的随时间改变的电磁场是以波的形式传播的，而传播的速率为
 
 $$
-\frac{dt'}{dt} = \frac{1 - \dot{x} \frac{V}{c^2}}{\sqrt{1 - \frac{V^2}{c^2}}} = \frac{1 - \frac{v_x V}{c^2}}{\sqrt{1 - \frac{V^2}{c^2}}}.
+c = \frac{1}{\sqrt{\mu_0 \epsilon_0}} = 299792458 \text{m/s},
 $$
 
-由此，我们可以导出同一个运动的质点在 $S$ 系和 $S'$ 系中速度之间的变换关系. 例如，我们有
+恰与光速相同。又由于这个原因，麦克斯韦进一步提出，光就是电磁波。麦克斯韦的这些结论由德国物理学家赫兹（Heinrich Hertz）于 1886 年用实验加以验证。
 
-$$
-v'_x = \frac{dx'}{dt'} = \frac{dx'}{dt} \frac{dt}{dt'} = \frac{dx'}{dt} \left( \frac{dt'}{dt} \right)^{-1} = \frac{v_x - V}{\sqrt{1 - \frac{V^2}{c^2}}} \frac{\sqrt{1 - \frac{V^2}{c^2}}}{1 - \frac{v_x V}{c^2}} = \frac{v_x - V}{1 - \frac{v_x V}{c^2}}.
-$$
+### · Poynting 定理
 
-同理，我们可得
-
+接下来，我们看麦克斯韦方程组的第二个推论。将方程组中的第四式
 $$
-v'_y = \frac{dy'}{dt'} = v_y \frac{\sqrt{1 - \frac{V^2}{c^2}}}{1 - \frac{v_x V}{c^2}}, \quad v'_z = \frac{dz'}{dt'} = v_z \frac{\sqrt{1 - \frac{V^2}{c^2}}}{1 - \frac{v_x V}{c^2}}.
+\nabla \times \mathbf{B}(\mathbf{r}, t) = \mu_0 \mathbf{j}(\mathbf{r}, t) + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t},
 $$
-
-从表面上看，这些变换公式与我们已经熟知的伽里略变换公式
-
+与电场强度 $\mathbf{E}(\mathbf{r}, t)$ 点乘后，我们得到
 $$
-v'_x = v_x - V, \quad v'_y = v_y, \quad v'_z = v_z
+\mathbf{E}(\mathbf{r}, t) \cdot (\nabla \times \mathbf{B}(\mathbf{r}, t)) = \mu_0 \mathbf{E}(\mathbf{r}, t) \cdot \mathbf{j}(\mathbf{r}, t) + \mu_0 \epsilon_0 \mathbf{E}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t}.
 $$
 
-非常不同. 但是，在 $\dfrac{V}{c} \to 0$ 的极限下，可以很容易地看到，洛伦兹速度变换公式退化到伽里略速度变换公式. 
-
-作为一个特例，让我们考虑光在两个参照系中的运动. 设在 $S$ 系中，光沿 $x$ 轴运动. 因此，我们有 $v_x = c$, $v_y = 0$ 及 $v_z = 0$. 将之代入速度变换公式后，我们立刻可得
+再将方程组中的第二式与磁感应强度 $\mathbf{B}(\mathbf{r}, t)$ 点乘后，我们又得到
 
 $$
-v'_y = v'_z = 0
+\mathbf{B}(\mathbf{r}, t) \cdot (\nabla \times \mathbf{E}(\mathbf{r}, t)) = - \mathbf{B}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t}.
+$$
+
+两式相减后给出
+
+$$
+\begin{aligned}
+&\mathbf{E}(\mathbf{r}, t) \cdot (\nabla \times \mathbf{B}(\mathbf{r}, t)) - \mathbf{B}(\mathbf{r}, t) \cdot (\nabla \times \mathbf{E}(\mathbf{r}, t)) \\\\
+&= \mu_0 \mathbf{E}(\mathbf{r}, t) \cdot \mathbf{j}(\mathbf{r}, t) + \mu_0 \epsilon_0 \mathbf{E}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t} + \mathbf{B}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t} \\\\
+&= \mu_0 \mathbf{j}(\mathbf{r}, t) \cdot \mathbf{E}(\mathbf{r}, t) + \frac{1}{2} \mu_0 \epsilon_0 \frac{\partial E^2(\mathbf{r}, t)}{\partial t} + \frac{1}{2} \frac{\partial B^2(\mathbf{r}, t)}{\partial t}.
+\end{aligned}
+$$
+
+再利用矢量场满足的微分恒等式
+
+$$
+\nabla \cdot (\mathbf{a} \times \mathbf{b}) = \mathbf{b} \cdot (\nabla \times \mathbf{a}) - \mathbf{a} \cdot (\nabla \times \mathbf{b}),
+$$
+
+我们又可将上式进一步改写为
+
+$$
+\nabla \cdot (\mathbf{B}(\mathbf{r}, t) \times \mathbf{E}(\mathbf{r}, t)) = \mu_0 \mathbf{j}(\mathbf{r}, t) \cdot \mathbf{E}(\mathbf{r}, t) + \frac{1}{2} \mu_0 \epsilon_0 \frac{\partial E^2(\mathbf{r}, t)}{\partial t} + \frac{1}{2} \frac{\partial B^2(\mathbf{r}, t)}{\partial t},
+$$
+
+或是
+
+$$
+\frac{\partial}{\partial t} \left( \frac{1}{2} \epsilon_0 E^2(\mathbf{r}, t) + \frac{1}{2\mu_0} B^2(\mathbf{r}, t) \right) + \nabla \cdot \left( \frac{1}{\mu_0} (\mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)) \right) + \mathbf{j}(\mathbf{r}, t) \cdot \mathbf{E}(\mathbf{r}, t) = 0.
+$$
+
+若令
+
+$$
+\mathcal{U}(\mathbf{r}, t) = \frac{1}{2} \epsilon_0 E^2(\mathbf{r}, t) + \frac{1}{2\mu_0} B^2(\mathbf{r}, t), \quad \mathbf{S}(\mathbf{r}, t) = \frac{1}{\mu_0} (\mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)),
+$$
+
+此式又可被写作
+
+$$
+\frac{\partial \mathcal{U}(\mathbf{r}, t)}{\partial t} + \nabla \cdot \mathbf{S}(\mathbf{r}, t) + \mathbf{j}(\mathbf{r}, t) \cdot \mathbf{E}(\mathbf{r}, t) = 0,
+$$
+
+由玻印亭（John Poynting）于 1884 年得到，称为玻印亭定理，而 $\mathbf{S}(\mathbf{r}, t)$ 称为玻印亭矢量。
+
+为了理解玻印亭定理的物理意义，我们注意到上式第一项中的量 $\dfrac{1}{2} \epsilon_0 E^2$ 与 $\dfrac{1}{2\mu_0} B^2$ 都具有能量密度的量纲。要更清楚地看到这一点，我们可以通过研究电磁场对带电物体的作功来重新获得这些量。
+
+以 $\dfrac{1}{2} \epsilon_0 E^2$ 为例。我们考虑两个点电荷 $q_1$ 和 $q_2$。假设开始时 $q_1$ 被固定于空间 $\mathbf{r}_1$ 处，而 $q_2$ 处于空间的无穷远处。现在，将 $q_2$ 非常缓慢地从无穷远处移动到空间 $\mathbf{r}_2$ 处。在此过程中，外力所做之功当为
+$$
+W_2 = \int_{\infty}^{\mathbf{r}_2} \mathbf{F}_{\text{out}}(\mathbf{r}) \cdot d\mathbf{l} = \int_{\infty}^{\mathbf{r}_2} (- q_2 \mathbf{E}_1(\mathbf{r})) \cdot d\mathbf{l}.
+$$
+
+这里，
+
+$$
+\mathbf{E}_1(\mathbf{r}) = \frac{q_1}{4\pi \epsilon_0} \frac{\mathbf{r} - \mathbf{r}_1}{|\mathbf{r} - \mathbf{r}_1|^3}
+$$
+
+为电荷 $q_1$ 产生的在空间 $\mathbf{r}$ 处的电场强度。利用静电势的定义，我们可以将 $W_2$ 改写作
+
+$$
+W_2 = - q_2 \int_{\infty}^{\mathbf{r}_2} \mathbf{E}_1(\mathbf{r}) \cdot d\mathbf{l} = q_2 \Phi_1(\mathbf{r}_2).
+$$
+又考虑到电荷 $q_1$ 与 $q_2$ 的地位是完全对等的，故我们当有
+
+$$
+W_2 = q_2 \Phi_1(\mathbf{r}_2) = q_1 \Phi_2(\mathbf{r}_1),
+$$
+
+或是
+
+$$
+W_2 = \frac{1}{2} \left( q_2 \Phi_1(\mathbf{r}_2) + q_1 \Phi_2(\mathbf{r}_1) \right).
+$$
+
+仿照上述论证，若将 $q_1$ 和 $q_2$ 分别固定在空间 $\mathbf{r}_1$ 和 $\mathbf{r}_2$ 处后，再将另外一个电荷为 $q_3$ 的粒子自无穷远处缓慢移至 $\mathbf{r}_3$ 处，我们可将在此过程中外力做功得到的附加能量写作
+
+$$
+\Delta W = q_3 \left( \Phi_1(\mathbf{r}_3) + \Phi_2(\mathbf{r}_3) \right).
+$$
+
+另一方面，考虑到电荷彼此之间的对等关系，这一能量亦等于先将电荷 $q_3$ 固定在空间 $\mathbf{r}_3$ 处，然后将电荷 $q_1$ 和 $q_2$ 自无穷远处（刚性连接后）平移至 $\mathbf{r}_1$ 和 $\mathbf{r}_2$ 处外力所做之功的求和，即
+
+$$
+\Delta W = q_1 \Phi_3(\mathbf{r}_1) + q_2 \Phi_3(\mathbf{r}_2)
+$$
+
+亦成立。将之对称化后，我们得到
+
+$$
+\Delta W = \frac{1}{2} \left( q_1 \Phi_3(\mathbf{r}_1) + q_2 \Phi_3(\mathbf{r}_2) + q_3 \Phi_1(\mathbf{r}_3) + q_3 \Phi_2(\mathbf{r}_3) \right).
+$$
+
+现将 $W_2$ 与 $\Delta W$ 相加后，我们得到三个电荷 $q_1$, $q_2$ 和 $q_3$ 之间的总能量为
+
+$$
+\begin{aligned}
+W_3 &= W_2 + \Delta W \\\\
+&= \frac{1}{2} \left( q_1 \Phi_2(\mathbf{r}_1) + q_2 \Phi_1(\mathbf{r}_2) + q_1 \Phi_3(\mathbf{r}_1) + q_2 \Phi_3(\mathbf{r}_2) + q_3 \Phi_1(\mathbf{r}_3) + q_3 \Phi_2(\mathbf{r}_3) \right) \\\\
+&= \frac{1}{2} \left( q_1 [\Phi_2(\mathbf{r}_1) + \Phi_3(\mathbf{r}_1)] + q_2 [\Phi_1(\mathbf{r}_2) + \Phi_3(\mathbf{r}_2)] + q_3 [\Phi_1(\mathbf{r}_3) + \Phi_2(\mathbf{r}_3)] \right) \\\\
+&= \frac{1}{2} \left( q_1 \Phi_{2,3}(\mathbf{r}_1) + q_2 \Phi_{1,3}(\mathbf{r}_2) + q_3 \Phi_{1,2}(\mathbf{r}_3) \right).
+\end{aligned}
+$$
+
+这里，
+
+$$
+\Phi_{i,j}(\mathbf{r}) = \Phi_i(\mathbf{r}) + \Phi_j(\mathbf{r})
+$$
+
+为电荷 $q_i$ 和 $q_j$ 在空间 $\mathbf{r}$ 处产生的静电势。仿此，当电荷是在空间连续分布时，我们可以立刻写出其总静电能为
+
+$$
+W = \frac{1}{2} \int \int \int_{R^3} \rho(\mathbf{r}') \Phi(\mathbf{r}') \, dx' dy' dz'.
+$$
+
+这一表达式有两个直接的推论。先看其一。将泊松方程
+
+$$
+\nabla^2 \Phi(\mathbf{r}) = - \frac{1}{\epsilon_0} \rho(\mathbf{r})
+$$
+
+代入其中后，我们有
+
+$$
+\begin{aligned}
+W &= \frac{1}{2} \int \int \int_{R^3} \rho(\mathbf{r}') \Phi(\mathbf{r}') \, dx' dy' dz' \\\\
+&= - \frac{1}{2} \int \int \int_{R^3} [\epsilon_0 \nabla^2 \Phi(\mathbf{r}') ] \Phi(\mathbf{r}') \, dx' dy' dz'.
+\end{aligned}
+$$
+
+再进行分步积分，并使用关系式
+
+$$
+\mathbf{E}(\mathbf{r}) = - \nabla \Phi(\mathbf{r})
+$$
+
+我们进一步得到
+
+$$
+\begin{aligned}
+W &= - \frac{1}{2} \oint_{S_\infty} (\epsilon_0 \nabla \Phi(\mathbf{r}')) \Phi(\mathbf{r}') \cdot d\mathbf{S} + \frac{1}{2} \int \int \int_{R^3} \epsilon_0 [\nabla \Phi(\mathbf{r}') \cdot \nabla \Phi(\mathbf{r}')] \, dx' dy' dz' \\\\
+&= \int \int \int_{R^3} \left( \frac{1}{2} \epsilon_0 E^2(\mathbf{r}') \right) \, dx' dy' dz'.
+\end{aligned}
+$$
+
+这里，$S_\infty$ 为无穷远处的球面。当电荷分布在空间一个有限区域时，其上的静电势和电场强度皆为零，故上式中的面积分项取值为零。同时，从上式的最后一行可以看出，物理量 $\dfrac{1}{2} \epsilon_0 E^2(\mathbf{r})$ 的确可以解释作电场的能量密度。
+
+其次，若我们将静电势的表达式
+
+$$
+\Phi(x', y', z') = \frac{1}{4\pi \epsilon_0} \int \int \int_\Omega \frac{\rho(\bar{x}, \bar{y}, \bar{z})}{|\mathbf{r}' - \bar{\mathbf{r}}|} \, d\bar{x} d\bar{y} d\bar{z}
+$$
+
+代入式
+$$
+W = \frac{1}{2} \int \int \int_{R^3} \rho(\mathbf{r}') \Phi(\mathbf{r}') \, dx' dy' dz'.
+$$
+后，则电荷体系的能量可以被改写作
+
+$$
+\begin{aligned}
+W &= \frac{1}{2} \int \int \int_{R^3} \rho(\mathbf{r}') \Phi(\mathbf{r}') \, dx' dy' dz' \\\\
+&= \frac{1}{8\pi \epsilon_0} \int \int \int_{R^3} dx' dy' dz' \int \int \int_{R^3} \frac{\rho(x', y', z') \rho(\bar{x}, \bar{y}, \bar{z})}{|\mathbf{r}' - \bar{\mathbf{r}}|} \, d\bar{x} d\bar{y} d\bar{z}.
+\end{aligned}
+$$
+
+此式在原子 - 分子物理学的研究中经常被用到。
+
+现在，让我们回到方程
+$$
+\frac{\partial \mathcal{U}(\mathbf{r}, t)}{\partial t} + \nabla \cdot \mathbf{S}(\mathbf{r}, t) + \mathbf{j}(\mathbf{r}, t) \cdot \mathbf{E}(\mathbf{r}, t) = 0,
+$$
+当 $\mathbf{j} \cdot \mathbf{E} = 0$ 时，则该方程退化为一个连续性方程。它意味着电磁场的能量是守恒的，且玻印亭矢量 $\mathbf{S} = \dfrac{1}{\mu_0} \mathbf{E} \times \mathbf{B}$ 可以被解释作能量流密度。而当 $\mathbf{j} \cdot \mathbf{E} \neq 0$ 时，人们可以将之解释作电磁场对于运动电荷的作功功率密度。
+
+这一点也可以通过将玻印亭定理的两边对于空间任一区域 $\Omega$ 的积分
+$$
+\begin{aligned}
+&\int \int \int_\Omega \frac{\partial \mathcal{U}(\mathbf{r}, t)}{\partial t} \, dxdydz + \int \int \int_\Omega \nabla \cdot \mathbf{S}(\mathbf{r}, t) \, dxdydz \\\\
++ &\int \int \int_\Omega \mathbf{j}(\mathbf{r}, t) \cdot \mathbf{E}(\mathbf{r}, t) \, dxdydz = 0
+\end{aligned}
+$$
+
+而看得更清楚。对于上式第二项使用高斯定理后，我们进一步得到
+
+$$
+\begin{aligned}
+&\frac{d}{dt} \int \int \int_\Omega \mathcal{U}(\mathbf{r}, t) \, dxdydz + \oint_{S_\Omega} \mathbf{S}(\mathbf{r}, t) \cdot d\mathbf{S} \\\\
++ &\int \int \int_\Omega \mathbf{j}(\mathbf{r}, t) \cdot \mathbf{E}(\mathbf{r}, t) \, dxdydz = 0,
+\end{aligned}
+$$
+
+这里，$S_\Omega$ 为包围区域 $\Omega$ 的闭曲面。此式告诉我们，区域 $\Omega$ 内电磁场对于运动电荷所做之功以及电磁场能量随时间的改变是由从边界面 $S_\Omega$ 流入的能量流予以补偿的，即总能量是守恒的。
+
+既然谈到能量守恒定律，人们自然要问电磁场是否具有动量，且这一动量是否守恒？为了回答这一问题，让我们重新回到麦克斯韦方程组
+
+$$
+\begin{aligned}
+\nabla \cdot \mathbf{E}(\mathbf{r}, t) &= \frac{1}{\epsilon_0} \rho(\mathbf{r}, t), \quad \nabla \times \mathbf{E}(\mathbf{r}, t) = - \frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t}, \\\\
+\nabla \cdot \mathbf{B}(\mathbf{r}, t) &= 0, \quad \nabla \times \mathbf{B}(\mathbf{r}, t) = \mu_0 \mathbf{j}(\mathbf{r}, t) + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t}.
+\end{aligned}
+$$
+
+将此方程组中的第二式与第四式分别与 $\dfrac{1}{c^2} \mathbf{E}(\mathbf{r}, t)$ 和 $\mathbf{B}(\mathbf{r}, t)$ 做叉乘后相加，我们得到
+
+$$
+\begin{aligned}
+&\frac{1}{c^2} \mathbf{E}(\mathbf{r}, t) \times (\nabla \times \mathbf{E}(\mathbf{r}, t)) + \mathbf{B}(\mathbf{r}, t) \times (\nabla \times \mathbf{B}(\mathbf{r}, t)) \\\\
+&= \frac{1}{c^2} \mathbf{E}(\mathbf{r}, t) \times \left( - \frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t} \right) + \mathbf{B}(\mathbf{r}, t) \times \left( \mu_0 \mathbf{j}(\mathbf{r}, t) + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t} \right) \\\\
+&= - \mu_0 \epsilon_0 \mathbf{E}(\mathbf{r}, t) \times \frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t} + \mu_0 \mathbf{B}(\mathbf{r}, t) \times \mathbf{j}(\mathbf{r}, t) + \mu_0 \epsilon_0 \mathbf{B}(\mathbf{r}, t) \times \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t} \\\\
+&= - \mu_0 \epsilon_0 \frac{\partial}{\partial t} (\mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)) - \mu_0 \mathbf{j}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t),
+\end{aligned}
+$$
+
+或是
+
+$$
+\begin{aligned}
+&\mu_0 \epsilon_0 \mathbf{E}(\mathbf{r}, t) \times (\nabla \times \mathbf{E}(\mathbf{r}, t)) + \mathbf{B}(\mathbf{r}, t) \times (\nabla \times \mathbf{B}(\mathbf{r}, t)) \\\\
++ &\mu_0 \epsilon_0 \frac{\partial}{\partial t} (\mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)) + \mu_0 \mathbf{j}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t) = 0.
+\end{aligned}
+$$
+
+再利用麦克斯韦方程组的第一式 $\nabla \cdot \mathbf{E}(\mathbf{r}, t) = \dfrac{1}{\epsilon_0} \rho(\mathbf{r}, t)$ 和第三式 $\nabla \cdot \mathbf{B}(\mathbf{r}, t) = 0$，我们可以将上式的左边改写成
+
+$$
+\begin{aligned}
+&\mu_0 \epsilon_0 \left[ \mathbf{E}(\mathbf{r}, t) \times (\nabla \times \mathbf{E}(\mathbf{r}, t)) - \mathbf{E}(\mathbf{r}, t) \left( \nabla \cdot \mathbf{E}(\mathbf{r}, t) - \frac{1}{\epsilon_0} \rho(\mathbf{r}, t) \right) \right] \\\\
++ &\left[ \mathbf{B}(\mathbf{r}, t) \times (\nabla \times \mathbf{B}(\mathbf{r}, t)) - \mathbf{B}(\mathbf{r}, t) (\nabla \cdot \mathbf{B}(\mathbf{r}, t)) \right] \\\\
++ &\mu_0 \epsilon_0 \frac{\partial}{\partial t} (\mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)) + \mu_0 \mathbf{j}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t) = 0.
+\end{aligned}
+$$
+
+从上式两边除掉 $\mu_0$ 并加以整理后，我们得到
+
+$$
+\begin{aligned}
+&\frac{\partial}{\partial t} [\epsilon_0 \mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)] + [\rho(\mathbf{r}, t) \mathbf{E}(\mathbf{r}, t) + \mathbf{j}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)] \\\\
++ &\frac{1}{\mu_0} [\mathbf{B}(\mathbf{r}, t) \times (\nabla \times \mathbf{B}(\mathbf{r}, t)) - \mathbf{B}(\mathbf{r}, t) (\nabla \cdot \mathbf{B}(\mathbf{r}, t))] \\\\
++ &\epsilon_0 [\mathbf{E}(\mathbf{r}, t) \times (\nabla \times \mathbf{E}(\mathbf{r}, t)) - \mathbf{E}(\mathbf{r}, t) (\nabla \cdot \mathbf{E}(\mathbf{r}, t))] = 0.
+\end{aligned}
+$$
+
+注意到，上式中的第二项 $\mathbf{F}(\mathbf{r}, t) = \rho(\mathbf{r}, t) \mathbf{E}(\mathbf{r}, t) + \mathbf{j}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)$ 可以解释作一个运动的带电体在电磁场中所受到的力密度，故此式一定与冲量定理等价。
+
+特别是力学量 $\epsilon_0 \mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)$ 尽管看起来像是玻印亭矢量，但它实际上是电磁场的动量密度矢量。
+
+## Part 5 标量势矢量势规范变换
+
+在讨论静电场和静磁场时，我们引入了标量势和矢量势的概念，以及规范变换的定义。现在的问题是，在电场强度和磁感应强度可以随时间改变的情况下，我们应该对这些概念和定义做什么样的修改？
+
+### · 定义延拓
+
+先考虑磁感应强度矢量 $\mathbf{B}(\mathbf{r}, t)$。由于 $\nabla \cdot \mathbf{B}(\mathbf{r}, t) = 0$ 仍然成立，故我们可以直接引入一个含时的矢势 $\mathbf{A}(\mathbf{r}, t)$，使得
+$$
+\nabla \times \mathbf{A}(x, y, z, t) = \mathbf{B}(x, y, z, t).
+$$
+
+然而，对于标量势的重新引入就需要多说几句了。在含时的情况下，电场强度 $\mathbf{E}(\mathbf{r}, t)$ 的旋度不再为零，而是满足关系
+
+$$
+\nabla \times \mathbf{E}(x, y, z, t) = - \frac{\partial \mathbf{B}(x, y, z, t)}{\partial t} = - \frac{\partial}{\partial t} \nabla \times \mathbf{A}(x, y, z, t) = - \nabla \times \frac{\partial \mathbf{A}(x, y, z, t)}{\partial t}.
+$$
+
+移项后，我们有
+
+$$
+\nabla \times \left( \mathbf{E}(x, y, z, t) + \frac{\partial \mathbf{A}(x, y, z, t)}{\partial t} \right) = 0.
+$$
+
+因此，重新引入的标量势 $\Phi(\mathbf{r}, t)$ 应该使得下式
+
+$$
+\mathbf{E}(x, y, z, t) + \frac{\partial \mathbf{A}(x, y, z, t)}{\partial t} = - \nabla \Phi(x, y, z, t),
+$$
+
+即
+
+$$
+\mathbf{E}(x, y, z, t) = - \nabla \Phi(x, y, z, t) - \frac{\partial \mathbf{A}(x, y, z, t)}{\partial t}
+$$
+
+成立。如同静电场和静磁场的情况，此时的标量势和矢量势也并不是唯一确定的。
+
+事实上，我们可以引入任意一个可导函数 $\Lambda(x, y, z, t)$，并令
+$$
+\begin{aligned}
+\widetilde{\mathbf{A}}(x, y, z, t) &= \mathbf{A}(x, y, z, t) + \nabla \Lambda(x, y, z, t), \\\\
+\widetilde{\Phi}(x, y, z, t) &= \Phi(x, y, z, t) - \frac{\partial \Lambda(x, y, z, t)}{\partial t},
+\end{aligned}
+$$
+
+则不难验证，由矢量势 $\widetilde{\mathbf{A}}(x, y, z, t)$ 和标量势 $\widetilde{\Phi}(x, y, z, t)$ 所给出的电场强度和磁感应强度与由矢量势 $\mathbf{A}(x, y, z, t)$ 和标量势 $\Phi(x, y, z, t)$ 给出的完全一样，即我们有
+
+$$
+\begin{aligned}
+\widetilde{\mathbf{B}}(x, y, z, t) &= \nabla \times \widetilde{\mathbf{A}}(x, y, z, t) = \nabla \times \mathbf{A}(x, y, z, t) + \nabla \times (\nabla \Lambda(x, y, z, t)) \\\\
+&= \nabla \times \mathbf{A}(x, y, z, t) = \mathbf{B}(x, y, z, t),
+\end{aligned}
 $$
 
 以及
 
 $$
-v'_x = \frac{c - V}{1 - \frac{cV}{c^2}} = \frac{c - V}{1 - \frac{V}{c}} = \frac{c - V}{\frac{c - V}{c}} = c.
+\begin{aligned}
+\widetilde{\mathbf{E}}(x, y, z, t) &= - \nabla \widetilde{\Phi}(x, y, z, t) - \frac{\partial \widetilde{\mathbf{A}}(x, y, z, t)}{\partial t} \\\\
+&= - \nabla \Phi(x, y, z, t) + \frac{\partial}{\partial t} (\nabla \Lambda(x, y, z, t)) - \frac{\partial \mathbf{A}(x, y, z, t)}{\partial t} - \frac{\partial}{\partial t} (\nabla \Lambda(x, y, z, t)) \\\\
+&= - \nabla \Phi(x, y, z, t) - \frac{\partial \mathbf{A}(x, y, z, t)}{\partial t} = \mathbf{E}(x, y, z, t).
+\end{aligned}
 $$
 
-也就是说，光在 $S'$ 系中的速度也是 $c$. 这就使得爱因斯坦的光速不变假设成为自洽的. 
+这样一来，我们就有了一定的自由度来选取更为适宜计算的标量势和矢量势，而不必担心会影响最后的计算结果了。
 
-洛伦兹变换的另外一个直接推论是所谓时间延缓效应. 假设我们有一个在 $S'$ 系中静止的时钟同该系一起相对于 $S$ 系运动，并且其在 $S'$ 参照系中的坐标为 $x' = x'_0$. 则时钟在两个参照系的读数满足变换关系
+### · 规范选择
 
-$$
-t = \frac{t' + \frac{V}{c^2} x'_0}{\sqrt{1 - \frac{V^2}{c^2}}}.
-$$
-
-特别是相对于 $S'$ 系的时间间隔 $\Delta t' = t_2' - t_1'$ 对应于 $S$ 系中的时间间隔
+最常用的规范选择有两种。一种是所谓库仑规范（Coulomb gauge），而另外一种是所谓洛伦兹规范（Lorentz gauge）。先看第一种规范。若我们选取规范函数 $\Lambda(x, y, z, t)$，使得
 
 $$
-\Delta t = t_2 - t_1 = \frac{t_2' + \frac{V}{c^2} x'_0}{\sqrt{1 - \frac{V^2}{c^2}}} - \frac{t_1' + \frac{V}{c^2} x'_0}{\sqrt{1 - \frac{V^2}{c^2}}} = \frac{t_2' - t_1'}{\sqrt{1 - \frac{V^2}{c^2}}} = \frac{\Delta t'}{\sqrt{1 - \frac{V^2}{c^2}}}.
+\nabla^2 \Lambda(x, y, z, t) = - \nabla \cdot \mathbf{A}(x, y, z, t)
 $$
 
-由于
+成立，那么我们有
 
 $$
-\frac{1}{\sqrt{1 - \frac{V^2}{c^2}}} > 1,
+\begin{aligned}
+\nabla \cdot \widetilde{\mathbf{A}}(x, y, z, t) &= \nabla \cdot (\mathbf{A}(x, y, z, t) + \nabla \Lambda(x, y, z, t)) \\\\
+&= \nabla \cdot \mathbf{A}(x, y, z, t) + \nabla^2 \Lambda(x, y, z, t) = 0.
+\end{aligned}
 $$
 
-故我们有
+此时，新的标量势 $\widetilde{\Phi}(x, y, z, t)$ 满足方程
 
 $$
-\Delta t > \Delta t'.
+\begin{aligned}
+\nabla \cdot \mathbf{E}(x, y, z, t) &= - \nabla^2 \widetilde{\Phi}(x, y, z, t) - \frac{\partial}{\partial t} \nabla \cdot \widetilde{\mathbf{A}}(x, y, z, t) \\\\
+&= - \nabla^2 \widetilde{\Phi}(x, y, z, t) = \frac{1}{\epsilon_0} \rho(x, y, z, t),
+\end{aligned}
 $$
 
-也就是说，在时钟静止的参考系中，其读数相对于其它惯性系而言总是最小的. 这一效应称为时间延缓. 它是可以通过实验来检验的. 
+或是
+
+$$
+\nabla^2 \widetilde{\Phi}(x, y, z, t) = - \frac{1}{\epsilon_0} \rho(x, y, z, t),
+$$
+
+即静电场所满足的泊松方程。因此，$\widetilde{\Phi}(x, y, z, t)$ 和 $\widetilde{\mathbf{A}}(x, y, z, t)$ 被称为满足库仑规范的标势和矢势。
+
+在第二种情况，我们选取方程
+
+$$
+\nabla^2 \Lambda(x, y, z, t) - \mu_0 \epsilon_0 \frac{\partial^2}{\partial t^2} \Lambda(x, y, z, t) = - \nabla \cdot \mathbf{A}(x, y, z, t) - \mu_0 \epsilon_0 \frac{\partial \Phi(x, y, z, t)}{\partial t}
+$$
+
+的解作为规范函数。因此，我们有
+
+$$
+\begin{aligned}
+&\nabla \cdot \widetilde{\mathbf{A}}(x, y, z, t) + \mu_0 \epsilon_0 \frac{\partial \widetilde{\Phi}(x, y, z, t)}{\partial t} \\\\
+&= \nabla \cdot (\mathbf{A}(x, y, z, t) + \nabla \Lambda(x, y, z, t)) + \frac{1}{c^2} \frac{\partial}{\partial t} \left( \Phi(x, y, z, t) - \frac{\partial \Lambda(x, y, z, t)}{\partial t} \right) \\\\
+&= \left( \nabla \cdot \mathbf{A}(x, y, z, t) + \frac{\partial \Phi(x, y, z, t)}{c^2 \partial t} \right) + \left( \nabla^2 \Lambda(x, y, z, t) - \frac{\partial^2 \Lambda(x, y, z, t)}{c^2 \partial t^2} \right) \\\\
+&= 0.
+\end{aligned}
+$$
+
+此时的 $\widetilde{\Phi}(x, y, z, t)$ 和 $\widetilde{\mathbf{A}}(x, y, z, t)$ 被分别称为满足洛伦兹规范的标量势和矢量势。在推导描述电磁场产生和辐射过程的推迟势时，这一规范非常有用。
+

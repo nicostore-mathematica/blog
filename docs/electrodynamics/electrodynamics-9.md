@@ -1,587 +1,416 @@
 ---
-title: Lesson 9 连续介质 Maxwell
+title: Lesson 9 Lagrange 形式 III
 permalink: /electrodynamics/electrodynamics-9/
-createTime: 2026/03/15 22:14:44
+createTime: 2026/03/15 22:08:04
 ---
 
-## Part 1 束缚电荷和分子电流
+## Part 5 电磁场的作用量
 
-在实际问题中，我们遇到更多的是电磁波在物质（或者说连续连续媒介质）中传播的情况。在这一章中，我们要考虑由于连续媒介质的存在引起的对于麦克斯韦方程组的修正。
-
-今天我们知道，物质是由原子组成的。而原子本身是由带正电荷的原子核以及带负电荷的电子构成的。这些电荷彼此之间的距离大约为 $10^{-8}$ 厘米，而它们的个数（在一克物质中）大约为 $10^{23}$。考虑到在多数情况下，我们所处理的电磁波的波长要远大于 $10^{-8}$ 厘米（以可见光为例，其波长大约为 $10^4\AA$ 的量级），我们可以略去物质的原子结构，而将之视作连续媒介质。这样做可以大大减少我们的计算量。
-
-我们的出发点仍然是真空中的麦克斯韦方程组。仿照朗道和栗弗席兹的作法，我们用小写字母表示真空中的电磁场强度矢量，则这些方程可被写作
+在做了前面这些准备之后，我们现在可以考虑如何写出电磁场的作用量了。由于电磁场强度矢量唯一地由四维二阶张量 $\mathcal{F}$ 决定，而其作用量应该由一个洛伦兹变换下的标量给出，故我们取
 
 $$
-\nabla \cdot \mathbf{e}(\mathbf{r}, t) = \frac{1}{\epsilon_0} \rho(\mathbf{r}, t), \quad \nabla \times \mathbf{e}(\mathbf{r}, t) = -\frac{\partial \mathbf{b}(\mathbf{r}, t)}{\partial t},
-$$
-$$
-\nabla \cdot \mathbf{b}(\mathbf{r}, t) = 0, \quad \nabla \times \mathbf{b}(\mathbf{r}, t) = \mu_0 \mathbf{j}(\mathbf{r}, t) + \mu_0 \epsilon_0 \frac{\partial \mathbf{e}(\mathbf{r}, t)}{\partial t}.
+S_f = \gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} [F_{ij}(x_1, x_2, x_3, x_4)]^2 dx_1 dx_2 dx_3 dx_4.
 $$
 
-在引入连续媒介质后，其中的电子和原子核的运动都会对电荷密度 $\rho(\mathbf{r}, t)$ 以及电流密度 $\mathbf{j}(\mathbf{r}, t)$ 带来影响，而这些影响无论是在空间尺度上还是时间尺度上都是存在剧烈涨落的。因此，不可避免的，我们需要对之进行统计处理。
-
-人们发现，在许多情况下仅需对电子和原子核的运动所带来影响进行空间上的平均即可。这一点从计算的角度看是十分重要的。
-
-事实上，对于涨落效应进行时间平均是一件困难的事情。为了克服这一困难，人们往往只能先将含时问题通过傅立叶变换（Fourier transformation）将其转换成一个以频率为自变量的问题，然后进行处理，而很少直接使用对于时间求平均的办法。
-
-因此，在下面的讨论中，若无特殊声明，对于各个物理的求平均将被理解为是指的对于空间中一个以 $\mathbf{r}$ 点为中心的宏观无穷小，但微观很大的区域 $\Delta\Omega(\mathbf{r})$ 进行的空间平均。例如，我们将电场强度矢量 $\mathbf{e}(\bar{\mathbf{r}}, t)$ 对于空间自由度的平均值记作
+这里，$\gamma$ 为一个待定常数。将 $S_f$ 加到作用量
 $$
-\mathbf{E}(\mathbf{r}, t) \equiv \langle \mathbf{e}(\bar{\mathbf{r}}, t) \rangle \equiv \frac{1}{V_{\Delta\Omega}} \int \int \int_{\Delta\Omega(\mathbf{r})} \mathbf{e}(\bar{x}, \bar{y}, \bar{z}, t) d\bar{x} d\bar{y} d\bar{z}.
+S= \int_{t_a}^{t_b} \left( -m_0 c^2 \sqrt{1 - \frac{v^2}{c^2}} + q \mathbf{A}(x_1, x_2, x_3, x_4) \cdot \mathbf{v} - q \Phi(x_1, x_2, x_3, x_4) \right) dt
 $$
-
-这里，$V_{\Delta\Omega}$ 为区域 $\Delta\Omega(\mathbf{r})$ 的体积。
-
-对于麦克斯韦方程组中的方程求平均后，我们有
-
-$$
-\nabla \cdot \langle \mathbf{e}(\bar{\mathbf{r}}, t) \rangle = \nabla \cdot \mathbf{E}(\mathbf{r}, t) = \frac{1}{\epsilon_0} \langle \rho(\bar{\mathbf{r}}, t) \rangle \equiv \frac{1}{\epsilon_0} \overline{\rho}(\mathbf{r}, t)
-$$
-$$
-\nabla \times \langle \mathbf{e}(\bar{\mathbf{r}}, t) \rangle = \nabla \times \mathbf{E}(\mathbf{r}, t) = -\frac{\partial \langle \mathbf{b}(\bar{\mathbf{r}}, t) \rangle}{\partial t} = -\frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t},
-$$
-$$
-\nabla \cdot \langle \mathbf{b}(\bar{\mathbf{r}}, t) \rangle = \nabla \cdot \mathbf{B}(\mathbf{r}, t) = 0,
-$$
-$$
-\begin{aligned}
-\nabla \times \langle \mathbf{b}(\bar{\mathbf{r}}, t) \rangle &= \nabla \times \mathbf{B}(\mathbf{r}, t) = \mu_0 \langle \mathbf{j}(\bar{\mathbf{r}}, t) \rangle + \mu_0 \epsilon_0 \frac{\partial \langle \mathbf{e}(\bar{\mathbf{r}}, t) \rangle}{\partial t}\\\\
-&= \mu_0 \mathbf{J}(\mathbf{r}, t) + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t}.
-\end{aligned}
-$$
-要继续简化这些方程的关键一步在于意识到，出现在这些方程里的平均电荷密度 $\overline{\rho}(\mathbf{r}, t)$ 和平均电流密度 $\mathbf{J}(\mathbf{r}, t)$ 可以分为“自由的”（free）和“束缚的”（bounded）两部分，即我们有
-
-$$
-\overline{\rho}(\mathbf{r}, t) = \langle \rho(\bar{\mathbf{r}}, t) \rangle = \rho_f(\mathbf{r}, t) + \rho_b(\mathbf{r}, t),
-$$
-
-以及
-
-$$
-\mathbf{J}(\mathbf{r}, t) = \langle \mathbf{j}(\bar{\mathbf{r}}, t) \rangle = \mathbf{J}_f(\mathbf{r}, t) + \mathbf{J}_b(\mathbf{r}, t).
-$$
-
-为了说明这一分拆的合理性，让我们取连续媒介质静止的参照系为实验室系。那么，在这个参照系中，可以在介质中移动一个宏观尺度距离的电荷即称为“自由电荷”，由它们形成的电流则称为“自由电流”。与之对应的，只能局限在某个给定点 $\mathbf{r}$ 周围微观尺度区域内运动的电荷则称为“束缚电荷”，而由它们形成的电流则称为“束缚电流”。
-
-为什么会出现束缚电荷和束缚电流呢？我们知道，在自然界存在两类电介质。一类介质的分子中的正电荷密度的中心和负电荷密度的中心相重合，没有固定的非零电偶极矩，例如氢气（H₂）分子，称为无极分子。而在另外一类介质的分子中的正电荷密度的中心和负电荷密度的中心不重合，从而导致一个固有的电偶极矩，例如水（H₂O）分子，称为极化分子。
-
-但即使是后者，在周围环境的温度不太低时，由于分子热运动的影响，各个极化分子的电偶极矩矢量也会是杂乱无章地取向的。这使得在整块连续媒介质内分子的固有电偶极矩的平均值仍为零。但在有外加电场存在的情况下，无极分子中的正电荷和负电荷的位置会被移动，使得它们的密度中心不再重合，从而产生不为零的电偶极矩。而极化分子的固有电偶极矩的趋向则会发生改变，指向一个共同的方向。
-
-无论哪种情况，外加电场的引入都会诱导宏观电偶极矩分布的出现，导致一个非零的束缚电荷密度分布 $\rho_b(\mathbf{r}, t)$。同理，介质分子中的电子运动会形成微观电流环，在没有外加磁场的情况下，它们各自的取向也是杂乱无章的，故不会形成宏观电流密度。而在有外加磁场的情况下，这些分子电流环的取向会变得一致，从而导致宏观电流密度，即束缚电流密度的出现。
-
-若上述解释是合理的，我们期待束缚电荷密度 $\rho_b(\mathbf{r}, t)$ 将会与平均极化密度（electric polarization density）矢量
-
-$$
-\mathbf{P}(\mathbf{r}, t) = \lim_{V_{\Delta\Omega} \to 0} \frac{\sum_i \mathbf{P}_i(t)}{V_{\Delta\Omega}}
-$$
-
-有关。这里，$\mathbf{r}$ 为介质中的一点，而 $\Delta\Omega$ 是以 $\mathbf{r}$ 为中心的一个小区域，$V_{\Delta\Omega}$ 为它的体积。上式中的求和是对 $\Delta\Omega$ 中各个分子的电偶极矩进行的。而束缚电流密度 $\mathbf{J}_b(\mathbf{r}, t)$ 将会与平均磁化密度（magnetization）矢量
-
-$$
-\mathbf{M}(\mathbf{r}, t) = \lim_{V_{\Delta\Omega} \to 0} \frac{\sum_i \mathbf{m}_i(t)}{V_{\Delta\Omega}}
-$$
-
-有关。此式中的分子磁矩（magnetic moment）被定义作
-
-> $\mathbf{m}_i = I_i \mathbf{a}_i =$ 第 $i$ 个分子中的电流 $\times$ 第 $i$ 个分子中电流回路所围的面积矢量.
-
-下面，我们将推导这些关系。
-
-先考虑束缚电荷密度 $\rho_b(\mathbf{r}, t)$ 与极化密度矢量 $\mathbf{P}(\mathbf{r}, t)$ 之间的关系。首先，电介质内部的全部的束缚电荷在有外加电场的情况下仍然满足中性条件，即
-
-$$
-\int \int \int_\Omega \rho_b(\bar{\mathbf{r}}, t) d\bar{x} d\bar{y} d\bar{z} = 0.
-$$
-
-这里，$\Omega$ 为电介质所占据的空间区域。另一方面，任取一个在区域 $\Omega$ 外为零的矢量场 $\mathbf{G}(\mathbf{r}, t)$，我们都
-
-$$
-0 = \oint \oint_{S_\Omega} \mathbf{G} \cdot d\mathbf{S} = \int \int \int_\Omega \mathrm{div} \mathbf{G}(\bar{x}, \bar{y}, \bar{z}, t) d\bar{x} d\bar{y} d\bar{z}.
-$$
-因此，
-
-$$
-0 = \int \int \int_\Omega \rho_b(\bar{\mathbf{r}}, t) d\bar{x} d\bar{y} d\bar{z} = \oint \oint_{S_\Omega} \mathbf{G} \cdot d\mathbf{S} = \int \int \int_\Omega \mathrm{div} \mathbf{G}(\bar{x}, \bar{y}, \bar{z}, t) d\bar{x} d\bar{y} d\bar{z}
-$$
-
-成立。由此，我们期待可以将 $\rho_b(\mathbf{r}, t)$ 写成
-
-$$
-\rho_b(\mathbf{r}, t) = \mathrm{div} \mathbf{G}(\mathbf{r}, t)
-$$
-
-的形式，而 $\mathbf{G}(\mathbf{r}, t)$ 是一个在区域 $\Omega$ 外为零的矢量场。我们要证明，这一猜想是对的，即我们有
-
-$$
-\rho_b(\mathbf{r}, t) = -\mathrm{div} \mathbf{P}(\mathbf{r}, t),
-$$
-
-而 $\mathbf{P}(\mathbf{r}, t)$ 是电介质的极化密度矢量。
-
-为此，让我们考虑积分
-
-$$
-\mathcal{P}_{\text{dipole moment}} = \int \int \int_\Omega \rho_b(\bar{\mathbf{r}}, t) \bar{\mathbf{r}} d\bar{x} d\bar{y} d\bar{z} \equiv \int \int \int_\Omega \rho_b(\bar{x}, \bar{y}, \bar{z}, t) (\bar{x}\mathbf{i} + \bar{y}\mathbf{j} + \bar{z}\mathbf{k}) d\bar{x} d\bar{y} d\bar{z}
-$$
-
-显然，$\mathcal{P}_{\text{偶极矩}}$ 可以解释作占据空间区域 $\Omega$ 的连续电媒介质的总电偶极矩（electric dipole moment）。现将
-$$
-\rho_b(\mathbf{r}, t) = \mathrm{div} \mathbf{G}(\mathbf{r}, t)
-$$
-代入这一定义式后，我们得到
+上，我们得到一个带电粒子，外电磁场以及由粒子本身产生的电磁场的总作用量
 
 $$
 \begin{aligned}
-\mathcal{P}_{\text{dipole moment}} &= \int \int \int_\Omega \mathrm{div} \mathbf{G}(\bar{\mathbf{r}}, t) (\bar{x}\mathbf{i} + \bar{y}\mathbf{j} + \bar{z}\mathbf{k}) d\bar{x} d\bar{y} d\bar{z}\\\\
-&= \int \int \int_\Omega \left( \frac{\partial G_x(\bar{x}, \bar{y}, \bar{z}, t)}{\partial x} + \frac{\partial G_y(\bar{x}, \bar{y}, \bar{z}, t)}{\partial y} + \frac{\partial G_z(\bar{x}, \bar{y}, \bar{z}, t)}{\partial z} \right) (\bar{x}\mathbf{i} + \bar{y}\mathbf{j} + \bar{z}\mathbf{k}) d\bar{x} d\bar{y} d\bar{z}\\\\
-&= \left( \int \int \int_\Omega \bar{x} \frac{\partial G_x}{\partial x} d\bar{x} d\bar{y} d\bar{z} + \int \int \int_\Omega \bar{x} \frac{\partial G_y}{\partial y} d\bar{x} d\bar{y} d\bar{z} + \int \int \int_\Omega \bar{x} \frac{\partial G_z}{\partial z} d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{i}\\\\
-&+ \left( \int \int \int_\Omega \bar{y} \frac{\partial G_x}{\partial x} d\bar{x} d\bar{y} d\bar{z} + \int \int \int_\Omega \bar{y} \frac{\partial G_y}{\partial y} d\bar{x} d\bar{y} d\bar{z} + \int \int \int_\Omega \bar{y} \frac{\partial G_z}{\partial z} d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{j}\\\\
-&+ \left( \int \int \int_\Omega \bar{z} \frac{\partial G_x}{\partial x} d\bar{x} d\bar{y} d\bar{z} + \int \int \int_\Omega \bar{z} \frac{\partial G_y}{\partial y} d\bar{x} d\bar{y} d\bar{z} + \int \int \int_\Omega \bar{z} \frac{\partial G_z}{\partial z} d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{k}\\\\
-&= \left( \int \int \int_\Omega \bar{x} \frac{\partial G_x}{\partial x} d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{i} + \left( \int \int \int_\Omega \bar{y} \frac{\partial G_y}{\partial y} d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{j} + \left( \int \int \int_\Omega \bar{z} \frac{\partial G_z}{\partial z} d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{k}\\\\
-&= \left( -\int \int \int_\Omega G_x d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{i} + \left( -\int \int \int_\Omega G_y d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{j} + \left( -\int \int \int_\Omega G_z d\bar{x} d\bar{y} d\bar{z} \right) \mathbf{k}\\\\
-&= \int \int \int_\Omega (-\mathbf{G}(\bar{x}, \bar{y}, \bar{z}, t)) d\bar{x} d\bar{y} d\bar{z}.
+S &= S_m + S_{mf} + S_f \\\\
+&= -m_0 c^2 \int_a^b d\tau + q \int_a^b (A_1 dx_1 + A_2 dx_2 + A_3 dx_3 + A_4 dx_4) \\\\
+&+ \gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} F_{ij}(x_1, x_2, x_3, x_4) F_{ij}(x_1, x_2, x_3, x_4) dx_1 dx_2 dx_3 dx_4 \\\\
+&= -m_0 c^2 \int_a^b d\tau + q \int_a^b (A_1 dx_1 + A_2 dx_2 + A_3 dx_3 + A_4 dx_4) \\\\
+&+ \gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} \left( \frac{\partial A_j(x_1, x_2, x_3, x_4)}{\partial x_i} - \frac{\partial A_i(x_1, x_2, x_3, x_4)}{\partial x_j} \right)^2 d\Omega.
 \end{aligned}
 $$
-显然，根据定义，$-\mathbf{G}(\bar{x}, \bar{y}, \bar{z}, t)$ 可以解释作极化密度矢量，即
+
+需要强调一点的是，由于上式中出现的 $F_{ij}(x_1, x_2, x_3, x_4)$ 以及 $\mathbf{A}(x_1, x_2, x_3, x_4)$ 应理解为既包含外加的，也包含粒子自身运动产生的全部的电磁场强度矢量和矢量势，我们现在可以去掉粒子的带电量 $q$ 为无穷小的要求了。
+
+接下来，我们要对电荷 $q$ 多说几句。到目前为止，我们只考虑了点电荷。显然，一个点电荷的带电量 $q$ 应同质点的静止质量 $m_0$ 一样，是洛伦兹变换下的一个不变量，即一个四维标量。为了数学上的便利起见，我们可以将 $q$ 想象成在一个无穷小的体积 $dV$ 内连续分布的电荷，其密度为 $\rho(\mathbf{r}, t)$，即我们有
 
 $$
--\mathbf{G}(\bar{x}, \bar{y}, \bar{z}, t) = \mathbf{P}(\bar{x}, \bar{y}, \bar{z}, t)
+q = \rho(\mathbf{r}, t) dV.
 $$
 
-成立。因此，我们证明了公式
-$$
-\rho_b(\mathbf{r}, t) = -\mathrm{div} \mathbf{P}(\mathbf{r}, t),
-$$
-接下来，我们考虑束缚电流密度 $\mathbf{J}_b(\mathbf{r}, t)$ 与磁化密度矢量 $\mathbf{M}(\mathbf{r}, t)$ 之间的关系。首先，我们注意到，$\mathbf{J}_b(\mathbf{r}, t)$ 实际上可以分成两部分
-
-$$
-\mathbf{J}_b(\mathbf{r}, t) = \mathbf{J}_b^{\mathrm{P}}(\mathbf{r}, t) + \mathbf{J}_b^{\mathrm{M}}(\mathbf{r}, t).
-$$
-
-其中第一项来自束缚电荷（包括束缚电子和原子核的电荷）的运动的贡献。取以介质中一点 $\mathbf{r}$ 为中心的一个小区域 $\Delta\Omega(\mathbf{r})$，则束缚束缚电流密度 $\mathbf{J}_b^{\mathrm{P}}(\mathbf{r}, t)$ 可以写作
-
-$$
-\mathbf{J}_b^{\mathrm{P}}(\mathbf{r}, t) = \lim_{V_{\Delta\Omega(r)} \to 0} \frac{\sum_i q_i \mathbf{v}_i}{V_{\Delta\Omega(r)}} = \frac{\partial}{\partial t} \left( \lim_{V_{\Delta\Omega(r)} \to 0} \frac{\sum_i q_i \mathbf{r}_i}{V_{\Delta\Omega(r)}} \right) = \frac{\partial \mathbf{P}(\mathbf{r}, t)}{\partial t}.
-$$
-
-上式中的求和是对 $\Delta\Omega(\mathbf{r})$ 中的所有电荷 $q_i$ 及其速度 $\mathbf{v}_i$ 进行的。而 $\mathbf{J}_b^{\mathrm{M}}(\mathbf{r}, t)$ 则是来自分子内部电子的环路运动形成的分子电流环的贡献。因此，对于介质内的任何一个封闭曲面 $S$，我们期待
-
-$$
-\oint \oint_S \mathbf{J}_b^{\mathrm{M}}(\mathbf{r}, t) \cdot d\mathbf{S} = 0
-$$
-
-成立。又利用高斯定理，我们得到
-
-$$
-0 = \oint \oint_S \mathbf{J}_b^{\mathrm{M}}(\mathbf{r}, t) \cdot d\mathbf{S} = \int \int \int_\Omega \mathrm{div} \mathbf{J}_b^{\mathrm{M}}(x, y, z, t) dx dy dz.
-$$
-
-这导致了
-
-$$
-\mathrm{div} \mathbf{J}_b^{\mathrm{M}}(x, y, z, t) = 0
-$$
-
-在介质内的每一点都成立。因此，我们期待 $\mathbf{J}_b^{\mathrm{M}}(x, y, z, t)$ 可以写成
-
-$$
-\mathbf{J}_b^{\mathrm{M}}(x, y, z, t) = \nabla \times \mathbf{K}(x, y, z, t),
-$$
-
-而 $\mathbf{K}(x, y, z, t)$ 是一个在连续媒介质外为零的矢量场。接下来，我们要证明，$\mathbf{K}(x, y, z, t)$ 是存在的，且实际上是磁化密度矢量 $\mathbf{M}(x, y, z, t)$。
-
-为此，让我们考虑积分
-
-$$
-\mathcal{M}_{\text{magnetic dipole moment}} = \frac{1}{2} \int \int \int_\Omega \bar{\mathbf{r}} \times \mathbf{J}_b^{\mathrm{M}}(\bar{x}, \bar{y}, \bar{z}, t) d\bar{x} d\bar{y} d\bar{z}.
-$$
-
-显然，这是占据空间区域 $\Omega$ 的介质的总磁矩。代入
-$$
-\mathbf{J}_b^{\mathrm{M}}(x, y, z, t) = \nabla \times \mathbf{K}(x, y, z, t),
-$$
-后，我们有
+由于 $(q dx_1, q dx_2, q dx_3, q dx_4)$ 是一个四维矢量，而
 
 $$
 \begin{aligned}
-\mathcal{M}_{\text{magnetic dipole moment}} &= \frac{1}{2} \int \int \int_\Omega \bar{\mathbf{r}} \times \mathbf{J}_b^{\mathrm{M}}(\bar{x}, \bar{y}, \bar{z}, t) d\bar{x} d\bar{y} d\bar{z} \\\\
-&= \frac{1}{2} \int \int \int_\Omega \bar{\mathbf{r}} \times (\nabla \times \mathbf{K}(\bar{x}, \bar{y}, \bar{z}, t)) d\bar{x} d\bar{y} d\bar{z}.
+q dx_i &= \rho(\mathbf{r}, t) dV dx_i = (\rho(\mathbf{r}, t) dx_i) dV = \left( \rho(\mathbf{r}, t) \frac{dx_i}{dt} \right) dxdydz dt \\\\
+&= \left( \rho(\mathbf{r}, t) \frac{dx_i}{dt} \right) \frac{dx_1 dx_2 dx_3 dx_4}{ic} = \left( \rho(\mathbf{r}, t) \frac{dx_i}{dt} \right) \frac{d\Omega}{ic},
 \end{aligned}
 $$
 
-再利用矢量场满足的恒等式
+故
 
 $$
-\nabla(\mathbf{K} \cdot \mathbf{r}) = (\mathbf{K} \cdot \nabla)\mathbf{r} + (\mathbf{r} \cdot \nabla)\mathbf{K} + \mathbf{r} \times (\nabla \times \mathbf{K}) + \mathbf{K} \times (\nabla \times \mathbf{r}),
+J_i = \rho(x_1, x_2, x_3, x_4) \frac{dx_i}{dt}
 $$
 
-我们有
+是一个四维矢量。这是由于四维体积元 $d\Omega$ 在洛伦兹变换下是不变的。可以很容易地验证，$J_i$ 的前三个分量为
+
+$$
+J_1 = \rho(x_1, x_2, x_3, x_4) v_x, \quad J_2 = \rho(x_1, x_2, x_3, x_4) v_y, \quad J_3 = \rho(x_1, x_2, x_3, x_4) v_z,
+$$
+
+即我们所熟悉的电流密度的分量，而其第四个分量则为
+
+$$
+J_4 = \rho(x_1, x_2, x_3, x_4) \frac{dx_4}{dt} = \rho(x_1, x_2, x_3, x_4) \frac{d(ict)}{dt} = ic\rho(x_1, x_2, x_3, x_4).
+$$
+
+而我们所熟悉的连续性方程
 
 $$
 \begin{aligned}
-\mathbf{r} \times (\nabla \times \mathbf{K}) &= \nabla(\mathbf{K} \cdot \mathbf{r}) - (\mathbf{K} \cdot \nabla)\mathbf{r} - (\mathbf{r} \cdot \nabla)\mathbf{K} - \mathbf{K} \times (\nabla \times \mathbf{r}) \\\\
-&= \nabla(\mathbf{K} \cdot \mathbf{r}) - (\mathbf{K} \cdot \nabla)\mathbf{r} - (\mathbf{r} \cdot \nabla)\mathbf{K} \\\\
-&= \nabla(\mathbf{K} \cdot \mathbf{r}) - \mathbf{K} - (\mathbf{r} \cdot \nabla)\mathbf{K}.
+&\frac{\partial \rho(x, y, z, t)}{\partial t} + \nabla \cdot (\rho(x, y, z, t) \mathbf{v}(x, y, z, t)) \\\\
+&= \frac{\partial \rho(x, y, z, t)}{\partial t} + \frac{\partial J_x(x, y, z, t)}{\partial x} + \frac{\partial J_y(x, y, z, t)}{\partial y} + \frac{\partial J_z(x, y, z, t)}{\partial z} = 0
 \end{aligned}
 $$
 
-将之代入 $\mathcal{M}_{\text{magnetic dipole moment}}$ 的表达式后，我们得到
+现在可以被改写作
 
 $$
 \begin{aligned}
-\mathcal{M}_{\text{magnetic dipole moment}} &= \frac{1}{2} \int \int \int_\Omega \bar{\mathbf{r}} \times (\nabla_{\bar{\mathbf{r}}} \times \mathbf{K}) d\bar{x} d\bar{y} d\bar{z} \\\\
-&= \frac{1}{2} \int \int \int_\Omega \nabla_{\bar{\mathbf{r}}}(\mathbf{K} \cdot \bar{\mathbf{r}}) dV - \frac{1}{2} \int \int \int_\Omega \mathbf{K} dV - \frac{1}{2} \int \int \int_\Omega (\bar{\mathbf{r}} \cdot \nabla_{\bar{\mathbf{r}}})\mathbf{K} dV \\\\
-&= -\frac{1}{2} \int \int \int_\Omega \mathbf{K} dV - \frac{1}{2} \int \int \int_\Omega \left( \bar{x} \frac{\partial \mathbf{K}}{\partial \bar{x}} + \bar{y} \frac{\partial \mathbf{K}}{\partial \bar{y}} + \bar{z} \frac{\partial \mathbf{K}}{\partial \bar{z}} \right) d\bar{x} d\bar{y} d\bar{z} \\\\
-&= -\frac{1}{2} \int \int \int_\Omega \mathbf{K} dV + \frac{1}{2} \int \int \int_\Omega (\mathbf{K} + \mathbf{K} + \mathbf{K}) d\bar{x} d\bar{y} d\bar{z} \\\\
-&= \int \int \int_\Omega \mathbf{K}(\bar{x}, \bar{y}, \bar{z}, t) d\bar{x} d\bar{y} d\bar{z}.
+&\frac{\partial (ic\rho(x_1, x_2, x_3, x_4))}{\partial (ict)} + \frac{\partial J_1(x_1, x_2, x_3, x_4)}{\partial x_1} + \frac{\partial J_2(x_1, x_2, x_3, x_4)}{\partial x_2} + \frac{\partial J_3(x_1, x_2, x_3, x_4)}{\partial x_3} \\\\
+&= \frac{\partial J_4(x_1, x_2, x_3, x_4)}{\partial x_4} + \frac{\partial J_1(x_1, x_2, x_3, x_4)}{\partial x_1} + \frac{\partial J_2(x_1, x_2, x_3, x_4)}{\partial x_2} + \frac{\partial J_3(x_1, x_2, x_3, x_4)}{\partial x_3} \\\\
+&= 0.
 \end{aligned}
 $$
 
-因此，根据磁化密度矢量 $\mathbf{M}(\bar{x}, \bar{y}, \bar{z}, t)$ 的定义，我们有
-
-$$
-\mathbf{K}(\bar{x}, \bar{y}, \bar{z}, t) = \mathbf{M}(\bar{x}, \bar{y}, \bar{z}, t).
-$$
-
-现在，让我们重新考虑平均后的 Maxwell 方程组。先看第一个方程。我们有
-
-$$
-\nabla \cdot \mathbf{E}(\mathbf{r}, t) = \frac{1}{\epsilon_0} \langle \rho(\mathbf{r}', t) \rangle = \frac{1}{\epsilon_0} \rho_f(\mathbf{r}, t) + \frac{1}{\epsilon_0} \rho_b(\mathbf{r}, t).
-$$
-
-代入
-$$
-\rho_b(\mathbf{r}, t) = -\mathrm{div} \mathbf{P}(\mathbf{r}, t),
-$$
-后，我们可以将之重写作
-
-$$
-\nabla \cdot \mathbf{E}(\mathbf{r}, t) = \frac{1}{\epsilon_0} \rho_f(\mathbf{r}, t) - \frac{1}{\epsilon_0} \nabla \cdot \mathbf{P}(\mathbf{r}, t),
-$$
-或是
-
-$$
-\nabla \cdot (\epsilon_0 \mathbf{E}(\mathbf{r}, t) + \mathbf{P}(\mathbf{r}, t)) = \rho_f(\mathbf{r}, t).
-$$
-
-令
-
-$$
-\mathbf{D}(\mathbf{r}, t) = \epsilon_0 \mathbf{E}(\mathbf{r}, t) + \mathbf{P}(\mathbf{r}, t),
-$$
-
-则上式化为
-
-$$
-\nabla \cdot \mathbf{D}(\mathbf{r}, t) = \rho_f(\mathbf{r}, t).
-$$
-
-文献中，$\mathbf{D}(\mathbf{r}, t)$ 被称为电感应强度（electric induction）矢量或电位移（electric displacement）矢量。
-
-当电场强度 $\mathbf{E}(\mathbf{r}, t)$ 不太强时，且连续介质是各向同性的，极化密度矢量 $\mathbf{P}(\mathbf{r}, t)$ 一般可以写作
-
-$$
-\mathbf{P}(\mathbf{r}, t) = \chi_e \epsilon_0 \mathbf{E}(\mathbf{r}, t),
-$$
-
-而 $\chi_e$ 被称为介质的极化率（electric susceptibility）。由此，我们得到电感应强度矢量 $\mathbf{D}(\mathbf{r}, t)$ 与电场强度矢量 $\mathbf{E}(\mathbf{r}, t)$ 之间的关系
-
-$$
-\mathbf{D}(\mathbf{r}, t) = \epsilon_0 \mathbf{E}(\mathbf{r}, t) + \chi_e \epsilon_0 \mathbf{E}(\mathbf{r}, t) = \epsilon_0 (1 + \chi_e) \mathbf{E}(\mathbf{r}, t) = \epsilon_0 \epsilon_r \mathbf{E}(\mathbf{r}, t) = \epsilon \mathbf{E}(\mathbf{r}, t).
-$$
-
-比例系数 $\epsilon_r$ 被称为相对电容率（relative electric permittivity），而比例系数 $\epsilon = \epsilon_r \epsilon_0$ 被称为介质的电容率（electric permittivity）或介电常数（dielectric constant）。当介质是各向异性的（例如某些晶体），或者电场强度矢量较大时（例如在激光场中），这一关系会比较复杂。在本课程中，我们不去讨论这些情况。
-
-接下来，我们化简平均后的 Maxwell 方程组中的第四个方程。我们有
+这一方程在洛伦兹变换下显然是不变的。更为重要的是，现在我们可以将总作用量写成如下的对称形式
 
 $$
 \begin{aligned}
-\nabla \times \mathbf{B}(\mathbf{r}, t) &= \mu_0 \langle \mathbf{j}(\mathbf{r}, t) \rangle + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t} \\\\
-&= \mu_0 \left( \mathbf{J}_f(\mathbf{r}, t) + \mathbf{J}_b^{\mathrm{P}}(\mathbf{r}, t) + \mathbf{J}_b^{\mathrm{M}}(\mathbf{r}, t) \right) + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t} \\\\
-&= \mu_0 \mathbf{J}_f(\mathbf{r}, t) + \mu_0 \frac{\partial \mathbf{P}(\mathbf{r}, t)}{\partial t} + \mu_0 \nabla \times \mathbf{M}(\mathbf{r}, t) + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t}.
+S &= -m_0 c^2 \int_a^b d\tau + q \int_a^b (A_1 dx_1 + A_2 dx_2 + A_3 dx_3 + A_4 dx_4) \\\\
+&+ \gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} \left( \frac{\partial A_j(x_1, x_2, x_3, x_4)}{\partial x_i} - \frac{\partial A_i(x_1, x_2, x_3, x_4)}{\partial x_j} \right)^2 d\Omega \\\\
+&= -m_0 c^2 \int_a^b d\tau + \left( \int \int \int_{R^3} \rho(x, y, z, t) dxdydz \right) \int_a^b \sum_{k=1}^{4} A_k(x_1, x_2, x_3, x_4) dx_k \\\\
+&+ \gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} \left( \frac{\partial A_j(x_1, x_2, x_3, x_4)}{\partial x_i} - \frac{\partial A_i(x_1, x_2, x_3, x_4)}{\partial x_j} \right)^2 d\Omega\\\\
+&= -m_0 c^2 \int_a^b d\tau + \int \int \int \int_{R^4} \sum_{k=1}^{4} \rho(x_1, x_2, x_3, x_4) A_k(x_1, x_2, x_3, x_4) \left( \frac{dx_k}{dt} \right) dxdydz dt \\\\
+&+ \gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} \left( \frac{\partial A_j(x_1, x_2, x_3, x_4)}{\partial x_i} - \frac{\partial A_i(x_1, x_2, x_3, x_4)}{\partial x_j} \right)^2 d\Omega \\\\
+&= -m_0 c^2 \int_a^b d\tau + \sum_{k=1}^{4} \int \int \int \int_{R^4} A_k(x_1, x_2, x_3, x_4) J_k(x_1, x_2, x_3, x_4) \frac{d\Omega}{ic} \\\\
+&+ \gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} \left( \frac{\partial A_j(x_1, x_2, x_3, x_4)}{\partial x_i} - \frac{\partial A_i(x_1, x_2, x_3, x_4)}{\partial x_j} \right)^2 d\Omega.
 \end{aligned}
 $$
 
-将上式右边的第三项移项，并将第二项和第四项合并后，我们得到
+在做了这些准备工作之后，现在我们可以利用最小作用量原理来推导麦克斯韦方程组的另外两个方程了。
 
-$$
-\nabla \times (\mathbf{B}(\mathbf{r}, t) - \mu_0 \mathbf{M}(\mathbf{r}, t)) = \mu_0 \mathbf{J}_f(\mathbf{r}, t) + \mu_0 \frac{\partial}{\partial t} (\epsilon_0 \mathbf{E}(\mathbf{r}, t) + \mathbf{P}(\mathbf{r}, t)).
-$$
-
-引入新的矢量场
-
-$$
-\mathbf{H}(\mathbf{r}, t) = \frac{1}{\mu_0} \mathbf{B}(\mathbf{r}, t) - \mathbf{M}(\mathbf{r}, t),
-$$
-
-并利用电感应强度矢量 $\mathbf{D}(\mathbf{r}, t)$ 的定义，我们可将此式重新写作
-
-$$
-\nabla \times \mathbf{H}(\mathbf{r}, t) = \mathbf{J}_f(\mathbf{r}, t) + \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t}.
-$$
-
-在文献中，$\mathbf{H}(\mathbf{r}, t)$ 被称为磁场强度（magnetic field）矢量。当连续介质是各向同性的时，磁化密度矢量 $\mathbf{M}(\mathbf{r}, t)$ 一般可以写作
-
-$$
-\mathbf{M}(\mathbf{r}, t) = \chi_m \mathbf{H}(\mathbf{r}, t),
-$$
-
-而 $\chi_m$ 被称为介质的磁化率（magnetic susceptibility）。由此，我们得到磁感应强度矢量 $\mathbf{B}(\mathbf{r}, t)$ 与磁场强度矢量 $\mathbf{H}(\mathbf{r}, t)$ 之间的关系
-
-$$
-\mathbf{H}(\mathbf{r}, t) = \frac{1}{\mu_0} \mathbf{B}(\mathbf{r}, t) - \chi_m \mathbf{H}(\mathbf{r}, t),
-$$
-
-或是
-
-$$
-\mathbf{B}(\mathbf{r}, t) = \mu_0 (1 + \chi_m) \mathbf{H}(\mathbf{r}, t) = \mu_0 \mu_r \mathbf{H}(\mathbf{r}, t) = \mu \mathbf{H}(\mathbf{r}, t).
-$$
-
-文献中，$\mu_r$ 被称为介质的相对磁导率（relative magnetic permeability），而 $\mu$ 则被称为介质的磁导率（magnetic permeability）。
-
-现将
-$$
-\begin{aligned}
-\nabla \cdot \mathbf{D}(\mathbf{r}, t) &= \rho_f(\mathbf{r}, t).\\\\
-\nabla \times \mathbf{H}(\mathbf{r}, t) &= \mathbf{J}_f(\mathbf{r}, t) + \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t}.
-\end{aligned}
-$$
-以及平均后的 Maxwell 方程组中的第二和三式合写在一起，我们最后得到修改后的在连续介质内的麦克斯韦方程组
+为此，我们将视带电粒子的运动为已知，而只对总作用中的场势做变分。我们有
 
 $$
 \begin{aligned}
-\nabla \cdot \mathbf{D}(\mathbf{r}, t) &= \rho_f(\mathbf{r}, t), & \nabla \times \mathbf{E}(\mathbf{r}, t) &= -\frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t}, \\\\
-\nabla \cdot \mathbf{B}(\mathbf{r}, t) &= 0, & \nabla \times \mathbf{H}(\mathbf{r}, t) &= \mathbf{J}_f(\mathbf{r}, t) + \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t}.
+\delta S &= \delta \left( -m_0 c^2 \int_a^b d\tau \right) + \delta \left( \sum_{k=1}^{4} \int \int \int \int_{R^4} A_k(x_1, x_2, x_3, x_4) J_k(x_1, x_2, x_3, x_4) \frac{d\Omega}{ic} \right) \\\\
+&+ \delta \left( \gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} \left( \frac{\partial A_j(x_1, x_2, x_3, x_4)}{\partial x_i} - \frac{\partial A_i(x_1, x_2, x_3, x_4)}{\partial x_j} \right)^2 d\Omega \right) \\\\
+&= \sum_{k=1}^{4} \int \int \int \int_{R^4} (\delta A_k(x_1, x_2, x_3, x_4)) J_k(x_1, x_2, x_3, x_4) \frac{d\Omega}{ic} \\\\
+&+ 2\gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} F_{ij} \left( \frac{\delta A_j(x_1, x_2, x_3, x_4)}{\partial x_i} - \frac{\delta A_i(x_1, x_2, x_3, x_4)}{\partial x_j} \right) d\Omega \\\\
+&= \sum_{k=1}^{4} \int \int \int \int_{R^4} (\delta A_k(x_1, x_2, x_3, x_4)) J_k(x_1, x_2, x_3, x_4) \frac{d\Omega}{ic} \\\\
+&+ 2\gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} F_{ij}(x_1, x_2, x_3, x_4) \frac{\partial \delta A_j(x_1, x_2, x_3, x_4)}{\partial x_i} dx_1 dx_2 dx_3 dx_4 \\\\
+&- 2\gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} F_{ij}(x_1, x_2, x_3, x_4) \frac{\partial \delta A_i(x_1, x_2, x_3, x_4)}{\partial x_j} dx_1 dx_2 dx_3 dx_4.
 \end{aligned}
 $$
 
-同时实验上也观察到，在低频电磁场中，$\mathbf{J}_f(\mathbf{r}, t)$ 是与电场强度矢量 $\mathbf{E}(\mathbf{r}, t)$ 是成正比的，即
-
-$$
-\mathbf{J}_f(\mathbf{r}, t) = \sigma \mathbf{E}(\mathbf{r}, t).
-$$
-
-$\sigma$ 称为介质的电导率（conductivity），而此公式称为欧姆定律（Ohm's law）。
-
-## Part 2 电磁场的边值关系
-
-我们上面所讨论的是在一个同质介质中电磁场的产生和传播的问题。在实际应用中，我们所遇到的情况往往是整个空间是由不同质的介质占据的，例如空气和水。此时，为了决定电磁场在空间的分布，除了解麦克斯韦方程之外，我们还需考虑在这些介质彼此之间的分界面上，电磁场强度矢量是如何改变的。
-
-以电场强度矢量为例。我们考虑一个横跨两种介质分界面的圆柱体小盒子。将方程
-
-$$
-\mathrm{div} \mathbf{D}(x, y, z, t) = \rho_f(x, y, z, t)
-$$
-
-的两边对于小盒子所占的区域 $\Omega$ 求积分，并使用高斯定理后，我们有
-
-$$
-\int \int_\Omega \mathrm{div} \mathbf{D}(x, y, z, t) dx dy dz = \oint \oint_S \mathbf{D} \cdot d\mathbf{S} = \int \int_\Omega \rho_f(x, y, z, t) dx dy dz.
-$$
-
-显然，当盒子的高度 $h$ 以及上、下端面的半径 $\delta$ 都很小时，上式可以近似写作
-
-$$
-\int \int_{\text{top surface}} \mathbf{D} \cdot d\mathbf{S} + \int \int_{\text{lower surface}} \mathbf{D} \cdot d\mathbf{S} + \int \int_{\text{side surface}} \mathbf{D} \cdot d\mathbf{S} \cong \sigma_f(\mathbf{r}, t)(\pi \delta^2) + Q_f.
-$$
-
-这里，$\sigma_f(\mathbf{r}, t)$ 为盒子中心处两种介质分界面上的自由面电荷密度，而 $Q_f$ 为盒子内的体电荷密度的体积分。若我们规定，上表面处的外法线方向为正，侧表面的外法线方向记作 $\mathbf{t}$，则上式又可被进一步写作
-
-$$
-D_{2n}(\pi \delta^2) - D_{1n}(\pi \delta^2) + D_t(2\pi \delta h) \cong \sigma_f(\mathbf{r}, t)(\pi \delta^2) + Q_f.
-$$
-
-现在，我们令 $h \to 0$。那么，$Q_f \to 0$，且上式左边的第三项亦趋近于零。因此，上式化简为
-
-$$
-D_{2n}(\pi \delta^2) - D_{1n}(\pi \delta^2) \cong \sigma_f(\mathbf{r}, t)(\pi \delta^2),
-$$
-
-或是
-
-$$
-D_{2n} - D_{1n} \cong \sigma_f(\mathbf{r}, t).
-$$
-
-我们再令 $\delta \to 0$，即可得到
-
-$$
-D_{2n}(\mathbf{r}, t) - D_{1n}(\mathbf{r}, t) = \sigma_f(\mathbf{r}, t).
-$$
-
-此即联系两种不同介质中的电感应强度矢量的沿分界面的法向分量的边值关系。将类似的推导过程应用到方程
-
-$$
-\mathrm{div} \mathbf{B}(\mathbf{r}, t) = 0,
-$$
-
-我们立刻可得
-
-$$
-B_{2n}(\mathbf{r}, t) - B_{1n}(\mathbf{r}, t) = 0,
-$$
-
-或是
-
-$$
-B_{2n}(\mathbf{r}, t) = B_{1n}(\mathbf{r}, t).
-$$
-
-也就是说，磁感应强度矢量在两种不同介质的分界面处的法向分量是连续的。
-
-用同样的办法，我们也可以很容易地得到电场强度矢量 $\mathbf{E}(\mathbf{r}, t)$，电极化密度矢量 $\mathbf{P}(\mathbf{r}, t)$，磁场强度矢量 $\mathbf{H}(\mathbf{r}, t)$ 以及磁化密度矢量 $\mathbf{M}(\mathbf{r}, t)$ 在两种不同介质的分界面上的法向分量所满足的边值关系。以电极化密度矢量 $\mathbf{P}(\mathbf{r}, t)$ 为例。由于
-
-$$
-\mathrm{div} \mathbf{P}(\mathbf{r}, t) = -\rho_b(\mathbf{r}, t),
-$$
-
-我们可以推得
-
-$$
-P_{2n}(\mathbf{r}, t) - P_{1n}(\mathbf{r}, t) = -\sigma_b(\mathbf{r}, t)
-$$
-
-在两种不同介质的分界面处成立。
-
-接下来，我们研究电磁场强度矢量在连续介质分界面上的切向分量所满足的边值条件。
-
-以磁场强度矢量 $\mathbf{H}(\mathbf{r}, t)$ 为例。将方程
-$$
-\nabla \times \mathbf{H}(\mathbf{r}, t) = \mathbf{J}_f(\mathbf{r}, t) + \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t}
-$$
-
-的两边沿垂直于 ${\alpha}_f$ (自由电流密度 $\mathbf{K}_f$ 的单位矢量) 的小矩形围道进行积分，并利用斯托克斯公式，我们得到
-
-$$
-\oint_C \mathbf{H} \cdot d\mathbf{l} = \int \int_S \nabla \times \mathbf{H} \cdot d\mathbf{S} = \int \int_S \mathbf{J}_f \cdot d\mathbf{S} + \int \int_S \frac{\partial \mathbf{D}}{\partial t} \cdot d\mathbf{S}.
-$$
-
-这里，$S$ 代表由围道所界定的小矩形。若围道的长度为为 $\Delta l$，宽度为 $\Delta h$，当 $\Delta h \cong 0$ 时，我们近似有
+对于上式右边的第二和第三项做分步积分后，我们得到
 
 $$
 \begin{aligned}
-\oint_C \mathbf{H} \cdot d\mathbf{l} &= \int_{C_1} \mathbf{H} \cdot d\mathbf{l} + \int_{C_2} \mathbf{H} \cdot d\mathbf{l} + \int_{H_1} \mathbf{H} \cdot d\mathbf{l} + \int_{H_2} \mathbf{H} \cdot d\mathbf{l} \\\\
-&\cong J_{\sigma f}^{t_1}(\mathbf{r}, t)\Delta l + J_{\rho_f}^{t_1}(\mathbf{r}, t)\Delta l\Delta h + \int \int_S \frac{\partial \mathbf{D}}{\partial t} \cdot d\mathbf{S}.
+\delta S &= \sum_{k=1}^{4} \int \int \int \int_{R^4} (\delta A_k(x_1, x_2, x_3, x_4)) J_k(x_1, x_2, x_3, x_4) \frac{1}{ic} dx_1 dx_2 dx_3 dx_4 \\\\
+&- 2\gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} \frac{\partial F_{ij}(x_1, x_2, x_3, x_4)}{\partial x_i} \delta A_j(x_1, x_2, x_3, x_4) dx_1 dx_2 dx_3 dx_4 \\\\
+&+ 2\gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} \frac{\partial F_{ij}(x_1, x_2, x_3, x_4)}{\partial x_j} \delta A_i(x_1, x_2, x_3, x_4) dx_1 dx_2 dx_3 dx_4.
 \end{aligned}
 $$
 
-这里，$\mathbf{r}$ 代表小矩形中分界面上的一点，而 $J_{\sigma f}^{t_1}(\mathbf{r}, t)\Delta l$ 和 $J_{\rho_f}^{t_1}(\mathbf{r}, t)\Delta l\Delta h$ 分别为有由自由面电流密度的切向分量和自由体电流切向分量给出的贡献。
-
-现在，我们令 $\Delta h \to 0$。由于磁场强度矢量 $\mathbf{H}$ 在分界面两边的介质中是有限的，电感应强度矢量 $\mathbf{D}$ 对时间的导数亦是有限的，故在此极限下上式可以简化为
-
-$$
-\int_{C_1} \mathbf{H} \cdot d\mathbf{l} + \int_{C_2} \mathbf{H} \cdot d\mathbf{l} \cong H_{2t_2}(\mathbf{r}, t)\Delta l - H_{1t_2}(\mathbf{r}, t)\Delta l \cong J_{\sigma f}^{t_1}(\mathbf{r}, t)\Delta l,
-$$
-
-或是
-
-$$
-H_{2t_2}(\mathbf{r}, t) - H_{1t_2}(\mathbf{r}, t) \cong J_{\sigma f}^{t_1}(\mathbf{r}, t).
-$$
-
-再令 $\Delta l \to 0$ 后，我们得到
-
-$$
-H_{2t_2}(\mathbf{r}, t) - H_{1t_2}(\mathbf{r}, t) = J_{\sigma f}^{t_1}(\mathbf{r}, t).
-$$
-
-此即磁场强度矢量 $\mathbf{H}(\mathbf{r}, t)$ 在介质 1 和介质 2 的分界面上的切向分量所满足的边值关系。
-
-类似的论证也可以应用到方程
-
-$$
-\nabla \times \mathbf{E}(\mathbf{r}, t) = -\frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t}.
-$$
-
-因此我们得到
-
-$$
-E_{2t}(\mathbf{r}, t) - E_{1t}(\mathbf{r}, t) = 0,
-$$
-
-或是
-
-$$
-E_{2t}(\mathbf{r}, t) = E_{1t}(\mathbf{r}, t).
-$$
-
-引进自介质 1 指向介质 2 的单位法线矢量 $\mathbf{e}_n$ 后，这些边值关系可以写成如下的紧凑形式
+若我们在上式右边的第一项中将下脚标 $k$ 改写成 $j$，并在第三项中调换脚标 $i$ 和 $j$ 的位置，则上式可以重新写作
 
 $$
 \begin{aligned}
-\mathbf{e}_n \times (\mathbf{E}_2 - \mathbf{E}_1) &= 0, & \mathbf{e}_n \times (\mathbf{H}_2 - \mathbf{H}_1) &= J_{\sigma f}^{t}(\mathbf{r}, t), \\\\
-\mathbf{e}_n \cdot (\mathbf{D}_2 - \mathbf{D}_1) &= \sigma_f(\mathbf{r}, t), & \mathbf{e}_n \cdot (\mathbf{B}_2 - \mathbf{B}_1) &= 0.
+\delta S &= \sum_{j=1}^{4} \int \int \int \int_{R^4} (\delta A_j(x_1, x_2, x_3, x_4)) J_j(x_1, x_2, x_3, x_4) \frac{1}{ic} dx_1 dx_2 dx_3 dx_4 \\\\
+&- 2\gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} \frac{\partial F_{ij}(x_1, x_2, x_3, x_4)}{\partial x_i} \delta A_j(x_1, x_2, x_3, x_4) dx_1 dx_2 dx_3 dx_4 \\\\
+&+ 2\gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} \frac{\partial F_{ji}(x_1, x_2, x_3, x_4)}{\partial x_i} \delta A_j(x_1, x_2, x_3, x_4) dx_1 dx_2 dx_3 dx_4 \\\\
+&= \sum_{j=1}^{4} \int \int \int \int_{R^4} (\delta A_j(x_1, x_2, x_3, x_4)) J_j(x_1, x_2, x_3, x_4) \frac{1}{ic} dx_1 dx_2 dx_3 dx_4 \\\\
+&- 2\gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} \frac{\partial F_{ij}(x_1, x_2, x_3, x_4)}{\partial x_i} \delta A_j(x_1, x_2, x_3, x_4) dx_1 dx_2 dx_3 dx_4 \\\\
+&- 2\gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} \frac{\partial F_{ij}(x_1, x_2, x_3, x_4)}{\partial x_i} \delta A_j(x_1, x_2, x_3, x_4) dx_1 dx_2 dx_3 dx_4 \\\\
+&= \sum_{j=1}^{4} \int \int \int \int_{R^4} (\delta A_j(x_1, x_2, x_3, x_4)) J_j(x_1, x_2, x_3, x_4) \frac{1}{ic} dx_1 dx_2 dx_3 dx_4 \\\\
+&- 4\gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} \frac{\partial F_{ij}(x_1, x_2, x_3, x_4)}{\partial x_i} \delta A_j(x_1, x_2, x_3, x_4) dx_1 dx_2 dx_3 dx_4.
 \end{aligned}
 $$
 
-这些关系在解决实际的电磁场强度分布问题时是十分有用的。
-
-## Part 3 电磁场的能量和能量流
-
-将方程
-$$
-\nabla \times \mathbf{H}(\mathbf{r}, t) = \mathbf{J}_f(\mathbf{r}, t) + \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t}
-$$
-的两边与电场强度矢量做点乘后，我们得到
+在上面推导的最后一步，我们用到了四维张量 $F_{ij}$ 是反对称的这一事实，即
 
 $$
-\mathbf{E}(\mathbf{r}, t) \cdot (\nabla \times \mathbf{H}(\mathbf{r}, t)) = \mathbf{E}(\mathbf{r}, t) \cdot \mathbf{J}_f(\mathbf{r}, t) + \mathbf{E}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t}.
+F_{ij}(x_1, x_2, x_3, x_4) = -F_{ji}(x_1, x_2, x_3, x_4).
 $$
 
-再利用恒等式
+现在，我们令 $\delta S = 0$，并由此得到
 
 $$
-\mathbf{E}(\mathbf{r}, t) \cdot (\nabla \times \mathbf{H}(\mathbf{r}, t)) = -\nabla \cdot (\mathbf{E}(\mathbf{r}, t) \times \mathbf{H}(\mathbf{r}, t)) + \mathbf{H}(\mathbf{r}, t) \cdot (\nabla \times \mathbf{E}(\mathbf{r}, t)),
+\begin{aligned}
+0 &= \sum_{j=1}^{4} \int \int \int \int_{R^4} (\delta A_j(x_1, x_2, x_3, x_4)) J_j(x_1, x_2, x_3, x_4) \frac{1}{ic} dx_1 dx_2 dx_3 dx_4 \\\\
+&- 4\gamma \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} \frac{\partial F_{ij}(x_1, x_2, x_3, x_4)}{\partial x_i} \delta A_j(x_1, x_2, x_3, x_4) dx_1 dx_2 dx_3 dx_4.
+\end{aligned}
 $$
 
-可以将这一方程改写为
+考虑到 $\delta A_1, \delta A_2, \delta A_3$ 和 $\delta A_4$ 是彼此独立取值的，故上式仅当相应的各个被积函数为零时才可能成立。由此我们得到
 
 $$
--\nabla \cdot (\mathbf{E}(\mathbf{r}, t) \times \mathbf{H}(\mathbf{r}, t)) + \mathbf{H}(\mathbf{r}, t) \cdot (\nabla \times \mathbf{E}(\mathbf{r}, t)) = \mathbf{E}(\mathbf{r}, t) \cdot \mathbf{J}_f(\mathbf{r}, t) + \mathbf{E}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t}.
+\frac{1}{ic} J_j(x_1, x_2, x_3, x_4) - 4\gamma \sum_{i=1}^{4} \frac{\partial F_{ij}(x_1, x_2, x_3, x_4)}{\partial x_i} = 0.
 $$
-
-将方程
-
-$$
-\nabla \times \mathbf{E}(\mathbf{r}, t) = -\frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t}
-$$
-
-代入后，我们进一步得到
+若取 $j = 1$，则我们有
 
 $$
--\nabla \cdot (\mathbf{E}(\mathbf{r}, t) \times \mathbf{H}(\mathbf{r}, t)) - \mathbf{H}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t} = \mathbf{E}(\mathbf{r}, t) \cdot \mathbf{J}_f(\mathbf{r}, t) + \mathbf{E}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t}.
-$$
-
-将此式左边的两项移项到右边后给出
-
-$$
-\mathbf{E}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{D}(\mathbf{r}, t)}{\partial t} + \mathbf{H}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t} + \nabla \cdot (\mathbf{E}(\mathbf{r}, t) \times \mathbf{H}(\mathbf{r}, t)) + \mathbf{E}(\mathbf{r}, t) \cdot \mathbf{J}_f(\mathbf{r}, t) = 0.
+\frac{1}{ic} J_1 = 4\gamma \left( \frac{\partial F_{11}}{\partial x_1} + \frac{\partial F_{21}}{\partial x_2} + \frac{\partial F_{31}}{\partial x_3} + \frac{\partial F_{41}}{\partial x_4} \right).
 $$
 
 将
 
 $$
-\mathbf{D}(\mathbf{r}, t) = \epsilon \mathbf{E}(\mathbf{r}, t), \quad \mathbf{H}(\mathbf{r}, t) = \frac{1}{\mu} \mathbf{B}(\mathbf{r}, t)
+J_1 = j_x, \quad F_{11} = 0, \quad F_{21} = -B_z, \quad F_{31} = B_y, \quad F_{41} = \frac{i}{c} E_x
 $$
 
-代入此式后，我们最后得到
+代入上式后，我们有
 
 $$
-\frac{\partial}{\partial t} \left( \frac{\epsilon}{2} E^2(\mathbf{r}, t) + \frac{1}{2\mu} B^2(\mathbf{r}, t) \right) + \nabla \cdot \mathbf{S} + \mathbf{J}_f(\mathbf{r}, t) \cdot \mathbf{E}(\mathbf{r}, t) = 0.
+\frac{1}{ic} j_x = 4\gamma \left( -\frac{\partial B_z}{\partial y} + \frac{\partial B_y}{\partial z} + \frac{i}{ic} \frac{\partial E_x}{\partial t} \right).
 $$
 
-如同真空时的情况，我们将
+进一步化简后，我们得到
 
 $$
-w = \frac{\epsilon}{2} E^2(\mathbf{r}, t) + \frac{1}{2\mu} B^2(\mathbf{r}, t) = \frac{1}{2} \mathbf{E}(\mathbf{r}, t) \cdot \mathbf{D}(\mathbf{r}, t) + \frac{1}{2} \mathbf{B}(\mathbf{r}, t) \cdot \mathbf{H}(\mathbf{r}, t)
+j_x = 4ic\gamma \left( -\frac{\partial B_z}{\partial y} + \frac{\partial B_y}{\partial z} + \frac{1}{c^2} \frac{\partial E_x}{\partial t} \right) = 4ic\gamma \left( -(\mathrm{rot} \mathbf{B})_x + \frac{1}{c^2} \frac{\partial E_x}{\partial t} \right).
 $$
 
-解释作介质中的电磁场能量密度，而将坡印亭矢量
+将此式与麦克斯韦方程
 
 $$
-\mathbf{S}(\mathbf{r}, t) = \mathbf{E}(\mathbf{r}, t) \times \mathbf{H}(\mathbf{r}, t) = \frac{1}{\mu} \mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)
+\nabla \times \mathbf{B} = \mu_0 \mathbf{j} + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t} = \mu_0 \mathbf{j} + \frac{1}{c^2} \frac{\partial \mathbf{E}}{\partial t}
 $$
 
-解释作介质中的电磁场能量流密度，$\mathbf{J}_f \cdot \mathbf{E}$ 解释作电磁场对自由电荷做功的功率密度。它或者转化成电荷的动能，或者转化成焦耳热释放掉。
+的 $x$ 分量相比较后，我们看到，若取
 
+$$
+4ic\gamma = -\frac{1}{\mu_0},
+$$
+
+则两式相互重合。由此我们解得
+
+$$
+\gamma = \frac{i}{4\mu_0 c} = \frac{i}{4} \sqrt{\frac{\epsilon_0}{\mu_0}}.
+$$
+
+同理，若在方程
+$$
+\frac{1}{ic} J_j(x_1, x_2, x_3, x_4) - 4\gamma \sum_{i=1}^{4} \frac{\partial F_{ij}(x_1, x_2, x_3, x_4)}{\partial x_i} = 0.
+$$
+中取 $j = 4$，我们有
+
+$$
+\frac{1}{ic} J_4 = 4\gamma \left( \frac{\partial F_{14}}{\partial x_1} + \frac{\partial F_{24}}{\partial x_2} + \frac{\partial F_{34}}{\partial x_3} + \frac{\partial F_{44}}{\partial x_4} \right).
+$$
+
+将
+
+$$
+J_4 = ic\rho, \quad F_{14} = -\frac{i}{c} E_x, \quad F_{24} = -\frac{i}{c} E_y, \quad F_{34} = -\frac{i}{c} E_z, \quad F_{44} = 0
+$$
+
+代入上式后，我们有
+
+$$
+\frac{1}{ic} ic\rho = 4\gamma \left( -\frac{i}{c} \frac{\partial E_x}{\partial x} - \frac{i}{c} \frac{\partial E_y}{\partial y} - \frac{i}{c} \frac{\partial E_z}{\partial z} \right) = 4\gamma \left( -\frac{i}{c} \right) \mathrm{div} \mathbf{E}.
+$$
+
+将 $\gamma = \displaystyle\frac{i}{4} \sqrt{\frac{\epsilon_0}{\mu_0}}$ 代入上式并简化后，我们有
+
+$$
+\rho = 4 \cdot \frac{i}{4} \sqrt{\frac{\epsilon_0}{\mu_0}} \left( -\frac{i}{c} \right) \mathrm{div} \mathbf{E} = \epsilon_0 \mathrm{div} \mathbf{E},
+$$
+
+或是
+
+$$
+\mathrm{div} \mathbf{E}(x, y, z, t) = \frac{1}{\epsilon_0} \rho(x, y, z, t).
+$$
+
+这就是我们要找的第四个麦克斯韦方程。
+
+综上所述，$N$ 个带电粒子的总作用量可以写作
+
+$$
+\begin{aligned}
+S &= S_m + S_{mf} + S_f \\\\
+&= -\sum_{n=1}^{N} m_n c^2 \int_a^b d\tau + \frac{1}{ic} \int \int \int \int_{R^4} \sum_{k=1}^{4} A_k J_k d\Omega \\\\
+&+ \frac{i}{4} \sqrt{\frac{\epsilon_0}{\mu_0}} \int \int \int \int_{R^4} \sum_{i=1}^{4} \sum_{j=1}^{4} F_{ij}(x_1, x_2, x_3, x_4) F_{ij}(x_1, x_2, x_3, x_4) d\Omega.
+\end{aligned}
+$$
+
+这里，$d\Omega = dx_1 dx_2 dx_3 dx_4$ 为四维空间的体积元，$\{A_k\}$ 代表四维矢势，其分量为
+
+$$
+\begin{aligned}
+A_1(x_1, x_2, x_3, x_4) &= A_x(x, y, z, t), \quad A_2(x_1, x_2, x_3, x_4) = A_y(x, y, z, t), \\\\
+A_3(x_1, x_2, x_3, x_4) &= A_z(x, y, z, t), \quad A_4(x_1, x_2, x_3, x_4) = \frac{i}{c} \Phi(x, y, z, t),
+\end{aligned}
+$$
+
+而电磁场强度张量定义为
+
+$$
+F_{ij}(x_1, x_2, x_3, x_4) = \frac{\partial A_j(x_1, x_2, x_3, x_4)}{\partial x_i} - \frac{\partial A_i(x_1, x_2, x_3, x_4)}{\partial x_j}.
+$$
+
+需要说明一点的是，现在的四维电流密度
+
+$$
+\begin{aligned}
+J_1(x_1, x_2, x_3, x_4) &= j_x(x, y, z, t), \quad J_2(x_1, x_2, x_3, x_4) = j_y(x, y, z, t), \\\\
+J_3(x_1, x_2, x_3, x_4) &= j_z(x, y, z, t), \quad J_4(x_1, x_2, x_3, x_4) = ic\rho(x, y, z, t)
+\end{aligned}
+$$
+
+应该理解为是由 $N$ 个带电粒子引起的总电流密度和电荷密度。利用 $\delta$ 函数的定义，我们可以将之写作
+
+$$
+j_x(x, y, z, t) = \sum_{n=1}^{N} q_n v_{nx}(t) \delta(x - x_n(t)) \delta(y - y_n(t)) \delta(z - z_n(t)),
+$$
+
+$$
+j_y(x, y, z, t) = \sum_{n=1}^{N} q_n v_{ny}(t) \delta(x - x_n(t)) \delta(y - y_n(t)) \delta(z - z_n(t)),
+$$
+
+$$
+j_z(x, y, z, t) = \sum_{n=1}^{N} q_n v_{nz}(t) \delta(x - x_n(t)) \delta(y - y_n(t)) \delta(z - z_n(t)),
+$$
+
+$$
+\rho(x, y, z, t) = \sum_{n=1}^{N} q_n \delta(x - x_n(t)) \delta(y - y_n(t)) \delta(z - z_n(t)).
+$$
+
+依赖于这些记号，我们可以重新将麦克斯韦方程组写作
+
+$$
+\frac{\partial F_{ij}(x_1, x_2, x_3, x_4)}{\partial x_k} + \frac{\partial F_{jk}(x_1, x_2, x_3, x_4)}{\partial x_i} + \frac{\partial F_{ki}(x_1, x_2, x_3, x_4)}{\partial x_j} = 0,
+$$
+
+以及
+
+$$
+\frac{1}{ic} J_k(x_1, x_2, x_3, x_4) = i \sqrt{\frac{\epsilon_0}{\mu_0}} \sum_{i=1}^{4} \frac{\partial F_{ik}(x_1, x_2, x_3, x_4)}{\partial x_i}.
+$$
+
+顺便一提，我们在前面提到的洛伦兹规范条件
+
+$$
+\nabla \cdot \mathbf{A}(x, y, z, t) + \frac{1}{c^2} \frac{\partial \Phi(x, y, z, t)}{\partial t} = 0,
+$$
+
+现在也可被改写作
+
+$$
+\frac{\partial A_1}{\partial x_1} + \frac{\partial A_2}{\partial x_2} + \frac{\partial A_3}{\partial x_3} + \frac{\partial A_4}{\partial x_4} = 0.
+$$
+
+显然，在洛伦兹变换下，这一约束条件的形式是不变的，即我们有
+
+$$
+\sum_{i=1}^{4} \frac{\partial A_i(x_1, x_2, x_3, x_4)}{\partial x_i} = \sum_{i=1}^{4} \frac{\partial A'_i(x'_1, x'_2, x'_3, x'_4)}{\partial x'_i} = 0.
+$$
+
+## Part 6 正则量子化举例
+
+电动力学的拉格朗日量形式的价值在于它提供了一座从经典物理到量子物理的桥梁。利用狄拉克的正则量子化方法，人们可以先寻找一个经典物理方程所对应的拉格朗日量，然后引出正则广义动量和哈密顿量，加上量子化条件后，即可得到该体系的薛定谔方程（Schrödinger equation），完成这一过渡。作为一个例子，让我们考虑一个带电粒子在外加电磁场中的运动。
+
+我们已经知道，在外加电磁场中，一个带电粒子 $q$ 所满足的牛顿方程为
+
+$$
+\frac{d\mathbf{p}}{dt} = q \mathbf{v} \times \mathbf{B}(x_1, x_2, x_3, x_4) + q \mathbf{E}(x_1, x_2, x_3, x_4),
+$$
+
+我们也看到，若将给出的作用量
+
+$$
+S = \int_a^b \left( -m_0 c^2 \sqrt{1 - \frac{v^2}{c^2}} + q \mathbf{A}(x_1, x_2, x_3, x_4) \cdot \mathbf{v} - q \Phi(x_1, x_2, x_3, x_4) \right) dt
+$$
+
+对其中的广义坐标 $x_1, x_2, x_3$ 和 $x_4$ 做变分，并对之使用最小作用量原理，即可重新得到上面的运动方程。因此，一个带电粒子 $q$ 在外加电磁场中运动所满足的牛顿方程对应的拉格朗日量为
+
+$$
+L = -m_0 c^2 \sqrt{1 - \frac{v^2}{c^2}} + q \mathbf{A}(x, y, z, t) \cdot \mathbf{v} - q \Phi(x, y, z, t),
+$$
+
+接下来，我们写出广义动量。根据定义，广义动量的 $x$ 分量为
+
+$$
+\begin{aligned}
+p_x &= \frac{\partial L}{\partial \dot{x}} = \frac{\partial L}{\partial v_x} = \frac{\partial}{\partial v_x} \left( -m_0 c^2 \sqrt{1 - \frac{v^2}{c^2}} + q \mathbf{A} \cdot \mathbf{v} - q \Phi \right) \\\\
+&= \frac{m_0 v_x}{\sqrt{1 - \frac{v^2}{c^2}}} + q A_x(x, y, z, t).
+\end{aligned}
+$$
+
+同理，它的 $y$ 分量和 $z$ 分量分别为
+
+$$
+p_y = \frac{m_0 v_y}{\sqrt{1 - \frac{v^2}{c^2}}} + q A_y(x, y, z, t),
+$$
+
+及
+
+$$
+p_z = \frac{m_0 v_z}{\sqrt{1 - \frac{v^2}{c^2}}} + q A_y(x, y, z, t).
+$$
+
+现在，我们可以写出这个体系的哈密顿量
+
+$$
+\begin{aligned}
+H &= v_x p_x + v_y p_y + v_z p_z - L = \frac{m_0 v_x^2}{\sqrt{1 - \frac{v^2}{c^2}}} + \frac{m_0 v_y^2}{\sqrt{1 - \frac{v^2}{c^2}}} + \frac{m_0 v_z^2}{\sqrt{1 - \frac{v^2}{c^2}}} \\\\
+&+ q \mathbf{A}(x, y, z, t) \cdot \mathbf{v} - q \mathbf{A}(x, y, z, t) \cdot \mathbf{v} + q \Phi(x, y, z, t) \\\\
+&= \frac{m_0 v^2}{\sqrt{1 - \frac{v^2}{c^2}}} + m_0 c^2 \sqrt{1 - \frac{v^2}{c^2}} + q \Phi(x, y, z, t) = \frac{m_0 c^2}{\sqrt{1 - \frac{v^2}{c^2}}} + q \Phi(x, y, z, t) \\\\
+&= \sqrt{(\mathbf{p} - q \mathbf{A}(x, y, z, t))^2 c^2 + m_0^2 c^4} + q \Phi(x, y, z, t).
+\end{aligned}
+$$
+
+若我们仅仅考虑 $v \ll c$（或 $p \ll m_0 c$）的情况，则上式可被进一步简化为
+
+$$
+H \cong m_0 c^2 + \frac{1}{2m_0} (\mathbf{p} - q \mathbf{A}(x, y, z, t))^2 + q \Phi(x, y, z, t).
+$$
+
+在略去常数项 $m_0 c^2$ 后，我们有
+
+$$
+H = \frac{1}{2m_0} (\mathbf{p} - q \mathbf{A}(x, y, z, t))^2 + q \Phi(x, y, z, t).
+$$
+
+现在，若我们将坐标 $x, y, z$ 和动量 $p_x, p_y, p_z$ 视作算符，并对它们加上量子化对易关系
+
+$$
+[\hat{x}_i, \hat{p}_j] = i\hbar \delta_{ij} \hat{I},
+$$
+
+则哈密顿量 $H$ 亦可改写成算符
+
+$$
+\begin{aligned}
+\hat{H} &= \frac{1}{2m_0} (\hat{p}_x - q \hat{A}_x(\hat{x}, \hat{y}, \hat{z}, t))^2 + \frac{1}{2m_0} (\hat{p}_y - q \hat{A}_y(\hat{x}, \hat{y}, \hat{z}, t))^2 \\\\
+&+ \frac{1}{2m_0} (\hat{p}_z - q \hat{A}_z(\hat{x}, \hat{y}, \hat{z}, t))^2 + q \hat{\Phi}(\hat{x}, \hat{y}, \hat{z}, t) \\\\
+&= \frac{1}{2m_0} \left( \frac{\hbar}{i} \frac{\partial}{\partial x} - q \hat{A}_x(\hat{x}, \hat{y}, \hat{z}, t) \right)^2 + \frac{1}{2m_0} \left( \frac{\hbar}{i} \frac{\partial}{\partial y} - q \hat{A}_y(\hat{x}, \hat{y}, \hat{z}, t) \right)^2 \\\\
+&+ \frac{1}{2m_0} \left( \frac{\hbar}{i} \frac{\partial}{\partial z} - q \hat{A}_z(\hat{x}, \hat{y}, \hat{z}, t) \right)^2 + q \hat{\Phi}(\hat{x}, \hat{y}, \hat{z}, t).
+\end{aligned}
+$$
+
+这里，我们利用了动量算符在坐标表象中的表示
+
+$$
+\hat{p}_x = \frac{\hbar}{i} \frac{\partial}{\partial x}, \quad \hat{p}_y = \frac{\hbar}{i} \frac{\partial}{\partial y}, \quad \hat{p}_z = \frac{\hbar}{i} \frac{\partial}{\partial z}.
+$$
+
+最后，我们将哈密顿量算符代入薛定谔方程
+
+$$
+i\hbar \frac{\partial \psi(x, y, z, t)}{\partial t} = \hat{H} \psi(x, y, z, t),
+$$
+
+即完成了该体系的正则量子化过程。这里，$\psi(x, y, z, t)$ 为描述带电粒子在外加电磁场中运动的波函数。

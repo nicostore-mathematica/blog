@@ -4,6 +4,363 @@ permalink: /electrodynamics/electrodynamics-3/
 createTime: 2026/03/13 20:57:20
 ---
 
+## Part 2 静磁场
+
+前面我们提到了毕奥 - 萨伐尔定律
+
+$$
+dB(\mathbf{r}) = \frac{\mu_0 I_2}{4\pi} dl_2 \times \frac{\mathbf{r} - \mathbf{r}_2}{|\mathbf{r} - \mathbf{r}_2|^3}.
+$$
+
+如上所述，在稳恒电流的情况下，电流是在一个回路 $L$ 中流动。因此，它在空间 $\mathbf{r}$ 处所引起的总磁感应强度可以写作
+
+$$
+\mathbf{B}(\mathbf{r}) = \frac{\mu_0 I}{4\pi} \oint_L dl \times \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3},
+$$
+
+或是
+
+$$
+\mathbf{B}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int \int_\Omega \mathbf{j}(\mathbf{r}') \times \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}\, dx'dy'dz'.
+$$
+
+这里，$\Omega$ 为电流密度矢量 $\mathbf{j}(\mathbf{r}')$ 不为零的空间区域。上式称为毕奥 - 萨伐尔定律的积分形式。接下来我们要推导它的微分形式。
+
+尽管前者可能更为直观一些，但后者在解静磁学问题时更为适用。
+
+### · 微分形式
+
+首先，我们注意到恒等式
+
+$$
+\frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} = - \nabla_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|}.
+$$
+
+成立。因此公式
+$$
+\mathbf{B}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int \int_\Omega \mathbf{j}(\mathbf{r}') \times \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}\, dx'dy'dz'.
+$$
+可以被改写作
+
+$$
+\begin{aligned}
+\mathbf{B}(\mathbf{r}) &= - \frac{\mu_0}{4\pi} \int \int_\Omega \mathbf{j}(\mathbf{r}') \times \left( \nabla_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} \right)\, dx'dy'dz' \\\\
+&= \frac{\mu_0}{4\pi} \int \int_\Omega \left( \nabla_{\mathbf{r}} \frac{1}{|\mathbf{r} - \mathbf{r}'|} \right) \times \mathbf{j}(\mathbf{r}')\, dx'dy'dz'.
+\end{aligned}
+$$
+
+利用恒等式
+
+$$
+\nabla \times (f(\mathbf{r}) \mathbf{A}(\mathbf{r})) = (\nabla f(\mathbf{r})) \times \mathbf{A}(\mathbf{r}) + f(\mathbf{r}) (\nabla \times \mathbf{A}(\mathbf{r})),
+$$
+
+我们可以将此式进一步改写为
+
+$$
+\begin{aligned}
+\mathbf{B}(\mathbf{r}) &= \frac{\mu_0}{4\pi} \int \int_\Omega \nabla_{\mathbf{r}} \times \frac{\mathbf{j}(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|}\, dx'dy'dz' \\\\
+&- \frac{\mu_0}{4\pi} \int \int_\Omega \frac{1}{|\mathbf{r} - \mathbf{r}'|} (\nabla_{\mathbf{r}} \times \mathbf{j}(\mathbf{r}'))\, dx'dy'dz'.
+\end{aligned}
+$$
+
+由于电流密度 $\mathbf{j}(\mathbf{r}')$ 并不依赖于观察点坐标 $\mathbf{r}$，故此式右边的第二项为零。因此，我们得到
+
+$$
+\mathbf{B}(\mathbf{r}) = \nabla_{\mathbf{r}} \times \left( \frac{\mu_0}{4\pi} \int \int_\Omega \frac{\mathbf{j}(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|}\, dx'dy'dz' \right) \equiv \nabla_{\mathbf{r}} \times \mathbf{A}(\mathbf{r}),
+$$
+
+而
+
+$$
+\mathbf{A}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int \int_\Omega \frac{\mathbf{j}(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|}\, dx'dy'dz'
+$$
+
+在文献中被称为由电流分布 $\mathbf{j}(\mathbf{r}')$ 引起的矢量势。
+
+对数学式
+$$
+\mathbf{B}(\mathbf{r}) = \nabla_{\mathbf{r}} \times \left( \frac{\mu_0}{4\pi} \int \int_\Omega \frac{\mathbf{j}(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|}\, dx'dy'dz' \right) \equiv \nabla_{\mathbf{r}} \times \mathbf{A}(\mathbf{r}),
+$$
+两边取散度后，我们得到
+$$
+\mathrm{div}\,\mathbf{B}(\mathbf{r}) \equiv \nabla \cdot \mathbf{B}(\mathbf{r}) = \nabla \cdot (\nabla \times \mathbf{A}(\mathbf{r})) \equiv 0.
+$$
+
+也就是说，磁感应强度矢量场 $\mathbf{B}(\mathbf{r})$ 是无源的，即没有起点，也没有终点，总是形成一个回路。
+
+接下来，我们计算 $\mathbf{B}(\mathbf{r})$ 的旋度。我们有
+
+$$
+\nabla \times \mathbf{B}(\mathbf{r}) = \nabla_{\mathbf{r}} \times \left( \frac{\mu_0}{4\pi} \int \int_\Omega \mathbf{j}(\mathbf{r}') \times \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}\, dx'dy'dz' \right)
+$$
+
+$$
+= \frac{\mu_0}{4\pi} \int \int_\Omega \nabla_{\mathbf{r}} \times \left( \mathbf{j}(\mathbf{r}') \times \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \right)\, dx'dy'dz'.
+$$
+
+进一步，我们利用恒等式
+
+$$
+\nabla \times (\mathbf{a} \times \mathbf{b}) = \mathbf{a}(\nabla \cdot \mathbf{b}) - \mathbf{b}(\nabla \cdot \mathbf{a}) + (\mathbf{b} \cdot \nabla)\mathbf{a} - (\mathbf{a} \cdot \nabla)\mathbf{b}.
+$$
+
+改写上式。我们得到
+
+$$
+\begin{aligned}
+\nabla \times \mathbf{B}(\mathbf{r}) &= \frac{\mu_0}{4\pi} \int \int_\Omega \mathbf{j}(\mathbf{r}') \left( \nabla_{\mathbf{r}} \cdot \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \right)\, d\mathbf{r}' - \frac{\mu_0}{4\pi} \int \int_\Omega (\nabla_{\mathbf{r}} \cdot \mathbf{j}(\mathbf{r}')) \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}\, d\mathbf{r}' \\\\
+&+ \frac{\mu_0}{4\pi} \int \int_\Omega \left( \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \cdot \nabla_{\mathbf{r}} \right) \mathbf{j}(\mathbf{r}')\, d\mathbf{r}' - \frac{\mu_0}{4\pi} \int \int_\Omega (\mathbf{j}(\mathbf{r}') \cdot \nabla_{\mathbf{r}}) \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}\, d\mathbf{r}' \\\\
+&= \frac{\mu_0}{4\pi} \int \int_\Omega \mathbf{j}(\mathbf{r}') \left( \nabla_{\mathbf{r}} \cdot \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \right)\, d\mathbf{r}' - \frac{\mu_0}{4\pi} \int \int_\Omega (\mathbf{j}(\mathbf{r}') \cdot \nabla_{\mathbf{r}}) \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}\, d\mathbf{r}'.
+\end{aligned}
+$$
+
+我们需要论证上式最后一行中的第二项恒为零。为此，我们利用关系式
+
+$$
+\nabla_{\mathbf{r}} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} = - \nabla_{\mathbf{r}'} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}.
+$$
+
+因此，我们有
+
+$$
+\begin{aligned}
+&\int \int_\Omega (\mathbf{j}(\mathbf{r}') \cdot \nabla_{\mathbf{r}}) \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}\, d\mathbf{r}' = - \int \int_\Omega (\mathbf{j}(\mathbf{r}') \cdot \nabla_{\mathbf{r}'}) \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}\, dx'dy'dz' \\\\
+&= - \int_{-\infty}^{\infty} dx' \int_{-\infty}^{\infty} dy' \int_{-\infty}^{\infty} dz'\, j_x(x', y', z') \frac{\partial}{\partial x'} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \\\\
+&- \int_{-\infty}^{\infty} dx' \int_{-\infty}^{\infty} dy' \int_{-\infty}^{\infty} dz'\, j_y(x', y', z') \frac{\partial}{\partial y'} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \\\\
+&- \int_{-\infty}^{\infty} dx' \int_{-\infty}^{\infty} dy' \int_{-\infty}^{\infty} dz'\, j_z(x', y', z') \frac{\partial}{\partial z'} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}.
+\end{aligned}
+$$
+
+只需认真计算其中一项即可。例如，我们取上式右边的第一项，并对它做分步积分后得到
+
+$$
+- \int_{-\infty}^{\infty} dx' \int_{-\infty}^{\infty} dy' \int_{-\infty}^{\infty} dz'\, j_x(x', y', z') \frac{\partial}{\partial x'} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}
+$$
+
+$$
+= - \int_{-\infty}^{\infty} dy' \int_{-\infty}^{\infty} dz'\, j_x(x', y', z') \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \Big|_{x'=-\infty}^{x'=\infty}
+$$
+
+$$
++ \int_{-\infty}^{\infty} dx' \int_{-\infty}^{\infty} dy' \int_{-\infty}^{\infty} dz'\, \frac{\partial j_x(x', y', z')}{\partial x'} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}.
+$$
+
+由于在无穷远处，电流密度 $j_x(x', y', z')$ 为零，故上式中的第一项为零，只有第二项得以保留。同理，我们可得
+
+$$
+- \int_{-\infty}^{\infty} dx' \int_{-\infty}^{\infty} dy' \int_{-\infty}^{\infty} dz'\, j_y(x', y', z') \frac{\partial}{\partial y'} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}
+$$
+
+$$
+= \int_{-\infty}^{\infty} dx' \int_{-\infty}^{\infty} dy' \int_{-\infty}^{\infty} dz'\, \frac{\partial j_y(x', y', z')}{\partial y'} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3},
+$$
+
+以及
+
+$$
+- \int_{-\infty}^{\infty} dx' \int_{-\infty}^{\infty} dy' \int_{-\infty}^{\infty} dz'\, j_z(x', y', z') \frac{\partial}{\partial z'} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}
+$$
+
+$$
+= \int_{-\infty}^{\infty} dx' \int_{-\infty}^{\infty} dy' \int_{-\infty}^{\infty} dz'\, \frac{\partial j_z(x', y', z')}{\partial z'} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}.
+$$
+
+我们最后得到
+
+$$
+\begin{aligned}
+&\int \int_\Omega (\mathbf{j}(\mathbf{r}') \cdot \nabla_{\mathbf{r}}) \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}\, d\mathbf{r}' \\\\
+&= \int_{-\infty}^{\infty} dx' \int_{-\infty}^{\infty} dy' \int_{-\infty}^{\infty} dz'\, \frac{\partial j_x(x', y', z')}{\partial x'} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \\\\
+&+ \int_{-\infty}^{\infty} dx' \int_{-\infty}^{\infty} dy' \int_{-\infty}^{\infty} dz'\, \frac{\partial j_y(x', y', z')}{\partial y'} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \\\\
+&+ \int_{-\infty}^{\infty} dx' \int_{-\infty}^{\infty} dy' \int_{-\infty}^{\infty} dz'\, \frac{\partial j_z(x', y', z')}{\partial z'} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \\\\
+&= \int_{-\infty}^{\infty} dx' \int_{-\infty}^{\infty} dy' \int_{-\infty}^{\infty} dz'\, (\nabla_{\mathbf{r}'} \cdot \mathbf{j}(x', y', z')) \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} = 0.
+\end{aligned}
+$$
+
+在上式推导的最后一步，我们使用了稳恒电流所满足的连续性方程 $\nabla_{\mathbf{r}'} \cdot \mathbf{j}(\mathbf{r}') = 0$。
+
+由此一来，
+$$
+\begin{aligned}
+\nabla \times \mathbf{B}(\mathbf{r})&= \frac{\mu_0}{4\pi} \int \int_\Omega \mathbf{j}(\mathbf{r}') \left( \nabla_{\mathbf{r}} \cdot \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \right)\, d\mathbf{r}' \\\\
+&- \frac{\mu_0}{4\pi} \int \int_\Omega (\mathbf{j}(\mathbf{r}') \cdot \nabla_{\mathbf{r}}) \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}\, d\mathbf{r}'.
+\end{aligned}
+$$
+可简化为
+
+$$
+\nabla \times \mathbf{B}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int \int_\Omega \mathbf{j}(\mathbf{r}') \left( \nabla_{\mathbf{r}} \cdot \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \right)\, d\mathbf{r}'.
+$$
+
+在此式中出现的散度因子当 $\mathbf{r}' \ne \mathbf{r}$ 时恒为零。这是由于，按照定义，我们有
+
+$$
+\begin{aligned}
+\nabla_{\mathbf{r}} \cdot \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}&= \frac{\partial}{\partial x} \frac{x - x'}{[(x - x')^2 + (y - y')^2 + (z - z')^2]^{3/2}}\\\\
+&+ \frac{\partial}{\partial y} \frac{y - y'}{[(x - x')^2 + (y - y')^2 + (z - z')^2]^{3/2}}\\\\
+&+ \frac{\partial}{\partial z} \frac{z - z'}{[(x - x')^2 + (y - y')^2 + (z - z')^2]^{3/2}}\\\\
+&= \frac{[(x - x')^2 + (y - y')^2 + (z - z')^2]^{3/2} - 3(x - x')^2[(x - x')^2 + (y - y')^2 + (z - z')^2]^{1/2}}{[(x - x')^2 + (y - y')^2 + (z - z')^2]^{3/2}}\\\\
+&+ \frac{[(x - x')^2 + (y - y')^2 + (z - z')^2]^{3/2} - 3(y - y')^2[(x - x')^2 + (y - y')^2 + (z - z')^2]^{1/2}}{[(x - x')^2 + (y - y')^2 + (z - z')^2]^{3/2}}\\\\
+&+ \frac{[(x - x')^2 + (y - y')^2 + (z - z')^2]^{3/2} - 3(z - z')^2[(x - x')^2 + (y - y')^2 + (z - z')^2]^{1/2}}{[(x - x')^2 + (y - y')^2 + (z - z')^2]^{3/2}}\\\\
+&= \frac{3}{[(x - x')^2 + (y - y')^2 + (z - z')^2]^{3/2}} - \frac{3[(x - x')^2 + (y - y')^2 + (z - z')^2]}{[(x - x')^2 + (y - y')^2 + (z - z')^2]^{5/2}}\\\\
+&= \frac{3}{[(x - x')^2 + (y - y')^2 + (z - z')^2]^{3/2}} - \frac{3}{[(x - x')^2 + (y - y')^2 + (z - z')^2]^{3/2}} = 0.
+\end{aligned}
+$$
+
+而当 $\mathbf{r}' = \mathbf{r}$ 时，此式不再成立。
+
+为了处理这一特殊情况，我们可以选取一个以 $\mathbf{r}$ 为球心，半径为 $\delta$ 的小球 $\Omega_\delta$。因此
+$$
+\nabla \times \mathbf{B}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int \int_\Omega \mathbf{j}(\mathbf{r}') \left( \nabla_{\mathbf{r}} \cdot \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \right)\, d\mathbf{r}'.
+$$
+式又可被写作
+$$
+\begin{aligned}
+\nabla \times \mathbf{B}(\mathbf{r}) &= \frac{\mu_0}{4\pi} \int \int_{\Omega - \Omega_\delta} \mathbf{j}(\mathbf{r}') \left( \nabla_{\mathbf{r}} \cdot \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \right)\, d\mathbf{r}' + \frac{\mu_0}{4\pi} \int \int_{\Omega_\delta} \mathbf{j}(\mathbf{r}') \left( \nabla_{\mathbf{r}} \cdot \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \right)\, d\mathbf{r}' \\\\
+&= \frac{\mu_0}{4\pi} \int \int_{\Omega_\delta} \mathbf{j}(\mathbf{r}') \left( \nabla_{\mathbf{r}} \cdot \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \right)\, d\mathbf{r}'.
+\end{aligned}
+$$
+
+当 $\delta$ 充分小时，我们近似有 $\mathbf{j}(\mathbf{r}') \cong \mathbf{j}(\mathbf{r})$。因此，上式又可被写作
+
+$$
+\begin{aligned}
+\nabla \times \mathbf{B}(\mathbf{r}) &\cong \frac{\mu_0}{4\pi} \int \int_{\Omega_\delta} \mathbf{j}(\mathbf{r}) \left( \nabla_{\mathbf{r}} \cdot \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \right)\, d\mathbf{r}' \\\\
+&= \frac{\mu_0}{4\pi} \mathbf{j}(\mathbf{r}) \int \int_{\Omega_\delta} \left( - \nabla_{\mathbf{r}'} \cdot \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \right)\, d\mathbf{r}' = - \frac{\mu_0}{4\pi} \mathbf{j}(\mathbf{r}) \oint_{S_\delta} \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3} \cdot d\mathbf{S} \\\\
+&= \frac{\mu_0}{4\pi} \mathbf{j}(\mathbf{r}) \oint_{S_\delta} \frac{\mathbf{r}' - \mathbf{r}}{|\mathbf{r}' - \mathbf{r}|^3} \cdot d\mathbf{S} = \frac{\mu_0}{4\pi} \mathbf{j}(\mathbf{r}) 4\pi = \mu_0 \mathbf{j}(\mathbf{r}).
+\end{aligned}
+$$
+
+在推导的中间步骤，我们使用了高斯定理。最后，我们令 $\delta \to 0$，从而得到
+
+$$
+\mathrm{rot}\,\mathbf{B}(\mathbf{r}) \equiv \nabla \times \mathbf{B}(\mathbf{r}) = \mu_0 \mathbf{j}(\mathbf{r}).
+$$
+
+这一方程也可以改写成一个积分形式。为此，我们任取一个曲面 $S$，并将上式积分后有
+
+$$
+\int_S (\nabla \times \mathbf{B}(\mathbf{r})) \cdot d\mathbf{S} = \int_S \mu_0 \mathbf{j}(\mathbf{r}) \cdot d\mathbf{S} = \mu_0 I.
+$$
+
+这里，$I$ 为穿过曲面 $S$ 的总电流。接下来，我们再对上式的左边使用斯托克斯公式后得到
+
+$$
+\oint_C \mathbf{B}(\mathbf{r}) \cdot d\mathbf{l} = \mu_0 I.
+$$
+
+这里，$C$ 为曲面 $S$ 的边界。此式给出了磁感应强度矢量绕一回路 $C$ 的环流与穿过以该回路为边界的曲面 $S$ 的总电流之间的关系。
+
+### · 例题
+
+/example/ 在一根无穷长直导线中流动的电流 $I$ 均匀分布在半径为 $a$ 的导线的横截面上。求空间各点处的磁感应强度 $\mathbf{B}(\mathbf{r})$。
+
+> /proof/
+>
+> 利用毕奥 - 萨伐尔定律，我们看到，空间每一点处的磁感应强度矢量 $\mathbf{B}(\mathbf{r})$ 都是应该沿着柱坐标系（将导线的延展方向取作 $z$ 轴）的 $\mathbf{e}_\varphi$ 方向的。又从对称性的角度考虑，磁感应强度矢量的值仅应依赖于坐标 $\rho$，而与 $\varphi$ 和 $z$ 无关。也就是说，我们应有
+>
+> $$
+> \mathbf{B}(\mathbf{r}) = \mathbf{B}(\rho, \varphi, z) = B(\rho) \mathbf{e}_\varphi.
+> $$
+>
+> 现在，我们取一个以导线的轴心上一点为圆心，半径为 $\rho$，且盘面的法线方向平行于 $z$ 轴的圆盘 $\Omega_\rho$，并将其边界记作 $C_\rho$。那么根据
+> $$
+> \oint_C \mathbf{B}(\mathbf{r}) \cdot d\mathbf{l} = \mu_0 I.
+> $$
+> 当 $\rho > a$ 时，我们有
+> $$
+> \begin{aligned}
+> \oint_{C_\rho} \mathbf{B} \cdot d\mathbf{l}& = \oint_{C_\rho} B(\rho) \mathbf{e}_\varphi \cdot d\mathbf{l} \mathbf{e}_\varphi = \oint_{C_\rho} B(\rho)\, dl\\\\
+> &= \int_0^{2\pi} B(\rho)\, \rho d\varphi = 2\pi\rho B(\rho) = \mu_0 I.
+> \end{aligned}
+> $$
+>
+> 上式之所以成立，是由于当 $\rho > a$ 时，穿过盘面 $\Omega_\rho$ 的总电流恰为 $I$。因此，我们解得
+>
+> $$
+> \mathbf{B}(\rho, \varphi, z) = \frac{\mu_0 I}{2\pi\rho} \mathbf{e}_\varphi.
+> $$
+>
+> 接下来，我们考虑 $\rho < a$ 的情况。注意到此时穿过盘面 $\Omega_\rho$ 的总电流 $I_\rho$ 仅仅是 $I$ 的一部分，我们有
+>
+> $$
+> \begin{aligned}
+> \oint_{C_\rho} \mathbf{B} \cdot d\mathbf{l} &= \oint_{C_\rho} B(\rho) \mathbf{e}_\varphi \cdot d\mathbf{l} \mathbf{e}_\varphi = \oint_{C_\rho} B(\rho)\, dl = \int_0^{2\pi} B(\rho)\, \rho d\varphi = 2\pi\rho B(\rho) \\\\
+> &= \mu_0 I_\rho = \mu_0 \frac{I}{\pi a^2} \pi \rho^2 = \mu_0 I \frac{\rho^2}{a^2}.
+> \end{aligned}
+> $$
+>
+> 由此，我们得到
+>
+> $$
+> \mathbf{B}(\rho, \varphi, z) = \frac{\mu_0 I \rho}{2\pi a^2} \mathbf{e}_\varphi.
+> $$
+>
+> 将此式与
+> $$
+> \mathbf{B}(\rho, \varphi, z) = \frac{\mu_0 I}{2\pi\rho} \mathbf{e}_\varphi.
+> $$
+> 比较后我们发现，在导线的表面，即 $\rho = a$ 处，磁感应强度矢量 $\mathbf{B}(\rho, \varphi, z)$ 是连续变化的。
+>
+> 综合上面的推导，我们看到，当电荷分布以及电流分布不随时间变化时，电磁场在空间的分布满足微分关系式
+>
+> $$
+> \begin{aligned}
+> \nabla \cdot \mathbf{E}(\mathbf{r}) &= \frac{1}{\epsilon_0} \rho(\mathbf{r}), \quad \nabla \times \mathbf{E}(\mathbf{r}) = 0, \\\\
+> \nabla \cdot \mathbf{B}(\mathbf{r}) &= 0, \quad \nabla \times \mathbf{B}(\mathbf{r}) = \mu_0 \mathbf{j}(\mathbf{r}).
+> \end{aligned}
+> $$
+>
+> 同时，我们还引入了标量势 $\Phi(\mathbf{r})$ 和矢量势 $\mathbf{A}(\mathbf{r})$ 的概念。它们同电磁场强的关系为
+>
+> $$
+> - \nabla \Phi(\mathbf{r}) = \mathbf{E}(\mathbf{r}), \quad \nabla \times \mathbf{A}(\mathbf{r}) = \mathbf{B}(\mathbf{r}).
+> $$
+>
+> 当空间中静电荷密度分布 $\rho(\mathbf{r})$ 和电流密度分布 $\mathbf{j}(\mathbf{r})$ 已知时，标量势 $\Phi(\mathbf{r})$ 和矢量势 $\mathbf{A}(\mathbf{r})$ 可以被写作
+>
+> $$
+> \begin{aligned}
+> &\Phi(\mathbf{r}) = \frac{1}{4\pi\epsilon_0} \int \int \int_\Omega \frac{\rho(x', y', z')}{|\mathbf{r} - \mathbf{r}'|}\, dx'dy'dz',\\\\
+> &\mathbf{A}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int \int \int_\Omega \frac{\mathbf{j}(x', y', z')}{|\mathbf{r} - \mathbf{r}'|}\, dx'dy'dz'.
+> \end{aligned}
+> $$
+>
+> 然而，必须强调一点的是，与电场强度 $\mathbf{E}(\mathbf{r})$ 和磁感应强度 $\mathbf{B}(\mathbf{r})$ 不同的是，标量势 $\Phi(\mathbf{r})$ 和矢量势 $\mathbf{A}(\mathbf{r})$ 实验上是不可直接测量的。数学上，这表现为无论是标量势还是矢量势都不是唯一决定的。例如，我们可以在标势上加上一个常数 $C$，即令
+>
+> $$
+> \Phi'(\mathbf{r}) = \Phi(\mathbf{r}) + C,
+> $$
+>
+> 而
+>
+> $$
+> \mathbf{E}(\mathbf{r}) = - \nabla \Phi'(\mathbf{r})
+> $$
+>
+> 仍然成立。更有甚者，若对矢量势 $\mathbf{A}(\mathbf{r})$ 加上一个形为 $\nabla \Lambda(\mathbf{r})$ 的量，即令
+>
+> $$
+> \mathbf{A}'(\mathbf{r}) = \mathbf{A}(\mathbf{r}) + \nabla \Lambda(\mathbf{r}),
+> $$
+>
+> 这里 $\Lambda(\mathbf{r})$ 为任意一个可导函数，那么新的矢量势 $\mathbf{A}'(\mathbf{r})$ 给出的磁感应强度 $\mathbf{B}(\mathbf{r})$ 并无改变，即
+>
+> $$
+> \nabla \times \mathbf{A}'(\mathbf{r}) = \nabla \times \mathbf{A}(\mathbf{r}) + \nabla \times (\nabla
+> $$
+
+在文献中，公式
+$$
+\Phi'(\mathbf{r}) = \Phi(\mathbf{r}) + C
+$$
+以及公式
+$$
+\mathbf{A}'(\mathbf{r}) = \mathbf{A}(\mathbf{r}) + \nabla \Lambda(\mathbf{r}),
+$$
+所给出的变换称为规范变换（gauge transformation），而 $\Lambda(\mathbf{r})$ 称为规范函数。关于规范变换和规范函数，在以后的章节中我们还会深入讨论。
+
 ## Part 3 含时电磁场
 
 前面我们仅仅讨论了静电场和静磁场的情况，我们得到如下的两条方程：
@@ -106,518 +463,3 @@ $$
 $$
 
 从而完成了经典电动力学的最后建立。
-
-## Part 4 Maxwell 方程组推论
-
-接下来，让我们看一下麦克斯韦方程组的一些直接推论。
-
-### · 真空中电磁波传播
-
-首先是真空中电磁波的传播。
-
-将 Maxwell 方程组中的第二式再取一次旋度后，我们有
-$$
-\nabla \times (\nabla \times \mathbf{E}(\mathbf{r}, t)) = \nabla \times \left( - \frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t} \right) = - \frac{\partial}{\partial t} (\nabla \times \mathbf{B}(\mathbf{r}, t)).
-$$
-
-现将 Maxwell 方程组中的第四式代入上式的右边后，我们有
-
-$$
-\nabla \times (\nabla \times \mathbf{E}(\mathbf{r}, t)) = - \frac{\partial}{\partial t} \left( \mu_0 \mathbf{j}(\mathbf{r}, t) + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t} \right) = - \mu_0 \epsilon_0 \frac{\partial^2 \mathbf{E}(\mathbf{r}, t)}{\partial t^2}.
-$$
-
-这里，我们用到了在真空中 $\mathbf{j}(\mathbf{r}, t) = 0$ 这一事实。再利用恒等式
-
-$$
-\nabla \times (\nabla \times \mathbf{a}) = \nabla (\nabla \cdot \mathbf{a}) - \nabla^2 \mathbf{a}
-$$
-
-化简上式的左边，我们得到
-
-$$
-\nabla \cdot (\nabla \cdot \mathbf{E}(\mathbf{r}, t)) - \nabla^2 \mathbf{E}(\mathbf{r}, t) = - \mu_0 \epsilon_0 \frac{\partial^2 \mathbf{E}(\mathbf{r}, t)}{\partial t^2}.
-$$
-
-将 Maxwell 方程组中的第一式代入上式的右边后有
-
-$$
-\nabla \cdot \left( \frac{1}{\epsilon_0} \rho(\mathbf{r}, t) \right) - \nabla^2 \mathbf{E}(\mathbf{r}, t) = - \mu_0 \epsilon_0 \frac{\partial^2 \mathbf{E}(\mathbf{r}, t)}{\partial t^2}.
-$$
-
-但由于在真空中 $\rho(\mathbf{r}, t) = 0$ 成立，故我们最后得到
-
-$$
-- \nabla^2 \mathbf{E}(\mathbf{r}, t) = - \mu_0 \epsilon_0 \frac{\partial^2 \mathbf{E}(\mathbf{r}, t)}{\partial t^2},
-$$
-
-或是
-
-$$
-\frac{\partial^2 \mathbf{E}(\mathbf{r}, t)}{\partial t^2} - \frac{1}{\mu_0 \epsilon_0} \nabla^2 \mathbf{E}(\mathbf{r}, t) = 0.
-$$
-
-若令
-
-$$
-c = \frac{1}{\sqrt{\mu_0 \epsilon_0}},
-$$
-
-则此式又可被写作
-
-$$
-\frac{\partial^2 \mathbf{E}(\mathbf{r}, t)}{\partial t^2} - c^2 \nabla^2 \mathbf{E}(\mathbf{r}, t) = 0.
-$$
-
-相似地，我们也可推出磁感应强度分布 $\mathbf{B}(\mathbf{r}, t)$ 在真空中所满足的传播方程，即
-
-$$
-\frac{\partial^2 \mathbf{B}(\mathbf{r}, t)}{\partial t^2} - c^2 \nabla^2 \mathbf{B}(\mathbf{r}, t) = 0.
-$$
-
-此种类型的方程被称为达朗贝尔方程（D'Alembert equation），在力学中被用来描述弹性波在连续介质中的传播。
-
-> 为了看清楚这一点，让我们回顾一下声波在钢丝线上的传播方程的推导。我们以 $\xi(x, t)$ 标记钢丝上 $x$ 处的横向位移。任取一小段位于 $(x, x + \Delta x)$ 处的钢丝，则其运动满足牛顿方程
-> $$
-> (\rho \Delta x) \frac{\partial^2 \xi(x, t)}{\partial t^2} = T \sin(\theta + \Delta\theta) - T \sin\theta.
-> $$
->
-> 又由于在 $x$-轴方向上，这一段弦没有移动，故我们有
->
-> $$
-> T \cos(\theta + \Delta\theta) - T \cos\theta \approx 0.
-> $$
->
-> 当钢丝做微小振动时，角度 $\theta$ 很小，可以近似地取作 $\theta \approx 0$。因此
-> $$
-> (\rho \Delta x) \frac{\partial^2 \xi(x, t)}{\partial t^2} = T \sin(\theta + \Delta\theta) - T \sin\theta.
-> $$
-> 可以近似地写作
->
-> $$
-> \begin{aligned}
-> (\rho \Delta x) \frac{\partial^2 \xi(x, t)}{\partial t^2} &\approx \left( T \frac{\sin(\theta + \Delta\theta)}{\cos(\theta + \Delta\theta)} - T \frac{\sin\theta}{\cos\theta} \right) \cos\theta \\\\
-> &\approx T \left( \tan(\theta + \Delta\theta) - \tan\theta \right) = T \left( \left. \frac{\partial \xi(x, t)}{\partial x} \right|_{x + \Delta x} - \left. \frac{\partial \xi(x, t)}{\partial x} \right|_x \right) \\\\
-> &\approx T \frac{\partial^2 \xi(x, t)}{\partial x^2} \Delta x.
-> \end{aligned}
-> $$
->
-> 将上式两边同时除以 $\Delta x$ 后，再令它趋向于零，我们得到
->
-> $$
-> \rho \frac{\partial^2 \xi(x, t)}{\partial t^2} = T \frac{\partial^2 \xi(x, t)}{\partial x^2},
-> $$
->
-> 或是
->
-> $$
-> \frac{\partial^2 \xi(x, t)}{\partial t^2} - \frac{T}{\rho} \frac{\partial^2 \xi(x, t)}{\partial x^2} = \frac{\partial^2 \xi(x, t)}{\partial t^2} - u^2 \frac{\partial^2 \xi(x, t)}{\partial x^2} = 0.
-> $$
->
-> 不难验证，上式中出现的量
->
-> $$
-> u = \sqrt{\frac{T}{\rho}}
-> $$
->
-> 具有速率的量纲，被解释作声波在钢丝线上的传播速率。事实上，若将已知的平面行波的表达式
->
-> $$
-> \xi(x, t) = A \cos(\omega t - kx + \varphi_0)
-> $$
->
-> 代入上式后，我们得到
->
-> $$
-> u = \frac{\omega}{k}.
-> $$
->
-> 而这恰是平面行波相速率的表达式。
-
-因此，麦克斯韦得出结论，真空中的随时间改变的电磁场是以波的形式传播的，而传播的速率为
-
-$$
-c = \frac{1}{\sqrt{\mu_0 \epsilon_0}} = 299792458 \text{m/s},
-$$
-
-恰与光速相同。又由于这个原因，麦克斯韦进一步提出，光就是电磁波。麦克斯韦的这些结论由德国物理学家赫兹（Heinrich Hertz）于 1886 年用实验加以验证。
-
-### · Poynting 定理
-
-接下来，我们看麦克斯韦方程组的第二个推论。将方程组中的第四式
-$$
-\nabla \times \mathbf{B}(\mathbf{r}, t) = \mu_0 \mathbf{j}(\mathbf{r}, t) + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t},
-$$
-与电场强度 $\mathbf{E}(\mathbf{r}, t)$ 点乘后，我们得到
-$$
-\mathbf{E}(\mathbf{r}, t) \cdot (\nabla \times \mathbf{B}(\mathbf{r}, t)) = \mu_0 \mathbf{E}(\mathbf{r}, t) \cdot \mathbf{j}(\mathbf{r}, t) + \mu_0 \epsilon_0 \mathbf{E}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t}.
-$$
-
-再将方程组中的第二式与磁感应强度 $\mathbf{B}(\mathbf{r}, t)$ 点乘后，我们又得到
-
-$$
-\mathbf{B}(\mathbf{r}, t) \cdot (\nabla \times \mathbf{E}(\mathbf{r}, t)) = - \mathbf{B}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t}.
-$$
-
-两式相减后给出
-
-$$
-\begin{aligned}
-&\mathbf{E}(\mathbf{r}, t) \cdot (\nabla \times \mathbf{B}(\mathbf{r}, t)) - \mathbf{B}(\mathbf{r}, t) \cdot (\nabla \times \mathbf{E}(\mathbf{r}, t)) \\\\
-&= \mu_0 \mathbf{E}(\mathbf{r}, t) \cdot \mathbf{j}(\mathbf{r}, t) + \mu_0 \epsilon_0 \mathbf{E}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t} + \mathbf{B}(\mathbf{r}, t) \cdot \frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t} \\\\
-&= \mu_0 \mathbf{j}(\mathbf{r}, t) \cdot \mathbf{E}(\mathbf{r}, t) + \frac{1}{2} \mu_0 \epsilon_0 \frac{\partial E^2(\mathbf{r}, t)}{\partial t} + \frac{1}{2} \frac{\partial B^2(\mathbf{r}, t)}{\partial t}.
-\end{aligned}
-$$
-
-再利用矢量场满足的微分恒等式
-
-$$
-\nabla \cdot (\mathbf{a} \times \mathbf{b}) = \mathbf{b} \cdot (\nabla \times \mathbf{a}) - \mathbf{a} \cdot (\nabla \times \mathbf{b}),
-$$
-
-我们又可将上式进一步改写为
-
-$$
-\nabla \cdot (\mathbf{B}(\mathbf{r}, t) \times \mathbf{E}(\mathbf{r}, t)) = \mu_0 \mathbf{j}(\mathbf{r}, t) \cdot \mathbf{E}(\mathbf{r}, t) + \frac{1}{2} \mu_0 \epsilon_0 \frac{\partial E^2(\mathbf{r}, t)}{\partial t} + \frac{1}{2} \frac{\partial B^2(\mathbf{r}, t)}{\partial t},
-$$
-
-或是
-
-$$
-\frac{\partial}{\partial t} \left( \frac{1}{2} \epsilon_0 E^2(\mathbf{r}, t) + \frac{1}{2\mu_0} B^2(\mathbf{r}, t) \right) + \nabla \cdot \left( \frac{1}{\mu_0} (\mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)) \right) + \mathbf{j}(\mathbf{r}, t) \cdot \mathbf{E}(\mathbf{r}, t) = 0.
-$$
-
-若令
-
-$$
-\mathcal{U}(\mathbf{r}, t) = \frac{1}{2} \epsilon_0 E^2(\mathbf{r}, t) + \frac{1}{2\mu_0} B^2(\mathbf{r}, t), \quad \mathbf{S}(\mathbf{r}, t) = \frac{1}{\mu_0} (\mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)),
-$$
-
-此式又可被写作
-
-$$
-\frac{\partial \mathcal{U}(\mathbf{r}, t)}{\partial t} + \nabla \cdot \mathbf{S}(\mathbf{r}, t) + \mathbf{j}(\mathbf{r}, t) \cdot \mathbf{E}(\mathbf{r}, t) = 0,
-$$
-
-由玻印亭（John Poynting）于 1884 年得到，称为玻印亭定理，而 $\mathbf{S}(\mathbf{r}, t)$ 称为玻印亭矢量。
-
-为了理解玻印亭定理的物理意义，我们注意到上式第一项中的量 $\dfrac{1}{2} \epsilon_0 E^2$ 与 $\dfrac{1}{2\mu_0} B^2$ 都具有能量密度的量纲。要更清楚地看到这一点，我们可以通过研究电磁场对带电物体的作功来重新获得这些量。
-
-以 $\dfrac{1}{2} \epsilon_0 E^2$ 为例。我们考虑两个点电荷 $q_1$ 和 $q_2$。假设开始时 $q_1$ 被固定于空间 $\mathbf{r}_1$ 处，而 $q_2$ 处于空间的无穷远处。现在，将 $q_2$ 非常缓慢地从无穷远处移动到空间 $\mathbf{r}_2$ 处。在此过程中，外力所做之功当为
-$$
-W_2 = \int_{\infty}^{\mathbf{r}_2} \mathbf{F}_{\text{out}}(\mathbf{r}) \cdot d\mathbf{l} = \int_{\infty}^{\mathbf{r}_2} (- q_2 \mathbf{E}_1(\mathbf{r})) \cdot d\mathbf{l}.
-$$
-
-这里，
-
-$$
-\mathbf{E}_1(\mathbf{r}) = \frac{q_1}{4\pi \epsilon_0} \frac{\mathbf{r} - \mathbf{r}_1}{|\mathbf{r} - \mathbf{r}_1|^3}
-$$
-
-为电荷 $q_1$ 产生的在空间 $\mathbf{r}$ 处的电场强度。利用静电势的定义，我们可以将 $W_2$ 改写作
-
-$$
-W_2 = - q_2 \int_{\infty}^{\mathbf{r}_2} \mathbf{E}_1(\mathbf{r}) \cdot d\mathbf{l} = q_2 \Phi_1(\mathbf{r}_2).
-$$
-又考虑到电荷 $q_1$ 与 $q_2$ 的地位是完全对等的，故我们当有
-
-$$
-W_2 = q_2 \Phi_1(\mathbf{r}_2) = q_1 \Phi_2(\mathbf{r}_1),
-$$
-
-或是
-
-$$
-W_2 = \frac{1}{2} \left( q_2 \Phi_1(\mathbf{r}_2) + q_1 \Phi_2(\mathbf{r}_1) \right).
-$$
-
-仿照上述论证，若将 $q_1$ 和 $q_2$ 分别固定在空间 $\mathbf{r}_1$ 和 $\mathbf{r}_2$ 处后，再将另外一个电荷为 $q_3$ 的粒子自无穷远处缓慢移至 $\mathbf{r}_3$ 处，我们可将在此过程中外力做功得到的附加能量写作
-
-$$
-\Delta W = q_3 \left( \Phi_1(\mathbf{r}_3) + \Phi_2(\mathbf{r}_3) \right).
-$$
-
-另一方面，考虑到电荷彼此之间的对等关系，这一能量亦等于先将电荷 $q_3$ 固定在空间 $\mathbf{r}_3$ 处，然后将电荷 $q_1$ 和 $q_2$ 自无穷远处（刚性连接后）平移至 $\mathbf{r}_1$ 和 $\mathbf{r}_2$ 处外力所做之功的求和，即
-
-$$
-\Delta W = q_1 \Phi_3(\mathbf{r}_1) + q_2 \Phi_3(\mathbf{r}_2)
-$$
-
-亦成立。将之对称化后，我们得到
-
-$$
-\Delta W = \frac{1}{2} \left( q_1 \Phi_3(\mathbf{r}_1) + q_2 \Phi_3(\mathbf{r}_2) + q_3 \Phi_1(\mathbf{r}_3) + q_3 \Phi_2(\mathbf{r}_3) \right).
-$$
-
-现将 $W_2$ 与 $\Delta W$ 相加后，我们得到三个电荷 $q_1$, $q_2$ 和 $q_3$ 之间的总能量为
-
-$$
-\begin{aligned}
-W_3 &= W_2 + \Delta W \\\\
-&= \frac{1}{2} \left( q_1 \Phi_2(\mathbf{r}_1) + q_2 \Phi_1(\mathbf{r}_2) + q_1 \Phi_3(\mathbf{r}_1) + q_2 \Phi_3(\mathbf{r}_2) + q_3 \Phi_1(\mathbf{r}_3) + q_3 \Phi_2(\mathbf{r}_3) \right) \\\\
-&= \frac{1}{2} \left( q_1 [\Phi_2(\mathbf{r}_1) + \Phi_3(\mathbf{r}_1)] + q_2 [\Phi_1(\mathbf{r}_2) + \Phi_3(\mathbf{r}_2)] + q_3 [\Phi_1(\mathbf{r}_3) + \Phi_2(\mathbf{r}_3)] \right) \\\\
-&= \frac{1}{2} \left( q_1 \Phi_{2,3}(\mathbf{r}_1) + q_2 \Phi_{1,3}(\mathbf{r}_2) + q_3 \Phi_{1,2}(\mathbf{r}_3) \right).
-\end{aligned}
-$$
-
-这里，
-
-$$
-\Phi_{i,j}(\mathbf{r}) = \Phi_i(\mathbf{r}) + \Phi_j(\mathbf{r})
-$$
-
-为电荷 $q_i$ 和 $q_j$ 在空间 $\mathbf{r}$ 处产生的静电势。仿此，当电荷是在空间连续分布时，我们可以立刻写出其总静电能为
-
-$$
-W = \frac{1}{2} \int \int \int_{R^3} \rho(\mathbf{r}') \Phi(\mathbf{r}') \, dx' dy' dz'.
-$$
-
-这一表达式有两个直接的推论。先看其一。将泊松方程
-
-$$
-\nabla^2 \Phi(\mathbf{r}) = - \frac{1}{\epsilon_0} \rho(\mathbf{r})
-$$
-
-代入其中后，我们有
-
-$$
-\begin{aligned}
-W &= \frac{1}{2} \int \int \int_{R^3} \rho(\mathbf{r}') \Phi(\mathbf{r}') \, dx' dy' dz' \\\\
-&= - \frac{1}{2} \int \int \int_{R^3} [\epsilon_0 \nabla^2 \Phi(\mathbf{r}') ] \Phi(\mathbf{r}') \, dx' dy' dz'.
-\end{aligned}
-$$
-
-再进行分步积分，并使用关系式
-
-$$
-\mathbf{E}(\mathbf{r}) = - \nabla \Phi(\mathbf{r})
-$$
-
-我们进一步得到
-
-$$
-\begin{aligned}
-W &= - \frac{1}{2} \oint_{S_\infty} (\epsilon_0 \nabla \Phi(\mathbf{r}')) \Phi(\mathbf{r}') \cdot d\mathbf{S} + \frac{1}{2} \int \int \int_{R^3} \epsilon_0 [\nabla \Phi(\mathbf{r}') \cdot \nabla \Phi(\mathbf{r}')] \, dx' dy' dz' \\\\
-&= \int \int \int_{R^3} \left( \frac{1}{2} \epsilon_0 E^2(\mathbf{r}') \right) \, dx' dy' dz'.
-\end{aligned}
-$$
-
-这里，$S_\infty$ 为无穷远处的球面。当电荷分布在空间一个有限区域时，其上的静电势和电场强度皆为零，故上式中的面积分项取值为零。同时，从上式的最后一行可以看出，物理量 $\dfrac{1}{2} \epsilon_0 E^2(\mathbf{r})$ 的确可以解释作电场的能量密度。
-
-其次，若我们将静电势的表达式
-
-$$
-\Phi(x', y', z') = \frac{1}{4\pi \epsilon_0} \int \int \int_\Omega \frac{\rho(\bar{x}, \bar{y}, \bar{z})}{|\mathbf{r}' - \bar{\mathbf{r}}|} \, d\bar{x} d\bar{y} d\bar{z}
-$$
-
-代入式
-$$
-W = \frac{1}{2} \int \int \int_{R^3} \rho(\mathbf{r}') \Phi(\mathbf{r}') \, dx' dy' dz'.
-$$
-后，则电荷体系的能量可以被改写作
-
-$$
-\begin{aligned}
-W &= \frac{1}{2} \int \int \int_{R^3} \rho(\mathbf{r}') \Phi(\mathbf{r}') \, dx' dy' dz' \\\\
-&= \frac{1}{8\pi \epsilon_0} \int \int \int_{R^3} dx' dy' dz' \int \int \int_{R^3} \frac{\rho(x', y', z') \rho(\bar{x}, \bar{y}, \bar{z})}{|\mathbf{r}' - \bar{\mathbf{r}}|} \, d\bar{x} d\bar{y} d\bar{z}.
-\end{aligned}
-$$
-
-此式在原子 - 分子物理学的研究中经常被用到。
-
-现在，让我们回到方程
-$$
-\frac{\partial \mathcal{U}(\mathbf{r}, t)}{\partial t} + \nabla \cdot \mathbf{S}(\mathbf{r}, t) + \mathbf{j}(\mathbf{r}, t) \cdot \mathbf{E}(\mathbf{r}, t) = 0,
-$$
-当 $\mathbf{j} \cdot \mathbf{E} = 0$ 时，则该方程退化为一个连续性方程。它意味着电磁场的能量是守恒的，且玻印亭矢量 $\mathbf{S} = \dfrac{1}{\mu_0} \mathbf{E} \times \mathbf{B}$ 可以被解释作能量流密度。而当 $\mathbf{j} \cdot \mathbf{E} \neq 0$ 时，人们可以将之解释作电磁场对于运动电荷的作功功率密度。
-
-这一点也可以通过将玻印亭定理的两边对于空间任一区域 $\Omega$ 的积分
-$$
-\begin{aligned}
-&\int \int \int_\Omega \frac{\partial \mathcal{U}(\mathbf{r}, t)}{\partial t} \, dxdydz + \int \int \int_\Omega \nabla \cdot \mathbf{S}(\mathbf{r}, t) \, dxdydz \\\\
-+ &\int \int \int_\Omega \mathbf{j}(\mathbf{r}, t) \cdot \mathbf{E}(\mathbf{r}, t) \, dxdydz = 0
-\end{aligned}
-$$
-
-而看得更清楚。对于上式第二项使用高斯定理后，我们进一步得到
-
-$$
-\begin{aligned}
-&\frac{d}{dt} \int \int \int_\Omega \mathcal{U}(\mathbf{r}, t) \, dxdydz + \oint_{S_\Omega} \mathbf{S}(\mathbf{r}, t) \cdot d\mathbf{S} \\\\
-+ &\int \int \int_\Omega \mathbf{j}(\mathbf{r}, t) \cdot \mathbf{E}(\mathbf{r}, t) \, dxdydz = 0,
-\end{aligned}
-$$
-
-这里，$S_\Omega$ 为包围区域 $\Omega$ 的闭曲面。此式告诉我们，区域 $\Omega$ 内电磁场对于运动电荷所做之功以及电磁场能量随时间的改变是由从边界面 $S_\Omega$ 流入的能量流予以补偿的，即总能量是守恒的。
-
-既然谈到能量守恒定律，人们自然要问电磁场是否具有动量，且这一动量是否守恒？为了回答这一问题，让我们重新回到麦克斯韦方程组
-
-$$
-\begin{aligned}
-\nabla \cdot \mathbf{E}(\mathbf{r}, t) &= \frac{1}{\epsilon_0} \rho(\mathbf{r}, t), \quad \nabla \times \mathbf{E}(\mathbf{r}, t) = - \frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t}, \\\\
-\nabla \cdot \mathbf{B}(\mathbf{r}, t) &= 0, \quad \nabla \times \mathbf{B}(\mathbf{r}, t) = \mu_0 \mathbf{j}(\mathbf{r}, t) + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t}.
-\end{aligned}
-$$
-
-将此方程组中的第二式与第四式分别与 $\dfrac{1}{c^2} \mathbf{E}(\mathbf{r}, t)$ 和 $\mathbf{B}(\mathbf{r}, t)$ 做叉乘后相加，我们得到
-
-$$
-\begin{aligned}
-&\frac{1}{c^2} \mathbf{E}(\mathbf{r}, t) \times (\nabla \times \mathbf{E}(\mathbf{r}, t)) + \mathbf{B}(\mathbf{r}, t) \times (\nabla \times \mathbf{B}(\mathbf{r}, t)) \\\\
-&= \frac{1}{c^2} \mathbf{E}(\mathbf{r}, t) \times \left( - \frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t} \right) + \mathbf{B}(\mathbf{r}, t) \times \left( \mu_0 \mathbf{j}(\mathbf{r}, t) + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t} \right) \\\\
-&= - \mu_0 \epsilon_0 \mathbf{E}(\mathbf{r}, t) \times \frac{\partial \mathbf{B}(\mathbf{r}, t)}{\partial t} + \mu_0 \mathbf{B}(\mathbf{r}, t) \times \mathbf{j}(\mathbf{r}, t) + \mu_0 \epsilon_0 \mathbf{B}(\mathbf{r}, t) \times \frac{\partial \mathbf{E}(\mathbf{r}, t)}{\partial t} \\\\
-&= - \mu_0 \epsilon_0 \frac{\partial}{\partial t} (\mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)) - \mu_0 \mathbf{j}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t),
-\end{aligned}
-$$
-
-或是
-
-$$
-\begin{aligned}
-&\mu_0 \epsilon_0 \mathbf{E}(\mathbf{r}, t) \times (\nabla \times \mathbf{E}(\mathbf{r}, t)) + \mathbf{B}(\mathbf{r}, t) \times (\nabla \times \mathbf{B}(\mathbf{r}, t)) \\\\
-+ &\mu_0 \epsilon_0 \frac{\partial}{\partial t} (\mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)) + \mu_0 \mathbf{j}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t) = 0.
-\end{aligned}
-$$
-
-再利用麦克斯韦方程组的第一式 $\nabla \cdot \mathbf{E}(\mathbf{r}, t) = \dfrac{1}{\epsilon_0} \rho(\mathbf{r}, t)$ 和第三式 $\nabla \cdot \mathbf{B}(\mathbf{r}, t) = 0$，我们可以将上式的左边改写成
-
-$$
-\begin{aligned}
-&\mu_0 \epsilon_0 \left[ \mathbf{E}(\mathbf{r}, t) \times (\nabla \times \mathbf{E}(\mathbf{r}, t)) - \mathbf{E}(\mathbf{r}, t) \left( \nabla \cdot \mathbf{E}(\mathbf{r}, t) - \frac{1}{\epsilon_0} \rho(\mathbf{r}, t) \right) \right] \\\\
-+ &\left[ \mathbf{B}(\mathbf{r}, t) \times (\nabla \times \mathbf{B}(\mathbf{r}, t)) - \mathbf{B}(\mathbf{r}, t) (\nabla \cdot \mathbf{B}(\mathbf{r}, t)) \right] \\\\
-+ &\mu_0 \epsilon_0 \frac{\partial}{\partial t} (\mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)) + \mu_0 \mathbf{j}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t) = 0.
-\end{aligned}
-$$
-
-从上式两边除掉 $\mu_0$ 并加以整理后，我们得到
-
-$$
-\begin{aligned}
-&\frac{\partial}{\partial t} [\epsilon_0 \mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)] + [\rho(\mathbf{r}, t) \mathbf{E}(\mathbf{r}, t) + \mathbf{j}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)] \\\\
-+ &\frac{1}{\mu_0} [\mathbf{B}(\mathbf{r}, t) \times (\nabla \times \mathbf{B}(\mathbf{r}, t)) - \mathbf{B}(\mathbf{r}, t) (\nabla \cdot \mathbf{B}(\mathbf{r}, t))] \\\\
-+ &\epsilon_0 [\mathbf{E}(\mathbf{r}, t) \times (\nabla \times \mathbf{E}(\mathbf{r}, t)) - \mathbf{E}(\mathbf{r}, t) (\nabla \cdot \mathbf{E}(\mathbf{r}, t))] = 0.
-\end{aligned}
-$$
-
-注意到，上式中的第二项 $\mathbf{F}(\mathbf{r}, t) = \rho(\mathbf{r}, t) \mathbf{E}(\mathbf{r}, t) + \mathbf{j}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)$ 可以解释作一个运动的带电体在电磁场中所受到的力密度，故此式一定与冲量定理等价。
-
-特别是力学量 $\epsilon_0 \mathbf{E}(\mathbf{r}, t) \times \mathbf{B}(\mathbf{r}, t)$ 尽管看起来像是玻印亭矢量，但它实际上是电磁场的动量密度矢量。
-
-## Part 5 标量势矢量势规范变换
-
-在讨论静电场和静磁场时，我们引入了标量势和矢量势的概念，以及规范变换的定义。现在的问题是，在电场强度和磁感应强度可以随时间改变的情况下，我们应该对这些概念和定义做什么样的修改？
-
-### · 定义延拓
-
-先考虑磁感应强度矢量 $\mathbf{B}(\mathbf{r}, t)$。由于 $\nabla \cdot \mathbf{B}(\mathbf{r}, t) = 0$ 仍然成立，故我们可以直接引入一个含时的矢势 $\mathbf{A}(\mathbf{r}, t)$，使得
-$$
-\nabla \times \mathbf{A}(x, y, z, t) = \mathbf{B}(x, y, z, t).
-$$
-
-然而，对于标量势的重新引入就需要多说几句了。在含时的情况下，电场强度 $\mathbf{E}(\mathbf{r}, t)$ 的旋度不再为零，而是满足关系
-
-$$
-\nabla \times \mathbf{E}(x, y, z, t) = - \frac{\partial \mathbf{B}(x, y, z, t)}{\partial t} = - \frac{\partial}{\partial t} \nabla \times \mathbf{A}(x, y, z, t) = - \nabla \times \frac{\partial \mathbf{A}(x, y, z, t)}{\partial t}.
-$$
-
-移项后，我们有
-
-$$
-\nabla \times \left( \mathbf{E}(x, y, z, t) + \frac{\partial \mathbf{A}(x, y, z, t)}{\partial t} \right) = 0.
-$$
-
-因此，重新引入的标量势 $\Phi(\mathbf{r}, t)$ 应该使得下式
-
-$$
-\mathbf{E}(x, y, z, t) + \frac{\partial \mathbf{A}(x, y, z, t)}{\partial t} = - \nabla \Phi(x, y, z, t),
-$$
-
-即
-
-$$
-\mathbf{E}(x, y, z, t) = - \nabla \Phi(x, y, z, t) - \frac{\partial \mathbf{A}(x, y, z, t)}{\partial t}
-$$
-
-成立。如同静电场和静磁场的情况，此时的标量势和矢量势也并不是唯一确定的。
-
-事实上，我们可以引入任意一个可导函数 $\Lambda(x, y, z, t)$，并令
-$$
-\begin{aligned}
-\widetilde{\mathbf{A}}(x, y, z, t) &= \mathbf{A}(x, y, z, t) + \nabla \Lambda(x, y, z, t), \\\\
-\widetilde{\Phi}(x, y, z, t) &= \Phi(x, y, z, t) - \frac{\partial \Lambda(x, y, z, t)}{\partial t},
-\end{aligned}
-$$
-
-则不难验证，由矢量势 $\widetilde{\mathbf{A}}(x, y, z, t)$ 和标量势 $\widetilde{\Phi}(x, y, z, t)$ 所给出的电场强度和磁感应强度与由矢量势 $\mathbf{A}(x, y, z, t)$ 和标量势 $\Phi(x, y, z, t)$ 给出的完全一样，即我们有
-
-$$
-\begin{aligned}
-\widetilde{\mathbf{B}}(x, y, z, t) &= \nabla \times \widetilde{\mathbf{A}}(x, y, z, t) = \nabla \times \mathbf{A}(x, y, z, t) + \nabla \times (\nabla \Lambda(x, y, z, t)) \\\\
-&= \nabla \times \mathbf{A}(x, y, z, t) = \mathbf{B}(x, y, z, t),
-\end{aligned}
-$$
-
-以及
-
-$$
-\begin{aligned}
-\widetilde{\mathbf{E}}(x, y, z, t) &= - \nabla \widetilde{\Phi}(x, y, z, t) - \frac{\partial \widetilde{\mathbf{A}}(x, y, z, t)}{\partial t} \\\\
-&= - \nabla \Phi(x, y, z, t) + \frac{\partial}{\partial t} (\nabla \Lambda(x, y, z, t)) - \frac{\partial \mathbf{A}(x, y, z, t)}{\partial t} - \frac{\partial}{\partial t} (\nabla \Lambda(x, y, z, t)) \\\\
-&= - \nabla \Phi(x, y, z, t) - \frac{\partial \mathbf{A}(x, y, z, t)}{\partial t} = \mathbf{E}(x, y, z, t).
-\end{aligned}
-$$
-
-这样一来，我们就有了一定的自由度来选取更为适宜计算的标量势和矢量势，而不必担心会影响最后的计算结果了。
-
-### · 规范选择
-
-最常用的规范选择有两种。一种是所谓库仑规范（Coulomb gauge），而另外一种是所谓洛伦兹规范（Lorentz gauge）。先看第一种规范。若我们选取规范函数 $\Lambda(x, y, z, t)$，使得
-
-$$
-\nabla^2 \Lambda(x, y, z, t) = - \nabla \cdot \mathbf{A}(x, y, z, t)
-$$
-
-成立，那么我们有
-
-$$
-\begin{aligned}
-\nabla \cdot \widetilde{\mathbf{A}}(x, y, z, t) &= \nabla \cdot (\mathbf{A}(x, y, z, t) + \nabla \Lambda(x, y, z, t)) \\\\
-&= \nabla \cdot \mathbf{A}(x, y, z, t) + \nabla^2 \Lambda(x, y, z, t) = 0.
-\end{aligned}
-$$
-
-此时，新的标量势 $\widetilde{\Phi}(x, y, z, t)$ 满足方程
-
-$$
-\begin{aligned}
-\nabla \cdot \mathbf{E}(x, y, z, t) &= - \nabla^2 \widetilde{\Phi}(x, y, z, t) - \frac{\partial}{\partial t} \nabla \cdot \widetilde{\mathbf{A}}(x, y, z, t) \\\\
-&= - \nabla^2 \widetilde{\Phi}(x, y, z, t) = \frac{1}{\epsilon_0} \rho(x, y, z, t),
-\end{aligned}
-$$
-
-或是
-
-$$
-\nabla^2 \widetilde{\Phi}(x, y, z, t) = - \frac{1}{\epsilon_0} \rho(x, y, z, t),
-$$
-
-即静电场所满足的泊松方程。因此，$\widetilde{\Phi}(x, y, z, t)$ 和 $\widetilde{\mathbf{A}}(x, y, z, t)$ 被称为满足库仑规范的标势和矢势。
-
-在第二种情况，我们选取方程
-
-$$
-\nabla^2 \Lambda(x, y, z, t) - \mu_0 \epsilon_0 \frac{\partial^2}{\partial t^2} \Lambda(x, y, z, t) = - \nabla \cdot \mathbf{A}(x, y, z, t) - \mu_0 \epsilon_0 \frac{\partial \Phi(x, y, z, t)}{\partial t}
-$$
-
-的解作为规范函数。因此，我们有
-
-$$
-\begin{aligned}
-&\nabla \cdot \widetilde{\mathbf{A}}(x, y, z, t) + \mu_0 \epsilon_0 \frac{\partial \widetilde{\Phi}(x, y, z, t)}{\partial t} \\\\
-&= \nabla \cdot (\mathbf{A}(x, y, z, t) + \nabla \Lambda(x, y, z, t)) + \frac{1}{c^2} \frac{\partial}{\partial t} \left( \Phi(x, y, z, t) - \frac{\partial \Lambda(x, y, z, t)}{\partial t} \right) \\\\
-&= \left( \nabla \cdot \mathbf{A}(x, y, z, t) + \frac{\partial \Phi(x, y, z, t)}{c^2 \partial t} \right) + \left( \nabla^2 \Lambda(x, y, z, t) - \frac{\partial^2 \Lambda(x, y, z, t)}{c^2 \partial t^2} \right) \\\\
-&= 0.
-\end{aligned}
-$$
-
-此时的 $\widetilde{\Phi}(x, y, z, t)$ 和 $\widetilde{\mathbf{A}}(x, y, z, t)$ 被分别称为满足洛伦兹规范的标量势和矢量势。在推导描述电磁场产生和辐射过程的推迟势时，这一规范非常有用。
-

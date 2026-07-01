@@ -20,6 +20,8 @@ export default defineCollection({
 				"electrodynamics-9",
 				"electrodynamics-10",
 				"electrodynamics-11",
+				"electrodynamics-12",
+				"electrodynamics-13",
 			],
 		},
 	],
