@@ -78,9 +78,9 @@
     "electrodynamics-4": 4900,
     "electrodynamics-3": 4356,
     "electrodynamics-2": 4262,
-    "electrodynamics-17": 3195,
-    "electrodynamics-16": 4807,
-    "electrodynamics-15": 3730,
+    "electrodynamics-17": 3196,
+    "electrodynamics-16": 4808,
+    "electrodynamics-15": 3731,
     "electrodynamics-14": 2727,
     "electrodynamics-13": 6028,
     "electrodynamics-12": 4556,
@@ -145,7 +145,7 @@
     "weekly-1": 283
   },
   "travel": {
-    "travel-1": 67
+    "travel-1": 2433
   },
   "article": {
     "r1s3vxud": 603,
@@ -159,8 +159,8 @@
     "article-2": 3869,
     "article-1": 1439
   },
-  "blog\\mark\\mark-3": 187,
   "mark": {
+    "mark-3": 193,
     "mark-2": 2213,
     "mark-1": 900
   },
@@ -187,7 +187,7 @@
   },
   "algebra\\algebra-13": 3,
   "algebra\\algebra-12": 3,
-  "total": 453038,
-  "lastUpdated": "2026-07-11T07:27:26.973Z",
+  "total": 455413,
+  "lastUpdated": "2026-07-12T19:21:30.621Z",
   "fileCount": 154
 }

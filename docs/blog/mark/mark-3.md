@@ -1,5 +1,6 @@
 ---
 title: mark-3
+permalink: /mark/mark-3/
 createTime: 2026/07/07 19:53:21
 ---
 这是一篇文献阅读和学习的笔记，领域是光通信.
