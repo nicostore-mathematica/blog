@@ -1,5 +1,5 @@
 ---
-title: 光学
+title: 基础光学
 permalink: /optics/
 createTime: 2025/11/18 20:57:28
 ---

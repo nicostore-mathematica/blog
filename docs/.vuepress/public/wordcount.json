@@ -31,7 +31,7 @@
     "physics-0": 4112
   },
   "optics": {
-    "index": 83,
+    "index": 85,
     "optics-2": 6,
     "optics-1": 6
   },
@@ -78,6 +78,11 @@
     "electrodynamics-4": 4900,
     "electrodynamics-3": 4356,
     "electrodynamics-2": 4262,
+    "electrodynamics-17": 3195,
+    "electrodynamics-16": 4807,
+    "electrodynamics-15": 3730,
+    "electrodynamics-14": 2727,
+    "electrodynamics-13": 6028,
     "electrodynamics-12": 4556,
     "electrodynamics-11": 3286,
     "electrodynamics-10": 7017,
@@ -140,7 +145,7 @@
     "weekly-1": 283
   },
   "travel": {
-    "travel-1": 49
+    "travel-1": 67
   },
   "article": {
     "r1s3vxud": 603,
@@ -154,6 +159,7 @@
     "article-2": 3869,
     "article-1": 1439
   },
+  "blog\\mark\\mark-3": 187,
   "mark": {
     "mark-2": 2213,
     "mark-1": 900
@@ -181,7 +187,7 @@
   },
   "algebra\\algebra-13": 3,
   "algebra\\algebra-12": 3,
-  "total": 432344,
-  "lastUpdated": "2026-07-01T08:00:55.564Z",
-  "fileCount": 149
+  "total": 453038,
+  "lastUpdated": "2026-07-11T07:27:26.973Z",
+  "fileCount": 154
 }
