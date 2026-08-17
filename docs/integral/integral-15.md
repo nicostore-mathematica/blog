@@ -1,625 +1,549 @@
 ---
-title: Chapter 15 连续映射
+title: Lesson 15 不定积分 I
 permalink: /integral/integral-15/
-createTime: 2025/12/16 19:25:30
+createTime: 2026/08/17 14:16:59
 ---
 
-## Part 1 连续映射
-
-### · 基本概念
-
-回忆一下连续函数的定义：$f: \mathbb{R} \to \mathbb{R}$ 在 $x_0$ 处连续是指，任给 $\varepsilon > 0$，存在 $\delta > 0$，使得 $|x - x_0| < \delta$ 时 $|f(x) - f(x_0)| < \varepsilon$。用度量空间的语言可作如下推广：
-
-**定义1** (连续映射)
-
-> 设 $f: X \to Y$ 为度量空间 $(X,\rho_1)$, $(Y,\rho_2)$ 之间的映射，设 $x_0 \in X$。
->
-> 如果任给 $\varepsilon > 0$，存在 $\delta > 0$ 使得 $f(B_\delta^X(x_0)) \subset B_\varepsilon^Y(f(x_0))$，则称 $f$ 在 $x_0$ 处连续。
->
-> 如果 $f$ 处处连续，则称 $f$ 为连续映射。当 $Y = \mathbb{R}$ 时，连续映射也称为连续函数。
->
-> 其中，记号 $B_\delta^X(x_0)$ 表示 $X$ 中以 $x_0$ 为中心，以 $\delta$ 为半径的开球，$B_\varepsilon^Y(f(x_0))$ 表示 $Y$ 中以 $f(x_0)$ 为中心，以 $\varepsilon$ 为半径的开球。
-
-/example/  距离函数的连续性
-
-> /proof/
->
-> 设 $a$ 是度量空间 $(X,\rho)$ 中固定的一点，则函数 $f(x) = \rho(x,a)$ 是连续的：设 $x_0 \in X$，则任给 $\varepsilon > 0$，取 $\delta = \varepsilon$，当 $x \in B_\delta(x_0)$ 时  
-> $$
-> |f(x) - f(x_0)| = |\rho(x,a) - \rho(x_0,a)| \leqslant \rho(x,x_0) < \delta = \varepsilon,
-> $$
-> 因此 $f$ 在 $x_0$ 处连续。
-
-**命题1** (连续映射的刻画)
-
-设 $f: X \to Y$ 为度量空间之间的映射，$x_0$ 为 $X$ 中的一点。则
-
-(1) $f$ 在 $x_0$ 处连续 $\iff$ 对任意收敛于 $x_0$ 的点列 $\{x_n\}$，均有  
-$$
-\lim_{n \to \infty} f(x_n) = f(x_0);
-$$
-(2) $f$ 为连续映射 $\iff$ 对任意开集 $V \subset Y$，$f^{-1}(V)$ 为 $X$ 中开集；
-
-(3) $f$ 为连续映射 $\iff$ 对任意闭集 $B \subset Y$，$f^{-1}(B)$ 为 $X$ 中闭集。
-
-> /proof/
->
-> (1) “$\Longrightarrow$” 设 $f$ 在 $x_0$ 处连续，则任给 $\varepsilon > 0$，存在 $\delta > 0$ 使得  
-> $$
-> f(B_\delta^X(x_0)) \subset B_\varepsilon^Y(f(x_0)).
-> $$
-> 因为 $\displaystyle\lim_{n \to \infty} x_n = x_0$，故 $n$ 充分大时 $x_n \in B_\delta^X(x_0)$，从而 $f(x_n) \in B_\varepsilon^Y(f(x_0))$，这表明  
-> $$
-> f(x_n) \to f(x_0)\quad(n \to \infty).
-> $$
->
-> “$\Longleftarrow$”（反证法）如果 $f$ 在 $x_0$ 处不连续，则存在 $\varepsilon_0 > 0$，使得对 $\delta = 1/n$，存在 $x_n \in B_{1/n}^X(x_0)$，而 $f(x_n) \notin B_{\varepsilon_0}^Y(f(x_0))$。显然 $x_n \to x_0$，但 $f(x_n) \not\to f(x_0)$，矛盾！
->
-> (2) “$\Longrightarrow$” 设 $f$ 为连续映射，$V$ 为 $Y$ 中开集。如果 $x_0 \in f^{-1}(V)$，则 $y_0 = f(x_0) \in V$，由于 $V$ 为开集，故存在 $\varepsilon > 0$，使得 $B_\varepsilon^Y(y_0) \subset V$。根据连续性，存在 $\delta > 0$，使得 $f(B_\delta^X(x_0)) \subset B_\varepsilon^Y(y_0) \subset V$，即 $B_\delta^X(x_0) \subset f^{-1}(V)$，这说明 $f^{-1}(V)$ 为开集。
->
-> “$\Longleftarrow$” 如果开集的原象仍为开集，则任取 $x_0 \in X$ 以及 $\varepsilon > 0$，记 $y_0 = f(x_0)$。于是 $f^{-1}(B_\varepsilon^Y(y_0))$ 为 $X$ 中包含 $x_0$ 的开集，从而存在 $\delta > 0$，使得  
-> $$
-> B_\delta^X(x_0) \subset f^{-1}(B_\varepsilon^Y(y_0)),
-> $$
-> 即 $f(B_\delta^X(x_0)) \subset B_\varepsilon^Y(y_0)$，这说明 $f$ 在 $x_0$ 处连续。
->
-> (3): 省略.
-
-**注意**。
-
-(1) 如果 $A$ 为 $X$ 之子集，$f: A \to Y$ 为映射，则把 $X$ 的度量限制于 $A$，从而 $A$ 也为度量空间（子度量空间），此时可以定义 $f$ 的连续性，并有类似的刻画。
-
-(2) 设 $f: A \to Y$ 连续，如果任给 $\varepsilon > 0$，存在 $\delta > 0$，使得 $\rho_1(a_1,a_2) < \delta$ 时 $\rho_2(f(a_1),f(a_2)) < \varepsilon$，则称 $f$ 为一致连续映射。
-
-/example/  Lipschitz 映射
-
-> /proof/
->
-> 设 $f: X \to Y$ 是度量空间之间的映射，如果存在常数 $L$，使得  
-> $$
-> \rho_2(f(x_1),f(x_2)) \leqslant L\rho_1(x_1,x_2),\quad \forall\,x_1,x_2 \in X,
-> $$
-> 则称 $f$ 为 Lipschitz 映射，$L$ 称为 Lipschitz 常数。Lipschitz 映射是一致连续的。特别地，压缩映射是 Lipschitz 映射，因此也是连续映射。
-
-**定理2** (连续映射与紧性)：设 $f: X \to Y$ 为连续映射，则
-
-(1) $f$ 将 $X$ 中紧致集合映为 $Y$ 中紧致集合；
-
-(2) $f$ 在紧致集合上一致连续。
-
-> /proof/
->
-> (1) 设 $A$ 为 $X$ 中紧致集合，取 $f(A)$ 的开覆盖 $\{V_\alpha\}$，则 $\{f^{-1}(V_\alpha)\}$ 为 $A$ 的开覆盖，从而存在 $\alpha_1,\cdots,\alpha_k$ 使得 $A \subset \displaystyle\bigcup_{i=1}^k f^{-1}(V_{\alpha_i})$。这说明 $f(A) \subset \bigcup_{i=1}^k V_{\alpha_i}$。
->
-> (2) 设 $A$ 为紧致集合。如果 $f$ 在 $A$ 上不是一致连续的，则存在 $\varepsilon_0 > 0$，使得对 $\delta = 1/n$，存在 $a_n,b_n \in A$，使得  
-> $$
-> \rho_1(a_n,b_n) < \frac{1}{n},\quad \rho_2(f(a_n),f(b_n)) > \varepsilon_0.
-> $$
-> $\{a_n\}$ 和 $\{b_n\}$ 分别存在收敛子列，不妨设它们本身是收敛的，极限分别为 $a_0$, $b_0$，则  
-> $$
-> \begin{aligned}
-> \rho_1(a_0,b_0) &\leqslant \rho_1(a_0,a_n) + \rho_1(a_n,b_n) + \rho_1(b_n,b_0) \\\\
-> &< \frac{1}{n} + \rho_1(a_0,a_n) + \rho_1(b_n,b_0) \to 0,
-> \end{aligned}
-> $$
-> 即 $a_0 = b_0$。但  
-> $$
-> \varepsilon_0 < \rho_2(f(a_n),f(b_n)) \leqslant \rho_2(f(a_n),f(a_0)) + \rho_2(f(b_0),f(b_n)) \to 0.
-> $$
-> 这就导出了矛盾！
-
-**推论3** (最值定理)：连续函数 $f: X \to \mathbb{R}$ 在紧致集合上可以取到最大值和最小值。
-
-> /proof/
->
-> 设 $A$ 为 $X$ 中的紧致集合，则 $f(A)$ 是 $\mathbb{R}$ 中的紧致集合，因此为 $\mathbb{R}$ 中的有界闭集。这说明 $f(A)$ 中存在最大数和最小数，它们分别是 $f$ 在 $A$ 上的最大值和最小值。
-
-**定义2** (道路连通)
-
-> 设 $G$ 为 $X$ 的子集，如果任给 $x_1,x_2 \in G$，均存在连续映射（连续曲线）$\sigma: I = [0,1] \to X$ 使得 $\sigma(0) = x_1$, $\sigma(1) = x_2$, $\sigma(I) \subset G$，则称 $G$ 道路连通。
->
-> 显然，$\mathbb{R}^n$ 是道路连通的，因为任何两点均可用直线段相连接。
-
-**命题4**：$\mathbb{R}$ 中道路连通集合必为区间（可退化为一点）。
-
-> /proof/
->
-> 设 $G \subset \mathbb{R}$ 道路连通，$a \leqslant b \in G$。我们证明 $[a,b] \subset G$。
->
-> 事实上，由定义，存在连续映射 $f: [0,1] \to \mathbb{R}$，使得 $f(0) = a$, $f(1) = b$, $f([0,1]) \subset G$。$f$ 为一元连续函数，由介值定理，$[a,b] \subset f([0,1]) \subset G$。
-
-**定理5** (连续映射与连通性)：连续映射将道路连通的集合映为道路连通集合。
-
-> /proof/
->
-> 设 $G \subset X$ 道路连通，$f: X \to Y$ 连续。
->
-> 任取 $y_1,y_2 \in f(G)$，则存在 $x_1,x_2 \in G$ 使得 $f(x_1) = y_1$, $f(x_2) = y_2$。
->
-> 由定义，存在连续映射 $\sigma: [0,1] \to X$ 使得 $\sigma(0) = x_1$, $\sigma(1) = x_2$, $\sigma([0,1]) \subset G$。
->
-> 复合映射 $f \circ \sigma: [0,1] \to Y$ 连续，且 $f \circ \sigma(0) = f(x_1) = y_1$, $f \circ \sigma(1) = f(x_2) = y_2$, $f \circ \sigma([0,1]) \subset f(G)$。$f \circ \sigma$ 就是 $f(G)$ 中连接 $y_1,y_2$ 的道路。
-
-**推论6** (介值定理)：设 $f: X \to \mathbb{R}$ 为连续函数，$G \subset X$ 道路连通。
-
-(1) 如果存在 $x_1,x_2 \in G$，使得 $f(x_1)f(x_2) \leqslant 0$，则存在 $x_0 \in G$ 使得 $f(x_0) = 0$；
-
-(2) 对于满足条件 $f(x_1) \leqslant y \leqslant f(x_2)$ 的任意 $y$，一定存在 $x \in G$ 使得 $y = f(x)$。
-
-> /proof/
->
-> 以 (2) 为例。因为 $f$ 连续，$G$ 道路连通，故 $f(G) \subset \mathbb{R}$ 也道路连通，从而 $f(G)$ 为区间。
->
-> 由 $f(x_1),f(x_2) \in f(G)$ 即知 $[f(x_1),f(x_2)] \subset f(G)$，特别地，$y \in f(G)$，即存在 $x \in G$ 使得 $y = f(x)$。
-
-/example/设 $f: S^1 \to \mathbb{R}$ 为单位圆周上的连续函数，则存在 $x_0 \in S^1$，使得  
-$$
-f(-x_0) = f(x_0).
-$$
-
-> /proof/
->
-> 考虑函数 $g: S^1 \to \mathbb{R}$，使得  
-> $$
-> g(x) = f(x) - f(-x),\quad \forall\,x \in S^1.
-> $$
-> 则 $g$ 也是连续函数，且  
-> $$
-> g(x)g(-x) = [f(x) - f(-x)][f(-x) - f(x)] = -[f(x) - f(-x)]^2 \leqslant 0,
-> $$
-> 根据介值定理，存在 $x_0 \in S^1$，使得 $g(x_0) = 0$，此时 $f(-x_0) = f(x_0)$。
-
-### · 欧氏连续映射
-
-在以后的章节中，欧氏空间将是我们的研究对象。因此，我们要考虑从一个欧氏空间到另一个欧氏空间的映射。从 $\mathbb{R}$ 到 $\mathbb{R}$ 的映射称为一元函数；当 $n > 1$ 时，从 $\mathbb{R}^n$ 到 $\mathbb{R}$ 的映射称为多元函数；一般地，从 $\mathbb{R}^n$ 到 $\mathbb{R}^m$ 的映射称为向量值函数。
-
-对于多元连续函数来说，其四则运算性质和一元连续函数没有什么区别。
-
-**命题7**：设 $f,g: \mathbb{R}^n \to \mathbb{R}$ 为连续函数，则
-
-> (1) 当 $\lambda,\mu \in \mathbb{R}$ 时，$\lambda f + \mu g$ 也是连续函数；
->
-> (2) $fg$ 为连续函数；
->
-> (3) 当 $g \ne 0$ 时，$f/g$ 为连续函数。
-
-现在我们考虑向量值的函数 $f: \mathbb{R}^n \to \mathbb{R}^m$，写成分量的形式为  
-$$
-f(x) = (f_1(x),\cdots,f_m(x)),\quad x = (x_1,\cdots,x_n) \in \mathbb{R}^m.
-$$
-我们有
-
-**命题8**：$f: \mathbb{R}^n \to \mathbb{R}^m$ 为连续映射当且仅当 $f_i$ 均为连续函数，其中 $i = 1,\cdots,m$。
-
-> /proof/
->
-> 由连续性的刻画可知，$f$ 在 $x_0$ 处连续当且仅当 $\lim_{x \to x_0} f(x) = f(x_0)$，根据欧氏空间中的极限性质，  
-> $$
-> \lim_{x \to x_0} f(x) = f(x_0) \iff \lim_{x \to x_0} f_i(x) = f_i(x_0),\quad i = 1,\cdots,m.
-> $$
-> 即 $f$ 在 $x_0$ 处连续当且仅当 $f_i$ ($1 \leqslant i \leqslant n$) 均在 $x_0$ 处连续。
-
-**线性映射**：
-
-> 设 $f: \mathbb{R}^n \to \mathbb{R}^m$ 为向量值函数。如果任给 $x,y \in \mathbb{R}^n$，成立  
-> $$
-> f(\lambda x + \mu y) = \lambda f(x) + \mu f(y),\quad \forall\,\lambda,\mu \in \mathbb{R},
-> $$
-> 则称 $f$ 为线性映射。$m = 1$ 的情形就是线性函数。
->
-> 记 $e_i$ 是 $\mathbb{R}^n$ 中第 $i$ 个位置为 1，其它位置为零的向量，则 $\{e_1,\cdots,e_n\}$ 为 $\mathbb{R}^n$ 的一组标准基。$\mathbb{R}^n$ 中的向量 $x$ 可写为  
-> $$
-> x = (x_1,\cdots,x_n) = x_1e_1 + \cdots + x_ne_n,
-> $$
-> 根据线性性，$f(x)$ 可写为  
-> $$
-> f(x) = f(x_1e_1 + \cdots + x_ne_n) = x_1f(e_1) + \cdots + x_nf(e_n),
-> $$
-> 这是线性函数表达式的推广。如果记 $f(e_i) = (a_{1i},\cdots,a_{mi})$，用列向量表示，则上式可改写为  
-> $$
-> f(x) = 
-> \begin{pmatrix}
-> a_{11} & a_{12} & \cdots & a_{1n} \\
-> a_{21} & a_{22} & \cdots & a_{2n} \\
-> \vdots & \vdots & \ddots & \vdots \\
-> a_{m1} & a_{m2} & \cdots & a_{mn}
-> \end{pmatrix}
-> \begin{pmatrix}
-> x_1 \\ x_2 \\ \vdots \\ x_n
-> \end{pmatrix},
-> $$
-> 这是线性映射的矩阵表示，$f$ 由矩阵 $A = (a_{ij})_{m\times n}$ 完全决定了。
->
-> 如果 $f: \mathbb{R}^n \to \mathbb{R}^m$, $g: \mathbb{R}^m \to \mathbb{R}^s$ 均为连续映射，则复合映射 $g \circ f$ 是从 $\mathbb{R}^n$ 到 $\mathbb{R}^s$ 的连续映射。
->
-> 如果 $f,g$ 均为线性映射，且其矩阵表示分别为 $A,B$，则 $g \circ f$ 也是线性映射，其矩阵表示为 $BA$。
->
-> 因此，对于线性映射的研究可以转化为对于矩阵的研究，这是线性代数的内容。
-
-## Part 2 二元函数
-
-映射 $f: \mathbb{R}^2 \to \mathbb{R}$ 称为二元函数。$\mathbb{R}^2$ 中的点用坐标 $(x,y)$ 表示。设 $(x_0,y_0) \in \mathbb{R}^2$，如果存在 $A \in \mathbb{R}$，使得任给 $\varepsilon > 0$，均存在 $\delta > 0$，当  
-$$
-0 < \|(x,y) - (x_0,y_0)\| = \sqrt{(x - x_0)^2 + (y - y_0)^2} < \delta
-$$
-时，$|f(x,y) - A| < \varepsilon$，就称 $f$ 在 $(x_0,y_0)$ 处有极限（重极限），记为  
-$$
-\lim_{(x,y) \to (x_0,y_0)} f(x,y) = A\quad\text{or}\quad \lim_{\substack{x \to x_0 \\ y \to y_0}} f(x,y) = A.
-$$
-如果对于每一个固定的 $y$，极限 $\displaystyle\lim_{x \to x_0} f(x,y) = \varphi(y)$ 存在，则可以定义极限  
-$$
-\lim_{y \to y_0} \lim_{x \to x_0} f(x,y) = \lim_{y \to y_0} \varphi(y).
-$$
-类似地定义 $\displaystyle\lim_{x \to x_0} \lim_{y \to y_0} f(x,y)$，称它们为累次极限。
-
-/example/
-
-> (1) $\displaystyle \lim_{(x,y) \to (0,0)} \frac{x^2y^2}{x^2 + y^2} = 0$，这是因为  
-> $$
-> 0 \leqslant \frac{x^2y^2}{x^2 + y^2} \leqslant \frac{1}{2}|xy| \leqslant \frac{1}{4}(x^2 + y^2).
-> $$
->
-> (2) $\displaystyle \frac{xy}{x^2 + y^2}$ 在 $(0,0)$ 处无极限（分别考虑 $y = x$ 和 $y = x^2$）。
->
-> (3) $f(x,y) = x\sin\dfrac{1}{y}$。由 $|f(x,y)| \leqslant x$ 知 $\displaystyle \lim_{(x,y) \to (0,0)} f(x,y) = 0$，但 $\displaystyle \lim_{y \to 0} f(x,y)$ 不存在。
->
-> (4) $\displaystyle \lim_{y \to 0} \lim_{x \to 0} \frac{xy}{x^2 + y^2} = \lim_{x \to 0} \lim_{y \to 0} \frac{xy}{x^2 + y^2} = 0$，但由 (2) 知重极限不存在。
-
-**定理9**：如果 $\displaystyle \lim_{(x,y) \to (a,b)} f(x,y) = A$，且对任意 $y \ne b$，$\displaystyle \lim_{x \to a} f(x,y) = \varphi(y)$ 存在，则  
-$$
-\lim_{y \to b} \lim_{x \to a} f(x,y) = \lim_{y \to b} \varphi(y) = A;
-$$
-如果对任意 $x \ne a$，$\displaystyle \lim_{y \to b} f(x,y)$ 也存在，则  
-$$
-\lim_{x \to a} \lim_{y \to b} f(x,y) = A = \lim_{y \to b} \lim_{x \to a} f(x,y).
-$$
-
-> /proof/
->
-> 以 $A$ 有限为例。由假设，任给 $\varepsilon > 0$，存在 $\delta > 0$，当  
-> $$
-> 0 < \sqrt{(x - a)^2 + (y - b)^2} < \delta
-> $$
-> 时 $|f(x,y) - A| < \dfrac{\varepsilon}{2}$。固定 $y$，令 $x \to a$，得  
-> $$
-> \left|\lim_{x \to a} f(x,y) - A\right| \leqslant \frac{\varepsilon}{2} < \varepsilon,\quad \forall\,0 < |y - b| < \frac{\delta}{2}.
-> $$
-> 这说明  
-> $$
-> \lim_{y \to b} \lim_{x \to a} f(x,y) = A.
-> $$
-> 其它情形可类似证明
-
-## Part 3 导数
+## Part 1 连续函数积分
 
 ### · 定义
 
-**定义1 (方向导数)**. 
+许多实际的应用问题都涉及到积分, 积分的内容占据了本课程的半壁江山.
 
-> 设 $D$ 为 $\mathbb{R}^n$ 中的开集，$f: D \to \mathbb{R}$ 为 $D$ 中定义的函数. 对于 $p \in D$，以及 $\mathbb{R}^n$ 中单位向量 $u$，极限
->
-> $$
-> \lim_{t \to 0} \frac{f(p + tu) - f(p)}{t} 
-> $$
->
-> 如果存在，则称 $f$ 在 $p$ 处沿方向 $u$ 有方向导数，上述极限记为 $\dfrac{\partial f}{\partial u}(p)$，称为 $f$ 沿 $u$ 的方向导数. 
+设 $f$ 为闭区间 $[a, b]$ 上的连续函数，我们考虑由 $f$ 的图像、直线 $x = a$、$x = b$ 以及 $y = 0$（$x$ 轴）在平面上所围成的曲边梯形的面积，我们用记号 $\displaystyle\int_a^b f(x)\,dx$ 表示这个面积的值，称为 $f$ 在 $[a, b]$ 上的积分. 
 
-> [!important]
->
-> (1) 方向导数就是一元函数 $\varphi(t) = f(p + tu)$ 在 $t = 0$ 处的导数. 特别地，当 $u = e_i = (0, \cdots, 0, 1, 0, \cdots, 0)$（第 $i$ 个位置为 1 的单位向量）时，又将 $\dfrac{\partial f}{\partial u}(p)$ 记为 $\dfrac{\partial f}{\partial x_i}(p)$，称为 $f$ 的第 $i$ 个偏导数. 按定义，有
->
+> (1) 设 $f(x) \equiv c$ 为常值函数，则所求面积是矩形的面积，因此自然地定义
 > $$
-> \frac{\partial f}{\partial x_i}(p) = \lim_{t \to 0} \frac{f(p_1, \cdots, p_{i-1}, p_i + t, p_{i+1}, \cdots, p_n) - f(p_1, \cdots, p_n)}{t}. 
+> \int_a^b f(x)\,dx = c(b - a).
 > $$
 >
-> (2) 偏导数 $\dfrac{\partial f}{\partial x_i}$ 又记为 $f'_{x_i}$ 或 $f_{x_i}$. 如果 $f'_{x_i} = \dfrac{\partial f}{\partial x_i}$ 仍然可求偏导数，则记 $f''_{y_i x_i} = \dfrac{\partial}{\partial y_i} \left( \dfrac{\partial f}{\partial x_i} \right)$，$f''_{x_i y_i} = \dfrac{\partial}{\partial x_i} \left( \dfrac{\partial f}{\partial y_i} \right)$，称为 2 阶偏导数. 类似地可以定义高阶偏导数. 
->
-> 如果 $f$ 存在直到 $k$ 阶的连续偏导数，则称 $f$ 为 $C^k$ 函数. 我们也使用形如这样的记号：
+> (2) 设 $f(x)$ 为 $[a, b]$ 上的线性函数，则所求面积是一个梯形的面积，因此定义
 > $$
-> \frac{\partial^2 f}{\partial x_i^2} = \frac{\partial}{\partial x_i} \left( \frac{\partial f}{\partial x_i} \right), \quad \frac{\partial^2 f}{\partial x_i \partial y_i} = \frac{\partial}{\partial x_i} \left( \frac{\partial f}{\partial y_i} \right), \cdots.
-> $$
-
-/example/  设 $(x_0, y_0, z_0) \in \mathbb{R}^3$，求函数的偏导数
-
-$$
-f(x, y, z) = \left[ (x - x_0)^2 + (y - y_0)^2 + (z - z_0)^2 \right]^{-\frac{1}{2}}
-$$
-
-> 记
->
-> $$
-> r = \left[ (x - x_0)^2 + (y - y_0)^2 + (z - z_0)^2 \right]^{\frac{1}{2}} 
+> \int_a^b f(x)\,dx = \frac{1}{2}[f(a) + f(b)](b - a).
 > $$
 >
-> 则
+> 当 $f$ 为常值函数时，这个定义和 (1) 是一致的. 并且，从定义可得
+>
+> - 如果 $f$, $g$ 均为线性函数，则
 >
 > $$
-> \frac{\partial f}{\partial x} = -\frac{1}{r^2} \cdot \frac{\partial r}{\partial x} = -\frac{1}{r^2} \cdot \frac{x - x_0}{r} = -\frac{x - x_0}{r^3}. 
+> \int_a^b [f(x) + g(x)]\,dx = \int_a^b f(x)\,dx + \int_a^b g(x)\,dx,
 > $$
 >
-> 同理，
->
 > $$
-> \frac{\partial f}{\partial y} = -\frac{y - y_0}{r^3}, \quad \frac{\partial f}{\partial z} = -\frac{z - z_0}{r^3}. 
-> $$
-
-和一元函数不同的是，偏导数的存在不能保证多元函数的连续性，这是因为偏导数只反映函数沿特定方向的性质. 
-
-> /example/
->
-> 设
->
-> $$
-> f(x, y) = 
-> \begin{cases} 
-> 0, & \text{when } x \cdot y = 0, \\ 
-> 1, & \text{when } x \cdot y \ne 0, 
-> \end{cases}
+> \int_a^b [f(x) - g(x)]\,dx = \int_a^b f(x)\,dx - \int_a^b g(x)\,dx,
 > $$
 >
-> 则
+> 这可从定义直接得到. 
 >
+> - 如果 $f$ 为线性函数，且存在常数 $M$，使得 $|f(x)| \le M$，$\forall x \in [a, b]$，则
+>
+> $$
+> \left|\int_a^b f(x)\,dx\right| \le M(b - a).
+> $$
+>
+> 事实上，由定义，有
 > $$
 > \begin{aligned}
-> \frac{\partial f}{\partial x}(0, 0) &= \lim_{x \to 0} \frac{f(x, 0) - f(0, 0)}{x} = 0, \\\\
-> \frac{\partial f}{\partial y}(0, 0) &= \lim_{y \to 0} \frac{f(0, y) - f(0, 0)}{y} = 0.
+> \left|\int_a^b f(x)\,dx\right| &= \left|\frac{1}{2}[f(a) + f(b)](b - a)\right| \\\\
+> &\le \frac{1}{2}[|f(a)| + |f(b)|](b - a) \le M(b - a).
 > \end{aligned}
 > $$
 >
-> 显然，$f$ 在 $(0, 0)$ 处不连续. 
-
-**定理1 (复合求导)**. 设 $f$ 如前，$x^0 \in D$. 假设 $f'_{x_i}$ ($1 \le i \le n$) 在 $x^0$ 处连续，则
-
-(1) $f$ 在 $x^0$ 处连续；
-
-(2) 如果 $x_i = x_i(t)$ 在 $t_0$ 处可导，$x^0 = (x_1(t_0), \cdots, x_n(t_0))$，则 $f(x(t))$ 在 $t = t_0$ 处可导，且
-
-$$
-\left. \frac{df(x(t))}{dt} \right|_{t = t_0} = \sum_{i=1}^n \frac{\partial f}{\partial x_i}(x(t_0)) \cdot \frac{dx_i}{dt}(t_0).
-$$
-
-> (1) 利用微分中值定理，有
+> - 如果 $f$ 为线性函数，$c \in (a, b)$，则
 >
 > $$
+> \int_a^b f(x)\,dx = \int_a^c f(x)\,dx + \int_c^b f(x)\,dx.
+> $$
+>
+> 这是因为，$[a, b]$ 上的线性函数 $f(x)$ 可以写为
+> $$
+> f(x) = f(a) + \frac{f(b) - f(a)}{b - a}(x - a)\quad\text{or}\quad f(x) = f(b) + \frac{f(b) - f(a)}{b - a}(x - b),
+> $$
+> 因此有
+> $$
+> \int_a^c f(x)\,dx + \int_c^b f(x)\,dx = \frac{1}{2}[f(a) + f(c)](c - a) + \frac{1}{2}[f(c) + f(b)](b - c)
+> $$
+>
+> $$
+> = \frac{1}{2}[f(a) + f(b) + \frac{f(b) - f(a)}{b - a}(c - b)](c - a)
+> + \frac{1}{2}[f(a) + f(b) + \frac{f(b) - f(a)}{b - a}(c - a)](b - c)
+> $$
+>
+> $$
+> = \frac{1}{2}[f(a) + f(b)](c - a) + \frac{1}{2}[f(a) + f(b)](b - c)
+> $$
+>
+> $$
+> = \frac{1}{2}[f(a) + f(b)](b - a)
+> = \int_a^b f(x)\,dx.
+> $$
+>
+> (3) 设 $f(x)$ 为 $[a, b]$ 上连续的分段线性函数，即存在区间 $[a, b]$ 中的分点
+> $$
+> a = x_0 < x_1 < \cdots < x_n = b
+> $$
+> 使得 $f(x)$ 在每一个小区间 $[x_{i-1}, x_i]$ 上均为线性函数，则定义
+> $$
+> \int_a^b f(x)\,dx = \sum_{i=1}^n \int_{x_{i-1}}^{x_i} f(x)\,dx,
+> $$
+> 这个定义是恰当的：如果存在 $[a, b]$ 的另外一些分点
+> $$
+> a = x'_0 < x'_1 < \cdots < x'_m = b
+> $$
+> 使得 $f(x)$ 在每一个小区间 $[x'_{i-1}, x'_i]$ 上均为线性函数，则所有这些分点 $\{x_i, x'_i\}$ 按从小到大的顺序排列后依然将 $[a, b]$ 分割为一些小区间，在每个小区间上 $f$ 仍为线性函数，且根据 (2) 中线性函数积分性质的第三条可知，$f$ 在这些新的小区间上的积分之和与分点 $\{x_i\}$ 或 $\{x'_i\}$ 分割后形成的小区间上 $f$ 的积分之和是一致的. 
+>
+> 以上说明了分段线性函数的积分与区间中分点的选取无关. 利用这一点不难看出，(2) 中线性函数积分的三条性质对于分段线性函数也完全成立. 
+>
+> (4) 现在假设 $f$ 是 $[a, b]$ 上的连续函数，不一定是分段线性的，我们要定义 $f$ 在 $[a, b]$ 上的积分. 一个自然的想法是用分段线性的函数去逼近 $f$. 
+>
+> 事实上，任给正整数 $n$，将 $[a, b]$ 作 $n$ 等分，分点为 $x_i = a + \dfrac{i}{n}(b - a)$，$i = 0, 1, \cdots, n$. 在每一个小区间 $[x_{i-1}, x_i]$ 上定义 $l_i(x)$ 为满足条件 $l_i(x_{i-1}) = f(x_{i-1})$，$l_i(x_i) = f(x_i)$ 的线性函数，$l_i(x)$ 的表达式为
+> $$
+> l_i(x) = f(x_{i-1}) + \frac{f(x_i) - f(x_{i-1})}{x_i - x_{i-1}}(x - x_{i-1}).
+> $$
+> 在 $[a, b]$ 上定义连续分段线性函数 $f_n(x)$ 为
+> $$
+> f_n(x) = l_i(x),\quad x \in [x_{i-1}, x_i],\quad i = 1, \cdots, n.
+> $$
+
+**命题1.** 设 $f$, $f_n$ 如上，则任给 $\varepsilon > 0$，存在 $N = N(\varepsilon)$，当 $n > N$ 时
+$$
+|f(x) - f_n(x)| < \varepsilon,\quad \forall x \in [a, b].
+$$
+
+> 这需要用到闭区间上连续函数的一致连续性. 任给 $\varepsilon > 0$，存在 $\delta > 0$，使得
+> $$
+> |f(x') - f(x'')| \le \varepsilon,\quad \forall |x' - x''| < \delta.
+> $$
+> 取正整数 $N > (b - a)/\delta$，则当 $n > N$ 时 $\dfrac{1}{n}(b - a) < \delta$. 此时，设 $x \in [x_{i-1}, x_i]$ ($1 \le i \le n$)，则有
+> $$
 > \begin{aligned}
-> f(x) - f(x^0) &= \sum_{i=1}^n \left[ f(x_1^0, \cdots, x_{i-1}^0, x_i, \cdots, x_n) - f(x_1^0, \cdots, x_{i-1}^0, x_i^0, x_{i+1}^0, \cdots, x_n) \right] \\\\
-> &= \sum_{i=1}^n f'_{x_i}(x_1^0, \cdots, x_{i-1}^0, \xi_i, x_{i+1}, \cdots, x_n) \cdot (x_i - x_i^0),
+> |f(x) - f_n(x)| &= |f(x) - l_i(x)|\\\\
+> &= \left|f(x) - f(x_{i-1}) - \frac{f(x_i) - f(x_{i-1})}{x_i - x_{i-1}}(x - x_{i-1})\right|\\\\
+> &= \left|(f(x) - f(x_{i-1}))\frac{x_i - x}{x_i - x_{i-1}} + (f(x) - f(x_i))\frac{x - x_{i-1}}{x_i - x_{i-1}}\right|\\\\
+> &\le \varepsilon \frac{x_i - x}{x_i - x_{i-1}} + \varepsilon \frac{x - x_{i-1}}{x_i - x_{i-1}}
+> = \varepsilon.
+> \end{aligned}
+> $$
+> 这就证明了命题
+
+利用这个命题，当 $m, n > N$ 时，就有
+$$
+|f_m(x) - f_n(x)| \le |f_m(x) - f(x)| + |f(x) - f_n(x)| \le 2\varepsilon,
+$$
+因为 $f_m(x) - f_n(x)$ 也是分段线性函数，故有
+$$
+\left|\int_a^b f_m(x)\,dx - \int_a^b f_n(x)\,dx\right| = \left|\int_a^b (f_m(x) - f_n(x))\,dx\right| \le 2\varepsilon(b - a),
+$$
+这说明，数列 $\left\{\displaystyle\int_a^b f_n(x)\,dx\right\}$ 是 Cauchy 列，因此其极限存在，我们现在就定义
+$$
+\int_a^b f(x)\,dx = \lim_{n \to \infty} \int_a^b f_n(x)\,dx.
+$$
+
+如果 $f(x)$ 本来就是 $[a, b]$ 上的连续分段线性函数，则这个定义与 (3) 中的积分定义是一致的，我们把这个一致性证明留给读者思考. 根据分段线性函数积分的定义，$f$ 的积分可以表示为
+$$
+\int_a^b f(x)\,dx = \lim_{n \to \infty} \sum_{i=1}^n \frac{1}{2}[f(a + \frac{i-1}{n}(b - a)) + f(a + \frac{i}{n}(b - a))]\frac{1}{n}(b - a)
+$$
+
+$$
+= \lim_{n \to \infty} \frac{1}{n} \sum_{i=1}^n f(a + \frac{i}{n}(b - a))(b - a),
+$$
+
+**注意.** 和式 $\dfrac{1}{n}\displaystyle\sum_{i=1}^n f(a + \dfrac{i}{n}(b - a))$ 是一个平均数，其极限可以认为是 $f(x)$ 在区间 $[a, b]$ 上的平均值. 在这个意义上，$f(x)$ 在 $[a, b]$ 上的积分就等于 $f(x)$ 的平均值乘以区间长度，这是连续函数积分的几何含义.
+
+下面我们按照积分的定义计算. 
+
+/example/ 求函数 $f(x) = a^x$ 在区间 $[0, 1]$ 上的积分，其中 $a > 0$, $a \ne 1$.
+
+> 将 $[0, 1]$ 作 $n$ 等分，利用定义得
+> $$
+> \begin{aligned}
+> \int_0^1 a^x\,dx &= \lim_{n \to \infty} \frac{1}{n} \sum_{i=1}^n a^{\frac{i}{n}}\\\\
+> &= \lim_{n \to \infty} \frac{1}{n} \cdot \frac{a - 1}{a^{\frac{1}{n}} - 1}\\\\
+> &= \lim_{t \to 0^+} (a - 1) \frac{t a^t}{a^t - 1}\\\\
+> &= \frac{a - 1}{\ln a}.
+> \end{aligned}
+> $$
+
+利用连续函数的一致连续性，我们可以改写定义式. 事实上，沿用前面的记号如 $\varepsilon$, $N$ 等，当 $n > N$ 时，在等分小区间 $[x_{i-1}, x_i]$ 中任取一点 $\xi_i$，则有
+$$
+|f(x_i) - f(\xi_i)| \le \varepsilon,\quad i = 1, 2, \cdots, n.
+$$
+因此
+$$
+\left|\frac{1}{n} \sum_{i=1}^n f(x_i)(b - a) - \frac{1}{n} \sum_{i=1}^n f(\xi_i)(b - a)\right| \le \frac{1}{n} \sum_{i=1}^n |f(x_i) - f(\xi_i)|(b - a) \le \varepsilon(b - a),
+$$
+这说明
+$$
+\int_a^b f(x)\,dx = \lim_{n \to \infty} \frac{1}{n} \sum_{i=1}^n f(\xi_i)(b - a),\quad \forall\ \xi_i \in [a + \frac{i-1}{n}(b - a),\ a + \frac{i}{n}(b - a)].
+$$
+这个极限等式也可以作为积分的定义，它的好处是无须总在小区间的端点取 $f(x)$ 的值，而极限仍然不变.
+
+### · 积分性质
+
+前一小节定义了连续函数 $f$ 在闭区间 $[a, b]$ 上的积分，现在我们做如下约定：
+$$
+\int_a^a f(x)\,dx = 0;\quad \int_b^a f(x)\,dx = -\int_a^b f(x)\,dx.
+$$
+
+从积分定义的讨论，我们可以得到积分的如下简单性质：
+
+线性性： 
+
+> 如果 $f, g$ 为 $[a, b]$ 上的连续函数，$\alpha, \beta \in \mathbb{R}$，则
+> $$
+> \int_a^b (\alpha f(x) + \beta g(x))\,dx = \alpha \int_a^b f(x)\,dx + \beta \int_a^b g(x)\,dx;
+> $$
+>
+> 如果 $|f(x)| \le M$，$\forall x \in [a, b]$，则
+> $$
+> \left|\int_a^b f(x)\,dx\right| \le M(b - a);
+> $$
+>
+> 
+
+保序性： 
+
+> 如果 $f \ge g$ 为 $[a, b]$ 上的连续函数，则
+> $$
+> \int_a^b f(x)\,dx \ge \int_a^b g(x)\,dx;
+> $$
+> 特别地，由 $-|f| \le f \le |f|$ 可得
+> $$
+> \left|\int_a^b f(x)\,dx\right| \le \int_a^b |f(x)|\,dx;
+> $$
+
+关于区间的可加性： 
+
+> 设 $f$ 为连续函数，$a, b, c$ 为定义域中三点，则
+> $$
+> \int_a^c f(x)\,dx = \int_a^b f(x)\,dx + \int_b^c f(x)\,dx;
+> $$
+> 事实上，不妨设 $a < b < c$。任给 $\varepsilon > 0$，分别在区间 $[a, b]$、$[b, c]$ 上取连续的分段线性函数 $\varphi$ 和 $\psi$，使得 $\varphi(b) = \psi(b)$，且
+> $$
+> |f(x) - \varphi(x)| \le \varepsilon,\quad \forall x \in [a, b];\quad |f(x) - \psi(x)| \le \varepsilon,\quad \forall x \in [b, c].
+> $$
+> 在 $[a, c]$ 上定义分段线性函数 $g(x)$，使得在 $[a, b]$ 上 $g = \varphi$，在 $[b, c]$ 上 $g = \psi$，于是
+> $$
+> |f(x) - g(x)| \le \varepsilon,\quad \forall x \in [a, c].
+> $$
+> 根据积分的保序性以及分段线性函数的积分关于区间的可加性，得
+> $$
+> \begin{aligned}
+> &\left|\int_a^c f(x)\,dx - \int_a^b f(x)\,dx - \int_b^c f(x)\,dx\right|\\\\
+> &\le \left|\int_a^c g(x)\,dx - \int_a^b f(x)\,dx - \int_b^c f(x)\,dx\right| + \varepsilon(c - a)\\\\
+> &= \left|\int_a^b [g(x) - f(x)]\,dx + \int_b^c [g(x) - f(x)]\,dx\right| + \varepsilon(c - a)\\\\
+> &\le \varepsilon(b - a) + \varepsilon(c - b) + \varepsilon(c - a) = 2\varepsilon(c - a),
 > \end{aligned}
 > $$
 >
-> 当 $x \to x^0$ 时，$\xi_i \to x_i^0$，由 $f'_{x_i}$ 在 $x^0$ 处连续知 $\displaystyle\lim_{x \to x^0} (f(x) - f(x^0)) = 0$. 
->
-> (2) 由 (1) 的证明，有
->
+> 由于 $\varepsilon$ 是任取的，故积分关于区间的可加性成立
+
+如果 $f(x)$ 为 $[a, b]$ 上的非负连续函数，则
+$$
+\int_a^b f(x)\,dx \ge 0,
+$$
+且等号成立当且仅当 $f = 0$。这条性质的前半部分从积分的保序性得到。至于后半部分，如果 $f(x_0) > 0$，则由 $f$ 的连续性可知，存在区间 $[c, d] \subset [a, b]$，使得
+$$
+f(x) \ge \frac{1}{2}f(x_0),\quad \forall x \in [c, d].
+$$
+此时由积分关于区间的可加性以及保序性可得
+$$
+\begin{aligned}
+\int_a^b f(x)\,dx &= \int_a^c f(x)\,dx + \int_c^d f(x)\,dx + \int_d^b f(x)\,dx\\\\
+&\ge \int_c^d f(x)\,dx \ge \frac{f(x_0)}{2}(d - c) > 0,
+\end{aligned}
+$$
+即此时 $f(x)$ 在 $[a, b]$ 上的积分为正
+
+在定义积分时，我们使用的是将区间作等分然后求极限的方法。我们要说明的是，作区间划分时不必取等分分点。事实上，在 $[a, b]$ 中任取分点 $a = x_0 < x_1 < \cdots < x_n = b$，称
+$$
+\pi: a = x_0 < x_1 < \cdots < x_n = b
+$$
+为 $[a, b]$ 的一个分划（或分割）。记 $\|\pi\| = \max\limits_{1 \le i \le n} |x_i - x_{i-1}|$。任给 $\varepsilon > 0$，由连续函数的一致连续性，存在 $\delta > 0$，当 $\|\pi\| < \delta$ 时
+$$
+|f(x) - f(x_i)| < \varepsilon,\quad \forall x \in [x_{i-1}, x_i],\quad i = 1, 2, \cdots, n.
+$$
+由
+$$
+\begin{aligned}
+\int_a^b f(x)\,dx &= \sum_{i=1}^n \int_{x_{i-1}}^{x_i} f(x)\,dx\\\\
+&= \sum_{i=1}^n f(x_{i-1})(x_i - x_{i-1}) + \sum_{i=1}^n \int_{x_{i-1}}^{x_i} (f(x) - f(x_{i-1}))\,dx
+\end{aligned}
+$$
+得
+$$
+\left|\int_a^b f(x)\,dx - \sum_{i=1}^n f(x_{i-1})(x_i - x_{i-1})\right|
+\le \sum_{i=1}^n \varepsilon(x_i - x_{i-1}) = \varepsilon(b - a),
+$$
+这说明
+$$
+\int_a^b f(x)\,dx = \lim_{\|\pi\| \to 0} \sum_{i=1}^n f(x_{i-1})(x_i - x_{i-1}),
+$$
+同理，如果任取 $\xi_i \in [x_{i-1}, x_i]$，则仍有
+$$
+\int_a^b f(x)\,dx = \lim_{\|\pi\| \to 0} \sum_{i=1}^n f(\xi_i)(x_i - x_{i-1}),\quad \forall\ \xi_i \in [x_{i-1}, x_i].
+$$
+**命题2** (积分中值定理). 设 $f, g$ 为 $[a, b]$ 上的连续函数。如果 $g$ 不变号，则存在 $\xi \in [a, b]$，使得
+$$
+\int_a^b f(x)g(x)\,dx = f(\xi) \int_a^b g(x)\,dx.
+$$
+
+> 不妨设 $g \ge 0$。$f$ 在 $[a, b]$ 上的最小值和最大值分别记为 $m, M$，则
+> $$
+> mg(x) \le f(x)g(x) \le Mg(x),\quad \forall x \in [a, b].
+> $$
+> 根据积分的保序性和线性性，有
+> $$
+> m \int_a^b g(x)\,dx \le \int_a^b f(x)g(x)\,dx \le M \int_a^b g(x)\,dx.
+> $$
+> 如果 $\displaystyle\int_a^b g(x)\,dx = 0$，则任取 $\xi \in [a, b]$ 即可。如果 $\displaystyle\int_a^b g(x)\,dx > 0$，则
+> $$
+> m \le \frac{\displaystyle\int_a^b f(x)g(x)\,dx}{\displaystyle\int_a^b g(x)\,dx} \le M,
+> $$
+> 由连续函数的介值定理知存在 $\xi \in [a, b]$，使得
+> $$
+> f(\xi) = \frac{\displaystyle\int_a^b f(x)g(x)\,dx}{\displaystyle\int_a^b g(x)\,dx},
+> $$
+> 此 $\xi$ 即为所求的点
+
+在此命题中取 $g = 1$，则得到简单推论：存在 $\xi \in [a, b]$，使得
+$$
+f(\xi) = \frac{\displaystyle\int_a^b f(x)\,dx}{b - a},\quad \text{or}\quad \int_a^b f(x)\,dx = f(\xi)(b - a).
+$$
+这里 $f(\xi)$ 也就是 $f(x)$ 在 $[a, b]$ 上的平均值
+
+## Part 2 不定积分
+
+### · 定义
+
+现在我们考虑这样的问题，即一个给定的函数是另一个可导函数的导数吗？如果函数 $f$ 给定，问题就是考虑方程  
+$$
+F'(x) = f(x)
+$$
+的解. 我们要问，方程的解存在吗？如果存在的话，有多少个解？如果 $F$ 是一个解，则显然 $F + C$ ($C$ 为常数) 也是一个解，我们来说明这也是所有可能的其它解. 
+
+**命题1**. 设 $f$ 为区间上的可微函数，则 $f' = 0$ 当且仅当 $f = C$ 为常值函数.
+
+> 只要证明必要性即可. 设 $f' = 0$，在定义域中任取两点 $a < b$，我们证明必有 $f(a) = f(b)$. 设 $\varepsilon > 0$ 是任意取定的正数. 考虑集合  
+> $$
+> A = \{y \in [a,b] \mid |f(x) - f(a)| \le \varepsilon|x - a|,\ \forall\ x \in [a,y]\} \subset [a,b].
+> $$
+> 因为 $a \in A$，因此 $A$ 不是空集. 设 $y_0$ 为 $A$ 的上确界. 由 $f$ 的连续性知 $y_0 \in A$. 我们断言 $y_0 = b$. 事实上，如果 $y_0 < b$，则因为 $f'(y_0) = 0$，由导数的定义知存在 $\delta > 0$，使得 $y_0 + \delta \le b$，且  
+> $$
+> \left|\frac{f(x) - f(y_0)}{x - y_0}\right| = \left|\frac{f(x) - f(y_0)}{x - y_0} - f'(y_0)\right| \le \varepsilon,\quad \forall\ x \in (y_0, y_0 + \delta\ ].
+> $$
+> 因此，当 $x \in [y_0, y_0 + \delta]$ 时
 > $$
 > \begin{aligned}
-> \left. \frac{df}{dt} \right|_{t = t_0} &= \lim_{t \to t_0} \frac{f(x(t)) - f(x(t_0))}{t - t_0} \\\\ 
-> &= \lim_{t \to t_0} \sum_{i=1}^n f'_{x_i}(x_1^0, \cdots, x_{i-1}^0, \xi_i, x_{i+1}, \cdots, x_n) \cdot \frac{x(t) - x_i(t_0)}{t - t_0} \\\\
-> &= \sum_{i=1}^n f'_{x_i}(x^0) \cdot x'_i(t_0).
+> |f(x) - f(a)| &\le |f(x) - f(y_0)| + |f(y_0) - f(a)| \\\\
+> &\le \varepsilon|x - y_0| + \varepsilon|y_0 - a| = \varepsilon|x - a|.
 > \end{aligned}
 > $$
->
-> 这就证明了定理. 
-
-**推论2**. 在定理的条件下，如果 $u = \sum_{i=1}^n u_i \cdot e_i = (u_1, u_2, \cdots, u_n)$，则
-$$
-\frac{\partial f}{\partial u}(p) = \left. \frac{d}{dt} \right|_{t=0} f(p + tu) = \sum_{i=1}^n \frac{\partial f}{\partial x_i}(p) \cdot u_i.
-$$
-
-**定理3 (求导次序的可交换性)**. 设 $f: D \to \mathbb{R}$ 为二元函数，$(x_0, y_0) \in D$. 如果 $f''_{xy}$ 和 $f''_{yx}$ 在 $(x_0, y_0)$ 处连续，则
-$$
-f''_{xy}(x_0, y_0) = f''_{yx}(x_0, y_0).
-$$
-
-> 对于充分小的 $k \ne 0$，$h \ne 0$ 分别考虑函数
->
+> 这说明 $[y_0, y_0 + \delta] \subset A$，这和 $y_0$ 的选取相矛盾，因此只能有 $y_0 = b$. 即  
 > $$
-> \varphi(y) = f(x_0 + h, y) - f(x_0, y), \\ 
-> \psi(x) = f(x, y_0 + k) - f(x, y_0). 
+> |f(a) - f(b)| \le \varepsilon|a - b|.
 > $$
+> 因为 $\varepsilon$ 是任取的，令 $\varepsilon \to 0$，上式表明 $f(a) = f(b)$.
 >
-> 由微分中值定理，有
->
+> > (1) 如果将导数解释为速度，则命题说的就是速度为零时，质点位移不变. 从直观看这是显然的，但从数学上来讲就必须严格证明. 
+> >
+> > (2) 如果存在常数 $M$ 使得 $|f'| \le M$，则把命题证明过程中的 $\varepsilon$ 换成 $M + \varepsilon$ 后可以得出下面的估计  
+> > $$
+> > |f(a) - f(b)| \le M|a - b|,
+> > $$
+> > 即 $f$ 为 Lipschitz 函数. 
+> >
+> > 现在，如果 $F_1$, $F_2$ 都是方程的解，则 $(F_1 - F_2)' = 0$，从而 $F_1 - F_2 = C$ 为常数. 
+
+**定义1**（原函数）. 方程的一个可微解 $F$ 称为函数 $f$ 的一个原函数. 根据上面的讨论，任何两个原函数之间只相差一个常数. 对于一般的原函数我们给出下面的定义：
+
+**定义2**（不定积分）. 设函数 $f$ 在区间 $I$ 上有原函数，则我们用记号  
+$$
+\int f(x)\,dx
+$$
+表示 $f$ 的原函数的一般表达式，即如果 $F$ 为 $f$ 的一个原函数，则  
+$$
+\int f(x)\,dx = F(x) + C,\quad x \in I,
+$$
+其中 $C$ 为常数. 
+
+根据定义，如果 $F$ 是 $f$ 的原函数，则 $dF = f(x)\,dx$，因此  
+$$
+d\left(\int f(x)\,dx\right) = f(x)\,dx,
+$$
+因此求原函数的过程是求微分过程之逆. 
+
+我们可以给出如下计算结果：
+
+> (1). 
+> $$
+> \displaystyle \int 0\,dx = C
+> $$
+> (2). 
+> $$
+> \displaystyle \int x^\alpha\,dx = \frac{x^{\alpha+1}}{\alpha+1} + C\ (\alpha \ne -1)
+> $$
+> (3). 
+> $$
+> \displaystyle \int e^x\,dx = e^x + C
+> $$
+> (4). 
+> $$
+> \displaystyle \int a^x\,dx = \frac{a^x}{\ln a} + C\ (a > 0, a \ne 1)
+> $$
+> (5). 
+> $$
+> \displaystyle \int \frac{1}{x}\,dx = \ln|x| + C
+> $$
+> (6). 
+> $$
+> \displaystyle \int \frac{1}{\sqrt{1+x^2}}\,dx = \ln(x + \sqrt{1+x^2}) + C
+> $$
+> (7). 
+> $$
+> \displaystyle \int \cos x\,dx = \sin x + C
+> $$
+> (8). 
+> $$
+> \displaystyle \int \frac{1}{\sqrt{1-x^2}}\,dx = \arcsin x + C
+> $$
+> (9). 
+> $$
+> \displaystyle \int \sin x\,dx = -\cos x + C
+> $$
+> (10). 
+> $$
+> \displaystyle \int \frac{1}{\sqrt{1-x^2}}\,dx = -\arccos x + C
+> $$
+> (11). 
+> $$
+> \displaystyle \int \sec^2 x\,dx = \tan x + C
+> $$
+> (12). 
+> $$
+> \displaystyle \int \frac{1}{1+x^2}\,dx = \arctan x + C
+> $$
+> (13). 
+> $$
+> \displaystyle \int \csc^2 x\,dx = -\cot x + C
+> $$
+> (14). 
+> $$
+> \displaystyle \int \frac{1}{1+x^2}\,dx = -\operatorname{arccot} x + C
+> $$
+> (15). 
+> $$
+> \displaystyle \int \cosh x\,dx = \sinh x + C
+> $$
+> (16). 
+> $$
+> \displaystyle \int \sinh x\,dx = \cosh x + C
+> $$
+> (17). 
+> $$
+> \displaystyle \int \tanh^2 x\,dx = x - \tanh x + C
+> $$
+> (18). 
+> $$
+> \displaystyle \int \coth^2 x\,dx = x - \coth x + C
+> $$
+
+我们当然要问，除了上面列出的函数之外，还有哪些函数有原函数？
+
+### · Newton-Leibniz
+
+**定理2**（Newton-Leibniz）. 区间 $I$ 中的连续函数都有原函数. 具体来说，设 $f$ 连续，$a \in I$，则函数  
+$$
+F(x) = \int_a^x f(t)\,dt,\quad x \in I
+$$
+是 $f$ 的一个原函数.
+
+> 设 $x_0 \in I$. 因为 $f$ 连续，任给 $\varepsilon > 0$，存在 $\delta > 0$，使得  
+> $$
+> |f(x) - f(x_0)| < \varepsilon,\quad \forall\ x \in (x_0 - \delta, x_0 + \delta) \cap I.
+> $$
+> 此时
 > $$
 > \begin{aligned}
-> \varphi(y_0 + k) - \varphi(y_0) &= \varphi'_y(y_0 + \theta_1 k) k \quad (0 < \theta_1 < 1) \\\\
-> &= [f'_y(x_0 + h, y_0 + \theta_1 k) - f'_y(x_0, y_0 + \theta_1 k)] k \\\\
-> &= f''_{xy}(x_0 + \theta_2 h, y_0 + \theta_1 k) h k. \quad (0 < \theta_2 < 1)
+> \left|\frac{F(x) - F(x_0)}{x - x_0} - f(x_0)\right|& = \left|\frac{\displaystyle\int_{x_0}^x f(t)\,dt}{x - x_0} - f(x_0)\right|\\\\
+> &= \left|\frac{\displaystyle\int_{x_0}^x (f(t) - f(x_0))\,dt}{x - x_0}\right|\\\\
+> &\le \frac{\displaystyle\int_{x_0}^x |f(t) - f(x_0)|\,dt}{|x - x_0|} \le \varepsilon,
 > \end{aligned}
 > $$
->
-> 同理，
->
+> 这就推出 $F$ 在 $x_0$ 处可导，且  
 > $$
-> \psi(x_0 + h) - \psi(x_0) = f''_{yx}(x_0 + \theta_3 h, y_0 + \theta_4 k) h k, \quad (0 < \theta_3, \theta_4 < 1). 
+> F'(x_0) = f(x_0).
 > $$
+> 由 $x_0$ 的任意性即知 $F$ 为 $f$ 的原函数.
 >
-> 易见，
->
-> $$
-> \varphi(y_0 + k) - \varphi(y_0) = \psi(x_0 + h) - \psi(x_0), 
-> $$
->
-> 故有
->
-> $$
-> f''_{xy}(x_0 + \theta_2 h, y_0 + \theta_1 k) = f''_{yx}(x_0 + \theta_3 h, y_0 + \theta_4 k). 
-> $$
->
-> 令 $k, h \to 0$，由 $f''_{xy},\ f''_{yx}$ 在 $(x_0, y_0)$ 处连续即得欲证等式. 
+> > (1) 这个定理又称为微积分基本定理，它将微分和积分联系在了一起.
+> >
+> > (2) 在后面我们会稍稍降低定理中对 $f$ 的连续性要求，得到一样的结论.
 
-**推论4**. 多元函数的各阶偏导数如果连续，则其值与求导次序无关. 
-
-### · 几何应用
-
-设 $\sigma: [\alpha, \beta] \to \mathbb{R}^n$ 为连续映射，称 $\sigma$ 为 $\mathbb{R}^n$ 中的一条连续曲线. 记
-
+我们现在将 Newton-Leibniz 的这个重要定理改写一下. 设 $f$ 在区间 $I$ 中连续，$G$ 为 $f$ 的任一原函数，则存在常数 $C$，使得  
 $$
- \sigma(t) = (x_1(t), \cdots, x_n(t)), \quad t \in [\alpha, \beta]. 
+G(x) = \int_a^x f(t)\,dt + C,
 $$
-
-如果 $x_i(t)$ ($1 \le i \le n$) 在 $t = t_0$ 处均可导，则称 $\sigma$ 在 $t_0$ 处可导，记
-
+因此  
 $$
- \sigma'(t_0) = \frac{d\sigma}{dt}(t_0) = \left. \frac{d\sigma}{dt} \right|_{t = t_0} = (x'_1(t_0), \cdots, x'_n(t_0)), 
+\int_a^b f(x)\,dx = G(b) - G(a) = G\big|_a^b.
 $$
-
-称 $\sigma'(t_0)$ 为 $\sigma$ 在 $t_0$ 处的切向量. 
-
-当 $\sigma'(t_0) \ne 0$ 时，称 $\{ \sigma(t_0) + \sigma'(t_0) u \mid u \in \mathbb{R} \}$ 为 $\sigma$ 在 $t_0$ 处的切线，其方程可写为 $p - \sigma(t_0) = u \cdot \sigma'(t_0)$，或
-
+因为 $f$ 的不定积分为原函数，因此上式也可写为
 $$
- \frac{x - x_0}{x'_1(t_0)} = \frac{y - y_0}{x'_2(t_0)} = \frac{z - z_0}{x'_3(t_0)}. 
+\int_a^b f(x)\,dx = \left(\int f(x)\,dx\right)\bigg|_a^b,
+$$
+从这个等式来看，连续函数在区间上的积分就好象是在它的不定积分中代入上下积分限一样.
+
+Newton-Leibniz 公式还可写为（当 $G$ 连续可微时）  
+$$
+\int_a^b G'(x)\,dx = G(b) - G(a) = G\big|_a^b\quad \text{(Newton-Leibniz)}.
+$$
+这是一个很常用的形式，它有一个物理的解释：如果 $G$ 是随时间 $x$ 变化的物理量，$G'$ 就表示物理量的变化率. $G'$ 的积分表示无穷小变化量在某一段时间内的积累，最终就等于总的变化量（右式差值）.
+
+有了这些 Newton-Leibniz 公式，某些情形下连续函数积分的计算就变得很简单了.
+
+**命题3**（不定积分的线性性质）. 设 $f$, $g$ 在区间 $I$ 中均有原函数，则  
+$$
+\int [\alpha f(x) + \beta g(x)]\,dx = \alpha \int f(x)\,dx + \beta \int g(x)\,dx,
+$$
+其中 $\alpha$, $\beta$ 为常数.
+
+**命题4**. 设 $f$ 的原函数为 $F$. 如果 $f$ 可逆，且其逆函数 $g$ 可微，则  
+$$
+\int g(x)\,dx = xg(x) - F(g(x)) + C.
 $$
 
-经过 $\sigma(t_0)$ 且与切线正交的超平面称为法面，其方程为
-
-$$
-(q - \sigma(t_0)) \cdot \sigma'(t_0) = 0.
-$$
-/example/
-
-> 设 $f$ 为一元可微函数，令
->
-> $$
-> \sigma(t) = (t, f(t)), 
-> $$
->
-> 则 $\sigma'(t_0) = (1, f'(t_0))$，$\sigma$ 在 $t_0$ 处切线方程为
->
-> $$
-> \frac{x - t_0}{1} = \frac{y - f(t_0)}{f'(t_0)}, 
-> $$
->
-> 即
->
-> $$
-> y = f(t_0) + f'(t_0)(x - t_0). 
-> $$
->
-> 这也就是一元函数图像的切线. 
-
-/example/  求螺旋线的切线和法面方程
-
-$$
- \sigma(t) = (a \cos t, a \sin t, t), \quad t \in \mathbb{R} 
-$$
-
-> 在 $t = t_0$ 处，$\sigma'(t_0) = (-a \sin t_0, a \cos t_0, 1)$，故切线方程为
->
-> $$
-> \frac{x - a \cos t_0}{-a \sin t_0} = \frac{y - a \sin t_0}{a \cos t_0} = \frac{z - t_0}{1}, 
-> $$
->
-> 法面方程化简后为 $-x a \sin t_0 + y a \cos t_0 + z - t_0 = 0$. 
->
-> 设 $D$ 为 $\mathbb{R}^m$ 中的开集，我们称连续映射 $r: D \to \mathbb{R}^n$ ($n > m$) 为 $\mathbb{R}^n$ 中的一个参数曲面. 设 $u^0 = (u_1^0, \cdots, u_m^0) \in D$，则
->
-> $$
-> u \mapsto r(u_1^0, \cdots, u_{i-1}^0, u, u_{i+1}^0, \cdots, u_m^0) 
-> $$
->
-> 为 $\mathbb{R}^n$ 中曲线，称为参数曲面上的 $u_i$ 曲线. 如果 $u_i$ 曲线在 $u_i^0$ 处可导，则记
->
-> $$
-> \frac{\partial r}{\partial u_i}(u^0) = r_{u_i}(u^0) = r'_{u_i}(u^0), 
-> $$
->
-> 它是该曲线在 $u^0$ 处的切向量. 如果 $\{ r'_{u_i}(u^0) \mid 1 \le i \le m \}$ 线性无关（此时称 $u^0$ 为正则点），则称由这些切向量张成的、经过 $r(u^0)$ 的子线性空间为切空间，切空间的正交补称为法空间，法空间中的向量称为法向量. 
->
-> 对于 $\mathbb{R}^3$ 中的曲面，设其参数表示为
->
-> $$
-> r(u, v) = (x(u, v), y(u, v), z(u, v)), 
-> $$
->
-> 则其切向量为
->
+> 记 $G(x) = xg(x) - F(g(x))$，由 $f(g(x)) = x$ 以及复合求导，有  
 > $$
 > \begin{aligned}
-> r'_u(u_0, v_0) &= (x'_u(u_0, v_0), y'_u(u_0, v_0), z'_u(u_0, v_0)), \\\\
-> r'_v(u_0, v_0) &= (x'_v(u_0, v_0), y'_v(u_0, v_0), z'_v(u_0, v_0)).
+> G'(x) &= g(x) + xg'(x) - F'(g(x))g'(x)\\\\
+> &= g(x) + xg'(x) - f(g(x))g'(x)\\\\
+> &= g(x) + xg'(x) - xg'(x) = g(x).
 > \end{aligned}
 > $$
->
-> 如果 $r'_u(u_0, v_0)$，$r'_v(u_0, v_0)$ 线性无关，则
->
+> 因此 $G(x)$ 为 $g$ 的原函数.
+
+/example/ 求不定积分 $\displaystyle\int \dfrac{1}{\sin^2 x \cos^2 x}\,dx$.
+
+> 由不定积分的线性性质，有  
 > $$
 > \begin{aligned}
-> \vec{n} &= r'_u(u_0, v_0) \times r'_v(u_0, v_0) \\\\
-> &= (y'_u z'_v - z'_u y'_v, \; z'_u x'_v - x'_u z'_v, \; x'_u y'_v - y'_u x'_v) \ne 0,
+> \int \frac{1}{\sin^2 x \cos^2 x}\,dx &= \int \frac{\sin^2 x + \cos^2 x}{\sin^2 x \cos^2 x}\,dx\\\\
+> &= \int \frac{1}{\sin^2 x}\,dx + \int \frac{1}{\cos^2 x}\,dx\\\\
+> &= \tan x - \cot x + C.
 > \end{aligned}
 > $$
->
-> $\vec{n}$ 为法向量，从而曲面的切平面方程为
->
-> $$
-> (p - r(u_0, v_0)) \cdot \vec{n} = 0 
-> $$
->
-> 或改写为
->
-> $$
-> \begin{vmatrix} 
-> x - x(u_0, v_0) & y - y(u_0, v_0) & z - z(u_0, v_0) \\\\
-> x'_u(u_0, v_0) & y'_u(u_0, v_0) & z'_u(u_0, v_0) \\\\ 
-> x'_v(u_0, v_0) & y'_v(u_0, v_0) & z'_v(u_0, v_0) 
-> \end{vmatrix} = 0.
-> $$
 
-/example/  求球面 $S^2 = \{ (x, y, z) \in \mathbb{R}^3 \mid x^2 + y^2 + z^2 = 1 \}$ 的切面. 
+/example/ 设 $a \ne 0$，求不定积分 $\displaystyle\int \dfrac{1}{x^2 - a^2}\,dx$.
 
-> 球面可写成参数曲面
->
-> $$
-> x = \sin \theta \cos \varphi, \; y = \sin \theta \sin \varphi, \; z = \cos \theta, 
-> $$
->
-> 其中 $0 \le \theta \le \pi$，$0 \le \varphi \le 2\pi$. 其法向量为
->
+> 由不定积分的线性性质，有  
 > $$
 > \begin{aligned}
-> \vec{n} &= (\cos \theta \cos \varphi, \cos \theta \sin \varphi, -\sin \theta) \times (-\sin \theta \sin \varphi, \sin \theta \cos \varphi, 0) \\\\ 
-> &= \sin \theta \cdot (x, y, z),
+> \int \frac{1}{x^2 - a^2}\,dx &= \frac{1}{2a}\left[\int \frac{1}{x - a}\,dx - \int \frac{1}{x + a}\,dx\right]\\\\
+> &= \frac{1}{2a}\left[\ln|x - a| - \ln|x + a|\right] + C\\\\
+> &= \frac{1}{2a} \ln\left|\frac{x - a}{x + a}\right| + C.
 > \end{aligned}
 > $$
->
-> 故球面在 $(x_0, y_0, z_0)$ 处切平面方程为
->
-> $$
-> (x - x_0) \cdot x_0 + (y - y_0) \cdot y_0 + (z - z_0) \cdot z_0 = 0. 
-> $$
->
-> 一般地，当 $m = n - 1$ 时，称参数曲面 $r: D \to \mathbb{R}^n$ 为超曲面. 如果 $r$ 表示为
->
-> $$
-> r(u) = r(u_1, \cdots, u_{n-1}) = (x_1(u_1, \cdots, u_{n-1}), \cdots, x_n(u_1, \cdots, u_{n-1})), 
-> $$
->
-> 在正则点 $u^0$ 处，曲面的 $n - 1$ 个切向量为
->
-> $$
-> r'_{u_i}(u^0) = \left( \frac{\partial x_1}{\partial u_i}(u^0), \cdots, \frac{\partial x_n}{\partial u_i}(u^0) \right), \quad i = 1, \cdots, n - 1. 
-> $$
->
-> 记 $\vec{N} = (N_1, \cdots, N_n)$，其中
->
-> $$
-> N_i = (-1)^{i-1} \frac{\partial (x_1, \cdots, x_{i-1}, x_{i+1} \cdots, x_n)}{\partial (u_1, \cdots, u_{n-1})}(u^0),
-> $$
->
-> 这里我们采用了下面的记号
->
-> $$
-> \frac{\partial (x_1, \cdots, x_{i-1}, x_{i+1} \cdots, x_n)}{\partial (u_1, \cdots, u_{n-1})}(u^0) = \det 
-> \begin{pmatrix} 
-> \dfrac{\partial x_1}{\partial u_1}(u^0) & \cdots & \dfrac{\partial x_1}{\partial u_{n-1}}(u^0) \\ 
-> \vdots & \ddots & \vdots \\
-> \dfrac{\partial x_{i-1}}{\partial u_1}(u^0) & \cdots & \dfrac{\partial x_{i-1}}{\partial u_{n-1}}(u^0) \\\\
-> \dfrac{\partial x_{i+1}}{\partial u_1}(u^0) & \cdots & \dfrac{\partial x_{i+1}}{\partial u_{n-1}}(u^0) \\ 
-> \vdots & \ddots & \vdots \\ 
-> \dfrac{\partial x_n}{\partial u_1}(u^0) & \cdots & \dfrac{\partial x_n}{\partial u_{n-1}}(u^0) 
-> \end{pmatrix}.
-> $$
->
-> 根据矩阵行列式的性质，$\vec{N}$ 与 $r'_{u_i}(u^0)$ ($1 \le i \le n - 1$) 均正交，即 $\vec{N}$ 是曲面的法向量. 
+
+## 

@@ -1,492 +1,256 @@
 ---
-title: Chapter 5 连续函数
+title: Lesson 5 实数 I
 permalink: /integral/integral-5/
-createTime: 2025/09/16 20:57:28
+createTime: 2026/08/17 14:16:29
 ---
 
-## Part 1 连续函数
+## Part 1 实数系构造
 
-### · 定义
+在本节中给出实数集 $\mathbb{R}$ 的一种构造方法. 构造出来的对象除了是一个集合外还具有很多基本性质，所以通常又将它称为实数系. 我们从有理数 $\mathbb{Q}$ 出发来构造实数. 
 
-连续变化的量用数学的语言来刻画就是连续函数。
+需要注意的是，自然数、整数以及有理数的建立也是需要严格的数学基础的，不过这对于学习微积分不是至关重要的，因此我们还是从有理数开始，毕竟有理数比较直观. 
 
-**定义1**（连续性）：如果 $f$ 在 $x_0$ 的一个邻域中有定义且 $f$ 在 $x_0$ 处的极限等于 $f(x_0)$，则称 $f$ 在 $x_0$ 处连续，$x_0$ 称为 $f$ 的一个连续点；如果 $f$ 在 $x_0$ 处的左极限等于 $f(x_0)$，则称 $f$ 在 $x_0$ 处左连续；如果 $f$ 在 $x_0$ 处的右极限等于 $f(x_0)$，则称 $f$ 在 $x_0$ 处右连续；在定义域内每一点都连续的函数称为连续函数。
+下面构造实数的方法是 Dedekind 在 1872 年发明的，这种方法以 **Dedekind 分割** 而著称. 
 
-> (1) 如果 $x_0$ 不是 $f$ 的连续点，则称 $x_0$ 是 $f$ 的一个间断点。显然，$f$ 在 $x_0$ 处连续当且仅当 $f$ 在 $x_0$ 处左连续和右连续。我们还可以用 Heine 定理来描述连续性：$f$ 在 $x_0$ 处连续当且仅当对任意收敛到 $x_0$ 的点列 $x_n$，均有 $f(x_n) \to f(x_0)$ ($n \to \infty$)。
->
-> (2) 用 $\varepsilon - \delta$ 的语言来描述 $f$ 在 $x_0$ 处连续就是：任给 $\varepsilon > 0$，存在 $\delta > 0$，当 $|x - x_0| < \delta$ 时，有
-> $$
-> |f(x) - f(x_0)| < \varepsilon.
-> $$
->
-> (3)* 上半连续和下半连续：如果任给 $\varepsilon > 0$，存在 $\delta > 0$，当 $|x - x_0| < \delta$ 时，有
-> $$
-> f(x) > f(x_0) - \varepsilon,
-> $$
-> 则称 $f$ 在 $x_0$ 处下半连续；如果任给 $\varepsilon > 0$，存在 $\delta > 0$，当 $|x - x_0| < \delta$ 时，有
-> $$
-> f(x) < f(x_0) + \varepsilon,
-> $$
-> 则称 $f$ 在 $x_0$ 处上半连续。
->
-> (4) 连续点和连续性的概念可以推广到在 $\mathbb{R}$ 的子集 $X$ 上定义的函数 $f: X \to \mathbb{R}$ 上：$x_0 \in X$ 为 $f$ 的连续点是指当 $x \in X$，$x \to x_0$ 时 $f(x) \to f(x_0)$。因此，当 $X = [a,b]$ 时，$f$ 为 $[a,b]$ 上的连续函数是指 $f$ 在 $(a,b)$ 中每一点都连续，且在 $a$ 处右连续，在 $b$ 处左连续。
+**定义1**：设 $\alpha$ 为 $\mathbb{Q}$ 的子集，如果满足以下三个条件：
 
-下面给出几个例子：
+(1). $\alpha \neq \varnothing$，$\alpha \neq \mathbb{Q}$；
 
-> 根据前面两节的计算，我们已经知道下面的初等函数都是连续的：
-> $$
-> C ,\ x,\ \sin x,\ \cos x,\ \sqrt{x},\ \log_a x\ (a > 0, a \ne 1).
-> $$
-> 如果 $f$ 为连续函数，则 $|f|$ 也是连续函数
->
-> > 设 $f$ 在 $x_0$ 处连续，则由
-> > $$
-> > 0 \le ||f(x)| - |f(x_0)|| \le |f(x) - f(x_0)|
-> > $$
-> > 以及夹逼原理知 $|f(x)|$ 在 $x_0$ 处连续
->
-> 研究函数 $f(x) = \frac{1}{x}\ (x \ne 0)$ 的连续性
->
-> > 设 $x_0 > 0$。任给 $\varepsilon > 0$，取 $\delta = \min\left\{\frac{1}{2}x_0, \frac{1}{2}x_0^2\varepsilon\right\}$，当 $|x - x_0| < \delta$ 时
-> > $$
-> > \left|\frac{1}{x} - \frac{1}{x_0}\right| = \frac{|x - x_0|}{|x x_0|} \le \frac{2|x - x_0|}{x_0^2} < \varepsilon,
-> > $$
-> > 因此 $f(x)$ 在 $x_0$ 处连续。完全类似地可证明，当 $x_0 < 0$ 时，$f$ 在 $x_0$ 处也连续。因此 $\frac{1}{x}$ 为连续函数
->
-> 研究函数 $f(x) = a^x\ (a > 0)$ 的连续性
->
-> > $a = 1$ 时 $f(x) = 1$ 为常值函数，因此是连续函数。设 $a \ne 1$，$x_0 \in \mathbb{R}$，则
-> > $$
-> > \lim_{x \to x_0} a^x = \lim_{x \to x_0} a^{x_0} a^{x - x_0} = a^{x_0} \lim_{y \to 0} a^y = a^{x_0}.
-> > $$
-> > 因此 $f(x)$ 为连续函数
+(2). 当 $p \in \alpha$，$q \in \alpha^c$ 时，$p < q$；
 
-利用下面的两个定理可以得到连续函数的更多例子
+(3). 任给 $p \in \alpha$，存在 $q \in \alpha$，使得 $p < q$；
 
-**定理1**（连续函数的四则运算）．设 $f(x), g(x)$ 都在 $x_0$ 处连续，则 
+则称 $\alpha$ 为 $\mathbb{Q}$ 的一个**分割**，分割的全体组成的集合记为 $\mathbb{R}$. 
 
+> 定义中的条件 (1) 是说 $\alpha$ 为 $\mathbb{Q}$ 的非空真子集，而 (3) 是说 $\alpha$ 中无最大数. 这一条不是本质的：如果 $\alpha$ 满足条件 (1) 和 (2)，且有最大数，将此最大数去掉后 $\alpha$ 就是满足所有三个条件的分割了. 
 
-(1) $\alpha f(x) + \beta g(x)$ 在 $x_0$ 处连续，其中 $\alpha, \beta$ 为常数；  
+**命题1**：设 $\alpha$ 为 $\mathbb{Q}$ 的一个分割，则：
 
-(2) $f(x)g(x)$ 在 $x_0$ 处连续；  
-
-(3) 当 $g(x_0) \ne 0$ 时，$f(x)/g(x)$ 在 $x_0$ 处连续。
-
-> 由函数极限的四则运算性质即可得到
-
-**定理2**（复合函数的连续性）．设函数 $f(y)$ 在 $y_0$ 处连续，函数 $g(x)$ 在 $x_0$ 处的极限为 $y_0$，则有
-$$
-\lim_{x \to x_0} f(g(x)) = f\left(\lim_{x \to x_0} g(x)\right) = f(y_0),
-$$
-特别地，当 $g$ 在 $x_0$ 处连续时，复合函数 $f(g(x))$ 在 $x_0$ 处也连续。
+1. 如果 $p < q$，$q \in \alpha$，则 $p \in \alpha$；
+2. 设 $w > 0$，则存在整数 $n$，使得 $nw \in \alpha$，$(n+1)w \in \alpha^c$. 
 
 > /proof/
 >
-> 因为函数 $f(y)$ 在 $y_0$ 处连续，故任给 $\varepsilon > 0$，存在 $\delta > 0$，当 $|y - y_0| < \delta$ 时，
+> **(1)**（反证法）  如果 $p \in \alpha^c$，则由分割定义的第二条即知 $q < p$，这和假设矛盾. 
+>
+> **(2)**  取 $r \in \alpha$，则当 $m < r/w$，即 $mw < r$ 时，由 (1) 即知 $mw \in \alpha$. 再取 $s \in \alpha^c$，当 $m > s/w$ 时 $mw \in \alpha^c$. 这说明，下面的整数子集：
 > $$
-> |f(y) - f(y_0)| < \varepsilon.
+> \{ m \in \mathbb{Z} \mid mw \in \alpha \}
 > $$
-> 对于这个 $\delta$，因为 $g(x) \to y_0\ (x \to x_0)$，故存在 $\eta > 0$，使得当 $0 < |x - x_0| < \eta$ 时，
+> 是非空且有上界的集合，因此有最大数 $n$，$n$ 就是满足要求的整数. 
+
+设 $r \in \mathbb{Q}$ 为一个有理数，记
+$$
+r^* = \{ s \in \mathbb{Q} \mid s < r \},
+$$
+则容易验证 $r^*$ 是一个分割，称为由有理数 $r$ 决定的分割. 
+
+考虑 $\mathbb{Q}$ 的子集
+$$
+\alpha = \{ r \in \mathbb{Q} \mid r^2 < 2 \} \cup \{ r \in \mathbb{Q} \mid r \leq 0 \},
+$$
+则 $\alpha$ 是一个分割. 
+
+事实上，容易看出 $\alpha$ 为非空子集. 分割定义的第二条也是容易验证的. 我们来看分割定义的第三条，即 $\alpha$ 中没有最大数：
+
+- 如果 $r \leq 0$，则 $r < 1$，而 $1 \in \alpha$；
+
+- 如果 $r > 0$，$r^2 < 2$，则取
+  $$
+  s = r - \frac{r^2 - 2}{r + 2} = \frac{2r + 2}{r + 2},
+  $$
+  且
+  $$
+  s^2 - 2 = \frac{2(r^2 - 2)}{(r + 2)^2} < 0,
+  $$
+  即 $s \in \alpha$，且 $r < s$. 
+
+如果递归地定义有理数列 $\{x_n\}$ 如下：
+$$
+x_0 = 1, \quad x_{n+1} = \frac{2x_n + 2}{x_n + 2}, \quad n \geq 0,
+$$
+则根据刚才的讨论，$\{x_n\}$ 为严格单调递增数列（即 $x_n < x_{n+1}$），且
+$$
+0 < 2 - x_{n+1}^2 = \frac{2(2 - x_n^2)}{(x_n + 2)^2} < \frac{1}{4}(2 - x_n^2),
+$$
+由此得到下面的估计：
+$$
+0 < 2 - x_n^2 < \frac{1}{4^n}, \quad n \geq 1.
+$$
+下面我们把有理数 $\mathbb{Q}$ 所满足的基本性质都推广到 $\mathbb{R}$ 上. 首先看次序如何定义. 
+
+**次序关系**：
+
+> 设 $\alpha, \beta \in \mathbb{R}$，如果 $\alpha$ 为 $\beta$ 的真子集，则称 $\alpha$ 小于 $\beta$，记为 $\alpha < \beta$. 我们也用记号 $\alpha \leq \beta$ 表示 $\alpha$ 为 $\beta$ 的子集. 此时 $\alpha = \beta$ 或 $\alpha < \beta$. 
+>
+> 次序关系的性质有：
+>
+> - 如果 $\alpha < \beta$，$\beta < \gamma$，则 $\alpha < \gamma$. 这是因为真子集的真子集还是真子集. 
+>
+> - 任给 $\alpha, \beta \in \mathbb{R}$，下面的三种关系有且仅有一个成立：
+>   $$
+>   \alpha < \beta,\quad \alpha = \beta,\quad \beta < \alpha.
+>   $$
+>
+> 事实上，设前两个关系不成立，则 $\alpha$ 不是 $\beta$ 的子集，因此存在 $r \in \alpha$，但 $r \notin \beta$. 如果 $s \in \beta$，则 $s < r$，从而 $s \in \alpha$，这就说明 $\beta$ 为 $\alpha$ 的子集. 由于 $\alpha \neq \beta$，故 $\beta$ 为 $\alpha$ 的真子集. 
+>
+> 如果 $r, s \in \mathbb{Q}$，则当 $r = s$ 时 $r^* = s^*$，当 $r < s$ 时 $r^* < s^*$. 因此我们定义的次序关系是自然的. 有了次序就可以定义上界. 
+
+**上界和上确界**：
+
+> 设 $A \subset \mathbb{R}$ 为 $\mathbb{R}$ 的非空子集，$\beta \in \mathbb{R}$. 如果任给 $\alpha \in A$，均有 $\alpha \leq \beta$，则称 $\beta$ 为 $A$ 的一个上界. 设 $\gamma$ 为 $A$ 的一个上界，如果任给 $A$ 的另一个上界 $\gamma'$，均有 $\gamma \leq \gamma'$，则称 $\gamma$ 为 $A$ 的最小上界或上确界，记为 $\sup A$. 易见，上确界如果存在则必定是惟一的. 
+
+**定理2**（确界原理）：$\mathbb{R}$ 的非空子集如果有上界，则必有上确界. 
+
+> 设 $A$ 为 $\mathbb{R}$ 的非空子集，$\beta$ 为 $A$ 的一个上界，记
 > $$
-> |g(x) - y_0| < \delta,
+> \gamma = \bigcup_{\alpha \in A} \alpha \subset \mathbb{Q}.
 > $$
-> 从而
+>
+> 下面先说明 $\gamma$ 为一个分割. $\gamma$ 显然是非空子集，由于 $\beta$ 为 $A$ 的一个上界，故 $\gamma \subset \beta$，这说明 $\gamma \neq \mathbb{Q}$. 这验证了分割定义的第一条. 
+>
+> 设 $r \in \gamma$，$s \notin \gamma$. 于是存在 $\alpha \in A$，使得 $r \in \alpha$，此时 $s \notin \alpha$，因此 $r < s$. 这验证了分割定义的第二条. 
+>
+> 第三条：设 $r \in \gamma$，于是存在 $\alpha \in A$，使得 $r \in \alpha$，此时存在 $s \in \alpha$，使得 $r < s$，由 $\gamma$ 的定义即知 $s \in \gamma$. 
+>
+> 其次我们说明 $\gamma$ 为 $A$ 的最小上界. 根据 $\gamma$ 的构造，显然 $\gamma$ 为 $A$ 的一个上界. 如果 $\gamma'$ 为另一个上界，则 $\alpha \subset \gamma'$，$\forall\, \alpha \in A$. 这说明 $\gamma \subset \gamma'$. 
+
+**实数表示为某个非空子集的上确界**：
+
+> 如果 $r \in \mathbb{Q}$ 为有理数，令
 > $$
-> |f(g(x)) - f(y_0)| < \varepsilon,
+> A = \{ s^* \in \mathbb{R} \mid s < r,\ s \in \mathbb{Q} \} = \{ s^* \mid s \in r^* \},
 > $$
-> 即
+> 则 $r^* = \sup A$. 事实上，由定义有
 > $$
-> f(g(x)) \to f(y_0) = f\left(\lim_{x \to x_0} g(x)\right).
+> \sup A = \bigcup_{s < r} s^* = \bigcup_{s < r} \{ t \in \mathbb{Q} \mid t < s \} = \{ t \in \mathbb{Q} \mid t < r \} = r^*.
+> $$
+>
+> 一般地，如果 $\alpha \in \mathbb{R}$ 为一个分割，则
+> $$
+> \alpha = \sup \{ r^* \mid r \in \alpha \}.
 > $$
 
-下面再给出一些例子：
+下面我们把 $\mathbb{Q}$ 中的四则运算推广到 $\mathbb{R}$ 中. 
 
-> 如果 $f, g$ 为连续函数，则 $\max\{f,g\}$ 和 $\min\{f,g\}$ 均为连续函数
+**加法运算**：
+
+> 设 $\alpha, \beta \in \mathbb{R}$，定义
+> $$
+> \alpha + \beta = \{ r + s \mid r \in \alpha,\ s \in \beta \},
+> $$
+> 显然，$\alpha + \beta$ 是 $\mathbb{Q}$ 的非空子集. 取 $r' \in \alpha^c$, $s' \in \beta^c$，则任给 $r \in \alpha$, $s \in \beta$，均有 $r < r'$, $s < s'$，从而有 $r + s < r' + s'$，这说明 $r' + s' \notin \alpha + \beta$，即 $\alpha + \beta \neq \mathbb{Q}$. 
 >
-> > 当 $f, g$ 连续时，$f + g$, $f - g$ 均连续。并且可以直接验证
-> > $$
-> > \begin{aligned}
-> > \max\{f,g\} &= \frac{1}{2}\{(f + g) + |f - g|\},\\\\
-> > \min\{f,g\} &= \frac{1}{2}\{(f + g) - |f - g|\}.
-> > \end{aligned}
-> > $$
-> > 于是 $\max\{f,g\}$ 和 $\min\{f,g\}$ 均为连续函数
+> 设 $p = r + s \in \alpha + \beta$，其中 $r \in \alpha$, $s \in \beta$. 如果 $q \in (\alpha + \beta)^c$，我们要说明 $p < q$. 事实上，如果 $q \leq p$，则 $q - s \leq r$，从而 $q - s \in \alpha$，$q = (q - s) + s \in \alpha + \beta$，这就得到矛盾，因此只能有 $p < q$. 
 >
-> 有理函数的连续性
+> $\alpha + \beta$ 中无最大数：设 $p = r + s \in \alpha + \beta$，取 $t \in \alpha$，使得 $r < t$，则 $q = t + s \in \alpha + \beta$，且 $p < q$. 总之，$\alpha + \beta$ 是一个分割，称为 $\alpha$ 与 $\beta$ 的和. 
 >
-> > 因为 $f(x) = x$ 为连续函数，因此 $x^2 = x \cdot x$, $x^3 = x \cdot x \cdot x, \cdots, x^n\ (n \ge 1)$ 都是连续函数；同理，因为 $f(x) = x^{-1}$ 连续，因此 $x^n\ (n \le -1)$ 也是连续函数。
+> > 求和运算具有以下性质：
 > >
-> > 进一步，有理函数（即两个多项式之商）在定义域内均为连续函数
->
-> 三角函数的连续性
->
-> > 因为 $\sin x, \cos x$ 为连续函数，故三角函数
-> > $$
-> > \csc x = \frac{1}{\sin x},\ \sec x = \frac{1}{\cos x},\ \tan x = \frac{\sin x}{\cos x},\ \cot x = \frac{\cos x}{\sin x}
-> > $$
-> > 在定义域内均为连续函数
->
-> 设 $\alpha \ne 0$，研究幂函数 $f(x) = x^\alpha$ 的连续性
->
-> > 设 $\alpha > 0$。先来说明 $f(x)$ 在 $x = 0$ 处是连续的。事实上，任给 $\varepsilon > 0$，取 $\delta = \varepsilon^{1/\alpha}$，当 $|x| < \delta$ 时
-> > $$
-> > |x^\alpha - 0| = (|x|)^\alpha \le (\varepsilon^{1/\alpha})^\alpha = \varepsilon.
-> > $$
-> > 因此 $f(x)$ 在 $x = 0$ 处连续。
+> > - 如果 $r, s \in \mathbb{Q}$，则 $r^* + s^* = (r + s)^*$. 这由定义不难得到. 
 > >
-> > 如果 $x > 0$，则 $x^\alpha = e^{\alpha \ln x}$，根据复合函数的连续性，我们知道 $f(x)$ 连续；如果 $x < 0$，则 $x^\alpha = (-1)^\alpha e^{\alpha \ln |x|}$，仍由复合函数的连续性知 $f(x)$ 连续。
+> > - **(交换律)** $\alpha + \beta = \beta + \alpha$. 这可从 $\mathbb{Q}$ 中加法具有交换律以及 $\alpha + \beta$ 和 $\beta + \alpha$ 的定义推出. 
 > >
-> > 如果 $\alpha < 0$，则
-> > $$
-> > x^\alpha = \left(\frac{1}{x}\right)^{-\alpha},
-> > $$
-> > 因此当 $x \ne 0$ 时函数是连续的。总之，在定义域内，幂函数是连续的
-
-### · 间断点
-
-单调函数和可逆函数之间有很密切的联系，我们先来研究单调函数的连续性
-
-**定义2**：设 $x_0$ 为 $f(x)$ 的一个间断点。如果 $f(x)$ 在 $x_0$ 处的左极限 $f(x_0 - 0)$ 和右极限 $f(x_0 + 0)$ 都存在且有限，则称 $x_0$ 为第一类间断点；其它的间断点都称为第二类间断点。左极限和右极限不相等的第一类间断点称为跳跃间断点；左极限和右极限相等的第一类间断点称为可去间断点。
-
-/example/
-
-> 研究单调函数 $f(x) = [x]$ 的连续性，其中 $[x]$ 表示不超过 $x$ 的最大整数
->
-> > 当 $k \le x < k + 1$ ($k$ 为整数) 时，$[x] = k$。因此，当 $x$ 不是整数时，$f(x)$ 在 $x$ 处连续。当 $x = k$ 为整数时，$f(x)$ 在 $k$ 处的左极限为 $k - 1$，右极限为 $k$。这说明 $f(x)$ 的间断点恰为所有的整数点。$\square$
+> > - **(结合律)** $(\alpha + \beta) + \gamma = \alpha + (\beta + \gamma)$. 这可从 $\mathbb{Q}$ 中加法具有结合律推出. 
 > >
-> > 根据定义，函数 $f(x) = [x]$ 的间断点都是跳跃间断点。
+> > - **(零元)** $\alpha + 0^* = \alpha$. 如果 $r \in \alpha$, $s \in 0^*$，则 $s < 0$, $r + s < r$，因此 $r + s \in \alpha$，这说明 $\alpha + 0^* \subset \alpha$. 
+> >
+> >   反之，设 $r \in \alpha$，取 $r' \in \alpha$，使得 $r < r'$，此时 $r - r' \in 0^*$，从而 $r = r' + (r - r') \in \alpha + 0^*$，这又说明 $\alpha \subset \alpha + 0^*$，因此 $\alpha + 0^* = \alpha$. $0^*$ 称为零元. 
+> >
+> > - **(负元)** 设 $\alpha \in \mathbb{R}$，令
+> >   $$
+> >   \beta = \{ r \in \mathbb{Q} \mid \text{存在 } s > 0,\ \text{使得 } -r - s \in \alpha^c \}.
+> >   $$
+> >
+> >   我们先来说明 $\beta$ 为一个分割. 取 $q \in \alpha^c$, $r = -q - 1$，则 $-r - 1 = q \in \alpha^c$，因此 $r \in \beta$，这说明 $\beta$ 是非空子集. 
+> >
+> >   如果 $p \in \alpha$, $r \in \beta$，则存在 $s > 0$，使得 $-r - s \in \alpha^c$，因此 $p < -r - s$, $r < -p - s < -p$，特别地，$-p \in \beta^c$，即 $\beta \neq \mathbb{Q}$. 分割定义的其它两条可类似验证. 
+> >
+> >   我们来说明 $\alpha + \beta = 0^*$. 如果 $p \in \alpha$, $r \in \beta$，则同上所述，存在 $s > 0$，使得 $-r - s \in \alpha^c$，因此 $p < -r - s$, $p + r < -s < 0$，于是 $p + r \in 0^*$，$\alpha + \beta \subset 0^*$. 
+> >
+> >   反之，取 $t \in 0^*$，则 $-t/2 > 0$，取整数 $n$，使得 $-nt/2 \in \alpha$, $-(n+1)t/2 \in \alpha^c$. 令 $r = (n+2)t/2$，则 $-r - (-t/2) \in \alpha^c$，因此 $r \in \beta$，且
+> >   $$
+> >   t - nt/2 + r \in \alpha + \beta,
+> >   $$
+> >   这说明 $0^* \subset \alpha + \beta$. 
+> >
+> >   我们称 $\beta$ 为 $\alpha$ 的负元，记为 $\beta = -\alpha$. 
 
-下面的结果说明单调函数在定义域内部的间断点都是跳跃间断点。
+**乘法运算**：
 
-**命题3**．设 $f(x)$ 是区间 $(a,b)$ 中的单调函数，$x_0 \in (a,b)$。如果 $x_0$ 为 $f(x)$ 的间断点，则 $x_0$ 是跳跃间断点。
-
-> /proof/
+> 令 $\mathbb{R}^+ = \{ \alpha \in \mathbb{R} \mid 0^* < \alpha \}$，如果 $\alpha, \beta \in \mathbb{R}^+$，令
+> $$
+> \alpha\beta = \{ p \in \mathbb{Q} \mid \text{exist } 0 < r \in \alpha,\ 0 < s \in \beta,\ \text{s.t. } p < rs \},
+> $$
+> 可以验证这是一个分割，且 $\alpha\beta \in \mathbb{R}^+$. 
 >
-> 由单调性知 $f(x)$ 在 $x_0$ 处的左极限和右极限都存在且有限，当 $f$ 单调递增时，有
-> $$
-> f(x_0 - 0) \le f(x_0) \le f(x_0 + 0),
-> $$
-> 当 $f$ 单调递减时，有
-> $$
-> f(x_0 - 0) \ge f(x_0) \ge f(x_0 + 0).
-> $$
-> 因此，如果 $x_0$ 为 $f(x)$ 的间断点，则 $x_0$ 必为跳跃间断点
+> > 这样我们对所有的情形都定义了乘法运算. 乘法运算具有以下性质：
+> >
+> > - 如果 $r, s \in \mathbb{Q}$，则 $(rs)^* = r^*s^*$. 以 $r, s > 0$ 为例：根据定义可以看出，
+> >   $$
+> >   \begin{aligned}
+> >   r^*s^* &= \{ p \in \mathbb{Q} \mid \text{exist } r', s' \in \mathbb{Q},\ 0 < r' < r,\ 0 < s' < s,\ \text{s.t. } p < r's' \} \\\\
+> >   &= \{ p \in \mathbb{Q} \mid p < rs \} = (rs)^*.
+> >   \end{aligned}
+> >   $$
+> >
+> > - **(交换律)** $\alpha\beta = \beta\alpha$. 这可从有理数乘法的交换律得到，下面的结合律也一样. 
+> >
+> > - **(结合律)** $(\alpha\beta)\gamma = \alpha(\beta\gamma)$. 
+> >
+> > - **(单位元)** $\alpha 1^* = \alpha$. 以 $0^* < \alpha$ 为例：根据定义可以看出，
+> >   $$
+> >   \begin{aligned}
+> >   \alpha 1^* &= \{ p \in \mathbb{Q} \mid p < rs,\ \text{exist } 0 < r \in \alpha,\ 0 < s < 1 \} \\\\
+> >   &= \{ p \in \mathbb{Q} \mid \text{exist } 0 < r \in \alpha,\ \text{s.t. } p < r \} = \alpha.
+> >   \end{aligned}
+> >   $$
+> >
+> > - **(逆元)** 如果 $\alpha \neq 0^*$，则存在 $\beta \in \mathbb{R}$，使得 $\alpha\beta = 1^*$. 事实上，不妨设 $0^* < \alpha$，定义 $\beta$ 为
+> >   $$
+> >   \beta = \{ s \in \mathbb{Q} \mid \text{exist } r \in \alpha^c,\ \text{s.t. } s < r^{-1} \}.
+> >   $$
+> >
+> >   不难验证这是一个分割，且 $\alpha\beta = 1^*$. 我们称 $\beta$ 为 $\alpha$ 的逆元，记为 $\beta = \alpha^{-1}$. 如果 $r$ 为非零有理数，则 $(r^*)^{-1} = (r^{-1})^*$. 
+> >
+> > - **(分配律)** $\alpha(\beta + \gamma) = \alpha\beta + \alpha\gamma$. 
 
-**命题4**：设 $f(x)$ 是定义在区间 $I$ 中的单调函数，则 $f(x)$ 的间断点为至多可数多个
-
-> /proof/
->
-> 不妨设 $f(x)$ 单调递增，且 $I$ 为开区间。假设 $x_1 < x_2$ 为间断点，则
-> $$
-> f(x_1 - 0) \le f(x_1) \le f(x_1 + 0) \le f(x_2 - 0) \le f(x_2) \le f(x_2 + 0).
-> $$
-> 因此，区间 $(f(x_1 - 0), f(x_1 + 0))$ 和 $(f(x_2 - 0), f(x_2 + 0))$ 不相交。如果我们把每一个间断点 $x$ 均对应到开区间 $(f(x - 0), f(x + 0))$，则这些开区间互不相交。这样的开区间只有至多可数多个，因此 $f(x)$ 的间断点也至多可数
-
-**命题5**：设 $f(x)$ 是定义在区间 $I$ 中的严格单调函数，则 $f(x)$ 连续当且仅当 $f(I)$ 也是区间
-
-> 不妨设 $f(x)$ 严格单调递增。如果 $f(I)$ 为区间，则 $f(x)$ 没有间断点，这是因为间断点 $x_0$ 对应的区间 $(f(x_0 - 0), f(x_0 + 0))$ 不在值域内，从而会分割值域。即值域为区间时 $f$ 是连续的。
->
-> 如果 $f$ 连续，则由**介值定理**知 $f(I)$ 为区间
-
-**推论6**．定义在区间 $I$ 中的严格单调连续函数 $f(x)$ 一定是可逆的，且其逆也是严格单调连续的
-
-> 不妨设 $f(x)$ 严格单调递增。由上一命题知 $f(I) = J$ 是区间。因为映射 $f: I \to J$ 是一一映射，故它是可逆的。设 $y_1 < y_2 \in J$，记 $x_1 = f^{-1}(y_1)$, $x_2 = f^{-1}(y_2)$。如果 $x_1 \ge x_2$，则因为 $f$ 单调递增，故 $y_1 = f(x_1) \ge f(x_2) = y_2$，这就得到矛盾。这说明
-> $$
-> x_1 = f^{-1}(y_1) < x_2 = f^{-1}(y_2),
-> $$
-> 因此 $f^{-1}$ 是 $J$ 上的严格单调递增函数。因为 $f^{-1}(J) = I$ 为区间，由上一命题即知 $f^{-1}$ 连续。
->
-> **注意**．利用介值定理可以证明，区间上的连续函数可逆当且仅当它是严格单调的。
-
-**定理7**．初等函数在其定义域内均为连续函数
-
-> 我们已经证明了常值函数、三角函数、幂函数、指数函数与对数函数在其定义域内是连续的。根据上面的推论，反三角函数在其定义域内也是连续的。这些基本初等函数在四则运算以及复合之下也都是连续函数
->
-> 利用初等函数的连续性，求函数极限的时候通常就可以直接代入定义域内的变量值来计算
-
-## Part 2 闭区间连续函数
-
-函数的性质密切依赖于实数系的基本性质
-
-### · 介值定理
-
-**定理1** (有界性定理). 设 $f(x)$ 为闭区间 $[a,b]$ 上的连续函数, 则 $f(x)$ 在 $[a,b]$ 上有界.
-
-> /proof/
->
-> **证法一**: 用反证法. 假设 $f(x)$ 无界, 则存在点列 $\{x_n\} \subset [a,b]$, 使得
-> $$
-> |f(x_n)| \geq n,\quad n = 1,2,\cdots.
-> $$
-> 因为 $\{x_n\}$ 为有界点列, 故存在收敛子列 $\{x_{n_i}\}$, 使得
-> $$
-> \lim_{i \to \infty} x_{n_i} = x_0 \in [a,b].
-> $$
-> 又因为 $f(x)$ 在 $x_0$ 处连续, 故
-> $$
-> \lim_{i \to \infty} f(x_{n_i}) = f(x_0).
-> $$
-> 特别地, $\{f(x_{n_i})\}$ 是有界点列, 这和 $|f(x_{n_i})| \geq n_i\ (\forall\ i \geq 1)$ 相矛盾.
->
-> **证法二**: 任取 $x \in [a,b]$, 因为 $f$ 在 $x$ 处连续, 故存在 $\delta_x > 0$, 使得
-> $$
-> |f(x') - f(x)| \leq 1,\quad \forall\ x' \in (x - \delta_x, x + \delta_x) \cap [a,b].
-> $$
-> 区间族 $\{(x - \delta_x, x + \delta_x)\}_{x \in [a,b]}$ 组成了闭区间 $[a,b]$ 的一个开覆盖, 因此存在有限子覆盖, 记为
-> $$
-> \{(x_i - \delta_{x_i}, x_i + \delta_{x_i})\},\ i = 1,2,\ldots,k.
-> $$
-> 令 $M = \max\limits_{1 \leq i \leq k} \{|f(x_i)| + 1\}$. 任取 $x \in [a,b]$, 设 $x \in (x_i - \delta_{x_i}, x_i + \delta_{x_i})$, 则
-> $$
-> |f(x)| \leq |f(x) - f(x_i)| + |f(x_i)| \leq 1 + |f(x_i)| \leq M,
-> $$
-> 这说明 $f(x)$ 是有界的. $\square$
->
-> > 闭区间的条件不能减弱, 例如函数 $f(x) = \dfrac{1}{x}$ 在 $(0,1]$ 上连续, 但无界.
-
-**定理2** (最值定理). 设 $f(x)$ 为闭区间 $[a,b]$ 上的连续函数, 则 $f(x)$ 在 $[a,b]$ 上必取到最大值和最小值, 即存在 $x_*, x^* \in [a,b]$, 使得
+用高等代数的语言来说，我们迄今为止所做的工作表明，配备了加法运算和乘法运算的集合 $\mathbb{R}$ 是一个**域**，称为**实数域**. 当然，有理数集合 $\mathbb{Q}$ 也是一个域，并且通过映射
 $$
-f(x_*) \leq f(x) \leq f(x^*),\quad \forall\ x \in [a,b].
+f: \mathbb{Q} \to \mathbb{R},\quad r \mapsto r^*
 $$
+我们知道 $\mathbb{Q}$ 可以看成 $\mathbb{R}$ 的子域，或实数域 $\mathbb{R}$ 是有理数域 $\mathbb{Q}$ 的一个扩张. 扩张以后的域除了具有有理数域的基本性质以外，还具备了重要的**确界原理**，它使得实数填满了有理数在数轴上所留下的空隙，因此实数集合 $\mathbb{R}$ 也称为**实数连续统**或**实数系**. 
 
-> /proof/
+为了强调实数系的连续性质，我们再看两个结论. 
+
+**定理3** (Archimedes 原理)：设 $0 < x \in \mathbb{R}$，则任给 $y \in \mathbb{R}$，存在正整数 $n$，使得 $y < nx$.
+
+> 我们不再区分有理数 $r$ 与分割 $r^*$. 考虑 $\mathbb{R}$ 的子集
+> $$
+> A = \{ nx \mid n \in \mathbb{N} \}.
+> $$
 >
-> **证法一**: 根据有界性定理, $f(x)$ 有界, 因此 $f([a,b])$ 必有上确界和下确界. 记上确界为 $M$, 则存在点列 $\{x_n\} \subset [a,b]$, 使得
-> $$
-> M - \frac{1}{n} \leq f(x_n) \leq M.
-> $$
-> 根据夹逼原理, $f(x_n) \to M\ (n \to \infty)$. 因为 $\{x_n\}$ 为有界点列, 故存在收敛子列 $\{x_{n_i}\}$, 使得
-> $$
-> \lim_{i \to \infty} x_{n_i} = x^* \in [a,b].
-> $$
-> 因为 $f(x)$ 在 $x^*$ 处连续, 故 $f(x_{n_i}) \to f(x^*)\ (i \to \infty)$. 这说明 $M = f(x^*)$, $M$ 即为 $f(x)$ 的最大值. 同理可证最小值可以取到, 或考虑 $-f$ 的最大值即可.
+> 我们说明 $A$ 没有上界. （反证法）如果有上界，则由确界原理知 $A$ 有上确界，记为 $\alpha$. 因为 $0 < x$，故 $\alpha - x < \alpha$，从而存在正整数 $m$，使得 $\alpha - x < mx$，此时 $\alpha < (m+1)x \in A$，这和 $\alpha$ 为 $A$ 的上界相矛盾. 
 >
-> **证法二**: 用反证法. 设 $M$ 为 $f$ 的上确界, 但 $f(x) \neq M,\ \forall\ x \in [a,b]$. 考虑函数
+> 既然 $A$ 没有上界，$y$ 就不是 $A$ 的上界，从而存在正整数 $n$，使得 $y < nx$. 
+
+**推论4** (有理数的稠密性)：任给 $a < b \in \mathbb{R}$，存在 $c \in \mathbb{Q}$，使得 $a < c < b$. 
+
+> 由 $a < b$ 知 $0 < b - a$，由 Archimedes 原理，存在正整数 $n$，使得 $1 < n(b - a)$. 再由 Archimedes 原理，存在正整数 $m_1, m_2$，使得 $na < m_1$, $-na < m_2$. 这说明，集合
 > $$
-> F(x) = \frac{1}{M - f(x)},\quad x \in [a,b].
+> A = \{ m' \in \mathbb{Z} \mid na < m' \} \subset \mathbb{Z}
 > $$
-> $F(x)$ 是 $[a,b]$ 上的正的连续函数. 由有界性定理, 存在正数 $K > 0$, 使得 $F(x) \leq K$. 从而
+> 非空且有下界，因而存在最小整数 $m \in A$，$m$ 满足条件
 > $$
-> f(x) \leq M - \frac{1}{K},\quad \forall\ x \in [a,b].
+> m - 1 \leq na < m.
 > $$
-> 这与 $M$ 为 $f$ 的上确界相矛盾, 因此 $M$ 必被 $f(x)$ 取到. 下确界的情形同理可证. $\square$
 >
-> **注意**. 闭区间的条件不能减弱, 如 $f(x) = x,\ x \in (0,1]$ 是连续的, 但在 $(0,1]$ 上达不到最小值.
+> 此时就有
+> $$
+> na < m \leq 1 + na < n(b - a) + na = nb,
+> $$
+> 即 $c = m/n \in \mathbb{Q}$ 满足条件 $a < c < b$. 
 
-**定理3** (零值定理, Bolzano). 设 $f(x)$ 为闭区间 $[a,b]$ 上的连续函数, 且 $f(a)f(b) < 0$, 则存在 $\xi \in (a,b)$, 使得 $f(\xi) = 0$.
+以上关于实数系的构造方法源于 Dedekind. 实数系还有其它的构造方法，例如 Cantor 用小数表示以及利用 Cauchy 序列也完成了实数系的构造. 
 
-> **证法一**: 用闭区间套原理. 不妨设 $f(a) < 0,\ f(b) > 0$. 
->
-> (反证法) 假设 $f(x) \neq 0,\ \forall\ x \in (a,b)$. 将 $[a,b]$ 二等分, 如果 $f\left(\dfrac{a+b}{2}\right) > 0$, 则取 $a_1 = a,\ b_1 = \dfrac{a+b}{2}$; 如果 $f\left(\dfrac{a+b}{2}\right) < 0$, 则取 $a_1 = \dfrac{a+b}{2},\ b_1 = b$, 
->
-> 总之 $f(a_1) < 0,\ f(b_1) > 0$. 再将 $[a_1,b_1]$ 二等分, 用 $[a_2,b_2]$ 表示满足 $f(a_2) < 0,\ f(b_2) > 0$ 的那一半小区间. 如此继续, 我们得到闭区间套
-> $$
-> [a_1,b_1] \supset [a_2,b_2] \supset \cdots \supset [a_n,b_n] \supset \cdots,
-> $$
-> 满足 $f(a_n) < 0,\ f(b_n) > 0$, 且
-> $$
-> b_n - a_n = \frac{b-a}{2^n} \to 0,\quad n \to \infty.
-> $$
-> 由闭区间套原理, 存在 $x_0 \in [a,b]$, 使得
-> $$
-> \lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = x_0.
-> $$
-> 根据 $f$ 的连续性, 有
-> $$
-> 0 \geq \lim_{n \to \infty} f(a_n) = f(x_0) = \lim_{n \to \infty} f(b_n) \geq 0,
-> $$
-> 从而 $f(x_0) = 0$. 显然 $x_0 \neq a,b$, 这就导出了矛盾.
->
-> **证法二**: 不妨设 $f(a) < 0,\ f(b) > 0$. 令
-> $$
-> A = \{x \in [a,b]\mid f(x) < 0\},
-> $$
-> 则 $a \in A$. 记 $\xi$ 为 $A$ 的上确界, 由 $f$ 的连续性易见 $\xi > a$. 由确界的定义, 存在 $x_n \in [a,b]$, 使得 $f(x_n) < 0,\ x_n \to \xi$, 因此
-> $$
-> f(\xi) = \lim_{n \to \infty} f(x_n) \leq 0,
-> $$
-> 特别地, $\xi < b$. 由 $A$ 的定义知 $f$ 在 $(\xi,b]$ 上非负, 由 $f$ 的连续性知 $f(\xi) \geq 0$, 这说明 $f(\xi) = 0$. 显然 $\xi \in (a,b)$.
->
-> > **注意**. 如果条件改为 $f(a)f(b) \leq 0$, 则存在 $\xi \in [a,b]$, 使得 $f(\xi) = 0$. 事实上, 如果 $f(a)f(b) = 0$, 则 $f(a) = 0$ 或 $f(b) = 0$, 从而取 $\xi = a$ 或 $\xi = b$ 即可; 当 $f(a)f(b) < 0$ 时用零值定理的结论即可
-
-**定理4** (介值定理). 设 $f(x)$ 为 $[a,b]$ 上的连续函数, $\mu$ 是严格介于 $f(a)$ 和 $f(b)$ 之间的数, 则存在 $\xi \in (a,b)$, 使得 $f(\xi) = \mu$.
-
-> /proof/
->
-> 设 $\mu$ 是严格介于 $f(a)$ 和 $f(b)$ 之间的数, 则 $(f(a) - \mu)(f(b) - \mu) < 0$. 因此, 由零值定理, 连续函数 $f(x) - \mu$ 在 $(a,b)$ 内存在零点 $\xi$, 即 $f(\xi) = \mu$.
-
-**推论5**. 设 $f(x)$ 是 $[a,b]$ 上的连续函数, 则 $f([a,b]) = [m,M]$, 其中 $m$, $M$ 分别是 $f$ 在 $[a,b]$ 上的最小值和最大值.
-
-> 当 $m = M$ 时 $f(x)$ 为常值函数, 结论自然成立. 
->
-> 设 $m < M$. 显然, $f([a,b]) \subset [m,M]$. 另一方面, 由最值定理, 存在 $x_*, x^*$, 使得 $f(x_*) = m,\ f(x^*) = M$.
->
->  由介值定理, 介于 $m$ 和 $M$ 之间的值也能被 $f(x)$ 取到, 因此 $[m,M] \subset f([a,b])$. 这说明 $f([a,b]) = [m,M]$.
-
-**推论6**. 设 $f(x)$ 是区间 $I$ 中的连续函数, 则 $f(I)$ 也是区间 (可退化为一点).
-
-> 如果 $f(x)$ 为常值函数, 则 $f(I)$ 退化为一点. 否则, 任取 $y_1 < y_2 \in f(I)$, 设 $f(x_1) = y_1,\ f(x_2) = y_2$, 在以 $x_1,\ x_2$ 为端点的闭区间上用介值定理, 我们就知道 $[y_1,y_2] \subset f(I)$. 由 $y_1,\ y_2$ 的任意性知 $f(I)$ 为一个区间.
-
-**推论7**. 设 $f(x)$ 是区间 $I$ 中的连续函数, 则 $f(x)$ 可逆当且当 $f(x)$ 是严格单调函数.
-
-> 只要证明必要性就可以了. 设 $x_1 < x_2 \in I$. 因为 $f(x)$ 可逆, 故 $f(x_1) \neq f(x_2)$. 如果 $f(x_1) < f(x_2)$, 我们将证明 $f(x)$ 在 $[x_1,x_2]$ 上是严格单调递增的. (反证法) 设 $x' < x'' \in [x_1,x_2],\ f(x') \geq f(x'')$. 分情况讨论:
->
-> (1) $f(x'') < f(x_1)$. 这时 $f(x'') < f(x_1) < f(x_2)$, 由介值定理, 存在 $\xi \in [x'',x_2]$, 使得 $f(\xi) = f(x_1)$, 这与 $f(x)$ 可逆相矛盾;
->
-> (2) $f(x'') > f(x_1)$. 这时 $f(x') \geq f(x'') > f(x_1)$, 由介值定理, 存在 $\xi \in [x_1,x']$, 使得 $f(\xi) = f(x'')$, 这与 $f(x)$ 可逆相矛盾.
->
-> 如果 $f(x_1) > f(x_2)$, 完全类似地可以证明 $f(x)$ 在 $[x_1,x_2]$ 上是严格单调递减的. 总之, $f(x)$ 在任何闭区间上都是严格单调的, 从而不难得出 $f(x)$ 在 $I$ 中是严格单调的.
-
-### · 一致连续
-
-**定义1** (一致连续). 设函数 $f(x)$ 定义在区间 $I$ 中, 如果任给 $\varepsilon > 0$, 均存在 $\delta = \delta(\varepsilon) > 0$, 使得当 $x_1,x_2 \in I$, 且 $|x_1 - x_2| < \delta$ 时有
-$$
-|f(x_1) - f(x_2)| < \varepsilon,
-$$
-则称 $f(x)$ 在 $I$ 中一致连续.
-
-> (1) 显然, 一致连续函数一定是连续函数. 一致连续性和连续性的区别就是, 用 $\varepsilon-\delta$ 语言定义 $x_0$ 处的连续性时, 定义中出现的 $\delta$ 一般会依赖于连续点 $x_0$ 以及 $\varepsilon$, 而一致连续性定义中出现的 $\delta$ 是不依赖于具体连续点的, 即对所有的连续点都能取到一个公共的 $\delta$, 一致性就体现在这儿.
->
-> (2) 用逆反命题的形式改写定义, 就得到: $f(x)$ 在 $I$ 中不一致连续当且仅当存在 $\varepsilon_0 > 0$, 以及 $I$ 中点列 $\{a_n\}, \{b_n\}$, 使得 $a_n - b_n \to 0\ (n \to \infty)$, 且
-> $$
-> |f(a_n) - f(b_n)| \geq \varepsilon_0.
-> $$
-
-/example/ 研究函数 $f(x) = \sin x,\ x \in \mathbb{R}$ 的一致连续性.
-
-> 任给 $\varepsilon > 0$, 取 $\delta = \varepsilon$. 当 $x_1,x_2 \in \mathbb{R}$, 且 $|x_1 - x_2| < \delta$ 时, 有
-> $$
-> \begin{aligned}
-> |\sin x_1 - \sin x_2| &= \left|2\sin\frac{x_1 - x_2}{2}\cos\frac{x_1 + x_2}{2}\right| \\\\
-> &\leq 2\left|\sin\frac{x_1 - x_2}{2}\right| \\\\
-> &\leq |x_1 - x_2| < \varepsilon.
-> \end{aligned}
-> $$
-> 这说明 $\sin x$ 在 $(-\infty,+\infty)$ 中是一致连续的.
->
-> $\sin x$ 是所谓 Lipschitz 函数的特殊情形.
-
-设 $f(x)$ 是定义在区间 $I$ 中的函数. 如果存在 $0 < \alpha \leq 1$, 以及常数 $M$, 使得
-$$
-|f(x_1) - f(x_2)| \leq M|x_1 - x_2|^\alpha,\quad \forall\ x_1,x_2 \in I,
-$$
-则称 $f(x)$ 是 $I$ 中的 $\alpha$ 阶 Hölder 函数. 当 $\alpha = 1$ 时也称为 Lipschitz 函数.
-
-Hölder 函数都是一致连续的: 任给 $\varepsilon > 0$, 取
-$$
-\delta = \left(\frac{\varepsilon}{M}\right)^{\frac{1}{\alpha}},
-$$
-则当 $x_1,x_2 \in I,\ |x_1 - x_2| < \delta$ 时, 有
-$$
-|f(x_1) - f(x_2)| \leq M|x_1 - x_2|^\alpha < M\left(\frac{\varepsilon}{M}\right) = \varepsilon.
-$$
-**命题8**. 设 $f(x), g(x)$ 为区间 $I$ 中的一致连续函数. 则  
-
-(1) $\alpha f(x) + \beta g(x)$ 在 $I$ 中也是一致连续的;  
-
-(2) 如果 $f(x), g(x)$ 为有界函数, 则 $f(x)g(x)$ 也是一致连续的;  
-
-(3) 如果 $f(x)$ 有界, 且存在 $\varepsilon_0 > 0$, 使得 $g(x) \geq \varepsilon_0,\ \forall\ x \in I$, 则 $f(x)/g(x)$ 也是一致连续的;  
-
-(4) 一致连续函数的复合函数仍为一致连续函数.
-
-**定理9** (Cantor). 闭区间上的连续函数是一致连续的.
-
-> /proof/
->
-> 设 $f(x)$ 是 $[a,b]$ 上的连续函数.
->
-> **证法一**: (反证法) 如果 $f(x)$ 不是一致连续的, 则存在 $\varepsilon_0 > 0$, 以及点列 $\{a_n\}, \{b_n\} \subset [a,b]$, 使得 $a_n - b_n \to 0\ (n \to \infty)$, 且
-> $$
-> |f(a_n) - f(b_n)| \geq \varepsilon_0.
-> $$
-> 因为 $\{b_n\}$ 为有界点列, 故存在收敛子列 $\{b_{n_i}\}$, 设 $b_{n_i} \to x_0 \in [a,b]$. 此时
-> $$
-> a_{n_i} = (a_{n_i} - b_{n_i}) + b_{n_i} \to 0 + x_0 = x_0\quad (i \to \infty).
-> $$
-> 因为 $f(x)$ 在 $x_0$ 处连续, 故
-> $$
-> \varepsilon_0 \leq |f(a_{n_i}) - f(b_{n_i})| \to |f(x_0) - f(x_0)| = 0\quad (i \to \infty),
-> $$
-> 这就导出了矛盾.
->
-> **证法二**: 任给 $\varepsilon > 0$, 因为 $f(x)$ 连续, 故对于任意 $x \in [a,b]$, 存在 $\delta_x > 0$, 使得
-> $$
-> |f(x') - f(x)| < \frac{\varepsilon}{2},\quad \forall\ x' \in (x - \delta_x, x + \delta_x) \cap [a,b].
-> $$
-> 显然, $\left\{(x - \frac{\delta_x}{2}, x + \frac{\delta_x}{2})\right\}_{x \in [a,b]}$ 为闭区间 $[a,b]$ 的一个开覆盖, 因而存在有限子覆盖, 即存在 $x_i\ (1 \leq i \leq k)$, 使得
-> $$
-> [a,b] \subset \bigcup_{i=1}^k \left(x_i - \frac{\delta_{x_i}}{2}, x_i + \frac{\delta_{x_i}}{2}\right).
-> $$
-> 记
-> $$
-> \delta = \min\left\{\frac{\delta_{x_i}}{2} \mid i = 1,2,\ldots,k\right\},
-> $$
-> 则对于任意的 $x',x'' \in [a,b]$, 如果 $|x' - x''| < \delta$, 设
-> $$
-> x' \in \left(x_i - \frac{\delta_{x_i}}{2}, x_i + \frac{\delta_{x_i}}{2}\right),\ \text{(对某个 } i\text{)},
-> $$
-> 则
-> $$
-> |x'' - x_i| \leq |x'' - x'| + |x' - x_i| < \delta + \frac{\delta_{x_i}}{2} \leq \delta_{x_i},
-> $$
-> 从而有 $x'' \in (x_i - \delta_{x_i}, x_i + \delta_{x_i})$. 因此, 我们有
-> $$
-> |f(x') - f(x'')| \leq |f(x') - f(x_i)| + |f(x_i) - f(x'')| \leq 2\frac{\varepsilon}{2} = \varepsilon,
-> $$
-> 这说明 $f(x)$ 在 $[a,b]$ 上是一致连续的. 
-
-最后引出函数振幅的概念, 并利用它来刻画连续性和一致连续性. 某个变化量的振幅, 是指其“最大”和“最小”值的差. 如果这个变化量的值趋于一个定数, 则其振幅应趋于零. 
-
-**定义2** (振幅). 设 $f(x)$ 在 $x_0$ 的一个开邻域内有定义, 称
-$$
-\omega_f(x_0,r) = \sup\left\{|f(x') - f(x'')| \mid x',x'' \in (x_0 - r, x_0 + r)\right\}\quad (r > 0)
-$$
-为 $f$ 在区间 $(x_0 - r, x_0 + r)$ 上的振幅. 显然, $\omega_f(x_0,r)$ 关于 $r \to 0^+$ 单调递减, 因此
-$$
-\omega_f(x_0) = \lim_{r \to 0^+} \omega_f(x_0,r)
-$$
-存在 (不一定有限), 称为 $f$ 在 $x_0$ 处的振幅.
-
-> (1) $\omega_f(x_0,r)$ 也可以定义为
-> $$
-> \omega_f(x_0,r) = \sup_{x \in (x_0 - r, x_0 + r)} f(x) - \inf_{x \in (x_0 - r, x_0 + r)} f(x),
-> $$
-> (2) 也可类似地对闭区间以及 $x_0$ 的一侧定义函数的振幅.
-
-**命题10**. $f(x)$ 在 $x_0$ 处连续当且仅当 $\omega_f(x_0) = 0$.
-
-> 设 $f(x)$ 在 $x_0$ 处连续. 任给 $\varepsilon > 0$, 存在 $\delta > 0$, 当 $|x - x_0| < \delta$ 时
-> $$
-> |f(x) - f(x_0)| < \frac{\varepsilon}{2}.
-> $$
-> 因此, 对于 $\forall\ x',x'' \in (x_0 - r, x_0 + r)\ (0 < r \leq \delta)$, 有
-> $$
-> |f(x') - f(x'')| \leq |f(x') - f(x_0)| + |f(x_0) - f(x'')| < 2\frac{\varepsilon}{2} = \varepsilon.
-> $$
-> 即当 $0 < r \leq \delta$ 时
-> $$
-> \omega_f(x_0,r) \leq \varepsilon.
-> $$
-> 这说明 $\omega_f(x_0) = \displaystyle\lim_{r \to 0^+} \omega_f(x_0,r) = 0$.
->
-> 反之, 设 $\displaystyle\lim_{r \to 0^+} \omega_f(x_0,r) = \omega_f(x_0) = 0$, 则任给 $\varepsilon > 0$, 存在 $\delta > 0$, 使得
-> $$
-> \omega_f(x_0,r) < \varepsilon,\quad \forall\ 0 < r \leq \delta.
-> $$
-> 特别地, 对于满足 $|x - x_0| < \delta$ 的点 $x$, 有
-> $$
-> |f(x) - f(x_0)| \leq \omega_f(x_0,\delta) < \varepsilon,
-> $$
-> 这说明 $f(x)$ 在 $x_0$ 处连续.
-
-我们可以类似地用振幅来刻画一致连续性. 设 $f$ 定义在区间 $I$ 中, $r > 0$. 令
-$$
-\omega_f(r) = \sup\left\{|f(x') - f(x'')| \mid \forall\ x',x'' \in I,\ |x' - x''| < r\right\},
-$$
-则 $\omega_f(r)$ 关于 $r \to 0^+$ 单调递减. 利用一致连续的定义可得如下命题：
-
-**命题11**. $f$ 在 $I$ 中一致连续当且仅当 $\displaystyle\lim_{r \to 0^+} \omega_f(r) = 0$.
-
-结束.
-
+如果用抽象的语言来描述，则这些构造出来的对象是所谓的具有确界原理的有序域，这样的域都是互相同构的. 

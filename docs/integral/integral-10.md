@@ -1,664 +1,291 @@
 ---
-title: Chapter 10 广义积分
+title: Lesson 10 函数连续性 II
 permalink: /integral/integral-10/
-createTime: 2025/09/16 20:57:28
+createTime: 2026/08/17 14:16:43
 ---
 
-## Part 1 积分应用
+## Part 2 闭区间连续函数
 
-### · 曲线的长度
+函数的性质密切依赖于实数系的基本性质
 
-设 $I = [\alpha, \beta]$ 为区间，映射 $\sigma: I \to \mathbb{R}^2$ 用分量表示为
+### · 介值定理
 
-$$
-\sigma(t) = (x(t), y(t)), \quad t \in I.
-$$
+**定理1** (有界性定理). 设 $f(x)$ 为闭区间 $[a,b]$ 上的连续函数, 则 $f(x)$ 在 $[a,b]$ 上有界.
 
-如果 $x(t), y(t)$ 均为连续函数，则称 $\sigma$ 为 $\mathbb{R}^2$ 上的连续曲线.如果 $x(t), y(t)$ 均可微（连续可微），则称 $\sigma$ 为可微（连续可微）曲线.
-
-设 $\sigma$ 为连续可微曲线，通过分割曲线并用直线段长度之和作逼近，我们可以定义 $\sigma$ 的长度为
-
-$$
-L(\sigma) = \int_\alpha^\beta \left[(x'(t))^2 + (y'(t))^2\right]^{\frac{1}{2}} dt.
-$$
-
-这个公式可以如下推导.首先注意到下面的简单不等式：
-
-$$
-|\sqrt{a^2 + b^2} - \sqrt{a^2 + c^2}| \leq |b - c|, \quad \forall a,b,c \in \mathbb{R}.
-$$
-
-我们将 $[\alpha, \beta]$ 分割为 $\alpha = t_0 < t_1 < \cdots < t_n = \beta$，点 $(x(t_i), y(t_i))$ 把曲线分成若干段，每一段的长度可以近似地用直线段的长度表示，即
-
-$$
-L(\sigma) \approx \sum_{i=1}^{n} \sqrt{(x(t_i) - x(t_{i-1}))^2 + (y(t_i) - y(t_{i-1}))^2},
-$$
-
-由微分中值定理，存在 $\xi_i, \eta_i \in (t_{i-1}, t_i)$，使得
-
-$$
-x(t_i) - x(t_{i-1}) = x'(\xi_i)(t_i - t_{i-1}), \quad y(t_i) - y(t_{i-1}) = y'(\eta_i)(t_i - t_{i-1}),
-$$
-
-从而有
-
-$$
-\sqrt{(x(t_i) - x(t_{i-1}))^2 + (y(t_i) - y(t_{i-1}))^2} = \sqrt{(x'(\xi_i))^2 + (y'(\eta_i))^2} \Delta t_i.
-$$
-
-因为
-
-$$
-\left|\sqrt{(x'(\xi_i))^2 + (y'(\eta_i))^2} \Delta t_i - \sqrt{(x'(\xi_i))^2 + (y'(\xi_i))^2} \Delta t_i\right| \leq |y'(\eta_i) - y'(\xi_i)| \Delta t_i,
-$$
-
-而
-
-$$
-\sum_{i=1}^{n} |y'(\eta_i) - y'(\xi_i)| \Delta t_i \leq \sum_{i=1}^{n} \omega_i(y) \Delta t_i \to 0, \quad (\|\pi\| = \max\{t_i - t_{i-1}\} \to 0)
-$$
-
-因此有
-
-$$
-\begin{aligned}
-L(\sigma) &= \lim_{\|\pi\| \to 0} \sum_{i=1}^{n} \sqrt{(x(t_i) - x(t_{i-1}))^2 + (y(t_i) - y(t_{i-1}))^2} \\\\
-&= \lim_{\|\pi\| \to 0} \sum_{i=1}^{n} \sqrt{(x'(\xi_i))^2 + (y'(\xi_i))^2} \Delta t_i \\\\
-&= \int_\alpha^\beta \left[(x'(t))^2 + (y'(t))^2\right]^{\frac{1}{2}} dt.
-\end{aligned}
-$$
-
-注：如果 $(x'(t))^2 + (y'(t))^2 \neq 0$，令
-
-$$
-s = \phi(t) = \int_\alpha^t \left[(x'(u))^2 + (y'(u))^2\right]^{\frac{1}{2}} du, \quad t \in [\alpha, \beta].
-$$
-
-则 $\phi: [\alpha, \beta] \to [0, L(\sigma)]$ 是严格单调递增函数，从而可逆，其逆记为 $t = \psi(s)$，$s$ 称为 $\sigma$ 的弧长参数.记 $\tilde{\sigma}(s) = \sigma(\psi(s))$，$s \in [0, L(\sigma)]$.根据反函数的求导公式易见
-
-$$
-\|\tilde{\sigma}'(s)\| = \sqrt{(\tilde{x}'(s))^2 + (\tilde{y}'(s))^2} = 1.
-$$
-
-### · 简单图形面积
-
-(1) 如果 $f > 0$ 为 $[a, b]$ 上的连续函数，则由 $y = f(x)$, $x = a$, $x = b$ ($a < b$) 与 $y = 0$ 围成的曲边梯形的面积为
-
-$$
-S = \int_a^b f(x) dx.
-$$
-
-一般地，当 $f$ 变号时，上式仍有意义，称为代数面积和，而
-
-$$
-S = \int_a^b |f(x)| dx
-$$
-
-才是所围面积之和.更一般地，由 $y = f_2(x)$, $y = f_1(x)$ 以及 $x = a$, $x = b$ 围成的图形的面积为
-
-$$
-S = \int_a^b |f_2(x) - f_1(x)| dx.
-$$
-
-(2) 设 $\sigma$ 为平面曲线，由极坐标方程
-
-$$
-r = r(\theta), \quad \theta \in [\alpha, \beta]
-$$
-
-给出，其中 $r(\theta)$ 关于 $\theta$ 连续，$\beta - \alpha \leq 2\pi$.则由 $\sigma$, $\theta = \alpha$, $\theta = \beta$ 所围成的图形面积为
-
-$$
-S = \lim_{\|\pi\| \to 0} \sum_{i=1}^{m} \frac{1}{2} r^2(\xi_i) \cdot \Delta \theta_i = \frac{1}{2} \int_\alpha^\beta r^2(\theta) d\theta.
-$$
-
-这个公式是通过使用扇形的面积和逼近图形面积得到的.
-
-(3) 如果曲线 $\sigma$ 由 $\sigma(t) = (x(t), y(t))$, $t \in [\alpha, \beta]$ 给出，其中 $y(t) \geq 0$, $x$ 关于 $t$ 单调递增，$x([\alpha, \beta]) = [a, b]$.则 $\sigma$ 与 $x = a$, $x = b$ 以及 $y = 0$ 围成的曲边梯形的面积为
-
-$$
-S = \int_\alpha^\beta y(t)x'(t) dt.
-$$
-
-这个公式仍然是通过使用矩形面积之和去逼近曲边梯形得到.一般地，如果只设 $x$ 是单调的，则面积公式为
-
-$$
-S = \int_\alpha^\beta |y(t)x'(t)| dt.
-$$
-
-如果 $\sigma$ 除在 $t = \alpha, \beta$ 处以外无自交点，则 $\sigma$ 本身围成的图形的面积为
-
-$$
-S = \left| \int_\alpha^\beta y(t)x'(t) dt \right| = \left| \int_\alpha^\beta x(t)y'(t) dt \right|,
-$$
-
-因为
-
-$$
-\begin{aligned}
-\int_\alpha^\beta y(t)x'(t) dt &= y(t)x(t)\Big|_\alpha^\beta - \int_\alpha^\beta y'(t)x(t) dt \\\\
-&= - \int_\alpha^\beta y'(t)x(t) dt,
-\end{aligned}
-$$
-
-故这个面积公式也可以改写为
-
-$$
-S = \frac{1}{2} \left| \int_\alpha^\beta [y(t)x'(t) - y'(t)x(t)] dt \right|.
-$$
-
-(4) 旋转曲面的面积
-
-设 $\sigma$ 为平面曲线
-
-$$
-\sigma(t) = (x(t), y(t)), \quad t \in [\alpha, \beta], \quad y(t) \geq 0.
-$$
-
-$\sigma$ 绕 $x$ 轴旋转所得曲面的面积为
-
-$$
-S = \int_\alpha^\beta 2\pi y(t)\left[(x'(t))^2 + (y'(t))^2\right]^{\frac{1}{2}} dt.
-$$
-
-> 取 $[\alpha, \beta]$ 的一个分割，在分点 $t_{i-1}, t_i$ 之间的曲线段经过旋转后所形成的曲面的面积可以用圆台的面积近似逼近，这一部分圆台的面积为
+> /proof/
 >
+> **证法一**: 用反证法. 假设 $f(x)$ 无界, 则存在点列 $\{x_n\} \subset [a,b]$, 使得
 > $$
-> \pi(y(t_{i-1}) + y(t_i)) \sqrt{(x(t_i) - x(t_{i-1}))^2 + (y(t_i) - y(t_{i-1}))^2},
+> |f(x_n)| \geq n,\quad n = 1,2,\cdots.
 > $$
->
-> 因此
->
+> 因为 $\{x_n\}$ 为有界点列, 故存在收敛子列 $\{x_{n_i}\}$, 使得
 > $$
-> S \approx \sum_{i=1}^{n} \pi(y(t_{i-1}) + y(t_i)) \sqrt{(x(t_i) - x(t_{i-1}))^2 + (y(t_i) - y(t_{i-1}))^2},
+> \lim_{i \to \infty} x_{n_i} = x_0 \in [a,b].
 > $$
->
-> 和曲线弧长公式的推导过程类似，当分割的模趋于零时，我们近似地有
->
+> 又因为 $f(x)$ 在 $x_0$ 处连续, 故
 > $$
-> (y(t_{i-1}) + y(t_i)) \approx 2y(\xi_i), \quad (\xi_i \in [t_{i-1}, t_i])
+> \lim_{i \to \infty} f(x_{n_i}) = f(x_0).
 > $$
+> 特别地, $\{f(x_{n_i})\}$ 是有界点列, 这和 $|f(x_{n_i})| \geq n_i\ (\forall\ i \geq 1)$ 相矛盾.
 >
-> 以及
->
+> **证法二**: 任取 $x \in [a,b]$, 因为 $f$ 在 $x$ 处连续, 故存在 $\delta_x > 0$, 使得
 > $$
-> \sqrt{(x(t_i) - x(t_{i-1}))^2 + (y(t_i) - y(t_{i-1}))^2} \approx \sqrt{(x'(\xi_i))^2 + (y'(\xi_i))^2} \Delta t_i,
+> |f(x') - f(x)| \leq 1,\quad \forall\ x' \in (x - \delta_x, x + \delta_x) \cap [a,b].
 > $$
+> 区间族 $\{(x - \delta_x, x + \delta_x)\}_{x \in [a,b]}$ 组成了闭区间 $[a,b]$ 的一个开覆盖, 因此存在有限子覆盖, 记为
+> $$
+> \{(x_i - \delta_{x_i}, x_i + \delta_{x_i})\},\ i = 1,2,\ldots,k.
+> $$
+> 令 $M = \max\limits_{1 \leq i \leq k} \{|f(x_i)| + 1\}$. 任取 $x \in [a,b]$, 设 $x \in (x_i - \delta_{x_i}, x_i + \delta_{x_i})$, 则
+> $$
+> |f(x)| \leq |f(x) - f(x_i)| + |f(x_i)| \leq 1 + |f(x_i)| \leq M,
+> $$
+> 这说明 $f(x)$ 是有界的. $\square$
 >
-> 当分割的模趋于零时，近似逼近所引起的这些误差之和趋于零.因此有
+> > 闭区间的条件不能减弱, 例如函数 $f(x) = \dfrac{1}{x}$ 在 $(0,1]$ 上连续, 但无界.
+
+**定理2** (最值定理). 设 $f(x)$ 为闭区间 $[a,b]$ 上的连续函数, 则 $f(x)$ 在 $[a,b]$ 上必取到最大值和最小值, 即存在 $x_*, x^* \in [a,b]$, 使得
+$$
+f(x_*) \leq f(x) \leq f(x^*),\quad \forall\ x \in [a,b].
+$$
+
+> /proof/
 >
+> **证法一**: 根据有界性定理, $f(x)$ 有界, 因此 $f([a,b])$ 必有上确界和下确界. 记上确界为 $M$, 则存在点列 $\{x_n\} \subset [a,b]$, 使得
+> $$
+> M - \frac{1}{n} \leq f(x_n) \leq M.
+> $$
+> 根据夹逼原理, $f(x_n) \to M\ (n \to \infty)$. 因为 $\{x_n\}$ 为有界点列, 故存在收敛子列 $\{x_{n_i}\}$, 使得
+> $$
+> \lim_{i \to \infty} x_{n_i} = x^* \in [a,b].
+> $$
+> 因为 $f(x)$ 在 $x^*$ 处连续, 故 $f(x_{n_i}) \to f(x^*)\ (i \to \infty)$. 这说明 $M = f(x^*)$, $M$ 即为 $f(x)$ 的最大值. 同理可证最小值可以取到, 或考虑 $-f$ 的最大值即可.
+>
+> **证法二**: 用反证法. 设 $M$ 为 $f$ 的上确界, 但 $f(x) \neq M,\ \forall\ x \in [a,b]$. 考虑函数
+> $$
+> F(x) = \frac{1}{M - f(x)},\quad x \in [a,b].
+> $$
+> $F(x)$ 是 $[a,b]$ 上的正的连续函数. 由有界性定理, 存在正数 $K > 0$, 使得 $F(x) \leq K$. 从而
+> $$
+> f(x) \leq M - \frac{1}{K},\quad \forall\ x \in [a,b].
+> $$
+> 这与 $M$ 为 $f$ 的上确界相矛盾, 因此 $M$ 必被 $f(x)$ 取到. 下确界的情形同理可证. $\square$
+>
+> **注意**. 闭区间的条件不能减弱, 如 $f(x) = x,\ x \in (0,1]$ 是连续的, 但在 $(0,1]$ 上达不到最小值.
+
+**定理3** (零值定理, Bolzano). 设 $f(x)$ 为闭区间 $[a,b]$ 上的连续函数, 且 $f(a)f(b) < 0$, 则存在 $\xi \in (a,b)$, 使得 $f(\xi) = 0$.
+
+> **证法一**: 用闭区间套原理. 不妨设 $f(a) < 0,\ f(b) > 0$. 
+>
+> (反证法) 假设 $f(x) \neq 0,\ \forall\ x \in (a,b)$. 将 $[a,b]$ 二等分, 如果 $f\left(\dfrac{a+b}{2}\right) > 0$, 则取 $a_1 = a,\ b_1 = \dfrac{a+b}{2}$; 如果 $f\left(\dfrac{a+b}{2}\right) < 0$, 则取 $a_1 = \dfrac{a+b}{2},\ b_1 = b$, 
+>
+> 总之 $f(a_1) < 0,\ f(b_1) > 0$. 再将 $[a_1,b_1]$ 二等分, 用 $[a_2,b_2]$ 表示满足 $f(a_2) < 0,\ f(b_2) > 0$ 的那一半小区间. 如此继续, 我们得到闭区间套
+> $$
+> [a_1,b_1] \supset [a_2,b_2] \supset \cdots \supset [a_n,b_n] \supset \cdots,
+> $$
+> 满足 $f(a_n) < 0,\ f(b_n) > 0$, 且
+> $$
+> b_n - a_n = \frac{b-a}{2^n} \to 0,\quad n \to \infty.
+> $$
+> 由闭区间套原理, 存在 $x_0 \in [a,b]$, 使得
+> $$
+> \lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = x_0.
+> $$
+> 根据 $f$ 的连续性, 有
+> $$
+> 0 \geq \lim_{n \to \infty} f(a_n) = f(x_0) = \lim_{n \to \infty} f(b_n) \geq 0,
+> $$
+> 从而 $f(x_0) = 0$. 显然 $x_0 \neq a,b$, 这就导出了矛盾.
+>
+> **证法二**: 不妨设 $f(a) < 0,\ f(b) > 0$. 令
+> $$
+> A = \{x \in [a,b]\mid f(x) < 0\},
+> $$
+> 则 $a \in A$. 记 $\xi$ 为 $A$ 的上确界, 由 $f$ 的连续性易见 $\xi > a$. 由确界的定义, 存在 $x_n \in [a,b]$, 使得 $f(x_n) < 0,\ x_n \to \xi$, 因此
+> $$
+> f(\xi) = \lim_{n \to \infty} f(x_n) \leq 0,
+> $$
+> 特别地, $\xi < b$. 由 $A$ 的定义知 $f$ 在 $(\xi,b]$ 上非负, 由 $f$ 的连续性知 $f(\xi) \geq 0$, 这说明 $f(\xi) = 0$. 显然 $\xi \in (a,b)$.
+>
+> > **注意**. 如果条件改为 $f(a)f(b) \leq 0$, 则存在 $\xi \in [a,b]$, 使得 $f(\xi) = 0$. 事实上, 如果 $f(a)f(b) = 0$, 则 $f(a) = 0$ 或 $f(b) = 0$, 从而取 $\xi = a$ 或 $\xi = b$ 即可; 当 $f(a)f(b) < 0$ 时用零值定理的结论即可
+
+**定理4** (介值定理). 设 $f(x)$ 为 $[a,b]$ 上的连续函数, $\mu$ 是严格介于 $f(a)$ 和 $f(b)$ 之间的数, 则存在 $\xi \in (a,b)$, 使得 $f(\xi) = \mu$.
+
+> /proof/
+>
+> 设 $\mu$ 是严格介于 $f(a)$ 和 $f(b)$ 之间的数, 则 $(f(a) - \mu)(f(b) - \mu) < 0$. 因此, 由零值定理, 连续函数 $f(x) - \mu$ 在 $(a,b)$ 内存在零点 $\xi$, 即 $f(\xi) = \mu$.
+
+**推论5**. 设 $f(x)$ 是 $[a,b]$ 上的连续函数, 则 $f([a,b]) = [m,M]$, 其中 $m$, $M$ 分别是 $f$ 在 $[a,b]$ 上的最小值和最大值.
+
+> 当 $m = M$ 时 $f(x)$ 为常值函数, 结论自然成立. 
+>
+> 设 $m < M$. 显然, $f([a,b]) \subset [m,M]$. 另一方面, 由最值定理, 存在 $x_*, x^*$, 使得 $f(x_*) = m,\ f(x^*) = M$.
+>
+> 由介值定理, 介于 $m$ 和 $M$ 之间的值也能被 $f(x)$ 取到, 因此 $[m,M] \subset f([a,b])$. 这说明 $f([a,b]) = [m,M]$.
+
+**推论6**. 设 $f(x)$ 是区间 $I$ 中的连续函数, 则 $f(I)$ 也是区间 (可退化为一点).
+
+> 如果 $f(x)$ 为常值函数, 则 $f(I)$ 退化为一点. 否则, 任取 $y_1 < y_2 \in f(I)$, 设 $f(x_1) = y_1,\ f(x_2) = y_2$, 在以 $x_1,\ x_2$ 为端点的闭区间上用介值定理, 我们就知道 $[y_1,y_2] \subset f(I)$. 由 $y_1,\ y_2$ 的任意性知 $f(I)$ 为一个区间.
+
+**推论7**. 设 $f(x)$ 是区间 $I$ 中的连续函数, 则 $f(x)$ 可逆当且当 $f(x)$ 是严格单调函数.
+
+> 只要证明必要性就可以了. 设 $x_1 < x_2 \in I$. 因为 $f(x)$ 可逆, 故 $f(x_1) \neq f(x_2)$. 如果 $f(x_1) < f(x_2)$, 我们将证明 $f(x)$ 在 $[x_1,x_2]$ 上是严格单调递增的. (反证法) 设 $x' < x'' \in [x_1,x_2],\ f(x') \geq f(x'')$. 分情况讨论:
+>
+> (1) $f(x'') < f(x_1)$. 这时 $f(x'') < f(x_1) < f(x_2)$, 由介值定理, 存在 $\xi \in [x'',x_2]$, 使得 $f(\xi) = f(x_1)$, 这与 $f(x)$ 可逆相矛盾;
+>
+> (2) $f(x'') > f(x_1)$. 这时 $f(x') \geq f(x'') > f(x_1)$, 由介值定理, 存在 $\xi \in [x_1,x']$, 使得 $f(\xi) = f(x'')$, 这与 $f(x)$ 可逆相矛盾.
+>
+> 如果 $f(x_1) > f(x_2)$, 完全类似地可以证明 $f(x)$ 在 $[x_1,x_2]$ 上是严格单调递减的. 总之, $f(x)$ 在任何闭区间上都是严格单调的, 从而不难得出 $f(x)$ 在 $I$ 中是严格单调的.
+
+### · 一致连续
+
+**定义1** (一致连续). 设函数 $f(x)$ 定义在区间 $I$ 中, 如果任给 $\varepsilon > 0$, 均存在 $\delta = \delta(\varepsilon) > 0$, 使得当 $x_1,x_2 \in I$, 且 $|x_1 - x_2| < \delta$ 时有
+$$
+|f(x_1) - f(x_2)| < \varepsilon,
+$$
+则称 $f(x)$ 在 $I$ 中一致连续.
+
+> (1) 显然, 一致连续函数一定是连续函数. 一致连续性和连续性的区别就是, 用 $\varepsilon-\delta$ 语言定义 $x_0$ 处的连续性时, 定义中出现的 $\delta$ 一般会依赖于连续点 $x_0$ 以及 $\varepsilon$, 而一致连续性定义中出现的 $\delta$ 是不依赖于具体连续点的, 即对所有的连续点都能取到一个公共的 $\delta$, 一致性就体现在这儿.
+>
+> (2) 用逆反命题的形式改写定义, 就得到: $f(x)$ 在 $I$ 中不一致连续当且仅当存在 $\varepsilon_0 > 0$, 以及 $I$ 中点列 $\{a_n\}, \{b_n\}$, 使得 $a_n - b_n \to 0\ (n \to \infty)$, 且
+> $$
+> |f(a_n) - f(b_n)| \geq \varepsilon_0.
+> $$
+
+/example/ 研究函数 $f(x) = \sin x,\ x \in \mathbb{R}$ 的一致连续性.
+
+> 任给 $\varepsilon > 0$, 取 $\delta = \varepsilon$. 当 $x_1,x_2 \in \mathbb{R}$, 且 $|x_1 - x_2| < \delta$ 时, 有
 > $$
 > \begin{aligned}
-> S &= \lim_{\|\pi\| \to 0} \sum_{i=1}^{n} 2\pi y(\xi_i)\left[(x'(\xi_i))^2 + (y'(\xi_i))^2\right]^{\frac{1}{2}} \Delta t_i \\\\
-> &= \int_\alpha^\beta 2\pi y(t)\left[(x'(t))^2 + (y'(t))^2\right]^{\frac{1}{2}} dt.
+> |\sin x_1 - \sin x_2| &= \left|2\sin\frac{x_1 - x_2}{2}\cos\frac{x_1 + x_2}{2}\right| \\\\
+> &\leq 2\left|\sin\frac{x_1 - x_2}{2}\right| \\\\
+> &\leq |x_1 - x_2| < \varepsilon.
 > \end{aligned}
 > $$
-
-### · 简单立体体积
-
-(1) 平行截面之间的立体体积
-
-设 $\Omega$ 为 $\mathbb{R}^3$ 中一块立体区域，夹在平面 $x = a$ 与 $x = b$ ($a < b$) 之间.记 $S(x)$ 为 $x \in [a, b]$ 处垂直于 $x$ 轴的平面截 $\Omega$ 的截面面积函数.如果 $S(x)$ 关于 $x$ 连续，则 $\Omega$ 的体积为
-
-$$
-V = \int_a^b S(x) dx.
-$$
-
-特别地，如果两块区域 $\Omega_A$ 和 $\Omega_B$ 的截面面积函数相等，则其体积相同.这个事实在公元 5 到 6 世纪由祖暅（祖冲之之子）所发现，17 世纪时意大利人 Cavalieri 也发现了这一事实.
-
-(2) 旋转体的体积
-
-设 $f$ 为 $[a, b]$ 上的连续函数，$\Omega$ 是由平面图形
-
-$$
-\{(x, y) \mid a \leq x \leq b, \; 0 \leq |y| \leq |f(x)|\}
-$$
-
-绕 $x$ 轴旋转一周所得旋转体.该旋转体在 $x \in [a, b]$ 处的截面为圆盘，其面积为
-
-$$
-S(x) = \pi f^2(x).
-$$
-
-因此 $\Omega$ 的体积为
-
-$$
-V = \int_a^b S(x) dx = \pi \int_a^b f^2(x) dx.
-$$
-
-### · 物理应用
-
-(1) 降落伞的原理
-
-质量为 $m$ 的物体在重力作用下自由下落，下落时所受空气阻力与下落速度成正比，比例常数为 $k$，则由牛顿定律，
-
-$$
-mg - kv = m \frac{dv}{dt},
-$$
-
-其中，$g$ 为重力加速度，$v$ 为物体的速度，我们选择指向地心的坐标.上面的方程等价于
-
-$$
-\frac{d}{dt}(e^{\frac{k}{m}t} v) = g e^{\frac{k}{m}t},
-$$
-
-假设初速度为零，则
-
-$$
-e^{\frac{k}{m}t} v = g \int_0^t e^{\frac{k}{m}s} ds = \frac{mg}{k}(e^{\frac{k}{m}t} - 1),
-$$
-
-即
-
-$$
-v(t) = \frac{mg}{k}(1 - e^{-\frac{k}{m}t}).
-$$
-
-特别地，$t \to \infty$ 时 $v(t) \to \dfrac{mg}{k}$，即速度不会增加到无限大.
-
-(2) 第二宇宙速度
-
-从地球表面发射火箭，如果要求火箭无限飞离地球，问：火箭的初速度至少为多大？
-
-根据万有引力定律，在距地心 $x$ 处火箭所受地球引力为
-
-$$
-F = GMm x^{-2},
-$$
-
-其中，$G$ 为万有引力常数，$M$ 为地球质量，$m$ 为火箭质量.在地球表面，有
-
-$$
-GMm R^{-2} = mg,
-$$
-
-其中 $R$ 为地球半径.火箭从地面升到距地心 $r$ ($r > R$) 处需要做的功为
-
-$$
-\int_R^r GMm x^{-2} dx = \int_R^r mg R^2 x^{-2} dx = mg R^2 \left(\frac{1}{R} - \frac{1}{r}\right).
-$$
-
-因此，火箭无限飞离地球需要做功
-
-$$
-W = \lim_{r \to \infty} mg R^2 \left(\frac{1}{R} - \frac{1}{r}\right) = mg R.
-$$
-
-由能量守恒原理，火箭的初速度至少为 $v_0$，则
-
-$$
-\frac{1}{2} m v_0^2 = mg R,
-$$
-
-因而
-
-$$
-v_0 = \sqrt{2gR} \approx \sqrt{2 \times 9.81 (m/s^2) \times 6.371 \times 10^6 m} \approx 11.2 \, (km/s).
-$$
-
-(3) 缆绳的工作原理
-
-绳索在日常生活中应用十分广泛，例如在码头上经常用来系住船舶.为什么绳索能拉住大型船舶？下面我们就来作一个力学分析，它揭示了绳索产生巨大拉力的原理.
-
-设一段绳索缠绕在一圆柱体上，绳索一端施以拉力 $f$，绳索与圆柱体之间的摩擦系数为 $k$，如果绳索共绕了 $n$ 圈，在绳索的另一端产生的拉力为 $F$，我们来求 $F$ 的值.
-
-取角度为 $\Delta\theta$ 的一小段绳索，研究其受力状况.设这一段绳索承受圆柱体的正压力为 $\Delta N$，则摩擦力为 $k \Delta N$.这一段绳索两端所受拉力分别为 $F$, $F + \Delta F$，则考虑沿圆柱体外法向和切向这两个方向绳索的受力，得到方程
-
-$$
-\begin{cases}
-\Delta N = (F + \Delta F) \sin \dfrac{\Delta\theta}{2} + F \sin \dfrac{\Delta\theta}{2}, \\\\
-(F + \Delta F) \cos \dfrac{\Delta\theta}{2} = F \cos \dfrac{\Delta\theta}{2} + k \Delta N.
-\end{cases}
-$$
-
-从方程中消去 $\Delta N$，令 $\Delta\theta \to 0$，得
-
-$$
-\frac{dF}{d\theta} = \lim_{\Delta\theta \to 0} \frac{\Delta F}{\Delta\theta} = kF,
-$$
-
-利用积分解得
-
-$$
-F(\theta) = f \cdot e^{k\theta}.
-$$
-
-当 $\theta = 2n\pi$ 时，$F = f \cdot e^{2kn\pi}$.例如，设摩擦系数 $k = \dfrac{1}{4}$，$n = 6$，$f = 10 kg$，则 $F = 10 e^{3\pi} kg > 100000 kg$.
-
-### · 近似计算
-
-设 $f$ 为 $[a,b]$ 上的二次连续可微函数，则由微分中值定理或 Taylor 展开我们得到
-
-$$
-|f(x) - l(x)| \leq \frac{1}{2} M (x - a)(b - x), \quad \forall x \in [a,b],
-$$
-
-其中，$M = \max_{x \in [a,b]} |f''(x)|$，且
-
-$$
-l(x) = f(a) + \frac{f(b) - f(a)}{b - a}(x - a), \quad x \in [a,b].
-$$
-
-因此有如下的积分估计
-
-$$
-\begin{aligned}
-\left| \int_a^b f(x) dx - \int_a^b l(x) dx \right|&\leq \frac{1}{2} M \int_a^b (x - a)(b - x) dx \\\\
-&= \frac{1}{12} M (b - a)^3.
-\end{aligned}
-$$
-
-这也就是 $f$ 在 $[a,b]$ 上的积分用梯形面积逼近的误差公式.
-
-我们考虑函数 $f = \ln x$ 在 $[1,n]$ 上的积分.令
-
-$$
-\begin{aligned}
-A_n = \int_1^n \ln x \, dx &= x \ln x \Big|_1^n - \int_1^n (\ln x)' x dx \\\\
-&= n \ln n - n + 1,
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-B_n &= \frac{1}{2}(\ln 1 + \ln 2) + \frac{1}{2}(\ln 2 + \ln 3) + \cdots + \frac{1}{2}(\ln(n-1) + \ln n)\\\\
-&= \ln n! - \frac{1}{2} \ln n,
-\end{aligned}
-$$
-
-根据上面的误差估计，并注意 $\ln x$ 为凹函数，则有
-
-$$
-0 < \int_k^{k+1} \ln x \, dx - \frac{1}{2}(\ln k + \ln(k+1)) < \frac{1}{12 k^2}.
-$$
-
-令 $C_n = A_n - B_n$，则 $C_n$ 是 $n-1$ 次累计误差，它关于 $n$ 是单调递增的.从而
-
-$$
-0 < C_n < \frac{1}{12} \sum_{k=1}^{n-1} \frac{1}{k^2} < \frac{1}{12} \left(1 + \sum_{k=1}^\infty \left(\frac{1}{k} - \frac{1}{k+1}\right)\right) = \frac{1}{6},
-$$
-
-这说明极限 $\displaystyle\lim_{n \to \infty} C_n = C$ 存在，且
-
-$$
-\begin{aligned}
-0 < C - C_n &< \frac{1}{12} \sum_{k=n}^\infty \frac{1}{k^2} \\\\
-&< \frac{1}{12} \left[\frac{1}{n^2} + \frac{1}{n(n+1)} + \frac{1}{(n+1)(n+2)} + \cdots \right] \\\\
-&= \frac{1}{12} \left(\frac{1}{n^2} + \frac{1}{n}\right).
-\end{aligned}
-$$
-
-下面我们来求极限 $C$ 的值.由定义，有
-
-$$
-C_n = A_n - B_n = n \ln n - n + 1 - \ln n! + \frac{1}{2} \ln n,
-$$
-
-因此
-
-$$
-n! = e^{1 - C_n} n^{n + \frac{1}{2}} e^{-n}.
-$$
-
-由 Wallis 公式，
-
-$$
-\lim_{n \to \infty} \frac{(n!)^2 2^{2n}}{(2n)!} \cdot \frac{1}{\sqrt{n}} = \lim_{n \to \infty} \frac{(2n)!!}{(2n - 1)!!} \cdot \frac{1}{\sqrt{n}} = \sqrt{\pi},
-$$
-
-将 $n!$ 和 $(2n)!$ 的表达式代入，有
-
-$$
-\sqrt{\pi} = \lim_{n \to \infty} \frac{e^{2(1 - C_n)} n^{2n+1} e^{-2n} \cdot 2^{2n}}{e^{1 - C_{2n}} (2n)^{2n + \frac{1}{2}} e^{-2n} \cdot \sqrt{n}} = \frac{e^{1 - C}}{\sqrt{2}},
-$$
-
-这就得到 $n!$ 的如下表示
-
-$$
-n! = \sqrt{2\pi n} \left(\frac{n}{e}\right)^n e^{C - C_n}, \quad \text{(Stirling)}
-$$
-
-其中
-
-$$
-1 < e^{C - C_n} < e^{\frac{1}{12} \left(\frac{1}{n^2} + \frac{1}{n}\right)} < 1 + \frac{1}{12n} + \frac{1}{10n^2}, \quad \forall n > 1.
-$$
-
-## Part 2 广义积分
-
-### · 定义
-
-**定义1** (无穷积分). 
-
-> 设 $a \in \mathbb{R}$, 定义在 $[a, +\infty)$ 中的函数 $f$ 如果在任何有限区间 $[a, A]$ 上都是 Riemann 可积的, 且极限
+> 这说明 $\sin x$ 在 $(-\infty,+\infty)$ 中是一致连续的.
 >
+> $\sin x$ 是所谓 Lipschitz 函数的特殊情形.
+
+设 $f(x)$ 是定义在区间 $I$ 中的函数. 如果存在 $0 < \alpha \leq 1$, 以及常数 $M$, 使得
+$$
+|f(x_1) - f(x_2)| \leq M|x_1 - x_2|^\alpha,\quad \forall\ x_1,x_2 \in I,
+$$
+则称 $f(x)$ 是 $I$ 中的 $\alpha$ 阶 Hölder 函数. 当 $\alpha = 1$ 时也称为 Lipschitz 函数.
+
+Hölder 函数都是一致连续的: 任给 $\varepsilon > 0$, 取
+$$
+\delta = \left(\frac{\varepsilon}{M}\right)^{\frac{1}{\alpha}},
+$$
+则当 $x_1,x_2 \in I,\ |x_1 - x_2| < \delta$ 时, 有
+$$
+|f(x_1) - f(x_2)| \leq M|x_1 - x_2|^\alpha < M\left(\frac{\varepsilon}{M}\right) = \varepsilon.
+$$
+**命题8**. 设 $f(x), g(x)$ 为区间 $I$ 中的一致连续函数. 则  
+
+(1) $\alpha f(x) + \beta g(x)$ 在 $I$ 中也是一致连续的;  
+
+(2) 如果 $f(x), g(x)$ 为有界函数, 则 $f(x)g(x)$ 也是一致连续的;  
+
+(3) 如果 $f(x)$ 有界, 且存在 $\varepsilon_0 > 0$, 使得 $g(x) \geq \varepsilon_0,\ \forall\ x \in I$, 则 $f(x)/g(x)$ 也是一致连续的;  
+
+(4) 一致连续函数的复合函数仍为一致连续函数.
+
+**定理9** (Cantor). 闭区间上的连续函数是一致连续的.
+
+> /proof/
+>
+> 设 $f(x)$ 是 $[a,b]$ 上的连续函数.
+>
+> **证法一**: (反证法) 如果 $f(x)$ 不是一致连续的, 则存在 $\varepsilon_0 > 0$, 以及点列 $\{a_n\}, \{b_n\} \subset [a,b]$, 使得 $a_n - b_n \to 0\ (n \to \infty)$, 且
 > $$
-> \lim_{A \to +\infty} \int_a^A f(x) dx
+> |f(a_n) - f(b_n)| \geq \varepsilon_0.
 > $$
->
-> 存在（且有界），则称无穷积分 $\displaystyle\int_a^{+\infty} f(x) dx$ 存在或收敛，记为
->
+> 因为 $\{b_n\}$ 为有界点列, 故存在收敛子列 $\{b_{n_i}\}$, 设 $b_{n_i} \to x_0 \in [a,b]$. 此时
 > $$
-> \int_a^{+\infty} f(x) dx = \lim_{A \to +\infty} \int_a^A f(x) dx,
+> a_{n_i} = (a_{n_i} - b_{n_i}) + b_{n_i} \to 0 + x_0 = x_0\quad (i \to \infty).
 > $$
->
-> 否则就称无穷积分 $\displaystyle\int_a^{+\infty} f(x) dx$ 不存在或发散.
->
-> 类似地，我们也可以定义无穷积分 $\displaystyle\int_{-\infty}^a f(x) dx$，以及 $\displaystyle\int_{-\infty}^{+\infty} f(x) dx$.并且无穷积分 $\displaystyle\int_{-\infty}^{+\infty} f(x) dx$ 收敛当且仅当 $\displaystyle\int_{-\infty}^a f(x) dx$ 和 $\displaystyle\int_a^{+\infty} f(x) dx$ 均收敛，此时
->
+> 因为 $f(x)$ 在 $x_0$ 处连续, 故
 > $$
-> \int_{-\infty}^{+\infty} f(x) dx = \int_{-\infty}^a f(x) dx + \int_a^{+\infty} f(x) dx, \quad \forall a \in \mathbb{R}.
+> \varepsilon_0 \leq |f(a_{n_i}) - f(b_{n_i})| \to |f(x_0) - f(x_0)| = 0\quad (i \to \infty),
 > $$
+> 这就导出了矛盾.
 >
-> 需要注意的是，利用极限
->
+> **证法二**: 任给 $\varepsilon > 0$, 因为 $f(x)$ 连续, 故对于任意 $x \in [a,b]$, 存在 $\delta_x > 0$, 使得
 > $$
-> \lim_{A \to +\infty} \int_{-A}^A f(x) dx
+> |f(x') - f(x)| < \frac{\varepsilon}{2},\quad \forall\ x' \in (x - \delta_x, x + \delta_x) \cap [a,b].
 > $$
->
-> 也可以定义 $f$ 在 $(-\infty, +\infty)$ 上的一种积分，它和前一种定义不是等价的，称为 Cauchy 主值积分，记为
->
+> 显然, $\left\{(x - \frac{\delta_x}{2}, x + \frac{\delta_x}{2})\right\}_{x \in [a,b]}$ 为闭区间 $[a,b]$ 的一个开覆盖, 因而存在有限子覆盖, 即存在 $x_i\ (1 \leq i \leq k)$, 使得
 > $$
-> (V.P.) \int_{-\infty}^{+\infty} f(x) dx = \lim_{A \to +\infty} \int_{-A}^A f(x) dx.
+> [a,b] \subset \bigcup_{i=1}^k \left(x_i - \frac{\delta_{x_i}}{2}, x_i + \frac{\delta_{x_i}}{2}\right).
 > $$
+> 记
+> $$
+> \delta = \min\left\{\frac{\delta_{x_i}}{2} \mid i = 1,2,\ldots,k\right\},
+> $$
+> 则对于任意的 $x',x'' \in [a,b]$, 如果 $|x' - x''| < \delta$, 设
+> $$
+> x' \in \left(x_i - \frac{\delta_{x_i}}{2}, x_i + \frac{\delta_{x_i}}{2}\right),\ \text{(对某个 } i\text{)},
+> $$
+> 则
+> $$
+> |x'' - x_i| \leq |x'' - x'| + |x' - x_i| < \delta + \frac{\delta_{x_i}}{2} \leq \delta_{x_i},
+> $$
+> 从而有 $x'' \in (x_i - \delta_{x_i}, x_i + \delta_{x_i})$. 因此, 我们有
+> $$
+> |f(x') - f(x'')| \leq |f(x') - f(x_i)| + |f(x_i) - f(x'')| \leq 2\frac{\varepsilon}{2} = \varepsilon,
+> $$
+> 这说明 $f(x)$ 在 $[a,b]$ 上是一致连续的. 
 
-从无穷积分的定义立即得到如下的基本判别法：
+最后引出函数振幅的概念, 并利用它来刻画连续性和一致连续性. 某个变化量的振幅, 是指其“最大”和“最小”值的差. 如果这个变化量的值趋于一个定数, 则其振幅应趋于零. 
 
-(**无穷积分的 Cauchy 准则**) $f(x)$ 在 $[a, +\infty)$ 上的积分收敛 $\iff$ 任给 $\varepsilon > 0$, 存在 $M = M(\varepsilon)$, 使得当 $B > A > M$ 时，
-
+**定义2** (振幅). 设 $f(x)$ 在 $x_0$ 的一个开邻域内有定义, 称
 $$
-\left| \int_A^B f(x) dx \right| < \varepsilon.
+\omega_f(x_0,r) = \sup\left\{|f(x') - f(x'')| \mid x',x'' \in (x_0 - r, x_0 + r)\right\}\quad (r > 0)
 $$
-
-对于 $(-\infty, a]$ 和 $(-\infty, +\infty)$ 上的无穷积分有完全类似的判别法.
-
-/example/ 讨论无穷积分 $\displaystyle\int_1^{+\infty} \dfrac{1}{x^p} dx$ ($p \in \mathbb{R}$) 的敛散性.
-
->  当 $A > 1$ 时，
->
-> $$
-> \int_1^A \frac{1}{x^p} dx =
-> \begin{cases}
-> \ln A, & p = 1, \\\\
-> \dfrac{1}{1 - p}(A^{1 - p} - 1), & p \ne 1.
-> \end{cases}
-> $$
->
-> 因此只有 $p > 1$ 时积分才是收敛的，此时
->
-> $$
-> \int_1^{+\infty} \frac{1}{x^p} dx = \lim_{A \to +\infty} \frac{1}{1 - p}(A^{1 - p} - 1) = \frac{1}{p - 1}.
-> $$
->
-> 一般地，如果连续函数 $f$ 在 $[a, +\infty)$ 上存在原函数 $F$，则由微积分基本公式，
->
-> $$
-> \lim_{A \to +\infty} \int_a^A f(x) dx = \lim_{A \to +\infty} F(A) - F(a),
-> $$
->
-> 即积分是否收敛与极限 $\displaystyle\lim_{A \to +\infty} F(A)$ 是否存在是一致的
-
-/example/ 计算无穷积分 $\displaystyle\int_{-\infty}^{+\infty} \dfrac{1}{1 + x^2} dx$.
-
-> $\dfrac{1}{1 + x^2}$ 的原函数为 $\arctan x$，因此
->
-> $$
-> \begin{aligned}
-> \int_{-\infty}^{+\infty} \frac{1}{1 + x^2} dx &= \int_0^{+\infty} \frac{1}{1 + x^2} dx + \int_{-\infty}^0 \frac{1}{1 + x^2} dx \\\\
-> &= \arctan x \Big|_{-\infty}^0 + \arctan x \Big|_0^{+\infty} \\\\
-> &= \frac{\pi}{2} + \frac{\pi}{2} = \pi.
-> \end{aligned}
-> $$
->
-> 和无穷积分类似，我们也可以通过极限来处理无界函数的积分.
-
-**定义2** (瑕积分). 
-
-> 设函数 $f$ 在任何区间 $[a', b]$ ($a < a' < b$) 上均 Riemann 可积，如果极限
->
-> $$
-> \lim_{a' \to a^+} \int_{a'}^b f(x) dx
-> $$
->
-> 存在（且有界），则称瑕积分 $\displaystyle\int_a^b f(x) dx$ 存在或收敛，记为
->
-> $$
-> \int_a^b f(x) dx = \lim_{a' \to a^+} \int_{a'}^b f(x) dx,
-> $$
->
-> 否则就称瑕积分 $\displaystyle\int_a^b f(x) dx$ 不存在或发散
-
-不难看出，如果 $f$ 在 $[a,b]$ 上 Riemann 可积，则 $f$ 的瑕积分等于其 Riemann 积分.如果 $f$ 在 $a$ 附近无界，从而在 $[a,b]$ 上不是 Riemann 可积的，则称 $a$ 为 $f$ 的瑕点.类似地，可以在 $[a,b)$ 上定义瑕积分，当瑕点不只一个时也可类似地定义瑕积分，瑕积分的收敛性仍有和广义积分类似的 Cauchy 准则判别法.
-
-如果一个函数既是无界的，定义域又是无限区间，则把上面两种积分，即无穷积分和瑕积分的处理方法结合起来往往可以对于这种函数的积分加以处理，得到的积分统称广义积分，在别的书上也称反常积分.
-
-广义积分具有和 Riemann 积分类似的性质，一些运算法则，例如分部积分、变量代换等也可以直接推广过来.
-
-**命题**. 假设积分限 $a, b, c$ 等可以取 $-\infty$ 或 $+\infty$，则
-
-(1) 如果 $f$ 在 $[a,b], [b,c]$ 上积分存在，则 $f$ 在 $[a,c]$ 上的积分也存在，且
-
+为 $f$ 在区间 $(x_0 - r, x_0 + r)$ 上的振幅. 显然, $\omega_f(x_0,r)$ 关于 $r \to 0^+$ 单调递减, 因此
 $$
-\int_a^c f(x) dx = \int_a^b f(x) dx + \int_b^c f(x) dx;
+\omega_f(x_0) = \lim_{r \to 0^+} \omega_f(x_0,r)
 $$
+存在 (不一定有限), 称为 $f$ 在 $x_0$ 处的振幅.
 
-(2) 如果 $f, g$ 在 $[a,b]$ 上积分存在，则 $\lambda f + \mu g$ ($\lambda, \mu \in \mathbb{R}$) 在 $[a,b]$ 上的积分也存在，且
+> (1) $\omega_f(x_0,r)$ 也可以定义为
+> $$
+> \omega_f(x_0,r) = \sup_{x \in (x_0 - r, x_0 + r)} f(x) - \inf_{x \in (x_0 - r, x_0 + r)} f(x),
+> $$
+> (2) 也可类似地对闭区间以及 $x_0$ 的一侧定义函数的振幅.
 
+**命题10**. $f(x)$ 在 $x_0$ 处连续当且仅当 $\omega_f(x_0) = 0$.
+
+> 设 $f(x)$ 在 $x_0$ 处连续. 任给 $\varepsilon > 0$, 存在 $\delta > 0$, 当 $|x - x_0| < \delta$ 时
+> $$
+> |f(x) - f(x_0)| < \frac{\varepsilon}{2}.
+> $$
+> 因此, 对于 $\forall\ x',x'' \in (x_0 - r, x_0 + r)\ (0 < r \leq \delta)$, 有
+> $$
+> |f(x') - f(x'')| \leq |f(x') - f(x_0)| + |f(x_0) - f(x'')| < 2\frac{\varepsilon}{2} = \varepsilon.
+> $$
+> 即当 $0 < r \leq \delta$ 时
+> $$
+> \omega_f(x_0,r) \leq \varepsilon.
+> $$
+> 这说明 $\omega_f(x_0) = \displaystyle\lim_{r \to 0^+} \omega_f(x_0,r) = 0$.
+>
+> 反之, 设 $\displaystyle\lim_{r \to 0^+} \omega_f(x_0,r) = \omega_f(x_0) = 0$, 则任给 $\varepsilon > 0$, 存在 $\delta > 0$, 使得
+> $$
+> \omega_f(x_0,r) < \varepsilon,\quad \forall\ 0 < r \leq \delta.
+> $$
+> 特别地, 对于满足 $|x - x_0| < \delta$ 的点 $x$, 有
+> $$
+> |f(x) - f(x_0)| \leq \omega_f(x_0,\delta) < \varepsilon,
+> $$
+> 这说明 $f(x)$ 在 $x_0$ 处连续.
+
+我们可以类似地用振幅来刻画一致连续性. 设 $f$ 定义在区间 $I$ 中, $r > 0$. 令
 $$
-\int_a^b [\lambda f(x) + \mu g(x)] dx = \lambda \int_a^b f(x) dx + \mu \int_a^b g(x) dx.
+\omega_f(r) = \sup\left\{|f(x') - f(x'')| \mid \forall\ x',x'' \in I,\ |x' - x''| < r\right\},
 $$
-/example/ 讨论积分 $\displaystyle\int_0^{+\infty} \cos(x^2) dx$ 的敛散性
+则 $\omega_f(r)$ 关于 $r \to 0^+$ 单调递减. 利用一致连续的定义可得如下命题：
 
-> 只要讨论被积函数在 $[1, +\infty)$ 上的积分就可以了.作变量代换 $x = \sqrt{t}$，得
->
-> $$
-> \int_1^{+\infty} \cos(x^2) dx = \frac{1}{2} \int_1^{+\infty} \frac{\cos t}{\sqrt{t}} dt.
-> $$
->
-> 我们利用分部积分和 Cauchy 准则来判断积分的收敛性：
->
-> $$
-> \begin{aligned}
-> \left| \int_A^B \frac{\cos t}{\sqrt{t}} dt \right| &= \left| \frac{\sin t}{\sqrt{t}} \Big|_A^B + \frac{1}{2} \int_A^B \frac{\sin t}{t^{3/2}} dt \right| \\\\
-> &\leq \frac{1}{\sqrt{A}} + \frac{1}{\sqrt{B}} + \frac{1}{2} \int_A^B t^{-3/2} dt = \frac{2}{\sqrt{A}} \to 0 \quad (B > A \to +\infty).
-> \end{aligned}
-> $$
->
-> 这说明积分是收敛的.
->
-> 这个例子也告诉我们，$f$ 在 $[a, +\infty)$ 上的积分存在并不意味着 $f(x) \to 0$ ($x \to +\infty$).
-
-### · 收敛判别法
-
-进一步介绍其它的判别法，首先研究非负函数.我们注意到，如果 $f$ 非负，则积分 $\displaystyle\int_a^A f(x) dx$ 关于 $A$ 单调递增，因此其极限存在当且仅当它有上界，这就得到了非负函数广义积分的如下基本判别法：
-
-**定理1**. 设 $f \geq 0$，则无穷积分 $\displaystyle\int_a^{+\infty} f(x) dx$ 收敛当且仅当
-$$
-F(A) = \int_a^A f(x) dx
-$$
-
-是 $A \in [a, +\infty)$ 的有界函数；对瑕积分有完全类似的结果.
-
-由此又得到如下的比较判别法：
-
-**定理2**. 设 $0 \leq f \leq M g$, $M > 0$ 为常数，则当无穷积分 $\displaystyle\int_a^{+\infty} g(x) dx$ 收敛时，无穷积分 $\displaystyle\int_a^{+\infty} f(x) dx$ 也收敛；当无穷积分 $\displaystyle\int_a^{+\infty} f(x) dx$ 发散时，无穷积分 $\displaystyle\int_a^{+\infty} g(x) dx$ 也发散；瑕积分有完全类似的结果.
-
-> 令
->
-> $$
-> F(A) = \int_a^A f(x) dx, \quad G(A) = \int_a^A g(x) dx,
-> $$
->
-> 则 $0 \leq F(A) \leq M \cdot G(A)$, $A \in [a, +\infty)$. 因此，如果 $G(A)$ 有界，则 $F(A)$ 也有界；$F(A)$ 无界时，$G(A)$ 也无界.
-
-> [!important]
->
-> (1) 常数 $M$ 的存在性通常利用极限去找.即如果极限 $l = \displaystyle\lim_{x \to +\infty} \dfrac{f(x)}{g(x)}$ 存在，则当 $0 < l < \infty$ 时，积分 $\displaystyle\int_a^{+\infty} f(x) dx$ 和 $\displaystyle\int_a^{+\infty} g(x) dx$ 同时收敛或发散；
->
-> 当 $l = 0$ 时，如果 $\displaystyle\int_a^{+\infty} g(x) dx$ 收敛，则 $\displaystyle\int_a^{+\infty} f(x) dx$ 也收敛；当 $l = +\infty$ 时，如果 $\displaystyle\int_a^{+\infty} g(x) dx$ 发散，则 $\displaystyle\int_a^{+\infty} f(x) dx$ 也发散.
->
-> (2) 我们可以拿函数 $f$ 与 $x^{-p}$ 比较，则得到如下的 Cauchy 判别法：
->
-> (i) 如果 $p > 1$，且存在常数 $C > 0$，使得
->
-> $$
-> 0 \leq f(x) \leq \frac{C}{x^p} \quad (\forall x \geq x_0),
-> $$
->
-> 则 $\displaystyle\int_a^{+\infty} f(x) dx$ 收敛；
->
-> (ii) 如果 $p \leq 1$，且存在常数 $C > 0$，使得
->
-> $$
-> f(x) \geq \frac{C}{x^p} \quad (\forall x \geq x_0),
-> $$
->
-> 则 $\displaystyle\int_a^{+\infty} f(x) dx$ 发散；
->
-> 当然，常数 $C$ 通常是求极限得到的，即如果极限 $\displaystyle\lim_{x \to +\infty} x^p f(x) = l$ 存在，则
->
-> (iii) 如果 $p > 1$, $0 \leq l < +\infty$，则 $\displaystyle\int_a^{+\infty} f(x) dx$ 收敛；
->
-> (iv) 如果 $p \leq 1$, $0 < l \leq +\infty$，则 $\displaystyle\int_a^{+\infty} f(x) dx$ 发散；
->
-> (3) 对于瑕积分，利用与函数 $x^{-p}$ 的比较，可以得到完全类似的 Cauchy 判别法.
-
-注意，比较判别法只适用于非负函数.对于一般函数的广义积分，有时可以化为非负函数的积分来判断是否收敛.
-
-设 $f$ 为一般函数，记
-
-$$
-f^+(x) = \max\{0, f(x)\}, \quad f^-(x) = \max\{0, -f(x)\},
-$$
-
-则 $f^+$ 和 $f^-$ 均为非负函数，且 $f = f^+ - f^-$. 因此，如果 $f^+$ 和 $f^-$ 的积分均收敛，则 $f$ 的积分也收敛，此时称 $f$ 的积分绝对收敛，这和 $|f| = f^+ + f^-$ 的积分收敛是一致的.如果 $f$ 的积分收敛，但 $|f|$ 的积分发散，则称 $f$ 的积分条件收敛.
-
-对于两个函数乘积的广义积分，在某些情形下利用第二积分中值公式可以给出下面的判别法.
-
-**定理3** (Dirichlet). 设 $F(A) = \displaystyle\int_a^A f(x) dx$ 在 $[a, +\infty)$ 中有界，函数 $g(x)$ 在 $[a, +\infty)$ 中单调，且 $\displaystyle\lim_{x \to +\infty} g(x) = 0$，则积分 $\displaystyle\int_a^{+\infty} f(x) g(x) dx$ 收敛.
-
-> 设 $|F(A)| \leq C$, $\forall A \geq a$. 则
->
-> $$
-> \left| \int_A^B f(x) dx \right| = \left| \int_a^B f(x) dx - \int_a^A f(x) dx \right| \leq 2C, \quad \forall A, B \geq a.
-> $$
->
-> 又因为 $\displaystyle\lim_{x \to +\infty} g(x) = 0$，故任给 $\varepsilon > 0$，存在 $M > 0$，使得当 $x > M$ 时
->
-> $$
-> |g(x)| \leq \frac{\varepsilon}{4C}.
-> $$
->
-> 由积分第二中值定理，当 $A, B > M$ 时
-> $$
-> \begin{aligned}
-> \left| \int_A^B f(x) g(x) dx \right| &= \left| g(A) \int_A^\xi f(x) dx + g(B) \int_\xi^B f(x) dx \right| \\\\
-> &\leq C \left| \int_A^\xi f(x) dx \right| + C \left| \int_\xi^B f(x) dx \right| \\\\
-> &\leq C \cdot \frac{\varepsilon}{2C} + C \cdot \frac{\varepsilon}{2C} = \varepsilon.
-> \end{aligned}
-> $$
-
-这些判别法对于瑕积分也有完全类似的表达形式
+**命题11**. $f$ 在 $I$ 中一致连续当且仅当 $\displaystyle\lim_{r \to 0^+} \omega_f(r) = 0$.
 
 结束.
-

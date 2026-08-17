@@ -1,875 +1,426 @@
 ---
-title: Chapter 19 重积分计算
+title: Lesson 19 积分应用与推广 I
 permalink: /integral/integral-19/
-createTime: 2025/12/17 23:10:32
+createTime: 2026/08/17 14:17:10
 ---
 
-## Part 1 重积分的计算
+## Part 1 积分应用
 
-重积分的一个常用的计算方法就是转化为一元函数的积分去处理. 我们先以矩形上的二重积分为例加以说明. 
+### · 曲线的长度
 
-### · 投影法
-
-设 $f(x, y)$ 为矩形 $I = [a, b] \times [c, d]$ 上的有界函数. 
-
-对于每一个固定的 $x \in [a, b]$，$f(x, y)$ 可以看成区间 $[c, d]$ 上关于 $y$ 的函数，它在 $[c, d]$ 上的下积分和上积分分别记为 $\varphi(x)$ 和 $\psi(x)$，这样我们就得到了定义在 $[a, b]$ 上的两个有界函数. 
-
-**定理1**：
-
-> 设 $f(x, y)$ 在 $I$ 上可积，则 $\varphi(x)$ 和 $\psi(x)$ 在 $[a, b]$ 上均可积，且  
-> $$
-> \int_I f = \int_a^b \varphi(x)\,dx = \int_a^b \psi(x)\,dx.
-> $$
->
-
-/proof/
-
-> 用记号 $\pi_1$, $\pi_2$ 分别表示 $[a, b]$ 和 $[c, d]$ 的分割：  
-> $$
-> \pi_1: \, a = x_0 < x_1 < \cdots < x_m = b, \quad \pi_2: \, c = y_0 < y_1 < \cdots < y_n = d,
-> $$
-> $I$ 的相应分割记为 $\pi = \pi_1 \times \pi_2$. 因为 $f$ 在 $I$ 上可积，故任给 $\varepsilon > 0$，存在 $\delta > 0$，当 $\|\pi\| < \delta$ 时  
-> $$
-> \int_I f - \varepsilon < \sum_{ij} f(\xi_{ij}) v(I_{ij}) < \int_I f + \varepsilon, \quad \forall\, \xi_{ij} = (\xi_i, \eta_j) \in I_{ij}.
-> $$
-> 特别地，当 $\|\pi_1\| < \delta/\sqrt{2}$，$\|\pi_2\| < \delta/\sqrt{2}$ 时，上式成立. 此时有  
-> $$
-> \begin{aligned}
-> \int_I f - \varepsilon &\leq \sum_{ij} \inf_{\eta_j \in [y_{j-1},\, y_j]} f(\xi_i, \eta_j) \Delta x_i \Delta y_j \\\\
-> &\leq \sum_{ij} \sup_{\eta_j \in [y_{j-1},\, y_j]} f(\xi_i, \eta_j) \Delta x_i \Delta y_j \leq \int_I f + \varepsilon,
-> \end{aligned}
-> $$
-> 因为 $\displaystyle \sum_{j=1}^n \inf_{\eta_j \in [y_{j-1},\, y_j]} f(\xi_i, \eta_j) \Delta y_j$ 是函数 $f(\xi_i, y)$ 在 $[c, d]$ 上的 Darboux 下和，故  
-> $$
-> \sum_{j=1}^n \inf_{\eta_j \in [y_{j-1},\, y_j]} f(\xi_i, \eta_j) \Delta y_j \leq \varphi(\xi_i).
-> $$
-> 同理  
-> $$
-> \sum_{j=1}^n \sup_{\eta_j \in [y_{j-1},\, y_j]} f(\xi_i, \eta_j) \Delta y_j \geq \psi(\xi_i).
-> $$
-> 因此我们得到  
-> $$
-> \int_I f - \varepsilon \leq \sum_{i=1}^m \varphi(\xi_i) \Delta x_i \leq \sum_{i=1}^m \psi(\xi_i) \Delta x_i \leq \int_I f + \varepsilon.
-> $$
-> 这说明 $\varphi(x)$ 和 $\psi(x)$ 在 $[a, b]$ 上均可积，且积分等于 $f$ 在 $I$ 上的积分. 
-
-**推论2**：
-
-> 设 $f(x, y)$ 在矩形 $I$ 上可积. 如果对于每一个 $x \in [a, b]$，变量 $y$ 的函数 $f(x, y)$ 在 $[c, d]$ 上可积，则  
-> $$
-> \int_I f = \int_a^b dx \int_c^d f(x, y)\,dy.
-> $$
-> 同理，如果对于每一个 $y \in [c, d]$，变量 $x$ 的函数 $f(x, y)$ 在 $[a, b]$ 上可积，则  
-> $$
-> \int_I f = \int_c^d dy \int_a^b f(x, y)\,dx.
-> $$
-
-**推论3**：
-
-> 设 $f(x, y)$ 为矩形 $I$ 上的连续函数，则有  
-> $$
-> \int_I f = \int_a^b dx \int_c^d f(x, y)\,dy = \int_c^d dy \int_a^b f(x, y)\,dx,
-> $$
-> 上式最左边为重积分，右边称为累次积分. 
-
-对于多重积分，类似的结果也成立. 例如，三重积分在一定条件下可以化为二重积分和一重积分. 
-
-现在我们讨论一般区域上重积分化累次积分的问题，这往往可以通过考虑矩形上的积分予以解决. 
-
-**定理4**
-
-> 设 $A \subset \mathbb{R}^2$ 为可求面积的有界集合，$f: A \to \mathbb{R}$ 为有界连续函数. 记 $A$ 在 $x$ 轴上的垂直投影为  
-> $$
-> I = \{x \in \mathbb{R} \mid \text{存在 } y \text{ 使得 } (x, y) \in A\}.
-> $$
-> 如果对于每一点 $x \in I$，$A_x = \{y \in \mathbb{R} \mid (x, y) \in A\}$ 是区间（可退化为一点），则  
-> $$
-> \int_A f = \int_I dx \int_{A_x} f(x, y)\,dy.
-> $$
-> 同理，记 $A$ 在 $y$ 轴上的垂直投影为  
-> $$
-> J = \{y \in \mathbb{R} \mid \text{exist } x \text{ s.t. } (x, y) \in A\}.
-> $$
-> 如果对于每一点 $y \in J$，$A^y = \{x \in \mathbb{R} \mid (x, y) \in A\}$ 是区间（可退化为一点），则  
-> $$
-> \int_A f = \int_J dy \int_{A^y} f(x, y)\,dx.
-> $$
->
-
-/proof/
-
-> 因为 $A$ 可求面积，$f$ 有界连续，故 $f$ 可积. 
->
-> 取包含 $A$ 的矩形 $[a, b] \times [c, d]$，则 $f_A$ 在 $[a, b] \times [c, d]$ 上可积. 
->
-> 当 $x \in I$ 时，$f_A(x, y)$ 关于 $y$ 在 $[c, d]$ 上的积分等于连续函数 $f(x, y)$ 关于 $y$ 在区间 $A_x$ 上的积分. 
->
-> 当 $x \in [a, b] \cap I^c$ 时 $f_A(x, y) = 0$. 因此，对于每一个 $x \in [a, b]$，$f_A(x, y)$ 关于 $y$ 在 $[c, d]$ 上均可积，从而有  
-> $$
-> \begin{aligned}
-> \int_A f &= \int_{[a,b] \times [c,d]} f_A = \int_a^b dx \int_c^d f_A(x, y)\,dy \\\\
-> &= \int_I dx \int_c^d f_A(x, y)\,dy = \int_I dx \int_{A_x} f(x, y)\,dy.
-> \end{aligned}
-> $$
-> 关于 $y$ 轴投影的结果完全类似. 
-
-> [!important]
->
-> **注意** 只要 $f$ 在 $A$ 上可积，且 $f(x, y)$ 关于 $y$ 在每一个区间 $A_x$ 上可积，则定理的第一个结论仍然成立，第二个结论类似. 
->
-> 定理中的这种计算重积分的方法称为“投影法”. 
->
-> 设 $y_1(x) \leq y_2(x)$ 为 $[a, b]$ 上定义的连续函数，则集合  
-> $$
-> A = \{(x, y) \in \mathbb{R}^2 \mid y_1(x) \leq y \leq y_2(x),\, a \leq x \leq b\}
-> $$
-> 的边界为零面积集，因此 $A$ 可求面积. $A$ 与跟 $x$ 轴垂直的直线的交要么为空集，要么为区间，因此得到下面定理
-
-**定理5**：
-
-> 设 $y_1, y_2$ 和 $A$ 如上. 函数 $f: A \to \mathbb{R}$ 可积，且对于每一个 $x \in [a, b]$，关于 $y$ 的积分  
-> $$
-> \int_{y_1(x)}^{y_2(x)} f(x, y)\,dy
-> $$
-> 存在，则  
-> $$
-> \int_A f = \int_a^b dx \int_{y_1(x)}^{y_2(x)} f(x, y)\,dy.
-> $$
->
-
-/proof/
-
-> 证明和上一定理类似
-
-同样，如果 $A$ 是这样的集合  
-$$
-\{(x, y) \in \mathbb{R}^2 \mid x_1(y) \leq x \leq x_2(y),\, c \leq y \leq d\},
-$$
-在类似条件下就有  
-$$
-\int_A f = \int_c^d dy \int_{x_1(y)}^{x_2(y)} f(x, y)\,dx.
-$$
-
-对于一般的 $n$ 重积分，类似的结果也成立（把区间换成矩形）. 
-
-### · Fubini 定理
-
-/example/  求 $n$ 维单形 $\Delta_n(a)$ ($a > 0$) 的体积，其中  
-$$
-\Delta_n(a) = \{(x_1, \cdots, x_n) \in \mathbb{R}^n \mid x_1 \geq 0, \cdots, x_n \geq 0,\, x_1 + \cdots + x_n \leq a\}.
-$$
-
-> 被积区域 $\Delta_n(a)$ 可以表示为  
-> $$
-> \{x \in \mathbb{R}^n \mid 0 \leq x_1 \leq a,\, 0 \leq x_2 \leq a - x_1, \cdots,\, 0 \leq x_n \leq a - x_1 - \cdots - x_{n-1}\},
-> $$
-> 因此  
-> $$
-> v(\Delta_n(a)) = \int_0^a dx_1 \int_0^{a - x_1} dx_2 \cdots \int_0^{a - x_1 - \cdots - x_{n-1}} dx_n.
-> $$
->
-> 在上式右端中对各个一元积分依次做变量替换  
-> $$
-> y_n = x_1 + \cdots + x_n, \cdots,\, y_2 = x_1 + x_2,\, y_1 = x_1,
-> $$
-> 得  
-> $$
-> \begin{aligned}
-> v(\Delta_n(a)) &= \int_0^a dy_1 \int_{y_1}^a dy_2 \cdots \int_{y_{n-1}}^a dy_n \\\\
-> &= \int_0^a dy_1 \int_{y_1}^a dy_2 \cdots \int_{y_{n-2}}^a (a - y_{n-1})\,dy_{n-1} \\\\
-> &= \cdots = \frac{1}{(n-1)!} \int_0^a (a - y_1)^{n-1}\,dy_1 \\\\
-> &= \frac{a^n}{n!}.
-> \end{aligned}
-> $$
-
-所以我们有推广后的 **Fubini 定理**：
-
-> 设 $f$ 在 $[a,b]\times[c,d]$ 上可积，且
-> $$
-> F(x)=\int_c^df(x,y)\text{d}y
-> $$
-> 有定义 ($\forall x\in[a,b]$)，则 $F$ 在 $[a,b]$ 上可积，且
-> $$
-> \iint_{[a,b]\times[c,d]}f\text{d}x\text{d}y=\int_a^bF(x)\text{d}x
-> $$
-
-证明过程省略.
-
-## Part 2 变量替换
-
-考虑下面的简单图形：
+设 $I = [\alpha, \beta]$ 为区间，映射 $\sigma: I \to \mathbb{R}^2$ 用分量表示为
 
 $$
-P(v_1, v_2, \cdots, v_n) = \left\{ \sum_{i=1}^n x_i v_i \in \mathbb{R}^n \mid 0 \leq x_i \leq 1,\ i = 1, 2, \cdots, n. \right\}
+\sigma(t) = (x(t), y(t)), \quad t \in I.
 $$
 
-其中 $v_i$ ($1 \leq i \leq n$) 为 $\mathbb{R}^n$ 中的向量. 当 $n = 2$ 且 $v_1, v_2$ 线性无关时，$P(v_1, v_2)$ 为平面上的平行四边形. 
+如果 $x(t), y(t)$ 均为连续函数，则称 $\sigma$ 为 $\mathbb{R}^2$ 上的连续曲线.如果 $x(t), y(t)$ 均可微（连续可微），则称 $\sigma$ 为可微（连续可微）曲线.
 
-如果这个平行四边形有一条边和坐标轴平行，则用投影法可以得出其面积公式. 一般的情形如何处理？
-
-### · 仿射变换
-
-> [!important]
->
-> **(1)** 平移变换. 设 $v_0 \in \mathbb{R}^n$ 为固定的向量，考虑仿射线性变换 $\varphi: \mathbb{R}^n \to \mathbb{R}^n$，$\varphi(x) = x + v_0$. 根据矩形体积的平移不变性容易知道，如果 $A \subset \mathbb{R}^n$ 可求体积，则 $\varphi(A)$ 也是可求体积的，并且体积不变，这可称为体积的平移不变性. 
->
-> **(2)** 伸缩变换. 设 $\lambda_i \in \mathbb{R}$ ($1 \leq i \leq n$)，考虑线性映射 $\varphi: \mathbb{R}^n \to \mathbb{R}^n$，
->
-> $$
-> \varphi(x_1, x_2, \cdots, x_n) = (\lambda_1 x_1, \lambda_2 x_2, \cdots, \lambda_n x_n),\quad (x_1, x_2, \cdots, x_n) \in \mathbb{R}^n.
-> $$
->
-> 矩形 $I = [a_1, b_1] \times \cdots \times [a_n, b_n]$ 在 $\varphi$ 下的像仍为矩形（可以退化），其体积为
->
-> $$
-> v(\varphi(I)) = |\lambda_1| \cdots |\lambda_n| v(I) = |\det(\varphi)| v(I).
-> $$
->
-
-将矩形 $I$ 换成一般的可求体积的图形，上述公式仍然成立，这可从下面的覆盖引理看出. 
-
-**引理1**（覆盖引理之一）
-
-> 设 $\Omega$ 为 $\mathbb{R}^n$ 中可求体积的有界集合，则任给 $\varepsilon > 0$，存在有限个矩形 $\{I_i\}$ 与 $\{J_j\}$，使得
->
-> $$
-> \bigcup_i I_i \subset \Omega,\quad \sum_i v(I_i) > v(\Omega) - \varepsilon;\quad \bigcup_j J_j \supset \Omega,\quad \sum_j v(J_j) < v(\Omega) + \varepsilon,
-> $$
->
-> 其中 $\{I_i\}$ 的内部互不相交. 
-
-/proof/
-
-> 取包含 $\Omega$ 的矩形 $I$，由体积的定义，有
->
-> $$
-> \int_I \chi_\Omega = v(\Omega).
-> $$
->
-> 因此，任给 $\varepsilon > 0$，存在 $I$ 的分割 $\pi = \{I_{ij}\}$，使得
->
-> $$
-> \left| \sum_{ij} \chi_\Omega(\xi_{ij}) v(I_{ij}) - v(\Omega) \right| < \varepsilon,\quad \forall\ \xi_{ij} \in I_{ij}.
-> $$
->
-> 根据特征函数的定义，显然有
->
-> $$
-> \sum_{ij} \inf_{\xi_{ij} \in I_{ij}} \chi_\Omega(\xi_{ij}) v(I_{ij}) = \sum_{I_{ij} \subset \Omega} v(I_{ij}),
-> $$
->
-> 因此，对于分割 $\pi$ 就有
->
-> $$
-> v(\Omega) - \varepsilon < \sum_{I_{ij} \subset \Omega} v(I_{ij}) \leq v(\Omega).
-> $$
->
-> 同理
->
-> $$
-> \sum_{ij} \sup_{\xi_{ij} \in I_{ij}} \chi_\Omega(\xi_{ij}) v(I_{ij}) = \sum_{I_{ij} \cap \Omega \neq \varnothing} v(I_{ij}),
-> $$
->
-> 此时有
->
-> $$
-> v(\Omega) \leq \sum_{I_{ij} \cap \Omega \neq \varnothing} v(I_{ij}) < v(\Omega) + \varepsilon.
-> $$
->
-> 这就证明了引理. 
-
-**注意**：从证明可以看出，那些内部与 $\partial\ \Omega$ 有非空交的矩形的体积之和不超过 $2\varepsilon$，由于 $\partial\Omega$ 包含于这些矩形以及其它矩形边界的并集之中，因此这给出了可求体积的有界集合的边界必为零体积集的另一证明. 
-
-同时，也可以看出伸缩变换将可求体积的集合变为可求体积的集合. 
-
-//example/
-
-设 $a_i$ ($1 \leq i \leq n$) 为正实数，求椭球
+设 $\sigma$ 为连续可微曲线，通过分割曲线并用直线段长度之和作逼近，我们可以定义 $\sigma$ 的长度为
 
 $$
-\left\{ (x_1, \cdots, x_n) \in \mathbb{R}^n \,\middle|\, \dfrac{x_1^2}{a_1^2} + \cdots + \dfrac{x_n^2}{a_n^2} \leq 1 \right\}
+L(\sigma) = \int_\alpha^\beta \left[(x'(t))^2 + (y'(t))^2\right]^{\frac{1}{2}} dt.
 $$
 
-的体积. 
-
-> 利用伸缩变换 $x_i = a_i t_i$ ($1 \leq i \leq n$) 可得椭球体积为 $(a_1 a_2 \cdots a_n) \omega_n$，其中 $\omega_n$ 是上例中的 $n$ 维单位球的体积. 
-
-下面给出第三种仿射变换：
-
-> [!important]
->
-> **(3)** 正交变换. 设 $\varphi: \mathbb{R}^n \to \mathbb{R}^n$ 为正交变换，在 $\mathbb{R}^n$ 的标准基 $\{e_i\}$ 下 $\varphi$ 表示为
-> $$
-> \varphi(e_1, e_2, \cdots, e_n) = (e_1, e_2, \cdots, e_n) A,
-> $$
->
-> 其中 $A$ 为正交矩阵，即
->
-> $$
-> A A^T = A^T A = I_n.
-> $$
->
-> 我们将说明正交变换保持体积不变. 
-
-**引理2**（覆盖引理之二）
-
-> 设 $\Omega$ 为 $\mathbb{R}^n$ 中可求体积的有界集合，则任给 $\varepsilon > 0$，存在有限个 $n$ 维球体 $\{B_i\}$ 与 $\{B^j\}$，使得
->
-> $$
-> \bigcup_i B_i \subset \Omega,\quad \sum_i v(B_i) > v(\Omega) - \varepsilon;\quad \bigcup_j B^j \supset \Omega,\quad \sum_j v(B^j) < v(\Omega) + \varepsilon,
-> $$
->
-> 其中 $\{B_i\}$ 的内部互不相交. 
-
-/proof/
-
-> 先设 $v(\Omega) > 0$. 与引理1的证明类似，先取矩形 $I = [a,b]^n$ 使得 $\Omega \subset I$. 将 $I$ 作 $m^n$ 等分，当 $m$ 充分大时，完全包含于 $\Omega$ 的小矩形 $\{I_i^1\}$ 的体积之和满足条件
->
-> $$
-> \sum_i v(I_i^1) > \frac{1}{2} v(\Omega).
-> $$
->
-> 矩形 $I_i^1$ 的内接球记为 $B_i^1$，则根据前面例子中球体的体积公式，有
->
-> $$
-> \sum_i v(B_i^1) = \frac{\omega_n}{2^n} \sum_i v(I_i^1) > \frac{\omega_n}{2^{n+1}} v(\Omega).
-> $$
->
-> 记
->
-> $$
-> q = 1 - \frac{\omega_n}{2^{n+1}},
-> $$
->
-> 则 $0 < q < 1$，且
->
-> $$
-> 0 < v(\Omega - \bigcup_i B_i^1) < q \cdot v(\Omega).
-> $$
->
-> 对 $\Omega - \bigcup_i B_i^1$ 重复上述过程，可得包含于 $\Omega - \bigcup_i B_i^1$ 的有限个球体 $\{B_i^2\}$，使得
->
-> $$
-> 0 < v(\Omega - \bigcup_i B_i^1 - \bigcup_{i'} B_{i'}^2) < q \cdot v(\Omega - \bigcup_i B_i^1) < q^2 \cdot v(\Omega).
-> $$
->
-> 继续重复这一过程，由于 $q^k \to 0$ ($k \to \infty$)，对任给的 $\varepsilon > 0$，就得到内部互不相交的有限个 $n$ 维球体 $\{B_i\}$，使得（$k$ 充分大）
->
-> $$
-> 0 < v(\Omega - \bigcup_i B_i) < q^k \cdot v(\Omega) < \min\left\{ \frac{1}{n^{\frac{n}{2}} \omega_n},\ 1 \right\} \varepsilon.
-> $$
->
-> 现在，对于 $\Omega' = \Omega - \bigcup_i B_i$，仍然考虑矩形 $I$ 的 $m^n$ 等分，当 $m$ 充分大时，存在覆盖 $\Omega'$ 的小矩形 $\{I^j\}$，使得
->
-> $$
-> \sum_j v(I^j) < v(\Omega') + \frac{1}{n^{\frac{n}{2}} \omega_n} \varepsilon,
-> $$
->
-> 矩形 $I^j$ 的外接球记为 $B_j^2$，则
->
-> $$
-> \sum_j v(B_j^2) = \frac{\omega_n n^{\frac{n}{2}}}{2^n} \sum_j v(I^j) < \frac{n^{\frac{n}{2}} \omega_n}{2^n} \left( v(\Omega') + \frac{1}{n^{\frac{n}{2}} \omega_n} \varepsilon \right) < \varepsilon.
-> $$
->
-> 这说明 $\{B_i, B_j^2\}$ 是覆盖 $\Omega$ 的 $n$ 维球，它们的体积之和满足引理的要求. 
->
-> 最后一段的证明对于 $v(\Omega) = 0$ 的情形也适用，这样就完全证明了引理. 
-
-**推论3**：
-
-> 正交变换保持体积不变. 
-
-/proof/
-
-> 注意到正交变换将 $n$ 维球映为 $n$ 维球，且球的半径不变（从而体积不变）. 
->
-> 特别地，根据覆盖引理，正交变换将零体积集映为零体积集. 
->
-> 再注意到正交变换将集合的边界点映为边界点，内点映为内点，因此将可求体积的集合映为可求体积的集合. 
->
-> 再由覆盖引理以及正交变换保持球体体积不变即知正交变换保持可求体积集合的体积不变. 
-
-/example/
-
-设 $A$ 为 $n$ 阶正定对称实方阵，求椭球
-$$
-E_A = \{x = (x_1, x_2, \cdots, x_n) \in \mathbb{R}^n \mid x A x^T \leq 1\}
-$$
-
-的体积. 
-
-> 我们知道，正定对称方阵可以对角化，即存在正交方阵 $O$，使得
->
-> $$
-> A = O \cdot \mathrm{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) \cdot O^T,\quad \lambda_i > 0\ (1 \leq i \leq n).
-> $$
->
-> 利用正交变换 $y = x O$，椭球 $E_A$ 的体积与下面的标准椭球
->
-> $$
-> \{y \in \mathbb{R}^n \mid \lambda_1 y_1^2 + \cdots + \lambda_n y_n^2 = y \cdot \mathrm{diag}(\lambda_1, \lambda_2, \cdots, \lambda_n) \cdot y^T \leq 1\}
-> $$
->
-> 体积相同，根据前面的例子即知它的体积为
->
-> $$
-> v(E_A) = \omega_n (\lambda_1)^{-\frac{1}{2}} \cdots (\lambda_n)^{-\frac{1}{2}} = \omega_n (\det A)^{-\frac{1}{2}}.
-> $$
->
-> ---
->
-> 一般地，如果 $P$ 为正定对称矩阵，作为线性变换，它把可求体积的集合 $\Omega$ 映为可求体积的集合 $P(\Omega)$，且
->
-> $$
-> v(P(\Omega)) = (\det P) v(\Omega),
-> $$
->
-> 这个等式的证明和上例类似，结合正交变换以及伸缩变换的结果即可. 
-
-关于最一般的推广：
-
-> [!important]
->
-> **(4)** 一般的线性变换. 设 $\varphi: \mathbb{R}^n \to \mathbb{R}^n$ 为线性映射，在 $\mathbb{R}^n$ 的标准基下可表示为 $n$ 阶方阵 $A$. 下面为了简单起见我们有时不区分 $\varphi$ 和 $A$. 设 $\Omega$ 为 $\mathbb{R}^n$ 中可求体积的有界集合，我们考虑集合 $A(\Omega)$. 
->
-> 首先，如果 $\varphi$ 是退化的 ($\det A = 0$)，则 $A(\Omega)$ 含于 $\mathbb{R}^n$ 的某个超平面中，从而必为零体积集. 
->
-> 因此下面假设 $\det A \neq 0$，此时 $A A^T$ 为正定对称方阵，从而可以对角化，且特征值均大于零，这说明 $A A^T$ 可以写为
-> $$
-> A A^T = P^2,
-> $$
->
-> 其中 $P$ 也是正定对称方阵，$\det P = |\det A|$. 记 $O = P^{-1} A$，则上式表明 $O$ 是正交矩阵，特别地，$A(\Omega) = P(O(\Omega))$ 可求体积，且
->
-> $$
-> v(A(\Omega)) = v(P(O(\Omega))) = (\det P) v(O(\Omega)) = (\det P) v(\Omega),
-> $$
->
-> 即
->
-> $$
-> v(A(\Omega)) = |\det A| v(\Omega).
-> $$
-
-下面我们可以尝试解决一些问题：
-
-/example/
-
-设 $\{v_i\}_{i=1}^n$ 为 $\mathbb{R}^n$ 中的向量，求平行多面体
+这个公式可以如下推导.首先注意到下面的简单不等式：
 
 $$
-P(v_1, \cdots, v_n) = \left\{ \sum_{i=1}^n x_i v_i \in \mathbb{R}^n \mid 0 \leq x_i \leq 1,\ i = 1, 2, \cdots, n. \right\}
+|\sqrt{a^2 + b^2} - \sqrt{a^2 + c^2}| \leq |b - c|, \quad \forall a,b,c \in \mathbb{R}.
 $$
 
-的体积. 
-
-> 记 $\mathbb{R}^n$ 的标准基为 $\{e_i\}_{i=1}^n$，考虑线性映射 $A: \mathbb{R}^n \to \mathbb{R}^n$，$A(e_i) = v_i$. 则显然有
->
-> $$
-> \begin{aligned}
-> P(v_1, \cdots, v_n) &= \left\{ \sum_{i=1}^n x_i v_i \in \mathbb{R}^n \mid 0 \leq x_i \leq 1,\ i = 1, 2, \cdots, n. \right\} \\\\
-> &= \left\{ A\left( \sum_{i=1}^n x_i e_i \right) \in \mathbb{R}^n \mid 0 \leq x_i \leq 1,\ i = 1, 2, \cdots, n. \right\} \\\\
-> &= A(P(e_1, \cdots, e_n)).
-> \end{aligned}
-> $$
->
-> 而 $P(e_1, \cdots, e_n) = [0,1]^n$，因此，
->
-> $$
-> v(P(v_1, \cdots, v_n)) = |\det A| v([0,1]^n) = |\det A|.
-> $$
->
-> 例如，当 $n = 2$，$v_1 = (a_1, b_1)$，$v_2 = (a_2, b_2)$ 时，
->
-> $$
-> v(P(v_1, v_2)) = |a_1 b_2 - a_2 b_1|,
-> $$
->
-> 这是平行四边形的面积公式. 
-
-### · 一般的变量替换
-
-现在我们考虑比仿射线性变换更一般的映射，看看可求体积的集合在这些映射下如何变化. 设 $\varphi: \mathbb{R}^n \to \mathbb{R}^n$ 为 Lipschitz 映射，即存在常数 $L$，使得
+我们将 $[\alpha, \beta]$ 分割为 $\alpha = t_0 < t_1 < \cdots < t_n = \beta$，点 $(x(t_i), y(t_i))$ 把曲线分成若干段，每一段的长度可以近似地用直线段的长度表示，即
 
 $$
-|\varphi(x) - \varphi(y)| \leq L \|x - y\|,\quad \forall\ x, y \in \mathbb{R}^n.
+L(\sigma) \approx \sum_{i=1}^{n} \sqrt{(x(t_i) - x(t_{i-1}))^2 + (y(t_i) - y(t_{i-1}))^2},
 $$
 
-我们有
-
-**引理4**：
-
-> 设 $\varphi$ 为如上的 Lipschitz 映射，$A \subset \mathbb{R}^n$ 为可求体积的集合. 如果 $\varphi(A)$ 可求体积，则
->
-> $$
-> v(\varphi(A)) \leq L^n \cdot v(A).
-> $$
->
-> 特别地，$\varphi$ 将零体积集映为零体积集. 
-
-/proof/
-
-> 根据覆盖引理2，任给 $\varepsilon > 0$，存在覆盖 $A$ 的 $n$ 维球体 $\{B^j\}$，使得
->
-> $$
-> \sum_j v(B^j) < v(A) + \varepsilon.
-> $$
->
-> 设 $B^j$ 以 $x_j$ 为中心，以 $r_j$ 为半径，则由
->
-> $$
-> |\varphi(x) - \varphi(x_j)| \leq L \|x - x_j\| \leq L r_j,\quad \forall\ x \in B^j
-> $$
->
-> 知，$\varphi(B^j)$ 包含在以 $\varphi(x_j)$ 为中心，以 $L r_j$ 为半径的 $n$ 维球中. 因为 $\varphi(A) \subset \bigcup_j \varphi(B^j)$，故有
->
-> $$
-> v(\varphi(A)) \leq \sum_j \omega_n (L r_j)^n = L^n \sum_j v(B^j) < L^n \cdot v(A) + L^n \varepsilon,
-> $$
->
-> 由 $\varepsilon$ 的任意性即知 $v(\varphi(A)) \leq L^n \cdot v(A)$. 特别地，从上式还可以看出，如果 $A$ 为零体积集，则 $\varphi(A)$ 也是零体积集. 
-
-从证明可以看出，对于局部的 Lipschitz 映射也有类似的结果. 
-
-连续可微的映射是一类自然的（局部）Lipschitz 映射. 为此，设 $\varphi: \mathbb{R}^n \to \mathbb{R}^n$ 为连续可微映射，则 $\varphi$ 将零体积集映为零体积集. 
-
-如果 $\varphi$ 在 $x_0$ 处非退化，则根据逆映射定理，$\varphi$ 在 $x_0$ 附近可逆，且逆映射也是连续可微的. 
-
-特别地，$\varphi$ 将 $x_0$ 附近的内点映为内点，因此将 $x_0$ 附近的可求体积的集合映为可求体积的集合. 
-
-我们来看体积在映射 $\varphi$ 的作用下如何变化. 记 $L(x) = \varphi(x_0) + J\varphi(x_0)(x - x_0)$ 为仿射线性变换，$\tilde{\varphi}(x) = \varphi(x) - L(x)$，则 $J(\tilde{\varphi})(x_0) = 0$. 根据连续可微性，任给 $\varepsilon > 0$，存在 $\delta > 0$，使得
+由微分中值定理，存在 $\xi_i, \eta_i \in (t_{i-1}, t_i)$，使得
 
 $$
-\|J(\tilde{\varphi})(x)\| \leq \varepsilon,\quad \forall\ x \in B_\delta(x_0).
+x(t_i) - x(t_{i-1}) = x'(\xi_i)(t_i - t_{i-1}), \quad y(t_i) - y(t_{i-1}) = y'(\eta_i)(t_i - t_{i-1}),
 $$
 
-由拟微分中值定理，有
+从而有
 
 $$
-\|\tilde{\varphi}(x) - \tilde{\varphi}(y)\| \leq \|J(\tilde{\varphi})(\xi)\| \cdot \|x - y\| \leq \varepsilon \|x - y\|,\quad \forall\ x, y \in B_\delta(x_0).
+\sqrt{(x(t_i) - x(t_{i-1}))^2 + (y(t_i) - y(t_{i-1}))^2} = \sqrt{(x'(\xi_i))^2 + (y'(\eta_i))^2} \Delta t_i.
 $$
 
-我们可以假设 $\varphi$ 在 $B_\delta(x_0)$ 上可逆，其逆映射记为 $\varphi^{-1}$. 上式表明，
+因为
 
 $$
-\|\varphi \circ L^{-1}(x) - \varphi \circ L^{-1}(y)\| \leq (1 + \|L^{-1}\| \varepsilon) \|x - y\|,\quad \forall\ x, y \in L(B_\delta(x_0)),
+\left|\sqrt{(x'(\xi_i))^2 + (y'(\eta_i))^2} \Delta t_i - \sqrt{(x'(\xi_i))^2 + (y'(\xi_i))^2} \Delta t_i\right| \leq |y'(\eta_i) - y'(\xi_i)| \Delta t_i,
 $$
 
-其中 $L^{-1}$ 是 $L$ 的逆映射. 同理也有
+而
 
 $$
-\|L \circ \varphi^{-1}(x) - L \circ \varphi^{-1}(y)\| \leq \left(1 + \frac{\varepsilon}{\|L\| - \varepsilon}\right) \|x - y\|,\quad \forall\ x, y \in \varphi(B_\delta(x_0)).
+\sum_{i=1}^{n} |y'(\eta_i) - y'(\xi_i)| \Delta t_i \leq \sum_{i=1}^{n} \omega_i(y) \Delta t_i \to 0, \quad (\|\pi\| = \max\{t_i - t_{i-1}\} \to 0)
 $$
 
-设 $A \subset B_\delta(x_0)$ 为可求体积的集合，则由引理4 得
+因此有
 
 $$
 \begin{aligned}
-v(\varphi(A)) &= v(\varphi \circ L^{-1}(L(A))) \leq (1 + \varepsilon \|L^{-1}\|)^n v(L(A)) \\\\
-&= (1 + \varepsilon \|L^{-1}\|)^n |\det J\varphi(x_0)| v(A),
+L(\sigma) &= \lim_{\|\pi\| \to 0} \sum_{i=1}^{n} \sqrt{(x(t_i) - x(t_{i-1}))^2 + (y(t_i) - y(t_{i-1}))^2} \\\\
+&= \lim_{\|\pi\| \to 0} \sum_{i=1}^{n} \sqrt{(x'(\xi_i))^2 + (y'(\xi_i))^2} \Delta t_i \\\\
+&= \int_\alpha^\beta \left[(x'(t))^2 + (y'(t))^2\right]^{\frac{1}{2}} dt.
 \end{aligned}
 $$
 
-同理，
+注：如果 $(x'(t))^2 + (y'(t))^2 \neq 0$，令
 
 $$
-|\det J\varphi(x_0)| v(A) = v(L(A)) = v(L \circ \varphi^{-1}(\varphi(A))) \leq \left(1 + \frac{\varepsilon}{\|L\| - \varepsilon}\right)^n v(\varphi(A)),
+s = \phi(t) = \int_\alpha^t \left[(x'(u))^2 + (y'(u))^2\right]^{\frac{1}{2}} du, \quad t \in [\alpha, \beta].
 $$
 
-总之可以得到下面的估计（适当调整 $\varepsilon$）：
+则 $\phi: [\alpha, \beta] \to [0, L(\sigma)]$ 是严格单调递增函数，从而可逆，其逆记为 $t = \psi(s)$，$s$ 称为 $\sigma$ 的弧长参数.记 $\tilde{\sigma}(s) = \sigma(\psi(s))$，$s \in [0, L(\sigma)]$.根据反函数的求导公式易见
 
 $$
-\left| v(\varphi(A)) - |\det J\varphi(x_0)| \cdot v(A) \right| \leq \varepsilon \cdot v(A).
+\|\tilde{\sigma}'(s)\| = \sqrt{(\tilde{x}'(s))^2 + (\tilde{y}'(s))^2} = 1.
 $$
 
-由此得到 $v(A(\Omega)) = |\det A| v(\Omega).$ 的如下非线性推广：
+### · 简单图形面积
 
-**引理5**.
+(1) 如果 $f > 0$ 为 $[a, b]$ 上的连续函数，则由 $y = f(x)$, $x = a$, $x = b$ ($a < b$) 与 $y = 0$ 围成的曲边梯形的面积为
 
-> 设 $\varphi: \Omega \to \mathbb{R}^n$ 为 $C^1$ 映射，如果 $\varphi$ 为单射，且 $J\varphi$ 非退化，则对可求体积的有界集合 $A$ ($\bar{A} \subset \Omega$)，$\varphi(A)$ 也是可求体积的，且
+$$
+S = \int_a^b f(x) dx.
+$$
+
+一般地，当 $f$ 变号时，上式仍有意义，称为代数面积和，而
+
+$$
+S = \int_a^b |f(x)| dx
+$$
+
+才是所围面积之和.更一般地，由 $y = f_2(x)$, $y = f_1(x)$ 以及 $x = a$, $x = b$ 围成的图形的面积为
+
+$$
+S = \int_a^b |f_2(x) - f_1(x)| dx.
+$$
+
+(2) 设 $\sigma$ 为平面曲线，由极坐标方程
+
+$$
+r = r(\theta), \quad \theta \in [\alpha, \beta]
+$$
+
+给出，其中 $r(\theta)$ 关于 $\theta$ 连续，$\beta - \alpha \leq 2\pi$.则由 $\sigma$, $\theta = \alpha$, $\theta = \beta$ 所围成的图形面积为
+
+$$
+S = \lim_{\|\pi\| \to 0} \sum_{i=1}^{m} \frac{1}{2} r^2(\xi_i) \cdot \Delta \theta_i = \frac{1}{2} \int_\alpha^\beta r^2(\theta) d\theta.
+$$
+
+这个公式是通过使用扇形的面积和逼近图形面积得到的.
+
+(3) 如果曲线 $\sigma$ 由 $\sigma(t) = (x(t), y(t))$, $t \in [\alpha, \beta]$ 给出，其中 $y(t) \geq 0$, $x$ 关于 $t$ 单调递增，$x([\alpha, \beta]) = [a, b]$.则 $\sigma$ 与 $x = a$, $x = b$ 以及 $y = 0$ 围成的曲边梯形的面积为
+
+$$
+S = \int_\alpha^\beta y(t)x'(t) dt.
+$$
+
+这个公式仍然是通过使用矩形面积之和去逼近曲边梯形得到.一般地，如果只设 $x$ 是单调的，则面积公式为
+
+$$
+S = \int_\alpha^\beta |y(t)x'(t)| dt.
+$$
+
+如果 $\sigma$ 除在 $t = \alpha, \beta$ 处以外无自交点，则 $\sigma$ 本身围成的图形的面积为
+
+$$
+S = \left| \int_\alpha^\beta y(t)x'(t) dt \right| = \left| \int_\alpha^\beta x(t)y'(t) dt \right|,
+$$
+
+因为
+
+$$
+\begin{aligned}
+\int_\alpha^\beta y(t)x'(t) dt &= y(t)x(t)\Big|_\alpha^\beta - \int_\alpha^\beta y'(t)x(t) dt \\\\
+&= - \int_\alpha^\beta y'(t)x(t) dt,
+\end{aligned}
+$$
+
+故这个面积公式也可以改写为
+
+$$
+S = \frac{1}{2} \left| \int_\alpha^\beta [y(t)x'(t) - y'(t)x(t)] dt \right|.
+$$
+
+(4) 旋转曲面的面积
+
+设 $\sigma$ 为平面曲线
+
+$$
+\sigma(t) = (x(t), y(t)), \quad t \in [\alpha, \beta], \quad y(t) \geq 0.
+$$
+
+$\sigma$ 绕 $x$ 轴旋转所得曲面的面积为
+
+$$
+S = \int_\alpha^\beta 2\pi y(t)\left[(x'(t))^2 + (y'(t))^2\right]^{\frac{1}{2}} dt.
+$$
+
+> 取 $[\alpha, \beta]$ 的一个分割，在分点 $t_{i-1}, t_i$ 之间的曲线段经过旋转后所形成的曲面的面积可以用圆台的面积近似逼近，这一部分圆台的面积为
 >
 > $$
-> v(\varphi(A)) = \int_A |\det J\varphi|.
+> \pi(y(t_{i-1}) + y(t_i)) \sqrt{(x(t_i) - x(t_{i-1}))^2 + (y(t_i) - y(t_{i-1}))^2},
 > $$
-
-**定理6**（重积分的变量替换）
-
-> 设 $\varphi: \Omega \to \mathbb{R}^n$ 为 $C^1$ 单射，且 $J\varphi$ 非退化. 设 $A$ 为可求体积的有界集合，$\bar{A} \subset \Omega$，$f: \varphi(A) \to \mathbb{R}$ 为连续函数，则
+>
+> 因此
 >
 > $$
-> \int_{\varphi(A)} f = \int_A f \circ \varphi\, |\det J\varphi|.
+> S \approx \sum_{i=1}^{n} \pi(y(t_{i-1}) + y(t_i)) \sqrt{(x(t_i) - x(t_{i-1}))^2 + (y(t_i) - y(t_{i-1}))^2},
 > $$
-
-/proof/
-
-> 由题设以及逆映射定理知 $\varphi: \Omega \to \varphi(\Omega)$ 为可逆的连续可微映射，其逆映射也是连续可微的. 因此 $\partial\varphi(A) \subset \varphi(\partial A)$，因为 $\partial A \subset \Omega$ 是零体积集，故 $\varphi(\partial A)$ 也是零体积集，从而 $\varphi(A)$ 是可求体积的有界集合. 
 >
-> 根据覆盖引理，为了简单起见，不妨设 $A$ 是一个矩形. 任给 $A$ 的分割 $\pi = \{A_{ij}\}$，由引理 13.4.5 以及积分中值定理，有
+> 和曲线弧长公式的推导过程类似，当分割的模趋于零时，我们近似地有
+>
+> $$
+> (y(t_{i-1}) + y(t_i)) \approx 2y(\xi_i), \quad (\xi_i \in [t_{i-1}, t_i])
+> $$
+>
+> 以及
+>
+> $$
+> \sqrt{(x(t_i) - x(t_{i-1}))^2 + (y(t_i) - y(t_{i-1}))^2} \approx \sqrt{(x'(\xi_i))^2 + (y'(\xi_i))^2} \Delta t_i,
+> $$
+>
+> 当分割的模趋于零时，近似逼近所引起的这些误差之和趋于零.因此有
 >
 > $$
 > \begin{aligned}
-> \int_A f \circ \varphi\, |\det J\varphi| &= \sum_{ij} \int_{A_{ij}} f \circ \varphi\, |\det J\varphi| \\\\
-> &= \sum_{ij} f \circ \varphi(\xi_{ij}) \int_{A_{ij}} |\det J\varphi| \\\\
-> &= \sum_{ij} f \circ \varphi(\xi_{ij}) v(\varphi(A_{ij})) \\\\
-> &= \int_{\varphi(A)} f + \sum_{ij} \int_{\varphi(A_{ij})} [f(\varphi(\xi_{ij})) - f].
+> S &= \lim_{\|\pi\| \to 0} \sum_{i=1}^{n} 2\pi y(\xi_i)\left[(x'(\xi_i))^2 + (y'(\xi_i))^2\right]^{\frac{1}{2}} \Delta t_i \\\\
+> &= \int_\alpha^\beta 2\pi y(t)\left[(x'(t))^2 + (y'(t))^2\right]^{\frac{1}{2}} dt.
 > \end{aligned}
 > $$
->
-> 根据 $f$ 在 $\varphi(A)$ 上的（一致）连续性，当 $\|\pi\| \to 0$ 时上式最后一项趋于零，从而得证. 
->
-> **注意.** 当 $f$ 在 $\varphi(A)$ 上 Riemann 可积时定理也成立，读者可与一元函数积分的变量替换公式相比较. 
 
-### · 极坐标变换
+### · 简单立体体积
 
-我们知道，在平面 $\mathbb{R}^2$ 上有直角坐标 $(x, y)$ 和极坐标 $(r, \theta)$，其变换关系为
+(1) 平行截面之间的立体体积
+
+设 $\Omega$ 为 $\mathbb{R}^3$ 中一块立体区域，夹在平面 $x = a$ 与 $x = b$ ($a < b$) 之间.记 $S(x)$ 为 $x \in [a, b]$ 处垂直于 $x$ 轴的平面截 $\Omega$ 的截面面积函数.如果 $S(x)$ 关于 $x$ 连续，则 $\Omega$ 的体积为
 
 $$
-x = r\cos\theta,\quad y = r\sin\theta,\quad r \geq 0,\quad 0 \leq \theta \leq 2\pi.
+V = \int_a^b S(x) dx.
 $$
 
-这个变换称为极坐标变换，其 Jacobi 行列式为
+特别地，如果两块区域 $\Omega_A$ 和 $\Omega_B$ 的截面面积函数相等，则其体积相同.这个事实在公元 5 到 6 世纪由祖暅（祖冲之之子）所发现，17 世纪时意大利人 Cavalieri 也发现了这一事实.
+
+(2) 旋转体的体积
+
+设 $f$ 为 $[a, b]$ 上的连续函数，$\Omega$ 是由平面图形
 
 $$
-\frac{\partial(x, y)}{\partial(r, \theta)} = 
-\begin{vmatrix}
-\cos\theta & -r\sin\theta \\
-\sin\theta & r\cos\theta
-\end{vmatrix}
-= r.
+\{(x, y) \mid a \leq x \leq b, \; 0 \leq |y| \leq |f(x)|\}
 $$
 
-这个变换将 $(r, \theta)$ 平面上的矩形 $[0, R] \times [0, 2\pi]$ 变为 $(x, y)$ 平面上的圆 $x^2 + y^2 \leq R^2$. 不过，这个变换不是一一的，且在 $r = 0$ 处退化. 
-
-尽管如此，由于此变换在 $(0, +\infty) \times (0, 2\pi)$ 上是一一的且不退化，因此将定理6的证明略作改动即可知，积分的变量替换公式对这个变换仍然成立. 
-
-与极坐标变换类似，$\mathbb{R}^3$ 中也有所谓的球面坐标变换：
+绕 $x$ 轴旋转一周所得旋转体.该旋转体在 $x \in [a, b]$ 处的截面为圆盘，其面积为
 
 $$
-x = r\sin\theta\cos\varphi,\quad y = r\sin\theta\sin\varphi,\quad z = r\cos\theta,\quad r \geq 0,\ \theta \in [0, \pi],\ \varphi \in [0, 2\pi].
+S(x) = \pi f^2(x).
 $$
 
-这个变换的 Jacobi 行列式为
+因此 $\Omega$ 的体积为
 
 $$
-\frac{\partial(x, y, z)}{\partial(r, \theta, \varphi)} = 
-\begin{vmatrix}
-\sin\theta\cos\varphi & r\cos\theta\cos\varphi & -r\sin\theta\cos\varphi \\
-\sin\theta\sin\varphi & r\cos\theta\sin\varphi & r\sin\theta\cos\varphi \\
-\cos\theta & -r\sin\theta & 0
-\end{vmatrix}
-= r^2\sin\theta.
+V = \int_a^b S(x) dx = \pi \int_a^b f^2(x) dx.
 $$
-
-球面坐标和伸缩变换结合起来称为广义球面坐标变换. 
-
-## Part 3 重积分的应用和推广
-
-### · 广义积分
-
-我们在前面几节所考虑的重积分有两个局限：一是积分区域要是可求体积（面积）的有界集合，二是被积函数要是有界的. 
-
-先考虑无界区域上的积分. 假设 $A$ 是 $\mathbb{R}^n$ 中的（无界）集合，如果对于每个矩形 $[-k, k]^n$ ($k \geq 1$)，$A \cap [-k, k]^n$ 都是可求体积的，且极限 $\lim_{k \to +\infty} v(A \cap [-k, k]^n)$ 存在（有限），则称 $A$ 是广义可求体积的，其体积定义为
-
-$$
-v(A) = \lim_{k \to +\infty} v(A \cap [-k, k]^n).
-$$
-
-如果 $A$ 本身就是可求体积的有界集合，则它也是广义可求体积的，体积的定义和前面并无矛盾. 
-
-注意到 $v(A \cap [-k, k]^n)$ 关于 $k$ 是单调递增的，因此有
-
-**命题1.**
-
->  $A$ 广义可求体积当且仅当 $A \cap [-k, k]^n$ 可求体积且它们的体积有上界. 
->
-> 我们再注意到，如果将定义中的矩形 $[-k, k]^n$ 换成半径为 $k$ 的球体 $B_k(0)$，则结论不变. 事实上，由等式
->
-> $$
-> A \cap B_k(0) = (A \cap [-k, k]^n) \cap B_k(0)
-> $$
->
-> 以及可求体积的有界集合之交仍可求体积知，如果 $A \cap [-k, k]^n$ 都是可求体积的，则 $A \cap B_k(0)$ 也都是可求体积的，再根据
->
-> $$
-> A \cap \left[\frac{k}{\sqrt{n}}, \frac{k}{\sqrt{n}}\right]^n \subset A \cap B_k(0) \subset A \cap [-k, k]^n
-> $$
->
-> 以及数列极限的夹逼原理知
->
-> $$
-> \lim_{k \to +\infty} v(A \cap B_k(0)) = \lim_{k \to +\infty} v(A \cap [-k, k]^n).
-> $$
->
-> 反之，如果 $A \cap B_k(0)$ 都是可求体积的，则 $A \cap [-k, k]^n$ 也都是可求体积的，且二者极限相等. 
->
-> 我们可以将矩形或半径越来越大的球体推广为更一般的可求体积区域. 
-
-**定义1（穷竭）** 
-
-> 设 $\{\Omega_i\}$ 为 $\mathbb{R}^n$ 中一列可求体积的有界开区域，满足条件
->
-> (1) $\bar{\Omega}_i \subset \Omega_{i+1},\ \forall i \geq 1$；
->
-> (2) $\bigcup_{i \geq 1} \Omega_i = \mathbb{R}^n$,
->
-> 则称 $\{\Omega_i\}$ 为 $\mathbb{R}^n$ 的一个穷竭. 
->
-> 开矩形 $\{(-k, k)^n\}$ 和开球体 $\{B_k(0)\}$ 都是 $\mathbb{R}^n$ 的穷竭. 在具体的积分计算中，往往可以适当地选取穷竭以简化计算，见后面的例子. 在穷竭的定义中当然也可以考虑一般的有界区域，此时要求 $\bar{\Omega}_i$ 含于 $\Omega_{i+1}$ 的内点集中. 
-
-现在下面的命题就比较明显了. 
-
-**命题2.**
-
-> 设 $\{\Omega_i\}$ 为 $\mathbb{R}^n$ 的一个穷竭，则 $A$ 广义可求体积当且仅当 $\{A \cap \Omega_i\}$ 是一列体积有上界的可求体积集，且
->
-> $$
-> v(A) = \lim_{i \to \infty} v(A \cap \Omega_i).
-> $$
->
-> 类似地，我们可以把重积分的定义推广到无界集合上. 设 $f: A \to \mathbb{R}$ 是集合 $A \subset \mathbb{R}^n$ 上定义的非负函数. 如果对每一个矩形 $[-k, k]^n$，$A \cap [-k, k]^n$ 都是可求体积的，$f$ 在 $A \cap [-k, k]^n$ 上可积，且极限
->
-> $$
-> \lim_{k \to +\infty} \int_{A \cap [-k, k]^n} f
-> $$
->
-> 存在（有限），则称 $f$ 在 $A$ 上广义可积或广义积分收敛，其（广义）积分记为
->
-> $$
-> \int_A f = \lim_{k \to +\infty} \int_{A \cap [-k, k]^n} f.
-> $$
->
-> 注意，此时 $A$ 不一定是广义可求体积的（体积可能为无穷）. 如果上式右边的极限为 $+\infty$，则称 $f$ 的广义积分在 $A$ 上发散. 下面的命题也是可以立即得到的. 
-
-**命题3.** 
-
-> 设 $f: A \to \mathbb{R}$ 为非负函数，则
->
-> (1) $f$ 在 $A$ 上广义可积当且仅当积分 $\int_{A \cap [-k, k]^n} f$ 关于 $k$ 有上界；  
-> (2) 设 $\{\Omega_i\}$ 为 $\mathbb{R}^n$ 的一个穷竭，则 $f$ 在 $A$ 上广义可积当且仅当 $f$ 在 $A \cap \Omega_i$ 上可积，且积分有上界，此时
->
-> $$
-> \int_A f = \lim_{i \to \infty} \int_{A \cap \Omega_i} f.
-> $$
->
-> 对于一般的函数 $f: A \to \mathbb{R}$，记
->
-> $$
-> f^+ = \max\{f, 0\},\quad f^- = \max\{-f, 0\},
-> $$
->
-> 则 $f = f^+ - f^-$. $f^+, f^-$ 都是非负函数，当 $f^+, f^-$ 在 $A$ 上广义可积时，我们称 $f$ 在 $A$ 上广义可积，积分定义为
->
-> $$
-> \int_A f = \int_A f^+ - \int_A f^-.
-> $$
-
-注意到 $|f| = f^+ + f^-$，因此 $f$ 在 $A$ 上广义可积时，$|f|$ 在 $A$ 上也广义可积，这和一元函数的广义积分是不同的！之所以出现这种差别还是因为被积区域在一般维数时可能非常复杂（因此对被积函数的要求较高）. 
-
-对于一般的函数广义积分敛散性，根据命题3，我们有如下比较判别法. 
-
-**定理4.**
-
-> 设 $g(x)$ 为 $A$ 上非负广义可积函数，$f$ 在每一个 $A \cap [-k, k]^n$ 上可积，且当 $\|x\|$ 充分大时，$|f(x)| \leq g(x)$，则 $f(x)$ 在 $A$ 上广义可积. 
-
-显然，定理中的矩形 $[-k, k]^n$ 可以换成球体 $B_k(0)$. 记 $r = \|x\|$，考虑函数 $r^{-p}$ 在区域 $\{r_0 \leq r \leq R\}$ ($r_0 > 0$) 上的积分，利用球面坐标以及结论可得
-
-$$
-\int_{r_0 \leq r \leq R} r^{-p} = \int_{r_0}^R r^{n-1-p} (n\omega_n) dr = \frac{1}{n - p}(R^{n-p} - r_0^{n-p})(n\omega_n),
-$$
-
-因此当 $p > n$ 时，$r^{-p}$ 在 $\{r \geq r_0\}$ 上广义可积. 根据比较定理，可得
-
-**推论5.** 
-
-> 设 $f$ 在每一个 $A \cap B_k(0)$ 上可积. 如果 $p > n$ 为常数，且当 $\|x\|$ 充分大时，成立
-> $$
-> |f(x)| \leq \|x\|^{-p},
-> $$
->
-> 则 $f$ 在 $A$ 上广义可积. 
-
-下面研究无界函数的积分. 设 $A$ 为 $\mathbb{R}^n$ 中可求体积的有界集合，$p \in A$. 给定非负函数 $f: A - p \to \mathbb{R}$，如果对于任意 $\varepsilon > 0$，$f$ 在 $A - B_\varepsilon(p)$ 上可积，且极限
-
-$$
-\lim_{\varepsilon \to 0^+} \int_{A - B_\varepsilon(p)} f
-$$
-
-存在（有限），则称 $f$ 在 $A$ 上的瑕积分收敛，记为
-
-$$
-\int_A f = \lim_{\varepsilon \to 0^+} \int_{A - B_\varepsilon(p)} f,
-$$
-
-否则就称瑕积分发散. 当 $f$ 在整个 $A$ 上可积时，$f$ 在 $A$ 上的瑕积分收敛且两个积分相等. 
-
-如果 $f$ 是一般的函数，则考虑 $f^+$ 和 $f^-$，当 $f^+$ 和 $f^-$ 在 $A$ 上的瑕积分都收敛时，称 $f$ 在 $A$ 上的瑕积分收敛，且定义
-
-$$
-\int_A f = \int_A f^+ - \int_A f^-.
-$$
-
-如同广义积分的讨论那样，瑕积分定义中的球体 $B_\varepsilon(p)$ 可以换成包含 $p$ 的其它可求体积的区域，例如直径趋于零的矩形. 下面的结果当然也成立. 
-
-**命题6.** 
-
-> 设 $f: A - p \to \mathbb{R}$ 为非负函数，如果 $f$ 在 $A - B_\varepsilon(p)$ 上均可积，且积分
->
-> $$
-> \int_{A - B_\varepsilon(p)} f
-> $$
->
-> 关于 $\varepsilon$ 有界，则 $f$ 在 $A$ 上的瑕积分收敛；反之亦然. 
-
-对于最一般的区域和最一般的函数，我们可能会碰到积分区域无界，且函数有很多瑕点的情形. Riemann 积分能够处理的情形仍然相当有限，在后续由 Lebesgue 积分来部分地弥补了这一不足. 
 
 ### · 物理应用
 
-(1) 物体的质量. 
+(1) 降落伞的原理
 
-> 设 $A$ 为空间物体，其密度函数为 $\rho(x, y, z)$，则它的质量 $m$ 为
->
-> $$
-> m = \int_A \rho(x, y, z) dx dy dz.
-> $$
->
-> 类似地，如果物体是密度函数为 $\rho(x, y)$ 的平面薄板，则质量可以用二重积分来计算. 
+质量为 $m$ 的物体在重力作用下自由下落，下落时所受空气阻力与下落速度成正比，比例常数为 $k$，则由牛顿定律，
 
-(2) 物体的重心. 
+$$
+mg - kv = m \frac{dv}{dt},
+$$
 
-> 仍设 $A$ 为空间物体，其密度函数为 $\rho(x, y, z)$，则它的质量中心 $(\bar{x}, \bar{y}, \bar{z})$ 坐标为
->
-> $$
-> \bar{x} = \frac{1}{m} \int_A x\rho(x, y, z),\quad \bar{y} = \frac{1}{m} \int_A y\rho(x, y, z),\quad \bar{z} = \frac{1}{m} \int_A z\rho(x, y, z).
-> $$
->
-> 
+其中，$g$ 为重力加速度，$v$ 为物体的速度，我们选择指向地心的坐标.上面的方程等价于
 
-(3) 转动惯量. 
+$$
+\frac{d}{dt}(e^{\frac{k}{m}t} v) = g e^{\frac{k}{m}t},
+$$
 
-> 物体 $A$ 关于 $x$ 轴、$y$ 轴、$z$ 轴的转动惯量分别为
->
-> $$
-> I_x = \int_A (y^2 + z^2)\rho(x, y, z),\quad I_y = \int_A (x^2 + z^2)\rho(x, y, z),\quad I_z = \int_A (x^2 + y^2)\rho(x, y, z).
-> $$
->
-> 一般地，如果 $l$ 为空间直线，$(x, y, z)$ 到 $l$ 的距离记为 $r(x, y, z)$，则物体关于 $l$ 的转动惯量为
->
-> $$
-> I_l = \int_A r^2(x, y, z)\rho(x, y, z) dx dy dz.
-> $$
->
-> 
+假设初速度为零，则
 
-(4) 万有引力. 
+$$
+e^{\frac{k}{m}t} v = g \int_0^t e^{\frac{k}{m}s} ds = \frac{mg}{k}(e^{\frac{k}{m}t} - 1),
+$$
 
-> 设 $A$ 为如上空间物体，$B$ 为位于 $(x_0, y_0, z_0)$ 处质量为 $m_0$ 的质点，则由 Newton 万有引力定律，$A$ 对 $B$ 所产生的引力 $F$ 为
->
-> $$
-> \vec{F} = G m_0 \int_A \frac{\rho(x, y, z)}{r^3} \vec{r} dx dy dz,
-> $$
->
-> 其中，$G$ 为万有引力常数，
->
-> $$
-> \vec{r} = (x - x_0, y - y_0, z - z_0),\quad r = \|\vec{r}\| = \sqrt{(z - z_0)^2 + (y - y_0)^2 + (z - z_0)^2}.
-> $$
+即
+
+$$
+v(t) = \frac{mg}{k}(1 - e^{-\frac{k}{m}t}).
+$$
+
+特别地，$t \to \infty$ 时 $v(t) \to \dfrac{mg}{k}$，即速度不会增加到无限大.
+
+(2) 第二宇宙速度
+
+从地球表面发射火箭，如果要求火箭无限飞离地球，问：火箭的初速度至少为多大？
+
+根据万有引力定律，在距地心 $x$ 处火箭所受地球引力为
+
+$$
+F = GMm x^{-2},
+$$
+
+其中，$G$ 为万有引力常数，$M$ 为地球质量，$m$ 为火箭质量.在地球表面，有
+
+$$
+GMm R^{-2} = mg,
+$$
+
+其中 $R$ 为地球半径.火箭从地面升到距地心 $r$ ($r > R$) 处需要做的功为
+
+$$
+\int_R^r GMm x^{-2} dx = \int_R^r mg R^2 x^{-2} dx = mg R^2 \left(\frac{1}{R} - \frac{1}{r}\right).
+$$
+
+因此，火箭无限飞离地球需要做功
+
+$$
+W = \lim_{r \to \infty} mg R^2 \left(\frac{1}{R} - \frac{1}{r}\right) = mg R.
+$$
+
+由能量守恒原理，火箭的初速度至少为 $v_0$，则
+
+$$
+\frac{1}{2} m v_0^2 = mg R,
+$$
+
+因而
+
+$$
+v_0 = \sqrt{2gR} \approx \sqrt{2 \times 9.81 (m/s^2) \times 6.371 \times 10^6 m} \approx 11.2 \, (km/s).
+$$
+
+(3) 缆绳的工作原理
+
+绳索在日常生活中应用十分广泛，例如在码头上经常用来系住船舶.为什么绳索能拉住大型船舶？下面我们就来作一个力学分析，它揭示了绳索产生巨大拉力的原理.
+
+设一段绳索缠绕在一圆柱体上，绳索一端施以拉力 $f$，绳索与圆柱体之间的摩擦系数为 $k$，如果绳索共绕了 $n$ 圈，在绳索的另一端产生的拉力为 $F$，我们来求 $F$ 的值.
+
+取角度为 $\Delta\theta$ 的一小段绳索，研究其受力状况.设这一段绳索承受圆柱体的正压力为 $\Delta N$，则摩擦力为 $k \Delta N$.这一段绳索两端所受拉力分别为 $F$, $F + \Delta F$，则考虑沿圆柱体外法向和切向这两个方向绳索的受力，得到方程
+
+$$
+\begin{cases}
+\Delta N = (F + \Delta F) \sin \dfrac{\Delta\theta}{2} + F \sin \dfrac{\Delta\theta}{2}, \\\\
+(F + \Delta F) \cos \dfrac{\Delta\theta}{2} = F \cos \dfrac{\Delta\theta}{2} + k \Delta N.
+\end{cases}
+$$
+
+从方程中消去 $\Delta N$，令 $\Delta\theta \to 0$，得
+
+$$
+\frac{dF}{d\theta} = \lim_{\Delta\theta \to 0} \frac{\Delta F}{\Delta\theta} = kF,
+$$
+
+利用积分解得
+
+$$
+F(\theta) = f \cdot e^{k\theta}.
+$$
+
+当 $\theta = 2n\pi$ 时，$F = f \cdot e^{2kn\pi}$.例如，设摩擦系数 $k = \dfrac{1}{4}$，$n = 6$，$f = 10 kg$，则 $F = 10 e^{3\pi} kg > 100000 kg$.
+
+### · 近似计算
+
+设 $f$ 为 $[a,b]$ 上的二次连续可微函数，则由微分中值定理或 Taylor 展开我们得到
+
+$$
+|f(x) - l(x)| \leq \frac{1}{2} M (x - a)(b - x), \quad \forall x \in [a,b],
+$$
+
+其中，$M = \max_{x \in [a,b]} |f''(x)|$，且
+
+$$
+l(x) = f(a) + \frac{f(b) - f(a)}{b - a}(x - a), \quad x \in [a,b].
+$$
+
+因此有如下的积分估计
+
+$$
+\begin{aligned}
+\left| \int_a^b f(x) dx - \int_a^b l(x) dx \right|&\leq \frac{1}{2} M \int_a^b (x - a)(b - x) dx \\\\
+&= \frac{1}{12} M (b - a)^3.
+\end{aligned}
+$$
+
+这也就是 $f$ 在 $[a,b]$ 上的积分用梯形面积逼近的误差公式.
+
+我们考虑函数 $f = \ln x$ 在 $[1,n]$ 上的积分.令
+
+$$
+\begin{aligned}
+A_n = \int_1^n \ln x \, dx &= x \ln x \Big|_1^n - \int_1^n (\ln x)' x dx \\\\
+&= n \ln n - n + 1,
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+B_n &= \frac{1}{2}(\ln 1 + \ln 2) + \frac{1}{2}(\ln 2 + \ln 3) + \cdots + \frac{1}{2}(\ln(n-1) + \ln n)\\\\
+&= \ln n! - \frac{1}{2} \ln n,
+\end{aligned}
+$$
+
+根据上面的误差估计，并注意 $\ln x$ 为凹函数，则有
+
+$$
+0 < \int_k^{k+1} \ln x \, dx - \frac{1}{2}(\ln k + \ln(k+1)) < \frac{1}{12 k^2}.
+$$
+
+令 $C_n = A_n - B_n$，则 $C_n$ 是 $n-1$ 次累计误差，它关于 $n$ 是单调递增的.从而
+
+$$
+0 < C_n < \frac{1}{12} \sum_{k=1}^{n-1} \frac{1}{k^2} < \frac{1}{12} \left(1 + \sum_{k=1}^\infty \left(\frac{1}{k} - \frac{1}{k+1}\right)\right) = \frac{1}{6},
+$$
+
+这说明极限 $\displaystyle\lim_{n \to \infty} C_n = C$ 存在，且
+
+$$
+\begin{aligned}
+0 < C - C_n &< \frac{1}{12} \sum_{k=n}^\infty \frac{1}{k^2} \\\\
+&< \frac{1}{12} \left[\frac{1}{n^2} + \frac{1}{n(n+1)} + \frac{1}{(n+1)(n+2)} + \cdots \right] \\\\
+&= \frac{1}{12} \left(\frac{1}{n^2} + \frac{1}{n}\right).
+\end{aligned}
+$$
+
+下面我们来求极限 $C$ 的值.由定义，有
+
+$$
+C_n = A_n - B_n = n \ln n - n + 1 - \ln n! + \frac{1}{2} \ln n,
+$$
+
+因此
+
+$$
+n! = e^{1 - C_n} n^{n + \frac{1}{2}} e^{-n}.
+$$
+
+由 Wallis 公式，
+
+$$
+\lim_{n \to \infty} \frac{(n!)^2 2^{2n}}{(2n)!} \cdot \frac{1}{\sqrt{n}} = \lim_{n \to \infty} \frac{(2n)!!}{(2n - 1)!!} \cdot \frac{1}{\sqrt{n}} = \sqrt{\pi},
+$$
+
+将 $n!$ 和 $(2n)!$ 的表达式代入，有
+
+$$
+\sqrt{\pi} = \lim_{n \to \infty} \frac{e^{2(1 - C_n)} n^{2n+1} e^{-2n} \cdot 2^{2n}}{e^{1 - C_{2n}} (2n)^{2n + \frac{1}{2}} e^{-2n} \cdot \sqrt{n}} = \frac{e^{1 - C}}{\sqrt{2}},
+$$
+
+这就得到 $n!$ 的如下表示
+
+$$
+n! = \sqrt{2\pi n} \left(\frac{n}{e}\right)^n e^{C - C_n}, \quad \text{(Stirling)}
+$$
+
+其中
+
+$$
+1 < e^{C - C_n} < e^{\frac{1}{12} \left(\frac{1}{n^2} + \frac{1}{n}\right)} < 1 + \frac{1}{12n} + \frac{1}{10n^2}, \quad \forall n > 1.
+$$
+
