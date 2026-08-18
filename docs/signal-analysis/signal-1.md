@@ -355,7 +355,7 @@ $$
 k_1 e_1(t - t_0) + k_2 e_2(t - t_0) \to k_1 r_1(t - t_0) + k_2 r_2(t - t_0)
 $$
 
-此外系统还具有微分与积分性，若 $e(t) \to r(t)$，则 $
+此外系统还具有微分与积分性，若 $e(t) \to r(t)$，则
 $$
 \frac{de(t)}{dt} \to \frac{dr(t)}{dt}, \quad \int_0^t e(\tau) d\tau \to \int_0^t r(\tau) d\tau
 $$

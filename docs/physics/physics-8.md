@@ -1,421 +1,469 @@
 ---
-title: Chapter 8 静电场
+title: Chapter 8 狭义相对论
 createTime: 2025/10/13 16:19:38
 permalink: /physics/physics-8/
 ---
 
-## Part 1 真空中的静电场
+## Part 1 基本假设和运动学理论
 
-### · 场论
+### · 基本假设
 
-电磁学本质上是在分析两种物理场——电场和磁场. 因此先来简单介绍场论的知识点.
-
-> 如果在全部或部分空间里的每一个点都对应着某个物理量的一个确定的值，就说在这空间里确定了该物理量的一个场.
->
-> - 标量场：如温度场、密度场、电势场
->
-> - 矢量场：如电场、磁场、速度场、力场
->
-> 或者说，场就是关于空间中的点的函数
-
-**Nabla 算子**: 
-
->  Nabla 算子是一个矢量微分算子，在三维笛卡尔坐标系中可写成
->
-> $$
-> \nabla = \left( \frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z} \right)
-> $$
->
-> 在运算时，可先简单把它看作一个三维矢量。
-
-**梯度**: 
-
-> 当 Nabla 算子作用于标量场  $ f = f(x, y, z) $ ，相当于矢量的数乘，得到
->
-> $$
-> \nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right)
-> $$
->
-> 这个新的矢量称为标量场  $f$  的梯度 (gradient)，它指向函数增长最快的方向。
-
-**散度**: 
-
-> 当 Nabla 算子作用于矢场  $\vec{F} = (P, Q, R)$ ，可以做点乘或者叉乘，当 Nabla 算子点乘  $\vec{F}$  时，得到
->
-> $$
->  \nabla \cdot \vec{F} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z} 
-> $$
->
-> 这个标量称为矢场  $\vec{F}$  的散度 (divergence)，表征空间各点矢场发散的强弱程度。散度为正，说明该点有发散场线的正源；散度为负，说明该点有收场线的负源。
-
-**旋度**: 
-
-> 当 Nabla 算子叉矢场  $\vec{F}$ ，得到
->
-> $$
-> \nabla \times \vec{F} = \left|
-> \begin{matrix} 
-> \vec{i} & \vec{j} & \vec{k}\\
-> \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
-> P & Q & R 
-> \end{matrix}\right|
-> $$
->
-> 这个新的矢量称为矢场  $\vec{F}$  的旋度 (Curl)，表征三维矢场对某一点附近的微元造成的旋转程度。
-
-**通量**: 
-
-> 矢场  $\vec{F}$  沿有向曲面  $S$  的某一的某一侧的曲面积分
->
-> $$
-> \Phi = \iint _S \vec{F} \cdot d\vec{S} =\iint _S {F}_n \cdot d{S}
-> $$
->
-> 称为  $\vec{F}$  向积分所沿一侧穿过曲面  $S$  的通量。
-
-**环量**: 
-
-> 矢场  $\vec{F}$  沿场中某一有向闭合曲线  $l$  的曲线积分
->
-> $$
-> \Gamma = \oint_{l} \vec{F} \cdot d\vec{l}
-> $$
->
-> 称为  $\vec{F}$  按积分方向沿曲线  $l$  的环量。
-
-> [!important]
->
-> 通量与散度、环量与旋度的关系
->
-> Gauss 公式:
->
-> $$
-> {\iint_{{\partial}\Omega}} \vec{F} \cdot d\vec{S} = \iiint_{\Omega} (\nabla\cdot \vec{F})\ dV
-> $$
->
-> Stokes 公式:
->
-> $$
-> \oint_{l} \vec{F} \cdot d\vec{l} = \iint_{\Sigma} \nabla \times \vec{F} dS 
-> $$
->
-> 散度是通量的体密度，旋度是环量的面密度
-
-下面是一些特殊的场：
-
-- 无源场:  $\nabla \cdot \vec{F} \equiv 0$ ，则称  $\vec{F}$  为无源场，反之为有源场
-- 无旋场:  $\nabla \times \vec{F} \equiv 0$ ，则称  $\vec{F}$  为无旋场，反之为有旋场
-- 有势场: 若  $\vec{F}$  是个标量场  $u$  的度场，即  $\vec{F} = \nabla u$ ，则称  $\vec{F}$  为有势场，并将  $v = -u$  称为  $\vec{F}$  的势函数
-- 调和场: 若  $\vec{F}$  既无源也无旋，则称  $\vec{F}$  为调和场
-
-**Laplace 算子**: 
-
-> 当 Nabla 算子与自身做点乘，得到
->
-> $$
-> \nabla^2 = \Delta = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}
-> $$
-> 当它作用于标量场  $f$ ，得到其梯度的散度。
-
-### · 电场强度
-
-**库仑定律**：(Coulomb's law)
-
-相对于惯性系静止的两个点电荷间的静电力满足如下规律：
-
-- 大小相等方向相反，并且沿它们的连线；同号电荷相斥，异号电荷相吸
-- 大小与各自的电量  $q_1, q_2$  成正比，与距离  $r$  的平方成反比
-
+狭义相对论是在描述电磁学的 Maxwell 方程组确立之后提出的。其原因在于，通过联立求解 Maxwell 方程组，人们可以得到如下的描写在真空中传播的电磁波动方程
 
 $$
-\vec{F}_{12} = k \frac{q_1 q_2}{r^2} \vec{e}_{12} = \frac{1}{4\pi \varepsilon_0} \frac{q_1 q_2}{r^2} \vec{e}_{12}
+\epsilon_0 \mu_0 \frac{\partial^2 \mathbf{E}}{\partial t^2} - \frac{\partial^2 \mathbf{E}}{\partial x^2} - \frac{\partial^2 \mathbf{E}}{\partial y^2} - \frac{\partial^2 \mathbf{E}}{\partial z^2} = \frac{1}{c^2} \frac{\partial^2 \mathbf{E}}{\partial t^2} - \frac{\partial^2 \mathbf{E}}{\partial x^2} - \frac{\partial^2 \mathbf{E}}{\partial y^2} - \frac{\partial^2 \mathbf{E}}{\partial z^2} = 0,
 $$
-
-式中  $k$  叫做静电力常量， $\varepsilon_0$  叫做真空介电常量， $\vec{e}_{12}$  是  $q_1$  指向  $q_2$  的单位矢量
-
-**叠加原理**：当空间有两个以上的点电荷时（点电荷系、连续带电体），计算静电力应遵循矢量叠加的原则
-
-> (1)  $N$  个点电荷对  $q_0$  的静电力：
->
-> $$
-> \vec{F} = \frac{1}{4\pi \varepsilon_0} q_0 \sum_{i=1}^{N} \frac{q_i}{|\vec{r} - \vec{r}_i|^3} (\vec{r} - \vec{r}_i)
-> $$
->
-> (2) 带电线对  $q_0$  的静电力：
->
-> $$
-> \vec{F} = \frac{1}{4\pi \varepsilon_0} q_0 \int_L \frac{\lambda_e (\vec{r'})}{|\vec{r} - \vec{r'}|^3} (\vec{r} - \vec{r'}) \, dl
-> $$
->
-> (3) 带电面对  $q_0$  的静电力：
->
-> $$
-> \vec{F} = \frac{1}{4\pi \varepsilon_0} q_0 \iint_S \frac{\sigma_e (\vec{r'})}{|\vec{r} - \vec{r'}|^3} (\vec{r} - \vec{r'}) \, dS
-> $$
->
-> (4) 带电体对  $q_0$  的静电力：
->
-> $$
-> \vec{F} = \frac{1}{4\pi \varepsilon_0} q_0 \iiint_V \frac{\rho_e (\vec{r'})}{|\vec{r} - \vec{r'}|^3} (\vec{r} - \vec{r'}) \, dV
-> $$
-
-**电场强度**：
-
-> 定义电场强度为试探电荷所受的电场力  $\vec{F}$  与其电量  $q_0$  的比值：
->
->
-> $$
-> \vec{E} \equiv \frac{\vec{F}}{q_0}
-> $$
->
-
-**点电荷场强公式**：
-
-> 设场源电荷  $Q$  所在的位置为原点， $\vec{e}_r$  是原点指向场点的单位矢量。对试探电荷  $q_0$ ，由库仑定律有：
->
->
-> $$
-> \vec{F} = \frac{1}{4\pi \varepsilon_0} \frac{Q q_0}{r^2} \vec{e}_r
-> $$
->
-> 再由电场强度的定义得：
->
->
-> $$
-> \vec{E} \equiv \frac{\vec{F}}{q_0} = \frac{Q}{4\pi \varepsilon_0 r^2} \vec{e}_r
-> $$
-
-当计算连续带电体在空间某点激发的场强时，按照下面的步骤进行：
-
-- 选择恰当的微元，计算微元对场点的场强
-- 进行积分，要注意此时进行的是矢量场的积分
-
-### · Gauss 定理
-
-我们先仿照磁通量定义给出电通量定义：
-$$
-\Phi_c=\iint_{S} \vec{E} \cdot d\vec{S}
-$$
-其中电通量是有方向性的，正负取值取决于面元的法线方向的选取；通过闭合面的电通量即为净穿出闭合面的电场线的条数
-
-同时规定：面元法线方向由闭合面内指向面外
-
-> 对于任意闭合曲面  $S$ （也称为 Gauss 面），电场强度  $\vec{E}$  的通量等于面内全部电荷代数和的  $\frac{1}{\varepsilon_0}$  倍，与面外的电荷无关，即
->
->
-> $$
-> \Phi_c=\iint_{\partial\Omega} \vec{E} \cdot d\vec{S} = \frac{1}{\varepsilon_0} \sum_{\text{in }\Omega} q
-> $$
->
-> 我们可以把 Gauss 面内的总电荷写成体积分的形式
->
->
-> $$
-> q = \iiint_{\Omega} \rho_e dV
-> $$
->
-> 这样一来 Gauss 定理可写成
->
->
-> $$
-> \iint_{\partial\Omega} \vec{E} \cdot d\vec{S}= \iiint_{\Omega} \frac{\rho_e}{\varepsilon_0} dV \rightarrow\nabla \cdot \vec{E} = \frac{\rho_e}{\varepsilon_0}
-> $$
-> $$
-> \nabla \cdot \vec{E} = \frac{\rho_e}{\varepsilon_0}
-> $$
->
-> 我们可以将其比作为“中心喷水的鱼缸”
-
-Gauss 定理处理的问题为一维对称结构，尽管我们处理的问题一般是在三维空间中，但在一些特殊情况下，$\vec{E}$ 可能只与一个空间坐标有关. 我们把这样的特性称为一维对称性.
-
-下面给出几个典例：
-
-**Question1**：均匀带电球体
-
-![pVqJFKJ.png](https://s21.ax1x.com/2025/10/15/pVqJFKJ.png)
-
-> 选择与带电球同心的球面为 Gauss 面，当  $r < R$  时
->
->
-> $$
-> \iint_{\partial V} \vec{E} \cdot d\vec{S} = E \cdot 4\pi r^2 = \frac{1}{\varepsilon_0} \rho_e \frac{4}{3} \pi r^3
-> $$
->
-> $$
-> E = \frac{\rho_e}{3\varepsilon_0} r
-> $$
->
-> 当  $r > R$  时
->
->
-> $$
-> \iint_{\partial V} \vec{E} \cdot d\vec{S} = E \cdot 4\pi r^2 = \frac{1}{\varepsilon_0} \rho_e \frac{4}{3} \pi R^3
-> $$
->
-> $$
-> E = \frac{\rho_e R^3}{3\varepsilon_0 r^2}
-> $$
-
-**Question2**：无限长带电直线
-
-![pVqJ98U.png](https://s21.ax1x.com/2025/10/15/pVqJ98U.png)
-
-> 设直线的线电荷密度为  $\lambda_e$ ，我们可以取如图所示的闭合柱面为 Gauss 面，由于此时电场沿直线辐向分布，故柱面的上下底面应没有场线通过
->
->
-> $$
-> \iint_{\partial V}S \vec{E} \cdot d\vec{S} = E \cdot 2\pi r \Delta l = \frac{1}{\varepsilon_0} \lambda_e \Delta l
-> $$
->
->
-> $$
-> E = \frac{\lambda_e}{2\pi \varepsilon_0 r}
-> $$
-
-**Question3**：无限大带电平面
-
-![pVqJC2F.png](https://s21.ax1x.com/2025/10/15/pVqJC2F.png)
-
-> 由于平面两侧的电场是镜像对称的，我们可选择一个贯穿平面的柱面为 Gauss 面。由于场线应垂直于平面，因此柱面的侧面应没有场线通过。
->
->
-> $$
-> \iint_S \vec{E} \cdot d\vec{S} = 2E \Delta S = \frac{1}{\varepsilon_0} \sigma_e \Delta S
-> $$
->
->
-> $$
-> E = \frac{\sigma_e}{2\varepsilon_0}
-> $$
-
-**Question4**：平行放置的无限大带电平面
-
-![pVqJPv4.png](https://s21.ax1x.com/2025/10/15/pVqJPv4.png)
-
-> 当场源是几个具有对称性的带电体时，可用高斯定理分别求各带电体单独存在时的场强，再作矢量叠加。
->
-> 从左到右两平面分出三个区域，分别是 A，B，C
-> $$
-> E_1 = \frac{\sigma_1}{2\varepsilon_0} \quad E_2 = \frac{\sigma_2}{2\varepsilon_0}
-> $$
->
->
-> $$
-> \vec{E}_A = -\frac{\sigma_1 + \sigma_2}{2\varepsilon_0} \vec{i} \quad \vec{E}_B = \frac{\sigma_1 - \sigma_2}{2\varepsilon_0} \vec{i}
-> $$
->
->
-> $$
-> \vec{E}_C = \frac{\sigma_1 + \sigma_2}{2\varepsilon_0} \vec{i}
-> $$
->
-> 当  $\sigma_1 = -\sigma_2 = \sigma$ ， $E_A = E_C = 0$ 
->
->
-> $$
-> \boxed{E_B = \frac{\sigma}{\varepsilon_0}}
-> $$
-> ${\sigma}/{\varepsilon_0}$ 也为带电平板电容器间的场强
-
-### · 环路定理
-
-Gauss 定理给出了静电场通量的性质，那么这部分要介绍的环路定理将给出静电场环量的性质。
-
-对于场中任意闭合回路 $L$，静电场的环量恒等于零，即
+以及
 
 $$
-\oint_L \vec{E} \cdot d\vec{l} = 0
+\epsilon_0 \mu_0 \frac{\partial^2 \mathbf{B}}{\partial t^2} - \frac{\partial^2 \mathbf{B}}{\partial x^2} - \frac{\partial^2 \mathbf{B}}{\partial y^2} - \frac{\partial^2 \mathbf{B}}{\partial z^2} = \frac{1}{c^2} \frac{\partial^2 \mathbf{B}}{\partial t^2} - \frac{\partial^2 \mathbf{B}}{\partial x^2} - \partial^2 \mathbf{B} - \partial^2 \mathbf{B} = 0.
 $$
+这里， $\mathbf{E}(x, y, z, t)$  和  $\mathbf{B}(x, y, z, t)$  为电磁波的电场和磁场强度。常数
 
-结合数学中的 Stokes 公式：
 $$
-\oint_L \vec{E} \cdot d\vec{l} = \iint_\Sigma (\nabla \times \vec{E}) \cdot d\vec{S}
+c = \frac{1}{\sqrt{\epsilon_0 \mu_0}} = 299792458 \text{m/s}
 $$
-我们可以得到
-$$
-\nabla \times \vec{E} = 0
-$$
+具有速度的量纲，被定义作电磁波在真空中的传播速度。注意到它等于当时实验上已知的光在真空中的传播速度，Maxwell 提出了光是电磁波的命题。
 
-也就是说，**静电场是一个无旋场**。
+由于在推导 Maxwell 方程时，并没有特别指定是在哪一个参照系中进行计算的，一个直接的推论是，光速是一个不依赖于参照系的普适常数。换句话说，在两个彼此做匀速直线运动的惯性参照系中，电磁波是以相同的速度传播的。这是与 Galileo 变换公式的结论相矛盾的。有意思的是，光速是普适的这一结论后来被实验物理学家通过实验加以了证实。这就使得人们要么放弃相对性原理，要么放弃 Galileo 变换公式。爱因斯坦选择了后者。
 
-> 简要证明：以点电荷的电场为例，设有一个点电荷 $q_0$ 沿路径 $L$ 从 $P$ 移动到 $Q$ 
+在 1905 年 9 月发表的一篇文章中，爱因斯坦首先提出了狭义相对论的两个基本假设。
+
+> (1) 相对性原理：物理定律在所有的惯性参照系都是等价的。因此，有关运动方程应该具有相同的形式。
 >
-> ![](https://pic1.imgdb.cn/item/68f62deb3203f7be00831982.png)
+> (2) 光速不变原理：在所有的参照系中，光在真空中传播的速率皆为  $c$ 。而任何粒子在惯性参照系中的运动速率皆小于或等于光速。
+
+现在，让我们看一看从这两个假设出发，我们可以导出什么结论。
+
+### · 洛伦兹变换
+
+我们考虑两个惯性参照系  $S$  和  $S'$ 。假设  $S'$  系相对于  $S$  系做匀速直线运动，速度为  $V$ 。设在  $t = t' = 0$  时刻，两个参照系的原点  $O$  和  $O'$  重合，并从该处发射一个光脉冲信号。因此，在时刻  $t$  时，这个脉冲在  $S$  系中走过的距离为
+
+$$
+L = \sqrt{x^2 + y^2 + z^2} = ct.
+$$
+同理，它在  $S'$  系中走过的距离为
+
+$$
+L' = \sqrt{x'^2 + y'^2 + z'^2} = c't'.
+$$
+根据光速不变假设，我们有  $c = c'$ 。因此，联合上面两式，我们得到
+
+$$
+x^2 + y^2 + z^2 - c^2 t^2 = 0 = x'^2 + y'^2 + z'^2 - c^2 t'^2.
+$$
+对于这个恒等式，我们可以给出如下的几何解释。引入一个假想的四维空间。令沿着它的四个互相垂直方向的单位向量为  $\mathbf{e}_x$ 、 $\mathbf{e}_y$ 、 $\mathbf{e}_z$  和  $\mathbf{e}_t$ ，并且，我们将这个四维空间中任何一点的位置向量写作
+
+$$
+\mathbf{R} = x \mathbf{e}_x + y \mathbf{e}_y + z \mathbf{e}_z + (ict) \mathbf{e}_t.
+$$
+注意，这里第四个分量（时间分量）为一个虚数。这是与通常的三维向量不同的。仿照通常三维空间中的解析几何学，我们定义四维向量  $\mathbf{R}$  的长度的平方为
+
+$$
+\mathbf{R} \cdot \mathbf{R} = x^2 + y^2 + z^2 + (ict)^2 = x^2 + y^2 + z^2 - c^2 t^2.
+$$
+这一长度被称为四维长度。我们现在可以说，光脉冲信号在物理空间中的运动可以用四维空间中的一条直线来代表。这条直线上的每一点到原点的四维距离都是零。
+
+相应地，我们可以将两个不同参照系  $S$  和  $S'$  中光脉冲的坐标值  $(x, y, z, ict)$  和  $(x', y', z', ict')$  解释作四维空间中同一点  $\mathbf{R}$  相对两组不同坐标轴  $(\mathbf{e}_x, \mathbf{e}_y, \mathbf{e}_z, \mathbf{e}_t)$  以及  $(\mathbf{e}_x', \mathbf{e}_y', \mathbf{e}_z', \mathbf{e}_t')$  的分量。
+
+这是由于方程告诉我们，在四维空间中，这两组坐标给出的光脉冲点到原点的距离是相同的。而从解析几何中我们得知，它们所对应的坐标系是可以通过空间的旋转联系起来的。这就使得我们有可能找到  $(x, y, z, ict)$  与  $(x', y', z', ict')$  的关系。
+
+为了简单起见，我们假设  $S$  系相对于  $S'$  系的运动速度是沿  $\mathbf{e}_x$  方向的。此时，我们可以取  $y = y'$  和  $z = z'$ 。也就是说，我们假设，四维空间的旋转是发生在  $x - ict$  平面内的。因此，四维空间中任一点  $P$  的坐标变换可以写作
+
+$$
+x' = x \cos \theta + (ict) \sin \theta, \quad ict' = - x \sin \theta + (ict) \cos \theta, \quad y = y', \quad z = z'.
+$$
+这里， $\theta$  是两套坐标系  $(\mathbf{e}_x, \mathbf{e}_y, \mathbf{e}_z, \mathbf{e}_t$ )  和  $(\mathbf{e}_x', \mathbf{e}_y', \mathbf{e}_z', \mathbf{e}_t'$ )  中向量  $\mathbf{e}_x$  及  $\mathbf{e}_x'$  之间的夹角。
+
+不难验证，在这种坐标变换下， $P$  点的四维长度不变。事实上，我们有
+
+$$
+\begin{align*}
+x'^2 + y'^2 + z'^2 - (ict')^2 &= x^2 + y^2 + z^2 - (ict)^2 \\\\
+&= [x \cos \theta + (ict) \sin \theta]^2 + y^2 + z^2 + [-x \sin \theta + (ict) \cos \theta]^2 \\\\
+&= x^2 \cos^2 \theta + 2x(ict) \cos \theta \sin \theta + (ict)^2 \sin^2 \theta + y^2 + z^2 \\\\
+&+ x^2 \sin^2 \theta - 2x(ict) \cos \theta \sin \theta + (ict)^2 \cos^2 \theta \\\\
+&= x^2 + y^2 + z^2 + (ict)^2 = x^2 + y^2 + z^2 - c^2 t^2. 
+\end{align*}
+$$
+因此，光脉冲的运动方程在此变换下自动被满足。
+
+现在，我们来看如何通过已知条件定出  $\theta$  的值。为此，我们考虑  $S'$  参照系原点  $O'$  在  $S$  系中的运动。首先， $O'$  点在  $S'$  系的坐标为  $x' = y' = z' = 0$ 。而在  $S$  参照系中，在时刻  $t$  时，其空间坐标为
+
+$$
+x = Vt, \quad y = 0, \quad z = 0.
+$$
+因此，对于  $O'$  点而言，我们有如下的坐标变换关系
+
+$$
+x' = 0 = x \cos \theta + (ict) \sin \theta = Vt \cos \theta + (ict) \sin \theta,
+$$
+
+$$
+ict' = -x \sin \theta + (ict) \cos \theta = -Vt \sin \theta + (ict) \cos \theta.
+$$
+
+从第一个方程，我们解得
+
+$$
+-\frac{x}{ict} = -\frac{V}{ic} \frac{\sin \theta}{\cos \theta} = \tan \theta.
+$$
+进而，我们有
+
+$$
+\cos \theta = \frac{1}{\sec \theta} = \frac{1}{\sqrt{1 + \tan^2 \theta}} = \frac{1}{\sqrt{1 - \frac{V^2}{c^2}}},
+$$
+将这些函数代入方程中，我们得到
+
+$$
+x' = x \cos \theta + (ict) \sin \theta = \frac{x}{\sqrt{1 - \frac{V^2}{c^2}}} + \frac{ict \left(\frac{V}{ic}\right)}{\sqrt{1 - \frac{V^2}{c^2}}} = \frac{x - Vt}{\sqrt{1 - \frac{V^2}{c^2}}}
+$$
+
+$$
+ict' = -x \sin \theta + (ict) \cos \theta = \frac{-x \left(\frac{V}{ic}\right)}{\sqrt{1 - \frac{V^2}{c^2}}} + ict \frac{1}{\sqrt{1 - \frac{V^2}{c^2}}}.
+$$
+
+将第二个方程的两边同时除以  $ic$  后，我们得到
+
+$$
+t' = \frac{t - x \frac{V}{c^2}}{\sqrt{1 - \frac{V^2}{c^2}}}.
+$$
+这些变换公式和  $y' = y, z' = z$  一起，被称为 Lorentz 变换公式。从这些公式中，我们可以看到，若要求光速  $c$  在各个惯性参照系中不变的话，则时间在不同的参照系中是不同的。这一点是与 Galileo 变换非常不一样的。
+
+上面，我们利用光速在各个参照系中不变的假设，导出了 Lorentz 变换公式。对于任何一个四维空间中的点的坐标  $(x, y, z, ict)$  而言，除了满足光信号的运动方程
+
+$$
+\mathbf{R} \cdot \mathbf{R} = x^2 + y^2 + z^2 - c^2 t^2 = 0
+$$
+之外，还可能满足
+
+$$
+\mathbf{R} \cdot \mathbf{R} = x^2 + y^2 + z^2 - c^2 t^2 > 0,
+$$
+或是
+
+$$
+\mathbf{R} \cdot \mathbf{R} = x^2 + y^2 + z^2 - c^2 t^2 < 0.
+$$
+前者表示，质点在时刻  $t = 0$  时从原点出发，在  $t$  时刻到达坐标为  $(x, y, z)$  的三维空间位置。这要求它的速度为
+
+$$
+v = \sqrt{\frac{x^2 + y^2 + z^2}{t^2}} > c.
+$$
+但是按照 Einstein 狭义相对论的第二条假设，这在物理上是不可能的。这样的点被称为类空点。相反，第二种可能性描写在时刻  $t = 2$  时从原点出发，以小于光速的速率  $v$  在
+
+$t$  时刻到达坐标为  $(x, y, z)$  的三维空间位置的粒子的运动。这在物理上是可以实现的。这类点被称为类时点。而类空点集合与类时点集合是由满足方程的全体点的集合（代表光信号的全部可能轨迹，被称为光锥面）隔开。
+
+在讨论 Lorentz 变换所导致的一些结果之前，我们要强调一下，四维时空中任何一点的位置向量  $\mathbf{R}$  的模
+
+$$
+\mathbf{R} \cdot \mathbf{R} = x^2 + y^2 + z^2 - c^2 t^2
+$$
+在 Lorentz 变换下都是不变的。今后我们会看到，在适当引入的动量 - 能量向量以及所谓四维力向量的模也具有这样的性质。它们被统称为四维向量（或四维矢量）。今后，我们会看到，四维矢量的概念是非常有用的。
+
+现在，让我们回过头来看一下 Lorentz 变换带来的结论。首先，我们从公式
+
+$$
+t' = \frac{t - x \frac{V}{c^2}}{\sqrt{1 - \frac{V^2}{c^2}}}
+$$
+出发。将此式的两边对于  $t$  求导后，我们有
+
+$$
+\frac{dt'}{dt} = \frac{1 - \frac{xV}{c^2}}{\sqrt{1 - \frac{V^2}{c^2}}} = \frac{1 - \frac{v_x V}{c^2}}{\sqrt{1 - \frac{V^2}{c^2}}}.
+$$
+由此，我们可以导出同一个运动的质点在  $S$  系和  $S'$  系中速度之间的变换关系。例如，我们有
+
+$$
+v'_x = \frac{dx'}{dt'} = \frac{dx'}{dt} \frac{dt}{dt'} = \frac{v_x - V}{\sqrt{1 - \frac{v_x V}{c^2}}} \frac{\sqrt{1 - \frac{V^2}{c^2}}} = \frac{v_x - V}{1 - \frac{v_x V}{c^2}}.
+$$
+同理，我们可得
+
+$$
+v'_y = \frac{dy'}{dt'} = v_y \sqrt{\frac{1 - \frac{V^2}{c^2}}{1 - \frac{v_x V}{c^2}}}, \quad v'_z = \frac{dz'}{dt'} = v_z \sqrt{\frac{1 - \frac{V^2}{c^2}}{1 - \frac{v_x V}{c^2}}}.
+$$
+从表面上看，这些变换公式与我们已经熟知的 Galileo 变换公式
+
+$$
+v'_x = v_x - V; \quad v'_y = v_y, \quad v'_z = v_z
+$$
+非常不同。但是，在  $\frac{V}{c} \to 0$  的极限下，可以很容易地看到，Lorentz 速度变换公式退化到 Galileo 速度变换公式。
+
+作为一个特例，让我们考虑光在两个参照系中的运动。设在  $S$  系中，光沿  $x$  轴运动。因此，我们有  $v_x = c, v_y = 0$  及  $v_z = 0$ 。将之代入 Lorentz 速度变换公式后，我们立刻可得
+
+$$
+v'_y = v'_z = 0
+$$
+以及
+
+$$
+v'_x = \frac{c - V}{1 - \frac{cV}{c^2}} = \frac{c - V}{1 - \frac{V}{c}} = \frac{c - V}{\frac{c - V}{c}} = c.
+$$
+也就是说，光在  $S'$  系中的速度也是  $c$ 。这就使得 Einstein 的光速不变假设成为自洽。
+
+Lorentz 变换的另一个直接推论是所谓时间延缓效应。假设我们有一个在  $S'$  系中静止的时钟同该系一起相对于  $S$  系运动，并且其在  $S'$  参照系中的坐标为  $x' = x'_0$ 。则时钟在两个参照系的读数满足变换关系
+
+$$
+t = \frac{t' + \frac{V x'_0}{c^2}}{\sqrt{1 - \frac{V^2}{c^2}}}.
+$$
+特别是相对于  $S'$  系的时间间隔  $\Delta t' = t'_2 - t'_1$  对应于  $S$  系中的时间间隔
+
+$$
+\Delta t = t_2 - t_1 = \frac{t'_2 + \frac{V x'_0}{c^2}}{\sqrt{1 - \frac{V^2}{c^2}}} - \frac{t'_1 + \frac{V x'_0}{c^2}}{\sqrt{1 - \frac{V^2}{c^2}}} = \frac{\Delta t'}{\sqrt{1 - \frac{V^2}{c^2}}}.
+$$
+由于
+
+$$
+\frac{1}{\sqrt{1 - \frac{V^2}{c^2}}} > 1,
+$$
+故我们有
+
+$$
+\Delta t > \Delta t'.
+$$
+也就是说，在时钟静止的参照系中，其读数相对于其它惯性系而言总是最小的。这一效应称为时间延缓。它是可以通过实验来检验的。
+
+## Part 2 相对论动力学
+
+### · 质能方程
+
+根据 Einstein 的狭义相对性原理，所有的物理定律或运动方程在等价的惯性系中都应该具有相同的表达形式。另外一方面，我们现在又知道，不同惯性系中的空间和时间坐标是通过 Lorentz 变换联系起来的。
+
+而这一变换不改变相应的四维向量的点乘。因此，一个很自然的想法是，所有的运动方程都应该写成两个四维向量的内积的形式。
+
+为了实现这一想法，首先我们看如何改写动量的定义。在三维空间中，一个质点的动量被定义为
+
+$$
+\mathbf{p} = m_{0} \mathbf{v} = m_{0} \frac{d\mathbf{r}}{dt}.
+$$
+这里， $m_{0}$  应被理解为质点的固有质量，即它在与其一起运动的参照系中的静止质量。由于时间间隔  $dt$  不是一个 Lorentz 变换下的不变量，我们必须找一个具有时间量纲的 Lorentz 变换下的不变量来替换它，以构成一个 Lorentz 协变的四维动量（既其内积在 Lorentz 变换下不变）。实际上，我们可以去如下的量来代替  $\Delta t$ 。
+
+$$
+\Delta \tau = \frac{1}{c} \Delta s = \frac{1}{c} \sqrt{c^2(\Delta t)^2 - (\Delta x)^2 - (\Delta y)^2 - (\Delta z)^2}
+$$
+
+$$
+= \frac{1}{c} \sqrt{c^2(t_2 - t_1)^2 - (x_2 - x_1)^2 - (y_2 - y_1)^2 - (z_2 - z_1)^2}.
+$$
+
+显然，这是一个在 Lorentz 变换下不变的量。其次，在空间同一点处  $(x_1 = x_2, y_1 = y_2, z_1 = z_2)$ ，我们有
+
+$$
+\Delta \tau = \sqrt{(\Delta t)^2} = \Delta t.
+$$
+因此，它的确是具有时间量纲的量，被称为质点的固有时间。
+
+现在，我们可以重新引入动量的空间分量为
+
+$$
+p_{x} = m_{0} \frac{dx}{d\tau} = m_{0} c \frac{dx}{ds} = \frac{m_{0} c \frac{dx}{dt}}{\sqrt{c^2(dt)^2 - (dx)^2 - (dy)^2 - (dz)^2}}
+$$
+
+$$
+= \frac{m_{0} c \frac{dx}{dt}}{\sqrt{c^2 - v^2}} = \frac{m_{0} v_{x}}{\sqrt{1 - \frac{v^2}{c^2}}},
+$$
+
+以及
+
+$$
+p_{y} = \frac{m_{0} v_{y}}{\sqrt{1 - \frac{v^2}{c^2}}}, \quad p_{z} = \frac{m_{0} v_{z}}{\sqrt{1 - \frac{v^2}{c^2}}}.
+$$
+为了构造四维动量的第四个分量，我们仿照上面的定义。令  $x_1 = x, x_2 = y, x_3 = z$  和  $x_4 = ict$ ，则我们有
+
+$$
+p_{4} = m_{0} \frac{dx_{4}}{d\tau} = m_{0} c \frac{d(ict)}{\sqrt{c^2 dt^2 - dr^2}} = m_{0} \frac{ic \frac{dt}{dt}}{\sqrt{1 - \frac{v^2}{c^2}}} = i \frac{m_{0} c}{\sqrt{1 - \frac{v^2}{c^2}}} = i \frac{E}{c}.
+$$
+这里，物理量
+
+$$
+E = \frac{m_{0} c^2}{\sqrt{1 - \frac{v^2}{c^2}}}
+$$
+具有能量量纲，称为质点的能量。
+
+上面的动量表达式看起来有点怪异，但实际上在低速极限  $\frac{v}{c} \sim 0$  下，我们有
+
+$$
+p_{x} \approx m_{0} v_{x}, \quad p_{y} \approx m_{0} v_{y}, \quad p_{z} \approx m_{0} v_{z},
+$$
+即牛顿力学中的表达式。更为重要的是，我们有
+
+$$
+p_1^2 + p_2^2 + p_3^2 + p_4^2 = \frac{m_0^2 c^2}{1 - \frac{v^2}{c^2}} - \frac{m_0^2 c^2}{1 - \frac{v^2}{c^2}} = m_0^2 \frac{v^2 - c^2}{1 - \frac{v^2}{c^2}} = m_0^2 c^2 \frac{v^2 - c^2}{c^2 - v^2} = -m_0^2 c^2.
+$$
+由于光速不变假设，这显然是一个在 Lorentz 变换下不变的量。因此，我们找到了四维协变动量的正确表达式。
+
+从四维协变动量的表达式出发，我们可以得到如下的结论。
+
+> (1) 如果坚持使用牛顿力学中的动量表达式
 >
-> 电场强度为：
 > $$
-> \vec{E} = \frac{q}{4\pi\varepsilon_0 r^3} \vec{r}
+> p_x = mv_x, \quad p_y = mv_y, \quad p_z = mv_z,
 > $$
-> 电场力做功为：
-> $$
-> W = \frac{q q_0}{4\pi\varepsilon_0} \int_{\vec{r}_P}^{\vec{r}_Q} \frac{1}{r^3} \vec{r} \cdot d\vec{l}
-> $$
+> 则质点的质量  $m$  应该被写作
 >
-> 由图可知：
 > $$
-> \vec{r} \cdot d\vec{l} = r \cos\theta \, dl = r \, dr
+> m = \frac{m_0}{\sqrt{1 - \frac{v^2}{c^2}}} > m_0.
 > $$
+> 换句话说，一旦质点运动起来，其表观质量  $m$  应该大于其静止质量  $m_0$ 。
 >
-> 因此：
-> $$
-> W = \frac{q q_0}{4\pi\varepsilon_0} \int_{r_P}^{r_Q} \frac{1}{r^2} dr = \frac{q q_0}{4\pi\varepsilon_0} \left( \frac{1}{r_P} - \frac{1}{r_Q} \right)
-> $$
+> (2) 我们看到，质点的能量  $E$  是以形式
 >
-> **静电场做功与路径无关，只与始末位置有关！**
+> $$
+> E = \frac{m_0 c^2}{\sqrt{1 - \frac{v^2}{c^2}}}
+> $$
+> 形式出现的。这与我们过去所熟知的质点能量的表达式非常不一样。在低速运动的极限下，前者是否可以退化为后者呢？
 >
-> 因此自然有沿闭合环路做功为零，环路定理证毕。
+> 实际上，当  $v \ll c$  时，我们可以利用 Taylor 展开的表达式
+>
+> $$
+> \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \approx 1 + \frac{1}{2} \frac{v^2}{c^2} + O\left(\frac{v^4}{c^4}\right)
+> $$
+> 近似得到
+>
+> $$
+> E = \frac{m_0 c^2}{\sqrt{1 - \frac{v^2}{c^2}}} \approx m_0 c^2 \left(1 + \frac{1}{2} \frac{v^2}{c^2}\right) = m_0 c^2 + \frac{1}{2} m_0 v^2.
+> $$
+> 公式的第二项是我们熟知的牛顿力学中质点动能的表达式。而第一项则是牛顿力学中未曾出现过的，称为质点的静止能。因此，在相对论力学中，能量守恒应该被表述为
+>
+> $$
+> E = \sum_{i=1}^{N} \frac{m_i c^2}{\sqrt{1 - \frac{v_i^2}{c^2}}} + \text{Q} = \text{Const}.
+> $$
+> 在低速度近似下，我们可以将其近似地写作
+>
+> $$
+> E = \sum_{i=1}^{N} m_i c^2 + \frac{1}{2} \sum_{i=1}^{N} m_i v_i^2 + \text{Q} = \text{Const}.
+> $$
+> 这一公式的一个直接推论是，若在某种物理过程前后，体系中的粒子的总静止能减少了，则粒子的总动能或内能必然增加。这是今天核发电以及核武器的基本原理。
 
-### · 电势
+### · 动量关系
 
-电场力做功与路径无关，只取决于始末位置，力学上将这样的力称为**保守力**，保守力必然对应一种势能，且做功等于势能的减少。因此，我们引入**电势能**
+当一个质子与一个中子结合成一个氘核时，质量亏损为
+$$
+\begin{align*}
+\Delta M_0 &= M_{\text{proton}} + M_{\text{Neutron}} - M_{\text{tritium;}} \\
+&= (1.6726231 + 1.6749286 - 3.3435860) \times 10^{-27}\ \text{kg} \\
+&= 3.9657 \times 10^{-30}\ \text{kg}. 
+\end{align*}
+$$
+按照质-能关系，它相当于
 
 $$
-q_0 \int_P^Q \vec{E} \cdot d\vec{l} = W_P - W_Q
+\Delta E = \Delta M_0 c^2 = 3.9657 \times 10^{-27} \text{g} \times (3 \times 10^{10})^2 = 3.9657 \times 9 \times 10^{-7} \text{erg}
 $$
-
-一般选取无穷远为势能零点，则试探电荷 $q_0$ 在 $P$ 点的电势能为
-
-$$
-W_P = q_0 \int_P^{\infty} \vec{E} \cdot d\vec{l}
-$$
-
-电势能 $W_P$ 与 $q_0$ 的比值称为**电势**，它由电场本身的性质决定：
+的能量被释放出来。换算成公斤 - 米 - 秒制，它大致等于  $3.9657 \times 10^{-13}$  焦耳。因此，形成一克分子氘所释放出来的能量大约为
 
 $$
-U_P = \frac{W_P}{q_0} = \int_P^{\infty} \vec{E} \cdot d\vec{l}
+E = 3.9657 \times 10^{-30} \times 6 \times 10^{23} \approx 24 \times 10^{10} \text{J}.
 $$
-定义了电势后，则两点间的电势差为
+考虑到，一颗爆竹所释放的能量大约为  $10^4$  焦耳。因此，形成 3 克氘过程中释放的能量大约为  $10^7$  颗爆竹的能量。这是一个相当巨大的数字。
 
-$$
-U_{PQ} = U_P - U_Q
-$$
-
-将试探电荷 $q_0$ 从 $P$ 移至 $Q$，电场力做功为
+从公式
 
 $$
-W_{PQ} = q_0 U_{PQ}
+E = \frac{m_0 c^2}{\sqrt{1 - \frac{v^2}{c^2}}}, \quad \mathbf{p} = \frac{m_0 \mathbf{v}}{\sqrt{1 - \frac{v^2}{c^2}}}
 $$
-
-点电荷电势公式：由电势的定义得
-
-$$
-U_P = \frac{q}{4\pi\varepsilon_0} \int_{\vec{r}_P}^{\infty} \frac{1}{r^3} \vec{r} \cdot d\vec{l} = \frac{q}{4\pi\varepsilon_0} \int_{r_P}^{\infty} \frac{1}{r^2} dr = \frac{q}{4\pi\varepsilon_0 r_P}
-$$
-
-如果要计算带电体系的电势，可以利用我们前面介绍的叠加原理进行积分，只不过此处是标量场的积分，相对而言要容易些。
-
-场强和电势的微分关系：静电场是**有势场**，其势函数即为电势，由场论相关知识，我们可以写出
+出发，我们可以得到如下的质点动量与速度之间的关系
 
 $$
-\vec{E} = -\nabla U
+\mathbf{v} = \frac{\mathbf{p} c^2}{E}.
 $$
+与恒等式
 
-也就是说**场强是电势的负梯度**，由梯度的性质，我们可以推出：
+$$
+p^2 - \frac{E^2}{c^2} = -m_0^2 c^2,
+$$
+或是
 
-- 电场强度指向电势降低最快的方向  
-- 电场线必然与等势面垂直
+$$
+E^2 = p^2 c^2 + m_0^2 c^4
+$$
+一起构成了相对论性质点动力学的基础。由此得到的一个直接推论是，自然界可能存在质量为零 ( $m_0 = 0$ ) 的粒子。此时，上面的公式化为
 
-顺便提一句，电场线（等势面）的疏密程度能够反映场强的大小。电场线（等势面）越密集，场强越大；越稀疏，场强越小。
+$$
+E^2 = p^2 c^2,
+$$
+或是
 
-## Part 2 导体和电介质
+$$
+E = pc.
+$$
+因此，我们有
 
+$$
+\mathbf{v} = \frac{\mathbf{p} c^2}{E} = \frac{\mathbf{p} c^2}{pc} = c \frac{\mathbf{p}}{p} = c \mathbf{e}_p.
+$$
+也就是说，这种粒子的速度与光速相同。另一方面，若一个质点的静止质量不为零，则其速率满足方程
+
+$$
+|\mathbf{v}| = \frac{|\mathbf{p}| c^2}{E} = \frac{pc^2}{\sqrt{p^2 c^2 + m_0^2 c^4}} < \frac{pc^2}{\sqrt{p^2 c^2}} = \frac{pc^2}{pc} = c.
+$$
+也就是说，其速率永远小于光速。
+
+今天，我们知道，静止质量为零的粒子有光子、中微子以及引力子。
+
+由于  $(p_x, p_y, p_z, i \frac{E}{c})$  与  $(x, y, z, ict)$  一样构成了一个四维动量向量，故在 Lorentz 变换下，它们具有相同的变换规律。因此，我们可以立刻写出
+
+$$
+p'_x = \frac{p_x - \frac{V}{c} E}{\sqrt{1 - \frac{V^2}{c^2}}} = \frac{p_x - \frac{V}{c} E}{\sqrt{1 - \frac{V^2}{c^2}}}, \quad p'_y = p_y, \quad p'_z = p_z,
+$$
+以及
+
+$$
+E' = \frac{E - V p_x}{\sqrt{1 - \frac{V^2}{c^2}}}.
+$$
+这里， $(p_x, p_y, p_z, i \frac{E}{c})$  和  $(p'_x, p'_y, p'_z, i \frac{E'}{c})$  分别同一个质点的四维动量向量在  $S$  系和  $S'$  系中的分量。而  $S'$  系相对  $S$  系以匀速  $V$  沿  $x$ -轴的方向运动。
+
+现在，我们来看一看，在狭义相对论中，牛顿运动方程应该做怎样的修改。牛顿第二定律告诉我们，质点的运动满足方程
+
+$$
+\frac{d\mathbf{p}}{dt} = \mathbf{f}.
+$$
+这一方程显然在 Lorentz 变换下不是协变的。为了将它改写成协变的形式，我们可以引入所谓四维力  $(\tilde{f}_1, \tilde{f}_2, \tilde{f}_3, \tilde{f}_4)$ 。
+
+在一个给定的惯性参照系中，我们要求  $\tilde{f}_1, \tilde{f}_2$  和  $\tilde{f}_3$  与作用在质点上的外力在与该参照系相连接的坐标系中的投影  $f_x, f_y$  和  $f_z$  分别成正比，而  $\tilde{f}_4$  则由这一四维力的长度在 Lorentz 变换下不变这一条件来决定。相应地，我们应将牛顿方程改写为
+$$
+\frac{dp_1}{d\tau} = \frac{dp_1}{\frac{1}{c} ds} = \tilde{f}_1
+$$
+的形式。这样以来，质点的运动方程就成为 Lorentz 变换下协变的了。具体写出来，我们有
+
+$$
+\tilde{f}_x = \frac{dp_x}{\frac{1}{c} ds} = \frac{cdp_x}{\sqrt{c^2 dt^2 - (dx)^2 - (dy)^2 - (dz)^2}} = \frac{dp_x}{dt} \frac{dt}{\sqrt{1 - \frac{v^2}{c^2}}} = \frac{f_x}{\sqrt{1 - \frac{v^2}{c^2}}}.
+$$
+在推导的最后一步，我们利用了在给定惯性系下的牛顿方程
+
+$$
+\frac{dp_x}{dt} = f_x.
+$$
+同理，我们有
+
+$$
+\tilde{f}_y = \frac{f_y}{\sqrt{1 - \frac{v^2}{c^2}}}, \quad \tilde{f}_z = \frac{f_z}{\sqrt{1 - \frac{v^2}{c^2}}}.
+$$
+现在，我们来决定四维力的第四个分量  $\tilde{f}_4$ 。按照定义，我们
+
+$$
+\tilde{f}_4 = \frac{dp_4}{\frac{1}{c} ds} = \frac{\frac{1}{c} \frac{dE}{dt}}{\sqrt{1 - \frac{v^2}{c^2}}} = i \frac{\dot{E}}{c} \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}.
+$$
+为了检验这样定义的四维力在物理上是否有意义，让我们考察它和四维动量的内积。按照定义，我们有
+
+$$
+\sum_{i=1}^{4} p_i \tilde{f}_i = \sum_{i=1}^{4} \frac{dp_i}{\frac{1}{c} ds} = \frac{m_0 f_x v_x + m_0 f_y v_y + m_0 f_z v_z - m_0 c^2 \frac{\dot{E}}{c}}{\left(\sqrt{1 - \frac{v^2}{c^2}}\right)^2} = \frac{m_0 (\mathbf{f} \cdot \mathbf{v} - m_0 \dot{E})}{1 - \frac{v^2}{c^2}}.
+$$
+另一方面，我们可以很容易地验证，这一公式的左边应该恒等于零。实际上，我们有
+
+$$
+\sum_{i=1}^{4} p_i \frac{dp_i}{\frac{1}{c} ds} = \sum_{i=1}^{4} \frac{1}{2} \frac{dp_i^2}{\frac{1}{c} ds} = \sum_{i=1}^{4} \frac{1}{2} \frac{d}{\frac{1}{c} ds} (-m_0^2 c^2) \equiv 0.
+$$
+也就是说，
+$$
+ \sum_{i=1}^{4} p_i \tilde{f}_i = \sum_{i=1}^{4} \frac{dp_i}{\frac{1}{c} ds} = \frac{m_0 f_x v_x + m_0 f_y v_y + m_0 f_z v_z - m_0 c^2 \frac{\dot{E}}{c}}{\left(\sqrt{1 - \frac{v^2}{c^2}}\right)^2} = \frac{m_0 (\mathbf{f} \cdot \mathbf{v} - m_0 \dot{E})}{1 - \frac{v^2}{c^2}}. 
+$$
+右边表达式的分子应该为零。即我们有
+$$
+m_0 (\mathbf{f} \cdot \mathbf{v} - m_0 \dot{E}) = 0,
+$$
+或是
+
+$$
+\mathbf{f} \cdot \mathbf{v} = \frac{dE}{dt}.
+$$
+也就是说，外力所做之功的功率，等于质点能量随时间的改变率。这与我们以前的结论是完全一致的。

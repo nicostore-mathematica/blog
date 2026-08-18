@@ -104,7 +104,7 @@ $$
 \tag{11}
 $$
 
-成立。下面，为了确定起见，我们以方程 (9) 为例进行讨论。
+成立。下面，为了确定起见，我们以方程 $\displaystyle\frac{\partial^2 \mathbf{E}(\mathbf{r},t)}{\partial t^2} - \frac{1}{\mu\epsilon} \nabla^2 \mathbf{E}(\mathbf{r},t) = 0$ 进行讨论。
 
 ---
 
