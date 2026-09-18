@@ -26,7 +26,16 @@ export default defineUserConfig({
     ['link', { rel: 'icon', type: 'image/png', href: '/images/soda.jpg' }],
   ],
 
-  bundler: viteBundler(),
+  bundler: viteBundler({
+    viteOptions: {
+      build: {
+        // 大量包含公式的页面在压缩阶段会占用数 GB 内存。
+        // Pages/CDN 仍会压缩传输内容，无需在受限的 CI runner 中压缩产物。
+        minify: false,
+        reportCompressedSize: false,
+      },
+    },
+  }),
   shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
 
   theme: plumeTheme({

@@ -10,39 +10,31 @@ on:
 jobs:
   docs:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           # "最近更新时间" 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          # 选择要使用的 pnpm 版本
-          version: 10
-          # 使用 pnpm 安装依赖
-          run_install: true
-
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           # 选择要使用的 node 版本
           node-version: 22
-          # 缓存 pnpm 依赖
-          cache: pnpm
+          # 使用仓库中的 package-lock.json 缓存 npm 依赖
+          cache: npm
 
-      # 生成字数统计
-      # Generate word count
-      - name: Generate Word Count
-        run: node scripts/wordcount.cjs
+      - name: Install dependencies
+        run: npm ci
 
       # 运行构建脚本
       - name: Build VuePress site
         env:
-          NODE_OPTIONS: --max-old-space-size=500000
-        run: pnpm docs:build
+          # GitHub runner 约有 7 GB 内存，为 Vite 的原生内存保留余量
+          NODE_OPTIONS: --max-old-space-size=50000
+        run: npm run docs:build
 
       - name: Create CNAME file
         run: echo "soda-official.top" > docs/.vuepress/dist/CNAME

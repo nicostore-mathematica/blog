@@ -131,7 +131,7 @@
   "complex": {
     "index": 34,
     "complex-7": 10,
-    "complex-6": 10,
+    "complex-6": 2639,
     "complex-5": 5068,
     "complex-4": 4725,
     "complex-3": 3441,
@@ -178,6 +178,7 @@
     "pyvvujxp": 17,
     "resources": 485,
     "anniversary-1": 1541,
+    "article-7": 1957,
     "article-6": 1901,
     "article-5": 4210,
     "article-4": 3567,
@@ -217,7 +218,7 @@
   },
   "algebra\\algebra-13": 3,
   "algebra\\algebra-12": 3,
-  "total": 456290,
-  "lastUpdated": "2026-08-29T14:56:06.608Z",
-  "fileCount": 184
+  "total": 460876,
+  "lastUpdated": "2026-09-18T15:08:55.316Z",
+  "fileCount": 185
 }
