@@ -35,6 +35,7 @@
     "optics-2": 6,
     "optics-1": 6
   },
+  "Microcontroller\\lesson-1": 458,
   "mathematical-physics": {
     "index": 13,
     "chapter-0": 6
@@ -185,7 +186,7 @@
     "article-1": 1439
   },
   "mark": {
-    "mark-4": 735,
+    "mark-4": 736,
     "mark-3": 193,
     "mark-2": 2213,
     "mark-1": 900
@@ -216,7 +217,7 @@
   },
   "algebra\\algebra-13": 3,
   "algebra\\algebra-12": 3,
-  "total": 455831,
-  "lastUpdated": "2026-08-18T07:41:11.257Z",
-  "fileCount": 183
+  "total": 456290,
+  "lastUpdated": "2026-08-29T14:56:06.608Z",
+  "fileCount": 184
 }
