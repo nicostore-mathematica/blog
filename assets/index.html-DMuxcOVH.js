@@ -1,0 +1,7812 @@
+import { _ as _export_sfc, c as createElementBlock, e as createStaticVNode, a as createBaseVNode, b as createTextVNode, o as openBlock } from "./app-C973mz5j.js";
+const _sfc_main = {};
+function _sfc_render(_ctx, _cache) {
+  return openBlock(), createElementBlock("div", null, [..._cache[0] || (_cache[0] = [
+    createStaticVNode('<h2 id="part-3-连续映射" tabindex="-1"><a class="header-anchor" href="#part-3-连续映射"><span>Part 3 连续映射</span></a></h2><h3 id="·-基本概念" tabindex="-1"><a class="header-anchor" href="#·-基本概念"><span>· 基本概念</span></a></h3><p>回忆一下连续函数的定义：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi mathvariant="double-struck">R</mi><mo>→</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">f: \\mathbb{R} \\to \\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 处连续是指，任给 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\varepsilon &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">ε</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\delta &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub><mi mathvariant="normal">∣</mi><mo>&lt;</mo><mi>δ</mi></mrow><annotation encoding="application/x-tex">|x - x_0| &lt; \\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span></span></span></span> 时 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>−</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mi mathvariant="normal">∣</mi><mo>&lt;</mo><mi>ε</mi></mrow><annotation encoding="application/x-tex">|f(x) - f(x_0)| &lt; \\varepsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">ε</span></span></span></span>。用度量空间的语言可作如下推广：</p><p><strong>定义1</strong> (连续映射)</p><blockquote><p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f: X \\to Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 为度量空间 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><msub><mi>ρ</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(X,\\rho_1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">ρ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo separator="true">,</mo><msub><mi>ρ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(Y,\\rho_2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">ρ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 之间的映射，设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∈</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">x_0 \\in X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6891em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span>。</p><p>如果任给 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\varepsilon &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">ε</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\delta &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msubsup><mi>B</mi><mi>δ</mi><mi>X</mi></msubsup><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>⊂</mo><msubsup><mi>B</mi><mi>ε</mi><mi>Y</mi></msubsup><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(B_\\delta^X(x_0)) \\subset B_\\varepsilon^Y(f(x_0))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1244em;vertical-align:-0.2831em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.4169em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03785em;">δ</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">X</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2831em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">))</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0913em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.453em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">ε</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">Y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">))</span></span></span></span>，则称 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 处连续。</p><p>如果 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 处处连续，则称 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 为连续映射。当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>=</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">Y = \\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 时，连续映射也称为连续函数。</p><p>其中，记号 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>B</mi><mi>δ</mi><mi>X</mi></msubsup><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">B_\\delta^X(x_0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1244em;vertical-align:-0.2831em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.4169em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03785em;">δ</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">X</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2831em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 表示 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 中以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 为中心，以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span></span></span></span> 为半径的开球，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>B</mi><mi>ε</mi><mi>Y</mi></msubsup><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">B_\\varepsilon^Y(f(x_0))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0913em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.453em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">ε</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">Y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">))</span></span></span></span> 表示 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 中以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x_0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 为中心，以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi></mrow><annotation encoding="application/x-tex">\\varepsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">ε</span></span></span></span> 为半径的开球。</p></blockquote><p>/example/ 距离函数的连续性</p><blockquote><p>/proof/</p><p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span> 是度量空间 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mi>ρ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(X,\\rho)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ρ</span><span class="mclose">)</span></span></span></span> 中固定的一点，则函数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>ρ</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x) = \\rho(x,a)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">ρ</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">a</span><span class="mclose">)</span></span></span></span> 是连续的：设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∈</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">x_0 \\in X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6891em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span>，则任给 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\varepsilon &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">ε</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，取 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>=</mo><mi>ε</mi></mrow><annotation encoding="application/x-tex">\\delta = \\varepsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">ε</span></span></span></span>，当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><msub><mi>B</mi><mi>δ</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">x \\in B_\\delta(x_0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03785em;">δ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 时</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>−</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mi mathvariant="normal">∣</mi><mo>=</mo><mi mathvariant="normal">∣</mi><mi>ρ</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>a</mi><mo stretchy="false">)</mo><mo>−</mo><mi>ρ</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo separator="true">,</mo><mi>a</mi><mo stretchy="false">)</mo><mi mathvariant="normal">∣</mi><mo>⩽</mo><mi>ρ</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo>&lt;</mo><mi>δ</mi><mo>=</mo><mi>ε</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">|f(x) - f(x_0)| = |\\rho(x,a) - \\rho(x_0,a)| \\leqslant \\rho(x,x_0) &lt; \\delta = \\varepsilon, </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">ρ</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">a</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">ρ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">a</span><span class="mclose">)</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">ρ</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ε</span><span class="mpunct">,</span></span></span></span></span></p><p>因此 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 处连续。</p></blockquote><p><strong>命题1</strong> (连续映射的刻画)</p><p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f: X \\to Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 为度量空间之间的映射，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 中的一点。则</p><p>(1) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 处连续 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\\iff</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟺</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> 对任意收敛于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的点列 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\\{x_n\\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">}</span></span></span></span>，均有</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">\\lim_{n \\to \\infty} f(x_n) = f(x_0); </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.45em;vertical-align:-0.7em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mrel mtight">→</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">;</span></span></span></span></span></p><p>(2) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 为连续映射 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\\iff</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟺</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> 对任意开集 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>⊂</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">V \\subset Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f^{-1}(V)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mclose">)</span></span></span></span> 为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 中开集；</p><p>(3) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 为连续映射 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\\iff</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟺</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span> 对任意闭集 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>⊂</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">B \\subset Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f^{-1}(B)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span></span></span></span> 为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 中闭集。</p><blockquote><p>/proof/</p><p>(1) “<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⟹</mo></mrow><annotation encoding="application/x-tex">\\Longrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mrel">⟹</span></span></span></span>” 设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 处连续，则任给 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\varepsilon &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">ε</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\delta &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 使得</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msubsup><mi>B</mi><mi>δ</mi><mi>X</mi></msubsup><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>⊂</mo><msubsup><mi>B</mi><mi>ε</mi><mi>Y</mi></msubsup><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">f(B_\\delta^X(x_0)) \\subset B_\\varepsilon^Y(f(x_0)). </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1413em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.453em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03785em;">δ</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">X</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">))</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1413em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.453em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">ε</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">Y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">))</span><span class="mord">.</span></span></span></span></span></p><p>因为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mstyle></mrow><annotation encoding="application/x-tex">\\displaystyle\\lim_{n \\to \\infty} x_n = x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3944em;vertical-align:-0.7em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mrel mtight">→</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，故 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 充分大时 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>∈</mo><msubsup><mi>B</mi><mi>δ</mi><mi>X</mi></msubsup><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">x_n \\in B_\\delta^X(x_0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6891em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1244em;vertical-align:-0.2831em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.4169em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03785em;">δ</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">X</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2831em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，从而 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo><mo>∈</mo><msubsup><mi>B</mi><mi>ε</mi><mi>Y</mi></msubsup><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x_n) \\in B_\\varepsilon^Y(f(x_0))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0913em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.453em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">ε</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">Y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">))</span></span></span></span>，这表明</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo><mo>→</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mspace width="1em"></mspace><mo stretchy="false">(</mo><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">f(x_n) \\to f(x_0)\\quad(n \\to \\infty). </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:1em;"></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∞</span><span class="mclose">)</span><span class="mord">.</span></span></span></span></span></p><p>“<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⟸</mo></mrow><annotation encoding="application/x-tex">\\Longleftarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mrel">⟸</span></span></span></span>”（反证法）如果 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 处不连续，则存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ε</mi><mn>0</mn></msub><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\varepsilon_0 &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6891em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">ε</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，使得对 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>=</mo><mn>1</mn><mi mathvariant="normal">/</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">\\delta = 1/n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1/</span><span class="mord mathnormal">n</span></span></span></span>，存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>∈</mo><msubsup><mi>B</mi><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mi>n</mi></mrow><mi>X</mi></msubsup><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">x_n \\in B_{1/n}^X(x_0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6891em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.3383em;vertical-align:-0.497em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.378em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1/</span><span class="mord mathnormal mtight">n</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">X</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.497em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，而 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo><mo mathvariant="normal">∉</mo><msubsup><mi>B</mi><msub><mi>ε</mi><mn>0</mn></msub><mi>Y</mi></msubsup><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x_n) \\notin B_{\\varepsilon_0}^Y(f(x_0))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mord"><span class="mrel">∈</span></span><span class="mord vbox"><span class="thinbox"><span class="llap"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="inner"><span class="mord"><span class="mord">/</span><span class="mspace" style="margin-right:0.0556em;"></span></span></span><span class="fix"></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1884em;vertical-align:-0.3471em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.453em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ε</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">Y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3471em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">))</span></span></span></span>。显然 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>→</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_n \\to x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，但 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo><mo>↛</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x_n) \\not\\to f(x_0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span></span><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，矛盾！</p><p>(2) “<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⟹</mo></mrow><annotation encoding="application/x-tex">\\Longrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mrel">⟹</span></span></span></span>” 设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 为连续映射，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span> 为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 中开集。如果 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∈</mo><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">x_0 \\in f^{-1}(V)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6891em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mclose">)</span></span></span></span>，则 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mn>0</mn></msub><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">y_0 = f(x_0) \\in V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>，由于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span> 为开集，故存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\varepsilon &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">ε</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>B</mi><mi>ε</mi><mi>Y</mi></msubsup><mo stretchy="false">(</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo>⊂</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">B_\\varepsilon^Y(y_0) \\subset V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0913em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.453em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">ε</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">Y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>。根据连续性，存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\delta &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msubsup><mi>B</mi><mi>δ</mi><mi>X</mi></msubsup><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>⊂</mo><msubsup><mi>B</mi><mi>ε</mi><mi>Y</mi></msubsup><mo stretchy="false">(</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo>⊂</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">f(B_\\delta^X(x_0)) \\subset B_\\varepsilon^Y(y_0) \\subset V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1244em;vertical-align:-0.2831em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.4169em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03785em;">δ</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">X</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2831em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">))</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0913em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.453em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">ε</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">Y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>，即 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>B</mi><mi>δ</mi><mi>X</mi></msubsup><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo>⊂</mo><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">B_\\delta^X(x_0) \\subset f^{-1}(V)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1244em;vertical-align:-0.2831em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.4169em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03785em;">δ</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">X</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2831em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mclose">)</span></span></span></span>，这说明 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f^{-1}(V)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mclose">)</span></span></span></span> 为开集。</p><p>“<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⟸</mo></mrow><annotation encoding="application/x-tex">\\Longleftarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mrel">⟸</span></span></span></span>” 如果开集的原象仍为开集，则任取 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∈</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">x_0 \\in X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6891em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 以及 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\varepsilon &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">ε</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，记 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mn>0</mn></msub><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y_0 = f(x_0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>。于是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy="false">(</mo><msubsup><mi>B</mi><mi>ε</mi><mi>Y</mi></msubsup><mo stretchy="false">(</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f^{-1}(B_\\varepsilon^Y(y_0))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0913em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.453em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">ε</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">Y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">))</span></span></span></span> 为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 中包含 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的开集，从而存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\delta &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，使得</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mi>B</mi><mi>δ</mi><mi>X</mi></msubsup><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo>⊂</mo><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy="false">(</mo><msubsup><mi>B</mi><mi>ε</mi><mi>Y</mi></msubsup><mo stretchy="false">(</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">B_\\delta^X(x_0) \\subset f^{-1}(B_\\varepsilon^Y(y_0)), </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1413em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.453em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03785em;">δ</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">X</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1413em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.453em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">ε</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">Y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">))</span><span class="mpunct">,</span></span></span></span></span></p><p>即 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msubsup><mi>B</mi><mi>δ</mi><mi>X</mi></msubsup><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>⊂</mo><msubsup><mi>B</mi><mi>ε</mi><mi>Y</mi></msubsup><mo stretchy="false">(</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(B_\\delta^X(x_0)) \\subset B_\\varepsilon^Y(y_0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1244em;vertical-align:-0.2831em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.4169em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03785em;">δ</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">X</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2831em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">))</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0913em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.453em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">ε</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">Y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，这说明 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 处连续。</p><p>(3): 省略.</p></blockquote><p><strong>注意</strong>。</p><p>(1) 如果 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> 为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 之子集，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>A</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f: A \\to Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 为映射，则把 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 的度量限制于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>，从而 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> 也为度量空间（子度量空间），此时可以定义 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 的连续性，并有类似的刻画。</p><p>(2) 设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>A</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f: A \\to Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 连续，如果任给 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\varepsilon &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">ε</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\delta &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mn>1</mn></msub><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>&lt;</mo><mi>δ</mi></mrow><annotation encoding="application/x-tex">\\rho_1(a_1,a_2) &lt; \\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">ρ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span></span></span></span> 时 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>&lt;</mo><mi>ε</mi></mrow><annotation encoding="application/x-tex">\\rho_2(f(a_1),f(a_2)) &lt; \\varepsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">ρ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">))</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">ε</span></span></span></span>，则称 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 为一致连续映射。</p><p>/example/ Lipschitz 映射</p><blockquote><p>/proof/</p><p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f: X \\to Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 是度量空间之间的映射，如果存在常数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span>，使得</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>ρ</mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>⩽</mo><mi>L</mi><msub><mi>ρ</mi><mn>1</mn></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><mspace width="1em"></mspace><mi mathvariant="normal">∀</mi><mtext> </mtext><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>∈</mo><mi>X</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">\\rho_2(f(x_1),f(x_2)) \\leqslant L\\rho_1(x_1,x_2),\\quad \\forall\\,x_1,x_2 \\in X, </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">ρ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">))</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mord"><span class="mord mathnormal">ρ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">∀</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span></span></span></span></span></p><p>则称 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 为 Lipschitz 映射，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span> 称为 Lipschitz 常数。Lipschitz 映射是一致连续的。特别地，压缩映射是 Lipschitz 映射，因此也是连续映射。</p></blockquote><p><strong>定理2</strong> (连续映射与紧性)：设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f: X \\to Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 为连续映射，则</p><p>(1) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 将 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 中紧致集合映为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 中紧致集合；</p><p>(2) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 在紧致集合上一致连续。</p>', 22),
+    createBaseVNode("blockquote", null, [
+      createBaseVNode("p", null, "/proof/"),
+      createBaseVNode("p", null, [
+        createTextVNode("(1) 设 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "A")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "A")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6833em" }
+              }),
+              createBaseVNode("span", { class: "mord mathnormal" }, "A")
+            ])
+          ])
+        ]),
+        createTextVNode(" 为 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "X")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "X")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6833em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.07847em" }
+              }, "X")
+            ])
+          ])
+        ]),
+        createTextVNode(" 中紧致集合，取 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "f"),
+                  createBaseVNode("mo", { stretchy: "false" }, "("),
+                  createBaseVNode("mi", null, "A"),
+                  createBaseVNode("mo", { stretchy: "false" }, ")")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "f(A)")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "1em", "vertical-align": "-0.25em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.10764em" }
+              }, "f"),
+              createBaseVNode("span", { class: "mopen" }, "("),
+              createBaseVNode("span", { class: "mord mathnormal" }, "A"),
+              createBaseVNode("span", { class: "mclose" }, ")")
+            ])
+          ])
+        ]),
+        createTextVNode(" 的开覆盖 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mo", { stretchy: "false" }, "{"),
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "V"),
+                    createBaseVNode("mi", null, "α")
+                  ]),
+                  createBaseVNode("mo", { stretchy: "false" }, "}")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\{V_\\alpha\\}")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "1em", "vertical-align": "-0.25em" }
+              }),
+              createBaseVNode("span", { class: "mopen" }, "{"),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.22222em" }
+                }, "V"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.1514em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "-0.2222em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", {
+                              class: "mord mathnormal mtight",
+                              style: { "margin-right": "0.0037em" }
+                            }, "α")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", { class: "mclose" }, "}")
+            ])
+          ])
+        ]),
+        createTextVNode("，则 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mo", { stretchy: "false" }, "{"),
+                  createBaseVNode("msup", null, [
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mrow", null, [
+                      createBaseVNode("mo", null, "−"),
+                      createBaseVNode("mn", null, "1")
+                    ])
+                  ]),
+                  createBaseVNode("mo", { stretchy: "false" }, "("),
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "V"),
+                    createBaseVNode("mi", null, "α")
+                  ]),
+                  createBaseVNode("mo", { stretchy: "false" }, ")"),
+                  createBaseVNode("mo", { stretchy: "false" }, "}")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\{f^{-1}(V_\\alpha)\\}")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "1.0641em", "vertical-align": "-0.25em" }
+              }),
+              createBaseVNode("span", { class: "mopen" }, "{"),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.8141em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-3.063em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "−"),
+                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", { class: "mopen" }, "("),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.22222em" }
+                }, "V"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.1514em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "-0.2222em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", {
+                              class: "mord mathnormal mtight",
+                              style: { "margin-right": "0.0037em" }
+                            }, "α")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", { class: "mclose" }, ")}")
+            ])
+          ])
+        ]),
+        createTextVNode(" 为 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "A")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "A")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6833em" }
+              }),
+              createBaseVNode("span", { class: "mord mathnormal" }, "A")
+            ])
+          ])
+        ]),
+        createTextVNode(" 的开覆盖，从而存在 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "α"),
+                    createBaseVNode("mn", null, "1")
+                  ]),
+                  createBaseVNode("mo", { separator: "true" }, ","),
+                  createBaseVNode("mo", null, "⋯"),
+                  createBaseVNode("mtext", null, " "),
+                  createBaseVNode("mo", { separator: "true" }, ","),
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "α"),
+                    createBaseVNode("mi", null, "k")
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\alpha_1,\\cdots,\\alpha_k")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.625em", "vertical-align": "-0.1944em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.0037em" }
+                }, "α"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.3011em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "-0.0037em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, "1")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", { class: "mpunct" }, ","),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", { class: "minner" }, "⋯"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", { class: "mpunct" }, ","),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.0037em" }
+                }, "α"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.3361em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "-0.0037em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", {
+                              class: "mord mathnormal mtight",
+                              style: { "margin-right": "0.03148em" }
+                            }, "k")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        createTextVNode(" 使得 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "A"),
+                  createBaseVNode("mo", null, "⊂"),
+                  createBaseVNode("mstyle", {
+                    scriptlevel: "0",
+                    displaystyle: "true"
+                  }, [
+                    createBaseVNode("munderover", null, [
+                      createBaseVNode("mo", null, "⋃"),
+                      createBaseVNode("mrow", null, [
+                        createBaseVNode("mi", null, "i"),
+                        createBaseVNode("mo", null, "="),
+                        createBaseVNode("mn", null, "1")
+                      ]),
+                      createBaseVNode("mi", null, "k")
+                    ]),
+                    createBaseVNode("msup", null, [
+                      createBaseVNode("mi", null, "f"),
+                      createBaseVNode("mrow", null, [
+                        createBaseVNode("mo", null, "−"),
+                        createBaseVNode("mn", null, "1")
+                      ])
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "V"),
+                      createBaseVNode("msub", null, [
+                        createBaseVNode("mi", null, "α"),
+                        createBaseVNode("mi", null, "i")
+                      ])
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, ")")
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "A \\subset \\displaystyle\\bigcup_{i=1}^k f^{-1}(V_{\\alpha_i})")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.7224em", "vertical-align": "-0.0391em" }
+              }),
+              createBaseVNode("span", { class: "mord mathnormal" }, "A"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, "⊂"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "3.1138em", "vertical-align": "-1.2777em" }
+              }),
+              createBaseVNode("span", { class: "mop op-limits" }, [
+                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                  createBaseVNode("span", { class: "vlist-r" }, [
+                    createBaseVNode("span", {
+                      class: "vlist",
+                      style: { "height": "1.8361em" }
+                    }, [
+                      createBaseVNode("span", { style: { "top": "-1.8723em", "margin-left": "0em" } }, [
+                        createBaseVNode("span", {
+                          class: "pstrut",
+                          style: { "height": "3.05em" }
+                        }),
+                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                          createBaseVNode("span", { class: "mord mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "i"),
+                            createBaseVNode("span", { class: "mrel mtight" }, "="),
+                            createBaseVNode("span", { class: "mord mtight" }, "1")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { style: { "top": "-3.05em" } }, [
+                        createBaseVNode("span", {
+                          class: "pstrut",
+                          style: { "height": "3.05em" }
+                        }),
+                        createBaseVNode("span", null, [
+                          createBaseVNode("span", { class: "mop op-symbol large-op" }, "⋃")
+                        ])
+                      ]),
+                      createBaseVNode("span", { style: { "top": "-4.3em", "margin-left": "0em" } }, [
+                        createBaseVNode("span", {
+                          class: "pstrut",
+                          style: { "height": "3.05em" }
+                        }),
+                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                          createBaseVNode("span", {
+                            class: "mord mathnormal mtight",
+                            style: { "margin-right": "0.03148em" }
+                          }, "k")
+                        ])
+                      ])
+                    ]),
+                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                  ]),
+                  createBaseVNode("span", { class: "vlist-r" }, [
+                    createBaseVNode("span", {
+                      class: "vlist",
+                      style: { "height": "1.2777em" }
+                    }, [
+                      createBaseVNode("span")
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.8641em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "−"),
+                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", { class: "mopen" }, "("),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.22222em" }
+                }, "V"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.1514em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "-0.2222em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, [
+                                createBaseVNode("span", {
+                                  class: "mord mathnormal mtight",
+                                  style: { "margin-right": "0.0037em" }
+                                }, "α"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.3281em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-2.357em", "margin-left": "-0.0037em", "margin-right": "0.0714em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.5em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size3 size1 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "i")
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.143em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ])
+                            ])
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.2501em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", { class: "mclose" }, ")")
+            ])
+          ])
+        ]),
+        createTextVNode("。这说明 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "f"),
+                  createBaseVNode("mo", { stretchy: "false" }, "("),
+                  createBaseVNode("mi", null, "A"),
+                  createBaseVNode("mo", { stretchy: "false" }, ")"),
+                  createBaseVNode("mo", null, "⊂"),
+                  createBaseVNode("msubsup", null, [
+                    createBaseVNode("mo", null, "⋃"),
+                    createBaseVNode("mrow", null, [
+                      createBaseVNode("mi", null, "i"),
+                      createBaseVNode("mo", null, "="),
+                      createBaseVNode("mn", null, "1")
+                    ]),
+                    createBaseVNode("mi", null, "k")
+                  ]),
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "V"),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "α"),
+                      createBaseVNode("mi", null, "i")
+                    ])
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "f(A) \\subset \\bigcup_{i=1}^k V_{\\alpha_i}")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "1em", "vertical-align": "-0.25em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.10764em" }
+              }, "f"),
+              createBaseVNode("span", { class: "mopen" }, "("),
+              createBaseVNode("span", { class: "mord mathnormal" }, "A"),
+              createBaseVNode("span", { class: "mclose" }, ")"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, "⊂"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "1.2887em", "vertical-align": "-0.2997em" }
+              }),
+              createBaseVNode("span", { class: "mop" }, [
+                createBaseVNode("span", {
+                  class: "mop op-symbol small-op",
+                  style: { "position": "relative", "top": "0em" }
+                }, "⋃"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.989em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.4003em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "i"),
+                              createBaseVNode("span", { class: "mrel mtight" }, "="),
+                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { style: { "top": "-3.2029em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", {
+                              class: "mord mathnormal mtight",
+                              style: { "margin-right": "0.03148em" }
+                            }, "k")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.2997em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.22222em" }
+                }, "V"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.1514em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "-0.2222em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, [
+                                createBaseVNode("span", {
+                                  class: "mord mathnormal mtight",
+                                  style: { "margin-right": "0.0037em" }
+                                }, "α"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.3281em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-2.357em", "margin-left": "-0.0037em", "margin-right": "0.0714em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.5em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size3 size1 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "i")
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.143em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ])
+                            ])
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.2501em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        createTextVNode("。")
+      ]),
+      createBaseVNode("p", null, [
+        createTextVNode("(2) 设 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "A")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "A")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6833em" }
+              }),
+              createBaseVNode("span", { class: "mord mathnormal" }, "A")
+            ])
+          ])
+        ]),
+        createTextVNode(" 为紧致集合。如果 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "f")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "f")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.8889em", "vertical-align": "-0.1944em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.10764em" }
+              }, "f")
+            ])
+          ])
+        ]),
+        createTextVNode(" 在 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "A")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "A")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6833em" }
+              }),
+              createBaseVNode("span", { class: "mord mathnormal" }, "A")
+            ])
+          ])
+        ]),
+        createTextVNode(" 上不是一致连续的，则存在 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "ε"),
+                    createBaseVNode("mn", null, "0")
+                  ]),
+                  createBaseVNode("mo", null, ">"),
+                  createBaseVNode("mn", null, "0")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\varepsilon_0 > 0")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6891em", "vertical-align": "-0.15em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathnormal" }, "ε"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.3011em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, "0")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, ">"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6444em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, "0")
+            ])
+          ])
+        ]),
+        createTextVNode("，使得对 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "δ"),
+                  createBaseVNode("mo", null, "="),
+                  createBaseVNode("mn", null, "1"),
+                  createBaseVNode("mi", { mathvariant: "normal" }, "/"),
+                  createBaseVNode("mi", null, "n")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\delta = 1/n")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6944em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.03785em" }
+              }, "δ"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, "="),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "1em", "vertical-align": "-0.25em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, "1/"),
+              createBaseVNode("span", { class: "mord mathnormal" }, "n")
+            ])
+          ])
+        ]),
+        createTextVNode("，存在 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "a"),
+                    createBaseVNode("mi", null, "n")
+                  ]),
+                  createBaseVNode("mo", { separator: "true" }, ","),
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "b"),
+                    createBaseVNode("mi", null, "n")
+                  ]),
+                  createBaseVNode("mo", null, "∈"),
+                  createBaseVNode("mi", null, "A")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "a_n,b_n \\in A")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.8889em", "vertical-align": "-0.1944em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.1514em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", { class: "mpunct" }, ","),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathnormal" }, "b"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.1514em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, "∈"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6833em" }
+              }),
+              createBaseVNode("span", { class: "mord mathnormal" }, "A")
+            ])
+          ])
+        ]),
+        createTextVNode("，使得")
+      ]),
+      createBaseVNode("p", { class: "katex-block" }, [
+        createBaseVNode("span", { class: "katex-display" }, [
+          createBaseVNode("span", { class: "katex" }, [
+            createBaseVNode("span", { class: "katex-mathml" }, [
+              createBaseVNode("math", {
+                xmlns: "http://www.w3.org/1998/Math/MathML",
+                display: "block"
+              }, [
+                createBaseVNode("semantics", null, [
+                  createBaseVNode("mrow", null, [
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "ρ"),
+                      createBaseVNode("mn", null, "1")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "a"),
+                      createBaseVNode("mi", null, "n")
+                    ]),
+                    createBaseVNode("mo", { separator: "true" }, ","),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "b"),
+                      createBaseVNode("mi", null, "n")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", null, "<"),
+                    createBaseVNode("mfrac", null, [
+                      createBaseVNode("mn", null, "1"),
+                      createBaseVNode("mi", null, "n")
+                    ]),
+                    createBaseVNode("mo", { separator: "true" }, ","),
+                    createBaseVNode("mspace", { width: "1em" }),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "ρ"),
+                      createBaseVNode("mn", null, "2")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "a"),
+                      createBaseVNode("mi", null, "n")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", { separator: "true" }, ","),
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "b"),
+                      createBaseVNode("mi", null, "n")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", null, ">"),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "ε"),
+                      createBaseVNode("mn", null, "0")
+                    ]),
+                    createBaseVNode("mi", { mathvariant: "normal" }, ".")
+                  ]),
+                  createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\rho_1(a_n,b_n) < \\frac{1}{n},\\quad \\rho_2(f(a_n),f(b_n)) > \\varepsilon_0. ")
+                ])
+              ])
+            ]),
+            createBaseVNode("span", {
+              class: "katex-html",
+              "aria-hidden": "true"
+            }, [
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "1em", "vertical-align": "-0.25em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "ρ"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.3011em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.1514em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mpunct" }, ","),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.1667em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "b"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.1514em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mclose" }, ")"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                }),
+                createBaseVNode("span", { class: "mrel" }, "<"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "2.0074em", "vertical-align": "-0.686em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                  createBaseVNode("span", { class: "mfrac" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "1.3214em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", { class: "mord mathnormal" }, "n")
+                            ])
+                          ]),
+                          createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3em" }
+                            }),
+                            createBaseVNode("span", {
+                              class: "frac-line",
+                              style: { "border-bottom-width": "0.04em" }
+                            })
+                          ]),
+                          createBaseVNode("span", { style: { "top": "-3.677em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", { class: "mord" }, "1")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.686em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("span", { class: "mclose nulldelimiter" })
+                ]),
+                createBaseVNode("span", { class: "mpunct" }, ","),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "1em" }
+                }),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.1667em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "ρ"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.3011em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "2")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.1514em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mclose" }, ")"),
+                createBaseVNode("span", { class: "mpunct" }, ","),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.1667em" }
+                }),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "b"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.1514em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mclose" }, "))"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                }),
+                createBaseVNode("span", { class: "mrel" }, ">"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "0.5806em", "vertical-align": "-0.15em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "ε"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.3011em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "0")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mord" }, ".")
+              ])
+            ])
+          ])
+        ])
+      ]),
+      createBaseVNode("p", null, [
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mo", { stretchy: "false" }, "{"),
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "a"),
+                    createBaseVNode("mi", null, "n")
+                  ]),
+                  createBaseVNode("mo", { stretchy: "false" }, "}")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\{a_n\\}")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "1em", "vertical-align": "-0.25em" }
+              }),
+              createBaseVNode("span", { class: "mopen" }, "{"),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.1514em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", { class: "mclose" }, "}")
+            ])
+          ])
+        ]),
+        createTextVNode(" 和 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mo", { stretchy: "false" }, "{"),
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "b"),
+                    createBaseVNode("mi", null, "n")
+                  ]),
+                  createBaseVNode("mo", { stretchy: "false" }, "}")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\{b_n\\}")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "1em", "vertical-align": "-0.25em" }
+              }),
+              createBaseVNode("span", { class: "mopen" }, "{"),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathnormal" }, "b"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.1514em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", { class: "mclose" }, "}")
+            ])
+          ])
+        ]),
+        createTextVNode(" 分别存在收敛子列，不妨设它们本身是收敛的，极限分别为 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "a"),
+                    createBaseVNode("mn", null, "0")
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "a_0")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.5806em", "vertical-align": "-0.15em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.3011em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, "0")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        createTextVNode(", "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "b"),
+                    createBaseVNode("mn", null, "0")
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "b_0")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.8444em", "vertical-align": "-0.15em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathnormal" }, "b"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.3011em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, "0")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        createTextVNode("，则")
+      ]),
+      createBaseVNode("p", { class: "katex-block" }, [
+        createBaseVNode("span", { class: "katex-display" }, [
+          createBaseVNode("span", { class: "katex" }, [
+            createBaseVNode("span", { class: "katex-mathml" }, [
+              createBaseVNode("math", {
+                xmlns: "http://www.w3.org/1998/Math/MathML",
+                display: "block"
+              }, [
+                createBaseVNode("semantics", null, [
+                  createBaseVNode("mtable", {
+                    rowspacing: "0.25em",
+                    columnalign: "right left",
+                    columnspacing: "0em"
+                  }, [
+                    createBaseVNode("mtr", null, [
+                      createBaseVNode("mtd", null, [
+                        createBaseVNode("mstyle", {
+                          scriptlevel: "0",
+                          displaystyle: "true"
+                        }, [
+                          createBaseVNode("mrow", null, [
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "ρ"),
+                              createBaseVNode("mn", null, "1")
+                            ]),
+                            createBaseVNode("mo", { stretchy: "false" }, "("),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "a"),
+                              createBaseVNode("mn", null, "0")
+                            ]),
+                            createBaseVNode("mo", { separator: "true" }, ","),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "b"),
+                              createBaseVNode("mn", null, "0")
+                            ]),
+                            createBaseVNode("mo", { stretchy: "false" }, ")")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("mtd", null, [
+                        createBaseVNode("mstyle", {
+                          scriptlevel: "0",
+                          displaystyle: "true"
+                        }, [
+                          createBaseVNode("mrow", null, [
+                            createBaseVNode("mrow"),
+                            createBaseVNode("mo", null, "⩽"),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "ρ"),
+                              createBaseVNode("mn", null, "1")
+                            ]),
+                            createBaseVNode("mo", { stretchy: "false" }, "("),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "a"),
+                              createBaseVNode("mn", null, "0")
+                            ]),
+                            createBaseVNode("mo", { separator: "true" }, ","),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "a"),
+                              createBaseVNode("mi", null, "n")
+                            ]),
+                            createBaseVNode("mo", { stretchy: "false" }, ")"),
+                            createBaseVNode("mo", null, "+"),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "ρ"),
+                              createBaseVNode("mn", null, "1")
+                            ]),
+                            createBaseVNode("mo", { stretchy: "false" }, "("),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "a"),
+                              createBaseVNode("mi", null, "n")
+                            ]),
+                            createBaseVNode("mo", { separator: "true" }, ","),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "b"),
+                              createBaseVNode("mi", null, "n")
+                            ]),
+                            createBaseVNode("mo", { stretchy: "false" }, ")"),
+                            createBaseVNode("mo", null, "+"),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "ρ"),
+                              createBaseVNode("mn", null, "1")
+                            ]),
+                            createBaseVNode("mo", { stretchy: "false" }, "("),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "b"),
+                              createBaseVNode("mi", null, "n")
+                            ]),
+                            createBaseVNode("mo", { separator: "true" }, ","),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "b"),
+                              createBaseVNode("mn", null, "0")
+                            ]),
+                            createBaseVNode("mo", { stretchy: "false" }, ")")
+                          ])
+                        ])
+                      ])
+                    ]),
+                    createBaseVNode("mtr", null, [
+                      createBaseVNode("mtd", null, [
+                        createBaseVNode("mstyle", {
+                          scriptlevel: "0",
+                          displaystyle: "true"
+                        }, [
+                          createBaseVNode("mrow")
+                        ])
+                      ])
+                    ]),
+                    createBaseVNode("mtr", null, [
+                      createBaseVNode("mtd", null, [
+                        createBaseVNode("mstyle", {
+                          scriptlevel: "0",
+                          displaystyle: "true"
+                        }, [
+                          createBaseVNode("mrow")
+                        ])
+                      ]),
+                      createBaseVNode("mtd", null, [
+                        createBaseVNode("mstyle", {
+                          scriptlevel: "0",
+                          displaystyle: "true"
+                        }, [
+                          createBaseVNode("mrow", null, [
+                            createBaseVNode("mrow"),
+                            createBaseVNode("mo", null, "<"),
+                            createBaseVNode("mfrac", null, [
+                              createBaseVNode("mn", null, "1"),
+                              createBaseVNode("mi", null, "n")
+                            ]),
+                            createBaseVNode("mo", null, "+"),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "ρ"),
+                              createBaseVNode("mn", null, "1")
+                            ]),
+                            createBaseVNode("mo", { stretchy: "false" }, "("),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "a"),
+                              createBaseVNode("mn", null, "0")
+                            ]),
+                            createBaseVNode("mo", { separator: "true" }, ","),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "a"),
+                              createBaseVNode("mi", null, "n")
+                            ]),
+                            createBaseVNode("mo", { stretchy: "false" }, ")"),
+                            createBaseVNode("mo", null, "+"),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "ρ"),
+                              createBaseVNode("mn", null, "1")
+                            ]),
+                            createBaseVNode("mo", { stretchy: "false" }, "("),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "b"),
+                              createBaseVNode("mi", null, "n")
+                            ]),
+                            createBaseVNode("mo", { separator: "true" }, ","),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "b"),
+                              createBaseVNode("mn", null, "0")
+                            ]),
+                            createBaseVNode("mo", { stretchy: "false" }, ")"),
+                            createBaseVNode("mo", null, "→"),
+                            createBaseVNode("mn", null, "0"),
+                            createBaseVNode("mo", { separator: "true" }, ",")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\begin{aligned} \\rho_1(a_0,b_0) &\\leqslant \\rho_1(a_0,a_n) + \\rho_1(a_n,b_n) + \\rho_1(b_n,b_0) \\\\\\\\ &< \\frac{1}{n} + \\rho_1(a_0,a_n) + \\rho_1(b_n,b_0) \\to 0, \\end{aligned} ")
+                ])
+              ])
+            ]),
+            createBaseVNode("span", {
+              class: "katex-html",
+              "aria-hidden": "true"
+            }, [
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "5.3074em", "vertical-align": "-2.4037em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mtable" }, [
+                    createBaseVNode("span", { class: "col-align-r" }, [
+                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                        createBaseVNode("span", { class: "vlist-r" }, [
+                          createBaseVNode("span", {
+                            class: "vlist",
+                            style: { "height": "2.9037em" }
+                          }, [
+                            createBaseVNode("span", { style: { "top": "-5.3852em" } }, [
+                              createBaseVNode("span", {
+                                class: "pstrut",
+                                style: { "height": "3.3214em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "ρ"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.3011em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mopen" }, "("),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.3011em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "0")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mpunct" }, ","),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.1667em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "b"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.3011em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "0")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mclose" }, ")")
+                              ])
+                            ]),
+                            createBaseVNode("span", { style: { "top": "-3.8852em" } }, [
+                              createBaseVNode("span", {
+                                class: "pstrut",
+                                style: { "height": "3.3214em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" })
+                            ]),
+                            createBaseVNode("span", { style: { "top": "-1.9037em" } }, [
+                              createBaseVNode("span", {
+                                class: "pstrut",
+                                style: { "height": "3.3214em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" })
+                            ])
+                          ]),
+                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                        ]),
+                        createBaseVNode("span", { class: "vlist-r" }, [
+                          createBaseVNode("span", {
+                            class: "vlist",
+                            style: { "height": "2.4037em" }
+                          }, [
+                            createBaseVNode("span")
+                          ])
+                        ])
+                      ])
+                    ]),
+                    createBaseVNode("span", { class: "col-align-l" }, [
+                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                        createBaseVNode("span", { class: "vlist-r" }, [
+                          createBaseVNode("span", {
+                            class: "vlist",
+                            style: { "height": "2.9037em" }
+                          }, [
+                            createBaseVNode("span", { style: { "top": "-5.3852em" } }, [
+                              createBaseVNode("span", {
+                                class: "pstrut",
+                                style: { "height": "3.3214em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord" }),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2778em" }
+                                }),
+                                createBaseVNode("span", { class: "mrel amsrm" }, "⩽"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2778em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "ρ"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.3011em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mopen" }, "("),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.3011em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "0")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mpunct" }, ","),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.1667em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.1514em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mclose" }, ")"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mbin" }, "+"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "ρ"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.3011em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mopen" }, "("),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.1514em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mpunct" }, ","),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.1667em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "b"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.1514em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mclose" }, ")"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mbin" }, "+"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "ρ"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.3011em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mopen" }, "("),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "b"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.1514em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mpunct" }, ","),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.1667em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "b"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.3011em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "0")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mclose" }, ")")
+                              ])
+                            ]),
+                            createBaseVNode("span", { style: { "top": "-1.9037em" } }, [
+                              createBaseVNode("span", {
+                                class: "pstrut",
+                                style: { "height": "3.3214em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord" }),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2778em" }
+                                }),
+                                createBaseVNode("span", { class: "mrel" }, "<"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2778em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                  createBaseVNode("span", { class: "mfrac" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "1.3214em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord mathnormal" }, "n")
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", {
+                                              class: "frac-line",
+                                              style: { "border-bottom-width": "0.04em" }
+                                            })
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.677em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord" }, "1")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.686em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", { class: "mclose nulldelimiter" })
+                                ]),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mbin" }, "+"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "ρ"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.3011em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mopen" }, "("),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.3011em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "0")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mpunct" }, ","),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.1667em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.1514em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mclose" }, ")"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mbin" }, "+"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "ρ"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.3011em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mopen" }, "("),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "b"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.1514em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mpunct" }, ","),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.1667em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "b"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.3011em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "0")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.15em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mclose" }, ")"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2778em" }
+                                }),
+                                createBaseVNode("span", { class: "mrel" }, "→"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2778em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, "0"),
+                                createBaseVNode("span", { class: "mpunct" }, ",")
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                        ]),
+                        createBaseVNode("span", { class: "vlist-r" }, [
+                          createBaseVNode("span", {
+                            class: "vlist",
+                            style: { "height": "2.4037em" }
+                          }, [
+                            createBaseVNode("span")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ]),
+      createBaseVNode("p", null, [
+        createTextVNode("即 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "a"),
+                    createBaseVNode("mn", null, "0")
+                  ]),
+                  createBaseVNode("mo", null, "="),
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "b"),
+                    createBaseVNode("mn", null, "0")
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "a_0 = b_0")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.5806em", "vertical-align": "-0.15em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.3011em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, "0")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, "="),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.8444em", "vertical-align": "-0.15em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathnormal" }, "b"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.3011em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, "0")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        createTextVNode("。但")
+      ]),
+      createBaseVNode("p", { class: "katex-block" }, [
+        createBaseVNode("span", { class: "katex-display" }, [
+          createBaseVNode("span", { class: "katex" }, [
+            createBaseVNode("span", { class: "katex-mathml" }, [
+              createBaseVNode("math", {
+                xmlns: "http://www.w3.org/1998/Math/MathML",
+                display: "block"
+              }, [
+                createBaseVNode("semantics", null, [
+                  createBaseVNode("mrow", null, [
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "ε"),
+                      createBaseVNode("mn", null, "0")
+                    ]),
+                    createBaseVNode("mo", null, "<"),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "ρ"),
+                      createBaseVNode("mn", null, "2")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "a"),
+                      createBaseVNode("mi", null, "n")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", { separator: "true" }, ","),
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "b"),
+                      createBaseVNode("mi", null, "n")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", null, "⩽"),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "ρ"),
+                      createBaseVNode("mn", null, "2")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "a"),
+                      createBaseVNode("mi", null, "n")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", { separator: "true" }, ","),
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "a"),
+                      createBaseVNode("mn", null, "0")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", null, "+"),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "ρ"),
+                      createBaseVNode("mn", null, "2")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "b"),
+                      createBaseVNode("mn", null, "0")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", { separator: "true" }, ","),
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "b"),
+                      createBaseVNode("mi", null, "n")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", null, "→"),
+                    createBaseVNode("mn", null, "0.")
+                  ]),
+                  createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\varepsilon_0 < \\rho_2(f(a_n),f(b_n)) \\leqslant \\rho_2(f(a_n),f(a_0)) + \\rho_2(f(b_0),f(b_n)) \\to 0. ")
+                ])
+              ])
+            ]),
+            createBaseVNode("span", {
+              class: "katex-html",
+              "aria-hidden": "true"
+            }, [
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "0.6891em", "vertical-align": "-0.15em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "ε"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.3011em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "0")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                }),
+                createBaseVNode("span", { class: "mrel" }, "<"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "1em", "vertical-align": "-0.25em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "ρ"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.3011em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "2")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.1514em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mclose" }, ")"),
+                createBaseVNode("span", { class: "mpunct" }, ","),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.1667em" }
+                }),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "b"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.1514em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mclose" }, "))"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                }),
+                createBaseVNode("span", { class: "mrel amsrm" }, "⩽"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "1em", "vertical-align": "-0.25em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "ρ"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.3011em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "2")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.1514em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mclose" }, ")"),
+                createBaseVNode("span", { class: "mpunct" }, ","),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.1667em" }
+                }),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.3011em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "0")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mclose" }, "))"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                }),
+                createBaseVNode("span", { class: "mbin" }, "+"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "1em", "vertical-align": "-0.25em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "ρ"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.3011em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "2")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "b"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.3011em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "0")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mclose" }, ")"),
+                createBaseVNode("span", { class: "mpunct" }, ","),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.1667em" }
+                }),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "b"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.1514em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mclose" }, "))"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                }),
+                createBaseVNode("span", { class: "mrel" }, "→"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "0.6444em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, "0.")
+              ])
+            ])
+          ])
+        ])
+      ]),
+      createBaseVNode("p", null, "这就导出了矛盾！")
+    ], -1),
+    createStaticVNode('<p><strong>推论3</strong> (最值定理)：连续函数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">f: X \\to \\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 在紧致集合上可以取到最大值和最小值。</p><blockquote><p>/proof/</p><p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> 为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 中的紧致集合，则 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(A)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span></span></span></span> 是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 中的紧致集合，因此为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 中的有界闭集。这说明 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(A)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span></span></span></span> 中存在最大数和最小数，它们分别是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> 上的最大值和最小值。</p></blockquote><p><strong>定义2</strong> (道路连通)</p><blockquote><p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> 为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 的子集，如果任给 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>∈</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">x_1,x_2 \\in G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span>，均存在连续映射（连续曲线）<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>:</mo><mi>I</mi><mo>=</mo><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">\\sigma: I = [0,1] \\to X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\\sigma(0) = x_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mopen">(</span><span class="mord">0</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\\sigma(1) = x_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo><mo>⊂</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">\\sigma(I) \\subset G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span>，则称 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> 道路连通。</p><p>显然，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="double-struck">R</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\\mathbb{R}^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span> 是道路连通的，因为任何两点均可用直线段相连接。</p></blockquote><p><strong>命题4</strong>：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 中道路连通集合必为区间（可退化为一点）。</p><blockquote><p>/proof/</p><p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>⊂</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">G \\subset \\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 道路连通，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>⩽</mo><mi>b</mi><mo>∈</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">a \\leqslant b \\in G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7733em;vertical-align:-0.1367em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span>。我们证明 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">]</mo><mo>⊂</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">[a,b] \\subset G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">b</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span>。</p><p>事实上，由定义，存在连续映射 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo><mo>→</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">f: [0,1] \\to \\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span>，使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><mo>=</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">f(0) = a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">0</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">f(1) = b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo><mo stretchy="false">)</mo><mo>⊂</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">f([0,1]) \\subset G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">([</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">])</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span>。<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 为一元连续函数，由介值定理，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">]</mo><mo>⊂</mo><mi>f</mi><mo stretchy="false">(</mo><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo><mo stretchy="false">)</mo><mo>⊂</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">[a,b] \\subset f([0,1]) \\subset G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">b</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">([</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">])</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span>。</p></blockquote><p><strong>定理5</strong> (连续映射与连通性)：连续映射将道路连通的集合映为道路连通集合。</p><blockquote><p>/proof/</p><p>设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>⊂</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">G \\subset X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 道路连通，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f: X \\to Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 连续。</p><p>任取 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>∈</mo><mi>f</mi><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y_1,y_2 \\in f(G)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">G</span><span class="mclose">)</span></span></span></span>，则存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>∈</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">x_1,x_2 \\in G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> 使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>=</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">f(x_1) = y_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>=</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">f(x_2) = y_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>。</p><p>由定义，存在连续映射 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>:</mo><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">\\sigma: [0,1] \\to X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\\sigma(0) = x_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mopen">(</span><span class="mord">0</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\\sigma(1) = x_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo stretchy="false">(</mo><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo><mo stretchy="false">)</mo><mo>⊂</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">\\sigma([0,1]) \\subset G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mopen">([</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">])</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span>。</p><p>复合映射 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∘</mo><mi>σ</mi><mo>:</mo><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f \\circ \\sigma: [0,1] \\to Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∘</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 连续，且 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∘</mo><mi>σ</mi><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>=</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">f \\circ \\sigma(0) = f(x_1) = y_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∘</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mopen">(</span><span class="mord">0</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∘</mo><mi>σ</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>=</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">f \\circ \\sigma(1) = f(x_2) = y_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∘</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∘</mo><mi>σ</mi><mo stretchy="false">(</mo><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo><mo stretchy="false">)</mo><mo>⊂</mo><mi>f</mi><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f \\circ \\sigma([0,1]) \\subset f(G)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∘</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mopen">([</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">])</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">G</span><span class="mclose">)</span></span></span></span>。<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∘</mo><mi>σ</mi></mrow><annotation encoding="application/x-tex">f \\circ \\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∘</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span> 就是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(G)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">G</span><span class="mclose">)</span></span></span></span> 中连接 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">y_1,y_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的道路。</p></blockquote><p><strong>推论6</strong> (介值定理)：设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">f: X \\to \\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 为连续函数，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>⊂</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">G \\subset X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 道路连通。</p><p>(1) 如果存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>∈</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">x_1,x_2 \\in G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span>，使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>⩽</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f(x_1)f(x_2) \\leqslant 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，则存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∈</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">x_0 \\in G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6891em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> 使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f(x_0) = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>；</p><p>(2) 对于满足条件 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>⩽</mo><mi>y</mi><mo>⩽</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x_1) \\leqslant y \\leqslant f(x_2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8311em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 的任意 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>，一定存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">x \\in G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> 使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y = f(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span>。</p><blockquote><p>/proof/</p><p>以 (2) 为例。因为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 连续，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> 道路连通，故 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo><mo>⊂</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">f(G) \\subset \\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">G</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 也道路连通，从而 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(G)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">G</span><span class="mclose">)</span></span></span></span> 为区间。</p><p>由 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>∈</mo><mi>f</mi><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x_1),f(x_2) \\in f(G)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">G</span><span class="mclose">)</span></span></span></span> 即知 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mo>⊂</mo><mi>f</mi><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">[f(x_1),f(x_2)] \\subset f(G)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊂</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">G</span><span class="mclose">)</span></span></span></span>，特别地，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>∈</mo><mi>f</mi><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y \\in f(G)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">G</span><span class="mclose">)</span></span></span></span>，即存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">x \\in G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> 使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y = f(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span>。</p></blockquote><p>/example/设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><msup><mi>S</mi><mn>1</mn></msup><mo>→</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">f: S^1 \\to \\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 为单位圆周上的连续函数，则存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∈</mo><msup><mi>S</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">x_0 \\in S^1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6891em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span>，使得</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">f(-x_0) = f(x_0). </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">−</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord">.</span></span></span></span></span></p><blockquote><p>/proof/</p><p>考虑函数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>:</mo><msup><mi>S</mi><mn>1</mn></msup><mo>→</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">g: S^1 \\to \\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span>，使得</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>−</mo><mi>f</mi><mo stretchy="false">(</mo><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mspace width="1em"></mspace><mi mathvariant="normal">∀</mi><mtext> </mtext><mi>x</mi><mo>∈</mo><msup><mi>S</mi><mn>1</mn></msup><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">g(x) = f(x) - f(-x),\\quad \\forall\\,x \\in S^1. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">∀</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8641em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span><span class="mord">.</span></span></span></span></span></p><p>则 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span></span></span></span> 也是连续函数，且</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>g</mi><mo stretchy="false">(</mo><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">[</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>−</mo><mi>f</mi><mo stretchy="false">(</mo><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>f</mi><mo stretchy="false">(</mo><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo><mo>−</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mo>=</mo><mo>−</mo><mo stretchy="false">[</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>−</mo><mi>f</mi><mo stretchy="false">(</mo><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo><msup><mo stretchy="false">]</mo><mn>2</mn></msup><mo>⩽</mo><mn>0</mn><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">g(x)g(-x) = [f(x) - f(-x)][f(-x) - f(x)] = -[f(x) - f(-x)]^2 \\leqslant 0, </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathnormal">x</span><span class="mclose">)]</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1141em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mclose"><span class="mclose">]</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span></span></span></span></span></p><p>根据介值定理，存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∈</mo><msup><mi>S</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">x_0 \\in S^1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6891em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span>，使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">g(x_0) = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，此时 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(-x_0) = f(x_0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">−</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>。</p></blockquote><h3 id="·-欧氏连续映射" tabindex="-1"><a class="header-anchor" href="#·-欧氏连续映射"><span>· 欧氏连续映射</span></a></h3><p>在以后的章节中，欧氏空间将是我们的研究对象。因此，我们要考虑从一个欧氏空间到另一个欧氏空间的映射。从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 的映射称为一元函数；当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n &gt; 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 时，从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="double-struck">R</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\\mathbb{R}^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 的映射称为多元函数；一般地，从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="double-struck">R</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\\mathbb{R}^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="double-struck">R</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">\\mathbb{R}^m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span></span></span></span></span></span></span> 的映射称为向量值函数。</p><p>对于多元连续函数来说，其四则运算性质和一元连续函数没有什么区别。</p><p><strong>命题7</strong>：设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo separator="true">,</mo><mi>g</mi><mo>:</mo><msup><mi mathvariant="double-struck">R</mi><mi>n</mi></msup><mo>→</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">f,g: \\mathbb{R}^n \\to \\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 为连续函数，则</p><blockquote><p>(1) 当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo separator="true">,</mo><mi>μ</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\\lambda,\\mu \\in \\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">λ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 时，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mi>f</mi><mo>+</mo><mi>μ</mi><mi>g</mi></mrow><annotation encoding="application/x-tex">\\lambda f + \\mu g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">λ</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">μg</span></span></span></span> 也是连续函数；</p><p>(2) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mi>g</mi></mrow><annotation encoding="application/x-tex">fg</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span></span></span></span> 为连续函数；</p><p>(3) 当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo mathvariant="normal">≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">g \\ne 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 时，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mi mathvariant="normal">/</mi><mi>g</mi></mrow><annotation encoding="application/x-tex">f/g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span></span></span></span> 为连续函数。</p></blockquote><p>现在我们考虑向量值的函数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><msup><mi mathvariant="double-struck">R</mi><mi>n</mi></msup><mo>→</mo><msup><mi mathvariant="double-struck">R</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">f: \\mathbb{R}^n \\to \\mathbb{R}^m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span></span></span></span></span></span></span>，写成分量的形式为</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><msub><mi>f</mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mo>⋯</mo><mtext> </mtext><mo separator="true">,</mo><msub><mi>f</mi><mi>m</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo separator="true">,</mo><mspace width="1em"></mspace><mi>x</mi><mo>=</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><mo>⋯</mo><mtext> </mtext><mo separator="true">,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mi>m</mi></msup><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">f(x) = (f_1(x),\\cdots,f_m(x)),\\quad x = (x_1,\\cdots,x_n) \\in \\mathbb{R}^m. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">))</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7144em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span></span></span></span><span class="mord">.</span></span></span></span></span></p><p>我们有</p><p><strong>命题8</strong>：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><msup><mi mathvariant="double-struck">R</mi><mi>n</mi></msup><mo>→</mo><msup><mi mathvariant="double-struck">R</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">f: \\mathbb{R}^n \\to \\mathbb{R}^m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span></span></span></span></span></span></span> 为连续映射当且仅当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">f_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 均为连续函数，其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mo>⋯</mo><mtext> </mtext><mo separator="true">,</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">i = 1,\\cdots,m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">m</span></span></span></span>。</p><blockquote><p>/proof/</p><p>由连续性的刻画可知，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 处连续当且仅当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>x</mi><mo>→</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></msub><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\\lim_{x \\to x_0} f(x) = f(x_0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0001em;vertical-align:-0.2501em;"></span><span class="mop"><span class="mop">lim</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">→</span><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，根据欧氏空间中的极限性质，</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>x</mi><mo>→</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></munder><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>x</mi><mo>→</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></munder><msub><mi>f</mi><mi>i</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>f</mi><mi>i</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><mspace width="1em"></mspace><mi>i</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mo>⋯</mo><mtext> </mtext><mo separator="true">,</mo><mi>m</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\\lim_{x \\to x_0} f(x) = f(x_0) \\iff \\lim_{x \\to x_0} f_i(x) = f_i(x_0),\\quad i = 1,\\cdots,m. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.5501em;vertical-align:-0.8001em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">→</span><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8001em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟺</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.5501em;vertical-align:-0.8001em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">→</span><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8001em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">m</span><span class="mord">.</span></span></span></span></span></p><p>即 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 处连续当且仅当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">f_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>⩽</mo><mi>i</mi><mo>⩽</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">1 \\leqslant i \\leqslant n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7811em;vertical-align:-0.1367em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7962em;vertical-align:-0.1367em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>) 均在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 处连续。</p></blockquote><p><strong>线性映射</strong>：</p>', 26),
+    createBaseVNode("blockquote", null, [
+      createBaseVNode("p", null, [
+        createTextVNode("设 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "f"),
+                  createBaseVNode("mo", null, ":"),
+                  createBaseVNode("msup", null, [
+                    createBaseVNode("mi", { mathvariant: "double-struck" }, "R"),
+                    createBaseVNode("mi", null, "n")
+                  ]),
+                  createBaseVNode("mo", null, "→"),
+                  createBaseVNode("msup", null, [
+                    createBaseVNode("mi", { mathvariant: "double-struck" }, "R"),
+                    createBaseVNode("mi", null, "m")
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "f: \\mathbb{R}^n \\to \\mathbb{R}^m")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.8889em", "vertical-align": "-0.1944em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.10764em" }
+              }, "f"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, ":"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6889em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathbb" }, "R"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.6644em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-3.063em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, "→"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6889em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathbb" }, "R"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.6644em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-3.063em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "m")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        createTextVNode(" 为向量值函数。如果任给 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "x"),
+                  createBaseVNode("mo", { separator: "true" }, ","),
+                  createBaseVNode("mi", null, "y"),
+                  createBaseVNode("mo", null, "∈"),
+                  createBaseVNode("msup", null, [
+                    createBaseVNode("mi", { mathvariant: "double-struck" }, "R"),
+                    createBaseVNode("mi", null, "n")
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "x,y \\in \\mathbb{R}^n")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.7335em", "vertical-align": "-0.1944em" }
+              }),
+              createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+              createBaseVNode("span", { class: "mpunct" }, ","),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.03588em" }
+              }, "y"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, "∈"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6889em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathbb" }, "R"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.6644em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-3.063em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        createTextVNode("，成立")
+      ]),
+      createBaseVNode("p", { class: "katex-block" }, [
+        createBaseVNode("span", { class: "katex-display" }, [
+          createBaseVNode("span", { class: "katex" }, [
+            createBaseVNode("span", { class: "katex-mathml" }, [
+              createBaseVNode("math", {
+                xmlns: "http://www.w3.org/1998/Math/MathML",
+                display: "block"
+              }, [
+                createBaseVNode("semantics", null, [
+                  createBaseVNode("mrow", null, [
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("mi", null, "λ"),
+                    createBaseVNode("mi", null, "x"),
+                    createBaseVNode("mo", null, "+"),
+                    createBaseVNode("mi", null, "μ"),
+                    createBaseVNode("mi", null, "y"),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", null, "="),
+                    createBaseVNode("mi", null, "λ"),
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("mi", null, "x"),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", null, "+"),
+                    createBaseVNode("mi", null, "μ"),
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("mi", null, "y"),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", { separator: "true" }, ","),
+                    createBaseVNode("mspace", { width: "1em" }),
+                    createBaseVNode("mi", { mathvariant: "normal" }, "∀"),
+                    createBaseVNode("mtext", null, " "),
+                    createBaseVNode("mi", null, "λ"),
+                    createBaseVNode("mo", { separator: "true" }, ","),
+                    createBaseVNode("mi", null, "μ"),
+                    createBaseVNode("mo", null, "∈"),
+                    createBaseVNode("mi", { mathvariant: "double-struck" }, "R"),
+                    createBaseVNode("mo", { separator: "true" }, ",")
+                  ]),
+                  createBaseVNode("annotation", { encoding: "application/x-tex" }, "f(\\lambda x + \\mu y) = \\lambda f(x) + \\mu f(y),\\quad \\forall\\,\\lambda,\\mu \\in \\mathbb{R}, ")
+                ])
+              ])
+            ]),
+            createBaseVNode("span", {
+              class: "katex-html",
+              "aria-hidden": "true"
+            }, [
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "1em", "vertical-align": "-0.25em" }
+                }),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord mathnormal" }, "λ"),
+                createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                }),
+                createBaseVNode("span", { class: "mbin" }, "+"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "1em", "vertical-align": "-0.25em" }
+                }),
+                createBaseVNode("span", { class: "mord mathnormal" }, "μ"),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.03588em" }
+                }, "y"),
+                createBaseVNode("span", { class: "mclose" }, ")"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                }),
+                createBaseVNode("span", { class: "mrel" }, "="),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "1em", "vertical-align": "-0.25em" }
+                }),
+                createBaseVNode("span", { class: "mord mathnormal" }, "λ"),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                createBaseVNode("span", { class: "mclose" }, ")"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                }),
+                createBaseVNode("span", { class: "mbin" }, "+"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "1em", "vertical-align": "-0.25em" }
+                }),
+                createBaseVNode("span", { class: "mord mathnormal" }, "μ"),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.03588em" }
+                }, "y"),
+                createBaseVNode("span", { class: "mclose" }, ")"),
+                createBaseVNode("span", { class: "mpunct" }, ","),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "1em" }
+                }),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.1667em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, "∀"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.1667em" }
+                }),
+                createBaseVNode("span", { class: "mord mathnormal" }, "λ"),
+                createBaseVNode("span", { class: "mpunct" }, ","),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.1667em" }
+                }),
+                createBaseVNode("span", { class: "mord mathnormal" }, "μ"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                }),
+                createBaseVNode("span", { class: "mrel" }, "∈"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "0.8833em", "vertical-align": "-0.1944em" }
+                }),
+                createBaseVNode("span", { class: "mord mathbb" }, "R"),
+                createBaseVNode("span", { class: "mpunct" }, ",")
+              ])
+            ])
+          ])
+        ])
+      ]),
+      createBaseVNode("p", null, [
+        createTextVNode("则称 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "f")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "f")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.8889em", "vertical-align": "-0.1944em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.10764em" }
+              }, "f")
+            ])
+          ])
+        ]),
+        createTextVNode(" 为线性映射。"),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "m"),
+                  createBaseVNode("mo", null, "="),
+                  createBaseVNode("mn", null, "1")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "m = 1")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.4306em" }
+              }),
+              createBaseVNode("span", { class: "mord mathnormal" }, "m"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, "="),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6444em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, "1")
+            ])
+          ])
+        ]),
+        createTextVNode(" 的情形就是线性函数。")
+      ]),
+      createBaseVNode("p", null, [
+        createTextVNode("记 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "e"),
+                    createBaseVNode("mi", null, "i")
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "e_i")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.5806em", "vertical-align": "-0.15em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathnormal" }, "e"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.3117em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "i")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        createTextVNode(" 是 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("msup", null, [
+                    createBaseVNode("mi", { mathvariant: "double-struck" }, "R"),
+                    createBaseVNode("mi", null, "n")
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\mathbb{R}^n")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6889em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathbb" }, "R"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.6644em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-3.063em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        createTextVNode(" 中第 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "i")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "i")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6595em" }
+              }),
+              createBaseVNode("span", { class: "mord mathnormal" }, "i")
+            ])
+          ])
+        ]),
+        createTextVNode(" 个位置为 1，其它位置为零的向量，则 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mo", { stretchy: "false" }, "{"),
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "e"),
+                    createBaseVNode("mn", null, "1")
+                  ]),
+                  createBaseVNode("mo", { separator: "true" }, ","),
+                  createBaseVNode("mo", null, "⋯"),
+                  createBaseVNode("mtext", null, " "),
+                  createBaseVNode("mo", { separator: "true" }, ","),
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "e"),
+                    createBaseVNode("mi", null, "n")
+                  ]),
+                  createBaseVNode("mo", { stretchy: "false" }, "}")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\{e_1,\\cdots,e_n\\}")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "1em", "vertical-align": "-0.25em" }
+              }),
+              createBaseVNode("span", { class: "mopen" }, "{"),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathnormal" }, "e"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.3011em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, "1")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", { class: "mpunct" }, ","),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", { class: "minner" }, "⋯"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", { class: "mpunct" }, ","),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathnormal" }, "e"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.1514em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", { class: "mclose" }, "}")
+            ])
+          ])
+        ]),
+        createTextVNode(" 为 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("msup", null, [
+                    createBaseVNode("mi", { mathvariant: "double-struck" }, "R"),
+                    createBaseVNode("mi", null, "n")
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\mathbb{R}^n")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6889em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathbb" }, "R"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.6644em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-3.063em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        createTextVNode(" 的一组标准基。"),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("msup", null, [
+                    createBaseVNode("mi", { mathvariant: "double-struck" }, "R"),
+                    createBaseVNode("mi", null, "n")
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\mathbb{R}^n")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6889em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathbb" }, "R"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.6644em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-3.063em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        createTextVNode(" 中的向量 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "x")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "x")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.4306em" }
+              }),
+              createBaseVNode("span", { class: "mord mathnormal" }, "x")
+            ])
+          ])
+        ]),
+        createTextVNode(" 可写为")
+      ]),
+      createBaseVNode("p", { class: "katex-block" }, [
+        createBaseVNode("span", { class: "katex-display" }, [
+          createBaseVNode("span", { class: "katex" }, [
+            createBaseVNode("span", { class: "katex-mathml" }, [
+              createBaseVNode("math", {
+                xmlns: "http://www.w3.org/1998/Math/MathML",
+                display: "block"
+              }, [
+                createBaseVNode("semantics", null, [
+                  createBaseVNode("mrow", null, [
+                    createBaseVNode("mi", null, "x"),
+                    createBaseVNode("mo", null, "="),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "x"),
+                      createBaseVNode("mn", null, "1")
+                    ]),
+                    createBaseVNode("mo", { separator: "true" }, ","),
+                    createBaseVNode("mo", null, "⋯"),
+                    createBaseVNode("mtext", null, " "),
+                    createBaseVNode("mo", { separator: "true" }, ","),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "x"),
+                      createBaseVNode("mi", null, "n")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", null, "="),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "x"),
+                      createBaseVNode("mn", null, "1")
+                    ]),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "e"),
+                      createBaseVNode("mn", null, "1")
+                    ]),
+                    createBaseVNode("mo", null, "+"),
+                    createBaseVNode("mo", null, "⋯"),
+                    createBaseVNode("mo", null, "+"),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "x"),
+                      createBaseVNode("mi", null, "n")
+                    ]),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "e"),
+                      createBaseVNode("mi", null, "n")
+                    ]),
+                    createBaseVNode("mo", { separator: "true" }, ",")
+                  ]),
+                  createBaseVNode("annotation", { encoding: "application/x-tex" }, "x = (x_1,\\cdots,x_n) = x_1e_1 + \\cdots + x_ne_n, ")
+                ])
+              ])
+            ]),
+            createBaseVNode("span", {
+              class: "katex-html",
+              "aria-hidden": "true"
+            }, [
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "0.4306em" }
+                }),
+                createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                }),
+                createBaseVNode("span", { class: "mrel" }, "="),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "1em", "vertical-align": "-0.25em" }
+                }),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.3011em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mpunct" }, ","),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.1667em" }
+                }),
+                createBaseVNode("span", { class: "minner" }, "⋯"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.1667em" }
+                }),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.1667em" }
+                }),
+                createBaseVNode("span", { class: "mpunct" }, ","),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.1667em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.1514em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mclose" }, ")"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                }),
+                createBaseVNode("span", { class: "mrel" }, "="),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "0.7333em", "vertical-align": "-0.15em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.3011em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "e"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.3011em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                }),
+                createBaseVNode("span", { class: "mbin" }, "+"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "0.6667em", "vertical-align": "-0.0833em" }
+                }),
+                createBaseVNode("span", { class: "minner" }, "⋯"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                }),
+                createBaseVNode("span", { class: "mbin" }, "+"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "0.625em", "vertical-align": "-0.1944em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.1514em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "e"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.1514em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mpunct" }, ",")
+              ])
+            ])
+          ])
+        ])
+      ]),
+      createBaseVNode("p", null, [
+        createTextVNode("根据线性性，"),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "f"),
+                  createBaseVNode("mo", { stretchy: "false" }, "("),
+                  createBaseVNode("mi", null, "x"),
+                  createBaseVNode("mo", { stretchy: "false" }, ")")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "f(x)")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "1em", "vertical-align": "-0.25em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.10764em" }
+              }, "f"),
+              createBaseVNode("span", { class: "mopen" }, "("),
+              createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+              createBaseVNode("span", { class: "mclose" }, ")")
+            ])
+          ])
+        ]),
+        createTextVNode(" 可写为")
+      ]),
+      createBaseVNode("p", { class: "katex-block" }, [
+        createBaseVNode("span", { class: "katex-display" }, [
+          createBaseVNode("span", { class: "katex" }, [
+            createBaseVNode("span", { class: "katex-mathml" }, [
+              createBaseVNode("math", {
+                xmlns: "http://www.w3.org/1998/Math/MathML",
+                display: "block"
+              }, [
+                createBaseVNode("semantics", null, [
+                  createBaseVNode("mrow", null, [
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("mi", null, "x"),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", null, "="),
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "x"),
+                      createBaseVNode("mn", null, "1")
+                    ]),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "e"),
+                      createBaseVNode("mn", null, "1")
+                    ]),
+                    createBaseVNode("mo", null, "+"),
+                    createBaseVNode("mo", null, "⋯"),
+                    createBaseVNode("mo", null, "+"),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "x"),
+                      createBaseVNode("mi", null, "n")
+                    ]),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "e"),
+                      createBaseVNode("mi", null, "n")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", null, "="),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "x"),
+                      createBaseVNode("mn", null, "1")
+                    ]),
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "e"),
+                      createBaseVNode("mn", null, "1")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", null, "+"),
+                    createBaseVNode("mo", null, "⋯"),
+                    createBaseVNode("mo", null, "+"),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "x"),
+                      createBaseVNode("mi", null, "n")
+                    ]),
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("msub", null, [
+                      createBaseVNode("mi", null, "e"),
+                      createBaseVNode("mi", null, "n")
+                    ]),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", { separator: "true" }, ",")
+                  ]),
+                  createBaseVNode("annotation", { encoding: "application/x-tex" }, "f(x) = f(x_1e_1 + \\cdots + x_ne_n) = x_1f(e_1) + \\cdots + x_nf(e_n), ")
+                ])
+              ])
+            ]),
+            createBaseVNode("span", {
+              class: "katex-html",
+              "aria-hidden": "true"
+            }, [
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "1em", "vertical-align": "-0.25em" }
+                }),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                createBaseVNode("span", { class: "mclose" }, ")"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                }),
+                createBaseVNode("span", { class: "mrel" }, "="),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "1em", "vertical-align": "-0.25em" }
+                }),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.3011em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "e"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.3011em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                }),
+                createBaseVNode("span", { class: "mbin" }, "+"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "0.6667em", "vertical-align": "-0.0833em" }
+                }),
+                createBaseVNode("span", { class: "minner" }, "⋯"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                }),
+                createBaseVNode("span", { class: "mbin" }, "+"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "1em", "vertical-align": "-0.25em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.1514em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "e"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.1514em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mclose" }, ")"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                }),
+                createBaseVNode("span", { class: "mrel" }, "="),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "1em", "vertical-align": "-0.25em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.3011em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "e"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.3011em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "1")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mclose" }, ")"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                }),
+                createBaseVNode("span", { class: "mbin" }, "+"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "0.6667em", "vertical-align": "-0.0833em" }
+                }),
+                createBaseVNode("span", { class: "minner" }, "⋯"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                }),
+                createBaseVNode("span", { class: "mbin" }, "+"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2222em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "1em", "vertical-align": "-0.25em" }
+                }),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.1514em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord" }, [
+                  createBaseVNode("span", { class: "mord mathnormal" }, "e"),
+                  createBaseVNode("span", { class: "msupsub" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.1514em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "2.7em" }
+                            }),
+                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "0.15em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", { class: "mclose" }, ")"),
+                createBaseVNode("span", { class: "mpunct" }, ",")
+              ])
+            ])
+          ])
+        ])
+      ]),
+      createBaseVNode("p", null, [
+        createTextVNode("这是线性函数表达式的推广。如果记 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "f"),
+                  createBaseVNode("mo", { stretchy: "false" }, "("),
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "e"),
+                    createBaseVNode("mi", null, "i")
+                  ]),
+                  createBaseVNode("mo", { stretchy: "false" }, ")"),
+                  createBaseVNode("mo", null, "="),
+                  createBaseVNode("mo", { stretchy: "false" }, "("),
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "a"),
+                    createBaseVNode("mrow", null, [
+                      createBaseVNode("mn", null, "1"),
+                      createBaseVNode("mi", null, "i")
+                    ])
+                  ]),
+                  createBaseVNode("mo", { separator: "true" }, ","),
+                  createBaseVNode("mo", null, "⋯"),
+                  createBaseVNode("mtext", null, " "),
+                  createBaseVNode("mo", { separator: "true" }, ","),
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "a"),
+                    createBaseVNode("mrow", null, [
+                      createBaseVNode("mi", null, "m"),
+                      createBaseVNode("mi", null, "i")
+                    ])
+                  ]),
+                  createBaseVNode("mo", { stretchy: "false" }, ")")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "f(e_i) = (a_{1i},\\cdots,a_{mi})")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "1em", "vertical-align": "-0.25em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.10764em" }
+              }, "f"),
+              createBaseVNode("span", { class: "mopen" }, "("),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathnormal" }, "e"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.3117em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "i")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", { class: "mclose" }, ")"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, "="),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "1em", "vertical-align": "-0.25em" }
+              }),
+              createBaseVNode("span", { class: "mopen" }, "("),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.3117em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, [
+                              createBaseVNode("span", { class: "mord mtight" }, "1"),
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "i")
+                            ])
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", { class: "mpunct" }, ","),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", { class: "minner" }, "⋯"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", { class: "mpunct" }, ","),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.3117em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "mi")
+                            ])
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.15em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", { class: "mclose" }, ")")
+            ])
+          ])
+        ]),
+        createTextVNode("，用列向量表示，则上式可改写为")
+      ]),
+      createBaseVNode("p", { class: "katex-block" }, [
+        createBaseVNode("span", { class: "katex-display" }, [
+          createBaseVNode("span", { class: "katex" }, [
+            createBaseVNode("span", { class: "katex-mathml" }, [
+              createBaseVNode("math", {
+                xmlns: "http://www.w3.org/1998/Math/MathML",
+                display: "block"
+              }, [
+                createBaseVNode("semantics", null, [
+                  createBaseVNode("mrow", null, [
+                    createBaseVNode("mi", null, "f"),
+                    createBaseVNode("mo", { stretchy: "false" }, "("),
+                    createBaseVNode("mi", null, "x"),
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mo", null, "="),
+                    createBaseVNode("mrow", null, [
+                      createBaseVNode("mo", { fence: "true" }, "("),
+                      createBaseVNode("mtable", {
+                        rowspacing: "0.16em",
+                        columnalign: "center center center center",
+                        columnspacing: "1em"
+                      }, [
+                        createBaseVNode("mtr", null, [
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", null, "a"),
+                                createBaseVNode("mn", null, "11")
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", null, "a"),
+                                createBaseVNode("mn", null, "12")
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("mo", {
+                                lspace: "0em",
+                                rspace: "0em"
+                              }, "⋯")
+                            ])
+                          ]),
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", null, "a"),
+                                createBaseVNode("mrow", null, [
+                                  createBaseVNode("mn", null, "1"),
+                                  createBaseVNode("mi", null, "n")
+                                ])
+                              ])
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("mtr", null, [
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", null, "a"),
+                                createBaseVNode("mn", null, "21")
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", null, "a"),
+                                createBaseVNode("mn", null, "22")
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("mo", {
+                                lspace: "0em",
+                                rspace: "0em"
+                              }, "⋯")
+                            ])
+                          ]),
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", null, "a"),
+                                createBaseVNode("mrow", null, [
+                                  createBaseVNode("mn", null, "2"),
+                                  createBaseVNode("mi", null, "n")
+                                ])
+                              ])
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("mtr", null, [
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("mi", { mathvariant: "normal" }, "⋮"),
+                                createBaseVNode("mpadded", {
+                                  height: "0em",
+                                  voffset: "0em"
+                                }, [
+                                  createBaseVNode("mspace", {
+                                    mathbackground: "black",
+                                    width: "0em",
+                                    height: "1.5em"
+                                  })
+                                ])
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("mi", { mathvariant: "normal" }, "⋮"),
+                                createBaseVNode("mpadded", {
+                                  height: "0em",
+                                  voffset: "0em"
+                                }, [
+                                  createBaseVNode("mspace", {
+                                    mathbackground: "black",
+                                    width: "0em",
+                                    height: "1.5em"
+                                  })
+                                ])
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("mo", {
+                                lspace: "0em",
+                                rspace: "0em"
+                              }, "⋱")
+                            ])
+                          ]),
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("mi", { mathvariant: "normal" }, "⋮"),
+                                createBaseVNode("mpadded", {
+                                  height: "0em",
+                                  voffset: "0em"
+                                }, [
+                                  createBaseVNode("mspace", {
+                                    mathbackground: "black",
+                                    width: "0em",
+                                    height: "1.5em"
+                                  })
+                                ])
+                              ])
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("mtr", null, [
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", null, "a"),
+                                createBaseVNode("mrow", null, [
+                                  createBaseVNode("mi", null, "m"),
+                                  createBaseVNode("mn", null, "1")
+                                ])
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", null, "a"),
+                                createBaseVNode("mrow", null, [
+                                  createBaseVNode("mi", null, "m"),
+                                  createBaseVNode("mn", null, "2")
+                                ])
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("mo", {
+                                lspace: "0em",
+                                rspace: "0em"
+                              }, "⋯")
+                            ])
+                          ]),
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", null, "a"),
+                                createBaseVNode("mrow", null, [
+                                  createBaseVNode("mi", null, "m"),
+                                  createBaseVNode("mi", null, "n")
+                                ])
+                              ])
+                            ])
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("mo", { fence: "true" }, ")")
+                    ]),
+                    createBaseVNode("mrow", null, [
+                      createBaseVNode("mo", { fence: "true" }, "("),
+                      createBaseVNode("mtable", {
+                        rowspacing: "0.16em",
+                        columnalign: "center",
+                        columnspacing: "1em"
+                      }, [
+                        createBaseVNode("mtr", null, [
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", null, "x"),
+                                createBaseVNode("mn", null, "1")
+                              ])
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("mtr", null, [
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", null, "x"),
+                                createBaseVNode("mn", null, "2")
+                              ])
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("mtr", null, [
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("mi", { mathvariant: "normal" }, "⋮"),
+                                createBaseVNode("mpadded", {
+                                  height: "0em",
+                                  voffset: "0em"
+                                }, [
+                                  createBaseVNode("mspace", {
+                                    mathbackground: "black",
+                                    width: "0em",
+                                    height: "1.5em"
+                                  })
+                                ])
+                              ])
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("mtr", null, [
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "0",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", null, "x"),
+                                createBaseVNode("mi", null, "n")
+                              ])
+                            ])
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("mo", { fence: "true" }, ")")
+                    ]),
+                    createBaseVNode("mo", { separator: "true" }, ",")
+                  ]),
+                  createBaseVNode("annotation", { encoding: "application/x-tex" }, "f(x) = \\begin{pmatrix} a_{11} & a_{12} & \\cdots & a_{1n} \\\\ a_{21} & a_{22} & \\cdots & a_{2n} \\\\ \\vdots & \\vdots & \\ddots & \\vdots \\\\ a_{m1} & a_{m2} & \\cdots & a_{mn} \\end{pmatrix} \\begin{pmatrix} x_1 \\\\ x_2 \\\\ \\vdots \\\\ x_n \\end{pmatrix}, ")
+                ])
+              ])
+            ]),
+            createBaseVNode("span", {
+              class: "katex-html",
+              "aria-hidden": "true"
+            }, [
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "1em", "vertical-align": "-0.25em" }
+                }),
+                createBaseVNode("span", {
+                  class: "mord mathnormal",
+                  style: { "margin-right": "0.10764em" }
+                }, "f"),
+                createBaseVNode("span", { class: "mopen" }, "("),
+                createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                createBaseVNode("span", { class: "mclose" }, ")"),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                }),
+                createBaseVNode("span", { class: "mrel" }, "="),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.2778em" }
+                })
+              ]),
+              createBaseVNode("span", { class: "base" }, [
+                createBaseVNode("span", {
+                  class: "strut",
+                  style: { "height": "5.46em", "vertical-align": "-2.48em" }
+                }),
+                createBaseVNode("span", { class: "minner" }, [
+                  createBaseVNode("span", { class: "mopen" }, [
+                    createBaseVNode("span", { class: "delimsizing mult" }, [
+                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                        createBaseVNode("span", { class: "vlist-r" }, [
+                          createBaseVNode("span", {
+                            class: "vlist",
+                            style: { "height": "2.95em" }
+                          }, [
+                            createBaseVNode("span", { style: { "top": "-4.95em" } }, [
+                              createBaseVNode("span", {
+                                class: "pstrut",
+                                style: { "height": "7.4em" }
+                              }),
+                              createBaseVNode("span", { style: { "width": "0.875em", "height": "5.400em" } }, [
+                                createBaseVNode("svg", {
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  width: "0.875em",
+                                  height: "5.400em",
+                                  viewBox: "0 0 875 5400"
+                                }, [
+                                  createBaseVNode("path", { d: "M863,9c0,-2,-2,-5,-6,-9c0,0,-17,0,-17,0c-12.7,0,-19.3,0.3,-20,1\nc-5.3,5.3,-10.3,11,-15,17c-242.7,294.7,-395.3,682,-458,1162c-21.3,163.3,-33.3,349,\n-36,557 l0,1884c0.2,6,0,26,0,60c2,159.3,10,310.7,24,454c53.3,528,210,\n949.7,470,1265c4.7,6,9.7,11.7,15,17c0.7,0.7,7,1,19,1c0,0,18,0,18,0c4,-4,6,-7,6,-9\nc0,-2.7,-3.3,-8.7,-10,-18c-135.3,-192.7,-235.5,-414.3,-300.5,-665c-65,-250.7,-102.5,\n-544.7,-112.5,-882c-2,-104,-3,-167,-3,-189\nl0,-1892c0,-162.7,5.7,-314,17,-454c20.7,-272,63.7,-513,129,-723c65.3,\n-210,155.3,-396.3,270,-559c6.7,-9.3,10,-15.3,10,-18z" })
+                                ])
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                        ]),
+                        createBaseVNode("span", { class: "vlist-r" }, [
+                          createBaseVNode("span", {
+                            class: "vlist",
+                            style: { "height": "2.45em" }
+                          }, [
+                            createBaseVNode("span")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("span", { class: "mord" }, [
+                    createBaseVNode("span", { class: "mtable" }, [
+                      createBaseVNode("span", { class: "col-align-c" }, [
+                        createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                          createBaseVNode("span", { class: "vlist-r" }, [
+                            createBaseVNode("span", {
+                              class: "vlist",
+                              style: { "height": "2.98em" }
+                            }, [
+                              createBaseVNode("span", { style: { "top": "-5.8275em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.6875em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.3011em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "11")
+                                                ])
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.15em" }
+                                          }, [
+                                            createBaseVNode("span")
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { style: { "top": "-4.6275em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.6875em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.3011em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "21")
+                                                ])
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.15em" }
+                                          }, [
+                                            createBaseVNode("span")
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { style: { "top": "-2.7675em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.6875em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord" }, "⋮"),
+                                    createBaseVNode("span", {
+                                      class: "mord rule",
+                                      style: { "border-right-width": "0em", "border-top-width": "1.5em", "bottom": "0em" }
+                                    })
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { style: { "top": "-1.5675em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.6875em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.3011em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mathnormal mtight" }, "m"),
+                                                  createBaseVNode("span", { class: "mord mtight" }, "1")
+                                                ])
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.15em" }
+                                          }, [
+                                            createBaseVNode("span")
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("span", { class: "vlist-s" }, "​")
+                          ]),
+                          createBaseVNode("span", { class: "vlist-r" }, [
+                            createBaseVNode("span", {
+                              class: "vlist",
+                              style: { "height": "2.48em" }
+                            }, [
+                              createBaseVNode("span")
+                            ])
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", {
+                        class: "arraycolsep",
+                        style: { "width": "0.5em" }
+                      }),
+                      createBaseVNode("span", {
+                        class: "arraycolsep",
+                        style: { "width": "0.5em" }
+                      }),
+                      createBaseVNode("span", { class: "col-align-c" }, [
+                        createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                          createBaseVNode("span", { class: "vlist-r" }, [
+                            createBaseVNode("span", {
+                              class: "vlist",
+                              style: { "height": "2.98em" }
+                            }, [
+                              createBaseVNode("span", { style: { "top": "-5.8275em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.6875em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.3011em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "12")
+                                                ])
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.15em" }
+                                          }, [
+                                            createBaseVNode("span")
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { style: { "top": "-4.6275em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.6875em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.3011em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "22")
+                                                ])
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.15em" }
+                                          }, [
+                                            createBaseVNode("span")
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { style: { "top": "-2.7675em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.6875em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord" }, "⋮"),
+                                    createBaseVNode("span", {
+                                      class: "mord rule",
+                                      style: { "border-right-width": "0em", "border-top-width": "1.5em", "bottom": "0em" }
+                                    })
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { style: { "top": "-1.5675em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.6875em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.3011em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mathnormal mtight" }, "m"),
+                                                  createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                ])
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.15em" }
+                                          }, [
+                                            createBaseVNode("span")
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("span", { class: "vlist-s" }, "​")
+                          ]),
+                          createBaseVNode("span", { class: "vlist-r" }, [
+                            createBaseVNode("span", {
+                              class: "vlist",
+                              style: { "height": "2.48em" }
+                            }, [
+                              createBaseVNode("span")
+                            ])
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", {
+                        class: "arraycolsep",
+                        style: { "width": "0.5em" }
+                      }),
+                      createBaseVNode("span", {
+                        class: "arraycolsep",
+                        style: { "width": "0.5em" }
+                      }),
+                      createBaseVNode("span", { class: "col-align-c" }, [
+                        createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                          createBaseVNode("span", { class: "vlist-r" }, [
+                            createBaseVNode("span", {
+                              class: "vlist",
+                              style: { "height": "2.98em" }
+                            }, [
+                              createBaseVNode("span", { style: { "top": "-5.64em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.5em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "minner" }, "⋯")
+                                ])
+                              ]),
+                              createBaseVNode("span", { style: { "top": "-4.44em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.5em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "minner" }, "⋯")
+                                ])
+                              ]),
+                              createBaseVNode("span", { style: { "top": "-2.58em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.5em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "minner" }, "⋱")
+                                ])
+                              ]),
+                              createBaseVNode("span", { style: { "top": "-1.38em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.5em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "minner" }, "⋯")
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("span", { class: "vlist-s" }, "​")
+                          ]),
+                          createBaseVNode("span", { class: "vlist-r" }, [
+                            createBaseVNode("span", {
+                              class: "vlist",
+                              style: { "height": "2.48em" }
+                            }, [
+                              createBaseVNode("span")
+                            ])
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", {
+                        class: "arraycolsep",
+                        style: { "width": "0.5em" }
+                      }),
+                      createBaseVNode("span", {
+                        class: "arraycolsep",
+                        style: { "width": "0.5em" }
+                      }),
+                      createBaseVNode("span", { class: "col-align-c" }, [
+                        createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                          createBaseVNode("span", { class: "vlist-r" }, [
+                            createBaseVNode("span", {
+                              class: "vlist",
+                              style: { "height": "2.98em" }
+                            }, [
+                              createBaseVNode("span", { style: { "top": "-5.8275em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.6875em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.3011em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "1"),
+                                                  createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                                                ])
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.15em" }
+                                          }, [
+                                            createBaseVNode("span")
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { style: { "top": "-4.6275em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.6875em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.3011em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "2"),
+                                                  createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                                                ])
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.15em" }
+                                          }, [
+                                            createBaseVNode("span")
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { style: { "top": "-2.7675em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.6875em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord" }, "⋮"),
+                                    createBaseVNode("span", {
+                                      class: "mord rule",
+                                      style: { "border-right-width": "0em", "border-top-width": "1.5em", "bottom": "0em" }
+                                    })
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { style: { "top": "-1.5675em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.6875em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.1514em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mathnormal mtight" }, "mn")
+                                                ])
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.15em" }
+                                          }, [
+                                            createBaseVNode("span")
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("span", { class: "vlist-s" }, "​")
+                          ]),
+                          createBaseVNode("span", { class: "vlist-r" }, [
+                            createBaseVNode("span", {
+                              class: "vlist",
+                              style: { "height": "2.48em" }
+                            }, [
+                              createBaseVNode("span")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("span", { class: "mclose" }, [
+                    createBaseVNode("span", { class: "delimsizing mult" }, [
+                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                        createBaseVNode("span", { class: "vlist-r" }, [
+                          createBaseVNode("span", {
+                            class: "vlist",
+                            style: { "height": "2.95em" }
+                          }, [
+                            createBaseVNode("span", { style: { "top": "-4.95em" } }, [
+                              createBaseVNode("span", {
+                                class: "pstrut",
+                                style: { "height": "7.4em" }
+                              }),
+                              createBaseVNode("span", { style: { "width": "0.875em", "height": "5.400em" } }, [
+                                createBaseVNode("svg", {
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  width: "0.875em",
+                                  height: "5.400em",
+                                  viewBox: "0 0 875 5400"
+                                }, [
+                                  createBaseVNode("path", { d: "M76,0c-16.7,0,-25,3,-25,9c0,2,2,6.3,6,13c21.3,28.7,42.3,60.3,\n63,95c96.7,156.7,172.8,332.5,228.5,527.5c55.7,195,92.8,416.5,111.5,664.5\nc11.3,139.3,17,290.7,17,454c0,28,1.7,43,3.3,45l0,1809\nc-3,4,-3.3,16.7,-3.3,38c0,162,-5.7,313.7,-17,455c-18.7,248,-55.8,469.3,-111.5,664\nc-55.7,194.7,-131.8,370.3,-228.5,527c-20.7,34.7,-41.7,66.3,-63,95c-2,3.3,-4,7,-6,11\nc0,7.3,5.7,11,17,11c0,0,11,0,11,0c9.3,0,14.3,-0.3,15,-1c5.3,-5.3,10.3,-11,15,-17\nc242.7,-294.7,395.3,-681.7,458,-1161c21.3,-164.7,33.3,-350.7,36,-558\nl0,-1944c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,\n-470,-1265c-4.7,-6,-9.7,-11.7,-15,-17c-0.7,-0.7,-6.7,-1,-18,-1z" })
+                                ])
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                        ]),
+                        createBaseVNode("span", { class: "vlist-r" }, [
+                          createBaseVNode("span", {
+                            class: "vlist",
+                            style: { "height": "2.45em" }
+                          }, [
+                            createBaseVNode("span")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.1667em" }
+                }),
+                createBaseVNode("span", { class: "minner" }, [
+                  createBaseVNode("span", { class: "mopen" }, [
+                    createBaseVNode("span", { class: "delimsizing mult" }, [
+                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                        createBaseVNode("span", { class: "vlist-r" }, [
+                          createBaseVNode("span", {
+                            class: "vlist",
+                            style: { "height": "2.95em" }
+                          }, [
+                            createBaseVNode("span", { style: { "top": "-4.95em" } }, [
+                              createBaseVNode("span", {
+                                class: "pstrut",
+                                style: { "height": "7.4em" }
+                              }),
+                              createBaseVNode("span", { style: { "width": "0.875em", "height": "5.400em" } }, [
+                                createBaseVNode("svg", {
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  width: "0.875em",
+                                  height: "5.400em",
+                                  viewBox: "0 0 875 5400"
+                                }, [
+                                  createBaseVNode("path", { d: "M863,9c0,-2,-2,-5,-6,-9c0,0,-17,0,-17,0c-12.7,0,-19.3,0.3,-20,1\nc-5.3,5.3,-10.3,11,-15,17c-242.7,294.7,-395.3,682,-458,1162c-21.3,163.3,-33.3,349,\n-36,557 l0,1884c0.2,6,0,26,0,60c2,159.3,10,310.7,24,454c53.3,528,210,\n949.7,470,1265c4.7,6,9.7,11.7,15,17c0.7,0.7,7,1,19,1c0,0,18,0,18,0c4,-4,6,-7,6,-9\nc0,-2.7,-3.3,-8.7,-10,-18c-135.3,-192.7,-235.5,-414.3,-300.5,-665c-65,-250.7,-102.5,\n-544.7,-112.5,-882c-2,-104,-3,-167,-3,-189\nl0,-1892c0,-162.7,5.7,-314,17,-454c20.7,-272,63.7,-513,129,-723c65.3,\n-210,155.3,-396.3,270,-559c6.7,-9.3,10,-15.3,10,-18z" })
+                                ])
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                        ]),
+                        createBaseVNode("span", { class: "vlist-r" }, [
+                          createBaseVNode("span", {
+                            class: "vlist",
+                            style: { "height": "2.45em" }
+                          }, [
+                            createBaseVNode("span")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("span", { class: "mord" }, [
+                    createBaseVNode("span", { class: "mtable" }, [
+                      createBaseVNode("span", { class: "col-align-c" }, [
+                        createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                          createBaseVNode("span", { class: "vlist-r" }, [
+                            createBaseVNode("span", {
+                              class: "vlist",
+                              style: { "height": "2.98em" }
+                            }, [
+                              createBaseVNode("span", { style: { "top": "-5.8275em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.6875em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.3011em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, "1")
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.15em" }
+                                          }, [
+                                            createBaseVNode("span")
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { style: { "top": "-4.6275em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.6875em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.3011em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, "2")
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.15em" }
+                                          }, [
+                                            createBaseVNode("span")
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { style: { "top": "-2.7675em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.6875em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord" }, "⋮"),
+                                    createBaseVNode("span", {
+                                      class: "mord rule",
+                                      style: { "border-right-width": "0em", "border-top-width": "1.5em", "bottom": "0em" }
+                                    })
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { style: { "top": "-1.5675em" } }, [
+                                createBaseVNode("span", {
+                                  class: "pstrut",
+                                  style: { "height": "3.6875em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.1514em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.15em" }
+                                          }, [
+                                            createBaseVNode("span")
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("span", { class: "vlist-s" }, "​")
+                          ]),
+                          createBaseVNode("span", { class: "vlist-r" }, [
+                            createBaseVNode("span", {
+                              class: "vlist",
+                              style: { "height": "2.48em" }
+                            }, [
+                              createBaseVNode("span")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("span", { class: "mclose" }, [
+                    createBaseVNode("span", { class: "delimsizing mult" }, [
+                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                        createBaseVNode("span", { class: "vlist-r" }, [
+                          createBaseVNode("span", {
+                            class: "vlist",
+                            style: { "height": "2.95em" }
+                          }, [
+                            createBaseVNode("span", { style: { "top": "-4.95em" } }, [
+                              createBaseVNode("span", {
+                                class: "pstrut",
+                                style: { "height": "7.4em" }
+                              }),
+                              createBaseVNode("span", { style: { "width": "0.875em", "height": "5.400em" } }, [
+                                createBaseVNode("svg", {
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  width: "0.875em",
+                                  height: "5.400em",
+                                  viewBox: "0 0 875 5400"
+                                }, [
+                                  createBaseVNode("path", { d: "M76,0c-16.7,0,-25,3,-25,9c0,2,2,6.3,6,13c21.3,28.7,42.3,60.3,\n63,95c96.7,156.7,172.8,332.5,228.5,527.5c55.7,195,92.8,416.5,111.5,664.5\nc11.3,139.3,17,290.7,17,454c0,28,1.7,43,3.3,45l0,1809\nc-3,4,-3.3,16.7,-3.3,38c0,162,-5.7,313.7,-17,455c-18.7,248,-55.8,469.3,-111.5,664\nc-55.7,194.7,-131.8,370.3,-228.5,527c-20.7,34.7,-41.7,66.3,-63,95c-2,3.3,-4,7,-6,11\nc0,7.3,5.7,11,17,11c0,0,11,0,11,0c9.3,0,14.3,-0.3,15,-1c5.3,-5.3,10.3,-11,15,-17\nc242.7,-294.7,395.3,-681.7,458,-1161c21.3,-164.7,33.3,-350.7,36,-558\nl0,-1944c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,\n-470,-1265c-4.7,-6,-9.7,-11.7,-15,-17c-0.7,-0.7,-6.7,-1,-18,-1z" })
+                                ])
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                        ]),
+                        createBaseVNode("span", { class: "vlist-r" }, [
+                          createBaseVNode("span", {
+                            class: "vlist",
+                            style: { "height": "2.45em" }
+                          }, [
+                            createBaseVNode("span")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("span", {
+                  class: "mspace",
+                  style: { "margin-right": "0.1667em" }
+                }),
+                createBaseVNode("span", { class: "mpunct" }, ",")
+              ])
+            ])
+          ])
+        ])
+      ]),
+      createBaseVNode("p", null, [
+        createTextVNode("这是线性映射的矩阵表示，"),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "f")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "f")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.8889em", "vertical-align": "-0.1944em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.10764em" }
+              }, "f")
+            ])
+          ])
+        ]),
+        createTextVNode(" 由矩阵 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "A"),
+                  createBaseVNode("mo", null, "="),
+                  createBaseVNode("mo", { stretchy: "false" }, "("),
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mi", null, "a"),
+                    createBaseVNode("mrow", null, [
+                      createBaseVNode("mi", null, "i"),
+                      createBaseVNode("mi", null, "j")
+                    ])
+                  ]),
+                  createBaseVNode("msub", null, [
+                    createBaseVNode("mo", { stretchy: "false" }, ")"),
+                    createBaseVNode("mrow", null, [
+                      createBaseVNode("mi", null, "m"),
+                      createBaseVNode("mo", null, "×"),
+                      createBaseVNode("mi", null, "n")
+                    ])
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "A = (a_{ij})_{m\\times n}")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6833em" }
+              }),
+              createBaseVNode("span", { class: "mord mathnormal" }, "A"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, "="),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "1.0361em", "vertical-align": "-0.2861em" }
+              }),
+              createBaseVNode("span", { class: "mopen" }, "("),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathnormal" }, "a"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.3117em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, [
+                              createBaseVNode("span", {
+                                class: "mord mathnormal mtight",
+                                style: { "margin-right": "0.05724em" }
+                              }, "ij")
+                            ])
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.2861em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", { class: "mclose" }, [
+                createBaseVNode("span", { class: "mclose" }, ")"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.2583em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "m"),
+                              createBaseVNode("span", { class: "mbin mtight" }, "×"),
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                            ])
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                    ]),
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.2083em" }
+                      }, [
+                        createBaseVNode("span")
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        createTextVNode(" 完全决定了。")
+      ]),
+      createBaseVNode("p", null, [
+        createTextVNode("如果 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "f"),
+                  createBaseVNode("mo", null, ":"),
+                  createBaseVNode("msup", null, [
+                    createBaseVNode("mi", { mathvariant: "double-struck" }, "R"),
+                    createBaseVNode("mi", null, "n")
+                  ]),
+                  createBaseVNode("mo", null, "→"),
+                  createBaseVNode("msup", null, [
+                    createBaseVNode("mi", { mathvariant: "double-struck" }, "R"),
+                    createBaseVNode("mi", null, "m")
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "f: \\mathbb{R}^n \\to \\mathbb{R}^m")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.8889em", "vertical-align": "-0.1944em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.10764em" }
+              }, "f"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, ":"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6889em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathbb" }, "R"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.6644em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-3.063em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, "→"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6889em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathbb" }, "R"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.6644em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-3.063em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "m")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        createTextVNode(", "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "g"),
+                  createBaseVNode("mo", null, ":"),
+                  createBaseVNode("msup", null, [
+                    createBaseVNode("mi", { mathvariant: "double-struck" }, "R"),
+                    createBaseVNode("mi", null, "m")
+                  ]),
+                  createBaseVNode("mo", null, "→"),
+                  createBaseVNode("msup", null, [
+                    createBaseVNode("mi", { mathvariant: "double-struck" }, "R"),
+                    createBaseVNode("mi", null, "s")
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "g: \\mathbb{R}^m \\to \\mathbb{R}^s")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.625em", "vertical-align": "-0.1944em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.03588em" }
+              }, "g"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, ":"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6889em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathbb" }, "R"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.6644em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-3.063em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "m")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, "→"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6889em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathbb" }, "R"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.6644em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-3.063em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "s")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        createTextVNode(" 均为连续映射，则复合映射 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "g"),
+                  createBaseVNode("mo", null, "∘"),
+                  createBaseVNode("mi", null, "f")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "g \\circ f")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6389em", "vertical-align": "-0.1944em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.03588em" }
+              }, "g"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2222em" }
+              }),
+              createBaseVNode("span", { class: "mbin" }, "∘"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2222em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.8889em", "vertical-align": "-0.1944em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.10764em" }
+              }, "f")
+            ])
+          ])
+        ]),
+        createTextVNode(" 是从 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("msup", null, [
+                    createBaseVNode("mi", { mathvariant: "double-struck" }, "R"),
+                    createBaseVNode("mi", null, "n")
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\mathbb{R}^n")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6889em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathbb" }, "R"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.6644em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-3.063em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "n")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        createTextVNode(" 到 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("msup", null, [
+                    createBaseVNode("mi", { mathvariant: "double-struck" }, "R"),
+                    createBaseVNode("mi", null, "s")
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\mathbb{R}^s")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6889em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mord mathbb" }, "R"),
+                createBaseVNode("span", { class: "msupsub" }, [
+                  createBaseVNode("span", { class: "vlist-t" }, [
+                    createBaseVNode("span", { class: "vlist-r" }, [
+                      createBaseVNode("span", {
+                        class: "vlist",
+                        style: { "height": "0.6644em" }
+                      }, [
+                        createBaseVNode("span", { style: { "top": "-3.063em", "margin-right": "0.05em" } }, [
+                          createBaseVNode("span", {
+                            class: "pstrut",
+                            style: { "height": "2.7em" }
+                          }),
+                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "s")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        createTextVNode(" 的连续映射。")
+      ]),
+      createBaseVNode("p", null, [
+        createTextVNode("如果 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "f"),
+                  createBaseVNode("mo", { separator: "true" }, ","),
+                  createBaseVNode("mi", null, "g")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "f,g")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.8889em", "vertical-align": "-0.1944em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.10764em" }
+              }, "f"),
+              createBaseVNode("span", { class: "mpunct" }, ","),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.03588em" }
+              }, "g")
+            ])
+          ])
+        ]),
+        createTextVNode(" 均为线性映射，且其矩阵表示分别为 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "A"),
+                  createBaseVNode("mo", { separator: "true" }, ","),
+                  createBaseVNode("mi", null, "B")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "A,B")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.8778em", "vertical-align": "-0.1944em" }
+              }),
+              createBaseVNode("span", { class: "mord mathnormal" }, "A"),
+              createBaseVNode("span", { class: "mpunct" }, ","),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.05017em" }
+              }, "B")
+            ])
+          ])
+        ]),
+        createTextVNode("，则 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "g"),
+                  createBaseVNode("mo", null, "∘"),
+                  createBaseVNode("mi", null, "f")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "g \\circ f")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6389em", "vertical-align": "-0.1944em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.03588em" }
+              }, "g"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2222em" }
+              }),
+              createBaseVNode("span", { class: "mbin" }, "∘"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2222em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.8889em", "vertical-align": "-0.1944em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.10764em" }
+              }, "f")
+            ])
+          ])
+        ]),
+        createTextVNode(" 也是线性映射，其矩阵表示为 "),
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", { xmlns: "http://www.w3.org/1998/Math/MathML" }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("mi", null, "B"),
+                  createBaseVNode("mi", null, "A")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "BA")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6833em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.05017em" }
+              }, "B"),
+              createBaseVNode("span", { class: "mord mathnormal" }, "A")
+            ])
+          ])
+        ]),
+        createTextVNode("。")
+      ]),
+      createBaseVNode("p", null, "因此，对于线性映射的研究可以转化为对于矩阵的研究，这是线性代数的内容。")
+    ], -1),
+    createStaticVNode('<h2 id="part-4-二元函数" tabindex="-1"><a class="header-anchor" href="#part-4-二元函数"><span>Part 4 二元函数</span></a></h2><p>映射 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><msup><mi mathvariant="double-struck">R</mi><mn>2</mn></msup><mo>→</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">f: \\mathbb{R}^2 \\to \\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> 称为二元函数。<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="double-struck">R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\\mathbb{R}^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> 中的点用坐标 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> 表示。设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x_0,y_0) \\in \\mathbb{R}^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>，如果存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">A \\in \\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span>，使得任给 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\varepsilon &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">ε</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，均存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\delta &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，当</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi mathvariant="normal">∥</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>−</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mi mathvariant="normal">∥</mi><mo>=</mo><msqrt><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><mi>y</mi><mo>−</mo><msub><mi>y</mi><mn>0</mn></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></msqrt><mo>&lt;</mo><mi>δ</mi></mrow><annotation encoding="application/x-tex">0 &lt; \\|(x,y) - (x_0,y_0)\\| = \\sqrt{(x - x_0)^2 + (y - y_0)^2} &lt; \\delta </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6835em;vertical-align:-0.0391em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∥</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord">∥</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.24em;vertical-align:-0.2561em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9839em;"><span class="svg-align" style="top:-3.2em;"><span class="pstrut" style="height:3.2em;"></span><span class="mord" style="padding-left:1em;"><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-2.9439em;"><span class="pstrut" style="height:3.2em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.28em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.28em" viewBox="0 0 400000 1296" preserveAspectRatio="xMinYMin slice"><path d="M263,681c0.7,0,18,39.7,52,119\nc34,79.3,68.167,158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120\nc340,-704.7,510.7,-1060.3,512,-1067\nl0 -0\nc4.7,-7.3,11,-11,19,-11\nH40000v40H1012.3\ns-271.3,567,-271.3,567c-38.7,80.7,-84,175,-136,283c-52,108,-89.167,185.3,-111.5,232\nc-22.3,46.7,-33.8,70.3,-34.5,71c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1\ns-109,-253,-109,-253c-72.7,-168,-109.3,-252,-110,-252c-10.7,8,-22,16.7,-34,26\nc-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26s76,-59,76,-59s76,-60,76,-60z\nM1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2561em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span></span></span></span></span></p><p>时，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>−</mo><mi>A</mi><mi mathvariant="normal">∣</mi><mo>&lt;</mo><mi>ε</mi></mrow><annotation encoding="application/x-tex">|f(x,y) - A| &lt; \\varepsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">A</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">ε</span></span></span></span>，就称 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x_0,y_0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 处有极限（重极限），记为</p>', 4),
+    createBaseVNode("p", { class: "katex-block" }, [
+      createBaseVNode("span", { class: "katex-display" }, [
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", {
+              xmlns: "http://www.w3.org/1998/Math/MathML",
+              display: "block"
+            }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mrow", null, [
+                  createBaseVNode("munder", null, [
+                    createBaseVNode("mrow", null, [
+                      createBaseVNode("mi", null, "lim"),
+                      createBaseVNode("mo", null, "⁡")
+                    ]),
+                    createBaseVNode("mrow", null, [
+                      createBaseVNode("mo", { stretchy: "false" }, "("),
+                      createBaseVNode("mi", null, "x"),
+                      createBaseVNode("mo", { separator: "true" }, ","),
+                      createBaseVNode("mi", null, "y"),
+                      createBaseVNode("mo", { stretchy: "false" }, ")"),
+                      createBaseVNode("mo", null, "→"),
+                      createBaseVNode("mo", { stretchy: "false" }, "("),
+                      createBaseVNode("msub", null, [
+                        createBaseVNode("mi", null, "x"),
+                        createBaseVNode("mn", null, "0")
+                      ]),
+                      createBaseVNode("mo", { separator: "true" }, ","),
+                      createBaseVNode("msub", null, [
+                        createBaseVNode("mi", null, "y"),
+                        createBaseVNode("mn", null, "0")
+                      ]),
+                      createBaseVNode("mo", { stretchy: "false" }, ")")
+                    ])
+                  ]),
+                  createBaseVNode("mi", null, "f"),
+                  createBaseVNode("mo", { stretchy: "false" }, "("),
+                  createBaseVNode("mi", null, "x"),
+                  createBaseVNode("mo", { separator: "true" }, ","),
+                  createBaseVNode("mi", null, "y"),
+                  createBaseVNode("mo", { stretchy: "false" }, ")"),
+                  createBaseVNode("mo", null, "="),
+                  createBaseVNode("mi", null, "A"),
+                  createBaseVNode("mspace", { width: "1em" }),
+                  createBaseVNode("mtext", null, "or"),
+                  createBaseVNode("mspace", { width: "1em" }),
+                  createBaseVNode("munder", null, [
+                    createBaseVNode("mrow", null, [
+                      createBaseVNode("mi", null, "lim"),
+                      createBaseVNode("mo", null, "⁡")
+                    ]),
+                    createBaseVNode("mstyle", { scriptlevel: "1" }, [
+                      createBaseVNode("mtable", {
+                        rowspacing: "0.1em",
+                        columnalign: "center",
+                        columnspacing: "1em"
+                      }, [
+                        createBaseVNode("mtr", null, [
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "1",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("mi", null, "x"),
+                                createBaseVNode("mo", null, "→"),
+                                createBaseVNode("msub", null, [
+                                  createBaseVNode("mi", null, "x"),
+                                  createBaseVNode("mn", null, "0")
+                                ])
+                              ])
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("mtr", null, [
+                          createBaseVNode("mtd", null, [
+                            createBaseVNode("mstyle", {
+                              scriptlevel: "1",
+                              displaystyle: "false"
+                            }, [
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("mi", null, "y"),
+                                createBaseVNode("mo", null, "→"),
+                                createBaseVNode("msub", null, [
+                                  createBaseVNode("mi", null, "y"),
+                                  createBaseVNode("mn", null, "0")
+                                ])
+                              ])
+                            ])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("mi", null, "f"),
+                  createBaseVNode("mo", { stretchy: "false" }, "("),
+                  createBaseVNode("mi", null, "x"),
+                  createBaseVNode("mo", { separator: "true" }, ","),
+                  createBaseVNode("mi", null, "y"),
+                  createBaseVNode("mo", { stretchy: "false" }, ")"),
+                  createBaseVNode("mo", null, "="),
+                  createBaseVNode("mi", null, "A"),
+                  createBaseVNode("mi", { mathvariant: "normal" }, ".")
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\lim_{(x,y) \\to (x_0,y_0)} f(x,y) = A\\quad\\text{or}\\quad \\lim_{\\substack{x \\to x_0 \\\\ y \\to y_0}} f(x,y) = A. ")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "1.716em", "vertical-align": "-0.966em" }
+              }),
+              createBaseVNode("span", { class: "mop op-limits" }, [
+                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                  createBaseVNode("span", { class: "vlist-r" }, [
+                    createBaseVNode("span", {
+                      class: "vlist",
+                      style: { "height": "0.6944em" }
+                    }, [
+                      createBaseVNode("span", { style: { "top": "-2.309em", "margin-left": "0em" } }, [
+                        createBaseVNode("span", {
+                          class: "pstrut",
+                          style: { "height": "3em" }
+                        }),
+                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                          createBaseVNode("span", { class: "mord mtight" }, [
+                            createBaseVNode("span", { class: "mopen mtight" }, "("),
+                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "x"),
+                            createBaseVNode("span", { class: "mpunct mtight" }, ","),
+                            createBaseVNode("span", {
+                              class: "mord mathnormal mtight",
+                              style: { "margin-right": "0.03588em" }
+                            }, "y"),
+                            createBaseVNode("span", { class: "mclose mtight" }, ")"),
+                            createBaseVNode("span", { class: "mrel mtight" }, "→"),
+                            createBaseVNode("span", { class: "mopen mtight" }, "("),
+                            createBaseVNode("span", { class: "mord mtight" }, [
+                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "x"),
+                              createBaseVNode("span", { class: "msupsub" }, [
+                                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                    createBaseVNode("span", {
+                                      class: "vlist",
+                                      style: { "height": "0.3173em" }
+                                    }, [
+                                      createBaseVNode("span", { style: { "top": "-2.357em", "margin-left": "0em", "margin-right": "0.0714em" } }, [
+                                        createBaseVNode("span", {
+                                          class: "pstrut",
+                                          style: { "height": "2.5em" }
+                                        }),
+                                        createBaseVNode("span", { class: "sizing reset-size3 size1 mtight" }, [
+                                          createBaseVNode("span", { class: "mord mtight" }, "0")
+                                        ])
+                                      ])
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                                  ]),
+                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                    createBaseVNode("span", {
+                                      class: "vlist",
+                                      style: { "height": "0.143em" }
+                                    }, [
+                                      createBaseVNode("span")
+                                    ])
+                                  ])
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("span", { class: "mpunct mtight" }, ","),
+                            createBaseVNode("span", { class: "mord mtight" }, [
+                              createBaseVNode("span", {
+                                class: "mord mathnormal mtight",
+                                style: { "margin-right": "0.03588em" }
+                              }, "y"),
+                              createBaseVNode("span", { class: "msupsub" }, [
+                                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                    createBaseVNode("span", {
+                                      class: "vlist",
+                                      style: { "height": "0.3173em" }
+                                    }, [
+                                      createBaseVNode("span", { style: { "top": "-2.357em", "margin-left": "-0.0359em", "margin-right": "0.0714em" } }, [
+                                        createBaseVNode("span", {
+                                          class: "pstrut",
+                                          style: { "height": "2.5em" }
+                                        }),
+                                        createBaseVNode("span", { class: "sizing reset-size3 size1 mtight" }, [
+                                          createBaseVNode("span", { class: "mord mtight" }, "0")
+                                        ])
+                                      ])
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                                  ]),
+                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                    createBaseVNode("span", {
+                                      class: "vlist",
+                                      style: { "height": "0.143em" }
+                                    }, [
+                                      createBaseVNode("span")
+                                    ])
+                                  ])
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("span", { class: "mclose mtight" }, ")")
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { style: { "top": "-3em" } }, [
+                        createBaseVNode("span", {
+                          class: "pstrut",
+                          style: { "height": "3em" }
+                        }),
+                        createBaseVNode("span", null, [
+                          createBaseVNode("span", { class: "mop" }, "lim")
+                        ])
+                      ])
+                    ]),
+                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                  ]),
+                  createBaseVNode("span", { class: "vlist-r" }, [
+                    createBaseVNode("span", {
+                      class: "vlist",
+                      style: { "height": "0.966em" }
+                    }, [
+                      createBaseVNode("span")
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.10764em" }
+              }, "f"),
+              createBaseVNode("span", { class: "mopen" }, "("),
+              createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+              createBaseVNode("span", { class: "mpunct" }, ","),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.03588em" }
+              }, "y"),
+              createBaseVNode("span", { class: "mclose" }, ")"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, "="),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "1.8809em", "vertical-align": "-1.1309em" }
+              }),
+              createBaseVNode("span", { class: "mord mathnormal" }, "A"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "1em" }
+              }),
+              createBaseVNode("span", { class: "mord text" }, [
+                createBaseVNode("span", { class: "mord" }, "or")
+              ]),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "1em" }
+              }),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", { class: "mop op-limits" }, [
+                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                  createBaseVNode("span", { class: "vlist-r" }, [
+                    createBaseVNode("span", {
+                      class: "vlist",
+                      style: { "height": "0.6944em" }
+                    }, [
+                      createBaseVNode("span", { style: { "top": "-2.2266em", "margin-left": "0em" } }, [
+                        createBaseVNode("span", {
+                          class: "pstrut",
+                          style: { "height": "3em" }
+                        }),
+                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                          createBaseVNode("span", { class: "mord mtight" }, [
+                            createBaseVNode("span", { class: "mord mtight" }, [
+                              createBaseVNode("span", { class: "mtable" }, [
+                                createBaseVNode("span", { class: "col-align-c" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.8678em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-3.1372em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "x"),
+                                            createBaseVNode("span", { class: "mrel mtight" }, "→"),
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "x"),
+                                              createBaseVNode("span", { class: "msupsub" }, [
+                                                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.3173em" }
+                                                    }, [
+                                                      createBaseVNode("span", { style: { "top": "-2.357em", "margin-left": "0em", "margin-right": "0.0714em" } }, [
+                                                        createBaseVNode("span", {
+                                                          class: "pstrut",
+                                                          style: { "height": "2.5em" }
+                                                        }),
+                                                        createBaseVNode("span", { class: "sizing reset-size3 size1 mtight" }, [
+                                                          createBaseVNode("span", { class: "mord mtight" }, "0")
+                                                        ])
+                                                      ])
+                                                    ]),
+                                                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                                                  ]),
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.143em" }
+                                                    }, [
+                                                      createBaseVNode("span")
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { style: { "top": "-2.5267em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord mathnormal mtight",
+                                              style: { "margin-right": "0.03588em" }
+                                            }, "y"),
+                                            createBaseVNode("span", { class: "mrel mtight" }, "→"),
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal mtight",
+                                                style: { "margin-right": "0.03588em" }
+                                              }, "y"),
+                                              createBaseVNode("span", { class: "msupsub" }, [
+                                                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.3173em" }
+                                                    }, [
+                                                      createBaseVNode("span", { style: { "top": "-2.357em", "margin-left": "-0.0359em", "margin-right": "0.0714em" } }, [
+                                                        createBaseVNode("span", {
+                                                          class: "pstrut",
+                                                          style: { "height": "2.5em" }
+                                                        }),
+                                                        createBaseVNode("span", { class: "sizing reset-size3 size1 mtight" }, [
+                                                          createBaseVNode("span", { class: "mord mtight" }, "0")
+                                                        ])
+                                                      ])
+                                                    ]),
+                                                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                                                  ]),
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.143em" }
+                                                    }, [
+                                                      createBaseVNode("span")
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.3678em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ])
+                            ])
+                          ])
+                        ])
+                      ]),
+                      createBaseVNode("span", { style: { "top": "-3em" } }, [
+                        createBaseVNode("span", {
+                          class: "pstrut",
+                          style: { "height": "3em" }
+                        }),
+                        createBaseVNode("span", null, [
+                          createBaseVNode("span", { class: "mop" }, "lim")
+                        ])
+                      ])
+                    ]),
+                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                  ]),
+                  createBaseVNode("span", { class: "vlist-r" }, [
+                    createBaseVNode("span", {
+                      class: "vlist",
+                      style: { "height": "1.1309em" }
+                    }, [
+                      createBaseVNode("span")
+                    ])
+                  ])
+                ])
+              ]),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.10764em" }
+              }, "f"),
+              createBaseVNode("span", { class: "mopen" }, "("),
+              createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+              createBaseVNode("span", { class: "mpunct" }, ","),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.1667em" }
+              }),
+              createBaseVNode("span", {
+                class: "mord mathnormal",
+                style: { "margin-right": "0.03588em" }
+              }, "y"),
+              createBaseVNode("span", { class: "mclose" }, ")"),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              }),
+              createBaseVNode("span", { class: "mrel" }, "="),
+              createBaseVNode("span", {
+                class: "mspace",
+                style: { "margin-right": "0.2778em" }
+              })
+            ]),
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "0.6833em" }
+              }),
+              createBaseVNode("span", { class: "mord mathnormal" }, "A"),
+              createBaseVNode("span", { class: "mord" }, ".")
+            ])
+          ])
+        ])
+      ])
+    ], -1),
+    createStaticVNode('<p>如果对于每一个固定的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>，极限 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>x</mi><mo>→</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></munder><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>φ</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\\displaystyle\\lim_{x \\to x_0} f(x,y) = \\varphi(y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.5501em;vertical-align:-0.8001em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">→</span><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8001em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">φ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> 存在，则可以定义极限</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>y</mi><mo>→</mo><msub><mi>y</mi><mn>0</mn></msub></mrow></munder><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>x</mi><mo>→</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></munder><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>y</mi><mo>→</mo><msub><mi>y</mi><mn>0</mn></msub></mrow></munder><mi>φ</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\\lim_{y \\to y_0} \\lim_{x \\to x_0} f(x,y) = \\lim_{y \\to y_0} \\varphi(y). </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.5861em;vertical-align:-0.8361em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mrel mtight">→</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8361em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">→</span><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8001em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.5861em;vertical-align:-0.8361em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mrel mtight">→</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8361em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">φ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mord">.</span></span></span></span></span></p><p>类似地定义 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>x</mi><mo>→</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></munder><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>y</mi><mo>→</mo><msub><mi>y</mi><mn>0</mn></msub></mrow></munder><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\\displaystyle\\lim_{x \\to x_0} \\lim_{y \\to y_0} f(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.5861em;vertical-align:-0.8361em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">→</span><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8001em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mrel mtight">→</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8361em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>，称它们为累次极限。</p><p>/example/</p><blockquote><p>(1) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>→</mo><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></munder><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y</mi><mn>2</mn></msup></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mn>0</mn></mstyle></mrow><annotation encoding="application/x-tex">\\displaystyle \\lim_{(x,y) \\to (0,0)} \\frac{x^2y^2}{x^2 + y^2} = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.4571em;vertical-align:-0.966em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.309em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">x</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mclose mtight">)</span><span class="mrel mtight">→</span><span class="mopen mtight">(</span><span class="mord mtight">0</span><span class="mpunct mtight">,</span><span class="mord mtight">0</span><span class="mclose mtight">)</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.966em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，这是因为</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>0</mn><mo>⩽</mo><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mi>y</mi><mn>2</mn></msup></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac><mo>⩽</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi mathvariant="normal">∣</mi><mi>x</mi><mi>y</mi><mi mathvariant="normal">∣</mi><mo>⩽</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">0 \\leqslant \\frac{x^2y^2}{x^2 + y^2} \\leqslant \\frac{1}{2}|xy| \\leqslant \\frac{1}{4}(x^2 + y^2). </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7811em;vertical-align:-0.1367em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.3715em;vertical-align:-0.8804em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord">∣</span><span class="mord mathnormal">x</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">4</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1141em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord">.</span></span></span></span></span></p><p>(2) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mfrac><mrow><mi>x</mi><mi>y</mi></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\\displaystyle \\frac{xy}{x^2 + y^2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.988em;vertical-align:-0.8804em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0,0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">0</span><span class="mclose">)</span></span></span></span> 处无极限（分别考虑 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">y = x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = x^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>）。</p><p>(3) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi><mi>sin</mi><mo>⁡</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mn>1</mn><mi>y</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">f(x,y) = x\\sin\\dfrac{1}{y}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2019em;vertical-align:-0.8804em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">sin</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>。由 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mi mathvariant="normal">∣</mi><mo>⩽</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">|f(x,y)| \\leqslant x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 知 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>→</mo><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></munder><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mstyle></mrow><annotation encoding="application/x-tex">\\displaystyle \\lim_{(x,y) \\to (0,0)} f(x,y) = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.716em;vertical-align:-0.966em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.309em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">x</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mclose mtight">)</span><span class="mrel mtight">→</span><span class="mopen mtight">(</span><span class="mord mtight">0</span><span class="mpunct mtight">,</span><span class="mord mtight">0</span><span class="mclose mtight">)</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.966em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，但 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>y</mi><mo>→</mo><mn>0</mn></mrow></munder><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\\displaystyle \\lim_{y \\to 0} f(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.6032em;vertical-align:-0.8532em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3829em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mrel mtight">→</span><span class="mord mtight">0</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8532em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> 不存在。</p><p>(4) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>y</mi><mo>→</mo><mn>0</mn></mrow></munder><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mi>x</mi><mi>y</mi></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>y</mi><mo>→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mi>x</mi><mi>y</mi></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mn>0</mn></mstyle></mrow><annotation encoding="application/x-tex">\\displaystyle \\lim_{y \\to 0} \\lim_{x \\to 0} \\frac{xy}{x^2 + y^2} = \\lim_{x \\to 0} \\lim_{y \\to 0} \\frac{xy}{x^2 + y^2} = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.988em;vertical-align:-0.8804em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3829em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mrel mtight">→</span><span class="mord mtight">0</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8532em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3829em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">→</span><span class="mord mtight">0</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7171em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.988em;vertical-align:-0.8804em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3829em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">→</span><span class="mord mtight">0</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7171em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3829em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mrel mtight">→</span><span class="mord mtight">0</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8532em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，但由 (2) 知重极限不存在。</p></blockquote><p><strong>定理9</strong>：如果 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>→</mo><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></munder><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>A</mi></mstyle></mrow><annotation encoding="application/x-tex">\\displaystyle \\lim_{(x,y) \\to (a,b)} f(x,y) = A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.716em;vertical-align:-0.966em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.309em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">x</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mclose mtight">)</span><span class="mrel mtight">→</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">a</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">b</span><span class="mclose mtight">)</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.966em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>，且对任意 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo mathvariant="normal">≠</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">y \\ne b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>x</mi><mo>→</mo><mi>a</mi></mrow></munder><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>φ</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\\displaystyle \\lim_{x \\to a} f(x,y) = \\varphi(y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.45em;vertical-align:-0.7em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">→</span><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">φ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> 存在，则</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>y</mi><mo>→</mo><mi>b</mi></mrow></munder><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>x</mi><mo>→</mo><mi>a</mi></mrow></munder><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>y</mi><mo>→</mo><mi>b</mi></mrow></munder><mi>φ</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>A</mi><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">\\lim_{y \\to b} \\lim_{x \\to a} f(x,y) = \\lim_{y \\to b} \\varphi(y) = A; </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.6382em;vertical-align:-0.8882em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3479em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mrel mtight">→</span><span class="mord mathnormal mtight">b</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8882em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">→</span><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.6382em;vertical-align:-0.8882em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3479em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mrel mtight">→</span><span class="mord mathnormal mtight">b</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8882em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">φ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">A</span><span class="mpunct">;</span></span></span></span></span></p><p>如果对任意 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo mathvariant="normal">≠</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">x \\ne a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>y</mi><mo>→</mo><mi>b</mi></mrow></munder><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\\displaystyle \\lim_{y \\to b} f(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.6382em;vertical-align:-0.8882em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3479em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mrel mtight">→</span><span class="mord mathnormal mtight">b</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8882em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> 也存在，则</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>x</mi><mo>→</mo><mi>a</mi></mrow></munder><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>y</mi><mo>→</mo><mi>b</mi></mrow></munder><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>A</mi><mo>=</mo><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>y</mi><mo>→</mo><mi>b</mi></mrow></munder><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>x</mi><mo>→</mo><mi>a</mi></mrow></munder><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\\lim_{x \\to a} \\lim_{y \\to b} f(x,y) = A = \\lim_{y \\to b} \\lim_{x \\to a} f(x,y). </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.6382em;vertical-align:-0.8882em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">→</span><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3479em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mrel mtight">→</span><span class="mord mathnormal mtight">b</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8882em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.6382em;vertical-align:-0.8882em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3479em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mrel mtight">→</span><span class="mord mathnormal mtight">b</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8882em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">→</span><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mord">.</span></span></span></span></span></p><blockquote><p>/proof/</p><p>以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> 有限为例。由假设，任给 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\varepsilon &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">ε</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，存在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\delta &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，当</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>0</mn><mo>&lt;</mo><msqrt><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>a</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><mi>y</mi><mo>−</mo><mi>b</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></msqrt><mo>&lt;</mo><mi>δ</mi></mrow><annotation encoding="application/x-tex">0 &lt; \\sqrt{(x - a)^2 + (y - b)^2} &lt; \\delta </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6835em;vertical-align:-0.0391em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.24em;vertical-align:-0.2561em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9839em;"><span class="svg-align" style="top:-3.2em;"><span class="pstrut" style="height:3.2em;"></span><span class="mord" style="padding-left:1em;"><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">a</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">b</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-2.9439em;"><span class="pstrut" style="height:3.2em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.28em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.28em" viewBox="0 0 400000 1296" preserveAspectRatio="xMinYMin slice"><path d="M263,681c0.7,0,18,39.7,52,119\nc34,79.3,68.167,158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120\nc340,-704.7,510.7,-1060.3,512,-1067\nl0 -0\nc4.7,-7.3,11,-11,19,-11\nH40000v40H1012.3\ns-271.3,567,-271.3,567c-38.7,80.7,-84,175,-136,283c-52,108,-89.167,185.3,-111.5,232\nc-22.3,46.7,-33.8,70.3,-34.5,71c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1\ns-109,-253,-109,-253c-72.7,-168,-109.3,-252,-110,-252c-10.7,8,-22,16.7,-34,26\nc-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26s76,-59,76,-59s76,-60,76,-60z\nM1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2561em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span></span></span></span></span></p><p>时 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>−</mo><mi>A</mi><mi mathvariant="normal">∣</mi><mo>&lt;</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mi>ε</mi><mn>2</mn></mfrac></mstyle></mrow><annotation encoding="application/x-tex">|f(x,y) - A| &lt; \\dfrac{\\varepsilon}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">A</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.7936em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">ε</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>。固定 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>，令 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>→</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">x \\to a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span>，得</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mo fence="true">∣</mo><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>x</mi><mo>→</mo><mi>a</mi></mrow></munder><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>−</mo><mi>A</mi><mo fence="true">∣</mo></mrow><mo>⩽</mo><mfrac><mi>ε</mi><mn>2</mn></mfrac><mo>&lt;</mo><mi>ε</mi><mo separator="true">,</mo><mspace width="1em"></mspace><mi mathvariant="normal">∀</mi><mtext> </mtext><mn>0</mn><mo>&lt;</mo><mi mathvariant="normal">∣</mi><mi>y</mi><mo>−</mo><mi>b</mi><mi mathvariant="normal">∣</mi><mo>&lt;</mo><mfrac><mi>δ</mi><mn>2</mn></mfrac><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\\left|\\lim_{x \\to a} f(x,y) - A\\right| \\leqslant \\frac{\\varepsilon}{2} &lt; \\varepsilon,\\quad \\forall\\,0 &lt; |y - b| &lt; \\frac{\\delta}{2}. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.85em;vertical-align:-0.7em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.15em;"><span style="top:-3.15em;"><span class="pstrut" style="height:3.8em;"></span><span style="width:0.333em;height:1.800em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.333em" height="1.800em" viewBox="0 0 333 1800"><path d="M145 15 v585 v600 v585 c2.667,10,9.667,15,21,15\nc10,0,16.667,-5,20,-15 v-585 v-600 v-585 c-2.667,-10,-9.667,-15,-21,-15\nc-10,0,-16.667,5,-20,15z M188 15 H145 v585 v600 v585 h43z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.65em;"><span></span></span></span></span></span></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">→</span><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">A</span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.15em;"><span style="top:-3.15em;"><span class="pstrut" style="height:3.8em;"></span><span style="width:0.333em;height:1.800em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.333em" height="1.800em" viewBox="0 0 333 1800"><path d="M145 15 v585 v600 v585 c2.667,10,9.667,15,21,15\nc10,0,16.667,-5,20,-15 v-585 v-600 v-585 c-2.667,-10,-9.667,-15,-21,-15\nc-10,0,-16.667,5,-20,15z M188 15 H145 v585 v600 v585 h43z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.65em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.7936em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">ε</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ε</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">∀</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">b</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord">.</span></span></span></span></span></p><p>这说明</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>y</mi><mo>→</mo><mi>b</mi></mrow></munder><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>x</mi><mo>→</mo><mi>a</mi></mrow></munder><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>A</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\\lim_{y \\to b} \\lim_{x \\to a} f(x,y) = A. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.6382em;vertical-align:-0.8882em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3479em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mrel mtight">→</span><span class="mord mathnormal mtight">b</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8882em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.4em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">→</span><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord">.</span></span></span></span></span></p><p>其它情形可类似证明</p></blockquote>', 10)
+  ])]);
+}
+const index_html = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
+const data = JSON.parse('{"path":"/integral/integral-29/","title":"Lesson 29 连续映射 III","lang":"zh-CN","frontmatter":{"title":"Lesson 29 连续映射 III","permalink":"/integral/integral-29/","createTime":"2026/08/17 14:17:38","description":"Part 3 连续映射 · 基本概念 回忆一下连续函数的定义：f:R→R 在 x0​ 处连续是指，任给 ε>0，存在 δ>0，使得 ∣x−x0​∣<δ 时 ∣f(x)−f(x0​)∣<ε。用度量空间的语言可作如下推广： 定义1 (连续映射) 设 f:X→Y 为度量空间 (X,ρ1​), (Y,ρ2​) 之间的映射，设 x0​∈X。 如果任给 ε>0，存...","head":[["script",{"type":"application/ld+json"},"{\\"@context\\":\\"https://schema.org\\",\\"@type\\":\\"Article\\",\\"headline\\":\\"Lesson 29 连续映射 III\\",\\"image\\":[\\"\\"],\\"dateModified\\":\\"2026-08-17T07:22:27.000Z\\",\\"author\\":[]}"],["meta",{"property":"og:url","content":"https://soda-official.top/integral/integral-29/"}],["meta",{"property":"og:site_name","content":"soda-official"}],["meta",{"property":"og:title","content":"Lesson 29 连续映射 III"}],["meta",{"property":"og:description","content":"Part 3 连续映射 · 基本概念 回忆一下连续函数的定义：f:R→R 在 x0​ 处连续是指，任给 ε>0，存在 δ>0，使得 ∣x−x0​∣<δ 时 ∣f(x)−f(x0​)∣<ε。用度量空间的语言可作如下推广： 定义1 (连续映射) 设 f:X→Y 为度量空间 (X,ρ1​), (Y,ρ2​) 之间的映射，设 x0​∈X。 如果任给 ε>0，存..."}],["meta",{"property":"og:type","content":"article"}],["meta",{"property":"og:locale","content":"zh-CN"}],["meta",{"property":"og:updated_time","content":"2026-08-17T07:22:27.000Z"}],["meta",{"property":"article:modified_time","content":"2026-08-17T07:22:27.000Z"}]]},"readingTime":{"minutes":10.33,"words":3099},"git":{"createdTime":1765885399000,"updatedTime":1786951347000,"contributors":[{"name":"nicostore-mathematica","username":"nicostore-mathematica","email":"nicostore.core@outlook.com","commits":4,"avatar":"https://avatars.githubusercontent.com/nicostore-mathematica?v=4","url":"https://github.com/nicostore-mathematica"}],"changelog":[{"hash":"44b2c35133fdda464519e8cf9f0db5f368774022","time":1786951347000,"email":"nicostore.core@outlook.com","author":"nicostore-mathematica","message":"notes re"},{"hash":"9a3cadee1e1727c73d2f9489f071efc0be5ce5e9","time":1766029017000,"email":"nicostore.core@outlook.com","author":"nicostore-mathematica","message":"push"},{"hash":"a87df96f60eac1dd4633c4f54a9d50b4b6f64985","time":1765985581000,"email":"nicostore.core@outlook.com","author":"nicostore-mathematica","message":"integral-+"},{"hash":"40677138c88969f906619424dbde159fa1b87809","time":1765885399000,"email":"nicostore.core@outlook.com","author":"nicostore-mathematica","message":"integral+"}]},"autoDesc":true,"filePathRelative":"integral/integral-29.md","headers":[]}');
+export {
+  index_html as comp,
+  data
+};

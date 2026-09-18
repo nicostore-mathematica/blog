@@ -1,0 +1,17 @@
+import { _ as _export_sfc, c as createElementBlock, a as createBaseVNode, b as createTextVNode, d as createVNode, r as resolveComponent, o as openBlock } from "./app-C973mz5j.js";
+const _sfc_main = {};
+function _sfc_render(_ctx, _cache) {
+  const _component_WordCount = resolveComponent("WordCount");
+  return openBlock(), createElementBlock("div", null, [
+    createBaseVNode("p", null, [
+      _cache[0] || (_cache[0] = createTextVNode("总字数：", -1)),
+      createVNode(_component_WordCount, { type: "mathematical-physics" })
+    ])
+  ]);
+}
+const index_html = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
+const data = JSON.parse('{"path":"/mathematical-physics/","title":"数学物理方程","lang":"zh-CN","frontmatter":{"title":"数学物理方程","permalink":"/mathematical-physics/","createTime":"2026/03/20 16:33:28","description":"总字数：","head":[["script",{"type":"application/ld+json"},"{\\"@context\\":\\"https://schema.org\\",\\"@type\\":\\"Article\\",\\"headline\\":\\"数学物理方程\\",\\"image\\":[\\"\\"],\\"dateModified\\":\\"2026-03-20T08:51:13.000Z\\",\\"author\\":[]}"],["meta",{"property":"og:url","content":"https://soda-official.top/mathematical-physics/"}],["meta",{"property":"og:site_name","content":"soda-official"}],["meta",{"property":"og:title","content":"数学物理方程"}],["meta",{"property":"og:description","content":"总字数："}],["meta",{"property":"og:type","content":"article"}],["meta",{"property":"og:locale","content":"zh-CN"}],["meta",{"property":"og:updated_time","content":"2026-03-20T08:51:13.000Z"}],["meta",{"property":"article:modified_time","content":"2026-03-20T08:51:13.000Z"}]]},"readingTime":{"minutes":0.08,"words":23},"git":{"createdTime":1773996673000,"updatedTime":1773996673000,"contributors":[{"name":"nicostore.mathematica","username":"","email":"nicostore.core@outlook.com","commits":1,"avatar":"https://gravatar.com/avatar/83f1fc35cd96b7f6bb40bfaac0f88b4d31f0b77f31c49136a7130d42e7d3992f?d=retro"}],"changelog":[{"hash":"c1cb93dcb0d909e24cd9451562a9bec8d1987a3b","time":1773996673000,"email":"nicostore.core@outlook.com","author":"nicostore.mathematica","message":"大清洗"}]},"autoDesc":true,"filePathRelative":"mathematical-physics/README.md","headers":[]}');
+export {
+  index_html as comp,
+  data
+};

@@ -1,0 +1,11 @@
+import { _ as _export_sfc, c as createElementBlock, o as openBlock } from "./app-C973mz5j.js";
+const _sfc_main = {};
+function _sfc_render(_ctx, _cache) {
+  return openBlock(), createElementBlock("div");
+}
+const index_html = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
+const data = JSON.parse('{"path":"/complex/complex-7/","title":"Chapter 7 共形映射","lang":"zh-CN","frontmatter":{"title":"Chapter 7 共形映射","permalink":"/complex/complex-7/","createTime":"2026/03/22 01:41:54","head":[["script",{"type":"application/ld+json"},"{\\"@context\\":\\"https://schema.org\\",\\"@type\\":\\"Article\\",\\"headline\\":\\"Chapter 7 共形映射\\",\\"image\\":[\\"\\"],\\"dateModified\\":\\"2026-03-23T18:02:09.000Z\\",\\"author\\":[]}"],["meta",{"property":"og:url","content":"https://soda-official.top/complex/complex-7/"}],["meta",{"property":"og:site_name","content":"soda-official"}],["meta",{"property":"og:title","content":"Chapter 7 共形映射"}],["meta",{"property":"og:type","content":"article"}],["meta",{"property":"og:locale","content":"zh-CN"}],["meta",{"property":"og:updated_time","content":"2026-03-23T18:02:09.000Z"}],["meta",{"property":"article:modified_time","content":"2026-03-23T18:02:09.000Z"}]]},"readingTime":{"minutes":0.05,"words":15},"git":{"createdTime":1774114973000,"updatedTime":1774288929000,"contributors":[{"name":"nicostore.mathematica","username":"","email":"nicostore.core@outlook.com","commits":1,"avatar":"https://gravatar.com/avatar/83f1fc35cd96b7f6bb40bfaac0f88b4d31f0b77f31c49136a7130d42e7d3992f?d=retro"},{"name":"nicostore-mathematica","username":"nicostore-mathematica","email":"nicostore.core@outlook.com","commits":1,"avatar":"https://avatars.githubusercontent.com/nicostore-mathematica?v=4","url":"https://github.com/nicostore-mathematica"}],"changelog":[{"hash":"7ec70f33f96639b2bd65ff11a602a36b451b3240","time":1774288929000,"email":"nicostore.core@outlook.com","author":"nicostore-mathematica","message":"electrodynamics-9+"},{"hash":"c6b3270a98affc686d6601ffb35850700027a16d","time":1774114973000,"email":"nicostore.core@outlook.com","author":"nicostore.mathematica","message":"complex"}]},"filePathRelative":"complex/complex-7.md","headers":[]}');
+export {
+  index_html as comp,
+  data
+};

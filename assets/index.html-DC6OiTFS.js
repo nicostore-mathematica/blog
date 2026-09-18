@@ -1,0 +1,5478 @@
+import { _ as _export_sfc, c as createElementBlock, e as createStaticVNode, a as createBaseVNode, o as openBlock } from "./app-C973mz5j.js";
+const _sfc_main = {};
+function _sfc_render(_ctx, _cache) {
+  return openBlock(), createElementBlock("div", null, [..._cache[0] || (_cache[0] = [
+    createStaticVNode('<h2 id="part-4-外场中的粒子" tabindex="-1"><a class="header-anchor" href="#part-4-外场中的粒子"><span>Part 4 外场中的粒子</span></a></h2><p>自由粒子与周围的环境没有任何相互作用，一个自然的问题是，如何考虑环境对粒子的影响？此外，在非相对论极限下出现了牛顿力学的动能，如何体现势能的作用？</p><h3 id="·-标量场" tabindex="-1"><a class="header-anchor" href="#·-标量场"><span>· 标量场</span></a></h3><p>考虑闵氏时空标量场中的粒子。标量场对粒子的影响可以有各种方式，我们考虑最简单的情形，即使得线元长度发生变化 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi mathvariant="normal">d</mi><mi>s</mi><mi mathvariant="normal">∣</mi><mo>→</mo><msup><mi>e</mi><mi mathvariant="normal">Φ</mi></msup><mi mathvariant="normal">∣</mi><mi mathvariant="normal">d</mi><mi>s</mi><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">|\\mathrm{d}s| \\to e^{\\Phi} |\\mathrm{d}s|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathrm">d</span><span class="mord mathnormal">s</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0913em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">Φ</span></span></span></span></span></span></span></span></span><span class="mord">∣</span><span class="mord mathrm">d</span><span class="mord mathnormal">s</span><span class="mord">∣</span></span></span></span>，因此作用量为</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mo>−</mo><mi>m</mi><mi>c</mi><mo>∫</mo><msup><mi>e</mi><mi mathvariant="normal">Φ</mi></msup><mi mathvariant="normal">∣</mi><mi mathvariant="normal">d</mi><mi>s</mi><mi mathvariant="normal">∣</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">S = -mc \\int e^{\\Phi} |\\mathrm{d}s|, </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mord">−</span><span class="mord mathnormal">m</span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">Φ</span></span></span></span></span></span></span></span></span><span class="mord">∣</span><span class="mord mathrm">d</span><span class="mord mathnormal">s</span><span class="mord">∣</span><span class="mpunct">,</span></span></span></span></span></p><p>其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Φ</mi><mo>=</mo><mi mathvariant="normal">Φ</mi><mo stretchy="false">(</mo><mi>t</mi><mo separator="true">,</mo><mi>x</mi><mo stretchy="false">)</mo><mo>≡</mo><mi mathvariant="normal">Φ</mi><mo stretchy="false">(</mo><msup><mi>x</mi><mi>μ</mi></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\\Phi = \\Phi(t, x) \\equiv \\Phi(x^{\\mu})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Φ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">Φ</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">Φ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 是无量纲的标量场。仿照自由粒子情形，取固有时 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi></mrow><annotation encoding="application/x-tex">\\tau</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span></span> 作为世界线的参数，将作用量对时空坐标 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mi>μ</mi></msup></mrow><annotation encoding="application/x-tex">x^{\\mu}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span></span></span></span> 变分得到运动方程</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><msub><mi>x</mi><mi>μ</mi></msub></mrow><mrow><mi mathvariant="normal">d</mi><msup><mi>τ</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><mi mathvariant="normal">Φ</mi></mrow><mrow><mi mathvariant="normal">∂</mi><msup><mi>x</mi><mi>ν</mi></msup></mrow></mfrac><mfrac><mrow><mi mathvariant="normal">d</mi><msup><mi>x</mi><mi>ν</mi></msup></mrow><mrow><mi mathvariant="normal">d</mi><mi>τ</mi></mrow></mfrac><mfrac><mrow><mi mathvariant="normal">d</mi><msub><mi>x</mi><mi>μ</mi></msub></mrow><mrow><mi mathvariant="normal">d</mi><mi>τ</mi></mrow></mfrac><mo>+</mo><msup><mi>c</mi><mn>2</mn></msup><mfrac><mrow><mi mathvariant="normal">∂</mi><mi mathvariant="normal">Φ</mi></mrow><mrow><mi mathvariant="normal">∂</mi><msup><mi>x</mi><mi>μ</mi></msup></mrow></mfrac><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mspace width="1em"></mspace><mi>μ</mi><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>3.</mn></mrow><annotation encoding="application/x-tex">\\frac{\\mathrm{d}^{2}x_{\\mu}}{\\mathrm{d}\\tau^{2}} + \\frac{\\partial\\Phi}{\\partial x^{\\nu}} \\frac{\\mathrm{d}x^{\\nu}}{\\mathrm{d}\\tau} \\frac{\\mathrm{d}x_{\\mu}}{\\mathrm{d}\\tau} + c^{2} \\frac{\\partial\\Phi}{\\partial x^{\\mu}} = 0, \\quad \\mu = 0, 1, 2, 3. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.1771em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">d</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5904em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">ν</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord">Φ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">ν</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5904em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord">Φ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">3.</span></span></span></span></span></p><p>自由粒子的运动方程即上式中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Φ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\\Phi = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Φ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 的特殊情况。类似地，作用量 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mo>−</mo><mi>m</mi><mi>c</mi><mo>∫</mo><msup><mi>e</mi><mi mathvariant="normal">Φ</mi></msup><mi mathvariant="normal">∣</mi><mi mathvariant="normal">d</mi><mi>s</mi><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">S = -mc \\int e^{\\Phi} |\\mathrm{d}s|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1475em;vertical-align:-0.3061em;"></span><span class="mord">−</span><span class="mord mathnormal">m</span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0006em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">Φ</span></span></span></span></span></span></span></span></span><span class="mord">∣</span><span class="mord mathrm">d</span><span class="mord mathnormal">s</span><span class="mord">∣</span></span></span></span> 的 3 维形式为</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mo>−</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup><mo>∫</mo><mi mathvariant="normal">d</mi><mi>t</mi><msup><mi>e</mi><mi mathvariant="normal">Φ</mi></msup><msqrt><mrow><mn>1</mn><mo>−</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><msup><mi>c</mi><mn>2</mn></msup></mfrac></mrow></msqrt><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">S = -mc^{2} \\int \\mathrm{d}t e^{\\Phi} \\sqrt{1 - \\frac{v^{2}}{c^{2}}}, </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.5617em;vertical-align:-0.8622em;"></span><span class="mord">−</span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord mathnormal">t</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">Φ</span></span></span></span></span></span></span></span></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6994em;"><span class="svg-align" style="top:-4.4em;"><span class="pstrut" style="height:4.4em;"></span><span class="mord" style="padding-left:1em;"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4171em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.6594em;"><span class="pstrut" style="height:4.4em;"></span><span class="hide-tail" style="min-width:1.02em;height:2.48em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="2.48em" viewBox="0 0 400000 2592" preserveAspectRatio="xMinYMin slice"><path d="M424,2478\nc-1.3,-0.7,-38.5,-172,-111.5,-514c-73,-342,-109.8,-513.3,-110.5,-514\nc0,-2,-10.7,14.3,-32,49c-4.7,7.3,-9.8,15.7,-15.5,25c-5.7,9.3,-9.8,16,-12.5,20\ns-5,7,-5,7c-4,-3.3,-8.3,-7.7,-13,-13s-13,-13,-13,-13s76,-122,76,-122s77,-121,77,-121\ns209,968,209,968c0,-2,84.7,-361.7,254,-1079c169.3,-717.3,254.7,-1077.7,256,-1081\nl0 -0c4,-6.7,10,-10,18,-10 H400000\nv40H1014.6\ns-87.3,378.7,-272.6,1166c-185.3,787.3,-279.3,1182.3,-282,1185\nc-2,6,-10,9,-24,9\nc-8,0,-12,-0.7,-12,-2z M1001 80\nh400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7406em;"><span></span></span></span></span></span><span class="mpunct">,</span></span></span></span></span></p><p>将其对空间坐标 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mi>i</mi></msup></mrow><annotation encoding="application/x-tex">x^{i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8247em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8247em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span></span></span></span></span></span></span></span> 变分即得到运动方程的 3 维形式</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mover accent="true"><mi>p</mi><mo>¨</mo></mover><mi>i</mi></msub><mo>+</mo><msub><mi>p</mi><mi>i</mi></msub><mfrac><mrow><mi mathvariant="normal">∂</mi><mi mathvariant="normal">Φ</mi></mrow><mrow><mi mathvariant="normal">∂</mi><msup><mi>x</mi><mi>j</mi></msup></mrow></mfrac><msup><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mi>j</mi></msup><mo>+</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup><msqrt><mrow><mn>1</mn><mo>−</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><msup><mi>c</mi><mn>2</mn></msup></mfrac></mrow></msqrt><mfrac><mrow><mi mathvariant="normal">∂</mi><mi mathvariant="normal">Φ</mi></mrow><mrow><mi mathvariant="normal">∂</mi><msup><mi>x</mi><mi>i</mi></msup></mrow></mfrac><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mspace width="1em"></mspace><mi>i</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>3.</mn></mrow><annotation encoding="application/x-tex">\\ddot{p}_{i} + p_{i} \\frac{\\partial\\Phi}{\\partial x^{j}} \\dot{x}^{j} + mc^{2} \\sqrt{1 - \\frac{v^{2}}{c^{2}}} \\frac{\\partial\\Phi}{\\partial x^{i}} = 0, \\quad i = 1, 2, 3. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8623em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">p</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1667em;"><span class="mord">¨</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7507em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord">Φ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1111em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8747em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.44em;vertical-align:-0.7406em;"></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6994em;"><span class="svg-align" style="top:-4.4em;"><span class="pstrut" style="height:4.4em;"></span><span class="mord" style="padding-left:1em;"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4171em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.6594em;"><span class="pstrut" style="height:4.4em;"></span><span class="hide-tail" style="min-width:1.02em;height:2.48em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="2.48em" viewBox="0 0 400000 2592" preserveAspectRatio="xMinYMin slice"><path d="M424,2478\nc-1.3,-0.7,-38.5,-172,-111.5,-514c-73,-342,-109.8,-513.3,-110.5,-514\nc0,-2,-10.7,14.3,-32,49c-4.7,7.3,-9.8,15.7,-15.5,25c-5.7,9.3,-9.8,16,-12.5,20\ns-5,7,-5,7c-4,-3.3,-8.3,-7.7,-13,-13s-13,-13,-13,-13s76,-122,76,-122s77,-121,77,-121\ns209,968,209,968c0,-2,84.7,-361.7,254,-1079c169.3,-717.3,254.7,-1077.7,256,-1081\nl0 -0c4,-6.7,10,-10,18,-10 H400000\nv40H1014.6\ns-87.3,378.7,-272.6,1166c-185.3,787.3,-279.3,1182.3,-282,1185\nc-2,6,-10,9,-24,9\nc-8,0,-12,-0.7,-12,-2z M1001 80\nh400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7406em;"><span></span></span></span></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7507em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord">Φ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">3.</span></span></span></span></span></p><p>在有外场存在的情况下，我们同时考虑“低速”和“弱场”的极限，即</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><msup><mi>v</mi><mn>2</mn></msup><msup><mi>c</mi><mn>2</mn></msup></mfrac><mo>≪</mo><mn>1</mn><mo separator="true">,</mo><mspace width="1em"></mspace><mi mathvariant="normal">Φ</mi><mo>≡</mo><mfrac><mi>V</mi><mrow><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mo>≪</mo><mn>1</mn><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">\\frac{v^{2}}{c^{2}} \\ll 1, \\quad \\Phi \\equiv \\frac{V}{mc^{2}} \\ll 1, </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.1771em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≪</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">Φ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≪</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mpunct">,</span></span></span></span></span></p><p>其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span> 具有能量量纲。因为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>≪</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">V \\ll mc^{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≪</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span> 的意义是与外场相互作用的能量远远小于粒子的静止能量 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">mc^{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span>，因此上面的极限也可统称为非相对论极限。在非相对论极限下，运动方程展开并保留至速度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">v</mi></mrow><annotation encoding="application/x-tex">\\mathbf{v}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4444em;"></span><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span> 的领头阶为</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mover accent="true"><mi>x</mi><mo>¨</mo></mover><mi>i</mi></msub><mo>=</mo><mo>−</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>V</mi></mrow><mrow><mi mathvariant="normal">∂</mi><msup><mi>x</mi><mi>i</mi></msup></mrow></mfrac><mo separator="true">,</mo><mspace width="1em"></mspace><mi>i</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>3.</mn></mrow><annotation encoding="application/x-tex">\\ddot{x}_{i} = -\\frac{\\partial V}{\\partial x^{i}}, \\quad i = 1, 2, 3. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8179em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2222em;"><span class="mord">¨</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord">−</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7507em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">3.</span></span></span></span></span></p><p>这不是别的，正是牛顿第二定律的形式。其中右边 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>V</mi></mrow><mrow><mi mathvariant="normal">∂</mi><msup><mi>x</mi><mi>i</mi></msup></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">-\\dfrac{\\partial V}{\\partial x^{i}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord">−</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7507em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> 是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span> 的空间梯度，正是牛顿力学中保守力的形式。这表明在非相对论极限下，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span> 具有牛顿力学中势能的意义。</p><p>另一方面，作用量的 3 维形式也可展开并保留至领头阶，得到</p>', 17),
+    createBaseVNode("p", { class: "katex-block" }, [
+      createBaseVNode("span", { class: "katex-display" }, [
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", {
+              xmlns: "http://www.w3.org/1998/Math/MathML",
+              display: "block"
+            }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mtable", {
+                  rowspacing: "0.25em",
+                  columnalign: "right left",
+                  columnspacing: "0em"
+                }, [
+                  createBaseVNode("mtr", null, [
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mi", null, "S")
+                      ])
+                    ]),
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow", null, [
+                          createBaseVNode("mrow"),
+                          createBaseVNode("mo", null, "="),
+                          createBaseVNode("mo", null, "−"),
+                          createBaseVNode("mi", null, "m"),
+                          createBaseVNode("msup", null, [
+                            createBaseVNode("mi", null, "c"),
+                            createBaseVNode("mn", null, "2")
+                          ]),
+                          createBaseVNode("mo", null, "∫"),
+                          createBaseVNode("mi", { mathvariant: "normal" }, "d"),
+                          createBaseVNode("mi", null, "t"),
+                          createBaseVNode("msqrt", null, [
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mn", null, "1"),
+                              createBaseVNode("mo", null, "−"),
+                              createBaseVNode("mfrac", null, [
+                                createBaseVNode("msup", null, [
+                                  createBaseVNode("mi", null, "v"),
+                                  createBaseVNode("mn", null, "2")
+                                ]),
+                                createBaseVNode("msup", null, [
+                                  createBaseVNode("mi", null, "c"),
+                                  createBaseVNode("mn", null, "2")
+                                ])
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("msup", null, [
+                            createBaseVNode("mi", null, "e"),
+                            createBaseVNode("mfrac", null, [
+                              createBaseVNode("mi", null, "V"),
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("mi", null, "m"),
+                                createBaseVNode("msup", null, [
+                                  createBaseVNode("mi", null, "c"),
+                                  createBaseVNode("mn", null, "2")
+                                ])
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("mo", null, "="),
+                          createBaseVNode("mo", null, "−"),
+                          createBaseVNode("mi", null, "m"),
+                          createBaseVNode("msup", null, [
+                            createBaseVNode("mi", null, "c"),
+                            createBaseVNode("mn", null, "2")
+                          ]),
+                          createBaseVNode("mo", null, "∫"),
+                          createBaseVNode("mi", { mathvariant: "normal" }, "d"),
+                          createBaseVNode("mi", null, "t"),
+                          createBaseVNode("mrow", null, [
+                            createBaseVNode("mo", { fence: "true" }, "("),
+                            createBaseVNode("mn", null, "1"),
+                            createBaseVNode("mo", null, "−"),
+                            createBaseVNode("mfrac", null, [
+                              createBaseVNode("mn", null, "1"),
+                              createBaseVNode("mn", null, "2")
+                            ]),
+                            createBaseVNode("mfrac", null, [
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mi", null, "v"),
+                                createBaseVNode("mn", null, "2")
+                              ]),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mi", null, "c"),
+                                createBaseVNode("mn", null, "2")
+                              ])
+                            ]),
+                            createBaseVNode("mo", null, "+"),
+                            createBaseVNode("mo", null, "⋯"),
+                            createBaseVNode("mtext", null, " "),
+                            createBaseVNode("mo", { fence: "true" }, ")")
+                          ]),
+                          createBaseVNode("mrow", null, [
+                            createBaseVNode("mo", { fence: "true" }, "("),
+                            createBaseVNode("mn", null, "1"),
+                            createBaseVNode("mo", null, "+"),
+                            createBaseVNode("mfrac", null, [
+                              createBaseVNode("mi", null, "V"),
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("mi", null, "m"),
+                                createBaseVNode("msup", null, [
+                                  createBaseVNode("mi", null, "c"),
+                                  createBaseVNode("mn", null, "2")
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("mo", null, "+"),
+                            createBaseVNode("mo", null, "⋯"),
+                            createBaseVNode("mtext", null, " "),
+                            createBaseVNode("mo", { fence: "true" }, ")")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("mtr", null, [
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow")
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("mtr", null, [
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow")
+                      ])
+                    ]),
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow", null, [
+                          createBaseVNode("mrow"),
+                          createBaseVNode("mo", null, "="),
+                          createBaseVNode("mo", null, "−"),
+                          createBaseVNode("mo", null, "∫"),
+                          createBaseVNode("mi", { mathvariant: "normal" }, "d"),
+                          createBaseVNode("mi", null, "t"),
+                          createBaseVNode("mi", null, "m"),
+                          createBaseVNode("msup", null, [
+                            createBaseVNode("mi", null, "c"),
+                            createBaseVNode("mn", null, "2")
+                          ]),
+                          createBaseVNode("mo", null, "+"),
+                          createBaseVNode("mo", null, "∫"),
+                          createBaseVNode("mi", { mathvariant: "normal" }, "d"),
+                          createBaseVNode("mi", null, "t"),
+                          createBaseVNode("mrow", null, [
+                            createBaseVNode("mo", { fence: "true" }, "("),
+                            createBaseVNode("mfrac", null, [
+                              createBaseVNode("mn", null, "1"),
+                              createBaseVNode("mn", null, "2")
+                            ]),
+                            createBaseVNode("mi", null, "m"),
+                            createBaseVNode("msup", null, [
+                              createBaseVNode("mi", null, "v"),
+                              createBaseVNode("mn", null, "2")
+                            ]),
+                            createBaseVNode("mo", null, "−"),
+                            createBaseVNode("mi", null, "V"),
+                            createBaseVNode("mo", { fence: "true" }, ")")
+                          ]),
+                          createBaseVNode("mo", null, "+"),
+                          createBaseVNode("mo", null, "⋯"),
+                          createBaseVNode("mtext", null, " "),
+                          createBaseVNode("mi", { mathvariant: "normal" }, ".")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\begin{aligned} S &= -mc^{2} \\int \\mathrm{d}t \\sqrt{1 - \\frac{v^{2}}{c^{2}}} e^{\\frac{V}{mc^{2}}} = -mc^{2} \\int \\mathrm{d}t \\left(1 - \\frac{1}{2} \\frac{v^{2}}{c^{2}} + \\cdots \\right) \\left(1 + \\frac{V}{mc^{2}} + \\cdots \\right) \\\\\\\\ &= -\\int \\mathrm{d}t mc^{2} + \\int \\mathrm{d}t \\left(\\frac{1}{2}mv^{2} - V\\right) + \\cdots. \\end{aligned} ")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "7.1495em", "vertical-align": "-3.3247em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mtable" }, [
+                  createBaseVNode("span", { class: "col-align-r" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "3.8247em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-5.8247em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.6994em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", {
+                                class: "mord mathnormal",
+                                style: { "margin-right": "0.05764em" }
+                              }, "S")
+                            ])
+                          ]),
+                          createBaseVNode("span", { style: { "top": "-3.7347em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.6994em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" })
+                          ]),
+                          createBaseVNode("span", { style: { "top": "-1.6247em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.6994em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" })
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "3.3247em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("span", { class: "col-align-l" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "3.8247em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-5.8247em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.6994em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", { class: "mord" }),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mrel" }, "="),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, "−"),
+                              createBaseVNode("span", { class: "mord mathnormal" }, "m"),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord mathnormal" }, "c"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.8641em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "2")
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", {
+                                class: "mop op-symbol large-op",
+                                style: { "margin-right": "0.44445em", "position": "relative", "top": "-0.0011em" }
+                              }, "∫"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "mord mathrm" }, "d"),
+                              createBaseVNode("span", { class: "mord mathnormal" }, "t"),
+                              createBaseVNode("span", { class: "mord sqrt" }, [
+                                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                    createBaseVNode("span", {
+                                      class: "vlist",
+                                      style: { "height": "1.6994em" }
+                                    }, [
+                                      createBaseVNode("span", {
+                                        class: "svg-align",
+                                        style: { "top": "-4.4em" }
+                                      }, [
+                                        createBaseVNode("span", {
+                                          class: "pstrut",
+                                          style: { "height": "4.4em" }
+                                        }),
+                                        createBaseVNode("span", {
+                                          class: "mord",
+                                          style: { "padding-left": "1em" }
+                                        }, [
+                                          createBaseVNode("span", { class: "mord" }, "1"),
+                                          createBaseVNode("span", {
+                                            class: "mspace",
+                                            style: { "margin-right": "0.2222em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mbin" }, "−"),
+                                          createBaseVNode("span", {
+                                            class: "mspace",
+                                            style: { "margin-right": "0.2222em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord" }, [
+                                            createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                            createBaseVNode("span", { class: "mfrac" }, [
+                                              createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                                createBaseVNode("span", { class: "vlist-r" }, [
+                                                  createBaseVNode("span", {
+                                                    class: "vlist",
+                                                    style: { "height": "1.4171em" }
+                                                  }, [
+                                                    createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                                      createBaseVNode("span", {
+                                                        class: "pstrut",
+                                                        style: { "height": "3em" }
+                                                      }),
+                                                      createBaseVNode("span", { class: "mord" }, [
+                                                        createBaseVNode("span", { class: "mord" }, [
+                                                          createBaseVNode("span", { class: "mord mathnormal" }, "c"),
+                                                          createBaseVNode("span", { class: "msupsub" }, [
+                                                            createBaseVNode("span", { class: "vlist-t" }, [
+                                                              createBaseVNode("span", { class: "vlist-r" }, [
+                                                                createBaseVNode("span", {
+                                                                  class: "vlist",
+                                                                  style: { "height": "0.7401em" }
+                                                                }, [
+                                                                  createBaseVNode("span", { style: { "top": "-2.989em", "margin-right": "0.05em" } }, [
+                                                                    createBaseVNode("span", {
+                                                                      class: "pstrut",
+                                                                      style: { "height": "2.7em" }
+                                                                    }),
+                                                                    createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                                      createBaseVNode("span", { class: "mord mtight" }, [
+                                                                        createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                                      ])
+                                                                    ])
+                                                                  ])
+                                                                ])
+                                                              ])
+                                                            ])
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ]),
+                                                    createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                                      createBaseVNode("span", {
+                                                        class: "pstrut",
+                                                        style: { "height": "3em" }
+                                                      }),
+                                                      createBaseVNode("span", {
+                                                        class: "frac-line",
+                                                        style: { "border-bottom-width": "0.04em" }
+                                                      })
+                                                    ]),
+                                                    createBaseVNode("span", { style: { "top": "-3.677em" } }, [
+                                                      createBaseVNode("span", {
+                                                        class: "pstrut",
+                                                        style: { "height": "3em" }
+                                                      }),
+                                                      createBaseVNode("span", { class: "mord" }, [
+                                                        createBaseVNode("span", { class: "mord" }, [
+                                                          createBaseVNode("span", {
+                                                            class: "mord mathnormal",
+                                                            style: { "margin-right": "0.03588em" }
+                                                          }, "v"),
+                                                          createBaseVNode("span", { class: "msupsub" }, [
+                                                            createBaseVNode("span", { class: "vlist-t" }, [
+                                                              createBaseVNode("span", { class: "vlist-r" }, [
+                                                                createBaseVNode("span", {
+                                                                  class: "vlist",
+                                                                  style: { "height": "0.7401em" }
+                                                                }, [
+                                                                  createBaseVNode("span", { style: { "top": "-2.989em", "margin-right": "0.05em" } }, [
+                                                                    createBaseVNode("span", {
+                                                                      class: "pstrut",
+                                                                      style: { "height": "2.7em" }
+                                                                    }),
+                                                                    createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                                      createBaseVNode("span", { class: "mord mtight" }, [
+                                                                        createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                                      ])
+                                                                    ])
+                                                                  ])
+                                                                ])
+                                                              ])
+                                                            ])
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ])
+                                                  ]),
+                                                  createBaseVNode("span", { class: "vlist-s" }, "​")
+                                                ]),
+                                                createBaseVNode("span", { class: "vlist-r" }, [
+                                                  createBaseVNode("span", {
+                                                    class: "vlist",
+                                                    style: { "height": "0.686em" }
+                                                  }, [
+                                                    createBaseVNode("span")
+                                                  ])
+                                                ])
+                                              ])
+                                            ]),
+                                            createBaseVNode("span", { class: "mclose nulldelimiter" })
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { style: { "top": "-3.6594em" } }, [
+                                        createBaseVNode("span", {
+                                          class: "pstrut",
+                                          style: { "height": "4.4em" }
+                                        }),
+                                        createBaseVNode("span", {
+                                          class: "hide-tail",
+                                          style: { "min-width": "1.02em", "height": "2.48em" }
+                                        }, [
+                                          createBaseVNode("svg", {
+                                            xmlns: "http://www.w3.org/2000/svg",
+                                            width: "400em",
+                                            height: "2.48em",
+                                            viewBox: "0 0 400000 2592",
+                                            preserveAspectRatio: "xMinYMin slice"
+                                          }, [
+                                            createBaseVNode("path", { d: "M424,2478\nc-1.3,-0.7,-38.5,-172,-111.5,-514c-73,-342,-109.8,-513.3,-110.5,-514\nc0,-2,-10.7,14.3,-32,49c-4.7,7.3,-9.8,15.7,-15.5,25c-5.7,9.3,-9.8,16,-12.5,20\ns-5,7,-5,7c-4,-3.3,-8.3,-7.7,-13,-13s-13,-13,-13,-13s76,-122,76,-122s77,-121,77,-121\ns209,968,209,968c0,-2,84.7,-361.7,254,-1079c169.3,-717.3,254.7,-1077.7,256,-1081\nl0 -0c4,-6.7,10,-10,18,-10 H400000\nv40H1014.6\ns-87.3,378.7,-272.6,1166c-185.3,787.3,-279.3,1182.3,-282,1185\nc-2,6,-10,9,-24,9\nc-8,0,-12,-0.7,-12,-2z M1001 80\nh400000v40h-400000z" })
+                                          ])
+                                        ])
+                                      ])
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                                  ]),
+                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                    createBaseVNode("span", {
+                                      class: "vlist",
+                                      style: { "height": "0.7406em" }
+                                    }, [
+                                      createBaseVNode("span")
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord mathnormal" }, "e"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "1.0639em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-3.4534em", "margin-right": "0.05em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, [
+                                                createBaseVNode("span", { class: "mopen nulldelimiter sizing reset-size3 size6" }),
+                                                createBaseVNode("span", { class: "mfrac" }, [
+                                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                      createBaseVNode("span", {
+                                                        class: "vlist",
+                                                        style: { "height": "0.8721em" }
+                                                      }, [
+                                                        createBaseVNode("span", { style: { "top": "-2.5062em" } }, [
+                                                          createBaseVNode("span", {
+                                                            class: "pstrut",
+                                                            style: { "height": "3em" }
+                                                          }),
+                                                          createBaseVNode("span", { class: "sizing reset-size3 size1 mtight" }, [
+                                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "m"),
+                                                              createBaseVNode("span", { class: "mord mtight" }, [
+                                                                createBaseVNode("span", { class: "mord mathnormal mtight" }, "c"),
+                                                                createBaseVNode("span", { class: "msupsub" }, [
+                                                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                                      createBaseVNode("span", {
+                                                                        class: "vlist",
+                                                                        style: { "height": "0.9384em" }
+                                                                      }, [
+                                                                        createBaseVNode("span", { style: { "top": "-2.9384em", "margin-right": "0.1em" } }, [
+                                                                          createBaseVNode("span", {
+                                                                            class: "pstrut",
+                                                                            style: { "height": "2.6444em" }
+                                                                          }),
+                                                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                                                            createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                                          ])
+                                                                        ])
+                                                                      ])
+                                                                    ])
+                                                                  ])
+                                                                ])
+                                                              ])
+                                                            ])
+                                                          ])
+                                                        ]),
+                                                        createBaseVNode("span", { style: { "top": "-3.2255em" } }, [
+                                                          createBaseVNode("span", {
+                                                            class: "pstrut",
+                                                            style: { "height": "3em" }
+                                                          }),
+                                                          createBaseVNode("span", {
+                                                            class: "frac-line mtight",
+                                                            style: { "border-bottom-width": "0.049em" }
+                                                          })
+                                                        ]),
+                                                        createBaseVNode("span", { style: { "top": "-3.384em" } }, [
+                                                          createBaseVNode("span", {
+                                                            class: "pstrut",
+                                                            style: { "height": "3em" }
+                                                          }),
+                                                          createBaseVNode("span", { class: "sizing reset-size3 size1 mtight" }, [
+                                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                                              createBaseVNode("span", {
+                                                                class: "mord mathnormal mtight",
+                                                                style: { "margin-right": "0.22222em" }
+                                                              }, "V")
+                                                            ])
+                                                          ])
+                                                        ])
+                                                      ]),
+                                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                                    ]),
+                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                      createBaseVNode("span", {
+                                                        class: "vlist",
+                                                        style: { "height": "0.4938em" }
+                                                      }, [
+                                                        createBaseVNode("span")
+                                                      ])
+                                                    ])
+                                                  ])
+                                                ]),
+                                                createBaseVNode("span", { class: "mclose nulldelimiter sizing reset-size3 size6" })
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mrel" }, "="),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, "−"),
+                              createBaseVNode("span", { class: "mord mathnormal" }, "m"),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord mathnormal" }, "c"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.8641em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "2")
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", {
+                                class: "mop op-symbol large-op",
+                                style: { "margin-right": "0.44445em", "position": "relative", "top": "-0.0011em" }
+                              }, "∫"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "mord mathrm" }, "d"),
+                              createBaseVNode("span", { class: "mord mathnormal" }, "t"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "minner" }, [
+                                createBaseVNode("span", {
+                                  class: "mopen delimcenter",
+                                  style: { "top": "0em" }
+                                }, [
+                                  createBaseVNode("span", { class: "delimsizing size3" }, "(")
+                                ]),
+                                createBaseVNode("span", { class: "mord" }, "1"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mbin" }, "−"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                  createBaseVNode("span", { class: "mfrac" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "1.3214em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord" }, "2")
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", {
+                                              class: "frac-line",
+                                              style: { "border-bottom-width": "0.04em" }
+                                            })
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.677em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord" }, "1")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.686em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", { class: "mclose nulldelimiter" })
+                                ]),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                  createBaseVNode("span", { class: "mfrac" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "1.4911em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord" }, [
+                                                createBaseVNode("span", { class: "mord mathnormal" }, "c"),
+                                                createBaseVNode("span", { class: "msupsub" }, [
+                                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                      createBaseVNode("span", {
+                                                        class: "vlist",
+                                                        style: { "height": "0.7401em" }
+                                                      }, [
+                                                        createBaseVNode("span", { style: { "top": "-2.989em", "margin-right": "0.05em" } }, [
+                                                          createBaseVNode("span", {
+                                                            class: "pstrut",
+                                                            style: { "height": "2.7em" }
+                                                          }),
+                                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                                              createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                            ])
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", {
+                                              class: "frac-line",
+                                              style: { "border-bottom-width": "0.04em" }
+                                            })
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.677em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord" }, [
+                                                createBaseVNode("span", {
+                                                  class: "mord mathnormal",
+                                                  style: { "margin-right": "0.03588em" }
+                                                }, "v"),
+                                                createBaseVNode("span", { class: "msupsub" }, [
+                                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                      createBaseVNode("span", {
+                                                        class: "vlist",
+                                                        style: { "height": "0.8141em" }
+                                                      }, [
+                                                        createBaseVNode("span", { style: { "top": "-3.063em", "margin-right": "0.05em" } }, [
+                                                          createBaseVNode("span", {
+                                                            class: "pstrut",
+                                                            style: { "height": "2.7em" }
+                                                          }),
+                                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                                              createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                            ])
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.686em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", { class: "mclose nulldelimiter" })
+                                ]),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mbin" }, "+"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "minner" }, "⋯"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.1667em" }
+                                }),
+                                createBaseVNode("span", {
+                                  class: "mclose delimcenter",
+                                  style: { "top": "0em" }
+                                }, [
+                                  createBaseVNode("span", { class: "delimsizing size3" }, ")")
+                                ])
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "minner" }, [
+                                createBaseVNode("span", {
+                                  class: "mopen delimcenter",
+                                  style: { "top": "0em" }
+                                }, [
+                                  createBaseVNode("span", { class: "delimsizing size3" }, "(")
+                                ]),
+                                createBaseVNode("span", { class: "mord" }, "1"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mbin" }, "+"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                  createBaseVNode("span", { class: "mfrac" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "1.3603em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord mathnormal" }, "m"),
+                                              createBaseVNode("span", { class: "mord" }, [
+                                                createBaseVNode("span", { class: "mord mathnormal" }, "c"),
+                                                createBaseVNode("span", { class: "msupsub" }, [
+                                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                      createBaseVNode("span", {
+                                                        class: "vlist",
+                                                        style: { "height": "0.7401em" }
+                                                      }, [
+                                                        createBaseVNode("span", { style: { "top": "-2.989em", "margin-right": "0.05em" } }, [
+                                                          createBaseVNode("span", {
+                                                            class: "pstrut",
+                                                            style: { "height": "2.7em" }
+                                                          }),
+                                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                                              createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                            ])
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", {
+                                              class: "frac-line",
+                                              style: { "border-bottom-width": "0.04em" }
+                                            })
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.677em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal",
+                                                style: { "margin-right": "0.22222em" }
+                                              }, "V")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.686em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", { class: "mclose nulldelimiter" })
+                                ]),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mbin" }, "+"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "minner" }, "⋯"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.1667em" }
+                                }),
+                                createBaseVNode("span", {
+                                  class: "mclose delimcenter",
+                                  style: { "top": "0em" }
+                                }, [
+                                  createBaseVNode("span", { class: "delimsizing size3" }, ")")
+                                ])
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("span", { style: { "top": "-1.6247em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.6994em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", { class: "mord" }),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mrel" }, "="),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, "−"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", {
+                                class: "mop op-symbol large-op",
+                                style: { "margin-right": "0.44445em", "position": "relative", "top": "-0.0011em" }
+                              }, "∫"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "mord mathrm" }, "d"),
+                              createBaseVNode("span", { class: "mord mathnormal" }, "t"),
+                              createBaseVNode("span", { class: "mord mathnormal" }, "m"),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord mathnormal" }, "c"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.8641em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "2")
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2222em" }
+                              }),
+                              createBaseVNode("span", { class: "mbin" }, "+"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2222em" }
+                              }),
+                              createBaseVNode("span", {
+                                class: "mop op-symbol large-op",
+                                style: { "margin-right": "0.44445em", "position": "relative", "top": "-0.0011em" }
+                              }, "∫"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "mord mathrm" }, "d"),
+                              createBaseVNode("span", { class: "mord mathnormal" }, "t"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "minner" }, [
+                                createBaseVNode("span", {
+                                  class: "mopen delimcenter",
+                                  style: { "top": "0em" }
+                                }, [
+                                  createBaseVNode("span", { class: "delimsizing size3" }, "(")
+                                ]),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                  createBaseVNode("span", { class: "mfrac" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "1.3214em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord" }, "2")
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", {
+                                              class: "frac-line",
+                                              style: { "border-bottom-width": "0.04em" }
+                                            })
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.677em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord" }, "1")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.686em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", { class: "mclose nulldelimiter" })
+                                ]),
+                                createBaseVNode("span", { class: "mord mathnormal" }, "m"),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", {
+                                    class: "mord mathnormal",
+                                    style: { "margin-right": "0.03588em" }
+                                  }, "v"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.8641em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, "2")
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mbin" }, "−"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", {
+                                  class: "mord mathnormal",
+                                  style: { "margin-right": "0.22222em" }
+                                }, "V"),
+                                createBaseVNode("span", {
+                                  class: "mclose delimcenter",
+                                  style: { "top": "0em" }
+                                }, [
+                                  createBaseVNode("span", { class: "delimsizing size3" }, ")")
+                                ])
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2222em" }
+                              }),
+                              createBaseVNode("span", { class: "mbin" }, "+"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2222em" }
+                              }),
+                              createBaseVNode("span", { class: "minner" }, "⋯"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, ".")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "3.3247em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ], -1),
+    createStaticVNode('<p>除去常数项，在非相对论极限下，拉格朗日量在与速度和外场有关的领头阶具有“动能减去势能”的形式：</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>L</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup><mo>−</mo><mi>V</mi><mo>≡</mo><mi>T</mi><mo>−</mo><mi>V</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">L = \\frac{1}{2}mv^{2} - V \\equiv T - V, </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span></span></span></span></span></p><p>其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>≡</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">T \\equiv \\dfrac{1}{2}mv^{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span> 即牛顿力学的动能，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span> 在非相对论极限下对应牛顿力学的势能。从展开的过程可以看出，这里“减号”的来源正是闵氏时空度规中时间和空间部分的符号差异。</p><h3 id="·-电磁场" tabindex="-1"><a class="header-anchor" href="#·-电磁场"><span>· 电磁场</span></a></h3><p>接下来考虑粒子与 4 维矢量场 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mi>μ</mi></msup></mrow><annotation encoding="application/x-tex">A^{\\mu}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span></span></span></span> 的相互作用。最熟悉的矢量场即电磁场。考虑闵氏时空，作用量必须是洛伦兹标量。因此问题转化为如何用矢量场和粒子的世界线来构造一个标量。最简单的方式就是矢量场与粒子 4-速度的内积 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>μ</mi></msub><msup><mi>u</mi><mi>μ</mi></msup></mrow><annotation encoding="application/x-tex">A_{\\mu}u^{\\mu}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span></span></span></span>。将这个标量沿着粒子的世界线积分，自然仍然是一个标量。于是，矢量场对粒子的作用量的贡献为</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>∫</mo><mi mathvariant="normal">d</mi><mi>τ</mi><msub><mi>A</mi><mi>μ</mi></msub><msup><mi>u</mi><mi>μ</mi></msup><mo>≡</mo><mo>∫</mo><mi mathvariant="normal">d</mi><mi>τ</mi><msub><mi>A</mi><mi>μ</mi></msub><mfrac><mrow><mi mathvariant="normal">d</mi><msup><mi>x</mi><mi>μ</mi></msup></mrow><mrow><mi mathvariant="normal">d</mi><mi>τ</mi></mrow></mfrac><mo>=</mo><mo>∫</mo><msub><mi>A</mi><mi>μ</mi></msub><mi mathvariant="normal">d</mi><msup><mi>x</mi><mi>μ</mi></msup><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\\int \\mathrm{d}\\tau A_{\\mu}u^{\\mu} \\equiv \\int \\mathrm{d}\\tau A_{\\mu} \\frac{\\mathrm{d}x^{\\mu}}{\\mathrm{d}\\tau} = \\int A_{\\mu} \\mathrm{d}x^{\\mu}. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2337em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span><span class="mord">.</span></span></span></span></span></p><p>矢量场中粒子的完整作用量即</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mo>−</mo><mi>m</mi><mi>c</mi><mo>∫</mo><mi mathvariant="normal">∣</mi><mi mathvariant="normal">d</mi><mi>s</mi><mi mathvariant="normal">∣</mi><mo>+</mo><mfrac><mi>e</mi><mi>c</mi></mfrac><mo>∫</mo><msub><mi>A</mi><mi>μ</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi mathvariant="normal">d</mi><msup><mi>x</mi><mi>μ</mi></msup><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">S = -mc \\int |\\mathrm{d}s| + \\frac{e}{c} \\int A_{\\mu}(x) \\mathrm{d}x^{\\mu}. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mord">−</span><span class="mord mathnormal">m</span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">∣</span><span class="mord mathrm">d</span><span class="mord mathnormal">s</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span><span class="mord">.</span></span></span></span></span></p><p>这里的常数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span> 代表了粒子与矢量场 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>μ</mi></msub></mrow><annotation encoding="application/x-tex">A_{\\mu}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span> 的耦合强度。对于电磁场，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span> 即粒子所带的电荷。</p><p>上式作用量为两项之和，其中第一项与自由粒子作用量完全一样，因此电磁场对于粒子运动方程的贡献来源于对第二项的变分。有</p>', 10),
+    createBaseVNode("p", { class: "katex-block" }, [
+      createBaseVNode("span", { class: "katex-display" }, [
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", {
+              xmlns: "http://www.w3.org/1998/Math/MathML",
+              display: "block"
+            }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mtable", {
+                  rowspacing: "0.25em",
+                  columnalign: "right left",
+                  columnspacing: "0em"
+                }, [
+                  createBaseVNode("mtr", null, [
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow", null, [
+                          createBaseVNode("mi", null, "δ"),
+                          createBaseVNode("mo", null, "∫"),
+                          createBaseVNode("msub", null, [
+                            createBaseVNode("mi", null, "A"),
+                            createBaseVNode("mi", null, "μ")
+                          ]),
+                          createBaseVNode("mi", { mathvariant: "normal" }, "d"),
+                          createBaseVNode("msup", null, [
+                            createBaseVNode("mi", null, "x"),
+                            createBaseVNode("mi", null, "μ")
+                          ])
+                        ])
+                      ])
+                    ]),
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow", null, [
+                          createBaseVNode("mrow"),
+                          createBaseVNode("mo", null, "="),
+                          createBaseVNode("mo", null, "∫"),
+                          createBaseVNode("mrow", null, [
+                            createBaseVNode("mo", { fence: "true" }, "("),
+                            createBaseVNode("mfrac", null, [
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                                createBaseVNode("msub", null, [
+                                  createBaseVNode("mi", null, "A"),
+                                  createBaseVNode("mi", null, "μ")
+                                ])
+                              ]),
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                                createBaseVNode("msup", null, [
+                                  createBaseVNode("mi", null, "x"),
+                                  createBaseVNode("mi", null, "ν")
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("mi", null, "δ"),
+                            createBaseVNode("msup", null, [
+                              createBaseVNode("mi", null, "x"),
+                              createBaseVNode("mi", null, "ν")
+                            ]),
+                            createBaseVNode("mi", { mathvariant: "normal" }, "d"),
+                            createBaseVNode("msup", null, [
+                              createBaseVNode("mi", null, "x"),
+                              createBaseVNode("mi", null, "μ")
+                            ]),
+                            createBaseVNode("mo", null, "+"),
+                            createBaseVNode("msub", null, [
+                              createBaseVNode("mi", null, "A"),
+                              createBaseVNode("mi", null, "μ")
+                            ]),
+                            createBaseVNode("mi", null, "δ"),
+                            createBaseVNode("mo", { stretchy: "false" }, "("),
+                            createBaseVNode("mi", { mathvariant: "normal" }, "d"),
+                            createBaseVNode("msup", null, [
+                              createBaseVNode("mi", null, "x"),
+                              createBaseVNode("mi", null, "μ")
+                            ]),
+                            createBaseVNode("mo", { stretchy: "false" }, ")"),
+                            createBaseVNode("mo", { fence: "true" }, ")")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("mtr", null, [
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow")
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("mtr", null, [
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow")
+                      ])
+                    ]),
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow", null, [
+                          createBaseVNode("mrow"),
+                          createBaseVNode("mo", null, "≃"),
+                          createBaseVNode("mo", null, "∫"),
+                          createBaseVNode("mrow", null, [
+                            createBaseVNode("mo", { fence: "true" }, "("),
+                            createBaseVNode("mfrac", null, [
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                                createBaseVNode("msub", null, [
+                                  createBaseVNode("mi", null, "A"),
+                                  createBaseVNode("mi", null, "μ")
+                                ])
+                              ]),
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                                createBaseVNode("msup", null, [
+                                  createBaseVNode("mi", null, "x"),
+                                  createBaseVNode("mi", null, "ν")
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("mi", null, "δ"),
+                            createBaseVNode("msup", null, [
+                              createBaseVNode("mi", null, "x"),
+                              createBaseVNode("mi", null, "ν")
+                            ]),
+                            createBaseVNode("mi", { mathvariant: "normal" }, "d"),
+                            createBaseVNode("msup", null, [
+                              createBaseVNode("mi", null, "x"),
+                              createBaseVNode("mi", null, "μ")
+                            ]),
+                            createBaseVNode("mo", null, "−"),
+                            createBaseVNode("mfrac", null, [
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                                createBaseVNode("msub", null, [
+                                  createBaseVNode("mi", null, "A"),
+                                  createBaseVNode("mi", null, "μ")
+                                ])
+                              ]),
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                                createBaseVNode("msup", null, [
+                                  createBaseVNode("mi", null, "x"),
+                                  createBaseVNode("mi", null, "ν")
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("mi", { mathvariant: "normal" }, "d"),
+                            createBaseVNode("msup", null, [
+                              createBaseVNode("mi", null, "x"),
+                              createBaseVNode("mi", null, "ν")
+                            ]),
+                            createBaseVNode("mi", null, "δ"),
+                            createBaseVNode("msup", null, [
+                              createBaseVNode("mi", null, "x"),
+                              createBaseVNode("mi", null, "μ")
+                            ]),
+                            createBaseVNode("mo", { fence: "true" }, ")")
+                          ]),
+                          createBaseVNode("mo", null, "≡"),
+                          createBaseVNode("mo", null, "∫"),
+                          createBaseVNode("msub", null, [
+                            createBaseVNode("mi", null, "F"),
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mi", null, "μ"),
+                              createBaseVNode("mi", null, "ν")
+                            ])
+                          ]),
+                          createBaseVNode("mi", { mathvariant: "normal" }, "d"),
+                          createBaseVNode("msup", null, [
+                            createBaseVNode("mi", null, "x"),
+                            createBaseVNode("mi", null, "ν")
+                          ]),
+                          createBaseVNode("mi", null, "δ"),
+                          createBaseVNode("msup", null, [
+                            createBaseVNode("mi", null, "x"),
+                            createBaseVNode("mi", null, "μ")
+                          ]),
+                          createBaseVNode("mo", { separator: "true" }, ",")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\begin{aligned} \\delta \\int A_{\\mu} \\mathrm{d}x^{\\mu} &= \\int \\left( \\frac{\\partial A_{\\mu}}{\\partial x^{\\nu}} \\delta x^{\\nu} \\mathrm{d}x^{\\mu} + A_{\\mu} \\delta(\\mathrm{d}x^{\\mu}) \\right) \\\\\\\\ &\\simeq \\int \\left( \\frac{\\partial A_{\\mu}}{\\partial x^{\\nu}} \\delta x^{\\nu} \\mathrm{d}x^{\\mu} - \\frac{\\partial A_{\\mu}}{\\partial x^{\\nu}} \\mathrm{d}x^{\\nu} \\delta x^{\\mu} \\right) \\equiv \\int F_{\\mu\\nu} \\mathrm{d}x^{\\nu} \\delta x^{\\mu}, \\end{aligned} ")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "6.9001em", "vertical-align": "-3.2em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mtable" }, [
+                  createBaseVNode("span", { class: "col-align-r" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "3.7em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-5.7em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.45em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", {
+                                class: "mord mathnormal",
+                                style: { "margin-right": "0.03785em" }
+                              }, "δ"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", {
+                                class: "mop op-symbol large-op",
+                                style: { "margin-right": "0.44445em", "position": "relative", "top": "-0.0011em" }
+                              }, "∫"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord mathnormal" }, "A"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.1514em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "μ")
+                                            ])
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.2861em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { class: "mord mathrm" }, "d"),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.7144em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "μ")
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("span", { style: { "top": "-3.61em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.45em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" })
+                          ]),
+                          createBaseVNode("span", { style: { "top": "-1.5em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.45em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" })
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "3.2em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("span", { class: "col-align-l" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "3.7em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-5.7em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.45em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", { class: "mord" }),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mrel" }, "="),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", {
+                                class: "mop op-symbol large-op",
+                                style: { "margin-right": "0.44445em", "position": "relative", "top": "-0.0011em" }
+                              }, "∫"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "minner" }, [
+                                createBaseVNode("span", {
+                                  class: "mopen delimcenter",
+                                  style: { "top": "0em" }
+                                }, [
+                                  createBaseVNode("span", { class: "delimsizing size3" }, "(")
+                                ]),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                  createBaseVNode("span", { class: "mfrac" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "1.3714em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", {
+                                                class: "mord",
+                                                style: { "margin-right": "0.05556em" }
+                                              }, "∂"),
+                                              createBaseVNode("span", { class: "mord" }, [
+                                                createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                                                createBaseVNode("span", { class: "msupsub" }, [
+                                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                      createBaseVNode("span", {
+                                                        class: "vlist",
+                                                        style: { "height": "0.5904em" }
+                                                      }, [
+                                                        createBaseVNode("span", { style: { "top": "-2.989em", "margin-right": "0.05em" } }, [
+                                                          createBaseVNode("span", {
+                                                            class: "pstrut",
+                                                            style: { "height": "2.7em" }
+                                                          }),
+                                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                                              createBaseVNode("span", {
+                                                                class: "mord mathnormal mtight",
+                                                                style: { "margin-right": "0.06366em" }
+                                                              }, "ν")
+                                                            ])
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", {
+                                              class: "frac-line",
+                                              style: { "border-bottom-width": "0.04em" }
+                                            })
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.677em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", {
+                                                class: "mord",
+                                                style: { "margin-right": "0.05556em" }
+                                              }, "∂"),
+                                              createBaseVNode("span", { class: "mord" }, [
+                                                createBaseVNode("span", { class: "mord mathnormal" }, "A"),
+                                                createBaseVNode("span", { class: "msupsub" }, [
+                                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                      createBaseVNode("span", {
+                                                        class: "vlist",
+                                                        style: { "height": "0.1514em" }
+                                                      }, [
+                                                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                                          createBaseVNode("span", {
+                                                            class: "pstrut",
+                                                            style: { "height": "2.7em" }
+                                                          }),
+                                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "μ")
+                                                            ])
+                                                          ])
+                                                        ])
+                                                      ]),
+                                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                                    ]),
+                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                      createBaseVNode("span", {
+                                                        class: "vlist",
+                                                        style: { "height": "0.2861em" }
+                                                      }, [
+                                                        createBaseVNode("span")
+                                                      ])
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.686em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", { class: "mclose nulldelimiter" })
+                                ]),
+                                createBaseVNode("span", {
+                                  class: "mord mathnormal",
+                                  style: { "margin-right": "0.03785em" }
+                                }, "δ"),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.7144em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, [
+                                                createBaseVNode("span", {
+                                                  class: "mord mathnormal mtight",
+                                                  style: { "margin-right": "0.06366em" }
+                                                }, "ν")
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mord mathrm" }, "d"),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.7144em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, [
+                                                createBaseVNode("span", { class: "mord mathnormal mtight" }, "μ")
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mbin" }, "+"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "A"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.1514em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, [
+                                                createBaseVNode("span", { class: "mord mathnormal mtight" }, "μ")
+                                              ])
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.2861em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", {
+                                  class: "mord mathnormal",
+                                  style: { "margin-right": "0.03785em" }
+                                }, "δ"),
+                                createBaseVNode("span", { class: "mopen" }, "("),
+                                createBaseVNode("span", { class: "mord mathrm" }, "d"),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.7144em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, [
+                                                createBaseVNode("span", { class: "mord mathnormal mtight" }, "μ")
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mclose" }, ")"),
+                                createBaseVNode("span", {
+                                  class: "mclose delimcenter",
+                                  style: { "top": "0em" }
+                                }, [
+                                  createBaseVNode("span", { class: "delimsizing size3" }, ")")
+                                ])
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("span", { style: { "top": "-1.5em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.45em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", { class: "mord" }),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mrel" }, "≃"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", {
+                                class: "mop op-symbol large-op",
+                                style: { "margin-right": "0.44445em", "position": "relative", "top": "-0.0011em" }
+                              }, "∫"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "minner" }, [
+                                createBaseVNode("span", {
+                                  class: "mopen delimcenter",
+                                  style: { "top": "0em" }
+                                }, [
+                                  createBaseVNode("span", { class: "delimsizing size3" }, "(")
+                                ]),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                  createBaseVNode("span", { class: "mfrac" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "1.3714em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", {
+                                                class: "mord",
+                                                style: { "margin-right": "0.05556em" }
+                                              }, "∂"),
+                                              createBaseVNode("span", { class: "mord" }, [
+                                                createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                                                createBaseVNode("span", { class: "msupsub" }, [
+                                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                      createBaseVNode("span", {
+                                                        class: "vlist",
+                                                        style: { "height": "0.5904em" }
+                                                      }, [
+                                                        createBaseVNode("span", { style: { "top": "-2.989em", "margin-right": "0.05em" } }, [
+                                                          createBaseVNode("span", {
+                                                            class: "pstrut",
+                                                            style: { "height": "2.7em" }
+                                                          }),
+                                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                                              createBaseVNode("span", {
+                                                                class: "mord mathnormal mtight",
+                                                                style: { "margin-right": "0.06366em" }
+                                                              }, "ν")
+                                                            ])
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", {
+                                              class: "frac-line",
+                                              style: { "border-bottom-width": "0.04em" }
+                                            })
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.677em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", {
+                                                class: "mord",
+                                                style: { "margin-right": "0.05556em" }
+                                              }, "∂"),
+                                              createBaseVNode("span", { class: "mord" }, [
+                                                createBaseVNode("span", { class: "mord mathnormal" }, "A"),
+                                                createBaseVNode("span", { class: "msupsub" }, [
+                                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                      createBaseVNode("span", {
+                                                        class: "vlist",
+                                                        style: { "height": "0.1514em" }
+                                                      }, [
+                                                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                                          createBaseVNode("span", {
+                                                            class: "pstrut",
+                                                            style: { "height": "2.7em" }
+                                                          }),
+                                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "μ")
+                                                            ])
+                                                          ])
+                                                        ])
+                                                      ]),
+                                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                                    ]),
+                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                      createBaseVNode("span", {
+                                                        class: "vlist",
+                                                        style: { "height": "0.2861em" }
+                                                      }, [
+                                                        createBaseVNode("span")
+                                                      ])
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.686em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", { class: "mclose nulldelimiter" })
+                                ]),
+                                createBaseVNode("span", {
+                                  class: "mord mathnormal",
+                                  style: { "margin-right": "0.03785em" }
+                                }, "δ"),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.7144em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, [
+                                                createBaseVNode("span", {
+                                                  class: "mord mathnormal mtight",
+                                                  style: { "margin-right": "0.06366em" }
+                                                }, "ν")
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mord mathrm" }, "d"),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.7144em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, [
+                                                createBaseVNode("span", { class: "mord mathnormal mtight" }, "μ")
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mbin" }, "−"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                  createBaseVNode("span", { class: "mfrac" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "1.3714em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", {
+                                                class: "mord",
+                                                style: { "margin-right": "0.05556em" }
+                                              }, "∂"),
+                                              createBaseVNode("span", { class: "mord" }, [
+                                                createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                                                createBaseVNode("span", { class: "msupsub" }, [
+                                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                      createBaseVNode("span", {
+                                                        class: "vlist",
+                                                        style: { "height": "0.5904em" }
+                                                      }, [
+                                                        createBaseVNode("span", { style: { "top": "-2.989em", "margin-right": "0.05em" } }, [
+                                                          createBaseVNode("span", {
+                                                            class: "pstrut",
+                                                            style: { "height": "2.7em" }
+                                                          }),
+                                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                                              createBaseVNode("span", {
+                                                                class: "mord mathnormal mtight",
+                                                                style: { "margin-right": "0.06366em" }
+                                                              }, "ν")
+                                                            ])
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", {
+                                              class: "frac-line",
+                                              style: { "border-bottom-width": "0.04em" }
+                                            })
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.677em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", {
+                                                class: "mord",
+                                                style: { "margin-right": "0.05556em" }
+                                              }, "∂"),
+                                              createBaseVNode("span", { class: "mord" }, [
+                                                createBaseVNode("span", { class: "mord mathnormal" }, "A"),
+                                                createBaseVNode("span", { class: "msupsub" }, [
+                                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                      createBaseVNode("span", {
+                                                        class: "vlist",
+                                                        style: { "height": "0.1514em" }
+                                                      }, [
+                                                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                                          createBaseVNode("span", {
+                                                            class: "pstrut",
+                                                            style: { "height": "2.7em" }
+                                                          }),
+                                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "μ")
+                                                            ])
+                                                          ])
+                                                        ])
+                                                      ]),
+                                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                                    ]),
+                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                      createBaseVNode("span", {
+                                                        class: "vlist",
+                                                        style: { "height": "0.2861em" }
+                                                      }, [
+                                                        createBaseVNode("span")
+                                                      ])
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.686em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", { class: "mclose nulldelimiter" })
+                                ]),
+                                createBaseVNode("span", { class: "mord mathrm" }, "d"),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.7144em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, [
+                                                createBaseVNode("span", {
+                                                  class: "mord mathnormal mtight",
+                                                  style: { "margin-right": "0.06366em" }
+                                                }, "ν")
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", {
+                                  class: "mord mathnormal",
+                                  style: { "margin-right": "0.03785em" }
+                                }, "δ"),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                                  createBaseVNode("span", { class: "msupsub" }, [
+                                    createBaseVNode("span", { class: "vlist-t" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.7144em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "2.7em" }
+                                            }),
+                                            createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, [
+                                                createBaseVNode("span", { class: "mord mathnormal mtight" }, "μ")
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", {
+                                  class: "mclose delimcenter",
+                                  style: { "top": "0em" }
+                                }, [
+                                  createBaseVNode("span", { class: "delimsizing size3" }, ")")
+                                ])
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mrel" }, "≡"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", {
+                                class: "mop op-symbol large-op",
+                                style: { "margin-right": "0.44445em", "position": "relative", "top": "-0.0011em" }
+                              }, "∫"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", {
+                                  class: "mord mathnormal",
+                                  style: { "margin-right": "0.13889em" }
+                                }, "F"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.1514em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "-0.1389em", "margin-right": "0.05em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal mtight",
+                                                style: { "margin-right": "0.06366em" }
+                                              }, "μν")
+                                            ])
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.2861em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { class: "mord mathrm" }, "d"),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.7144em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal mtight",
+                                                style: { "margin-right": "0.06366em" }
+                                              }, "ν")
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mord mathnormal",
+                                style: { "margin-right": "0.03785em" }
+                              }, "δ"),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord mathnormal" }, "x"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.7144em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "μ")
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { class: "mpunct" }, ",")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "3.2em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ], -1),
+    createStaticVNode('<p>其中</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><mo>:</mo><mo>=</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><msub><mi>A</mi><mi>ν</mi></msub></mrow><mrow><mi mathvariant="normal">∂</mi><msup><mi>x</mi><mi>μ</mi></msup></mrow></mfrac><mo>−</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><msub><mi>A</mi><mi>μ</mi></msub></mrow><mrow><mi mathvariant="normal">∂</mi><msup><mi>x</mi><mi>ν</mi></msup></mrow></mfrac><mo separator="true">,</mo><mspace width="1em"></mspace><mi>μ</mi><mo separator="true">,</mo><mi>ν</mi><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>3</mn><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">F_{\\mu\\nu} := \\frac{\\partial A_{\\nu}}{\\partial x^{\\mu}} - \\frac{\\partial A_{\\mu}}{\\partial x^{\\nu}}, \\quad \\mu, \\nu = 0, 1, 2, 3, </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">μν</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5904em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">ν</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5904em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">ν</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.06366em;">ν</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">3</span><span class="mpunct">,</span></span></span></span></span></p><p>被称为<strong>电磁张量</strong>（electromagnetic tensor）或电磁场强。由定义可知 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub></mrow><annotation encoding="application/x-tex">F_{\\mu\\nu}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">μν</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span> 是一个反对称的张量，即 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><mo>=</mo><mo>−</mo><msub><mi>F</mi><mrow><mi>ν</mi><mi>μ</mi></mrow></msub></mrow><annotation encoding="application/x-tex">F_{\\mu\\nu} = -F_{\\nu\\mu}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">μν</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord">−</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">νμ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span>。结合自由粒子作用量的变分，最终得到电磁场中粒子的运动方程为</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">d</mi><msub><mi>p</mi><mi>μ</mi></msub></mrow><mrow><mi mathvariant="normal">d</mi><mi>τ</mi></mrow></mfrac><mo>=</mo><mfrac><mi>e</mi><mi>c</mi></mfrac><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><msup><mi>u</mi><mi>ν</mi></msup><mo separator="true">,</mo><mspace width="1em"></mspace><mi>μ</mi><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>3.</mn></mrow><annotation encoding="application/x-tex">\\frac{\\mathrm{d}p_{\\mu}}{\\mathrm{d}\\tau} = \\frac{e}{c} F_{\\mu\\nu} u^{\\nu}, \\quad \\mu = 0, 1, 2, 3. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.7936em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">μν</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">ν</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">3.</span></span></span></span></span></p><p>4-矢量 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mi>μ</mi></msup></mrow><annotation encoding="application/x-tex">A^{\\mu}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span></span></span></span> 可以分解为</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>A</mi><mi>μ</mi></msup><mo>=</mo><mo stretchy="false">(</mo><msup><mi>A</mi><mn>0</mn></msup><mo separator="true">,</mo><msup><mi>A</mi><mi>i</mi></msup><mo stretchy="false">)</mo><mo>≡</mo><mo stretchy="false">(</mo><mi mathvariant="normal">Φ</mi><mo separator="true">,</mo><mi mathvariant="bold">A</mi><mo stretchy="false">)</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">A^{\\mu} = (A^{0}, A^{i}) \\equiv (\\Phi, \\mathbf{A}), </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7144em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1247em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8747em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">Φ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathbf">A</span><span class="mclose">)</span><span class="mpunct">,</span></span></span></span></span></p><p>其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Φ</mi></mrow><annotation encoding="application/x-tex">\\Phi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Φ</span></span></span></span> 被称为<strong>标量势</strong>（scalar potential），<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">A</mi></mrow><annotation encoding="application/x-tex">\\mathbf{A}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">A</span></span></span></span> 被称为<strong>矢量势</strong>（vector potential）。这里的所谓“标量”和“矢量”都是指 3 维空间中的标量和矢量。</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>∫</mo><mi mathvariant="normal">d</mi><mi>τ</mi><msub><mi>A</mi><mi>μ</mi></msub><msup><mi>u</mi><mi>μ</mi></msup><mo>≡</mo><mo>∫</mo><mi mathvariant="normal">d</mi><mi>τ</mi><msub><mi>A</mi><mi>μ</mi></msub><mfrac><mrow><mi mathvariant="normal">d</mi><msup><mi>x</mi><mi>μ</mi></msup></mrow><mrow><mi mathvariant="normal">d</mi><mi>τ</mi></mrow></mfrac><mo>=</mo><mo>∫</mo><msub><mi>A</mi><mi>μ</mi></msub><mi mathvariant="normal">d</mi><msup><mi>x</mi><mi>μ</mi></msup><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\\int \\mathrm{d}\\tau A_{\\mu}u^{\\mu} \\equiv \\int \\mathrm{d}\\tau A_{\\mu} \\frac{\\mathrm{d}x^{\\mu}}{\\mathrm{d}\\tau} = \\int A_{\\mu} \\mathrm{d}x^{\\mu}. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2337em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span><span class="mord">.</span></span></span></span></span></p><p>分解为</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>∫</mo><msub><mi>A</mi><mi>μ</mi></msub><mi mathvariant="normal">d</mi><msup><mi>x</mi><mi>μ</mi></msup><mo>=</mo><mo>∫</mo><mo stretchy="false">(</mo><mo>−</mo><msup><mi>A</mi><mn>0</mn></msup><mi mathvariant="normal">d</mi><msup><mi>x</mi><mn>0</mn></msup><mo>+</mo><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msup><mi>A</mi><mi>i</mi></msup><mi mathvariant="normal">d</mi><msup><mi>x</mi><mi>j</mi></msup><mo stretchy="false">)</mo><mo>=</mo><mo>∫</mo><mo stretchy="false">(</mo><mo>−</mo><mi>c</mi><mi mathvariant="normal">Φ</mi><mi mathvariant="normal">d</mi><mi>t</mi><mo>+</mo><msub><mi>A</mi><mi>i</mi></msub><mi mathvariant="normal">d</mi><msup><mi>x</mi><mi>i</mi></msup><mo stretchy="false">)</mo><mo>=</mo><mo>∫</mo><mi mathvariant="normal">d</mi><mi>t</mi><mo stretchy="false">(</mo><mo>−</mo><mi>c</mi><mi mathvariant="normal">Φ</mi><mo>+</mo><msub><mi>A</mi><mi>i</mi></msub><msup><mi>v</mi><mi>i</mi></msup><mo stretchy="false">)</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">\\int A_{\\mu} \\mathrm{d}x^{\\mu} = \\int (-A^{0} \\mathrm{d}x^{0} + \\delta_{ij} A^{i} \\mathrm{d}x^{j}) = \\int (-c\\Phi \\mathrm{d}t + A_{i} \\mathrm{d}x^{i}) = \\int \\mathrm{d}t (-c\\Phi + A_{i} v^{i}), </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mopen">(</span><span class="mord">−</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1608em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0379em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">ij</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8747em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span></span></span></span></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8747em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathnormal">c</span><span class="mord">Φ</span><span class="mord mathrm">d</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1247em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8747em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathnormal">c</span><span class="mord">Φ</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1247em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8747em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span></span></span></span></span></p><p>结合</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mo>∫</mo><mi mathvariant="normal">d</mi><mi>t</mi><mi>L</mi><mo separator="true">,</mo><mspace width="1em"></mspace><mi>L</mi><mo>=</mo><mo>−</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup><msqrt><mrow><mn>1</mn><mo>−</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><msup><mi>c</mi><mn>2</mn></msup></mfrac></mrow></msqrt></mrow><annotation encoding="application/x-tex">S = \\int \\mathrm{d}t L, \\quad L = -mc^{2} \\sqrt{1 - \\frac{v^{2}}{c^{2}}} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord mathnormal">t</span><span class="mord mathnormal">L</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.44em;vertical-align:-0.7406em;"></span><span class="mord">−</span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6994em;"><span class="svg-align" style="top:-4.4em;"><span class="pstrut" style="height:4.4em;"></span><span class="mord" style="padding-left:1em;"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4171em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.6594em;"><span class="pstrut" style="height:4.4em;"></span><span class="hide-tail" style="min-width:1.02em;height:2.48em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="2.48em" viewBox="0 0 400000 2592" preserveAspectRatio="xMinYMin slice"><path d="M424,2478\nc-1.3,-0.7,-38.5,-172,-111.5,-514c-73,-342,-109.8,-513.3,-110.5,-514\nc0,-2,-10.7,14.3,-32,49c-4.7,7.3,-9.8,15.7,-15.5,25c-5.7,9.3,-9.8,16,-12.5,20\ns-5,7,-5,7c-4,-3.3,-8.3,-7.7,-13,-13s-13,-13,-13,-13s76,-122,76,-122s77,-121,77,-121\ns209,968,209,968c0,-2,84.7,-361.7,254,-1079c169.3,-717.3,254.7,-1077.7,256,-1081\nl0 -0c4,-6.7,10,-10,18,-10 H400000\nv40H1014.6\ns-87.3,378.7,-272.6,1166c-185.3,787.3,-279.3,1182.3,-282,1185\nc-2,6,-10,9,-24,9\nc-8,0,-12,-0.7,-12,-2z M1001 80\nh400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7406em;"><span></span></span></span></span></span></span></span></span></span></p><p>电磁场中相对论性带电粒子的作用量的 3 维形式即</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mo>∫</mo><mi mathvariant="normal">d</mi><mi>t</mi><mi>L</mi><mo separator="true">,</mo><mspace width="1em"></mspace><mi>L</mi><mo>=</mo><mo>−</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup><msqrt><mrow><mn>1</mn><mo>−</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><msup><mi>c</mi><mn>2</mn></msup></mfrac></mrow></msqrt><mo>−</mo><mi>c</mi><mi mathvariant="normal">Φ</mi><mo>+</mo><mfrac><mi>e</mi><mi>c</mi></mfrac><mi mathvariant="bold">v</mi><mo>⋅</mo><mi mathvariant="bold">A</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">S = \\int \\mathrm{d}t L, \\quad L = -mc^{2} \\sqrt{1 - \\frac{v^{2}}{c^{2}}} - c\\Phi + \\frac{e}{c} \\mathbf{v} \\cdot \\mathbf{A}. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord mathnormal">t</span><span class="mord mathnormal">L</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.44em;vertical-align:-0.7406em;"></span><span class="mord">−</span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6994em;"><span class="svg-align" style="top:-4.4em;"><span class="pstrut" style="height:4.4em;"></span><span class="mord" style="padding-left:1em;"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4171em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.6594em;"><span class="pstrut" style="height:4.4em;"></span><span class="hide-tail" style="min-width:1.02em;height:2.48em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="2.48em" viewBox="0 0 400000 2592" preserveAspectRatio="xMinYMin slice"><path d="M424,2478\nc-1.3,-0.7,-38.5,-172,-111.5,-514c-73,-342,-109.8,-513.3,-110.5,-514\nc0,-2,-10.7,14.3,-32,49c-4.7,7.3,-9.8,15.7,-15.5,25c-5.7,9.3,-9.8,16,-12.5,20\ns-5,7,-5,7c-4,-3.3,-8.3,-7.7,-13,-13s-13,-13,-13,-13s76,-122,76,-122s77,-121,77,-121\ns209,968,209,968c0,-2,84.7,-361.7,254,-1079c169.3,-717.3,254.7,-1077.7,256,-1081\nl0 -0c4,-6.7,10,-10,18,-10 H400000\nv40H1014.6\ns-87.3,378.7,-272.6,1166c-185.3,787.3,-279.3,1182.3,-282,1185\nc-2,6,-10,9,-24,9\nc-8,0,-12,-0.7,-12,-2z M1001 80\nh400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7406em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">c</span><span class="mord">Φ</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.7936em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathbf" style="margin-right:0.01597em;">v</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">A</span><span class="mord">.</span></span></span></span></span></p><p>对上式变分可得到运动方程的 3 维形式：</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">d</mi><mi>E</mi></mrow><mrow><mi mathvariant="normal">d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>e</mi><mi mathvariant="bold">v</mi><mo>⋅</mo><mi mathvariant="bold">E</mi><mo separator="true">,</mo><mspace width="1em"></mspace><mfrac><mrow><mi mathvariant="normal">d</mi><mi mathvariant="bold">p</mi></mrow><mrow><mi mathvariant="normal">d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>e</mi><mrow><mo fence="true">(</mo><mi mathvariant="bold">E</mi><mo>+</mo><mfrac><mn>1</mn><mi>c</mi></mfrac><mi mathvariant="bold">v</mi><mo>×</mo><mi mathvariant="bold">B</mi><mo fence="true">)</mo></mrow><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">\\frac{\\mathrm{d}E}{\\mathrm{d}t} = e\\mathbf{v} \\cdot \\mathbf{E}, \\quad \\frac{\\mathrm{d}\\mathbf{p}}{\\mathrm{d}t} = e \\left( \\mathbf{E} + \\frac{1}{c} \\mathbf{v} \\times \\mathbf{B} \\right), </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4445em;"></span><span class="mord mathnormal">e</span><span class="mord mathbf" style="margin-right:0.01597em;">v</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord mathbf">E</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord mathbf">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord mathbf">E</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathbf" style="margin-right:0.01597em;">v</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathbf">B</span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span></span></span></span></span></p><p>其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span> 为粒子的能量，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">p</mi></mrow><annotation encoding="application/x-tex">\\mathbf{p}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6389em;vertical-align:-0.1944em;"></span><span class="mord mathbf">p</span></span></span></span> 为 3-动量,</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="bold">E</mi><mo>=</mo><mo>−</mo><mi mathvariant="normal">∇</mi><mi mathvariant="normal">Φ</mi><mo>−</mo><mfrac><mn>1</mn><mi>c</mi></mfrac><mfrac><mrow><mi mathvariant="normal">∂</mi><mi mathvariant="bold">A</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>t</mi></mrow></mfrac><mo separator="true">,</mo><mspace width="1em"></mspace><mi mathvariant="bold">B</mi><mo>=</mo><mi mathvariant="normal">∇</mi><mo>×</mo><mi mathvariant="bold">A</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">\\mathbf{E} = -\\nabla\\Phi - \\frac{1}{c} \\frac{\\partial\\mathbf{A}}{\\partial t}, \\quad \\mathbf{B} = \\nabla \\times \\mathbf{A}, </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">∇Φ</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathbf">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathbf">B</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">∇</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8805em;vertical-align:-0.1944em;"></span><span class="mord mathbf">A</span><span class="mpunct">,</span></span></span></span></span></p><p>分别为电场强度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">E</mi></mrow><annotation encoding="application/x-tex">\\mathbf{E}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">E</span></span></span></span> 和磁感应强度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">B</mi></mrow><annotation encoding="application/x-tex">\\mathbf{B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span>（都是 3 维矢量）。</p><h3 id="·-引力场" tabindex="-1"><a class="header-anchor" href="#·-引力场"><span>· 引力场</span></a></h3><p>当有引力存在时，时空不再是闵氏时空，相应的度规不再是闵氏度规 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>η</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\\eta_{\\mu\\nu}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">η</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">μν</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span>，而是时空坐标的一般函数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">g_{\\mu\\nu}(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">μν</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span>。和闵氏时空中的自由粒子一样，引力场中粒子的作用量也正比于其世界线的长度。此时粒子世界线的线元形式和</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">d</mi><msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><msub><mi>η</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><mi mathvariant="normal">d</mi><msup><mi>x</mi><mi>μ</mi></msup><mi mathvariant="normal">d</mi><msup><mi>x</mi><mi>ν</mi></msup><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\\mathrm{d}s^{2} = \\eta_{\\mu\\nu}\\mathrm{d}x^{\\mu}\\mathrm{d}x^{\\nu}. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8641em;"></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0005em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">η</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">μν</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">ν</span></span></span></span></span></span></span></span></span><span class="mord">.</span></span></span></span></span></p><p>一样，唯一的不同是闵氏度规 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>η</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\\eta_{\\mu\\nu}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">η</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">μν</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span> 被一般的度规 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub></mrow><annotation encoding="application/x-tex">g_{\\mu\\nu}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">μν</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span> 所替代。因此引力场中粒子的作用量即为</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mo>−</mo><mi>m</mi><mi>c</mi><mo>∫</mo><mi mathvariant="normal">∣</mi><mi mathvariant="normal">d</mi><mi>s</mi><mi mathvariant="normal">∣</mi><mo>=</mo><mo>−</mo><mi>m</mi><mi>c</mi><mo>∫</mo><msqrt><mrow><mo>−</mo><msub><mi>g</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><mi mathvariant="normal">d</mi><msup><mi>x</mi><mi>μ</mi></msup><mi mathvariant="normal">d</mi><msup><mi>x</mi><mi>ν</mi></msup></mrow></msqrt><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">S = -mc \\int |\\mathrm{d}s| = -mc \\int \\sqrt{-g_{\\mu\\nu} \\mathrm{d}x^{\\mu} \\mathrm{d}x^{\\nu}}. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mord">−</span><span class="mord mathnormal">m</span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">∣</span><span class="mord mathrm">d</span><span class="mord mathnormal">s</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mord">−</span><span class="mord mathnormal">m</span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span class="svg-align" style="top:-3.2em;"><span class="pstrut" style="height:3.2em;"></span><span class="mord" style="padding-left:1em;"><span class="mord">−</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">μν</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5904em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5904em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">ν</span></span></span></span></span></span></span></span></span></span></span><span style="top:-2.898em;"><span class="pstrut" style="height:3.2em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.28em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.28em" viewBox="0 0 400000 1296" preserveAspectRatio="xMinYMin slice"><path d="M263,681c0.7,0,18,39.7,52,119\nc34,79.3,68.167,158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120\nc340,-704.7,510.7,-1060.3,512,-1067\nl0 -0\nc4.7,-7.3,11,-11,19,-11\nH40000v40H1012.3\ns-271.3,567,-271.3,567c-38.7,80.7,-84,175,-136,283c-52,108,-89.167,185.3,-111.5,232\nc-22.3,46.7,-33.8,70.3,-34.5,71c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1\ns-109,-253,-109,-253c-72.7,-168,-109.3,-252,-110,-252c-10.7,8,-22,16.7,-34,26\nc-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26s76,-59,76,-59s76,-60,76,-60z\nM1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.302em;"><span></span></span></span></span></span><span class="mord">.</span></span></span></span></span></p><p>上式所对应 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mi>μ</mi></msup></mrow><annotation encoding="application/x-tex">x^{\\mu}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span></span></span></span> 的运动方程被称为<strong>测地线</strong>（geodesic）方程。</p><p>根据爱因斯坦的广义相对论，在质量为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 的天体周围，以天体为中心取球坐标 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mi>r</mi><mo separator="true">,</mo><mi>θ</mi><mo separator="true">,</mo><mi>ϕ</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\\{r, \\theta, \\phi\\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ϕ</span><span class="mclose">}</span></span></span></span>，时空的度规具有形式¹⁴</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">d</mi><msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><mo>−</mo><msup><mi>c</mi><mn>2</mn></msup><mrow><mo fence="true">(</mo><mn>1</mn><mo>−</mo><mfrac><mrow><mn>2</mn><mi>G</mi><mi>M</mi></mrow><mrow><msup><mi>c</mi><mn>2</mn></msup><mi>r</mi></mrow></mfrac><mo fence="true">)</mo></mrow><mi mathvariant="normal">d</mi><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><msup><mrow><mo fence="true">(</mo><mn>1</mn><mo>−</mo><mfrac><mrow><mn>2</mn><mi>G</mi><mi>M</mi></mrow><mrow><msup><mi>c</mi><mn>2</mn></msup><mi>r</mi></mrow></mfrac><mo fence="true">)</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi mathvariant="normal">d</mi><msup><mi>r</mi><mn>2</mn></msup><mo>+</mo><msup><mi>r</mi><mn>2</mn></msup><mi mathvariant="normal">d</mi><msup><mi>θ</mi><mn>2</mn></msup><mo>+</mo><msup><mi>r</mi><mn>2</mn></msup><msup><mrow><mi>sin</mi><mo>⁡</mo></mrow><mn>2</mn></msup><mi>θ</mi><mi mathvariant="normal">d</mi><msup><mi>ϕ</mi><mn>2</mn></msup><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">\\mathrm{d}s^{2} = -c^{2} \\left(1 - \\frac{2GM}{c^{2}r} \\right) \\mathrm{d}t^{2} + \\left(1 - \\frac{2GM}{c^{2}r} \\right)^{-1} \\mathrm{d}r^{2} + r^{2} \\mathrm{d}\\theta^{2} + r^{2} \\sin^{2}\\theta \\mathrm{d}\\phi^{2}, </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8641em;"></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="mord">−</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.10903em;">GM</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.604em;vertical-align:-0.95em;"></span><span class="minner"><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.10903em;">GM</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.654em;"><span style="top:-3.9029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9474em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0663em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mop">sin</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8719em;"><span style="top:-3.1208em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">ϕ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span></span></span></span></span></p><p>其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> 为牛顿引力常数。在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">M \\to 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 或 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">G \\to 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 的极限下，上式就变回平坦的闵氏时空度规在球坐标下的形式。将度规的形式代入</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mo>−</mo><mi>m</mi><mi>c</mi><mstyle scriptlevel="0" displaystyle="true"><mo>∫</mo><mi mathvariant="normal">∣</mi><mi mathvariant="normal">d</mi><mi>s</mi><mi mathvariant="normal">∣</mi><mo>=</mo><mo>−</mo><mi>m</mi><mi>c</mi><mo>∫</mo><msqrt><mrow><mo>−</mo><msub><mi>g</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><mi mathvariant="normal">d</mi><msup><mi>x</mi><mi>μ</mi></msup><mi mathvariant="normal">d</mi><msup><mi>x</mi><mi>ν</mi></msup></mrow></msqrt></mstyle></mrow><annotation encoding="application/x-tex">S = -mc \\displaystyle\\int |\\mathrm{d}s| = -mc \\int \\sqrt{-g_{\\mu\\nu} \\mathrm{d}x^{\\mu} \\mathrm{d}x^{\\nu}} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mord">−</span><span class="mord mathnormal">m</span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">∣</span><span class="mord mathrm">d</span><span class="mord mathnormal">s</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mord">−</span><span class="mord mathnormal">m</span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span class="svg-align" style="top:-3.2em;"><span class="pstrut" style="height:3.2em;"></span><span class="mord" style="padding-left:1em;"><span class="mord">−</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">μν</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5904em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span></span></span></span></span><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5904em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.06366em;">ν</span></span></span></span></span></span></span></span></span></span></span><span style="top:-2.898em;"><span class="pstrut" style="height:3.2em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.28em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.28em" viewBox="0 0 400000 1296" preserveAspectRatio="xMinYMin slice"><path d="M263,681c0.7,0,18,39.7,52,119\nc34,79.3,68.167,158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120\nc340,-704.7,510.7,-1060.3,512,-1067\nl0 -0\nc4.7,-7.3,11,-11,19,-11\nH40000v40H1012.3\ns-271.3,567,-271.3,567c-38.7,80.7,-84,175,-136,283c-52,108,-89.167,185.3,-111.5,232\nc-22.3,46.7,-33.8,70.3,-34.5,71c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1\ns-109,-253,-109,-253c-72.7,-168,-109.3,-252,-110,-252c-10.7,8,-22,16.7,-34,26\nc-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26s76,-59,76,-59s76,-60,76,-60z\nM1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.302em;"><span></span></span></span></span></span></span></span></span></span></p><p>即得到质量为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span> 的粒子在球对称引力场中的作用量</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mo>−</mo><mi>m</mi><mi>c</mi><mo>∫</mo><mi mathvariant="normal">d</mi><mi>t</mi><msqrt><mrow><msup><mi>c</mi><mn>2</mn></msup><mrow><mo fence="true">(</mo><mn>1</mn><mo>−</mo><mfrac><mrow><mn>2</mn><mi>G</mi><mi>M</mi></mrow><mrow><msup><mi>c</mi><mn>2</mn></msup><mi>r</mi></mrow></mfrac><mo fence="true">)</mo></mrow><mo>−</mo><msup><mrow><mo fence="true">(</mo><mn>1</mn><mo>−</mo><mfrac><mrow><mn>2</mn><mi>G</mi><mi>M</mi></mrow><mrow><msup><mi>c</mi><mn>2</mn></msup><mi>r</mi></mrow></mfrac><mo fence="true">)</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><msup><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mn>2</mn></msup><mo>−</mo><msup><mi>r</mi><mn>2</mn></msup><msup><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mn>2</mn></msup><mo>−</mo><msup><mi>r</mi><mn>2</mn></msup><msup><mrow><mi>sin</mi><mo>⁡</mo></mrow><mn>2</mn></msup><mi>θ</mi><msup><mover accent="true"><mi>ϕ</mi><mo>˙</mo></mover><mn>2</mn></msup></mrow></msqrt><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">S = -mc \\int \\mathrm{d}t \\sqrt{c^{2} \\left(1 - \\frac{2GM}{c^{2}r} \\right) - \\left(1 - \\frac{2GM}{c^{2}r} \\right)^{-1} \\dot{r}^{2} - r^{2} \\dot{\\theta}^{2} - r^{2} \\sin^{2}\\theta \\dot{\\phi}^{2}}, </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.04em;vertical-align:-1.0541em;"></span><span class="mord">−</span><span class="mord mathnormal">m</span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord mathnormal">t</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.9859em;"><span class="svg-align" style="top:-5em;"><span class="pstrut" style="height:5em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.10903em;">GM</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="minner"><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.10903em;">GM</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.654em;"><span style="top:-3.9029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0833em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9313em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span><span style="top:-3.2634em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mop">sin</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8719em;"><span style="top:-3.1208em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9313em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">ϕ</span></span><span style="top:-3.2634em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.9459em;"><span class="pstrut" style="height:5em;"></span><span class="hide-tail" style="min-width:1.02em;height:3.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="3.08em" viewBox="0 0 400000 3240" preserveAspectRatio="xMinYMin slice"><path d="M473,2793\nc339.3,-1799.3,509.3,-2700,510,-2702 l0 -0\nc3.3,-7.3,9.3,-11,18,-11 H400000v40H1017.7\ns-90.5,478,-276.2,1466c-185.7,988,-279.5,1483,-281.5,1485c-2,6,-10,9,-24,9\nc-8,0,-12,-0.7,-12,-2c0,-1.3,-5.3,-32,-16,-92c-50.7,-293.3,-119.7,-693.3,-207,-1200\nc0,-1.3,-5.3,8.7,-16,30c-10.7,21.3,-21.3,42.7,-32,64s-16,33,-16,33s-26,-26,-26,-26\ns76,-153,76,-153s77,-151,77,-151c0.7,0.7,35.7,202,105,604c67.3,400.7,102,602.7,104,\n606zM1001 80h400000v40H1017.7z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.0541em;"><span></span></span></span></span></span><span class="mpunct">,</span></span></span></span></span></p><p>考虑“低速”和“弱场”的非相对论极限，</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">∣</mi><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mi mathvariant="normal">∣</mi></mrow><mi>c</mi></mfrac><mo separator="true">,</mo><mfrac><mrow><mi>r</mi><mi mathvariant="normal">∣</mi><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mi mathvariant="normal">∣</mi></mrow><mi>c</mi></mfrac><mo separator="true">,</mo><mfrac><mrow><mi>r</mi><mi mathvariant="normal">∣</mi><mover accent="true"><mi>ϕ</mi><mo>˙</mo></mover><mi mathvariant="normal">∣</mi></mrow><mi>c</mi></mfrac><mo>≪</mo><mn>1</mn><mo separator="true">,</mo><mspace width="1em"></mspace><mfrac><mrow><mi>G</mi><mi>M</mi></mrow><mrow><msup><mi>c</mi><mn>2</mn></msup><mi>r</mi></mrow></mfrac><mo>≪</mo><mn>1</mn><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">\\frac{|\\dot{r}|}{c}, \\frac{r|\\dot{\\theta}|}{c}, \\frac{r|\\dot{\\phi}|}{c} \\ll 1, \\quad \\frac{GM}{c^{2}r} \\ll 1, </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.2943em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">∣</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0833em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="mord">∣</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6083em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord">∣</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9313em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span><span style="top:-3.2634em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="mord">∣</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6083em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord">∣</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9313em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">ϕ</span></span><span style="top:-3.2634em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="mord">∣</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≪</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">GM</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≪</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mpunct">,</span></span></span></span></span></p><p>展开</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mo>−</mo><mi>m</mi><mi>c</mi><mo>∫</mo><mi mathvariant="normal">d</mi><mi>t</mi><msqrt><mrow><msup><mi>c</mi><mn>2</mn></msup><mrow><mo fence="true">(</mo><mn>1</mn><mo>−</mo><mfrac><mrow><mn>2</mn><mi>G</mi><mi>M</mi></mrow><mrow><msup><mi>c</mi><mn>2</mn></msup><mi>r</mi></mrow></mfrac><mo fence="true">)</mo></mrow><mo>−</mo><msup><mrow><mo fence="true">(</mo><mn>1</mn><mo>−</mo><mfrac><mrow><mn>2</mn><mi>G</mi><mi>M</mi></mrow><mrow><msup><mi>c</mi><mn>2</mn></msup><mi>r</mi></mrow></mfrac><mo fence="true">)</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><msup><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mn>2</mn></msup><mo>−</mo><msup><mi>r</mi><mn>2</mn></msup><msup><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mn>2</mn></msup><mo>−</mo><msup><mi>r</mi><mn>2</mn></msup><msup><mrow><mi>sin</mi><mo>⁡</mo></mrow><mn>2</mn></msup><mi>θ</mi><msup><mover accent="true"><mi>ϕ</mi><mo>˙</mo></mover><mn>2</mn></msup></mrow></msqrt><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">S = -mc \\int \\mathrm{d}t \\sqrt{c^{2} \\left(1 - \\frac{2GM}{c^{2}r} \\right) - \\left(1 - \\frac{2GM}{c^{2}r} \\right)^{-1} \\dot{r}^{2} - r^{2} \\dot{\\theta}^{2} - r^{2} \\sin^{2}\\theta \\dot{\\phi}^{2}}, </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.04em;vertical-align:-1.0541em;"></span><span class="mord">−</span><span class="mord mathnormal">m</span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord mathnormal">t</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.9859em;"><span class="svg-align" style="top:-5em;"><span class="pstrut" style="height:5em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.10903em;">GM</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="minner"><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.10903em;">GM</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.654em;"><span style="top:-3.9029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0833em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9313em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span><span style="top:-3.2634em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mop">sin</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8719em;"><span style="top:-3.1208em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9313em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">ϕ</span></span><span style="top:-3.2634em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.9459em;"><span class="pstrut" style="height:5em;"></span><span class="hide-tail" style="min-width:1.02em;height:3.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="3.08em" viewBox="0 0 400000 3240" preserveAspectRatio="xMinYMin slice"><path d="M473,2793\nc339.3,-1799.3,509.3,-2700,510,-2702 l0 -0\nc3.3,-7.3,9.3,-11,18,-11 H400000v40H1017.7\ns-90.5,478,-276.2,1466c-185.7,988,-279.5,1483,-281.5,1485c-2,6,-10,9,-24,9\nc-8,0,-12,-0.7,-12,-2c0,-1.3,-5.3,-32,-16,-92c-50.7,-293.3,-119.7,-693.3,-207,-1200\nc0,-1.3,-5.3,8.7,-16,30c-10.7,21.3,-21.3,42.7,-32,64s-16,33,-16,33s-26,-26,-26,-26\ns76,-153,76,-153s77,-151,77,-151c0.7,0.7,35.7,202,105,604c67.3,400.7,102,602.7,104,\n606zM1001 80h400000v40H1017.7z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.0541em;"><span></span></span></span></span></span><span class="mpunct">,</span></span></span></span></span></p><p>并保留到领头阶，得到</p>', 36),
+    createBaseVNode("p", { class: "katex-block" }, [
+      createBaseVNode("span", { class: "katex-display" }, [
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", {
+              xmlns: "http://www.w3.org/1998/Math/MathML",
+              display: "block"
+            }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mtable", {
+                  rowspacing: "0.25em",
+                  columnalign: "right left",
+                  columnspacing: "0em"
+                }, [
+                  createBaseVNode("mtr", null, [
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mi", null, "S")
+                      ])
+                    ]),
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow", null, [
+                          createBaseVNode("mrow"),
+                          createBaseVNode("mo", null, "="),
+                          createBaseVNode("mo", null, "−"),
+                          createBaseVNode("mi", null, "m"),
+                          createBaseVNode("msup", null, [
+                            createBaseVNode("mi", null, "c"),
+                            createBaseVNode("mn", null, "2")
+                          ]),
+                          createBaseVNode("mo", null, "∫"),
+                          createBaseVNode("mi", { mathvariant: "normal" }, "d"),
+                          createBaseVNode("mi", null, "t"),
+                          createBaseVNode("mrow", null, [
+                            createBaseVNode("mo", { fence: "true" }, "("),
+                            createBaseVNode("mn", null, "1"),
+                            createBaseVNode("mo", null, "−"),
+                            createBaseVNode("mfrac", null, [
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("mi", null, "G"),
+                                createBaseVNode("mi", null, "M")
+                              ]),
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("msup", null, [
+                                  createBaseVNode("mi", null, "c"),
+                                  createBaseVNode("mn", null, "2")
+                                ]),
+                                createBaseVNode("mi", null, "r")
+                              ])
+                            ]),
+                            createBaseVNode("mo", null, "+"),
+                            createBaseVNode("mo", null, "⋯"),
+                            createBaseVNode("mtext", null, " "),
+                            createBaseVNode("mo", { fence: "true" }, ")")
+                          ]),
+                          createBaseVNode("mrow", null, [
+                            createBaseVNode("mo", { fence: "true" }, "["),
+                            createBaseVNode("mn", null, "1"),
+                            createBaseVNode("mo", null, "−"),
+                            createBaseVNode("mfrac", null, [
+                              createBaseVNode("mn", null, "1"),
+                              createBaseVNode("mn", null, "2")
+                            ]),
+                            createBaseVNode("mfrac", null, [
+                              createBaseVNode("mn", null, "1"),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mi", null, "c"),
+                                createBaseVNode("mn", null, "2")
+                              ])
+                            ]),
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mo", { fence: "true" }, "("),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mover", { accent: "true" }, [
+                                  createBaseVNode("mi", null, "r"),
+                                  createBaseVNode("mo", null, "˙")
+                                ]),
+                                createBaseVNode("mn", null, "2")
+                              ]),
+                              createBaseVNode("mo", null, "+"),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mi", null, "r"),
+                                createBaseVNode("mn", null, "2")
+                              ]),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mover", { accent: "true" }, [
+                                  createBaseVNode("mi", null, "θ"),
+                                  createBaseVNode("mo", null, "˙")
+                                ]),
+                                createBaseVNode("mn", null, "2")
+                              ]),
+                              createBaseVNode("mo", null, "+"),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mi", null, "r"),
+                                createBaseVNode("mn", null, "2")
+                              ]),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mrow", null, [
+                                  createBaseVNode("mi", null, "sin"),
+                                  createBaseVNode("mo", null, "⁡")
+                                ]),
+                                createBaseVNode("mn", null, "2")
+                              ]),
+                              createBaseVNode("mi", null, "θ"),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mover", { accent: "true" }, [
+                                  createBaseVNode("mi", null, "ϕ"),
+                                  createBaseVNode("mo", null, "˙")
+                                ]),
+                                createBaseVNode("mn", null, "2")
+                              ]),
+                              createBaseVNode("mo", { fence: "true" }, ")")
+                            ]),
+                            createBaseVNode("mo", null, "+"),
+                            createBaseVNode("mo", null, "⋯"),
+                            createBaseVNode("mtext", null, " "),
+                            createBaseVNode("mo", { fence: "true" }, "]")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("mtr", null, [
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow")
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("mtr", null, [
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow")
+                      ])
+                    ]),
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow", null, [
+                          createBaseVNode("mrow"),
+                          createBaseVNode("mo", null, "="),
+                          createBaseVNode("mo", null, "−"),
+                          createBaseVNode("mi", null, "m"),
+                          createBaseVNode("msup", null, [
+                            createBaseVNode("mi", null, "c"),
+                            createBaseVNode("mn", null, "2")
+                          ]),
+                          createBaseVNode("mo", null, "∫"),
+                          createBaseVNode("mi", { mathvariant: "normal" }, "d"),
+                          createBaseVNode("mi", null, "t"),
+                          createBaseVNode("mo", null, "+"),
+                          createBaseVNode("mo", null, "∫"),
+                          createBaseVNode("mi", { mathvariant: "normal" }, "d"),
+                          createBaseVNode("mi", null, "t"),
+                          createBaseVNode("mrow", null, [
+                            createBaseVNode("mo", { fence: "true" }, "["),
+                            createBaseVNode("mfrac", null, [
+                              createBaseVNode("mn", null, "1"),
+                              createBaseVNode("mn", null, "2")
+                            ]),
+                            createBaseVNode("mi", null, "m"),
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mo", { fence: "true" }, "("),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mover", { accent: "true" }, [
+                                  createBaseVNode("mi", null, "r"),
+                                  createBaseVNode("mo", null, "˙")
+                                ]),
+                                createBaseVNode("mn", null, "2")
+                              ]),
+                              createBaseVNode("mo", null, "+"),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mi", null, "r"),
+                                createBaseVNode("mn", null, "2")
+                              ]),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mover", { accent: "true" }, [
+                                  createBaseVNode("mi", null, "θ"),
+                                  createBaseVNode("mo", null, "˙")
+                                ]),
+                                createBaseVNode("mn", null, "2")
+                              ]),
+                              createBaseVNode("mo", null, "+"),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mi", null, "r"),
+                                createBaseVNode("mn", null, "2")
+                              ]),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mrow", null, [
+                                  createBaseVNode("mi", null, "sin"),
+                                  createBaseVNode("mo", null, "⁡")
+                                ]),
+                                createBaseVNode("mn", null, "2")
+                              ]),
+                              createBaseVNode("mi", null, "θ"),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mover", { accent: "true" }, [
+                                  createBaseVNode("mi", null, "ϕ"),
+                                  createBaseVNode("mo", null, "˙")
+                                ]),
+                                createBaseVNode("mn", null, "2")
+                              ]),
+                              createBaseVNode("mo", { fence: "true" }, ")")
+                            ]),
+                            createBaseVNode("mo", null, "+"),
+                            createBaseVNode("mi", null, "G"),
+                            createBaseVNode("mfrac", null, [
+                              createBaseVNode("mrow", null, [
+                                createBaseVNode("mi", null, "M"),
+                                createBaseVNode("mi", null, "m")
+                              ]),
+                              createBaseVNode("mi", null, "r")
+                            ]),
+                            createBaseVNode("mo", { fence: "true" }, "]")
+                          ]),
+                          createBaseVNode("mo", null, "+"),
+                          createBaseVNode("mo", null, "⋯"),
+                          createBaseVNode("mtext", null, " "),
+                          createBaseVNode("mo", { separator: "true" }, ",")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\begin{aligned} S &= -mc^{2} \\int \\mathrm{d}t \\left(1 - \\frac{GM}{c^{2}r} + \\cdots \\right) \\left[1 - \\frac{1}{2} \\frac{1}{c^{2}} \\left(\\dot{r}^{2} + r^{2} \\dot{\\theta}^{2} + r^{2} \\sin^{2}\\theta \\dot{\\phi}^{2} \\right) + \\cdots \\right] \\\\\\\\ &= -mc^{2} \\int \\mathrm{d}t + \\int \\mathrm{d}t \\left[\\frac{1}{2}m \\left(\\dot{r}^{2} + r^{2} \\dot{\\theta}^{2} + r^{2} \\sin^{2}\\theta \\dot{\\phi}^{2} \\right) + G \\frac{Mm}{r} \\right] + \\cdots, \\end{aligned} ")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "6.9001em", "vertical-align": "-3.2em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mtable" }, [
+                  createBaseVNode("span", { class: "col-align-r" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "3.7em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-5.7em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.45em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", {
+                                class: "mord mathnormal",
+                                style: { "margin-right": "0.05764em" }
+                              }, "S")
+                            ])
+                          ]),
+                          createBaseVNode("span", { style: { "top": "-3.61em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.45em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" })
+                          ]),
+                          createBaseVNode("span", { style: { "top": "-1.5em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.45em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" })
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "3.2em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("span", { class: "col-align-l" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "3.7em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-5.7em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.45em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", { class: "mord" }),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mrel" }, "="),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, "−"),
+                              createBaseVNode("span", { class: "mord mathnormal" }, "m"),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord mathnormal" }, "c"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.8641em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "2")
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", {
+                                class: "mop op-symbol large-op",
+                                style: { "margin-right": "0.44445em", "position": "relative", "top": "-0.0011em" }
+                              }, "∫"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "mord mathrm" }, "d"),
+                              createBaseVNode("span", { class: "mord mathnormal" }, "t"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "minner" }, [
+                                createBaseVNode("span", {
+                                  class: "mopen delimcenter",
+                                  style: { "top": "0em" }
+                                }, [
+                                  createBaseVNode("span", { class: "delimsizing size3" }, "(")
+                                ]),
+                                createBaseVNode("span", { class: "mord" }, "1"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mbin" }, "−"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                  createBaseVNode("span", { class: "mfrac" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "1.3603em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord" }, [
+                                                createBaseVNode("span", { class: "mord mathnormal" }, "c"),
+                                                createBaseVNode("span", { class: "msupsub" }, [
+                                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                      createBaseVNode("span", {
+                                                        class: "vlist",
+                                                        style: { "height": "0.7401em" }
+                                                      }, [
+                                                        createBaseVNode("span", { style: { "top": "-2.989em", "margin-right": "0.05em" } }, [
+                                                          createBaseVNode("span", {
+                                                            class: "pstrut",
+                                                            style: { "height": "2.7em" }
+                                                          }),
+                                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                                              createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                            ])
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ])
+                                                  ])
+                                                ])
+                                              ]),
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal",
+                                                style: { "margin-right": "0.02778em" }
+                                              }, "r")
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", {
+                                              class: "frac-line",
+                                              style: { "border-bottom-width": "0.04em" }
+                                            })
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.677em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal",
+                                                style: { "margin-right": "0.10903em" }
+                                              }, "GM")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.686em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", { class: "mclose nulldelimiter" })
+                                ]),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mbin" }, "+"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "minner" }, "⋯"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.1667em" }
+                                }),
+                                createBaseVNode("span", {
+                                  class: "mclose delimcenter",
+                                  style: { "top": "0em" }
+                                }, [
+                                  createBaseVNode("span", { class: "delimsizing size3" }, ")")
+                                ])
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "minner" }, [
+                                createBaseVNode("span", {
+                                  class: "mopen delimcenter",
+                                  style: { "top": "0em" }
+                                }, [
+                                  createBaseVNode("span", { class: "delimsizing size3" }, "[")
+                                ]),
+                                createBaseVNode("span", { class: "mord" }, "1"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mbin" }, "−"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                  createBaseVNode("span", { class: "mfrac" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "1.3214em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord" }, "2")
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", {
+                                              class: "frac-line",
+                                              style: { "border-bottom-width": "0.04em" }
+                                            })
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.677em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord" }, "1")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.686em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", { class: "mclose nulldelimiter" })
+                                ]),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                  createBaseVNode("span", { class: "mfrac" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "1.3214em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord" }, [
+                                                createBaseVNode("span", { class: "mord mathnormal" }, "c"),
+                                                createBaseVNode("span", { class: "msupsub" }, [
+                                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                                      createBaseVNode("span", {
+                                                        class: "vlist",
+                                                        style: { "height": "0.7401em" }
+                                                      }, [
+                                                        createBaseVNode("span", { style: { "top": "-2.989em", "margin-right": "0.05em" } }, [
+                                                          createBaseVNode("span", {
+                                                            class: "pstrut",
+                                                            style: { "height": "2.7em" }
+                                                          }),
+                                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                                              createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                            ])
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", {
+                                              class: "frac-line",
+                                              style: { "border-bottom-width": "0.04em" }
+                                            })
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.677em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord" }, "1")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.686em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", { class: "mclose nulldelimiter" })
+                                ]),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.1667em" }
+                                }),
+                                createBaseVNode("span", { class: "minner" }, [
+                                  createBaseVNode("span", {
+                                    class: "mopen delimcenter",
+                                    style: { "top": "0em" }
+                                  }, [
+                                    createBaseVNode("span", { class: "delimsizing size2" }, "(")
+                                  ]),
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord accent" }, [
+                                      createBaseVNode("span", { class: "vlist-t" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.6679em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "3em" }
+                                              }),
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal",
+                                                style: { "margin-right": "0.02778em" }
+                                              }, "r")
+                                            ]),
+                                            createBaseVNode("span", { style: { "top": "-3em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "3em" }
+                                              }),
+                                              createBaseVNode("span", {
+                                                class: "accent-body",
+                                                style: { "left": "-0.0833em" }
+                                              }, [
+                                                createBaseVNode("span", { class: "mord" }, "˙")
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ]),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.8641em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", {
+                                    class: "mspace",
+                                    style: { "margin-right": "0.2222em" }
+                                  }),
+                                  createBaseVNode("span", { class: "mbin" }, "+"),
+                                  createBaseVNode("span", {
+                                    class: "mspace",
+                                    style: { "margin-right": "0.2222em" }
+                                  }),
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", {
+                                      class: "mord mathnormal",
+                                      style: { "margin-right": "0.02778em" }
+                                    }, "r"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.8641em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord accent" }, [
+                                      createBaseVNode("span", { class: "vlist-t" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.9313em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "3em" }
+                                              }),
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal",
+                                                style: { "margin-right": "0.02778em" }
+                                              }, "θ")
+                                            ]),
+                                            createBaseVNode("span", { style: { "top": "-3.2634em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "3em" }
+                                              }),
+                                              createBaseVNode("span", {
+                                                class: "accent-body",
+                                                style: { "left": "-0.0556em" }
+                                              }, [
+                                                createBaseVNode("span", { class: "mord" }, "˙")
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ]),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.8641em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", {
+                                    class: "mspace",
+                                    style: { "margin-right": "0.2222em" }
+                                  }),
+                                  createBaseVNode("span", { class: "mbin" }, "+"),
+                                  createBaseVNode("span", {
+                                    class: "mspace",
+                                    style: { "margin-right": "0.2222em" }
+                                  }),
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", {
+                                      class: "mord mathnormal",
+                                      style: { "margin-right": "0.02778em" }
+                                    }, "r"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.8641em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", {
+                                    class: "mspace",
+                                    style: { "margin-right": "0.1667em" }
+                                  }),
+                                  createBaseVNode("span", { class: "mop" }, [
+                                    createBaseVNode("span", { class: "mop" }, "sin"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.8719em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3.1208em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", {
+                                    class: "mspace",
+                                    style: { "margin-right": "0.1667em" }
+                                  }),
+                                  createBaseVNode("span", {
+                                    class: "mord mathnormal",
+                                    style: { "margin-right": "0.02778em" }
+                                  }, "θ"),
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord accent" }, [
+                                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.9313em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "3em" }
+                                              }),
+                                              createBaseVNode("span", { class: "mord mathnormal" }, "ϕ")
+                                            ]),
+                                            createBaseVNode("span", { style: { "top": "-3.2634em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "3em" }
+                                              }),
+                                              createBaseVNode("span", {
+                                                class: "accent-body",
+                                                style: { "left": "-0.0556em" }
+                                              }, [
+                                                createBaseVNode("span", { class: "mord" }, "˙")
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.1944em" }
+                                          }, [
+                                            createBaseVNode("span")
+                                          ])
+                                        ])
+                                      ])
+                                    ]),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.8641em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", {
+                                    class: "mclose delimcenter",
+                                    style: { "top": "0em" }
+                                  }, [
+                                    createBaseVNode("span", { class: "delimsizing size2" }, ")")
+                                  ])
+                                ]),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mbin" }, "+"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "minner" }, "⋯"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.1667em" }
+                                }),
+                                createBaseVNode("span", {
+                                  class: "mclose delimcenter",
+                                  style: { "top": "0em" }
+                                }, [
+                                  createBaseVNode("span", { class: "delimsizing size3" }, "]")
+                                ])
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("span", { style: { "top": "-1.5em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.45em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", { class: "mord" }),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mrel" }, "="),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, "−"),
+                              createBaseVNode("span", { class: "mord mathnormal" }, "m"),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord mathnormal" }, "c"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.8641em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", { class: "mord mtight" }, "2")
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", {
+                                class: "mop op-symbol large-op",
+                                style: { "margin-right": "0.44445em", "position": "relative", "top": "-0.0011em" }
+                              }, "∫"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "mord mathrm" }, "d"),
+                              createBaseVNode("span", { class: "mord mathnormal" }, "t"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2222em" }
+                              }),
+                              createBaseVNode("span", { class: "mbin" }, "+"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2222em" }
+                              }),
+                              createBaseVNode("span", {
+                                class: "mop op-symbol large-op",
+                                style: { "margin-right": "0.44445em", "position": "relative", "top": "-0.0011em" }
+                              }, "∫"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "mord mathrm" }, "d"),
+                              createBaseVNode("span", { class: "mord mathnormal" }, "t"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "minner" }, [
+                                createBaseVNode("span", {
+                                  class: "mopen delimcenter",
+                                  style: { "top": "0em" }
+                                }, [
+                                  createBaseVNode("span", { class: "delimsizing size3" }, "[")
+                                ]),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                  createBaseVNode("span", { class: "mfrac" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "1.3214em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord" }, "2")
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", {
+                                              class: "frac-line",
+                                              style: { "border-bottom-width": "0.04em" }
+                                            })
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.677em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord" }, "1")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.686em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", { class: "mclose nulldelimiter" })
+                                ]),
+                                createBaseVNode("span", { class: "mord mathnormal" }, "m"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.1667em" }
+                                }),
+                                createBaseVNode("span", { class: "minner" }, [
+                                  createBaseVNode("span", {
+                                    class: "mopen delimcenter",
+                                    style: { "top": "0em" }
+                                  }, [
+                                    createBaseVNode("span", { class: "delimsizing size2" }, "(")
+                                  ]),
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord accent" }, [
+                                      createBaseVNode("span", { class: "vlist-t" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.6679em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "3em" }
+                                              }),
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal",
+                                                style: { "margin-right": "0.02778em" }
+                                              }, "r")
+                                            ]),
+                                            createBaseVNode("span", { style: { "top": "-3em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "3em" }
+                                              }),
+                                              createBaseVNode("span", {
+                                                class: "accent-body",
+                                                style: { "left": "-0.0833em" }
+                                              }, [
+                                                createBaseVNode("span", { class: "mord" }, "˙")
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ]),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.8641em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", {
+                                    class: "mspace",
+                                    style: { "margin-right": "0.2222em" }
+                                  }),
+                                  createBaseVNode("span", { class: "mbin" }, "+"),
+                                  createBaseVNode("span", {
+                                    class: "mspace",
+                                    style: { "margin-right": "0.2222em" }
+                                  }),
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", {
+                                      class: "mord mathnormal",
+                                      style: { "margin-right": "0.02778em" }
+                                    }, "r"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.8641em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord accent" }, [
+                                      createBaseVNode("span", { class: "vlist-t" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.9313em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "3em" }
+                                              }),
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal",
+                                                style: { "margin-right": "0.02778em" }
+                                              }, "θ")
+                                            ]),
+                                            createBaseVNode("span", { style: { "top": "-3.2634em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "3em" }
+                                              }),
+                                              createBaseVNode("span", {
+                                                class: "accent-body",
+                                                style: { "left": "-0.0556em" }
+                                              }, [
+                                                createBaseVNode("span", { class: "mord" }, "˙")
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ]),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.8641em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", {
+                                    class: "mspace",
+                                    style: { "margin-right": "0.2222em" }
+                                  }),
+                                  createBaseVNode("span", { class: "mbin" }, "+"),
+                                  createBaseVNode("span", {
+                                    class: "mspace",
+                                    style: { "margin-right": "0.2222em" }
+                                  }),
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", {
+                                      class: "mord mathnormal",
+                                      style: { "margin-right": "0.02778em" }
+                                    }, "r"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.8641em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", {
+                                    class: "mspace",
+                                    style: { "margin-right": "0.1667em" }
+                                  }),
+                                  createBaseVNode("span", { class: "mop" }, [
+                                    createBaseVNode("span", { class: "mop" }, "sin"),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.8719em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3.1208em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", {
+                                    class: "mspace",
+                                    style: { "margin-right": "0.1667em" }
+                                  }),
+                                  createBaseVNode("span", {
+                                    class: "mord mathnormal",
+                                    style: { "margin-right": "0.02778em" }
+                                  }, "θ"),
+                                  createBaseVNode("span", { class: "mord" }, [
+                                    createBaseVNode("span", { class: "mord accent" }, [
+                                      createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.9313em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "3em" }
+                                              }),
+                                              createBaseVNode("span", { class: "mord mathnormal" }, "ϕ")
+                                            ]),
+                                            createBaseVNode("span", { style: { "top": "-3.2634em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "3em" }
+                                              }),
+                                              createBaseVNode("span", {
+                                                class: "accent-body",
+                                                style: { "left": "-0.0556em" }
+                                              }, [
+                                                createBaseVNode("span", { class: "mord" }, "˙")
+                                              ])
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { class: "vlist-s" }, "​")
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.1944em" }
+                                          }, [
+                                            createBaseVNode("span")
+                                          ])
+                                        ])
+                                      ])
+                                    ]),
+                                    createBaseVNode("span", { class: "msupsub" }, [
+                                      createBaseVNode("span", { class: "vlist-t" }, [
+                                        createBaseVNode("span", { class: "vlist-r" }, [
+                                          createBaseVNode("span", {
+                                            class: "vlist",
+                                            style: { "height": "0.8641em" }
+                                          }, [
+                                            createBaseVNode("span", { style: { "top": "-3.113em", "margin-right": "0.05em" } }, [
+                                              createBaseVNode("span", {
+                                                class: "pstrut",
+                                                style: { "height": "2.7em" }
+                                              }),
+                                              createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                createBaseVNode("span", { class: "mord mtight" }, [
+                                                  createBaseVNode("span", { class: "mord mtight" }, "2")
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", {
+                                    class: "mclose delimcenter",
+                                    style: { "top": "0em" }
+                                  }, [
+                                    createBaseVNode("span", { class: "delimsizing size2" }, ")")
+                                  ])
+                                ]),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mbin" }, "+"),
+                                createBaseVNode("span", {
+                                  class: "mspace",
+                                  style: { "margin-right": "0.2222em" }
+                                }),
+                                createBaseVNode("span", { class: "mord mathnormal" }, "G"),
+                                createBaseVNode("span", { class: "mord" }, [
+                                  createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                  createBaseVNode("span", { class: "mfrac" }, [
+                                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "1.3603em" }
+                                        }, [
+                                          createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal",
+                                                style: { "margin-right": "0.02778em" }
+                                              }, "r")
+                                            ])
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", {
+                                              class: "frac-line",
+                                              style: { "border-bottom-width": "0.04em" }
+                                            })
+                                          ]),
+                                          createBaseVNode("span", { style: { "top": "-3.677em" } }, [
+                                            createBaseVNode("span", {
+                                              class: "pstrut",
+                                              style: { "height": "3em" }
+                                            }),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal",
+                                                style: { "margin-right": "0.10903em" }
+                                              }, "M"),
+                                              createBaseVNode("span", { class: "mord mathnormal" }, "m")
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-r" }, [
+                                        createBaseVNode("span", {
+                                          class: "vlist",
+                                          style: { "height": "0.686em" }
+                                        }, [
+                                          createBaseVNode("span")
+                                        ])
+                                      ])
+                                    ])
+                                  ]),
+                                  createBaseVNode("span", { class: "mclose nulldelimiter" })
+                                ]),
+                                createBaseVNode("span", {
+                                  class: "mclose delimcenter",
+                                  style: { "top": "0em" }
+                                }, [
+                                  createBaseVNode("span", { class: "delimsizing size3" }, "]")
+                                ])
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2222em" }
+                              }),
+                              createBaseVNode("span", { class: "mbin" }, "+"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2222em" }
+                              }),
+                              createBaseVNode("span", { class: "minner" }, "⋯"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "mpunct" }, ",")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "3.2em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ], -1),
+    createStaticVNode('<p>除去常数项，非相对论极限下，球对称引力场中粒子的作用量即</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mo>∫</mo><mi mathvariant="normal">d</mi><mi>t</mi><mo stretchy="false">(</mo><mi>T</mi><mo>−</mo><mi>V</mi><mo stretchy="false">)</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">S = \\int \\mathrm{d}t (T - V), </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mclose">)</span><span class="mpunct">,</span></span></span></span></span></p><p>其中</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>T</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><mrow><mo fence="true">(</mo><msup><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mn>2</mn></msup><mo>+</mo><msup><mi>r</mi><mn>2</mn></msup><msup><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mn>2</mn></msup><mo>+</mo><msup><mi>r</mi><mn>2</mn></msup><msup><mrow><mi>sin</mi><mo>⁡</mo></mrow><mn>2</mn></msup><mi>θ</mi><msup><mover accent="true"><mi>ϕ</mi><mo>˙</mo></mover><mn>2</mn></msup><mo fence="true">)</mo></mrow><mo>≡</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">T = \\frac{1}{2}m \\left(\\dot{r}^{2} + r^{2} \\dot{\\theta}^{2} + r^{2} \\sin^{2}\\theta \\dot{\\phi}^{2} \\right) \\equiv \\frac{1}{2}mv^{2}, </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0833em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9313em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span><span style="top:-3.2634em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mop">sin</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8719em;"><span style="top:-3.1208em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9313em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">ϕ</span></span><span style="top:-3.2634em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span></span></span></span></span></p><p>正是粒子的牛顿力学动能在球坐标下的形式，而</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>V</mi><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mi>G</mi><mfrac><mrow><mi>M</mi><mi>m</mi></mrow><mi>r</mi></mfrac><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">V(r) = -G \\frac{Mm}{r}, </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord">−</span><span class="mord mathnormal">G</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span></span></span></span></span></p><p>正是质量为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span> 的粒子的牛顿万有引力势能。作用量 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mstyle scriptlevel="0" displaystyle="true"><mo>∫</mo><mi mathvariant="normal">d</mi><mi>t</mi><mo stretchy="false">(</mo><mi>T</mi><mo>−</mo><mi>V</mi><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">S =\\displaystyle \\int \\mathrm{d}t (T - V)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mclose">)</span></span></span></span> 对应运动方程 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mover accent="true"><mi>r</mi><mo>¨</mo></mover><mo>=</mo><mo>−</mo><mi mathvariant="normal">∇</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">m\\ddot{r} = -\\nabla V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6679em;"></span><span class="mord mathnormal">m</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">¨</span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">∇</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>，方程的右边正是牛顿万有引力。由此可见，牛顿万有引力定律只是在引力场很弱、运动速度很低情况下的近似。</p><p>此外，在非相对论极限下，引力场中粒子的拉格朗日量同样具有“动能减去势能”的形式，而由非相对论极限的推导知，这同样来自度规中时间和空间部分的符号差别。</p><h2 id="part-5-非相对论极限作用量" tabindex="-1"><a class="header-anchor" href="#part-5-非相对论极限作用量"><span>Part 5 非相对论极限作用量</span></a></h2><p>以上我们从第一原理——相对论时空观和最小作用量原理——出发，讨论了闵氏时空中自由粒子和外场中粒子的作用量，并得到了其在非相对论极限下的形式。我们得到一个重要的结论：在非相对论极限（即低速、弱场）下，粒子的拉格朗日量就是动能减去势能。这里的“减号”正来源于闵氏度规中时间和空间部分符号的差异。类似的讨论可以推广到其他保守体系和多粒子系统，并得到同样的结论。</p><p>于是我们得到以下论断：在非相对论极限下，作用量具有形式</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mo>∫</mo><mi mathvariant="normal">d</mi><mi>t</mi><mi>L</mi><mo>=</mo><mo>∫</mo><mi mathvariant="normal">d</mi><mi>t</mi><mo stretchy="false">(</mo><mi>T</mi><mo>−</mo><mi>V</mi><mo stretchy="false">)</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">S = \\int \\mathrm{d}t L = \\int \\mathrm{d}t (T - V), </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord mathnormal">t</span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mclose">)</span><span class="mpunct">,</span></span></span></span></span></p><p>其中第一项 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span> 被称作<strong>动能</strong>（kinetic energy），第二项 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span> 被称作<strong>势能</strong>（potential energy）。因为是在非相对论极限下，所以这里的动能即牛顿力学的动能，势能则一般只依赖于系统的位形。需要强调的是，“拉格朗日量等于动能减去势能”只适用于非相对论极限下的粒子系统（包括刚体）。</p><p>实际上，“动能”和“势能”的概念，本身只在非相对论极限下才有意义，或者说，它们本来就是非相对论极限下的概念。在相对论情形，拉格朗日量具有更一般的函数形式，往往不能分解成明显的动能和势能部分。在连续系统情形，例如 1 维弦、2 维膜、3 维场的情形，拉格朗日量也可能具有不同的、更复杂的数学形式。</p><p>接下来除非特别声明，我们讨论的都是非相对论性的力学系统，因此 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mi>T</mi><mo>−</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">L = T - V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span> 的形式是适用的。</p><p>对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> 个粒子组成的粒子系统，记第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> 个粒子的直角坐标为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></msub></mrow><annotation encoding="application/x-tex">\\mathbf{x}_{(\\alpha)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7996em;vertical-align:-0.3552em;"></span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span></span></span></span>，则系统的总动能为</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>T</mi><mo>=</mo><munderover><mo>∑</mo><mrow><mi>α</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>m</mi><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></msub><msubsup><mover accent="true"><mi mathvariant="bold">x</mi><mo>˙</mo></mover><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msubsup><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">T = \\sum_{\\alpha=1}^{N} \\frac{1}{2} m_{(\\alpha)} \\dot{\\mathbf{x}}_{(\\alpha)}^{2}. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.0954em;vertical-align:-1.2671em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6813em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">x</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1111em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-2.428em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mclose mtight">)</span></span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.447em;"><span></span></span></span></span></span></span><span class="mord">.</span></span></span></span></span></p><p>若换为广义坐标 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><msup><mi>q</mi><mi>a</mi></msup><mo stretchy="false">}</mo><mo separator="true">,</mo><mi>a</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mo>⋯</mo><mtext> </mtext><mo separator="true">,</mo><mn>3</mn><mi>N</mi></mrow><annotation encoding="application/x-tex">\\{q^{a}\\}, a = 1, \\cdots, 3N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span><span class="mclose">}</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">3</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>，有</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></msub><mo>=</mo><msub><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></msub><mo stretchy="false">(</mo><mi>t</mi><mo separator="true">,</mo><mi mathvariant="bold">q</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mspace width="1em"></mspace><mi>α</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mo>⋯</mo><mtext> </mtext><mo separator="true">,</mo><mi>N</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\\mathbf{x}_{(\\alpha)} = \\mathbf{x}_{(\\alpha)}(t, \\mathbf{q}), \\quad \\alpha = 1, \\cdots, N. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7996em;vertical-align:-0.3552em;"></span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1052em;vertical-align:-0.3552em;"></span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathbf">q</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord">.</span></span></span></span></span></p><p>速度的变换关系为</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mover accent="true"><mi mathvariant="bold">x</mi><mo>˙</mo></mover><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></msub><mo>≡</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><msub><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></msub></mrow><mrow><mi mathvariant="normal">∂</mi><msup><mi>q</mi><mi>a</mi></msup></mrow></mfrac><msup><mover accent="true"><mi>q</mi><mo>˙</mo></mover><mi>a</mi></msup><mo>+</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><msub><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></msub></mrow><mrow><mi mathvariant="normal">∂</mi><mi>t</mi></mrow></mfrac><mo separator="true">,</mo><mspace width="1em"></mspace><mi>α</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mo>⋯</mo><mtext> </mtext><mo separator="true">,</mo><mi>N</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\\dot{\\mathbf{x}}_{(\\alpha)} \\equiv \\frac{\\partial \\mathbf{x}_{(\\alpha)}}{\\partial q^{a}} \\dot{q}^{a} + \\frac{\\partial \\mathbf{x}_{(\\alpha)}}{\\partial t}, \\quad \\alpha = 1, \\cdots, N. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0365em;vertical-align:-0.3552em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6813em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">x</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1111em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.3201em;vertical-align:-0.8804em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4396em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5904em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.7452em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.1256em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4396em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.7452em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord">.</span></span></span></span></span></p><p>于是动能用广义坐标 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><msup><mi>q</mi><mi>a</mi></msup><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\\{q^{a}\\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span><span class="mclose">}</span></span></span></span> 表示为</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>T</mi><mo>=</mo><munderover><mo>∑</mo><mrow><mi>α</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>m</mi><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></msub><mrow><mo fence="true">(</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><msub><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></msub></mrow><mrow><mi mathvariant="normal">∂</mi><msup><mi>q</mi><mi>a</mi></msup></mrow></mfrac><msup><mover accent="true"><mi>q</mi><mo>˙</mo></mover><mi>a</mi></msup><mo>+</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><msub><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></msub></mrow><mrow><mi mathvariant="normal">∂</mi><mi>t</mi></mrow></mfrac><mo fence="true">)</mo></mrow><mo>⋅</mo><mrow><mo fence="true">(</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><msub><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></msub></mrow><mrow><mi mathvariant="normal">∂</mi><msup><mi>q</mi><mi>b</mi></msup></mrow></mfrac><msup><mover accent="true"><mi>q</mi><mo>˙</mo></mover><mi>b</mi></msup><mo>+</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><msub><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></msub></mrow><mrow><mi mathvariant="normal">∂</mi><mi>t</mi></mrow></mfrac><mo fence="true">)</mo></mrow><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">T = \\sum_{\\alpha=1}^{N} \\frac{1}{2} m_{(\\alpha)} \\left( \\frac{\\partial \\mathbf{x}_{(\\alpha)}}{\\partial q^{a}} \\dot{q}^{a} + \\frac{\\partial \\mathbf{x}_{(\\alpha)}}{\\partial t} \\right) \\cdot \\left( \\frac{\\partial \\mathbf{x}_{(\\alpha)}}{\\partial q^{b}} \\dot{q}^{b} + \\frac{\\partial \\mathbf{x}_{(\\alpha)}}{\\partial t} \\right), </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.0954em;vertical-align:-1.2671em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4396em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5904em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.7452em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4396em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.7452em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4396em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7751em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.7452em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4396em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.7452em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span></span></span></span></span></p><p>整理得到</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>T</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>G</mi><mrow><mi>a</mi><mi>b</mi></mrow></msub><msup><mover accent="true"><mi>q</mi><mo>˙</mo></mover><mi>a</mi></msup><msup><mover accent="true"><mi>q</mi><mo>˙</mo></mover><mi>b</mi></msup><mo>+</mo><msub><mi>X</mi><mi>a</mi></msub><msup><mover accent="true"><mi>q</mi><mo>˙</mo></mover><mi>a</mi></msup><mo>+</mo><mi>Y</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">T = \\frac{1}{2} G_{ab} \\dot{q}^{a} \\dot{q}^{b} + X_{a} \\dot{q}^{a} + Y, </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ab</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9088em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mpunct">,</span></span></span></span></span></p><p>即动能为广义速度的二次型，其中</p>', 26),
+    createBaseVNode("p", { class: "katex-block" }, [
+      createBaseVNode("span", { class: "katex-display" }, [
+        createBaseVNode("span", { class: "katex" }, [
+          createBaseVNode("span", { class: "katex-mathml" }, [
+            createBaseVNode("math", {
+              xmlns: "http://www.w3.org/1998/Math/MathML",
+              display: "block"
+            }, [
+              createBaseVNode("semantics", null, [
+                createBaseVNode("mtable", {
+                  rowspacing: "0.25em",
+                  columnalign: "right left",
+                  columnspacing: "0em"
+                }, [
+                  createBaseVNode("mtr", null, [
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("msub", null, [
+                          createBaseVNode("mi", null, "G"),
+                          createBaseVNode("mrow", null, [
+                            createBaseVNode("mi", null, "a"),
+                            createBaseVNode("mi", null, "b")
+                          ])
+                        ])
+                      ])
+                    ]),
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow", null, [
+                          createBaseVNode("mrow"),
+                          createBaseVNode("mo", null, "="),
+                          createBaseVNode("munderover", null, [
+                            createBaseVNode("mo", null, "∑"),
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mi", null, "α"),
+                              createBaseVNode("mo", null, "="),
+                              createBaseVNode("mn", null, "1")
+                            ]),
+                            createBaseVNode("mi", null, "N")
+                          ]),
+                          createBaseVNode("msub", null, [
+                            createBaseVNode("mi", null, "m"),
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mo", { stretchy: "false" }, "("),
+                              createBaseVNode("mi", null, "α"),
+                              createBaseVNode("mo", { stretchy: "false" }, ")")
+                            ])
+                          ]),
+                          createBaseVNode("mfrac", null, [
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", { mathvariant: "bold" }, "x"),
+                                createBaseVNode("mrow", null, [
+                                  createBaseVNode("mo", { stretchy: "false" }, "("),
+                                  createBaseVNode("mi", null, "α"),
+                                  createBaseVNode("mo", { stretchy: "false" }, ")")
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mi", null, "q"),
+                                createBaseVNode("mi", null, "a")
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("mo", null, "⋅"),
+                          createBaseVNode("mfrac", null, [
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", { mathvariant: "bold" }, "x"),
+                                createBaseVNode("mrow", null, [
+                                  createBaseVNode("mo", { stretchy: "false" }, "("),
+                                  createBaseVNode("mi", null, "α"),
+                                  createBaseVNode("mo", { stretchy: "false" }, ")")
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mi", null, "q"),
+                                createBaseVNode("mi", null, "b")
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("mo", { separator: "true" }, ",")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("mtr", null, [
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow")
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("mtr", null, [
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("msub", null, [
+                          createBaseVNode("mi", null, "X"),
+                          createBaseVNode("mi", null, "a")
+                        ])
+                      ])
+                    ]),
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow", null, [
+                          createBaseVNode("mrow"),
+                          createBaseVNode("mo", null, "="),
+                          createBaseVNode("munderover", null, [
+                            createBaseVNode("mo", null, "∑"),
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mi", null, "α"),
+                              createBaseVNode("mo", null, "="),
+                              createBaseVNode("mn", null, "1")
+                            ]),
+                            createBaseVNode("mi", null, "N")
+                          ]),
+                          createBaseVNode("msub", null, [
+                            createBaseVNode("mi", null, "m"),
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mo", { stretchy: "false" }, "("),
+                              createBaseVNode("mi", null, "α"),
+                              createBaseVNode("mo", { stretchy: "false" }, ")")
+                            ])
+                          ]),
+                          createBaseVNode("mfrac", null, [
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", { mathvariant: "bold" }, "x"),
+                                createBaseVNode("mrow", null, [
+                                  createBaseVNode("mo", { stretchy: "false" }, "("),
+                                  createBaseVNode("mi", null, "α"),
+                                  createBaseVNode("mo", { stretchy: "false" }, ")")
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                              createBaseVNode("msup", null, [
+                                createBaseVNode("mi", null, "q"),
+                                createBaseVNode("mi", null, "a")
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("mo", null, "⋅"),
+                          createBaseVNode("mfrac", null, [
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", { mathvariant: "bold" }, "x"),
+                                createBaseVNode("mrow", null, [
+                                  createBaseVNode("mo", { stretchy: "false" }, "("),
+                                  createBaseVNode("mi", null, "α"),
+                                  createBaseVNode("mo", { stretchy: "false" }, ")")
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                              createBaseVNode("mi", null, "t")
+                            ])
+                          ]),
+                          createBaseVNode("mo", { separator: "true" }, ",")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("mtr", null, [
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow")
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("mtr", null, [
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mi", null, "Y")
+                      ])
+                    ]),
+                    createBaseVNode("mtd", null, [
+                      createBaseVNode("mstyle", {
+                        scriptlevel: "0",
+                        displaystyle: "true"
+                      }, [
+                        createBaseVNode("mrow", null, [
+                          createBaseVNode("mrow"),
+                          createBaseVNode("mo", null, "="),
+                          createBaseVNode("mfrac", null, [
+                            createBaseVNode("mn", null, "1"),
+                            createBaseVNode("mn", null, "2")
+                          ]),
+                          createBaseVNode("munderover", null, [
+                            createBaseVNode("mo", null, "∑"),
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mi", null, "α"),
+                              createBaseVNode("mo", null, "="),
+                              createBaseVNode("mn", null, "1")
+                            ]),
+                            createBaseVNode("mi", null, "N")
+                          ]),
+                          createBaseVNode("msub", null, [
+                            createBaseVNode("mi", null, "m"),
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mo", { stretchy: "false" }, "("),
+                              createBaseVNode("mi", null, "α"),
+                              createBaseVNode("mo", { stretchy: "false" }, ")")
+                            ])
+                          ]),
+                          createBaseVNode("mfrac", null, [
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", { mathvariant: "bold" }, "x"),
+                                createBaseVNode("mrow", null, [
+                                  createBaseVNode("mo", { stretchy: "false" }, "("),
+                                  createBaseVNode("mi", null, "α"),
+                                  createBaseVNode("mo", { stretchy: "false" }, ")")
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                              createBaseVNode("mi", null, "t")
+                            ])
+                          ]),
+                          createBaseVNode("mo", null, "⋅"),
+                          createBaseVNode("mfrac", null, [
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                              createBaseVNode("msub", null, [
+                                createBaseVNode("mi", { mathvariant: "bold" }, "x"),
+                                createBaseVNode("mrow", null, [
+                                  createBaseVNode("mo", { stretchy: "false" }, "("),
+                                  createBaseVNode("mi", null, "α"),
+                                  createBaseVNode("mo", { stretchy: "false" }, ")")
+                                ])
+                              ])
+                            ]),
+                            createBaseVNode("mrow", null, [
+                              createBaseVNode("mi", { mathvariant: "normal" }, "∂"),
+                              createBaseVNode("mi", null, "t")
+                            ])
+                          ]),
+                          createBaseVNode("mo", { separator: "true" }, ",")
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("annotation", { encoding: "application/x-tex" }, "\\begin{aligned} G_{ab} &= \\sum_{\\alpha=1}^{N} m_{(\\alpha)} \\frac{\\partial \\mathbf{x}_{(\\alpha)}}{\\partial q^{a}} \\cdot \\frac{\\partial \\mathbf{x}_{(\\alpha)}}{\\partial q^{b}}, \\\\\\\\ X_{a} &= \\sum_{\\alpha=1}^{N} m_{(\\alpha)} \\frac{\\partial \\mathbf{x}_{(\\alpha)}}{\\partial q^{a}} \\cdot \\frac{\\partial \\mathbf{x}_{(\\alpha)}}{\\partial t}, \\\\\\\\ Y &= \\frac{1}{2} \\sum_{\\alpha=1}^{N} m_{(\\alpha)} \\frac{\\partial \\mathbf{x}_{(\\alpha)}}{\\partial t} \\cdot \\frac{\\partial \\mathbf{x}_{(\\alpha)}}{\\partial t}, \\end{aligned} ")
+              ])
+            ])
+          ]),
+          createBaseVNode("span", {
+            class: "katex-html",
+            "aria-hidden": "true"
+          }, [
+            createBaseVNode("span", { class: "base" }, [
+              createBaseVNode("span", {
+                class: "strut",
+                style: { "height": "13.1863em", "vertical-align": "-6.3432em" }
+              }),
+              createBaseVNode("span", { class: "mord" }, [
+                createBaseVNode("span", { class: "mtable" }, [
+                  createBaseVNode("span", { class: "col-align-r" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "6.8432em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-8.8432em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.8283em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord mathnormal" }, "G"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.3361em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "ab")
+                                            ])
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.15em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("span", { style: { "top": "-6.4361em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.8283em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" })
+                          ]),
+                          createBaseVNode("span", { style: { "top": "-3.9477em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.8283em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", {
+                                  class: "mord mathnormal",
+                                  style: { "margin-right": "0.07847em" }
+                                }, "X"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.1514em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-2.55em", "margin-left": "-0.0785em", "margin-right": "0.05em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", { class: "mord mathnormal mtight" }, "a")
+                                            ])
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.15em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ])
+                            ])
+                          ]),
+                          createBaseVNode("span", { style: { "top": "-1.5406em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.8283em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" })
+                          ]),
+                          createBaseVNode("span", { style: { "top": "0.9477em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.8283em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", {
+                                class: "mord mathnormal",
+                                style: { "margin-right": "0.22222em" }
+                              }, "Y")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "6.3432em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  createBaseVNode("span", { class: "col-align-l" }, [
+                    createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "6.8432em" }
+                        }, [
+                          createBaseVNode("span", { style: { "top": "-8.8432em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.8283em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", { class: "mord" }),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mrel" }, "="),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mop op-limits" }, [
+                                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                    createBaseVNode("span", {
+                                      class: "vlist",
+                                      style: { "height": "1.8283em" }
+                                    }, [
+                                      createBaseVNode("span", { style: { "top": "-1.8829em", "margin-left": "0em" } }, [
+                                        createBaseVNode("span", {
+                                          class: "pstrut",
+                                          style: { "height": "3.05em" }
+                                        }),
+                                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord mathnormal mtight",
+                                              style: { "margin-right": "0.0037em" }
+                                            }, "α"),
+                                            createBaseVNode("span", { class: "mrel mtight" }, "="),
+                                            createBaseVNode("span", { class: "mord mtight" }, "1")
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { style: { "top": "-3.05em" } }, [
+                                        createBaseVNode("span", {
+                                          class: "pstrut",
+                                          style: { "height": "3.05em" }
+                                        }),
+                                        createBaseVNode("span", null, [
+                                          createBaseVNode("span", { class: "mop op-symbol large-op" }, "∑")
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { style: { "top": "-4.3em", "margin-left": "0em" } }, [
+                                        createBaseVNode("span", {
+                                          class: "pstrut",
+                                          style: { "height": "3.05em" }
+                                        }),
+                                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord mathnormal mtight",
+                                              style: { "margin-right": "0.10903em" }
+                                            }, "N")
+                                          ])
+                                        ])
+                                      ])
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                                  ]),
+                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                    createBaseVNode("span", {
+                                      class: "vlist",
+                                      style: { "height": "1.2671em" }
+                                    }, [
+                                      createBaseVNode("span")
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord mathnormal" }, "m"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.3448em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-2.5198em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", { class: "mopen mtight" }, "("),
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal mtight",
+                                                style: { "margin-right": "0.0037em" }
+                                              }, "α"),
+                                              createBaseVNode("span", { class: "mclose mtight" }, ")")
+                                            ])
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.3552em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                createBaseVNode("span", { class: "mfrac" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "1.4396em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord",
+                                              style: { "margin-right": "0.05556em" }
+                                            }, "∂"),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal",
+                                                style: { "margin-right": "0.03588em" }
+                                              }, "q"),
+                                              createBaseVNode("span", { class: "msupsub" }, [
+                                                createBaseVNode("span", { class: "vlist-t" }, [
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.5904em" }
+                                                    }, [
+                                                      createBaseVNode("span", { style: { "top": "-2.989em", "margin-right": "0.05em" } }, [
+                                                        createBaseVNode("span", {
+                                                          class: "pstrut",
+                                                          style: { "height": "2.7em" }
+                                                        }),
+                                                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "a")
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", {
+                                            class: "frac-line",
+                                            style: { "border-bottom-width": "0.04em" }
+                                          })
+                                        ]),
+                                        createBaseVNode("span", { style: { "top": "-3.7452em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord",
+                                              style: { "margin-right": "0.05556em" }
+                                            }, "∂"),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord mathbf" }, "x"),
+                                              createBaseVNode("span", { class: "msupsub" }, [
+                                                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.3448em" }
+                                                    }, [
+                                                      createBaseVNode("span", { style: { "top": "-2.5198em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                                        createBaseVNode("span", {
+                                                          class: "pstrut",
+                                                          style: { "height": "2.7em" }
+                                                        }),
+                                                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                                            createBaseVNode("span", { class: "mopen mtight" }, "("),
+                                                            createBaseVNode("span", {
+                                                              class: "mord mathnormal mtight",
+                                                              style: { "margin-right": "0.0037em" }
+                                                            }, "α"),
+                                                            createBaseVNode("span", { class: "mclose mtight" }, ")")
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ]),
+                                                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                                                  ]),
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.3552em" }
+                                                    }, [
+                                                      createBaseVNode("span")
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.8804em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mclose nulldelimiter" })
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2222em" }
+                              }),
+                              createBaseVNode("span", { class: "mbin" }, "⋅"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2222em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                createBaseVNode("span", { class: "mfrac" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "1.4396em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord",
+                                              style: { "margin-right": "0.05556em" }
+                                            }, "∂"),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal",
+                                                style: { "margin-right": "0.03588em" }
+                                              }, "q"),
+                                              createBaseVNode("span", { class: "msupsub" }, [
+                                                createBaseVNode("span", { class: "vlist-t" }, [
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.7751em" }
+                                                    }, [
+                                                      createBaseVNode("span", { style: { "top": "-2.989em", "margin-right": "0.05em" } }, [
+                                                        createBaseVNode("span", {
+                                                          class: "pstrut",
+                                                          style: { "height": "2.7em" }
+                                                        }),
+                                                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "b")
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", {
+                                            class: "frac-line",
+                                            style: { "border-bottom-width": "0.04em" }
+                                          })
+                                        ]),
+                                        createBaseVNode("span", { style: { "top": "-3.7452em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord",
+                                              style: { "margin-right": "0.05556em" }
+                                            }, "∂"),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord mathbf" }, "x"),
+                                              createBaseVNode("span", { class: "msupsub" }, [
+                                                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.3448em" }
+                                                    }, [
+                                                      createBaseVNode("span", { style: { "top": "-2.5198em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                                        createBaseVNode("span", {
+                                                          class: "pstrut",
+                                                          style: { "height": "2.7em" }
+                                                        }),
+                                                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                                            createBaseVNode("span", { class: "mopen mtight" }, "("),
+                                                            createBaseVNode("span", {
+                                                              class: "mord mathnormal mtight",
+                                                              style: { "margin-right": "0.0037em" }
+                                                            }, "α"),
+                                                            createBaseVNode("span", { class: "mclose mtight" }, ")")
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ]),
+                                                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                                                  ]),
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.3552em" }
+                                                    }, [
+                                                      createBaseVNode("span")
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.8804em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mclose nulldelimiter" })
+                              ]),
+                              createBaseVNode("span", { class: "mpunct" }, ",")
+                            ])
+                          ]),
+                          createBaseVNode("span", { style: { "top": "-3.9477em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.8283em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", { class: "mord" }),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mrel" }, "="),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mop op-limits" }, [
+                                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                    createBaseVNode("span", {
+                                      class: "vlist",
+                                      style: { "height": "1.8283em" }
+                                    }, [
+                                      createBaseVNode("span", { style: { "top": "-1.8829em", "margin-left": "0em" } }, [
+                                        createBaseVNode("span", {
+                                          class: "pstrut",
+                                          style: { "height": "3.05em" }
+                                        }),
+                                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord mathnormal mtight",
+                                              style: { "margin-right": "0.0037em" }
+                                            }, "α"),
+                                            createBaseVNode("span", { class: "mrel mtight" }, "="),
+                                            createBaseVNode("span", { class: "mord mtight" }, "1")
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { style: { "top": "-3.05em" } }, [
+                                        createBaseVNode("span", {
+                                          class: "pstrut",
+                                          style: { "height": "3.05em" }
+                                        }),
+                                        createBaseVNode("span", null, [
+                                          createBaseVNode("span", { class: "mop op-symbol large-op" }, "∑")
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { style: { "top": "-4.3em", "margin-left": "0em" } }, [
+                                        createBaseVNode("span", {
+                                          class: "pstrut",
+                                          style: { "height": "3.05em" }
+                                        }),
+                                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord mathnormal mtight",
+                                              style: { "margin-right": "0.10903em" }
+                                            }, "N")
+                                          ])
+                                        ])
+                                      ])
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                                  ]),
+                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                    createBaseVNode("span", {
+                                      class: "vlist",
+                                      style: { "height": "1.2671em" }
+                                    }, [
+                                      createBaseVNode("span")
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord mathnormal" }, "m"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.3448em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-2.5198em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", { class: "mopen mtight" }, "("),
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal mtight",
+                                                style: { "margin-right": "0.0037em" }
+                                              }, "α"),
+                                              createBaseVNode("span", { class: "mclose mtight" }, ")")
+                                            ])
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.3552em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                createBaseVNode("span", { class: "mfrac" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "1.4396em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord",
+                                              style: { "margin-right": "0.05556em" }
+                                            }, "∂"),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal",
+                                                style: { "margin-right": "0.03588em" }
+                                              }, "q"),
+                                              createBaseVNode("span", { class: "msupsub" }, [
+                                                createBaseVNode("span", { class: "vlist-t" }, [
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.5904em" }
+                                                    }, [
+                                                      createBaseVNode("span", { style: { "top": "-2.989em", "margin-right": "0.05em" } }, [
+                                                        createBaseVNode("span", {
+                                                          class: "pstrut",
+                                                          style: { "height": "2.7em" }
+                                                        }),
+                                                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                                            createBaseVNode("span", { class: "mord mathnormal mtight" }, "a")
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", {
+                                            class: "frac-line",
+                                            style: { "border-bottom-width": "0.04em" }
+                                          })
+                                        ]),
+                                        createBaseVNode("span", { style: { "top": "-3.7452em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord",
+                                              style: { "margin-right": "0.05556em" }
+                                            }, "∂"),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord mathbf" }, "x"),
+                                              createBaseVNode("span", { class: "msupsub" }, [
+                                                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.3448em" }
+                                                    }, [
+                                                      createBaseVNode("span", { style: { "top": "-2.5198em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                                        createBaseVNode("span", {
+                                                          class: "pstrut",
+                                                          style: { "height": "2.7em" }
+                                                        }),
+                                                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                                            createBaseVNode("span", { class: "mopen mtight" }, "("),
+                                                            createBaseVNode("span", {
+                                                              class: "mord mathnormal mtight",
+                                                              style: { "margin-right": "0.0037em" }
+                                                            }, "α"),
+                                                            createBaseVNode("span", { class: "mclose mtight" }, ")")
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ]),
+                                                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                                                  ]),
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.3552em" }
+                                                    }, [
+                                                      createBaseVNode("span")
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.8804em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mclose nulldelimiter" })
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2222em" }
+                              }),
+                              createBaseVNode("span", { class: "mbin" }, "⋅"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2222em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                createBaseVNode("span", { class: "mfrac" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "1.4396em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord",
+                                              style: { "margin-right": "0.05556em" }
+                                            }, "∂"),
+                                            createBaseVNode("span", { class: "mord mathnormal" }, "t")
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", {
+                                            class: "frac-line",
+                                            style: { "border-bottom-width": "0.04em" }
+                                          })
+                                        ]),
+                                        createBaseVNode("span", { style: { "top": "-3.7452em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord",
+                                              style: { "margin-right": "0.05556em" }
+                                            }, "∂"),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord mathbf" }, "x"),
+                                              createBaseVNode("span", { class: "msupsub" }, [
+                                                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.3448em" }
+                                                    }, [
+                                                      createBaseVNode("span", { style: { "top": "-2.5198em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                                        createBaseVNode("span", {
+                                                          class: "pstrut",
+                                                          style: { "height": "2.7em" }
+                                                        }),
+                                                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                                            createBaseVNode("span", { class: "mopen mtight" }, "("),
+                                                            createBaseVNode("span", {
+                                                              class: "mord mathnormal mtight",
+                                                              style: { "margin-right": "0.0037em" }
+                                                            }, "α"),
+                                                            createBaseVNode("span", { class: "mclose mtight" }, ")")
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ]),
+                                                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                                                  ]),
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.3552em" }
+                                                    }, [
+                                                      createBaseVNode("span")
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.686em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mclose nulldelimiter" })
+                              ]),
+                              createBaseVNode("span", { class: "mpunct" }, ",")
+                            ])
+                          ]),
+                          createBaseVNode("span", { style: { "top": "0.9477em" } }, [
+                            createBaseVNode("span", {
+                              class: "pstrut",
+                              style: { "height": "3.8283em" }
+                            }),
+                            createBaseVNode("span", { class: "mord" }, [
+                              createBaseVNode("span", { class: "mord" }),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mrel" }, "="),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2778em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                createBaseVNode("span", { class: "mfrac" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "1.3214em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord" }, [
+                                            createBaseVNode("span", { class: "mord" }, "2")
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", {
+                                            class: "frac-line",
+                                            style: { "border-bottom-width": "0.04em" }
+                                          })
+                                        ]),
+                                        createBaseVNode("span", { style: { "top": "-3.677em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord" }, [
+                                            createBaseVNode("span", { class: "mord" }, "1")
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.686em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mclose nulldelimiter" })
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "mop op-limits" }, [
+                                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                    createBaseVNode("span", {
+                                      class: "vlist",
+                                      style: { "height": "1.8283em" }
+                                    }, [
+                                      createBaseVNode("span", { style: { "top": "-1.8829em", "margin-left": "0em" } }, [
+                                        createBaseVNode("span", {
+                                          class: "pstrut",
+                                          style: { "height": "3.05em" }
+                                        }),
+                                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord mathnormal mtight",
+                                              style: { "margin-right": "0.0037em" }
+                                            }, "α"),
+                                            createBaseVNode("span", { class: "mrel mtight" }, "="),
+                                            createBaseVNode("span", { class: "mord mtight" }, "1")
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { style: { "top": "-3.05em" } }, [
+                                        createBaseVNode("span", {
+                                          class: "pstrut",
+                                          style: { "height": "3.05em" }
+                                        }),
+                                        createBaseVNode("span", null, [
+                                          createBaseVNode("span", { class: "mop op-symbol large-op" }, "∑")
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { style: { "top": "-4.3em", "margin-left": "0em" } }, [
+                                        createBaseVNode("span", {
+                                          class: "pstrut",
+                                          style: { "height": "3.05em" }
+                                        }),
+                                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord mathnormal mtight",
+                                              style: { "margin-right": "0.10903em" }
+                                            }, "N")
+                                          ])
+                                        ])
+                                      ])
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                                  ]),
+                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                    createBaseVNode("span", {
+                                      class: "vlist",
+                                      style: { "height": "1.2671em" }
+                                    }, [
+                                      createBaseVNode("span")
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.1667em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mord mathnormal" }, "m"),
+                                createBaseVNode("span", { class: "msupsub" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.3448em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-2.5198em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "2.7em" }
+                                          }),
+                                          createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                            createBaseVNode("span", { class: "mord mtight" }, [
+                                              createBaseVNode("span", { class: "mopen mtight" }, "("),
+                                              createBaseVNode("span", {
+                                                class: "mord mathnormal mtight",
+                                                style: { "margin-right": "0.0037em" }
+                                              }, "α"),
+                                              createBaseVNode("span", { class: "mclose mtight" }, ")")
+                                            ])
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.3552em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                createBaseVNode("span", { class: "mfrac" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "1.4396em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord",
+                                              style: { "margin-right": "0.05556em" }
+                                            }, "∂"),
+                                            createBaseVNode("span", { class: "mord mathnormal" }, "t")
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", {
+                                            class: "frac-line",
+                                            style: { "border-bottom-width": "0.04em" }
+                                          })
+                                        ]),
+                                        createBaseVNode("span", { style: { "top": "-3.7452em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord",
+                                              style: { "margin-right": "0.05556em" }
+                                            }, "∂"),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord mathbf" }, "x"),
+                                              createBaseVNode("span", { class: "msupsub" }, [
+                                                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.3448em" }
+                                                    }, [
+                                                      createBaseVNode("span", { style: { "top": "-2.5198em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                                        createBaseVNode("span", {
+                                                          class: "pstrut",
+                                                          style: { "height": "2.7em" }
+                                                        }),
+                                                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                                            createBaseVNode("span", { class: "mopen mtight" }, "("),
+                                                            createBaseVNode("span", {
+                                                              class: "mord mathnormal mtight",
+                                                              style: { "margin-right": "0.0037em" }
+                                                            }, "α"),
+                                                            createBaseVNode("span", { class: "mclose mtight" }, ")")
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ]),
+                                                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                                                  ]),
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.3552em" }
+                                                    }, [
+                                                      createBaseVNode("span")
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.686em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mclose nulldelimiter" })
+                              ]),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2222em" }
+                              }),
+                              createBaseVNode("span", { class: "mbin" }, "⋅"),
+                              createBaseVNode("span", {
+                                class: "mspace",
+                                style: { "margin-right": "0.2222em" }
+                              }),
+                              createBaseVNode("span", { class: "mord" }, [
+                                createBaseVNode("span", { class: "mopen nulldelimiter" }),
+                                createBaseVNode("span", { class: "mfrac" }, [
+                                  createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "1.4396em" }
+                                      }, [
+                                        createBaseVNode("span", { style: { "top": "-2.314em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord",
+                                              style: { "margin-right": "0.05556em" }
+                                            }, "∂"),
+                                            createBaseVNode("span", { class: "mord mathnormal" }, "t")
+                                          ])
+                                        ]),
+                                        createBaseVNode("span", { style: { "top": "-3.23em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", {
+                                            class: "frac-line",
+                                            style: { "border-bottom-width": "0.04em" }
+                                          })
+                                        ]),
+                                        createBaseVNode("span", { style: { "top": "-3.7452em" } }, [
+                                          createBaseVNode("span", {
+                                            class: "pstrut",
+                                            style: { "height": "3em" }
+                                          }),
+                                          createBaseVNode("span", { class: "mord" }, [
+                                            createBaseVNode("span", {
+                                              class: "mord",
+                                              style: { "margin-right": "0.05556em" }
+                                            }, "∂"),
+                                            createBaseVNode("span", { class: "mord" }, [
+                                              createBaseVNode("span", { class: "mord mathbf" }, "x"),
+                                              createBaseVNode("span", { class: "msupsub" }, [
+                                                createBaseVNode("span", { class: "vlist-t vlist-t2" }, [
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.3448em" }
+                                                    }, [
+                                                      createBaseVNode("span", { style: { "top": "-2.5198em", "margin-left": "0em", "margin-right": "0.05em" } }, [
+                                                        createBaseVNode("span", {
+                                                          class: "pstrut",
+                                                          style: { "height": "2.7em" }
+                                                        }),
+                                                        createBaseVNode("span", { class: "sizing reset-size6 size3 mtight" }, [
+                                                          createBaseVNode("span", { class: "mord mtight" }, [
+                                                            createBaseVNode("span", { class: "mopen mtight" }, "("),
+                                                            createBaseVNode("span", {
+                                                              class: "mord mathnormal mtight",
+                                                              style: { "margin-right": "0.0037em" }
+                                                            }, "α"),
+                                                            createBaseVNode("span", { class: "mclose mtight" }, ")")
+                                                          ])
+                                                        ])
+                                                      ])
+                                                    ]),
+                                                    createBaseVNode("span", { class: "vlist-s" }, "​")
+                                                  ]),
+                                                  createBaseVNode("span", { class: "vlist-r" }, [
+                                                    createBaseVNode("span", {
+                                                      class: "vlist",
+                                                      style: { "height": "0.3552em" }
+                                                    }, [
+                                                      createBaseVNode("span")
+                                                    ])
+                                                  ])
+                                                ])
+                                              ])
+                                            ])
+                                          ])
+                                        ])
+                                      ]),
+                                      createBaseVNode("span", { class: "vlist-s" }, "​")
+                                    ]),
+                                    createBaseVNode("span", { class: "vlist-r" }, [
+                                      createBaseVNode("span", {
+                                        class: "vlist",
+                                        style: { "height": "0.686em" }
+                                      }, [
+                                        createBaseVNode("span")
+                                      ])
+                                    ])
+                                  ])
+                                ]),
+                                createBaseVNode("span", { class: "mclose nulldelimiter" })
+                              ]),
+                              createBaseVNode("span", { class: "mpunct" }, ",")
+                            ])
+                          ])
+                        ]),
+                        createBaseVNode("span", { class: "vlist-s" }, "​")
+                      ]),
+                      createBaseVNode("span", { class: "vlist-r" }, [
+                        createBaseVNode("span", {
+                          class: "vlist",
+                          style: { "height": "6.3432em" }
+                        }, [
+                          createBaseVNode("span")
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ], -1),
+    createStaticVNode('<p>都只是广义坐标和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span></span></span></span> 的函数，与广义速度无关。</p><p>若约束非定常，从直角坐标到广义坐标的变换 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></msub><mo stretchy="false">(</mo><mi>t</mi><mo separator="true">,</mo><mi mathvariant="bold">q</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\\mathbf{x}_{(\\alpha)}(t, \\mathbf{q})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1052em;vertical-align:-0.3552em;"></span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathbf">q</span><span class="mclose">)</span></span></span></span> 显含时间，因此 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mi>a</mi></msub></mrow><annotation encoding="application/x-tex">X_{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> 一般不为零。对于定常约束系统，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></msub><mo stretchy="false">(</mo><mi mathvariant="bold">q</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\\mathbf{x}_{(\\alpha)}(\\mathbf{q})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1052em;vertical-align:-0.3552em;"></span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathbf">q</span><span class="mclose">)</span></span></span></span> 不显含时间，因此</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">∂</mi><msub><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></msub></mrow><mrow><mi mathvariant="normal">∂</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mspace width="1em"></mspace><mo>⇒</mo><mspace width="1em"></mspace><msub><mi>X</mi><mi>a</mi></msub><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mspace width="1em"></mspace><mi>Y</mi><mo>=</mo><mn>0.</mn></mrow><annotation encoding="application/x-tex">\\frac{\\partial \\mathbf{x}_{(\\alpha)}}{\\partial t} = 0, \\quad \\Rightarrow \\quad X_{a} = 0, \\quad Y = 0. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.1256em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4396em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.7452em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.</span></span></span></span></span></p><p>这意味着对于定常约束系统，动能总是广义速度的“二次型”：</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>T</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>G</mi><mrow><mi>a</mi><mi>b</mi></mrow></msub><mo stretchy="false">(</mo><mi mathvariant="bold">q</mi><mo stretchy="false">)</mo><msup><mover accent="true"><mi>q</mi><mo>˙</mo></mover><mi>a</mi></msup><msup><mover accent="true"><mi>q</mi><mo>˙</mo></mover><mi>b</mi></msup><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">T = \\frac{1}{2} G_{ab}(\\mathbf{q}) \\dot{q}^{a} \\dot{q}^{b}. </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ab</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathbf">q</span><span class="mclose">)</span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span></span></span></span></span><span class="mord">.</span></span></span></span></span></p><p>这里 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mrow><mi>a</mi><mi>b</mi></mrow></msub><mo stretchy="false">(</mo><mi mathvariant="bold">q</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">G_{ab}(\\mathbf{q})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ab</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathbf">q</span><span class="mclose">)</span></span></span></span> 一般依赖于广义坐标，是一个对称、正定的矩阵。势能 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span> 则只是广义坐标的函数</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>V</mi><mo>=</mo><mi>V</mi><mo stretchy="false">(</mo><mi mathvariant="bold">q</mi><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">V = V(\\mathbf{q}). </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mopen">(</span><span class="mord mathbf">q</span><span class="mclose">)</span><span class="mord">.</span></span></span></span></span></p><p>总之，非相对论性定常系统的拉格朗日量的一般形式即</p><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>L</mi><mo>=</mo><mi>T</mi><mo>−</mo><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>G</mi><mrow><mi>a</mi><mi>b</mi></mrow></msub><mo stretchy="false">(</mo><mi mathvariant="bold">q</mi><mo stretchy="false">)</mo><msup><mover accent="true"><mi>q</mi><mo>˙</mo></mover><mi>a</mi></msup><msup><mover accent="true"><mi>q</mi><mo>˙</mo></mover><mi>b</mi></msup><mo>−</mo><mi>V</mi><mo stretchy="false">(</mo><mi mathvariant="bold">q</mi><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">L = T - V = \\frac{1}{2} G_{ab}(\\mathbf{q}) \\dot{q}^{a} \\dot{q}^{b} - V(\\mathbf{q}). </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ab</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathbf">q</span><span class="mclose">)</span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0556em;"><span class="mord">˙</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mopen">(</span><span class="mord mathbf">q</span><span class="mclose">)</span><span class="mord">.</span></span></span></span></span></p>', 9)
+  ])]);
+}
+const index_html = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
+const data = JSON.parse('{"path":"/analytical-mechanics/lesson-9/","title":"Lesson 9 最小作用量原理 II","lang":"zh-CN","frontmatter":{"title":"Lesson 9 最小作用量原理 II","permalink":"/analytical-mechanics/lesson-9/","createTime":"2026/08/17 13:49:14","description":"Part 4 外场中的粒子 自由粒子与周围的环境没有任何相互作用，一个自然的问题是，如何考虑环境对粒子的影响？此外，在非相对论极限下出现了牛顿力学的动能，如何体现势能的作用？ · 标量场 考虑闵氏时空标量场中的粒子。标量场对粒子的影响可以有各种方式，我们考虑最简单的情形，即使得线元长度发生变化 ∣ds∣→eΦ∣ds∣，因此作用量为 S=−mc∫eΦ∣d...","head":[["script",{"type":"application/ld+json"},"{\\"@context\\":\\"https://schema.org\\",\\"@type\\":\\"Article\\",\\"headline\\":\\"Lesson 9 最小作用量原理 II\\",\\"image\\":[\\"\\"],\\"dateModified\\":\\"2026-08-17T07:22:27.000Z\\",\\"author\\":[]}"],["meta",{"property":"og:url","content":"https://soda-official.top/analytical-mechanics/lesson-9/"}],["meta",{"property":"og:site_name","content":"soda-official"}],["meta",{"property":"og:title","content":"Lesson 9 最小作用量原理 II"}],["meta",{"property":"og:description","content":"Part 4 外场中的粒子 自由粒子与周围的环境没有任何相互作用，一个自然的问题是，如何考虑环境对粒子的影响？此外，在非相对论极限下出现了牛顿力学的动能，如何体现势能的作用？ · 标量场 考虑闵氏时空标量场中的粒子。标量场对粒子的影响可以有各种方式，我们考虑最简单的情形，即使得线元长度发生变化 ∣ds∣→eΦ∣ds∣，因此作用量为 S=−mc∫eΦ∣d..."}],["meta",{"property":"og:type","content":"article"}],["meta",{"property":"og:locale","content":"zh-CN"}],["meta",{"property":"og:updated_time","content":"2026-08-17T07:22:27.000Z"}],["meta",{"property":"article:modified_time","content":"2026-08-17T07:22:27.000Z"}]]},"readingTime":{"minutes":11.62,"words":3486},"git":{"createdTime":1786951347000,"updatedTime":1786951347000,"contributors":[{"name":"nicostore-mathematica","username":"nicostore-mathematica","email":"nicostore.core@outlook.com","commits":1,"avatar":"https://avatars.githubusercontent.com/nicostore-mathematica?v=4","url":"https://github.com/nicostore-mathematica"}],"changelog":[{"hash":"44b2c35133fdda464519e8cf9f0db5f368774022","time":1786951347000,"email":"nicostore.core@outlook.com","author":"nicostore-mathematica","message":"notes re"}]},"autoDesc":true,"filePathRelative":"analytical-mechanics/lesson-9.md","headers":[]}');
+export {
+  index_html as comp,
+  data
+};
