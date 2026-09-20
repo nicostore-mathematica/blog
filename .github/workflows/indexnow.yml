@@ -11,8 +11,12 @@ on:
 jobs:
   check-and-submit:
     runs-on: ubuntu-latest
+    env:
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+      INDEXNOW_KEY_LOCATION: ${{ secrets.INDEXNOW_KEY_LOCATION }}
     steps:
       - name: submit-to-bing
+        if: ${{ env.INDEXNOW_KEY != '' }}
         uses: bojieyang/indexnow-action@v1
         with:
           sitemap-location: "https://soda-official.top/sitemap.xml"  # change it
@@ -21,5 +25,5 @@ jobs:
           # minute, hour, day, week, month, year
           since-unit: "day"
           limit: 100
-          key: ${{ secrets.INDEXNOW_KEY }}
-          key-location: ${{ secrets.INDEXNOW_KEY_LOCATION }}
+          key: ${{ env.INDEXNOW_KEY }}
+          key-location: ${{ env.INDEXNOW_KEY_LOCATION }}
