@@ -37,6 +37,9 @@ jobs:
       - name: Create CNAME file
         run: echo "soda-official.top" > docs/.vuepress/dist/CNAME
 
+      - name: Disable Jekyll processing
+        run: touch docs/.vuepress/dist/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
         with:
