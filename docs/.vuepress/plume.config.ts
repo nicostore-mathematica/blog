@@ -6,7 +6,7 @@ import { notes } from './notes'
  * @see https://theme-plume.vuejs.press/config/basic/
  */
 export default defineThemeConfig({
-  logo: '',
+//  logo: 'images/soda.jpg',
 
   appearance: true,  // 配置 深色模式
 
@@ -15,6 +15,7 @@ export default defineThemeConfig({
   aside: true, // 页内侧边栏， 默认显示在右侧
   outline: [2, 3], // 页内大纲， 默认显示 h2, h3
   sidebarScrollbar: false,
+  readAid: 'left', // 在当前阅读段落旁显示标记
 
   /**
    * 文章版权信息
@@ -40,13 +41,13 @@ export default defineThemeConfig({
     name: '猫条',
     description: 'This is soda\'s personal <br/> diary \& notebook.',
     // circle: true,
-    location: 'Antarctica',
+    location: 'Linkoping, Sweden',
     organization: '七域-假期快乐',
   },
 
   social: [
     { icon: 'github', link: 'https://github.com/nicostore-mathematica' },
-    /*{ icon: 'mastodon', link: 'https://scg.owu.one/@physnya' },*/
+    // { icon: 'mastodon', link: 'https://scg.owu.one/@physnya' },
   ],
 
   navbar,

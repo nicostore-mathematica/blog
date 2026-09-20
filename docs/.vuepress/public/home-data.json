@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-09-20T13:11:18.540Z",
+  "counts": {
+    "notes": 140,
+    "posts": 25
+  },
+  "latest": {
+    "note": {
+      "path": "/integral/integral-50/",
+      "title": "Lesson 50",
+      "excerpt": "",
+      "isoDate": "2026-08-17T06:18:38.000Z",
+      "collectionTitle": "数学分析",
+      "collectionPath": "/integral/"
+    },
+    "post": {
+      "path": "/article/article-7/",
+      "title": "家乡最棒。",
+      "excerpt": "· 其实我觉得很多东西就是那么回事 作为有“第七监狱”之称的七中，三年级的作业是尤其多的. 因为写不完作业，有些班级就自然而然诞生了小组，一人写一门作业，然后大家来抄.老师自然...",
+      "isoDate": "2026-08-31T14:34:55.000Z",
+      "section": "article",
+      "tags": []
+    }
+  }
+}

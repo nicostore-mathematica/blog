@@ -4,6 +4,7 @@
   "random": 71,
   "notes": 107,
   "links": 548,
+  "bangumi": 25,
   "about": 206,
   "signal-analysis": {
     "signal-2": 6,
@@ -212,13 +213,13 @@
     "algebra-4": 4685,
     "algebra-3": 4346,
     "algebra-2": 5544,
+    "8lbuo8dp": 7,
+    "41vaaf7d": 7,
     "algebra-11": 6849,
     "algebra-10": 6084,
     "algebra-1": 5125
   },
-  "algebra\\algebra-13": 3,
-  "algebra\\algebra-12": 3,
-  "total": 460876,
-  "lastUpdated": "2026-09-18T15:08:55.316Z",
-  "fileCount": 185
+  "total": 460909,
+  "lastUpdated": "2026-09-20T13:11:17.925Z",
+  "fileCount": 186
 }

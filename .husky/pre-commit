@@ -1,0 +1,2 @@
+echo "Running pre-commit tasks..."
+node.exe scripts/pre-commit.cjs
