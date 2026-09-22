@@ -1,0 +1,212 @@
+# soda-official
+
+> This is soda's personal blog & notebook.This file contains links to all documentation sections.
+
+## Table of Contents
+
+### 博客
+
+- [博客建站的第一个地球年](/article/anniversary-1/index.md)
+- [随笔之一 水晶](/article/article-1/index.md)
+- [随笔之二 实践调研](/article/article-2/index.md)
+- [随笔之三 焦虑之外](/article/article-3/index.md)
+- [随笔之四 暗夜](/article/article-4/index.md)
+- [随笔 关于电控](/article/article-5/index.md)
+- [在这世界的某个角落](/article/article-6/index.md)
+- [家乡最棒。](/article/article-7/index.md)
+- [自定义组件](/article/pyvvujxp/index.md)
+- [Markdown](/article/r1s3vxud/index.md)
+- [星河旅馆补给站](/article/resources/index.md)
+
+### 电路
+
+- [电路](/circuit/index.md)
+- [Chapter 1 线性电路分析](/circuit/circuit-1/index.md)
+- [Chapter 2 交流电路分析](/circuit/circuit-2/index.md)
+- [Chapter 3 时域分析](/circuit/circuit-3/index.md)
+- [Chapter 0 绪论](/circuit/electronic-0/index.md)
+- [Chapter 1 BJT](/circuit/electronic-1/index.md)
+- [Chapter 1 数字逻辑基础](/circuit/Digital-1/index.md)
+
+### 数学分析
+
+- [数学分析](/integral/index.md)
+- [Lesson 0 绪论](/integral/integral-0/index.md)
+- [Lesson 1 函数 I](/integral/integral-1/index.md)
+- [Lesson 2 函数 II](/integral/integral-2/index.md)
+- [Lesson 3 数列极限 I](/integral/integral-3/index.md)
+- [Lesson 4 数列极限 II](/integral/integral-4/index.md)
+- [Lesson 5 实数 I](/integral/integral-5/index.md)
+- [Lesson 6 实数 II](/integral/integral-6/index.md)
+- [Lesson 7 函数极限 I](/integral/integral-7/index.md)
+- [Lesson 8 函数极限 II](/integral/integral-8/index.md)
+- [Lesson 9 函数连续性 I](/integral/integral-9/index.md)
+- [Lesson 10 函数连续性 II](/integral/integral-10/index.md)
+- [Lesson 11 微分学 I](/integral/integral-11/index.md)
+- [Lesson 12 微分学 II](/integral/integral-12/index.md)
+- [Lesson 13 微分学 III](/integral/integral-13/index.md)
+- [Lesson 14 微分学 IV](/integral/integral-14/index.md)
+- [Lesson 15 不定积分 I](/integral/integral-15/index.md)
+- [Lesson 16 不定积分 II](/integral/integral-16/index.md)
+- [Lesson 17 Riemann 积分 I](/integral/integral-17/index.md)
+- [Lesson 18 Riemann 积分 II](/integral/integral-18/index.md)
+- [Lesson 19 积分应用与推广 I](/integral/integral-19/index.md)
+- [Lesson 20 积分应用与推广 II](/integral/integral-20/index.md)
+- [Lesson 21 数项级数 I](/integral/integral-21/index.md)
+- [Lesson 22 数项级数 II](/integral/integral-22/index.md)
+- [Lesson 23 函数项级数 I](/integral/integral-23/index.md)
+- [Lesson 24 函数项级数 II](/integral/integral-24/index.md)
+- [Lesson 25 Fourier 分析 I](/integral/integral-25/index.md)
+- [Lesson 26 Fourier 分析 II](/integral/integral-26/index.md)
+- [Lesson 27 连续映射 I](/integral/integral-27/index.md)
+- [Lesson 28 连续映射 II](/integral/integral-28/index.md)
+- [Lesson 29 连续映射 III](/integral/integral-29/index.md)
+- [Lesson 30 多元函数微分 I](/integral/integral-30/index.md)
+- [Lesson 31 多元函数微分 II](/integral/integral-31/index.md)
+- [Lesson 32 多元函数微分 III](/integral/integral-32/index.md)
+- [Lesson 33 多元函数微分 IV](/integral/integral-33/index.md)
+- [Lesson 34 多元函数积分 I](/integral/integral-34/index.md)
+- [Lesson 35 多元函数积分 II](/integral/integral-35/index.md)
+- [Lesson 36 多元函数积分 III](/integral/integral-36/index.md)
+- [Lesson 37 多元函数积分 IV](/integral/integral-37/index.md)
+- [Lesson 38 曲面曲线积分 I](/integral/integral-38/index.md)
+- [Lesson 40 曲面曲线积分 III](/integral/integral-40/index.md)
+- [Lesson 41 曲面曲线积分 IV](/integral/integral-41/index.md)
+- [Lesson 42 曲面曲线积分 V](/integral/integral-42/index.md)
+- [Lesson 43 微分形式积分 I](/integral/integral-43/index.md)
+- [Lesson 44 微分形式积分 II](/integral/integral-44/index.md)
+- [Lesson 45 微分形式积分 III](/integral/integral-45/index.md)
+- [Lesson 46 微分形式积分 IV](/integral/integral-46/index.md)
+
+### 代数学基础
+
+- [代数基础](/algebra/index.md)
+- [Chapter 1 行列式](/algebra/algebra-1/index.md)
+- [Chapter 2 矩阵](/algebra/algebra-2/index.md)
+- [Chapter 3 线性空间](/algebra/algebra-3/index.md)
+- [Chapter 4 rank](/algebra/algebra-4/index.md)
+- [Chapter 5 线性方程组](/algebra/algebra-5/index.md)
+- [Chapter 6 线性映射基础](/algebra/algebra-6/index.md)
+- [Chapter 7 线性映射结构](/algebra/algebra-7/index.md)
+- [Chapter 8 一元多项式基础](/algebra/algebra-8/index.md)
+- [Chapter 9 特殊数域多项式](/algebra/algebra-9/index.md)
+- [Chapter 10 一元多项式推广](/algebra/algebra-10/index.md)
+- [Chapter 11 特征值](/algebra/algebra-11/index.md)
+
+### 概率统计
+
+- [概率统计](/probstathsy/index.md)
+- [Chapter 1 概率论](/probstathsy/probstathsy-1/index.md)
+- [Chapter 2 数理统计](/probstathsy/probstathsy-2/index.md)
+
+### 基础物理
+
+- [基础物理](/physics/index.md)
+- [Chapter 0 绪论](/physics/physics-0/index.md)
+- [Chapter 1 质点运动学](/physics/physics-1/index.md)
+- [Chapter 2 质点动力学](/physics/physics-2/index.md)
+- [Chapter 3 机械能守恒定理](/physics/physics-3/index.md)
+- [Chapter 4 角动量](/physics/physics-4/index.md)
+- [Chapter 5 刚体](/physics/physics-5/index.md)
+- [Chapter 6 机械振动](/physics/physics-6/index.md)
+- [Chapter 7 机械波](/physics/physics-7/index.md)
+- [Chapter 8 狭义相对论](/physics/physics-8/index.md)
+- [Chapter 9 静电场](/physics/physics-9/index.md)
+- [Chapter 10 电磁感应](/physics/physics-10/index.md)
+
+### 计算机科学
+
+
+### 复变函数
+
+- [复变函数](/complex/index.md)
+- [Chapter 1 解析函数](/complex/complex-1/index.md)
+- [Chapter 2 解析函数积分](/complex/complex-2/index.md)
+- [Chapter 3 无穷级数](/complex/complex-3/index.md)
+- [Chapter 4 解析函数领域展开](/complex/complex-4/index.md)
+- [Chapter 5 留数定理](/complex/complex-5/index.md)
+- [Chapter 6 解析延拓](/complex/complex-6/index.md)
+
+### 计算物理导论
+
+- [计算物理导论](/computational-physics/index.md)
+- [Lesson 1 数值计算基础](/computational-physics/chapter-1/index.md)
+- [Lesson 2 线性方程组 I](/computational-physics/lesson-2/index.md)
+- [Lesson 3 线性方程组 II](/computational-physics/lesson-3/index.md)
+- [Lesson 4 线性方程组 III](/computational-physics/lesson-4/index.md)
+
+### 控制理论
+
+- [控制理论](/cybernetics/index.md)
+- [Chapter 1 绪论](/cybernetics/cybernetics-1/index.md)
+
+### 光学
+
+- [基础光学](/optics/index.md)
+
+### 电动力学
+
+- [电动力学](/electrodynamics/index.md)
+- [Lesson 0 绪论](/electrodynamics/electrodynamics-0/index.md)
+- [Lesson 1 数学基础](/electrodynamics/electrodynamics-1/index.md)
+- [Lesson 2 Maxwell方程组 I](/electrodynamics/electrodynamics-2/index.md)
+- [Lesson 3 Maxwell 方程组 II](/electrodynamics/electrodynamics-3/index.md)
+- [Lesson 4 Maxwell 方程组 III](/electrodynamics/electrodynamics-4/index.md)
+- [Lesson 5 狭义相对论 I](/electrodynamics/electrodynamics-5/index.md)
+- [Lesson 6 狭义相对论 II](/electrodynamics/electrodynamics-6/index.md)
+- [Lesson 7 Lagrange 形式 I](/electrodynamics/electrodynamics-7/index.md)
+- [Lesson 8 Lagrange 形式 II](/electrodynamics/electrodynamics-8/index.md)
+- [Lesson 9 Lagrange 形式 III](/electrodynamics/electrodynamics-9/index.md)
+- [Lesson 10 连续介质 Maxwell](/electrodynamics/electrodynamics-10/index.md)
+- [Lesson 11 静电学 I](/electrodynamics/electrodynamics-11/index.md)
+- [Lesson 12 静电学 II](/electrodynamics/electrodynamics-12/index.md)
+- [Lesson 13 静磁学](/electrodynamics/electrodynamics-13/index.md)
+- [Lesson 14 电磁波的传播 I](/electrodynamics/electrodynamics-14/index.md)
+- [Lesson 15 电磁波的传播 II](/electrodynamics/electrodynamics-15/index.md)
+- [Lesson 16 电磁波的传播 III](/electrodynamics/electrodynamics-16/index.md)
+- [Lesson 17 电磁波的传播 IV](/electrodynamics/electrodynamics-17/index.md)
+
+### 分析力学
+
+- [分析力学](/analytical-mechanics/index.md)
+- [Lesson 1 数学基础 I](/analytical-mechanics/lesson-1/index.md)
+- [Lesson 2 数学基础 II](/analytical-mechanics/lesson-2/index.md)
+- [Lesson 3 位形空间 I](/analytical-mechanics/lesson-3/index.md)
+- [Lesson 4 位形空间 I](/analytical-mechanics/lesson-4/index.md)
+- [Lesson 7 最小作用量原理 I](/analytical-mechanics/lesson-7/index.md)
+- [Lesson 8 最小作用量原理 II](/analytical-mechanics/lesson-8/index.md)
+- [Lesson 9 最小作用量原理 II](/analytical-mechanics/lesson-9/index.md)
+
+### 数学物理方程
+
+- [数学物理方程](/mathematical-physics/index.md)
+
+### 信号分析
+
+- [信号分析](/signal-analysis/index.md)
+- [Chapter 1 绪论](/signal-analysis/signal-1/index.md)
+
+### Others
+
+- [关于我](/about/index.md)
+- [Bangumi 番组计划](/bangumi/index.md)
+- [友链](/links/index.md): 生活明朗，万物可爱
+- [缝缝补补](/mark/mark-1/index.md)
+- [云台](/mark/mark-2/index.md)
+- [mark-3](/mark/mark-3/index.md)
+- [讲讲之后博客的定位和规划](/mark/mark-4/index.md)
+- [](/Microcontroller/lesson-1.md)
+- [Notes](/notes/index.md)
+- [Chapter 11 光学](/physics/physics-11/index.md)
+- [随机跳转](/random/index.md)
+- [时间线](/timeline/index.md)
+- [城际漫游 成都篇](/travel/travel-1/index.md)
+- [weekly-摩卡与孤独蓝色星球](/weekly/weekly-1/index.md): “生活很苦，来杯初糖摩卡”
+- [weekly-海の见える街](/weekly/weekly-2/index.md)
+- [weekly-步履不停，步履不停](/weekly/weekly-3/index.md): “拯救人的最终都是微小的生活”
+- [weekly-音符](/weekly/weekly-4/index.md): “2025，你好！”
+- [weekly-城际漫游](/weekly/weekly-5/index.md): “writing......”
+- [weekly-Aoi](/weekly/weekly-6/index.md): “世上总有蛰伏于花蕾的花”
+- [weekly-三月如狮而来](/weekly/weekly-7/index.md)
+- [weekly-期中寄](/weekly/weekly-8/index.md)
+- [后日谈](/weekly/weekly-9/index.md)

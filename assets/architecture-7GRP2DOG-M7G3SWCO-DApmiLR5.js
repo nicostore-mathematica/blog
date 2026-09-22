@@ -1,0 +1,1 @@
+import{Rt as e}from"./common-CR7QageC.js";export{e as createArchitectureServices};
