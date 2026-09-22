@@ -111,7 +111,7 @@ $$
 \tag{b}
 $$
 
-的解。受上述波动方程求解过程的启发，我们可以令
+的解。我们可以令
 
 $$
 \Phi(x,y,z) = \exp(m_1 x + m_2 y + m_3 z).
@@ -158,7 +158,7 @@ $$
 
 这里，矢量 $\mathbf{k}$ 被称为电磁波的波矢，其量纲为 $[L]^{-1}$。
 
-综合上述结果，我们得到上述波动方程如下形式的解
+综合上述结果，我们得到如下形式的解
 
 $$
 E_x(x,y,z,t) = E_{x0} \exp(i \mathbf{k} \cdot \mathbf{r} - i\omega t).
@@ -324,10 +324,10 @@ $$
 
 $$
 \begin{aligned}
-\mathbf{S}(\mathbf{r},t) &= \mathbf{E}(\mathbf{r},t) \times \mathbf{H}(\mathbf{r},t) = \frac{1}{\mu} \mathbf{E}(\mathbf{r},t) \times \mathbf{B}(\mathbf{r},t) \\
-&= \frac{1}{\mu} \mathbf{E}(\mathbf{r},t) \times (\sqrt{\mu\epsilon} \mathbf{e}_\mathbf{k} \times \mathbf{E}(\mathbf{r},t)) = \sqrt{\frac{\epsilon}{\mu}} \mathbf{E}(\mathbf{r},t) \times (\mathbf{e}_\mathbf{k} \times \mathbf{E}(\mathbf{r},t)) \\
-&= \sqrt{\frac{\epsilon}{\mu}} E^2(\mathbf{r},t) \mathbf{e}_\mathbf{k} = \left[ \frac{1}{2} \sqrt{\frac{\epsilon}{\mu}} E^2(\mathbf{r},t) + \frac{1}{2} \sqrt{\frac{\epsilon}{\mu}} E^2(\mathbf{r},t) \right] \mathbf{e}_\mathbf{k} \\
-&= \left[ \frac{1}{2} \frac{\epsilon}{\sqrt{\mu\epsilon}} E^2(\mathbf{r},t) + \frac{1}{2} \sqrt{\frac{\epsilon}{\mu}} \frac{B^2(\mathbf{r},t)}{\mu\epsilon} \right] \mathbf{e}_\mathbf{k} = u \left( \frac{1}{2} \epsilon E^2(\mathbf{r},t) + \frac{1}{2\mu} B^2(\mathbf{r},t) \right) \mathbf{e}_\mathbf{k} \\
+\mathbf{S}(\mathbf{r},t) &= \mathbf{E}(\mathbf{r},t) \times \mathbf{H}(\mathbf{r},t) = \frac{1}{\mu} \mathbf{E}(\mathbf{r},t) \times \mathbf{B}(\mathbf{r},t) \\\\
+&= \frac{1}{\mu} \mathbf{E}(\mathbf{r},t) \times (\sqrt{\mu\epsilon} \mathbf{e}_\mathbf{k} \times \mathbf{E}(\mathbf{r},t)) = \sqrt{\frac{\epsilon}{\mu}} \mathbf{E}(\mathbf{r},t) \times (\mathbf{e}_\mathbf{k} \times \mathbf{E}(\mathbf{r},t)) \\\\
+&= \sqrt{\frac{\epsilon}{\mu}} E^2(\mathbf{r},t) \mathbf{e}_\mathbf{k} = \left[ \frac{1}{2} \sqrt{\frac{\epsilon}{\mu}} E^2(\mathbf{r},t) + \frac{1}{2} \sqrt{\frac{\epsilon}{\mu}} E^2(\mathbf{r},t) \right] \mathbf{e}_\mathbf{k} \\\\
+&= \left[ \frac{1}{2} \frac{\epsilon}{\sqrt{\mu\epsilon}} E^2(\mathbf{r},t) + \frac{1}{2} \sqrt{\frac{\epsilon}{\mu}} \frac{B^2(\mathbf{r},t)}{\mu\epsilon} \right] \mathbf{e}_\mathbf{k} = u \left( \frac{1}{2} \epsilon E^2(\mathbf{r},t) + \frac{1}{2\mu} B^2(\mathbf{r},t) \right) \mathbf{e}_\mathbf{k} \\\\
 &= u \mathcal{U}(\mathbf{r},t) \mathbf{e}_\mathbf{k},
 \end{aligned}
 $$
