@@ -105,29 +105,33 @@ $$
 
 正定厄米矩阵的 Cholesky 分解可以通过下面的算法获得。
 
-**Algorithm 2 正定厄米矩阵的 Cholesky 分解**
+> [!important]
+>
+> **Algorithm 2 正定厄米矩阵的 Cholesky 分解**
+>
+> > **Require**: 
+> >
+> > 设 $A \in \mathbb{C}^{n \times n}$ 为一正定厄米矩阵。我们需要获得上三角矩阵 $H$ 使得 $A = H^\dagger H$
+> >
+> > 记下三角矩阵 $H^\dagger$ 的矩阵元为 $h_{i,j}$。首先令 $h_{11} = \sqrt{a_{11}}$，然后
+> >
+> > 【计算量】：大约 $n^3/3$ 的计算量 (比起 $LU$ 分解要少一半左右).
+> >
+> > 1: **for** $i = 2, \cdots, n$ **do**
+> >
+> > 2: 计算 $h_{ij}$ 其中 $j = 1, \cdots, (i-1)$
+> > $$
+> > h_{ij} = \frac{1}{h_{jj}} \left( a_{ij} - \sum_{k=1}^{j-1} h_{ik} h_{jk} \right) \;, \quad j = 1, \cdots, (i-1) \;.
+> > $$
+> > 3: 计算 $h_{ii}$:
+> > $$
+> > h_{ii} = \left[ a_{ii} - \sum_{k=1}^{i-1} h_{ik}^2 \right]^{1/2} \;.
+> > $$
+> > 4: **end for**
 
-**Require**: 
+Cholesky 分解的计算量大约是 $n^3/3$，这比通常的 $LU$ 分解要节省大约一半。这主要来源于对于对称性的运用。
 
-> 设 $A \in \mathbb{C}^{n \times n}$ 为一正定厄米矩阵。我们需要获得上三角矩阵 $H$ 使得 $A = H^\dagger H$
->
-> 记下三角矩阵 $H^\dagger$ 的矩阵元为 $h_{i,j}$。首先令 $h_{11} = \sqrt{a_{11}}$，然后
->
-> 【计算量】：大约 $n^3/3$ 的计算量 (比起 $LU$ 分解要少一半左右).
->
-> 1: **for** $i = 2, \cdots, n$ **do**
->
-> 2: 计算 $h_{ij}$ 其中 $j = 1, \cdots, (i-1)$
-> $$
-> h_{ij} = \frac{1}{h_{jj}} \left( a_{ij} - \sum_{k=1}^{j-1} h_{ik} h_{jk} \right) \;, \quad j = 1, \cdots, (i-1) \;.
-> $$
-> 3: 计算 $h_{ii}$:
-> $$
->    h_{ii} = \left[ a_{ii} - \sum_{k=1}^{i-1} h_{ik}^2 \right]^{1/2} \;.
-> $$
-> 4: **end for**
-
-Cholesky 分解的计算量大约是 $n^3/3$，这比通常的 $LU$ 分解要节省大约一半。这主要来源于对于对称性的运用。从稳定性上来说，Cholesky 分解的稳定性极佳，只要矩阵确实是正定的厄米矩阵。
+从稳定性上来说，Cholesky 分解的稳定性极佳，只要矩阵确实是正定的厄米矩阵。
 
 ## Part 5 三对角矩阵线性方程组
 
@@ -153,30 +157,32 @@ $$
 
 这个算法又称为 Thomas 算法 (Thomas algorithm)。经过这个分解之后，我们可以利用该分解求解方程 $Ax=b$。这个过程的计算量大约是 $8n-7$。具体来说，上述分解本身需要 $3(n-1)$，而求解两个三角系统的计算量为 $5n-4$。
 
-**Algorithm 3 三对角矩阵的 $LU$ 分解 (Thomas 算法)**
-
-> **Require**: 设 $A \in \mathbb{C}^{n \times n}$ 为已知三对角矩阵。令 $A=LU$，其中 $L$ 和 $U$ 由公式 (f) 给出。本算法给出计算各系数
-> $$
-> \beta_2, \cdots, \beta_n, \; \alpha_1, \cdots, \alpha_n
-> $$
-> 的计算步骤
+> [!important]
 >
-> 【计算量】：大约 $8n-7$.
+> **Algorithm 3 三对角矩阵的 $LU$ 分解 (Thomas 算法)**
 >
-> 1: 令 $\alpha_1 = a_1$。
->
-> 2: **for** $i = 2, \cdots, n$ **do**
->
-> 3:
-> $$
-> \begin{cases}
->    \beta_i = \frac{b_i}{\alpha_{i-1}}, \\\\
->    \alpha_i = a_i - \beta_i c_{i-1}, \;.
->    \end{cases}
-> $$
-> 4: **end for**
->
-> 5: 最后可以进而利用反代法给出最后的解。
+> > **Require**: 设 $A \in \mathbb{C}^{n \times n}$ 为已知三对角矩阵。令 $A=LU$，其中 $L$ 和 $U$ 由公式 (f) 给出。本算法给出计算各系数
+> > $$
+> > \beta_2, \cdots, \beta_n, \; \alpha_1, \cdots, \alpha_n
+> > $$
+> > 的计算步骤
+> >
+> > 【计算量】：大约 $8n-7$.
+> >
+> > 1: 令 $\alpha_1 = a_1$。
+> >
+> > 2: **for** $i = 2, \cdots, n$ **do**
+> >
+> > 3:
+> > $$
+> > \begin{cases}
+> > \beta_i = \frac{b_i}{\alpha_{i-1}}, \\\\
+> > \alpha_i = a_i - \beta_i c_{i-1}, \;.
+> > \end{cases}
+> > $$
+> > 4: **end for**
+> >
+> > 5: 最后可以进而利用反代法给出最后的解。
 
 这个算法的稳定性也是不错的。如果我们假定非奇异的矩阵 $A$ 有一个小的误差 $\delta A$，即令 $A + \delta A = \hat{L}\hat{U}$，那么我们可以证明
 
