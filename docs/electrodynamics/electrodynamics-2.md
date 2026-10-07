@@ -127,8 +127,11 @@ $$
 \oint_C \mathbf{E} \cdot d\mathbf{l} = \oint_C \frac{q}{4\pi\epsilon_0} \frac{\mathbf{r}}{r^3} \cdot d\mathbf{l} = \oint_C \frac{q}{4\pi\epsilon_0} \frac{r\, dl\, \cos\theta}{r^3} = \oint_C \frac{q}{4\pi\epsilon_0} \frac{\cos\theta}{r^2} dl.
 $$
 
-这里，$\theta$ 为矢径 $\mathbf{r}$ 与线元 $d\mathbf{l}$ 之间的夹角。从教科书第 6 页上图 1-3 中不难看出，$\cos\theta\, dl = dr$。因此，我们有
+这里，$\theta$ 为矢径 $\mathbf{r}$ 与线元 $d\mathbf{l}$ 之间的夹角。
 
+<img src="https://pic1.imgdb.cn/i/034bZTBup64vRWpMAPvee4.png" alt="边界曲线与径向距离示意图.png" style="zoom: 25%;" />
+
+从图中不难看出，$\cos\theta\, dl = dr$。因此，我们有
 $$
 \oint_C \mathbf{E} \cdot d\mathbf{l} = \frac{q}{4\pi\epsilon_0} \oint_C \frac{1}{r^2} dr = -\frac{q}{4\pi\epsilon_0} \oint_C d\left( \frac{1}{r} \right) = 0.
 $$

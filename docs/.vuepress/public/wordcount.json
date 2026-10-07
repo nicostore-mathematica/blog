@@ -21,9 +21,9 @@
     "physics-9": 2803,
     "physics-8": 5256,
     "physics-7": 4205,
-    "physics-6": 5840,
+    "physics-6": 5830,
     "physics-5": 6573,
-    "physics-4": 2593,
+    "physics-4": 2586,
     "physics-3": 5261,
     "physics-2": 5293,
     "physics-11": 13,
@@ -37,6 +37,9 @@
     "optics-1": 6
   },
   "Microcontroller\\lesson-1": 458,
+  "Metrology": {
+    "index": 476
+  },
   "mathematical-physics": {
     "index": 13,
     "chapter-0": 6
@@ -104,8 +107,8 @@
     "electrodynamics-5": 3020,
     "electrodynamics-4": 4900,
     "electrodynamics-3": 4356,
-    "electrodynamics-2": 4262,
-    "electrodynamics-17": 3177,
+    "electrodynamics-2": 4256,
+    "electrodynamics-17": 3172,
     "electrodynamics-16": 4744,
     "electrodynamics-15": 3714,
     "electrodynamics-14": 2701,
@@ -125,9 +128,9 @@
     "index": 85,
     "lesson-9": 15,
     "lesson-8": 15,
-    "lesson-7": 17,
-    "lesson-6": 18,
-    "lesson-5": 16,
+    "lesson-7": 3084,
+    "lesson-6": 1884,
+    "lesson-5": 2847,
     "lesson-4": 2451,
     "lesson-3": 3539,
     "lesson-2": 2902,
@@ -224,7 +227,7 @@
     "algebra-10": 6084,
     "algebra-1": 5125
   },
-  "total": 472769,
-  "lastUpdated": "2026-09-22T12:36:59.199Z",
-  "fileCount": 191
+  "total": 480981,
+  "lastUpdated": "2026-10-07T03:54:04.988Z",
+  "fileCount": 192
 }
