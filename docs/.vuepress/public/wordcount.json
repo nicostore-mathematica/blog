@@ -38,7 +38,9 @@
   },
   "Microcontroller\\lesson-1": 458,
   "Metrology": {
-    "index": 476
+    "index": 553,
+    "lesson-2": 3220,
+    "lesson-1": 1183
   },
   "mathematical-physics": {
     "index": 13,
@@ -227,7 +229,7 @@
     "algebra-10": 6084,
     "algebra-1": 5125
   },
-  "total": 480981,
-  "lastUpdated": "2026-10-07T03:54:04.988Z",
-  "fileCount": 192
+  "total": 485461,
+  "lastUpdated": "2026-10-10T08:01:35.628Z",
+  "fileCount": 194
 }
