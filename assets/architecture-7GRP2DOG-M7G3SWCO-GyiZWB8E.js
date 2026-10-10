@@ -1,0 +1,1 @@
+import{Rt as e}from"./common-DWOSRdvH.js";export{e as createArchitectureServices};

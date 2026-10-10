@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-10-10T08:16:25.095Z",
+  "counts": {
+    "notes": 147,
+    "posts": 25
+  },
+  "latest": {
+    "note": {
+      "path": "/Metrology/lesson-2/",
+      "title": "Lesson 2 随机误差",
+      "excerpt": "随机误差指的是对同一被测量进行多次重复测量，误差的大小和方向随机变化，单次无确切规律，但总体服从某种 统计规律 。 Part 1 统计分布 · 正态分布 绝大多数随机误差服从正...",
+      "isoDate": "2026-10-07T13:48:44.000Z",
+      "collectionTitle": "测量理论",
+      "collectionPath": "/Metrology/"
+    },
+    "post": {
+      "path": "/article/article-7/",
+      "title": "家乡最棒。",
+      "excerpt": "· 其实我觉得很多东西就是那么回事 作为有“第七监狱”之称的七中，三年级的作业是尤其多的. 因为写不完作业，有些班级就自然而然诞生了小组，一人写一门作业，然后大家来抄.老师自然...",
+      "isoDate": "2026-08-31T22:34:55.000Z",
+      "section": "article",
+      "tags": []
+    }
+  }
+}
