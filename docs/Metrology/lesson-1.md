@@ -1,6 +1,7 @@
 ---
 title: Lesson 1 绪论
 permalink: /Metrology/lesson-1/
+createTime: 2026/10/07 13:03:15
 ---
 
 > 成绩构成：出勤 $10\%$ + 随堂测试 $10\%$ + 作业 $20\%$ + 期末考试 $60\%$

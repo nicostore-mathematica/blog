@@ -13,6 +13,7 @@ import analyticalMechanics from "./analytical-mechanics.ts";
 import computationalPhysics from "./computational-physics.ts";
 import mathematicalPhysics from "./mathematical-physics.ts";
 import signalAnalysis from "./signal-analysis.ts";
+import Metrology from "./Metrology.ts";
 
 export const notes = defineCollections([
 		circuit,
@@ -29,6 +30,7 @@ export const notes = defineCollections([
 		analyticalMechanics,
 		mathematicalPhysics,
 		signalAnalysis,
+		Metrology,
 
 
 ]);
