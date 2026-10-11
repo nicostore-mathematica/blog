@@ -48,7 +48,7 @@
     "minisearch": "^6.3.0",
     "sass": "^1.104.0",
     "sass-embedded": "^1.104.0",
-    "twikoo": "^1.7.22",
+    "twikoo": "^2.0.13",
     "typescript": "^5.9.3",
     "vite-plugin-font": "^5.1.2",
     "vue": "^3.5.42",
