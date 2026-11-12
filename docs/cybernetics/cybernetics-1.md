@@ -8,8 +8,6 @@ permalink: /cybernetics/cybernetics-1/
 
 **工程控制并不是在操纵物理量，而是在构造一个人为的信息闭环系统.**
 
-
-
 ## Part 1 动态系统
 
 控制理论的研究对象是动态系统（Dynamic System）. 动态系统是指状态随时间变化的系统，其特点为系统的状态变量（State Variable）是时间的函数. 

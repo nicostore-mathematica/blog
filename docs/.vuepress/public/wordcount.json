@@ -39,7 +39,13 @@
   "Microcontroller\\lesson-1": 458,
   "Metrology": {
     "index": 554,
-    "lesson-2": 3221,
+    "lesson-8": 1295,
+    "lesson-7": 4367,
+    "lesson-6": 4408,
+    "lesson-5": 2023,
+    "lesson-4": 2990,
+    "lesson-3": 1841,
+    "lesson-2": 3224,
     "lesson-1": 1184
   },
   "mathematical-physics": {
@@ -189,7 +195,7 @@
     "pyvvujxp": 17,
     "resources": 485,
     "anniversary-1": 1541,
-    "article-8": 2742,
+    "article-8": 2750,
     "article-7": 1957,
     "article-6": 1901,
     "article-5": 4210,
@@ -230,7 +236,7 @@
     "algebra-10": 6084,
     "algebra-1": 5125
   },
-  "total": 488206,
-  "lastUpdated": "2026-10-11T16:41:49.134Z",
-  "fileCount": 195
+  "total": 505141,
+  "lastUpdated": "2026-11-12T08:25:06.201Z",
+  "fileCount": 201
 }

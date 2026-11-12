@@ -251,12 +251,12 @@ $$
 
 **加权算术平均值**：
 $$
-\bar{x} = \frac{\sum_{i=1}^{m} p_i \bar{x}_i}{\sum_{i=1}^{m} p_i}
+\bar{x} = \frac{\displaystyle\sum_{i=1}^{m} p_i \bar{x}_i}{\displaystyle\sum_{i=1}^{m} p_i}
 $$
    在实际计算中，为了防止数字太大不好算，通常会先选定一个接近所有测量值的参考零点 $x_0$，利用差值进行简化计算。
 
 **加权平均值的标准差**：
 $$
-\sigma_{\bar{x}} = \sqrt{\frac{\displaystyle\sum_{i=1}^{m} p_i v_{\bar{x}_i}^2}{(m-1) \sum_{i=1}^{m} p_i}}
+\sigma_{\bar{x}} = \sqrt{\frac{\displaystyle\sum_{i=1}^{m} p_i v_{\bar{x}_i}^2}{(m-1) \displaystyle\sum_{i=1}^{m} p_i}}
 $$
 用来评定最终算出来的**加权算术平均值 $\bar{x}$ 的可靠程度（精度）**，这里的 $m$ 代表的是**测量组数**（而不是总测量次数）。因为我们通过 $m$ 组数据计算加权平均值时消耗了一个自由度，所以分母是 $m-1$（类似于贝塞尔公式的无偏估计思想）
