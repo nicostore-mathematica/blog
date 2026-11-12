@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-11-12T08:25:49.920Z",
+  "counts": {
+    "notes": 153,
+    "posts": 26
+  },
+  "latest": {
+    "note": {
+      "path": "/Metrology/lesson-8/",
+      "title": "Lesson 8 一元非线性回归",
+      "excerpt": "1 一元非线性回归（Simple Nonlinear Regression）是研究 一个自变量 与 一个因变量 之间非线性关系统计分析方法。 当客观物理规律、化学反应、生长曲线...",
+      "isoDate": "2026-11-11T22:13:37.000Z",
+      "collectionTitle": "测量理论",
+      "collectionPath": "/Metrology/"
+    },
+    "post": {
+      "path": "/article/article-8/",
+      "title": "阿尔吉侬。",
+      "excerpt": "一阵炸鸡米花的声音 人的回忆大多都是模糊不清的，如同左右盲一般，就连记忆中最重要的人也无法避免。就好像那个夏日午后的画作，怎么也没法完成。 · 当时只道是寻常 “当时只道是寻常...",
+      "isoDate": "2026-10-11T22:13:24.000Z",
+      "section": "article",
+      "tags": []
+    }
+  }
+}
