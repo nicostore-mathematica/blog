@@ -42,7 +42,7 @@
     "lesson-8": 1295,
     "lesson-7": 4367,
     "lesson-6": 4408,
-    "lesson-5": 2023,
+    "lesson-5": 2062,
     "lesson-4": 2990,
     "lesson-3": 1841,
     "lesson-2": 3224,
@@ -185,6 +185,7 @@
     "weekly-4": 3745,
     "weekly-3": 1057,
     "weekly-2": 1045,
+    "weekly-10": 1676,
     "weekly-1": 283
   },
   "travel": {
@@ -236,7 +237,7 @@
     "algebra-10": 6084,
     "algebra-1": 5125
   },
-  "total": 505141,
-  "lastUpdated": "2026-11-12T08:25:06.201Z",
-  "fileCount": 201
+  "total": 506856,
+  "lastUpdated": "2026-11-22T07:46:10.985Z",
+  "fileCount": 202
 }
