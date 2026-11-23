@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-22T07:46:11.558Z",
+  "generatedAt": "2026-11-23T17:18:28.649Z",
   "counts": {
     "notes": 153,
-    "posts": 27
+    "posts": 28
   },
   "latest": {
     "note": {
@@ -14,11 +14,11 @@
       "collectionPath": "/Metrology/"
     },
     "post": {
-      "path": "/weekly/weekly-10/",
-      "title": "一点短对话合集",
-      "excerpt": "记录一点和我有关的无关的对话 · 关于控制 师兄：说实话，我认为算法并不是最关键的，做控制的经常有一个问题，只追求牛逼的算法，但是忘记自己想要闭环什么 猫条：“工程控制并不是在...",
-      "isoDate": "2026-11-21T08:34:08.000Z",
-      "section": "weekly",
+      "path": "/article/anniversary-2/",
+      "title": "博客建站的第二个地球年",
+      "excerpt": "一些短的片段的集合。 “悲伤的终点是对欢喜的执着” 以此纪念博客建站的第二个地球年。 · 七月流火，九月授衣 农历七月，星宿二从南方高空逐渐向西落下，古代的先民们便知晓天气要转...",
+      "isoDate": "2026-11-23T16:27:45.000Z",
+      "section": "informal",
       "tags": []
     }
   }
