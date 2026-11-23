@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-11-23T17:19:15.187Z",
+  "counts": {
+    "notes": 153,
+    "posts": 28
+  },
+  "latest": {
+    "note": {
+      "path": "/Metrology/lesson-8/",
+      "title": "Lesson 8 一元非线性回归",
+      "excerpt": "1 一元非线性回归（Simple Nonlinear Regression）是研究 一个自变量 与 一个因变量 之间非线性关系统计分析方法。 当客观物理规律、化学反应、生长曲线...",
+      "isoDate": "2026-11-11T22:13:37.000Z",
+      "collectionTitle": "测量理论",
+      "collectionPath": "/Metrology/"
+    },
+    "post": {
+      "path": "/article/anniversary-2/",
+      "title": "博客建站的第二个地球年",
+      "excerpt": "一些短的片段的集合。 “悲伤的终点是对欢喜的执着” 以此纪念博客建站的第二个地球年。 · 七月流火，九月授衣 农历七月，星宿二从南方高空逐渐向西落下，古代的先民们便知晓天气要转...",
+      "isoDate": "2026-11-24T00:27:45.000Z",
+      "section": "informal",
+      "tags": []
+    }
+  }
+}
